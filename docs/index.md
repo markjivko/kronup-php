@@ -1,0 +1,211 @@
+---
+title: Overview
+layout: home
+nav_order: 1
+---
+
+<p align="center">
+    <img src="images/php-sdk.png"/>
+</p>
+
+# Kronup SDK for PHP
+{: .fs-9 }
+
+The official PHP SDK for Kronup
+{: .fs-6 .fw-300 }
+
+[Install with Composer](https://packagist.org/packages/kronup/kronup-php){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Clone from GitHub](https://github.com/kronup/kronup-php){: .btn .fs-5 .mb-4 .mb-md-0 }
+
+---
+
+The Kronup SDK uses a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) so that you can jump right into 
+building your application without having to go back to the documentation.
+
+```mermaid
+stateDiagram-v2
+    label: Kronup PHP SDK 💦 Fluent Interface
+
+    state label {
+        sdk: new Sdk ( API-KEY )
+        [*] --> sdk
+        sdk --> api()
+        sdk --> config()
+    }
+```
+
+The SDK is built like a tree with its root in ```new \Kronup\Sdk()```. 
+
+Tree branches are populated as needed just-in-time so the memory footprint is tiny.
+
+## Table of Contents
+- [Installation & Usage](#installation--usage)
+  - [Requirements](#requirements)
+- [Getting Started](#getting-started)
+  - [Examples](#examples)
+  - [Tests](#tests)
+  - [Configuration](#configuration)
+  - [Debugging](#debugging)
+    - [Enable debugging](#enable-debugging)
+    - [Change output location](#change-output-location)
+    - [Disable sanitizer](#disable-sanitizer)
+
+## Installation & Usage
+
+To install the Kronup SDK, simply clone this repository and load it with a [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloader.
+If you're having doubts, you can use the provided `autoload.php` file.
+
+You can also install the latest version of `Kronup PHP SDK` by issuing the following command:
+
+```
+composer require kronup/kronup-php
+```
+
+This SDK has no external dependencies in production. This means you can use this library in any PHP project even when you don't have access to Composer.
+
+### Requirements
+
+This SDK requires `PHP 7.4` or later with the following extensions:
+
+ * `ext-mbstring`
+ * `ext-curl`
+ * `ext-json`
+
+Supported PHP [Versions](https://www.php.net/supported-versions.php): `7.4`, `8.0`, `8.1`, `8.2`.
+
+## Getting Started
+
+Please follow the [installation procedure](#installation--usage) then create an entrypoint PHP file with the following:
+
+```php
+<?php
+
+// Import a PSR-4 autoloader
+require_once(__DIR__ . '/autoload.php');
+
+
+try {
+
+    $organization = $sdk
+        ->api()
+        ->organization();
+
+} catch (\Kronup\Sdk\ApiException $apiExc) {
+    echo "API Exception when calling api()->organization(): ",
+        var_export($apiExc->getResponseBody(), true),
+        PHP_EOL;
+} catch (\Exception $exc) {
+    echo "Exception when calling api()->organization(): " . $exc->getMessage() . PHP_EOL;
+}
+```
+
+Please note that both **api keys** are optional when creating a new instance of `\Kronup\Sdk()`.
+
+If you don't provide an API key, a new one is generated automatically for you based on your IP address.
+
+> Please note that some parts of the API require using your own API key with either a free or paid plan.
+
+### Examples
+
+To run the examples, use:
+
+```bash
+php -f ./examples/{path-to-example-file}.php
+```
+
+For security reasons you cannot execute these files from a server request.
+
+### Tests
+
+To run the unit tests, use:
+
+```bash
+composer install
+vendor/bin/phpunit
+```
+
+### Configuration
+
+```php
+// Set your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// Configuration object
+$sdk->config();
+```
+
+You can fetch the following:
+
+  * [Debugging](#debugging) tools
+  * `getApiKey()`: Your [Kronup API key](https://go.kronup.com)
+  * `getTempFolderPath()`: Path for storing downloaded files
+  * `getUserAgent()`: Request header for API calls
+  * `getHost()`: API server domain
+  * `getVersions()` - array containing:
+    * Operating System version
+    * PHP version
+    * OpenAPI specification version
+    * SDK version
+
+You can change the following:
+
+  * [Debugging](#debugging) tools
+  * `setApiKey()`: Note - set the API key for the current network type!
+  * `setTempFolderPath()`
+
+### Debugging
+
+The debugger allows you to get detailed information on API requests made by the SDK.
+
+#### Enable debugging
+
+Debugging is disabled by default but you can enable it with ease:
+
+```php
+// Set your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// Enable debugging
+$sdk->config()->setDebug(true);
+```
+
+Notice that the debugger functionality is strictly tied to your `$sdk` instance.
+
+#### Change output location
+
+If you have enabled debugging, additional information will be written to the specified location.
+
+By default, the write location for the `debugger` is your standard CLI output, or `php://output`.
+
+You can redirect the output of the debugger to any other file:
+
+```php
+// Set your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// Set debug output
+$sdk->config()->setDebugFile('/path/to/file.log');
+```
+
+#### Disable sanitizer
+
+By default, sensitive values are partially obfuscated.
+You can disable this functionality for local testing only.
+
+**WARNING**: Never share logs that were produced with the `debug sanitizer` turned off!
+
+```php
+// Set your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// Disable debug sanitizer
+$sdk->config()->setDebugSanitizer(false);
+```
+
+---
+
+> &nbsp;
+> 
+> **🐛 Notice**: Providing these logs to [Kronup Support](https://discord.com/invite/kronup) can help us identify and fix issues faster.
+>
+> &nbsp;

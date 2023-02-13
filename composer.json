@@ -1,0 +1,42 @@
+{
+    "name": "kronup/kronup-php",
+    "type": "library",
+    "description": "The official SDK for Kronup",
+    "keywords": [
+        "sdk", "kronup", "kronup.com"
+    ],
+    "homepage": "https://kronup.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kronup",
+            "homepage": "https://kronup.com/",
+            "role": "Team"
+        },
+        {   
+            "name": "Mark Jivko",
+            "homepage": "https://markjivko.com",
+            "role": "Author"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/kronup/kronup-php/issues",
+        "source": "https://github.com/kronup/kronup-php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.1",
+        "ext-dom": "*"
+    },
+    "autoload": {
+        "psr-4": { "Kronup\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Kronup\\Test\\" : "test/" }
+    }
+}
