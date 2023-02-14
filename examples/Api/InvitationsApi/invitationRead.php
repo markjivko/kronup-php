@@ -15,7 +15,7 @@
 require_once dirname(__DIR__, 3) . "/autoload.php";
 
 // Invitation ID
-$arg_id = "invitation-id-xxxx";
+$arg_id = "invitation-id-***";
 
 try {
 

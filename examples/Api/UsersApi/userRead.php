@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // User ID
-$arg_id = "user-id-xxxx";
+$arg_id = "user-id-***";
 
 try {
 

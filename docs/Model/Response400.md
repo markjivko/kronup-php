@@ -1,15 +1,15 @@
 ---
-title: InvitationUpdate400Response
+title: Response400
 parent: Model
 layout: page
 ---
 
-# InvitationUpdate400Response
+# Response400
 
 ## Model getters
 
 Method name | Return type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **getId()** | **string** |  <br>Example: `invalid-argument-*` | [optional]
-**getMessage()** | **string** |  <br>Example: `Invalid invitation name` | [optional]
+**getMessage()** | **string** |  <br>Example: `Invalid arguments provided` | [optional]
 

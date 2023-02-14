@@ -1,10 +1,10 @@
 ---
-title: AccountRead401Response
+title: Response401
 parent: Model
 layout: page
 ---
 
-# AccountRead401Response
+# Response401
 
 ## Model getters
 

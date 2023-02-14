@@ -21,10 +21,10 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // User ID
-$arg_id = "user-id-xxxx";
+$arg_id = "user-id-***";
 
 // Organization ID
-$arg_x_org_id = "org-id-xxxx";
+$arg_x_org_id = "org-id-***";
 
 try {
 

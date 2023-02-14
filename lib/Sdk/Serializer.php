@@ -58,7 +58,7 @@ class Serializer {
      * @param mixed  $data   Data to serialize
      * @param string $format (optional) Format of the OpenAPITools type of the data; default <b>null</b>
      *
-     * @return string|\object|\mixed[]|null serialized form of $data
+     * @return string|\object|null serialized form of $data
      */
     public static function sanitizeForSerialization($data, string $format = null) {
         $result = $data;
@@ -348,7 +348,7 @@ class Serializer {
         // File object
         if ("\SplFileObject" === $type) {
             if (!$config instanceof \Kronup\Sdk\Config) {
-                throw new \RuntimeException("'config' argument missing");
+                throw new RuntimeException("'config' argument missing");
             }
 
             // Prepare the temporary path
@@ -438,12 +438,6 @@ class Serializer {
         }
 
         if ($type === "\DateTime") {
-            // Some API's return an invalid, empty string as a
-            // date-time property. DateTime::__construct() will return
-            // the current time for empty input which is probably not
-            // what is meant. The invalid empty string is probably to
-            // be interpreted as a missing field/value. Let's handle
-            // this graceful.
             if (!empty($data)) {
                 try {
                     return new \DateTime($data);
@@ -459,9 +453,38 @@ class Serializer {
             }
         }
 
+        // Type aliases
+        $typeAliases = [
+            "number" => "float",
+            "void" => "null",
+            "byte" => "string"
+        ];
+
         /** @psalm-suppress ParadoxicalCondition */
-        if (in_array($type, ['\DateTime', '\SplFileObject', 'array', 'bool', 'boolean', 'byte', 'float', 'int', 'integer', 'mixed', 'number', 'object', 'string', 'void'], true)) {
-            settype($data, $type);
+        if (
+            in_array(
+                $type,
+                [
+                    "bool",
+                    "boolean",
+                    "int",
+                    "integer",
+                    "float",
+                    "double",
+                    "string",
+                    "array",
+                    "object",
+                    "null",
+                    "number",
+                    "void",
+                    "byte",
+                    "mixed"
+                ],
+                true
+            )
+        ) {
+            // Set types different from "mixed"
+            "mixed" !== $data && settype($data, isset($typeAliases[$type]) ? $typeAliases[$type] : $type);
             return $data;
         }
 

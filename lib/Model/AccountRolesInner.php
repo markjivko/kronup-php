@@ -1,7 +1,7 @@
 <?php
 
 /**
- * invitationDelete_400_response Model
+ * Account_roles_inner Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,19 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * invitationDelete_400_response Model
+ * Account_roles_inner Model
  */
-class InvitationDelete400Response extends AbstractModel {
+class AccountRolesInner extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "invitationDelete_400_response";
+    protected static $_name = "Account_roles_inner";
     protected static $_definition = [
-        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0]]
+        "org_id" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
+        "role_org" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0]]
     ];
 
     /**
-     * InvitationDelete400Response
+     * AccountRolesInner
      *
      * @param mixed[] $data Model data
      */
@@ -41,42 +41,42 @@ class InvitationDelete400Response extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get org_id
      *
      * @return string|null
      */
-    public function getId(): ?string {
-        return $this->_data["id"];
+    public function getOrgId(): ?string {
+        return $this->_data["org_id"];
     }
 
     /**
-     * Set id
+     * Set org_id
      * 
-     * @param string|null $id id
+     * @param string|null $org_id org_id
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setId( $id) {
-        return $this->_set("id", $id);
+    public function setOrgId( $org_id) {
+        return $this->_set("org_id", $org_id);
     }
 
     /**
-     * Get message
+     * Get role_org
      *
      * @return string|null
      */
-    public function getMessage(): ?string {
-        return $this->_data["message"];
+    public function getRoleOrg(): ?string {
+        return $this->_data["role_org"];
     }
 
     /**
-     * Set message
+     * Set role_org
      * 
-     * @param string|null $message message
+     * @param string|null $role_org role_org
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setMessage( $message) {
-        return $this->_set("message", $message);
+    public function setRoleOrg( $role_org) {
+        return $this->_set("role_org", $role_org);
     }
 }

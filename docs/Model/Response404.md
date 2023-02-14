@@ -1,15 +1,15 @@
 ---
-title: UserRead404Response
+title: Response404
 parent: Model
 layout: page
 ---
 
-# UserRead404Response
+# Response404
 
 ## Model getters
 
 Method name | Return type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **getId()** | **string** |  <br>Example: `not-found` | [optional]
-**getMessage()** | **string** |  <br>Example: `User not found` | [optional]
+**getMessage()** | **string** |  <br>Example: `Resource not found` | [optional]
 

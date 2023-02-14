@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**getId()** | **string** |  <br>Example: `org-id-xxxx` | [optional]
+**getId()** | **string** |  <br>Example: `org-id-***` | [optional]
 **getOrgName()** | **string** |  <br>Example: `Organization Inc.` | [optional]
 **getOrgIcon()** | **string** |  <br>Example: `url` | [optional]
 **getOrgOwners()** | **string[]** |  <br>Example: `["user-id-1","user-id-2"]` | [optional]

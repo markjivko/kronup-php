@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Organization ID
-$arg_id = "org-id-xxxx";
+$arg_id = "org-id-***";
 
 $arg_organization_create_request = (new \Kronup\Model\OrganizationCreateRequest())
     

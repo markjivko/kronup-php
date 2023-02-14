@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Invitation ID
-$arg_id = "invitation-id-xxxx";
+$arg_id = "invitation-id-***";
 
 try {
 

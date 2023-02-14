@@ -21,10 +21,10 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Invitation ID
-$arg_id = "invitation-id-xxxx";
+$arg_id = "invitation-id-***";
 
 // Organization ID
-$arg_x_org_id = "org-id-xxxx";
+$arg_x_org_id = "org-id-***";
 
 $arg_invitation_update_request = (new \Kronup\Model\InvitationUpdateRequest())
     

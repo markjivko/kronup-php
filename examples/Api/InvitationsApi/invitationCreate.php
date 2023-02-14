@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Organization ID
-$arg_x_org_id = "org-id-xxxx";
+$arg_x_org_id = "org-id-***";
 
 $arg_invitation_create_request = (new \Kronup\Model\InvitationCreateRequest())
     

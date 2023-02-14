@@ -1,7 +1,7 @@
 <?php
 
 /**
- * invitationRead_400_response Model
+ * Response404 Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,19 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * invitationRead_400_response Model
+ * Response404 Model
  */
-class InvitationRead400Response extends AbstractModel {
+class Response404 extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "invitationRead_400_response";
+    protected static $_name = "Response404";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0]]
     ];
 
     /**
-     * InvitationRead400Response
+     * Response404
      *
      * @param mixed[] $data Model data
      */

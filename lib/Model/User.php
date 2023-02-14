@@ -29,8 +29,8 @@ class User extends AbstractModel {
         "user_name" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]], 
         "user_icon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0]], 
         "user_token_iat" => ["userTokenIat", "float", null, "getUserTokenIat", "setUserTokenIat", null, ["r" => 0]], 
-        "role_site" => ["roleSite", "\Kronup\Model\UserRoleSite", null, "getRoleSite", "setRoleSite", null, ["r" => 0]], 
-        "role_org" => ["roleOrg", "\Kronup\Model\UserRoleOrg", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0]], 
+        "role_site" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0]], 
+        "roles" => ["roles", "\Kronup\Model\AccountRolesInner[]", null, "getRoles", "setRoles", null, ["r" => 0, "c" => 1]], 
         "created_at" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updated_at" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -150,16 +150,16 @@ class User extends AbstractModel {
     /**
      * Get role_site
      *
-     * @return \Kronup\Model\UserRoleSite|null
+     * @return string|null
      */
-    public function getRoleSite(): ?\Kronup\Model\UserRoleSite {
+    public function getRoleSite(): ?string {
         return $this->_data["role_site"];
     }
 
     /**
      * Set role_site
      * 
-     * @param \Kronup\Model\UserRoleSite|null $role_site role_site
+     * @param string|null $role_site role_site
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -168,23 +168,23 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get role_org
+     * Get roles
      *
-     * @return \Kronup\Model\UserRoleOrg|null
+     * @return \Kronup\Model\AccountRolesInner[]|null
      */
-    public function getRoleOrg(): ?\Kronup\Model\UserRoleOrg {
-        return $this->_data["role_org"];
+    public function getRoles(): ?array {
+        return $this->_data["roles"];
     }
 
     /**
-     * Set role_org
+     * Set roles
      * 
-     * @param \Kronup\Model\UserRoleOrg|null $role_org role_org
+     * @param \Kronup\Model\AccountRolesInner[]|null $roles roles
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoleOrg( $role_org) {
-        return $this->_set("role_org", $role_org);
+    public function setRoles(?array $roles) {
+        return $this->_set("roles", $roles);
     }
 
     /**
