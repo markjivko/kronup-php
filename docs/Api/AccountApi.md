@@ -6,7 +6,7 @@ layout: page
 
 # Api/AccountApi
 
-[Account API Reference](https://api.kronup.com/tag/Account/)
+[Account API Reference](https://api.kronup.com/#tag/Account)
 
 ```php
 // Place your API Key 👇 here

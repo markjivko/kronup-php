@@ -6,7 +6,7 @@ layout: page
 
 # Api/UsersApi
 
-[Users API Reference](https://api.kronup.com/tag/Users/)
+[Users API Reference](https://api.kronup.com/#tag/Users)
 
 ```php
 // Place your API Key 👇 here

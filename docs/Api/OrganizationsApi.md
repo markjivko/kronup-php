@@ -6,7 +6,7 @@ layout: page
 
 # Api/OrganizationsApi
 
-[Organizations API Reference](https://api.kronup.com/tag/Organizations/)
+[Organizations API Reference](https://api.kronup.com/#tag/Organizations)
 
 ```php
 // Place your API Key 👇 here

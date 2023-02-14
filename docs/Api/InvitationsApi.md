@@ -6,7 +6,7 @@ layout: page
 
 # Api/InvitationsApi
 
-[Invitations API Reference](https://api.kronup.com/tag/Invitations/)
+[Invitations API Reference](https://api.kronup.com/#tag/Invitations)
 
 ```php
 // Place your API Key 👇 here
