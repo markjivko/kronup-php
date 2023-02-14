@@ -9,7 +9,7 @@ layout: page
 [Users API Reference](https://api.kronup.com/tag/Users/)
 
 ```php
-// Set your API Key 👇 here
+// Place your API Key 👇 here
 $sdk = new \Kronup\Sdk();
 
 // API Call

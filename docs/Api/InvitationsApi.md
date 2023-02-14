@@ -9,7 +9,7 @@ layout: page
 [Invitations API Reference](https://api.kronup.com/tag/Invitations/)
 
 ```php
-// Set your API Key 👇 here
+// Place your API Key 👇 here
 $sdk = new \Kronup\Sdk();
 
 // API Call

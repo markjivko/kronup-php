@@ -4,14 +4,10 @@ layout: home
 nav_order: 1
 ---
 
-<p align="center">
-    <img src="images/php-sdk.png"/>
-</p>
-
 # Kronup SDK for PHP
 {: .fs-9 }
 
-The official PHP SDK for Kronup
+Build any Kronup application in PHP with ease.
 {: .fs-6 .fw-300 }
 
 [Install with Composer](https://packagist.org/packages/kronup/kronup-php){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -19,20 +15,8 @@ The official PHP SDK for Kronup
 
 ---
 
-The Kronup SDK uses a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) so that you can jump right into 
+Kronup SDK uses a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) so that you can jump right into 
 building your application without having to go back to the documentation.
-
-```mermaid
-stateDiagram-v2
-    label: Kronup PHP SDK 💦 Fluent Interface
-
-    state label {
-        sdk: new Sdk ( API-KEY )
-        [*] --> sdk
-        sdk --> api()
-        sdk --> config()
-    }
-```
 
 The SDK is built like a tree with its root in ```new \Kronup\Sdk()```. 
 
@@ -55,13 +39,15 @@ Tree branches are populated as needed just-in-time so the memory footprint is ti
 To install the Kronup SDK, simply clone this repository and load it with a [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloader.
 If you're having doubts, you can use the provided `autoload.php` file.
 
-You can also install the latest version of `Kronup PHP SDK` by issuing the following command:
+You can also install the latest version of `Kronup PHP SDK` with **composer** by issuing the following command:
 
 ```
 composer require kronup/kronup-php
 ```
 
-This SDK has no external dependencies in production. This means you can use this library in any PHP project even when you don't have access to Composer.
+This SDK has no external dependencies in production. 
+
+This means you can use this library in any PHP project even when you don't have access to Composer.
 
 ### Requirements
 
@@ -83,27 +69,30 @@ Please follow the [installation procedure](#installation--usage) then create an 
 // Import a PSR-4 autoloader
 require_once(__DIR__ . '/autoload.php');
 
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// 🐛 Enable debugging
+$sdk->config()->setDebug(true);
 
 try {
 
-    $organization = $sdk
-        ->api()
-        ->organization();
+    /**
+     * @var \Kronup\Model\Account $account
+     */
+    $account = $this->sdk->api()->account()->accountRead();
+
+    // Say hello
+    echo sprintf('Hello, %s!', $account->getUserName());
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
-    echo "API Exception when calling api()->organization(): ",
+    echo "API Exception when calling account()->accountRead(): ",
         var_export($apiExc->getResponseBody(), true),
         PHP_EOL;
 } catch (\Exception $exc) {
-    echo "Exception when calling api()->organization(): " . $exc->getMessage() . PHP_EOL;
+    echo "Exception when calling account()->accountRead(): " . $exc->getMessage() . PHP_EOL;
 }
 ```
-
-Please note that both **api keys** are optional when creating a new instance of `\Kronup\Sdk()`.
-
-If you don't provide an API key, a new one is generated automatically for you based on your IP address.
-
-> Please note that some parts of the API require using your own API key with either a free or paid plan.
 
 ### Examples
 
@@ -127,7 +116,7 @@ vendor/bin/phpunit
 ### Configuration
 
 ```php
-// Set your API Key 👇 here
+// Place your API Key 👇 here
 $sdk = new \Kronup\Sdk();
 
 // Configuration object
@@ -150,7 +139,7 @@ You can fetch the following:
 You can change the following:
 
   * [Debugging](#debugging) tools
-  * `setApiKey()`: Note - set the API key for the current network type!
+  * `setApiKey()`
   * `setTempFolderPath()`
 
 ### Debugging
@@ -162,7 +151,7 @@ The debugger allows you to get detailed information on API requests made by the 
 Debugging is disabled by default but you can enable it with ease:
 
 ```php
-// Set your API Key 👇 here
+// Place your API Key 👇 here
 $sdk = new \Kronup\Sdk();
 
 // Enable debugging
@@ -180,7 +169,7 @@ By default, the write location for the `debugger` is your standard CLI output, o
 You can redirect the output of the debugger to any other file:
 
 ```php
-// Set your API Key 👇 here
+// Place your API Key 👇 here
 $sdk = new \Kronup\Sdk();
 
 // Set debug output
@@ -195,17 +184,9 @@ You can disable this functionality for local testing only.
 **WARNING**: Never share logs that were produced with the `debug sanitizer` turned off!
 
 ```php
-// Set your API Key 👇 here
+// Place your API Key 👇 here
 $sdk = new \Kronup\Sdk();
 
 // Disable debug sanitizer
 $sdk->config()->setDebugSanitizer(false);
 ```
-
----
-
-> &nbsp;
-> 
-> **🐛 Notice**: Providing these logs to [Kronup Support](https://discord.com/invite/kronup) can help us identify and fix issues faster.
->
-> &nbsp;

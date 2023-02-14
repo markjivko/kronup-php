@@ -86,14 +86,12 @@ class Debugger {
     public function log(Request $request, int $resCode, $resHeaders, $resBody, $resError) {
         if ($this->_config->getDebug()) {
             // Log the request
-            $entry = $this->_getLogTag("Kronup API REQUEST", ">");
+            $entry = $this->_getLogTag("Kronup API Call", "=");
             $entry .= $this->_getLogRequest($request);
-            $entry .= $this->_getLogTag("/Kronup API REQUEST", ">");
 
             // Log the response
-            $entry .= $this->_getLogTag("Kronup API RESPONSE", "<");
             $entry .= $this->_getLogResponse($request, $resCode, $resHeaders, $resBody, $resError);
-            $entry .= $this->_getLogTag("/Kronup API RESPONSE", "<");
+            $entry .= $this->_getLogTag("/Kronup API Call", "=");
 
             // Print entry
             $this->print($entry);
@@ -147,26 +145,19 @@ class Debugger {
          * @return string Hidden input
          */
         $cleanUp = function ($key, $string) {
-            do {
-                if (preg_match("%x-?api-?key%i", $key)) {
-                    $suffix = preg_replace('%^.*?((?:_\w+)?)$%', '$1', $string);
-                    $string = preg_replace('%^(.*?)_\w+$%', '$1', $string);
-                    $result =
-                        strlen($string) >= 10
-                            ? preg_replace('%^(\w{3}).*(\w{3})$%', '$1******$2', $string) . $suffix
-                            : str_repeat("*", 6);
-                    break;
-                }
-
-                $result = str_repeat("*", 6);
-            } while (false);
+            $suffix = preg_replace('%^.*?((?:_\w+)?)$%', '$1', $string);
+            $string = preg_replace('%^(.*?)_\w+$%', '$1', $string);
+            $result =
+                strlen($string) >= 10
+                    ? preg_replace('%^(\w{1}).*(\w{3})$%', '$1***$2', $string) . $suffix
+                    : str_repeat("*", 6);
 
             return $result;
         };
 
         // Go throught the data
         foreach ($data as $key => &$value) {
-            if (preg_match("%^(?:mnemonic|x-?api-?key|key|.*?(?:private|secret).*?)$%i", $key)) {
+            if (preg_match("%^(?:authorization|.*?(?:private|secret).*?)$%i", $key)) {
                 if (self::SANITIZE_HEADERS === $source || is_array($value)) {
                     foreach ($value as $vKey => $vData) {
                         $value[$vKey] = $cleanUp($key, $vData);

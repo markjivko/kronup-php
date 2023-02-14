@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://kronup.github.io/kronup-php/" rel="nofollow" target="_blank">
-        <img src="https://repository-images.githubusercontent.com/601200609/affe88f7-3dff-4199-ac5a-7fe5b5d8ff78"/>
+        <img src="https://repository-images.githubusercontent.com/601200609/cab807ad-9629-4196-bd28-edec4384b9fc"/>
     </a><br/><br/>
     <a href="https://packagist.org/packages/kronup/kronup-php" rel="nofollow"><img src="https://img.shields.io/packagist/dt/kronup/kronup-php.svg?style=flat&colorB=green" alt="Total Downloads" style="max-width: 100%;"></a>
     <a href="https://packagist.org/packages/kronup/kronup-php" rel="nofollow"><img src="https://img.shields.io/packagist/v/kronup/kronup-php.svg?style=flat&label=release&color=blue" alt="Release Version" style="max-width: 100%;"></a>

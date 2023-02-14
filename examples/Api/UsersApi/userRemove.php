@@ -14,6 +14,11 @@
 // Use any PSR-4 autoloader
 require_once dirname(__DIR__, 3) . "/autoload.php";
 
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// 🐛 Enable debugging
+$sdk->config()->setDebug(true);
 
 // User ID
 $arg_id = "user-id-xxxx";
