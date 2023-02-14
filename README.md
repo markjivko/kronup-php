@@ -1,4 +1,3 @@
-# Kronup - PHP SDK
 
 <p align="center">
     <a href="https://kronup.github.io/kronup-php/" rel="nofollow" target="_blank">
