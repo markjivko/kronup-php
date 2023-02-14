@@ -11,15 +11,11 @@
     <a href="https://github.com/kronup/kronup-php/blob/main/LICENSE.txt"><img src="https://img.shields.io/packagist/l/kronup/kronup-php.svg?style=flat&color=blue" alt="Software License" style="max-width: 100%;"></a>
 </p>
 
-## Table of Contents
-- [Welcome!](#welcome)
-  - [What is Kronup?](#what-is-kronup)
-  - [Need help?](#need-help)
-- [Getting Started](#getting-started)
-
 ## Welcome!
 
 This is the official Kronup SDK for PHP version `1.0.0` based on API version `0.0.1`.
+
+Start building your Kronup application in your favorite language today!
 
 ### Getting started
 
