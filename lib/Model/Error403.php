@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Response401 Model
+ * Error403 Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,21 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Response401 Model
+ * Error403 Model
+ * 
+ * @description Operation not allowed
  */
-class Response401 extends AbstractModel {
+class Error403 extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Response401";
+    protected static $_name = "Error403";
     protected static $_definition = [
-        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0]]
+        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 1]], 
+        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 1]]
     ];
 
     /**
-     * Response401
+     * Error403
      *
      * @param mixed[] $data Model data
      */
@@ -43,16 +45,16 @@ class Response401 extends AbstractModel {
     /**
      * Get id
      *
-     * @return string|null
+     * @return string
      */
-    public function getId(): ?string {
+    public function getId(): string {
         return $this->_data["id"];
     }
 
     /**
      * Set id
      * 
-     * @param string|null $id id
+     * @param string $id Unique lowercase string that identifies this 403 error
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -63,16 +65,16 @@ class Response401 extends AbstractModel {
     /**
      * Get message
      *
-     * @return string|null
+     * @return string
      */
-    public function getMessage(): ?string {
+    public function getMessage(): string {
         return $this->_data["message"];
     }
 
     /**
      * Set message
      * 
-     * @param string|null $message message
+     * @param string $message 403 Error message (supports i18n)
      * @throws \InvalidArgumentException
      * @return $this
      */

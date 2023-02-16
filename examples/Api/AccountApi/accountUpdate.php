@@ -30,7 +30,7 @@ try {
     /**
      * POST /account
      * 
-     * @var \Kronup\Model\AccountUpdate200Response $response
+     * @var \Kronup\Model\AccountUpdatedFields $response
      */
     $response = $sdk
         ->api()

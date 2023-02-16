@@ -119,7 +119,7 @@ Retrieve the current account model
 ```php
 (new \Kronup\Sdk())->api()->account()->accountUpdate(
     \Kronup\Model\AccountUpdateRequest $account_update_request
-): \Kronup\Model\AccountUpdate200Response
+): \Kronup\Model\AccountUpdatedFields
 ```
 
 ### Parameters
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kronup\Model\AccountUpdate200Response**](../../Model/AccountUpdate200Response)
+[**\Kronup\Model\AccountUpdatedFields**](../../Model/AccountUpdatedFields)
 
 ### Description
 

@@ -30,11 +30,15 @@ try {
 
     /**
      * DELETE /users/{id}
+     * 
+     * @var \Kronup\Model\Account $response
      */
-    $sdk
+    $response = $sdk
         ->api()
         ->users()
         ->userRemove($arg_id, $arg_x_org_id);
+
+    var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

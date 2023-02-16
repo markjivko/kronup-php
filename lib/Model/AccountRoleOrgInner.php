@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Account_roles_inner Model
+ * Account_roleOrg_inner Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,22 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Account_roles_inner Model
+ * Account_roleOrg_inner Model
  */
-class AccountRolesInner extends AbstractModel {
+class AccountRoleOrgInner extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Account_roles_inner";
+    public const ROLE_OWNER = 'owner';
+    public const ROLE_MANAGER = 'manager';
+    public const ROLE_MEMBER = 'member';
+    protected static $_name = "Account_roleOrg_inner";
     protected static $_definition = [
         "org_id" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "role_org" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0]]
+        "role" => ["role", "string", null, "getRole", "setRole", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
-     * AccountRolesInner
+     * AccountRoleOrgInner
      *
      * @param mixed[] $data Model data
      */
@@ -39,6 +42,18 @@ class AccountRolesInner extends AbstractModel {
         }
     }
 
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getRoleAllowableValues(): array {
+        return [
+            self::ROLE_OWNER,
+            self::ROLE_MANAGER,
+            self::ROLE_MEMBER,
+        ];
+    }
 
     /**
      * Get org_id
@@ -52,7 +67,7 @@ class AccountRolesInner extends AbstractModel {
     /**
      * Set org_id
      * 
-     * @param string|null $org_id org_id
+     * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -61,22 +76,22 @@ class AccountRolesInner extends AbstractModel {
     }
 
     /**
-     * Get role_org
+     * Get role
      *
      * @return string|null
      */
-    public function getRoleOrg(): ?string {
-        return $this->_data["role_org"];
+    public function getRole(): ?string {
+        return $this->_data["role"];
     }
 
     /**
-     * Set role_org
+     * Set role
      * 
-     * @param string|null $role_org role_org
+     * @param string|null $role User organization role
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoleOrg( $role_org) {
-        return $this->_set("role_org", $role_org);
+    public function setRole( $role) {
+        return $this->_set("role", $role);
     }
 }

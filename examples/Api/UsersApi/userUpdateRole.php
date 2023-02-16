@@ -39,7 +39,7 @@ try {
     /**
      * POST /users/{id}
      * 
-     * @var \Kronup\Model\UserUpdateRole200Response $response
+     * @var \Kronup\Model\UserRoles $response
      */
     $response = $sdk
         ->api()

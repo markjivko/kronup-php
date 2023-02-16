@@ -93,7 +93,7 @@ class InvitationsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return void
+     * @return \Kronup\Model\Invitation
      */
     public function invitationDelete($id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -106,11 +106,15 @@ class InvitationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/invitations/{id}";
-        $this->exec(
+        /** @var \Kronup\Model\Invitation $result */
+        $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
-            )
+            ), 
+            "\Kronup\Model\Invitation"
         );
+            
+        return $result;
     }
     
     /**

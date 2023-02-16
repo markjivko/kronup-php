@@ -37,7 +37,7 @@ class UsersApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\UserList200Response
+     * @return \Kronup\Model\UserList
      */
     public function userList($x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
@@ -58,7 +58,7 @@ class UsersApi extends AbstractApi {
 
         // Path template
         $rPath = "/users";
-        /** @var \Kronup\Model\UserList200Response $result */
+        /** @var \Kronup\Model\UserList $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [
@@ -66,7 +66,7 @@ class UsersApi extends AbstractApi {
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []
             ), 
-            "\Kronup\Model\UserList200Response"
+            "\Kronup\Model\UserList"
         );
             
         return $result;
@@ -105,7 +105,7 @@ class UsersApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return void
+     * @return \Kronup\Model\Account
      */
     public function userRemove($id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -118,11 +118,15 @@ class UsersApi extends AbstractApi {
 
         // Path template
         $rPath = "/users/{id}";
-        $this->exec(
+        /** @var \Kronup\Model\Account $result */
+        $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
-            )
+            ), 
+            "\Kronup\Model\Account"
         );
+            
+        return $result;
     }
     
     /**
@@ -134,7 +138,7 @@ class UsersApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\UserUpdateRole200Response
+     * @return \Kronup\Model\UserRoles
      */
     public function userUpdateRole($id, $x_org_id, $user_update_role_request) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -147,12 +151,12 @@ class UsersApi extends AbstractApi {
 
         // Path template
         $rPath = "/users/{id}";
-        /** @var \Kronup\Model\UserUpdateRole200Response $result */
+        /** @var \Kronup\Model\UserRoles $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, [], $user_update_role_request
             ), 
-            "\Kronup\Model\UserUpdateRole200Response"
+            "\Kronup\Model\UserRoles"
         );
             
         return $result;

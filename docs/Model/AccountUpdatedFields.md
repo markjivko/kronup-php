@@ -1,14 +1,14 @@
 ---
-title: AccountUpdate200Response
+title: AccountUpdatedFields
 parent: Model
 layout: page
 ---
 
-# AccountUpdate200Response
+# AccountUpdatedFields
 
 ## Model getters
 
 Method name | Return type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**getUserName()** | **string** |  <br>Example: `John Doe` | [optional]
+**getUserName()** | **string** | User name <br>Example: `John Doe` | [optional]
 

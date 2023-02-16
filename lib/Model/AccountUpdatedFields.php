@@ -1,7 +1,7 @@
 <?php
 
 /**
- * accountUpdate_200_response Model
+ * AccountUpdatedFields Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,18 +17,18 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * accountUpdate_200_response Model
+ * AccountUpdatedFields Model
  */
-class AccountUpdate200Response extends AbstractModel {
+class AccountUpdatedFields extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "accountUpdate_200_response";
+    protected static $_name = "AccountUpdatedFields";
     protected static $_definition = [
         "user_name" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]]
     ];
 
     /**
-     * AccountUpdate200Response
+     * AccountUpdatedFields
      *
      * @param mixed[] $data Model data
      */
@@ -51,7 +51,7 @@ class AccountUpdate200Response extends AbstractModel {
     /**
      * Set user_name
      * 
-     * @param string|null $user_name user_name
+     * @param string|null $user_name User name
      * @throws \InvalidArgumentException
      * @return $this
      */

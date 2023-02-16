@@ -22,6 +22,8 @@ namespace Kronup\Model;
 class Invitation extends AbstractModel {
 
     public const _D = null;
+    public const INVITE_ORG_ROLE_MANAGER = 'manager';
+    public const INVITE_ORG_ROLE_MEMBER = 'member';
     protected static $_name = "Invitation";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -29,11 +31,11 @@ class Invitation extends AbstractModel {
         "user_id" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
         "invite_name" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 0]], 
         "invite_domain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", null, ["r" => 0]], 
-        "invite_org_role" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", null, ["r" => 0]], 
+        "invite_org_role" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", null, ["r" => 0, "e" => 1]], 
         "invite_org_name" => ["inviteOrgName", "string", null, "getInviteOrgName", "setInviteOrgName", null, ["r" => 0]], 
-        "invite_uses" => ["inviteUses", "float", null, "getInviteUses", "setInviteUses", null, ["r" => 0]], 
-        "invite_uses_max" => ["inviteUsesMax", "float", null, "getInviteUsesMax", "setInviteUsesMax", null, ["r" => 0]], 
-        "invite_views" => ["inviteViews", "float", null, "getInviteViews", "setInviteViews", null, ["r" => 0]], 
+        "invite_uses" => ["inviteUses", "int", null, "getInviteUses", "setInviteUses", null, ["r" => 0]], 
+        "invite_uses_max" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", null, ["r" => 0]], 
+        "invite_views" => ["inviteViews", "int", null, "getInviteViews", "setInviteViews", null, ["r" => 0]], 
         "expires_at" => ["expiresAt", "string", null, "getExpiresAt", "setExpiresAt", null, ["r" => 0]], 
         "created_at" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updated_at" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
@@ -50,6 +52,17 @@ class Invitation extends AbstractModel {
         }
     }
 
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getInviteOrgRoleAllowableValues(): array {
+        return [
+            self::INVITE_ORG_ROLE_MANAGER,
+            self::INVITE_ORG_ROLE_MEMBER,
+        ];
+    }
 
     /**
      * Get id
@@ -63,7 +76,7 @@ class Invitation extends AbstractModel {
     /**
      * Set id
      * 
-     * @param string|null $id id
+     * @param string|null $id Invitation ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -83,7 +96,7 @@ class Invitation extends AbstractModel {
     /**
      * Set org_id
      * 
-     * @param string|null $org_id org_id
+     * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -103,7 +116,7 @@ class Invitation extends AbstractModel {
     /**
      * Set user_id
      * 
-     * @param string|null $user_id user_id
+     * @param string|null $user_id User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -123,7 +136,7 @@ class Invitation extends AbstractModel {
     /**
      * Set invite_name
      * 
-     * @param string|null $invite_name invite_name
+     * @param string|null $invite_name Invitation name
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -143,7 +156,7 @@ class Invitation extends AbstractModel {
     /**
      * Set invite_domain
      * 
-     * @param string|null $invite_domain invite_domain
+     * @param string|null $invite_domain Invitation domain
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -163,7 +176,7 @@ class Invitation extends AbstractModel {
     /**
      * Set invite_org_role
      * 
-     * @param string|null $invite_org_role invite_org_role
+     * @param string|null $invite_org_role Invitation user role
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -183,7 +196,7 @@ class Invitation extends AbstractModel {
     /**
      * Set invite_org_name
      * 
-     * @param string|null $invite_org_name invite_org_name
+     * @param string|null $invite_org_name Invitation organzation name
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -194,16 +207,16 @@ class Invitation extends AbstractModel {
     /**
      * Get invite_uses
      *
-     * @return float|null
+     * @return int|null
      */
-    public function getInviteUses(): ?float {
+    public function getInviteUses(): ?int {
         return $this->_data["invite_uses"];
     }
 
     /**
      * Set invite_uses
      * 
-     * @param float|null $invite_uses invite_uses
+     * @param int|null $invite_uses Number of uses
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -214,16 +227,16 @@ class Invitation extends AbstractModel {
     /**
      * Get invite_uses_max
      *
-     * @return float|null
+     * @return int|null
      */
-    public function getInviteUsesMax(): ?float {
+    public function getInviteUsesMax(): ?int {
         return $this->_data["invite_uses_max"];
     }
 
     /**
      * Set invite_uses_max
      * 
-     * @param float|null $invite_uses_max invite_uses_max
+     * @param int|null $invite_uses_max Maximum number of uses
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -234,16 +247,16 @@ class Invitation extends AbstractModel {
     /**
      * Get invite_views
      *
-     * @return float|null
+     * @return int|null
      */
-    public function getInviteViews(): ?float {
+    public function getInviteViews(): ?int {
         return $this->_data["invite_views"];
     }
 
     /**
      * Set invite_views
      * 
-     * @param float|null $invite_views invite_views
+     * @param int|null $invite_views Number of views
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -263,7 +276,7 @@ class Invitation extends AbstractModel {
     /**
      * Set expires_at
      * 
-     * @param string|null $expires_at expires_at
+     * @param string|null $expires_at Expires timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -283,7 +296,7 @@ class Invitation extends AbstractModel {
     /**
      * Set created_at
      * 
-     * @param string|null $created_at created_at
+     * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -303,7 +316,7 @@ class Invitation extends AbstractModel {
     /**
      * Set updated_at
      * 
-     * @param string|null $updated_at updated_at
+     * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */

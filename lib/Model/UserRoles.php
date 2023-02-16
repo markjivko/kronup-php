@@ -1,7 +1,7 @@
 <?php
 
 /**
- * userUpdateRole_200_response Model
+ * UserRoles Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,25 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * userUpdateRole_200_response Model
+ * UserRoles Model
  */
-class UserUpdateRole200Response extends AbstractModel {
+class UserRoles extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "userUpdateRole_200_response";
+    public const ROLE_SITE_ADMIN = 'admin';
+    public const ROLE_SITE_MODERATOR = 'moderator';
+    public const ROLE_SITE_USER = 'user';
+    public const ROLE_ORG_OWNER = 'owner';
+    public const ROLE_ORG_MANAGER = 'manager';
+    public const ROLE_ORG_MEMBER = 'member';
+    protected static $_name = "UserRoles";
     protected static $_definition = [
-        "role_site" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0]], 
-        "role_org" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0]]
+        "role_site" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
+        "role_org" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
-     * UserUpdateRole200Response
+     * UserRoles
      *
      * @param mixed[] $data Model data
      */
@@ -39,6 +45,30 @@ class UserUpdateRole200Response extends AbstractModel {
         }
     }
 
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getRoleSiteAllowableValues(): array {
+        return [
+            self::ROLE_SITE_ADMIN,
+            self::ROLE_SITE_MODERATOR,
+            self::ROLE_SITE_USER,
+        ];
+    }
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getRoleOrgAllowableValues(): array {
+        return [
+            self::ROLE_ORG_OWNER,
+            self::ROLE_ORG_MANAGER,
+            self::ROLE_ORG_MEMBER,
+        ];
+    }
 
     /**
      * Get role_site
@@ -52,7 +82,7 @@ class UserUpdateRole200Response extends AbstractModel {
     /**
      * Set role_site
      * 
-     * @param string|null $role_site role_site
+     * @param string|null $role_site User site role
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -72,7 +102,7 @@ class UserUpdateRole200Response extends AbstractModel {
     /**
      * Set role_org
      * 
-     * @param string|null $role_org role_org
+     * @param string|null $role_org User organization role
      * @throws \InvalidArgumentException
      * @return $this
      */

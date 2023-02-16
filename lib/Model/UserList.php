@@ -1,7 +1,7 @@
 <?php
 
 /**
- * userList_200_response Model
+ * UserList Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,20 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * userList_200_response Model
+ * UserList Model
  */
-class UserList200Response extends AbstractModel {
+class UserList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "userList_200_response";
+    protected static $_name = "UserList";
     protected static $_definition = [
         "page_size" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "page_number" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
-        "data" => ["data", "\Kronup\Model\User[]", null, "getData", "setData", null, ["r" => 0, "c" => 1]]
+        "users" => ["users", "\Kronup\Model\User[]", null, "getUsers", "setUsers", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * UserList200Response
+     * UserList
      *
      * @param mixed[] $data Model data
      */
@@ -82,22 +82,22 @@ class UserList200Response extends AbstractModel {
     }
 
     /**
-     * Get data
+     * Get users
      *
      * @return \Kronup\Model\User[]|null
      */
-    public function getData(): ?array {
-        return $this->_data["data"];
+    public function getUsers(): ?array {
+        return $this->_data["users"];
     }
 
     /**
-     * Set data
+     * Set users
      * 
-     * @param \Kronup\Model\User[]|null $data data
+     * @param \Kronup\Model\User[]|null $users users
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setData(?array $data) {
-        return $this->_set("data", $data);
+    public function setUsers(?array $users) {
+        return $this->_set("users", $users);
     }
 }

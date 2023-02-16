@@ -22,15 +22,18 @@ namespace Kronup\Model;
 class User extends AbstractModel {
 
     public const _D = null;
+    public const ROLE_SITE_ADMIN = 'admin';
+    public const ROLE_SITE_MODERATOR = 'moderator';
+    public const ROLE_SITE_USER = 'user';
     protected static $_name = "User";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "user_email" => ["userEmail", "string", null, "getUserEmail", "setUserEmail", null, ["r" => 0]], 
         "user_name" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]], 
         "user_icon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0]], 
-        "user_token_iat" => ["userTokenIat", "float", null, "getUserTokenIat", "setUserTokenIat", null, ["r" => 0]], 
-        "role_site" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0]], 
-        "roles" => ["roles", "\Kronup\Model\AccountRolesInner[]", null, "getRoles", "setRoles", null, ["r" => 0, "c" => 1]], 
+        "user_token_iat" => ["userTokenIat", "int", null, "getUserTokenIat", "setUserTokenIat", null, ["r" => 0]], 
+        "role_site" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
+        "role_org" => ["roleOrg", "\Kronup\Model\AccountRoleOrgInner[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
         "created_at" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updated_at" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -46,6 +49,18 @@ class User extends AbstractModel {
         }
     }
 
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getRoleSiteAllowableValues(): array {
+        return [
+            self::ROLE_SITE_ADMIN,
+            self::ROLE_SITE_MODERATOR,
+            self::ROLE_SITE_USER,
+        ];
+    }
 
     /**
      * Get id
@@ -59,7 +74,7 @@ class User extends AbstractModel {
     /**
      * Set id
      * 
-     * @param string|null $id id
+     * @param string|null $id User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -79,7 +94,7 @@ class User extends AbstractModel {
     /**
      * Set user_email
      * 
-     * @param string|null $user_email user_email
+     * @param string|null $user_email User e-mail address
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -99,7 +114,7 @@ class User extends AbstractModel {
     /**
      * Set user_name
      * 
-     * @param string|null $user_name user_name
+     * @param string|null $user_name User name
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -119,7 +134,7 @@ class User extends AbstractModel {
     /**
      * Set user_icon
      * 
-     * @param string|null $user_icon user_icon
+     * @param string|null $user_icon User icon URL
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -130,16 +145,16 @@ class User extends AbstractModel {
     /**
      * Get user_token_iat
      *
-     * @return float|null
+     * @return int|null
      */
-    public function getUserTokenIat(): ?float {
+    public function getUserTokenIat(): ?int {
         return $this->_data["user_token_iat"];
     }
 
     /**
      * Set user_token_iat
      * 
-     * @param float|null $user_token_iat user_token_iat
+     * @param int|null $user_token_iat User token creation timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -159,7 +174,7 @@ class User extends AbstractModel {
     /**
      * Set role_site
      * 
-     * @param string|null $role_site role_site
+     * @param string|null $role_site User site role
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -168,23 +183,23 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get roles
+     * Get role_org
      *
-     * @return \Kronup\Model\AccountRolesInner[]|null
+     * @return \Kronup\Model\AccountRoleOrgInner[]|null
      */
-    public function getRoles(): ?array {
-        return $this->_data["roles"];
+    public function getRoleOrg(): ?array {
+        return $this->_data["role_org"];
     }
 
     /**
-     * Set roles
+     * Set role_org
      * 
-     * @param \Kronup\Model\AccountRolesInner[]|null $roles roles
+     * @param \Kronup\Model\AccountRoleOrgInner[]|null $role_org role_org
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoles(?array $roles) {
-        return $this->_set("roles", $roles);
+    public function setRoleOrg(?array $role_org) {
+        return $this->_set("role_org", $role_org);
     }
 
     /**
@@ -199,7 +214,7 @@ class User extends AbstractModel {
     /**
      * Set created_at
      * 
-     * @param string|null $created_at created_at
+     * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -219,7 +234,7 @@ class User extends AbstractModel {
     /**
      * Set updated_at
      * 
-     * @param string|null $updated_at updated_at
+     * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */

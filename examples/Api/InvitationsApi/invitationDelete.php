@@ -30,11 +30,15 @@ try {
 
     /**
      * DELETE /invitations/{id}
+     * 
+     * @var \Kronup\Model\Invitation $response
      */
-    $sdk
+    $response = $sdk
         ->api()
         ->invitations()
         ->invitationDelete($arg_id, $arg_x_org_id);
+
+    var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

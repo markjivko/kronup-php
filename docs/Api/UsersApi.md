@@ -46,7 +46,7 @@ Method | Description
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
-): \Kronup\Model\UserList200Response
+): \Kronup\Model\UserList
 ```
 
 ### Parameters
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kronup\Model\UserList200Response**](../../Model/UserList200Response)
+[**\Kronup\Model\UserList**](../../Model/UserList)
 
 ### Description
 
@@ -133,7 +133,7 @@ Retrieve the user model and expand organizations
 (new \Kronup\Sdk())->api()->users()->userRemove(
     string $id,
     string $x_org_id
-)
+): \Kronup\Model\Account
 ```
 
 ### Parameters
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\Kronup\Model\Account**](../../Model/Account)
 
 ### Description
 
@@ -178,7 +178,7 @@ Remove user from Organization
     string $id,
     string $x_org_id,
     \Kronup\Model\UserUpdateRoleRequest $user_update_role_request
-): \Kronup\Model\UserUpdateRole200Response
+): \Kronup\Model\UserRoles
 ```
 
 ### Parameters
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kronup\Model\UserUpdateRole200Response**](../../Model/UserUpdateRole200Response)
+[**\Kronup\Model\UserRoles**](../../Model/UserRoles)
 
 ### Description
 

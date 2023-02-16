@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Response403 Model
+ * Error400 Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,21 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Response403 Model
+ * Error400 Model
+ * 
+ * @description Invalid argument error
  */
-class Response403 extends AbstractModel {
+class Error400 extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Response403";
+    protected static $_name = "Error400";
     protected static $_definition = [
-        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0]]
+        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 1]], 
+        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 1]]
     ];
 
     /**
-     * Response403
+     * Error400
      *
      * @param mixed[] $data Model data
      */
@@ -43,16 +45,16 @@ class Response403 extends AbstractModel {
     /**
      * Get id
      *
-     * @return string|null
+     * @return string
      */
-    public function getId(): ?string {
+    public function getId(): string {
         return $this->_data["id"];
     }
 
     /**
      * Set id
      * 
-     * @param string|null $id id
+     * @param string $id Unique lowercase string that identifies this 400 error
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -63,16 +65,16 @@ class Response403 extends AbstractModel {
     /**
      * Get message
      *
-     * @return string|null
+     * @return string
      */
-    public function getMessage(): ?string {
+    public function getMessage(): string {
         return $this->_data["message"];
     }
 
     /**
      * Set message
      * 
-     * @param string|null $message message
+     * @param string $message 400 Error message (supports i18n)
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -53,7 +53,7 @@ class Cache extends AbstractModel {
     /**
      * Set id
      * 
-     * @param string|null $id id
+     * @param string|null $id Item ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -73,7 +73,7 @@ class Cache extends AbstractModel {
     /**
      * Set value
      * 
-     * @param string|null $value value
+     * @param string|null $value Item value
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -93,7 +93,7 @@ class Cache extends AbstractModel {
     /**
      * Set expires_at
      * 
-     * @param string|null $expires_at expires_at
+     * @param string|null $expires_at Expiration timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */

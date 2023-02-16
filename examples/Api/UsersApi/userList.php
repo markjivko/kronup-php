@@ -34,7 +34,7 @@ try {
     /**
      * GET /users
      * 
-     * @var \Kronup\Model\UserList200Response $response
+     * @var \Kronup\Model\UserList $response
      */
     $response = $sdk
         ->api()

@@ -56,7 +56,7 @@ class Organization extends AbstractModel {
     /**
      * Set id
      * 
-     * @param string|null $id id
+     * @param string|null $id Organization ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -76,7 +76,7 @@ class Organization extends AbstractModel {
     /**
      * Set org_name
      * 
-     * @param string|null $org_name org_name
+     * @param string|null $org_name Organization name
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -96,7 +96,7 @@ class Organization extends AbstractModel {
     /**
      * Set org_icon
      * 
-     * @param string|null $org_icon org_icon
+     * @param string|null $org_icon Organization logo URL
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -116,7 +116,7 @@ class Organization extends AbstractModel {
     /**
      * Set org_owners
      * 
-     * @param string[]|null $org_owners org_owners
+     * @param string[]|null $org_owners Organization owners
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -136,7 +136,7 @@ class Organization extends AbstractModel {
     /**
      * Set created_at
      * 
-     * @param string|null $created_at created_at
+     * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -156,7 +156,7 @@ class Organization extends AbstractModel {
     /**
      * Set updated_at
      * 
-     * @param string|null $updated_at updated_at
+     * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
