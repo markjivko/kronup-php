@@ -7,20 +7,18 @@
     <a href="https://www.php.net/supported-versions.php" rel="nofollow"><img src="https://img.shields.io/badge/php-%3E=7.4-red" alt="PHP Version" style="max-width: 100%;"></a>
 </p>
 
-## Welcome!
+### Welcome!
 
 This is the official Kronup SDK for PHP version `1.0.0` based on API version `0.0.1`.
 
-Start building your Kronup application in your favorite language today!
+Start building your Kronup application in your favorite programming language today!
 
 ### Getting started
 
-Simply clone this repository and load it with a [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloader.
+First, check out the [**📒 SDK documentation**](https://kronup.github.io/kronup-php/).
 
-You can also install the SDK with Composer:
+Then simply clone this repository and load it with a [PSR-4 autoloader](https://www.php-fig.org/psr/psr-4/) or install it with [composer](https://getcomposer.org/):
 
 ```
 composer require kronup/kronup-php
 ```
-
-More information is available in the [SDK documentation](https://kronup.github.io/kronup-php/).
