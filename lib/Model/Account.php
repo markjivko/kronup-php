@@ -35,7 +35,8 @@ class Account extends AbstractModel {
         "role_site" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
         "role_org" => ["roleOrg", "\Kronup\Model\AccountRoleOrgInner[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
         "created_at" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updated_at" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "updated_at" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
+        "orgs" => ["orgs", "\Kronup\Model\Organization[]", null, "getOrgs", "setOrgs", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -240,5 +241,25 @@ class Account extends AbstractModel {
      */
     public function setUpdatedAt( $updated_at) {
         return $this->_set("updated_at", $updated_at);
+    }
+
+    /**
+     * Get orgs
+     *
+     * @return \Kronup\Model\Organization[]|null
+     */
+    public function getOrgs(): ?array {
+        return $this->_data["orgs"];
+    }
+
+    /**
+     * Set orgs
+     * 
+     * @param \Kronup\Model\Organization[]|null $orgs orgs
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setOrgs(?array $orgs) {
+        return $this->_set("orgs", $orgs);
     }
 }

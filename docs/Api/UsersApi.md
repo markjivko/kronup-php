@@ -133,7 +133,7 @@ Retrieve the user model and expand organizations
 (new \Kronup\Sdk())->api()->users()->userRemove(
     string $id,
     string $x_org_id
-): \Kronup\Model\Account
+): \Kronup\Model\User
 ```
 
 ### Parameters
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Kronup\Model\Account**](../../Model/Account)
+[**\Kronup\Model\User**](../../Model/User)
 
 ### Description
 

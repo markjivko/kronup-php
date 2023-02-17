@@ -31,7 +31,7 @@ try {
     /**
      * DELETE /users/{id}
      * 
-     * @var \Kronup\Model\Account $response
+     * @var \Kronup\Model\User $response
      */
     $response = $sdk
         ->api()

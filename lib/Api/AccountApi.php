@@ -81,19 +81,19 @@ class AccountApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\AccountUpdatedFields
+     * @return \Kronup\Model\Account
      */
     public function accountUpdate($account_update_request) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
         $rPath = "/account";
-        /** @var \Kronup\Model\AccountUpdatedFields $result */
+        /** @var \Kronup\Model\Account $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $account_update_request
             ), 
-            "\Kronup\Model\AccountUpdatedFields"
+            "\Kronup\Model\Account"
         );
             
         return $result;
