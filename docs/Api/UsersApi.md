@@ -54,8 +54,8 @@ Method | Description
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID |
- **$page_number** | **int**  | Pagination: page number | [optional] [default to 1]
- **$page_size** | **int**  | Pagination: page size | [optional] [default to 100]
+ **$page_number** | **int**  | Pagination: page number | [default to 1]
+ **$page_size** | **int**  | Pagination: page size | [default to 100]
 
 ### Return type
 

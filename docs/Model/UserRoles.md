@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**getRoleSite()** | **string** | User site role <br>Example: `null` | [optional]
-**getRoleOrg()** | **string** | User organization role <br>Example: `null` | [optional]
+**getRoleSite()** | **string** | User site role <br>Example: `null` |
+**getRoleOrg()** | **string** | User organization role <br>Example: `null` |
 
