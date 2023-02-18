@@ -124,9 +124,9 @@ Retrieve the current account model
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$account_update_request** | [**\Kronup\Model\AccountUpdateRequest**](../../Model/AccountUpdateRequest) |  |
+ **$account_update_request** | [**\Kronup\Model\AccountUpdateRequest**](../../Model/AccountUpdateRequest) |  
 
 ### Return type
 

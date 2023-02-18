@@ -47,9 +47,9 @@ Method | Description
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$organization_create_request** | [**\Kronup\Model\OrganizationCreateRequest**](../../Model/OrganizationCreateRequest) |  |
+ **$organization_create_request** | [**\Kronup\Model\OrganizationCreateRequest**](../../Model/OrganizationCreateRequest) |  
 
 ### Return type
 
@@ -90,10 +90,10 @@ Add an organization owned by the current user
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Organization ID |
- **$organization_create_request** | [**\Kronup\Model\OrganizationCreateRequest**](../../Model/OrganizationCreateRequest) |  |
+ **$id** | **string**  | Organization ID 
+ **$organization_create_request** | [**\Kronup\Model\OrganizationCreateRequest**](../../Model/OrganizationCreateRequest) |  
 
 ### Return type
 

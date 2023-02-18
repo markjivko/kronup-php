@@ -8,8 +8,8 @@ layout: page
 
 ## Model getters
 
-Method name | Return type | Description | Notes
------------- | ------------- | ------------- | -------------
-**getOrgId()** | **string** | Organization ID <br>Example: `org-id-***` |
-**getRole()** | **string** | User organization role <br>Example: `null` |
+Method name | Return type | Description
+------------ | ------------- | -------------
+**getOrgId()** | **string** | Organization ID <br>Example: `org-id-***` 
+**getRole()** | **string** | User organization role <br>Example: `null` 
 

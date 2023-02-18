@@ -51,11 +51,11 @@ Method | Description
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID |
- **$page_number** | **int**  | Pagination: page number | [default to 1]
- **$page_size** | **int**  | Pagination: page size | [default to 100]
+ **$x_org_id** | **string**  | Organization ID 
+ **$page_number** | **int**  | Pagination: page number  [default to 1]
+ **$page_size** | **int**  | Pagination: page size  [default to 100]
 
 ### Return type
 
@@ -95,9 +95,9 @@ Get a list of user models; supports pagination
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | User ID |
+ **$id** | **string**  | User ID 
 
 ### Return type
 
@@ -138,10 +138,10 @@ Retrieve the user model and expand organizations
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | User ID |
- **$x_org_id** | **string**  | Organization ID |
+ **$id** | **string**  | User ID 
+ **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -183,11 +183,11 @@ Remove user from Organization
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | User ID |
- **$x_org_id** | **string**  | Organization ID |
- **$user_update_role_request** | [**\Kronup\Model\UserUpdateRoleRequest**](../../Model/UserUpdateRoleRequest) |  |
+ **$id** | **string**  | User ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$user_update_role_request** | [**\Kronup\Model\UserUpdateRoleRequest**](../../Model/UserUpdateRoleRequest) |  
 
 ### Return type
 

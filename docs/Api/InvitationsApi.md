@@ -51,9 +51,9 @@ Method | Description
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID |
+ **$id** | **string**  | Invitation ID 
 
 ### Return type
 
@@ -94,10 +94,10 @@ Accept an invitation to join an organization
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID |
- **$invitation_create_request** | [**\Kronup\Model\InvitationCreateRequest**](../../Model/InvitationCreateRequest) |  |
+ **$x_org_id** | **string**  | Organization ID 
+ **$invitation_create_request** | [**\Kronup\Model\InvitationCreateRequest**](../../Model/InvitationCreateRequest) |  
 
 ### Return type
 
@@ -138,10 +138,10 @@ Create a new invitation to this organization
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID |
- **$x_org_id** | **string**  | Organization ID |
+ **$id** | **string**  | Invitation ID 
+ **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -181,9 +181,9 @@ Delete invitation
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID |
+ **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -223,9 +223,9 @@ Get a list of all invitations
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID |
+ **$id** | **string**  | Invitation ID 
 
 ### Return type
 
@@ -267,11 +267,11 @@ Fetch invitation data
 
 ### Parameters
 
-Name | Type | Description  | Notes
+Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID |
- **$x_org_id** | **string**  | Organization ID |
- **$invitation_update_request** | [**\Kronup\Model\InvitationUpdateRequest**](../../Model/InvitationUpdateRequest) |  |
+ **$id** | **string**  | Invitation ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$invitation_update_request** | [**\Kronup\Model\InvitationUpdateRequest**](../../Model/InvitationUpdateRequest) |  
 
 ### Return type
 

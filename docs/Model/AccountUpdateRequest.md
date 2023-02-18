@@ -8,7 +8,7 @@ layout: page
 
 ## Model getters
 
-Method name | Return type | Description | Notes
------------- | ------------- | ------------- | -------------
-**getUserName()** | **string** | New user name <br>Example: `John Doe` |
+Method name | Return type | Description
+------------ | ------------- | -------------
+**getUserName()** | **string** | New user name <br>Example: `John Doe` 
 
