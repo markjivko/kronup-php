@@ -25,11 +25,11 @@ class Organization extends AbstractModel {
     protected static $_name = "Organization";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "org_name" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0]], 
-        "org_icon" => ["orgIcon", "string", null, "getOrgIcon", "setOrgIcon", null, ["r" => 0]], 
-        "org_owners" => ["orgOwners", "string[]", null, "getOrgOwners", "setOrgOwners", null, ["r" => 0, "c" => 1]], 
-        "created_at" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updated_at" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "orgName" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0]], 
+        "orgIcon" => ["orgIcon", "string", null, "getOrgIcon", "setOrgIcon", null, ["r" => 0]], 
+        "orgOwners" => ["orgOwners", "string[]", null, "getOrgOwners", "setOrgOwners", null, ["r" => 0, "c" => 1]], 
+        "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
 
     /**
@@ -60,107 +60,107 @@ class Organization extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setId( $id) {
+    public function setId($id) {
         return $this->_set("id", $id);
     }
 
     /**
-     * Get org_name
+     * Get orgName
      *
      * @return string|null
      */
     public function getOrgName(): ?string {
-        return $this->_data["org_name"];
+        return $this->_data["orgName"];
     }
 
     /**
-     * Set org_name
+     * Set orgName
      * 
      * @param string|null $org_name Organization name
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrgName( $org_name) {
-        return $this->_set("org_name", $org_name);
+    public function setOrgName($org_name) {
+        return $this->_set("orgName", $org_name);
     }
 
     /**
-     * Get org_icon
+     * Get orgIcon
      *
      * @return string|null
      */
     public function getOrgIcon(): ?string {
-        return $this->_data["org_icon"];
+        return $this->_data["orgIcon"];
     }
 
     /**
-     * Set org_icon
+     * Set orgIcon
      * 
      * @param string|null $org_icon Organization logo URL
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrgIcon( $org_icon) {
-        return $this->_set("org_icon", $org_icon);
+    public function setOrgIcon($org_icon) {
+        return $this->_set("orgIcon", $org_icon);
     }
 
     /**
-     * Get org_owners
+     * Get orgOwners
      *
      * @return string[]|null
      */
     public function getOrgOwners(): ?array {
-        return $this->_data["org_owners"];
+        return $this->_data["orgOwners"];
     }
 
     /**
-     * Set org_owners
+     * Set orgOwners
      * 
      * @param string[]|null $org_owners Organization owners
      * @throws \InvalidArgumentException
      * @return $this
      */
     public function setOrgOwners(?array $org_owners) {
-        return $this->_set("org_owners", $org_owners);
+        return $this->_set("orgOwners", $org_owners);
     }
 
     /**
-     * Get created_at
+     * Get createdAt
      *
      * @return string|null
      */
     public function getCreatedAt(): ?string {
-        return $this->_data["created_at"];
+        return $this->_data["createdAt"];
     }
 
     /**
-     * Set created_at
+     * Set createdAt
      * 
      * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setCreatedAt( $created_at) {
-        return $this->_set("created_at", $created_at);
+    public function setCreatedAt($created_at) {
+        return $this->_set("createdAt", $created_at);
     }
 
     /**
-     * Get updated_at
+     * Get updatedAt
      *
      * @return string|null
      */
     public function getUpdatedAt(): ?string {
-        return $this->_data["updated_at"];
+        return $this->_data["updatedAt"];
     }
 
     /**
-     * Set updated_at
+     * Set updatedAt
      * 
      * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUpdatedAt( $updated_at) {
-        return $this->_set("updated_at", $updated_at);
+    public function setUpdatedAt($updated_at) {
+        return $this->_set("updatedAt", $updated_at);
     }
 }

@@ -1,10 +1,10 @@
 ---
-title: AccountRoleOrgInner
+title: AccountRoleOrg
 parent: Model
 layout: page
 ---
 
-# AccountRoleOrgInner
+# AccountRoleOrg
 
 ## Model getters
 

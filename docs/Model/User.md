@@ -16,7 +16,9 @@ Method name | Return type | Description
 **getUserIcon()** | **string** | User icon URL <br>Example: `https://***` 
 **getUserTokenIat()** | **int** | User token creation timestamp <br>Example: `1663663000` 
 **getRoleSite()** | **string** | User site role <br>Example: `null` 
-**getRoleOrg()** | [**\Kronup\Model\AccountRoleOrgInner[]**](../AccountRoleOrgInner) |  <br>Example: `null` 
+**getRoleOrg()** | [**\Kronup\Model\AccountRoleOrg[]**](../AccountRoleOrg) |  <br>Example: `null` 
+**getProjects()** | **string[]** |  <br>Example: `null` 
+**getTeams()** | **string[]** |  <br>Example: `null` 
 **getCreatedAt()** | **string** | Created timestamp <br>Example: `2001-01-01T08:08:08.000+00:00` 
 **getUpdatedAt()** | **string** | Updated timestamp <br>Example: `2001-01-01T08:08:08.000+00:00` 
 **getOrgs()** | [**\Kronup\Model\Organization[]**](../Organization) |  <br>Example: `null` 

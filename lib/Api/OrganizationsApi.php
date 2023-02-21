@@ -54,6 +54,31 @@ class OrganizationsApi extends AbstractApi {
     }
     
     /**
+     * Delete organization
+     *
+     * @param string $id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Organization
+     */
+    public function organizationDelete($id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+
+        // Path template
+        $rPath = "/organizations/{id}";
+        /** @var \Kronup\Model\Organization $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\Organization"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * Update organization
      *
      * @param string $id Organization ID

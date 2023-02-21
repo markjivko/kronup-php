@@ -99,7 +99,11 @@ class Serializer {
                                     true
                                 )
                             ) {
-                                if (is_callable($callable = [$openAPIType, "getAllowableEnumValues"])) {
+                                if (is_callable($callable = [$openAPIType, "getEnumValues"])) {
+                                    // String typecast returns enum value
+                                    $value = "$value";
+
+                                    // Get allowed values
                                     $allowedEnumTypes = $callable();
                                     if (!in_array($value, $allowedEnumTypes, true)) {
                                         $imploded = implode("', '", $allowedEnumTypes);
@@ -421,7 +425,7 @@ class Serializer {
             return $values;
         }
 
-        // for associative array e.g. array<string,int>
+        // For associative array e.g. array<string,int>
         if (preg_match("/^(array<|map\[)/", $type)) {
             settype($data, "array");
             $inner = substr($type, 4, -1);
@@ -442,10 +446,6 @@ class Serializer {
                 try {
                     return new \DateTime($data);
                 } catch (\Exception $exception) {
-                    // Some API's return a date-time with too high nanosecond
-                    // precision for php's DateTime to handle. This conversion
-                    // (string -> unix timestamp -> DateTime) is a workaround
-                    // for the problem.
                     return (new \DateTime())->setTimestamp(strtotime($data));
                 }
             } else {
@@ -488,14 +488,16 @@ class Serializer {
             return $data;
         }
 
-        // We couldn't do a scalar cast, so we know this is class string.
+        // We couldn't do a scalar cast, so we know this is a class string
         /** @var string $type */
-        if (method_exists($type, "getAllowableEnumValues")) {
-            if (!in_array($data, $type::getAllowableEnumValues(), true)) {
-                $imploded = implode("', '", $type::getAllowableEnumValues());
+        if (method_exists($type, "getEnumValues")) {
+            if (!in_array($data, $type::getEnumValues(), true)) {
+                $imploded = implode("', '", $type::getEnumValues());
                 throw new InvalidArgumentException("Invalid value for enum '$type', must be one of: '$imploded'");
             }
-            return $data;
+
+            // New enum instance
+            return new $type($data);
         } else {
             // If a discriminator is defined and points to a valid subclass, use it
             $discriminator = $type::_D;

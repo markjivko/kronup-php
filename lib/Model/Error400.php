@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * Error400 Model
  * 
- * @description Invalid argument error
+ * Invalid argument error
  */
 class Error400 extends AbstractModel {
 
@@ -58,7 +58,7 @@ class Error400 extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setId( $id) {
+    public function setId($id) {
         return $this->_set("id", $id);
     }
 
@@ -78,7 +78,7 @@ class Error400 extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setMessage( $message) {
+    public function setMessage($message) {
         return $this->_set("message", $message);
     }
 }

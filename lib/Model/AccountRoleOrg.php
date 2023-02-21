@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Account_roleOrg_inner Model
+ * AccountRoleOrg Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,22 +17,22 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Account_roleOrg_inner Model
+ * AccountRoleOrg Model
  */
-class AccountRoleOrgInner extends AbstractModel {
+class AccountRoleOrg extends AbstractModel {
 
     public const _D = null;
     public const ROLE_OWNER = 'owner';
     public const ROLE_MANAGER = 'manager';
     public const ROLE_MEMBER = 'member';
-    protected static $_name = "Account_roleOrg_inner";
+    protected static $_name = "AccountRoleOrg";
     protected static $_definition = [
-        "org_id" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
+        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "role" => ["role", "string", null, "getRole", "setRole", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
-     * AccountRoleOrgInner
+     * AccountRoleOrg
      *
      * @param mixed[] $data Model data
      */
@@ -56,23 +56,23 @@ class AccountRoleOrgInner extends AbstractModel {
     }
 
     /**
-     * Get org_id
+     * Get orgId
      *
      * @return string|null
      */
     public function getOrgId(): ?string {
-        return $this->_data["org_id"];
+        return $this->_data["orgId"];
     }
 
     /**
-     * Set org_id
+     * Set orgId
      * 
      * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrgId( $org_id) {
-        return $this->_set("org_id", $org_id);
+    public function setOrgId($org_id) {
+        return $this->_set("orgId", $org_id);
     }
 
     /**
@@ -91,7 +91,7 @@ class AccountRoleOrgInner extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRole( $role) {
+    public function setRole($role) {
         return $this->_set("role", $role);
     }
 }

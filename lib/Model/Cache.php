@@ -26,7 +26,7 @@ class Cache extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "value" => ["value", "string", null, "getValue", "setValue", null, ["r" => 0]], 
-        "expires_at" => ["expiresAt", "string", null, "getExpiresAt", "setExpiresAt", null, ["r" => 0]]
+        "expiresAt" => ["expiresAt", "string", null, "getExpiresAt", "setExpiresAt", null, ["r" => 0]]
     ];
 
     /**
@@ -57,7 +57,7 @@ class Cache extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setId( $id) {
+    public function setId($id) {
         return $this->_set("id", $id);
     }
 
@@ -77,27 +77,27 @@ class Cache extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setValue( $value) {
+    public function setValue($value) {
         return $this->_set("value", $value);
     }
 
     /**
-     * Get expires_at
+     * Get expiresAt
      *
      * @return string|null
      */
     public function getExpiresAt(): ?string {
-        return $this->_data["expires_at"];
+        return $this->_data["expiresAt"];
     }
 
     /**
-     * Set expires_at
+     * Set expiresAt
      * 
      * @param string|null $expires_at Expiration timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setExpiresAt( $expires_at) {
-        return $this->_set("expires_at", $expires_at);
+    public function setExpiresAt($expires_at) {
+        return $this->_set("expiresAt", $expires_at);
     }
 }

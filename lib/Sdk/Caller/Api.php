@@ -56,6 +56,13 @@ class Api {
     protected $_usersApi = null;
 
     /**
+     * ValueItems API
+     *
+     * @var \Kronup\Api\ValueItemsApi
+     */
+    protected $_valueItemsApi = null;
+
+    /**
      * SDK 
      *
      * @param \Kronup\Sdk $sdk SDK object
@@ -114,5 +121,18 @@ class Api {
         }
 
         return $this->_usersApi;
+    }
+    
+    /**
+     * ValueItems API
+     * 
+     * @return \Kronup\Api\ValueItemsApi
+     */
+    public function valueItems(): A\ValueItemsApi {
+        if (null === $this->_valueItemsApi) {
+            $this->_valueItemsApi = new A\ValueItemsApi($this->_sdk);
+        }
+
+        return $this->_valueItemsApi;
     }
 }

@@ -26,11 +26,11 @@ class InvitationCreateRequest extends AbstractModel {
     public const INVITE_ORG_ROLE_MEMBER = 'member';
     protected static $_name = "invitationCreate_request";
     protected static $_definition = [
-        "invite_name" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 1, "nl" => 3, "xl" => 64]], 
-        "invite_domain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", '', ["r" => 0, "xl" => 64]], 
-        "invite_org_role" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", 'member', ["r" => 0, "e" => 1]], 
-        "invite_expire_days" => ["inviteExpireDays", "int", null, "getInviteExpireDays", "setInviteExpireDays", 0, ["r" => 0, "n" => [0], "x" => [365]]], 
-        "invite_uses_max" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", 0, ["r" => 0, "n" => [0], "x" => [10000]]]
+        "inviteName" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 1, "nl" => 3, "xl" => 64]], 
+        "inviteDomain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", '', ["r" => 0, "xl" => 64]], 
+        "inviteOrgRole" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", 'member', ["r" => 0, "e" => 1]], 
+        "inviteExpireDays" => ["inviteExpireDays", "int", null, "getInviteExpireDays", "setInviteExpireDays", 0, ["r" => 0, "n" => [0], "x" => [365]]], 
+        "inviteUsesMax" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", 0, ["r" => 0, "n" => [0], "x" => [10000]]]
     ];
 
     /**
@@ -57,102 +57,102 @@ class InvitationCreateRequest extends AbstractModel {
     }
 
     /**
-     * Get invite_name
+     * Get inviteName
      *
      * @return string
      */
     public function getInviteName(): string {
-        return $this->_data["invite_name"];
+        return $this->_data["inviteName"];
     }
 
     /**
-     * Set invite_name
+     * Set inviteName
      * 
      * @param string $invite_name Invitation name
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteName( $invite_name) {
-        return $this->_set("invite_name", $invite_name);
+    public function setInviteName($invite_name) {
+        return $this->_set("inviteName", $invite_name);
     }
 
     /**
-     * Get invite_domain
+     * Get inviteDomain
      *
      * @return string|null
      */
     public function getInviteDomain(): ?string {
-        return $this->_data["invite_domain"];
+        return $this->_data["inviteDomain"];
     }
 
     /**
-     * Set invite_domain
+     * Set inviteDomain
      * 
      * @param string|null $invite_domain User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteDomain( $invite_domain) {
-        return $this->_set("invite_domain", $invite_domain);
+    public function setInviteDomain($invite_domain) {
+        return $this->_set("inviteDomain", $invite_domain);
     }
 
     /**
-     * Get invite_org_role
+     * Get inviteOrgRole
      *
      * @return string|null
      */
     public function getInviteOrgRole(): ?string {
-        return $this->_data["invite_org_role"];
+        return $this->_data["inviteOrgRole"];
     }
 
     /**
-     * Set invite_org_role
+     * Set inviteOrgRole
      * 
      * @param string|null $invite_org_role User role
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteOrgRole( $invite_org_role) {
-        return $this->_set("invite_org_role", $invite_org_role);
+    public function setInviteOrgRole($invite_org_role) {
+        return $this->_set("inviteOrgRole", $invite_org_role);
     }
 
     /**
-     * Get invite_expire_days
+     * Get inviteExpireDays
      *
      * @return int|null
      */
     public function getInviteExpireDays(): ?int {
-        return $this->_data["invite_expire_days"];
+        return $this->_data["inviteExpireDays"];
     }
 
     /**
-     * Set invite_expire_days
+     * Set inviteExpireDays
      * 
      * @param int|null $invite_expire_days The invitation expires after this many days. 0 = no expiration
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteExpireDays( $invite_expire_days) {
-        return $this->_set("invite_expire_days", $invite_expire_days);
+    public function setInviteExpireDays($invite_expire_days) {
+        return $this->_set("inviteExpireDays", $invite_expire_days);
     }
 
     /**
-     * Get invite_uses_max
+     * Get inviteUsesMax
      *
      * @return int|null
      */
     public function getInviteUsesMax(): ?int {
-        return $this->_data["invite_uses_max"];
+        return $this->_data["inviteUsesMax"];
     }
 
     /**
-     * Set invite_uses_max
+     * Set inviteUsesMax
      * 
      * @param int|null $invite_uses_max The invitation expires after being used this many times. 0 = no expiration
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteUsesMax( $invite_uses_max) {
-        return $this->_set("invite_uses_max", $invite_uses_max);
+    public function setInviteUsesMax($invite_uses_max) {
+        return $this->_set("inviteUsesMax", $invite_uses_max);
     }
 }

@@ -24,7 +24,7 @@ class OrganizationCreateRequest extends AbstractModel {
     public const _D = null;
     protected static $_name = "organizationCreate_request";
     protected static $_definition = [
-        "org_name" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0, "nl" => 3, "xl" => 64]]
+        "orgName" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0, "nl" => 3, "xl" => 64]]
     ];
 
     /**
@@ -40,22 +40,22 @@ class OrganizationCreateRequest extends AbstractModel {
 
 
     /**
-     * Get org_name
+     * Get orgName
      *
      * @return string|null
      */
     public function getOrgName(): ?string {
-        return $this->_data["org_name"];
+        return $this->_data["orgName"];
     }
 
     /**
-     * Set org_name
+     * Set orgName
      * 
      * @param string|null $org_name Organization name
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrgName( $org_name) {
-        return $this->_set("org_name", $org_name);
+    public function setOrgName($org_name) {
+        return $this->_set("orgName", $org_name);
     }
 }

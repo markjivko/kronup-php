@@ -30,8 +30,8 @@ class UserRoles extends AbstractModel {
     public const ROLE_ORG_MEMBER = 'member';
     protected static $_name = "UserRoles";
     protected static $_definition = [
-        "role_site" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
-        "role_org" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "e" => 1]]
+        "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
+        "roleOrg" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
@@ -71,42 +71,42 @@ class UserRoles extends AbstractModel {
     }
 
     /**
-     * Get role_site
+     * Get roleSite
      *
      * @return string|null
      */
     public function getRoleSite(): ?string {
-        return $this->_data["role_site"];
+        return $this->_data["roleSite"];
     }
 
     /**
-     * Set role_site
+     * Set roleSite
      * 
      * @param string|null $role_site User site role
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoleSite( $role_site) {
-        return $this->_set("role_site", $role_site);
+    public function setRoleSite($role_site) {
+        return $this->_set("roleSite", $role_site);
     }
 
     /**
-     * Get role_org
+     * Get roleOrg
      *
      * @return string|null
      */
     public function getRoleOrg(): ?string {
-        return $this->_data["role_org"];
+        return $this->_data["roleOrg"];
     }
 
     /**
-     * Set role_org
+     * Set roleOrg
      * 
      * @param string|null $role_org User organization role
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoleOrg( $role_org) {
-        return $this->_set("role_org", $role_org);
+    public function setRoleOrg($role_org) {
+        return $this->_set("roleOrg", $role_org);
     }
 }

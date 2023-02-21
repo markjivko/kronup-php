@@ -1,7 +1,7 @@
 <?php
 
 /**
- * UserList Model
+ * ItemList Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,20 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * UserList Model
+ * ItemList Model
  */
-class UserList extends AbstractModel {
+class ItemList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "UserList";
+    protected static $_name = "ItemList";
     protected static $_definition = [
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
-        "users" => ["users", "\Kronup\Model\User[]", null, "getUsers", "setUsers", null, ["r" => 0, "c" => 1]]
+        "items" => ["items", "\Kronup\Model\Item[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * UserList
+     * ItemList
      *
      * @param mixed[] $data Model data
      */
@@ -82,22 +82,22 @@ class UserList extends AbstractModel {
     }
 
     /**
-     * Get users
+     * Get items
      *
-     * @return \Kronup\Model\User[]|null
+     * @return \Kronup\Model\Item[]|null
      */
-    public function getUsers(): ?array {
-        return $this->_data["users"];
+    public function getItems(): ?array {
+        return $this->_data["items"];
     }
 
     /**
-     * Set users
+     * Set items
      * 
-     * @param \Kronup\Model\User[]|null $users
+     * @param \Kronup\Model\Item[]|null $items
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUsers(?array $users) {
-        return $this->_set("users", $users);
+    public function setItems(?array $items) {
+        return $this->_set("items", $items);
     }
 }

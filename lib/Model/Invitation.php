@@ -27,18 +27,18 @@ class Invitation extends AbstractModel {
     protected static $_name = "Invitation";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "org_id" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "user_id" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
-        "invite_name" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 0]], 
-        "invite_domain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", null, ["r" => 0]], 
-        "invite_org_role" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", null, ["r" => 0, "e" => 1]], 
-        "invite_org_name" => ["inviteOrgName", "string", null, "getInviteOrgName", "setInviteOrgName", null, ["r" => 0]], 
-        "invite_uses" => ["inviteUses", "int", null, "getInviteUses", "setInviteUses", null, ["r" => 0]], 
-        "invite_uses_max" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", null, ["r" => 0]], 
-        "invite_views" => ["inviteViews", "int", null, "getInviteViews", "setInviteViews", null, ["r" => 0]], 
-        "expires_at" => ["expiresAt", "string", null, "getExpiresAt", "setExpiresAt", null, ["r" => 0]], 
-        "created_at" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updated_at" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
+        "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
+        "inviteName" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 0]], 
+        "inviteDomain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", null, ["r" => 0]], 
+        "inviteOrgRole" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", null, ["r" => 0, "e" => 1]], 
+        "inviteOrgName" => ["inviteOrgName", "string", null, "getInviteOrgName", "setInviteOrgName", null, ["r" => 0]], 
+        "inviteUses" => ["inviteUses", "int", null, "getInviteUses", "setInviteUses", null, ["r" => 0]], 
+        "inviteUsesMax" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", null, ["r" => 0]], 
+        "inviteViews" => ["inviteViews", "int", null, "getInviteViews", "setInviteViews", null, ["r" => 0]], 
+        "expiresAt" => ["expiresAt", "string", null, "getExpiresAt", "setExpiresAt", null, ["r" => 0]], 
+        "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
 
     /**
@@ -80,247 +80,247 @@ class Invitation extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setId( $id) {
+    public function setId($id) {
         return $this->_set("id", $id);
     }
 
     /**
-     * Get org_id
+     * Get orgId
      *
      * @return string|null
      */
     public function getOrgId(): ?string {
-        return $this->_data["org_id"];
+        return $this->_data["orgId"];
     }
 
     /**
-     * Set org_id
+     * Set orgId
      * 
      * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrgId( $org_id) {
-        return $this->_set("org_id", $org_id);
+    public function setOrgId($org_id) {
+        return $this->_set("orgId", $org_id);
     }
 
     /**
-     * Get user_id
+     * Get userId
      *
      * @return string|null
      */
     public function getUserId(): ?string {
-        return $this->_data["user_id"];
+        return $this->_data["userId"];
     }
 
     /**
-     * Set user_id
+     * Set userId
      * 
      * @param string|null $user_id User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUserId( $user_id) {
-        return $this->_set("user_id", $user_id);
+    public function setUserId($user_id) {
+        return $this->_set("userId", $user_id);
     }
 
     /**
-     * Get invite_name
+     * Get inviteName
      *
      * @return string|null
      */
     public function getInviteName(): ?string {
-        return $this->_data["invite_name"];
+        return $this->_data["inviteName"];
     }
 
     /**
-     * Set invite_name
+     * Set inviteName
      * 
      * @param string|null $invite_name Invitation name
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteName( $invite_name) {
-        return $this->_set("invite_name", $invite_name);
+    public function setInviteName($invite_name) {
+        return $this->_set("inviteName", $invite_name);
     }
 
     /**
-     * Get invite_domain
+     * Get inviteDomain
      *
      * @return string|null
      */
     public function getInviteDomain(): ?string {
-        return $this->_data["invite_domain"];
+        return $this->_data["inviteDomain"];
     }
 
     /**
-     * Set invite_domain
+     * Set inviteDomain
      * 
      * @param string|null $invite_domain Invitation domain
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteDomain( $invite_domain) {
-        return $this->_set("invite_domain", $invite_domain);
+    public function setInviteDomain($invite_domain) {
+        return $this->_set("inviteDomain", $invite_domain);
     }
 
     /**
-     * Get invite_org_role
+     * Get inviteOrgRole
      *
      * @return string|null
      */
     public function getInviteOrgRole(): ?string {
-        return $this->_data["invite_org_role"];
+        return $this->_data["inviteOrgRole"];
     }
 
     /**
-     * Set invite_org_role
+     * Set inviteOrgRole
      * 
      * @param string|null $invite_org_role Invitation user role
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteOrgRole( $invite_org_role) {
-        return $this->_set("invite_org_role", $invite_org_role);
+    public function setInviteOrgRole($invite_org_role) {
+        return $this->_set("inviteOrgRole", $invite_org_role);
     }
 
     /**
-     * Get invite_org_name
+     * Get inviteOrgName
      *
      * @return string|null
      */
     public function getInviteOrgName(): ?string {
-        return $this->_data["invite_org_name"];
+        return $this->_data["inviteOrgName"];
     }
 
     /**
-     * Set invite_org_name
+     * Set inviteOrgName
      * 
      * @param string|null $invite_org_name Invitation organzation name
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteOrgName( $invite_org_name) {
-        return $this->_set("invite_org_name", $invite_org_name);
+    public function setInviteOrgName($invite_org_name) {
+        return $this->_set("inviteOrgName", $invite_org_name);
     }
 
     /**
-     * Get invite_uses
+     * Get inviteUses
      *
      * @return int|null
      */
     public function getInviteUses(): ?int {
-        return $this->_data["invite_uses"];
+        return $this->_data["inviteUses"];
     }
 
     /**
-     * Set invite_uses
+     * Set inviteUses
      * 
      * @param int|null $invite_uses Number of uses
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteUses( $invite_uses) {
-        return $this->_set("invite_uses", $invite_uses);
+    public function setInviteUses($invite_uses) {
+        return $this->_set("inviteUses", $invite_uses);
     }
 
     /**
-     * Get invite_uses_max
+     * Get inviteUsesMax
      *
      * @return int|null
      */
     public function getInviteUsesMax(): ?int {
-        return $this->_data["invite_uses_max"];
+        return $this->_data["inviteUsesMax"];
     }
 
     /**
-     * Set invite_uses_max
+     * Set inviteUsesMax
      * 
      * @param int|null $invite_uses_max Maximum number of uses
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteUsesMax( $invite_uses_max) {
-        return $this->_set("invite_uses_max", $invite_uses_max);
+    public function setInviteUsesMax($invite_uses_max) {
+        return $this->_set("inviteUsesMax", $invite_uses_max);
     }
 
     /**
-     * Get invite_views
+     * Get inviteViews
      *
      * @return int|null
      */
     public function getInviteViews(): ?int {
-        return $this->_data["invite_views"];
+        return $this->_data["inviteViews"];
     }
 
     /**
-     * Set invite_views
+     * Set inviteViews
      * 
      * @param int|null $invite_views Number of views
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setInviteViews( $invite_views) {
-        return $this->_set("invite_views", $invite_views);
+    public function setInviteViews($invite_views) {
+        return $this->_set("inviteViews", $invite_views);
     }
 
     /**
-     * Get expires_at
+     * Get expiresAt
      *
      * @return string|null
      */
     public function getExpiresAt(): ?string {
-        return $this->_data["expires_at"];
+        return $this->_data["expiresAt"];
     }
 
     /**
-     * Set expires_at
+     * Set expiresAt
      * 
      * @param string|null $expires_at Expires timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setExpiresAt( $expires_at) {
-        return $this->_set("expires_at", $expires_at);
+    public function setExpiresAt($expires_at) {
+        return $this->_set("expiresAt", $expires_at);
     }
 
     /**
-     * Get created_at
+     * Get createdAt
      *
      * @return string|null
      */
     public function getCreatedAt(): ?string {
-        return $this->_data["created_at"];
+        return $this->_data["createdAt"];
     }
 
     /**
-     * Set created_at
+     * Set createdAt
      * 
      * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setCreatedAt( $created_at) {
-        return $this->_set("created_at", $created_at);
+    public function setCreatedAt($created_at) {
+        return $this->_set("createdAt", $created_at);
     }
 
     /**
-     * Get updated_at
+     * Get updatedAt
      *
      * @return string|null
      */
     public function getUpdatedAt(): ?string {
-        return $this->_data["updated_at"];
+        return $this->_data["updatedAt"];
     }
 
     /**
-     * Set updated_at
+     * Set updatedAt
      * 
      * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUpdatedAt( $updated_at) {
-        return $this->_set("updated_at", $updated_at);
+    public function setUpdatedAt($updated_at) {
+        return $this->_set("updatedAt", $updated_at);
     }
 }

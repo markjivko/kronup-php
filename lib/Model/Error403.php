@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * Error403 Model
  * 
- * @description Operation not allowed
+ * Operation not allowed
  */
 class Error403 extends AbstractModel {
 
@@ -58,7 +58,7 @@ class Error403 extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setId( $id) {
+    public function setId($id) {
         return $this->_set("id", $id);
     }
 
@@ -78,7 +78,7 @@ class Error403 extends AbstractModel {
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setMessage( $message) {
+    public function setMessage($message) {
         return $this->_set("message", $message);
     }
 }

@@ -24,7 +24,7 @@ class AccountUpdateRequest extends AbstractModel {
     public const _D = null;
     protected static $_name = "accountUpdate_request";
     protected static $_definition = [
-        "user_name" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]]
+        "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]]
     ];
 
     /**
@@ -40,22 +40,22 @@ class AccountUpdateRequest extends AbstractModel {
 
 
     /**
-     * Get user_name
+     * Get userName
      *
      * @return string|null
      */
     public function getUserName(): ?string {
-        return $this->_data["user_name"];
+        return $this->_data["userName"];
     }
 
     /**
-     * Set user_name
+     * Set userName
      * 
      * @param string|null $user_name New user name
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUserName( $user_name) {
-        return $this->_set("user_name", $user_name);
+    public function setUserName($user_name) {
+        return $this->_set("userName", $user_name);
     }
 }
