@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Invitation ID
-$arg_id = "invitation-id-***";
+$arg_invite_id = "invitation-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
@@ -46,14 +46,14 @@ $arg_invitation_update_request = (new \Kronup\Model\InvitationUpdateRequest())
 try {
 
     /**
-     * POST /invitations/{id}
+     * POST /invitations/{inviteId}
      * 
      * @var \Kronup\Model\Invitation $response
      */
     $response = $sdk
         ->api()
         ->invitations()
-        ->invitationUpdate($arg_id, $arg_x_org_id, $arg_invitation_update_request);
+        ->invitationUpdate($arg_invite_id, $arg_x_org_id, $arg_invitation_update_request);
 
     var_dump($response);
 

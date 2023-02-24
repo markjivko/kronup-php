@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Stage_changes_inner Model
+ * ItemStageChange Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Stage_changes_inner Model
+ * ItemStageChange Model
  */
-class StageChangesInner extends AbstractModel {
+class ItemStageChange extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Stage_changes_inner";
+    protected static $_name = "ItemStageChange";
     protected static $_definition = [
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "stage" => ["stage", "\Kronup\Model\ItemStage", null, "getStage", "setStage", null, ["r" => 0]], 
@@ -30,7 +30,7 @@ class StageChangesInner extends AbstractModel {
     ];
 
     /**
-     * StageChangesInner
+     * ItemStageChange
      *
      * @param mixed[] $data Model data
      */

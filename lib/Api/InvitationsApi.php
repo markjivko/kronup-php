@@ -31,21 +31,21 @@ class InvitationsApi extends AbstractApi {
     /**
      * Accept invitation
      *
-     * @param string $id Invitation ID
+     * @param string $invite_id Invitation ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationAccept($id) {
+    public function invitationAccept($invite_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/invitations/{id}";
+        $rPath = "/invitations/{inviteId}";
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, []
             ), 
             "\Kronup\Model\Invitation"
         );
@@ -88,14 +88,14 @@ class InvitationsApi extends AbstractApi {
     /**
      * Delete invitation
      *
-     * @param string $id Invitation ID
+     * @param string $invite_id Invitation ID
      * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationDelete($id, $x_org_id) {
+    public function invitationDelete($invite_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -105,11 +105,11 @@ class InvitationsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/invitations/{id}";
+        $rPath = "/invitations/{inviteId}";
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, []
             ), 
             "\Kronup\Model\Invitation"
         );
@@ -118,7 +118,7 @@ class InvitationsApi extends AbstractApi {
     }
     
     /**
-     * List all invitations
+     * List invitations
      *
      * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -149,23 +149,23 @@ class InvitationsApi extends AbstractApi {
     }
     
     /**
-     * Read invitation
+     * Fetch invitation
      *
-     * @param string $id Invitation ID
+     * @param string $invite_id Invitation ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationRead($id) {
+    public function invitationRead($invite_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/invitations/{id}";
+        $rPath = "/invitations/{inviteId}";
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, []
             ), 
             "\Kronup\Model\Invitation"
         );
@@ -176,7 +176,7 @@ class InvitationsApi extends AbstractApi {
     /**
      * Update invitation
      *
-     * @param string $id Invitation ID
+     * @param string $invite_id Invitation ID
      * @param string $x_org_id Organization ID
      * @param \Kronup\Model\InvitationUpdateRequest $invitation_update_request 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -184,7 +184,7 @@ class InvitationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationUpdate($id, $x_org_id, $invitation_update_request) {
+    public function invitationUpdate($invite_id, $x_org_id, $invitation_update_request) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -194,11 +194,11 @@ class InvitationsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/invitations/{id}";
+        $rPath = "/invitations/{inviteId}";
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, [], $invitation_update_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, [], $invitation_update_request
             ), 
             "\Kronup\Model\Invitation"
         );

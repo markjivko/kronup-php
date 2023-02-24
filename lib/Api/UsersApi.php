@@ -29,7 +29,7 @@ class UsersApi extends AbstractApi {
     const PKG = "Users";
 
     /**
-     * List all users
+     * List users
      *
      * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
@@ -73,25 +73,25 @@ class UsersApi extends AbstractApi {
     }
     
     /**
-     * Get user
+     * Fetch user
      *
-     * @param string $id User ID
+     * @param string $user_id User ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Account
+     * @return \Kronup\Model\User
      */
-    public function userRead($id) {
+    public function userRead($user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/users/{id}";
-        /** @var \Kronup\Model\Account $result */
+        $rPath = "/users/{userId}";
+        /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Account"
+            "\Kronup\Model\User"
         );
             
         return $result;
@@ -100,14 +100,14 @@ class UsersApi extends AbstractApi {
     /**
      * Remove user
      *
-     * @param string $id User ID
+     * @param string $user_id User ID
      * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\User
      */
-    public function userRemove($id, $x_org_id) {
+    public function userRemove($user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -117,11 +117,11 @@ class UsersApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/users/{id}";
+        $rPath = "/users/{userId}";
         /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, []
             ), 
             "\Kronup\Model\User"
         );
@@ -130,9 +130,9 @@ class UsersApi extends AbstractApi {
     }
     
     /**
-     * Update role
+     * Update roles
      *
-     * @param string $id User ID
+     * @param string $user_id User ID
      * @param string $x_org_id Organization ID
      * @param \Kronup\Model\UserUpdateRoleRequest $user_update_role_request 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -140,7 +140,7 @@ class UsersApi extends AbstractApi {
      * 
      * @return \Kronup\Model\UserRoles
      */
-    public function userUpdateRole($id, $x_org_id, $user_update_role_request) {
+    public function userUpdateRole($user_id, $x_org_id, $user_update_role_request) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -150,11 +150,11 @@ class UsersApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/users/{id}";
+        $rPath = "/users/{userId}";
         /** @var \Kronup\Model\UserRoles $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["id" => $id]), $rPath, [], $rHeaders, [], $user_update_role_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, [], $user_update_role_request
             ), 
             "\Kronup\Model\UserRoles"
         );

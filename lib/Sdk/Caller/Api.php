@@ -49,6 +49,20 @@ class Api {
     protected $_organizationsApi = null;
 
     /**
+     * TeamChannels API
+     *
+     * @var \Kronup\Api\TeamChannelsApi
+     */
+    protected $_teamChannelsApi = null;
+
+    /**
+     * Teams API
+     *
+     * @var \Kronup\Api\TeamsApi
+     */
+    protected $_teamsApi = null;
+
+    /**
      * Users API
      *
      * @var \Kronup\Api\UsersApi
@@ -108,6 +122,32 @@ class Api {
         }
 
         return $this->_organizationsApi;
+    }
+    
+    /**
+     * TeamChannels API
+     * 
+     * @return \Kronup\Api\TeamChannelsApi
+     */
+    public function teamChannels(): A\TeamChannelsApi {
+        if (null === $this->_teamChannelsApi) {
+            $this->_teamChannelsApi = new A\TeamChannelsApi($this->_sdk);
+        }
+
+        return $this->_teamChannelsApi;
+    }
+    
+    /**
+     * Teams API
+     * 
+     * @return \Kronup\Api\TeamsApi
+     */
+    public function teams(): A\TeamsApi {
+        if (null === $this->_teamsApi) {
+            $this->_teamsApi = new A\TeamsApi($this->_sdk);
+        }
+
+        return $this->_teamsApi;
     }
     
     /**

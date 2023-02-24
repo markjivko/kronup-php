@@ -20,10 +20,10 @@ $sdk->api()->users();
 
 Method | Description
 ------------- | -------------
-[**userList()**](#userlist) | List all users
-[**userRead()**](#userread) | Get user
+[**userList()**](#userlist) | List users
+[**userRead()**](#userread) | Fetch user
 [**userRemove()**](#userremove) | Remove user
-[**userUpdateRole()**](#userupdaterole) | Update role
+[**userUpdateRole()**](#userupdaterole) | Update roles
 
 
 ## `userList()`
@@ -63,9 +63,9 @@ Name | Type | Description
 
 ### Description
 
-> List all users
+> List users
 
-Get a list of user models; supports pagination
+Get a list of user models
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -83,31 +83,31 @@ Get a list of user models; supports pagination
 
 ### Request
 
-> **GET** `/users/{id}`
+> **GET** `/users/{userId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->users()->userRead(
-    string $id
-): \Kronup\Model\Account
+    string $user_id
+): \Kronup\Model\User
 ```
 
 ### Parameters
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | User ID 
+ **$user_id** | **string**  | User ID 
 
 ### Return type
 
-[**\Kronup\Model\Account**](../../Model/Account)
+[**\Kronup\Model\User**](../../Model/User)
 
 ### Description
 
-> Get user
+> Fetch user
 
-Retrieve the user model and expand organizations
+Retrieve user model
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -125,13 +125,13 @@ Retrieve the user model and expand organizations
 
 ### Request
 
-> **DELETE** `/users/{id}`
+> **DELETE** `/users/{userId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->users()->userRemove(
-    string $id,
+    string $user_id,
     string $x_org_id
 ): \Kronup\Model\User
 ```
@@ -140,7 +140,7 @@ Retrieve the user model and expand organizations
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | User ID 
+ **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
@@ -169,13 +169,13 @@ Remove user from Organization
 
 ### Request
 
-> **POST** `/users/{id}`
+> **POST** `/users/{userId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->users()->userUpdateRole(
-    string $id,
+    string $user_id,
     string $x_org_id,
     \Kronup\Model\UserUpdateRoleRequest $user_update_role_request
 ): \Kronup\Model\UserRoles
@@ -185,7 +185,7 @@ Remove user from Organization
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | User ID 
+ **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
  **$user_update_role_request** | [**\Kronup\Model\UserUpdateRoleRequest**](../../Model/UserUpdateRoleRequest) |  
 
@@ -195,7 +195,7 @@ Name | Type | Description
 
 ### Description
 
-> Update role
+> Update roles
 
 Update the user model
 

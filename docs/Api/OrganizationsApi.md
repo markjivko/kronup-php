@@ -78,13 +78,13 @@ Add an organization owned by the current user
 
 ### Request
 
-> **DELETE** `/organizations/{id}`
+> **DELETE** `/organizations/{orgId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->organizations()->organizationDelete(
-    string $id
+    string $org_id
 ): \Kronup\Model\Organization
 ```
 
@@ -92,7 +92,7 @@ Add an organization owned by the current user
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Organization ID 
+ **$org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -120,13 +120,13 @@ Remove organization
 
 ### Request
 
-> **POST** `/organizations/{id}`
+> **POST** `/organizations/{orgId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->organizations()->organizationUpdate(
-    string $id,
+    string $org_id,
     \Kronup\Model\OrganizationCreateRequest $organization_create_request
 ): \Kronup\Model\Organization
 ```
@@ -135,7 +135,7 @@ Remove organization
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Organization ID 
+ **$org_id** | **string**  | Organization ID 
  **$organization_create_request** | [**\Kronup\Model\OrganizationCreateRequest**](../../Model/OrganizationCreateRequest) |  
 
 ### Return type

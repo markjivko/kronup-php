@@ -23,8 +23,8 @@ Method | Description
 [**invitationAccept()**](#invitationaccept) | Accept invitation
 [**invitationCreate()**](#invitationcreate) | Create invitation
 [**invitationDelete()**](#invitationdelete) | Delete invitation
-[**invitationList()**](#invitationlist) | List all invitations
-[**invitationRead()**](#invitationread) | Read invitation
+[**invitationList()**](#invitationlist) | List invitations
+[**invitationRead()**](#invitationread) | Fetch invitation
 [**invitationUpdate()**](#invitationupdate) | Update invitation
 
 
@@ -39,13 +39,13 @@ Method | Description
 
 ### Request
 
-> **PUT** `/invitations/{id}`
+> **PUT** `/invitations/{inviteId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->invitations()->invitationAccept(
-    string $id
+    string $invite_id
 ): \Kronup\Model\Invitation
 ```
 
@@ -53,7 +53,7 @@ Method | Description
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID 
+ **$invite_id** | **string**  | Invitation ID 
 
 ### Return type
 
@@ -125,13 +125,13 @@ Create a new invitation to this organization
 
 ### Request
 
-> **DELETE** `/invitations/{id}`
+> **DELETE** `/invitations/{inviteId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->invitations()->invitationDelete(
-    string $id,
+    string $invite_id,
     string $x_org_id
 ): \Kronup\Model\Invitation
 ```
@@ -140,7 +140,7 @@ Create a new invitation to this organization
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID 
+ **$invite_id** | **string**  | Invitation ID 
  **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
@@ -191,9 +191,9 @@ Name | Type | Description
 
 ### Description
 
-> List all invitations
+> List invitations
 
-Get a list of all invitations
+Get a list of invitation models
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -211,13 +211,13 @@ Get a list of all invitations
 
 ### Request
 
-> **GET** `/invitations/{id}`
+> **GET** `/invitations/{inviteId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->invitations()->invitationRead(
-    string $id
+    string $invite_id
 ): \Kronup\Model\Invitation
 ```
 
@@ -225,7 +225,7 @@ Get a list of all invitations
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID 
+ **$invite_id** | **string**  | Invitation ID 
 
 ### Return type
 
@@ -233,9 +233,9 @@ Name | Type | Description
 
 ### Description
 
-> Read invitation
+> Fetch invitation
 
-Fetch invitation data
+Retrieve invitation model
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -253,13 +253,13 @@ Fetch invitation data
 
 ### Request
 
-> **POST** `/invitations/{id}`
+> **POST** `/invitations/{inviteId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->invitations()->invitationUpdate(
-    string $id,
+    string $invite_id,
     string $x_org_id,
     \Kronup\Model\InvitationUpdateRequest $invitation_update_request
 ): \Kronup\Model\Invitation
@@ -269,7 +269,7 @@ Fetch invitation data
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$id** | **string**  | Invitation ID 
+ **$invite_id** | **string**  | Invitation ID 
  **$x_org_id** | **string**  | Organization ID 
  **$invitation_update_request** | [**\Kronup\Model\InvitationUpdateRequest**](../../Model/InvitationUpdateRequest) |  
 

@@ -1,10 +1,10 @@
 ---
-title: StageChangesInner
+title: ItemStageChange
 parent: Model
 layout: page
 ---
 
-# StageChangesInner
+# ItemStageChange
 
 ## Model getters
 

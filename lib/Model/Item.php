@@ -32,14 +32,14 @@ class Item extends AbstractModel {
     protected static $_name = "Item";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
+        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 3, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 3, "xl" => 4096]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "projectId" => ["projectId", "string", null, "getProjectId", "setProjectId", null, ["r" => 0]], 
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "stage" => ["stage", "\Kronup\Model\ItemStage", null, "getStage", "setStage", null, ["r" => 0]], 
-        "stageChanges" => ["stageChanges", "\Kronup\Model\StageChangesInner[]", null, "getStageChanges", "setStageChanges", null, ["r" => 0, "c" => 1]], 
+        "stageChanges" => ["stageChanges", "\Kronup\Model\ItemStageChange[]", null, "getStageChanges", "setStageChanges", null, ["r" => 0, "c" => 1]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
@@ -104,6 +104,26 @@ class Item extends AbstractModel {
     }
 
     /**
+     * Get orgId
+     *
+     * @return string|null
+     */
+    public function getOrgId(): ?string {
+        return $this->_data["orgId"];
+    }
+
+    /**
+     * Set orgId
+     * 
+     * @param string|null $org_id Organization ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setOrgId($org_id) {
+        return $this->_set("orgId", $org_id);
+    }
+
+    /**
      * Get digest
      *
      * @return string|null
@@ -141,26 +161,6 @@ class Item extends AbstractModel {
      */
     public function setDetails($details) {
         return $this->_set("details", $details);
-    }
-
-    /**
-     * Get orgId
-     *
-     * @return string|null
-     */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
-    }
-
-    /**
-     * Set orgId
-     * 
-     * @param string|null $org_id Organization ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
     }
 
     /**
@@ -246,7 +246,7 @@ class Item extends AbstractModel {
     /**
      * Get stageChanges
      *
-     * @return \Kronup\Model\StageChangesInner[]|null
+     * @return \Kronup\Model\ItemStageChange[]|null
      */
     public function getStageChanges(): ?array {
         return $this->_data["stageChanges"];
@@ -255,7 +255,7 @@ class Item extends AbstractModel {
     /**
      * Set stageChanges
      * 
-     * @param \Kronup\Model\StageChangesInner[]|null $stage_changes
+     * @param \Kronup\Model\ItemStageChange[]|null $stage_changes
      * @throws \InvalidArgumentException
      * @return $this
      */

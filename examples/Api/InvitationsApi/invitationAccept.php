@@ -21,19 +21,19 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Invitation ID
-$arg_id = "invitation-id-***";
+$arg_invite_id = "invitation-id-***";
 
 try {
 
     /**
-     * PUT /invitations/{id}
+     * PUT /invitations/{inviteId}
      * 
      * @var \Kronup\Model\Invitation $response
      */
     $response = $sdk
         ->api()
         ->invitations()
-        ->invitationAccept($arg_id);
+        ->invitationAccept($arg_invite_id);
 
     var_dump($response);
 

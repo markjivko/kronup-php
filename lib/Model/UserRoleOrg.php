@@ -1,7 +1,7 @@
 <?php
 
 /**
- * AccountRoleOrg Model
+ * UserRoleOrg Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,22 +17,22 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * AccountRoleOrg Model
+ * UserRoleOrg Model
  */
-class AccountRoleOrg extends AbstractModel {
+class UserRoleOrg extends AbstractModel {
 
     public const _D = null;
     public const ROLE_OWNER = 'owner';
     public const ROLE_MANAGER = 'manager';
     public const ROLE_MEMBER = 'member';
-    protected static $_name = "AccountRoleOrg";
+    protected static $_name = "UserRoleOrg";
     protected static $_definition = [
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "role" => ["role", "string", null, "getRole", "setRole", null, ["r" => 0, "e" => 1]]
+        "role" => ["role", "string", null, "getRole", "setRole", null, ["r" => 0, "e" => 1]], 
+        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]]
     ];
 
     /**
-     * AccountRoleOrg
+     * UserRoleOrg
      *
      * @param mixed[] $data Model data
      */
@@ -56,26 +56,6 @@ class AccountRoleOrg extends AbstractModel {
     }
 
     /**
-     * Get orgId
-     *
-     * @return string|null
-     */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
-    }
-
-    /**
-     * Set orgId
-     * 
-     * @param string|null $org_id Organization ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
-    }
-
-    /**
      * Get role
      *
      * @return string|null
@@ -93,5 +73,25 @@ class AccountRoleOrg extends AbstractModel {
      */
     public function setRole($role) {
         return $this->_set("role", $role);
+    }
+
+    /**
+     * Get orgId
+     *
+     * @return string|null
+     */
+    public function getOrgId(): ?string {
+        return $this->_data["orgId"];
+    }
+
+    /**
+     * Set orgId
+     * 
+     * @param string|null $org_id Organization ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setOrgId($org_id) {
+        return $this->_set("orgId", $org_id);
     }
 }

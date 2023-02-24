@@ -303,10 +303,10 @@ class Debugger {
                 }
             }
 
-            // Trim to 2048
+            // Trim response
             $response .=
-                strlen($responseBody) > 2048
-                    ? substr($responseBody, 0, 2045) . "... (" . number_format(strlen($responseBody) / 1024) . " kB)"
+                strlen($responseBody) > 4096
+                    ? substr($responseBody, 0, 4093) . "... (" . number_format(strlen($responseBody) / 1024) . " kB)"
                     : $responseBody;
         }
 

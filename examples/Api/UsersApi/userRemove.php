@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // User ID
-$arg_id = "user-id-***";
+$arg_user_id = "user-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
@@ -29,14 +29,14 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * DELETE /users/{id}
+     * DELETE /users/{userId}
      * 
      * @var \Kronup\Model\User $response
      */
     $response = $sdk
         ->api()
         ->users()
-        ->userRemove($arg_id, $arg_x_org_id);
+        ->userRemove($arg_user_id, $arg_x_org_id);
 
     var_dump($response);
 

@@ -33,26 +33,26 @@ class AccountApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return string[]
+     * @return \Kronup\Model\Account
      */
     public function accountDelete() {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
         $rPath = "/account";
-        /** @var string[] $result */
+        /** @var \Kronup\Model\Account $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", $rPath, $rPath, [], $rHeaders, []
             ), 
-            "string[]"
+            "\Kronup\Model\Account"
         );
             
         return $result;
     }
     
     /**
-     * Read account data
+     * Fetch account
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
@@ -75,7 +75,7 @@ class AccountApi extends AbstractApi {
     }
     
     /**
-     * Update account data
+     * Update account
      *
      * @param \Kronup\Model\AccountUpdateRequest $account_update_request 
      * @throws \Kronup\Sdk\ApiException on non-2xx response

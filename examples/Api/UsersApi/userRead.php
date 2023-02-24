@@ -21,19 +21,19 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // User ID
-$arg_id = "user-id-***";
+$arg_user_id = "user-id-***";
 
 try {
 
     /**
-     * GET /users/{id}
+     * GET /users/{userId}
      * 
-     * @var \Kronup\Model\Account $response
+     * @var \Kronup\Model\User $response
      */
     $response = $sdk
         ->api()
         ->users()
-        ->userRead($arg_id);
+        ->userRead($arg_user_id);
 
     var_dump($response);
 

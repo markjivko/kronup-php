@@ -39,8 +39,10 @@ class ExceptionTest extends TestCase {
      * Unauthorized
      */
     public function testUnauthorized(): void {
-        $this->assertTrue(true);
-        // $this->expectExceptionObject(new ApiException("Unauthorized", 401));
-        // $this->sdk->api()->users()->userList('org-id');
+        $this->expectExceptionObject(new ApiException("Unauthorized", 401));
+        $this->sdk
+            ->api()
+            ->users()
+            ->userList("org-id");
     }
 }

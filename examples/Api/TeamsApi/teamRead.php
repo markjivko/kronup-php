@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/UsersApi/#userupdaterole
+ * @link    https://kronup.github.io/kronup-php/Api/TeamsApi/#teamread
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,42 +20,34 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// User ID
-$arg_user_id = "user-id-***";
+// Team ID
+$arg_team_id = "team-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_user_update_role_request = (new \Kronup\Model\UserUpdateRoleRequest())
-    
-    // (optional) New site role
-    ->setRoleSite('user')
-    
-    // (optional) New organization role
-    ->setRoleOrg('member');
-
 try {
 
     /**
-     * POST /users/{userId}
+     * GET /teams/{teamId}
      * 
-     * @var \Kronup\Model\UserRoles $response
+     * @var \Kronup\Model\Team $response
      */
     $response = $sdk
         ->api()
-        ->users()
-        ->userUpdateRole($arg_user_id, $arg_x_org_id, $arg_user_update_role_request);
+        ->teams()
+        ->teamRead($arg_team_id, $arg_x_org_id);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->users()->userUpdateRole(): %s\n", 
+        "API Exception when calling api()->teams()->teamRead(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->users()->userUpdateRole(): %s\n", 
+        "Exception when calling api()->teams()->teamRead(): %s\n", 
         $exc->getMessage()
     );
 }

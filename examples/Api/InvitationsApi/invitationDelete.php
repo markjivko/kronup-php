@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Invitation ID
-$arg_id = "invitation-id-***";
+$arg_invite_id = "invitation-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
@@ -29,14 +29,14 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * DELETE /invitations/{id}
+     * DELETE /invitations/{inviteId}
      * 
      * @var \Kronup\Model\Invitation $response
      */
     $response = $sdk
         ->api()
         ->invitations()
-        ->invitationDelete($arg_id, $arg_x_org_id);
+        ->invitationDelete($arg_invite_id, $arg_x_org_id);
 
     var_dump($response);
 

@@ -15,19 +15,19 @@
 require_once dirname(__DIR__, 3) . "/autoload.php";
 
 // Invitation ID
-$arg_id = "invitation-id-***";
+$arg_invite_id = "invitation-id-***";
 
 try {
 
     /**
-     * GET /invitations/{id}
+     * GET /invitations/{inviteId}
      * 
      * @var \Kronup\Model\Invitation $response
      */
     $response = $sdk
         ->api()
         ->invitations()
-        ->invitationRead($arg_id);
+        ->invitationRead($arg_invite_id);
 
     var_dump($response);
 

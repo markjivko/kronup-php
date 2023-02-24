@@ -1,15 +1,15 @@
 ---
-title: AccountRoleOrg
+title: UserRoleOrg
 parent: Model
 layout: page
 ---
 
-# AccountRoleOrg
+# UserRoleOrg
 
 ## Model getters
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getOrgId()** | **string** | Organization ID <br>Example: `org-id-***` 
 **getRole()** | **string** | User organization role <br>Example: `null` 
+**getOrgId()** | **string** | Organization ID <br>Example: `org-id-***` 
 

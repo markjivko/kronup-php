@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/UsersApi/#userupdaterole
+ * @link    https://kronup.github.io/kronup-php/Api/TeamChannelsApi/#teamchannelcreate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,42 +20,42 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// User ID
-$arg_user_id = "user-id-***";
+// Team ID
+$arg_team_id = "team-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_user_update_role_request = (new \Kronup\Model\UserUpdateRoleRequest())
+$arg_team_channel_create_request = (new \Kronup\Model\TeamChannelCreateRequest())
     
-    // (optional) New site role
-    ->setRoleSite('user')
+    // (optional) Channel name
+    ->setChannelName('null')
     
-    // (optional) New organization role
-    ->setRoleOrg('member');
+    // (optional) Channel description
+    ->setChannelDesc('null');
 
 try {
 
     /**
-     * POST /users/{userId}
+     * POST /teams/{teamId}/channel
      * 
-     * @var \Kronup\Model\UserRoles $response
+     * @var \Kronup\Model\Team $response
      */
     $response = $sdk
         ->api()
-        ->users()
-        ->userUpdateRole($arg_user_id, $arg_x_org_id, $arg_user_update_role_request);
+        ->teamChannels()
+        ->teamChannelCreate($arg_team_id, $arg_x_org_id, $arg_team_channel_create_request);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->users()->userUpdateRole(): %s\n", 
+        "API Exception when calling api()->teamChannels()->teamChannelCreate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->users()->userUpdateRole(): %s\n", 
+        "Exception when calling api()->teamChannels()->teamChannelCreate(): %s\n", 
         $exc->getMessage()
     );
 }

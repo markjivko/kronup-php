@@ -21,8 +21,8 @@ $sdk->api()->account();
 Method | Description
 ------------- | -------------
 [**accountDelete()**](#accountdelete) | Delete account
-[**accountRead()**](#accountread) | Read account data
-[**accountUpdate()**](#accountupdate) | Update account data
+[**accountRead()**](#accountread) | Fetch account
+[**accountUpdate()**](#accountupdate) | Update account
 
 
 ## `accountDelete()`
@@ -41,7 +41,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->account()->accountDelete(): string[]
+(new \Kronup\Sdk())->api()->account()->accountDelete(): \Kronup\Model\Account
 ```
 
 ### Parameters
@@ -50,13 +50,13 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**string[]**
+[**\Kronup\Model\Account**](../../Model/Account)
 
 ### Description
 
 > Delete account
 
-Delete current account, along with any organization under sole ownership of this account
+Delete the current account. This action is reversible only if you sign back in within 14 days. API calls and service accounts cannot restore deleted accounts.
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Description
 
-> Read account data
+> Fetch account
 
 Retrieve the current account model
 
@@ -134,9 +134,9 @@ Name | Type | Description
 
 ### Description
 
-> Update account data
+> Update account
 
-Update the current account model
+Update the current account model.
 
 [Back to top](#top){: .btn .btn-purple }
 

@@ -107,7 +107,7 @@ Name | Type | Description
 
 > List value items
 
-List value items
+Get a list of value item models
 
 [Back to top](#top){: .btn .btn-purple }
 

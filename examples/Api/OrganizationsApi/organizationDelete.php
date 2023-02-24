@@ -21,19 +21,19 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Organization ID
-$arg_id = "org-id-***";
+$arg_org_id = "org-id-***";
 
 try {
 
     /**
-     * DELETE /organizations/{id}
+     * DELETE /organizations/{orgId}
      * 
      * @var \Kronup\Model\Organization $response
      */
     $response = $sdk
         ->api()
         ->organizations()
-        ->organizationDelete($arg_id);
+        ->organizationDelete($arg_org_id);
 
     var_dump($response);
 

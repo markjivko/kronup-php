@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/UsersApi/#userupdaterole
+ * @link    https://kronup.github.io/kronup-php/Api/TeamChannelsApi/#teamchannelassign
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,42 +20,40 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
+// Team ID
+$arg_team_id = "team-id-***";
+
+// Channel ID
+$arg_channel_id = "channel-id-***";
+
 // User ID
 $arg_user_id = "user-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_user_update_role_request = (new \Kronup\Model\UserUpdateRoleRequest())
-    
-    // (optional) New site role
-    ->setRoleSite('user')
-    
-    // (optional) New organization role
-    ->setRoleOrg('member');
-
 try {
 
     /**
-     * POST /users/{userId}
+     * PUT /teams/{teamId}/channel/{channelId}/user/{userId}
      * 
-     * @var \Kronup\Model\UserRoles $response
+     * @var \Kronup\Model\User $response
      */
     $response = $sdk
         ->api()
-        ->users()
-        ->userUpdateRole($arg_user_id, $arg_x_org_id, $arg_user_update_role_request);
+        ->teamChannels()
+        ->teamChannelAssign($arg_team_id, $arg_channel_id, $arg_user_id, $arg_x_org_id);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->users()->userUpdateRole(): %s\n", 
+        "API Exception when calling api()->teamChannels()->teamChannelAssign(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->users()->userUpdateRole(): %s\n", 
+        "Exception when calling api()->teamChannels()->teamChannelAssign(): %s\n", 
         $exc->getMessage()
     );
 }
