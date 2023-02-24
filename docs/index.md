@@ -4,6 +4,12 @@ layout: home
 nav_order: 1
 ---
 
+<p align="center">
+    <a href="https://api.kronup.com">
+      <img src="images/kronup.png"/>
+    </a>
+</p>
+
 # Kronup SDK for PHP
 {: .fs-9 }
 
