@@ -69,7 +69,7 @@ class Debugger {
      */
     public function print($data) {
         if ($this->_init()) {
-            fwrite($this->_fileHandler, (is_string($data) ? $data : var_export($data, true)) . PHP_EOL);
+            fwrite($this->_fileHandler, PHP_EOL . (is_string($data) ? $data : var_export($data, true)));
         }
     }
 
@@ -86,12 +86,13 @@ class Debugger {
     public function log(Request $request, int $resCode, $resHeaders, $resBody, $resError) {
         if ($this->_config->getDebug()) {
             // Log the request
-            $entry = $this->_getLogTag("Kronup API Call", "=");
+            $entry = $this->_getLogTag("<api-call> ", "~");
             $entry .= $this->_getLogRequest($request);
+            $entry .= str_repeat(".", 60) . PHP_EOL;
 
             // Log the response
             $entry .= $this->_getLogResponse($request, $resCode, $resHeaders, $resBody, $resError);
-            $entry .= $this->_getLogTag("/Kronup API Call", "=");
+            $entry .= $this->_getLogTag("</api-call>", "~");
 
             // Print entry
             $this->print($entry);
@@ -238,11 +239,11 @@ class Debugger {
                 $body = null !== $bodyJson ? json_encode($bodyJson, JSON_PRETTY_PRINT) : "{$request->getStream()}";
 
                 // Append line
-                $curl .= "  -d '{$body}'{$eof}";
+                $curl .= strlen($body) ? "  -d '{$body}'{$eof}" : $eof;
             }
         }
 
-        return trim($curl, "\\\n") . PHP_EOL;
+        return trim(trim($curl, "\\\n")) . PHP_EOL;
     }
 
     /**

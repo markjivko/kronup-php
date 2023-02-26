@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Item Model
+ * ValueItem Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,11 +17,15 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Item Model
+ * ValueItem Model
  */
-class Item extends AbstractModel {
+class ValueItem extends AbstractModel {
 
     public const _D = null;
+    public const STAGE_P = 'p';
+    public const STAGE_V = 'v';
+    public const STAGE_X = 'x';
+    public const STAGE_C = 'c';
     public const TYPE_F = 'f';
     public const TYPE_B = 'b';
     public const TYPE_C = 'c';
@@ -29,17 +33,17 @@ class Item extends AbstractModel {
     public const PRIORITY_S = 's';
     public const PRIORITY_C = 'c';
     public const PRIORITY_W = 'w';
-    protected static $_name = "Item";
+    protected static $_name = "ValueItem";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 3, "xl" => 256]], 
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 3, "xl" => 4096]], 
-        "projectId" => ["projectId", "string", null, "getProjectId", "setProjectId", null, ["r" => 0]], 
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
+        "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
+        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
-        "stage" => ["stage", "\Kronup\Model\ItemStage", null, "getStage", "setStage", null, ["r" => 0]], 
-        "stageChanges" => ["stageChanges", "\Kronup\Model\ItemStageChange[]", null, "getStageChanges", "setStageChanges", null, ["r" => 0, "c" => 1]], 
+        "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
+        "changes" => ["changes", "\Kronup\Model\ValueItemChange[]", null, "getChanges", "setChanges", null, ["r" => 0, "c" => 1]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
@@ -47,7 +51,7 @@ class Item extends AbstractModel {
     ];
 
     /**
-     * Item
+     * ValueItem
      *
      * @param mixed[] $data Model data
      */
@@ -57,6 +61,19 @@ class Item extends AbstractModel {
         }
     }
 
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getStageAllowableValues(): array {
+        return [
+            self::STAGE_P,
+            self::STAGE_V,
+            self::STAGE_X,
+            self::STAGE_C,
+        ];
+    }
     /**
      * Get allowable values
      *
@@ -124,6 +141,46 @@ class Item extends AbstractModel {
     }
 
     /**
+     * Get teamId
+     *
+     * @return string|null
+     */
+    public function getTeamId(): ?string {
+        return $this->_data["teamId"];
+    }
+
+    /**
+     * Set teamId
+     * 
+     * @param string|null $team_id Team ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setTeamId($team_id) {
+        return $this->_set("teamId", $team_id);
+    }
+
+    /**
+     * Get channelId
+     *
+     * @return string|null
+     */
+    public function getChannelId(): ?string {
+        return $this->_data["channelId"];
+    }
+
+    /**
+     * Set channelId
+     * 
+     * @param string|null $channel_id Channel ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setChannelId($channel_id) {
+        return $this->_set("channelId", $channel_id);
+    }
+
+    /**
      * Get digest
      *
      * @return string|null
@@ -164,46 +221,6 @@ class Item extends AbstractModel {
     }
 
     /**
-     * Get projectId
-     *
-     * @return string|null
-     */
-    public function getProjectId(): ?string {
-        return $this->_data["projectId"];
-    }
-
-    /**
-     * Set projectId
-     * 
-     * @param string|null $project_id Project ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setProjectId($project_id) {
-        return $this->_set("projectId", $project_id);
-    }
-
-    /**
-     * Get teamId
-     *
-     * @return string|null
-     */
-    public function getTeamId(): ?string {
-        return $this->_data["teamId"];
-    }
-
-    /**
-     * Set teamId
-     * 
-     * @param string|null $team_id Team ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setTeamId($team_id) {
-        return $this->_set("teamId", $team_id);
-    }
-
-    /**
      * Get authorId
      *
      * @return string|null
@@ -226,16 +243,16 @@ class Item extends AbstractModel {
     /**
      * Get stage
      *
-     * @return \Kronup\Model\ItemStage|null
+     * @return string|null
      */
-    public function getStage(): ?\Kronup\Model\ItemStage {
+    public function getStage(): ?string {
         return $this->_data["stage"];
     }
 
     /**
      * Set stage
      * 
-     * @param \Kronup\Model\ItemStage|null $stage
+     * @param string|null $stage Value Item Stage           * `p` - Planning           * `v` - Validation           * `x` - Execution           * `c` - Deep Context
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -244,23 +261,23 @@ class Item extends AbstractModel {
     }
 
     /**
-     * Get stageChanges
+     * Get changes
      *
-     * @return \Kronup\Model\ItemStageChange[]|null
+     * @return \Kronup\Model\ValueItemChange[]|null
      */
-    public function getStageChanges(): ?array {
-        return $this->_data["stageChanges"];
+    public function getChanges(): ?array {
+        return $this->_data["changes"];
     }
 
     /**
-     * Set stageChanges
+     * Set changes
      * 
-     * @param \Kronup\Model\ItemStageChange[]|null $stage_changes
+     * @param \Kronup\Model\ValueItemChange[]|null $changes
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setStageChanges(?array $stage_changes) {
-        return $this->_set("stageChanges", $stage_changes);
+    public function setChanges(?array $changes) {
+        return $this->_set("changes", $changes);
     }
 
     /**

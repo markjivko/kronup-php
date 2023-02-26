@@ -31,7 +31,7 @@ class User extends AbstractModel {
         "userEmail" => ["userEmail", "string", null, "getUserEmail", "setUserEmail", null, ["r" => 0]], 
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]], 
         "userIcon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0]], 
-        "teams" => ["teams", "\Kronup\Model\UserTeamChannel[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
+        "teams" => ["teams", "\Kronup\Model\UserChannel[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
         "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
         "roleOrg" => ["roleOrg", "\Kronup\Model\UserRoleOrg[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
@@ -145,7 +145,7 @@ class User extends AbstractModel {
     /**
      * Get teams
      *
-     * @return \Kronup\Model\UserTeamChannel[]|null
+     * @return \Kronup\Model\UserChannel[]|null
      */
     public function getTeams(): ?array {
         return $this->_data["teams"];
@@ -154,7 +154,7 @@ class User extends AbstractModel {
     /**
      * Set teams
      * 
-     * @param \Kronup\Model\UserTeamChannel[]|null $teams
+     * @param \Kronup\Model\UserChannel[]|null $teams
      * @throws \InvalidArgumentException
      * @return $this
      */

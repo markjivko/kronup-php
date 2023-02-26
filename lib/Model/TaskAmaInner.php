@@ -25,8 +25,8 @@ class TaskAmaInner extends AbstractModel {
     protected static $_name = "Task_ama_inner";
     protected static $_definition = [
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
-        "text" => ["text", "string", null, "getText", "setText", null, ["r" => 0]], 
-        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0]]
+        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 512]], 
+        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 512]]
     ];
 
     /**
@@ -62,23 +62,23 @@ class TaskAmaInner extends AbstractModel {
     }
 
     /**
-     * Get text
+     * Get message
      *
      * @return string|null
      */
-    public function getText(): ?string {
-        return $this->_data["text"];
+    public function getMessage(): ?string {
+        return $this->_data["message"];
     }
 
     /**
-     * Set text
+     * Set message
      * 
-     * @param string|null $text Feedback details
+     * @param string|null $message Feedback details
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setText($text) {
-        return $this->_set("text", $text);
+    public function setMessage($message) {
+        return $this->_set("message", $message);
     }
 
     /**
@@ -93,7 +93,7 @@ class TaskAmaInner extends AbstractModel {
     /**
      * Set reply
      * 
-     * @param string|null $reply Feedback reply
+     * @param string|null $reply Feedback reply from task assignee
      * @throws \InvalidArgumentException
      * @return $this
      */

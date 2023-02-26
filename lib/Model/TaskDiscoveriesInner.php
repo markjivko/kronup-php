@@ -26,7 +26,7 @@ class TaskDiscoveriesInner extends AbstractModel {
     public const _D = null;
     protected static $_name = "Task_discoveries_inner";
     protected static $_definition = [
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]]
     ];
 

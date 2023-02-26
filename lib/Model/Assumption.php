@@ -27,8 +27,8 @@ class Assumption extends AbstractModel {
     protected static $_name = "Assumption";
     protected static $_definition = [
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0]], 
-        "validated" => ["validated", "bool", null, "getValidated", "setValidated", null, ["r" => 0]], 
+        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "validated" => ["validated", "bool", null, "getValidated", "setValidated", false, ["r" => 0]], 
         "experiment" => ["experiment", "\Kronup\Model\AssumptionExperiment", null, "getExperiment", "setExperiment", null, ["r" => 0]]
     ];
 

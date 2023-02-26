@@ -24,8 +24,8 @@ class TeamUpdateRequest extends AbstractModel {
     public const _D = null;
     protected static $_name = "teamUpdate_request";
     protected static $_definition = [
-        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 3, "xl" => 256]], 
-        "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", '', ["r" => 0, "xl" => 512]]
+        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
+        "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", '', ["r" => 0, "xl" => 256]]
     ];
 
     /**

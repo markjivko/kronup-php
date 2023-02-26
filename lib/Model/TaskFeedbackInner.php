@@ -22,13 +22,20 @@ namespace Kronup\Model;
 class TaskFeedbackInner extends AbstractModel {
 
     public const _D = null;
-    public const ISSUE_X = 'x';
+    public const ISSUE_V = 'v';
+    public const ISSUE_C = 'c';
+    public const ISSUE_F = 'f';
+    public const ISSUE_T = 't';
+    public const ISSUE_S = 's';
+    public const ISSUE_CI = 'ci';
+    public const ISSUE_ST = 'st';
+    public const ISSUE_M = 'm';
     protected static $_name = "Task_feedback_inner";
     protected static $_definition = [
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
-        "issue" => ["issue", "string", null, "getIssue", "setIssue", null, ["r" => 0, "e" => 1]], 
-        "text" => ["text", "string", null, "getText", "setText", null, ["r" => 0]], 
-        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0]], 
+        "issue" => ["issue", "string", null, "getIssue", "setIssue", 'v', ["r" => 0, "e" => 1]], 
+        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 512]], 
+        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 512]], 
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]]
     ];
 
@@ -50,7 +57,14 @@ class TaskFeedbackInner extends AbstractModel {
      */
     public function getIssueAllowableValues(): array {
         return [
-            self::ISSUE_X,
+            self::ISSUE_V,
+            self::ISSUE_C,
+            self::ISSUE_F,
+            self::ISSUE_T,
+            self::ISSUE_S,
+            self::ISSUE_CI,
+            self::ISSUE_ST,
+            self::ISSUE_M,
         ];
     }
 
@@ -86,7 +100,7 @@ class TaskFeedbackInner extends AbstractModel {
     /**
      * Set issue
      * 
-     * @param string|null $issue Feedback issue   * `?` - ?   * `?` - ?
+     * @param string|null $issue Feedback issue   * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -95,23 +109,23 @@ class TaskFeedbackInner extends AbstractModel {
     }
 
     /**
-     * Get text
+     * Get message
      *
      * @return string|null
      */
-    public function getText(): ?string {
-        return $this->_data["text"];
+    public function getMessage(): ?string {
+        return $this->_data["message"];
     }
 
     /**
-     * Set text
+     * Set message
      * 
-     * @param string|null $text Feedback details
+     * @param string|null $message Feedback details
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setText($text) {
-        return $this->_set("text", $text);
+    public function setMessage($message) {
+        return $this->_set("message", $message);
     }
 
     /**
@@ -126,7 +140,7 @@ class TaskFeedbackInner extends AbstractModel {
     /**
      * Set reply
      * 
-     * @param string|null $reply Feedback reply
+     * @param string|null $reply Feedback reply from task assignee
      * @throws \InvalidArgumentException
      * @return $this
      */

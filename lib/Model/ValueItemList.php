@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ItemList Model
+ * ValueItemList Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,20 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * ItemList Model
+ * ValueItemList Model
  */
-class ItemList extends AbstractModel {
+class ValueItemList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "ItemList";
+    protected static $_name = "ValueItemList";
     protected static $_definition = [
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
-        "items" => ["items", "\Kronup\Model\Item[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
+        "items" => ["items", "\Kronup\Model\ValueItem[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * ItemList
+     * ValueItemList
      *
      * @param mixed[] $data Model data
      */
@@ -84,7 +84,7 @@ class ItemList extends AbstractModel {
     /**
      * Get items
      *
-     * @return \Kronup\Model\Item[]|null
+     * @return \Kronup\Model\ValueItem[]|null
      */
     public function getItems(): ?array {
         return $this->_data["items"];
@@ -93,7 +93,7 @@ class ItemList extends AbstractModel {
     /**
      * Set items
      * 
-     * @param \Kronup\Model\Item[]|null $items
+     * @param \Kronup\Model\ValueItem[]|null $items
      * @throws \InvalidArgumentException
      * @return $this
      */

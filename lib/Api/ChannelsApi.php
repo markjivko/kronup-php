@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Implementation of TeamChannels API
+ * Implementation of Channels API
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -19,14 +19,14 @@ use InvalidArgumentException as IAE;
 use Kronup\Sdk\Serializer as S;
 
 /**
- * API for TeamChannels
+ * API for Channels
  */
-class TeamChannelsApi extends AbstractApi {
+class ChannelsApi extends AbstractApi {
     
     /**
      * API package
      */
-    const PKG = "Team channels";
+    const PKG = "Channels";
 
     /**
      * Assign to channel
@@ -40,7 +40,7 @@ class TeamChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\User
      */
-    public function teamChannelAssign($team_id, $channel_id, $user_id, $x_org_id) {
+    public function channelAssign($team_id, $channel_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -50,7 +50,8 @@ class TeamChannelsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/channel/{channelId}/user/{userId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/users/{userId}";
+        
         /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
@@ -67,13 +68,13 @@ class TeamChannelsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\TeamChannelCreateRequest $team_channel_create_request 
+     * @param \Kronup\Model\ChannelCreateRequest $channel_create_request 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function teamChannelCreate($team_id, $x_org_id, $team_channel_create_request) {
+    public function channelCreate($team_id, $x_org_id, $channel_create_request) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -83,11 +84,12 @@ class TeamChannelsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/channel";
+        $rPath = "/teams/{teamId}/channels";
+        
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $team_channel_create_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $channel_create_request
             ), 
             "\Kronup\Model\Team"
         );
@@ -106,7 +108,7 @@ class TeamChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Team
      */
-    public function teamChannelDelete($team_id, $channel_id, $x_org_id) {
+    public function channelDelete($team_id, $channel_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -116,7 +118,8 @@ class TeamChannelsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/channel/{channelId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}";
+        
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
@@ -140,7 +143,7 @@ class TeamChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\User
      */
-    public function teamChannelUnassign($team_id, $channel_id, $user_id, $x_org_id) {
+    public function channelUnassign($team_id, $channel_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -150,7 +153,8 @@ class TeamChannelsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/channel/{channelId}/user/{userId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/users/{userId}";
+        
         /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
@@ -168,13 +172,13 @@ class TeamChannelsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\TeamChannelCreateRequest $team_channel_create_request 
+     * @param \Kronup\Model\ChannelCreateRequest $channel_create_request 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function teamChannelUpdate($team_id, $channel_id, $x_org_id, $team_channel_create_request) {
+    public function channelUpdate($team_id, $channel_id, $x_org_id, $channel_create_request) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -184,11 +188,12 @@ class TeamChannelsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/channel/{channelId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}";
+        
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $team_channel_create_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $channel_create_request
             ), 
             "\Kronup\Model\Team"
         );

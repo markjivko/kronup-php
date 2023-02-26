@@ -11,7 +11,7 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getAuthorId()** | **string** | Author ID <br>Example: `user-id-***` 
-**getDigest()** | **string** | Experiment findings formulated in one sentence <br>Example: `null` 
+**getDigest()** | **string** | Experiment findings formulated in one sentence <br>Example: `Tested latest version successfully with a virtual machine` 
 **getDetails()** | **string** | Experiment details <br>Example: `null` 
-**getState()** | **string** | Experiment state   * `i` - Idle   * `x` - Executing   * `d` - Done <br>Example: `null` 
+**getState()** | **string** | Experiment state   * `i` - Idle   * `r` - Running   * `d` - Done <br>Example: `null`  [default to 'i']
 

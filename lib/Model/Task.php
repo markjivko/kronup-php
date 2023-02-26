@@ -31,9 +31,9 @@ class Task extends AbstractModel {
     protected static $_name = "Task";
     protected static $_definition = [
         "assigneeId" => ["assigneeId", "string", null, "getAssigneeId", "setAssigneeId", null, ["r" => 0]], 
-        "title" => ["title", "string", null, "getTitle", "setTitle", null, ["r" => 0]], 
-        "description" => ["description", "string", null, "getDescription", "setDescription", null, ["r" => 0]], 
-        "state" => ["state", "string", null, "getState", "setState", null, ["r" => 0, "e" => 1]], 
+        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
+        "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]], 
         "keywords" => ["keywords", "string[]", null, "getKeywords", "setKeywords", null, ["r" => 0, "c" => 1]], 
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
         "discoveries" => ["discoveries", "\Kronup\Model\TaskDiscoveriesInner[]", null, "getDiscoveries", "setDiscoveries", null, ["r" => 0, "c" => 1]], 
@@ -87,43 +87,43 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get title
+     * Get digest
      *
      * @return string|null
      */
-    public function getTitle(): ?string {
-        return $this->_data["title"];
+    public function getDigest(): ?string {
+        return $this->_data["digest"];
     }
 
     /**
-     * Set title
+     * Set digest
      * 
-     * @param string|null $title Task title
+     * @param string|null $digest Task title
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setTitle($title) {
-        return $this->_set("title", $title);
+    public function setDigest($digest) {
+        return $this->_set("digest", $digest);
     }
 
     /**
-     * Get description
+     * Get details
      *
      * @return string|null
      */
-    public function getDescription(): ?string {
-        return $this->_data["description"];
+    public function getDetails(): ?string {
+        return $this->_data["details"];
     }
 
     /**
-     * Set description
+     * Set details
      * 
-     * @param string|null $description Task description
+     * @param string|null $details Task description
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDescription($description) {
-        return $this->_set("description", $description);
+    public function setDetails($details) {
+        return $this->_set("details", $details);
     }
 
     /**

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * teamChannelCreate_request Model
+ * Channel Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,23 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * teamChannelCreate_request Model
+ * Channel Model
+ * 
+ * Channel
  */
-class TeamChannelCreateRequest extends AbstractModel {
+class Channel extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "teamChannelCreate_request";
+    protected static $_name = "Channel";
     protected static $_definition = [
-        "channelName" => ["channelName", "string", null, "getChannelName", "setChannelName", null, ["r" => 0, "nl" => 3, "xl" => 256]], 
-        "channelDesc" => ["channelDesc", "string", null, "getChannelDesc", "setChannelDesc", '', ["r" => 0, "xl" => 512]]
+        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
+        "isDefault" => ["isDefault", "bool", null, "getIsDefault", "setIsDefault", false, ["r" => 0]], 
+        "channelName" => ["channelName", "string", null, "getChannelName", "setChannelName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
+        "channelDesc" => ["channelDesc", "string", null, "getChannelDesc", "setChannelDesc", null, ["r" => 0, "nl" => 0, "xl" => 256]]
     ];
 
     /**
-     * TeamChannelCreateRequest
+     * Channel
      *
      * @param mixed[] $data Model data
      */
@@ -39,6 +43,46 @@ class TeamChannelCreateRequest extends AbstractModel {
         }
     }
 
+
+    /**
+     * Get id
+     *
+     * @return string|null
+     */
+    public function getId(): ?string {
+        return $this->_data["id"];
+    }
+
+    /**
+     * Set id
+     * 
+     * @param string|null $id Channel ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setId($id) {
+        return $this->_set("id", $id);
+    }
+
+    /**
+     * Get isDefault
+     *
+     * @return bool|null
+     */
+    public function getIsDefault(): ?bool {
+        return $this->_data["isDefault"];
+    }
+
+    /**
+     * Set isDefault
+     * 
+     * @param bool|null $is_default
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setIsDefault($is_default) {
+        return $this->_set("isDefault", $is_default);
+    }
 
     /**
      * Get channelName

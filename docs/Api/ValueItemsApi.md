@@ -20,42 +20,46 @@ $sdk->api()->valueItems();
 
 Method | Description
 ------------- | -------------
-[**itemCreate()**](#itemcreate) | Create value item
-[**itemList()**](#itemlist) | List value items
+[**valueItemCreate()**](#valueitemcreate) | Create value item
+[**valueItemList()**](#valueitemlist) | List value items
 
 
-## `itemCreate()`
+## `valueItemCreate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **itemCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/itemCreate.php){: .btn .btn-green .mt-4}
+> [✨ php -f **valueItemCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **POST** `/items`
+> **POST** `/teams/{teamId}/channels/{channelId}/items`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->itemCreate(
+(new \Kronup\Sdk())->api()->valueItems()->valueItemCreate(
+    string $team_id,
+    string $channel_id,
     string $x_org_id,
-    \Kronup\Model\ItemCreateRequest $item_create_request
-): \Kronup\Model\Item
+    \Kronup\Model\ValueItemCreateRequest $value_item_create_request
+): \Kronup\Model\ValueItem
 ```
 
 ### Parameters
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
- **$item_create_request** | [**\Kronup\Model\ItemCreateRequest**](../../Model/ItemCreateRequest) |  
+ **$value_item_create_request** | [**\Kronup\Model\ValueItemCreateRequest**](../../Model/ValueItemCreateRequest) |  
 
 ### Return type
 
-[**\Kronup\Model\Item**](../../Model/Item)
+[**\Kronup\Model\ValueItem**](../../Model/ValueItem)
 
 ### Description
 
@@ -68,40 +72,44 @@ Add a value item to planning
 ---
 
 
-## `itemList()`
+## `valueItemList()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **itemList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/itemList.php){: .btn .btn-green .mt-4}
+> [✨ php -f **valueItemList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **GET** `/items`
+> **GET** `/teams/{teamId}/channels/{channelId}/items`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->itemList(
+(new \Kronup\Sdk())->api()->valueItems()->valueItemList(
+    string $team_id,
+    string $channel_id,
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
-): \Kronup\Model\ItemList
+): \Kronup\Model\ValueItemList
 ```
 
 ### Parameters
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
 ### Return type
 
-[**\Kronup\Model\ItemList**](../../Model/ItemList)
+[**\Kronup\Model\ValueItemList**](../../Model/ValueItemList)
 
 ### Description
 

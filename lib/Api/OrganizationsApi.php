@@ -42,6 +42,7 @@ class OrganizationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/organizations";
+        
         /** @var \Kronup\Model\Organization $result */
         $result = $this->exec(
             S::createRequest(
@@ -67,6 +68,7 @@ class OrganizationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/organizations/{orgId}";
+        
         /** @var \Kronup\Model\Organization $result */
         $result = $this->exec(
             S::createRequest(
@@ -93,6 +95,7 @@ class OrganizationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/organizations/{orgId}";
+        
         /** @var \Kronup\Model\Organization $result */
         $result = $this->exec(
             S::createRequest(

@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TeamChannelsApi/#teamchannelunassign
+ * @link    https://kronup.github.io/kronup-php/Api/ValueItemsApi/#valueitemlist
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -26,34 +26,37 @@ $arg_team_id = "team-id-***";
 // Channel ID
 $arg_channel_id = "channel-id-***";
 
-// User ID
-$arg_user_id = "user-id-***";
-
 // Organization ID
 $arg_x_org_id = "org-id-***";
+
+// Pagination: page number
+$arg_page_number = 1;
+
+// Pagination: page size
+$arg_page_size = 100;
 
 try {
 
     /**
-     * DELETE /teams/{teamId}/channel/{channelId}/user/{userId}
+     * GET /teams/{teamId}/channels/{channelId}/items
      * 
-     * @var \Kronup\Model\User $response
+     * @var \Kronup\Model\ValueItemList $response
      */
     $response = $sdk
         ->api()
-        ->teamChannels()
-        ->teamChannelUnassign($arg_team_id, $arg_channel_id, $arg_user_id, $arg_x_org_id);
+        ->valueItems()
+        ->valueItemList($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->teamChannels()->teamChannelUnassign(): %s\n", 
+        "API Exception when calling api()->valueItems()->valueItemList(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->teamChannels()->teamChannelUnassign(): %s\n", 
+        "Exception when calling api()->valueItems()->valueItemList(): %s\n", 
         $exc->getMessage()
     );
 }

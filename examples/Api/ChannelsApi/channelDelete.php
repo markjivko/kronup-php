@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TeamChannelsApi/#teamchanneldelete
+ * @link    https://kronup.github.io/kronup-php/Api/ChannelsApi/#channeldelete
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -32,25 +32,25 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * DELETE /teams/{teamId}/channel/{channelId}
+     * DELETE /teams/{teamId}/channels/{channelId}
      * 
      * @var \Kronup\Model\Team $response
      */
     $response = $sdk
         ->api()
-        ->teamChannels()
-        ->teamChannelDelete($arg_team_id, $arg_channel_id, $arg_x_org_id);
+        ->channels()
+        ->channelDelete($arg_team_id, $arg_channel_id, $arg_x_org_id);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->teamChannels()->teamChannelDelete(): %s\n", 
+        "API Exception when calling api()->channels()->channelDelete(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->teamChannels()->teamChannelDelete(): %s\n", 
+        "Exception when calling api()->channels()->channelDelete(): %s\n", 
         $exc->getMessage()
     );
 }

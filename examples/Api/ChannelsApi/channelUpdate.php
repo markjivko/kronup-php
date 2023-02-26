@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TeamChannelsApi/#teamchannelassign
+ * @link    https://kronup.github.io/kronup-php/Api/ChannelsApi/#channelupdate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -26,34 +26,39 @@ $arg_team_id = "team-id-***";
 // Channel ID
 $arg_channel_id = "channel-id-***";
 
-// User ID
-$arg_user_id = "user-id-***";
-
 // Organization ID
 $arg_x_org_id = "org-id-***";
+
+$arg_channel_create_request = (new \Kronup\Model\ChannelCreateRequest())
+    
+    // (optional) Channel name
+    ->setChannelName('null')
+    
+    // (optional) Channel description
+    ->setChannelDesc('null');
 
 try {
 
     /**
-     * PUT /teams/{teamId}/channel/{channelId}/user/{userId}
+     * POST /teams/{teamId}/channels/{channelId}
      * 
-     * @var \Kronup\Model\User $response
+     * @var \Kronup\Model\Team $response
      */
     $response = $sdk
         ->api()
-        ->teamChannels()
-        ->teamChannelAssign($arg_team_id, $arg_channel_id, $arg_user_id, $arg_x_org_id);
+        ->channels()
+        ->channelUpdate($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_channel_create_request);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->teamChannels()->teamChannelAssign(): %s\n", 
+        "API Exception when calling api()->channels()->channelUpdate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->teamChannels()->teamChannelAssign(): %s\n", 
+        "Exception when calling api()->channels()->channelUpdate(): %s\n", 
         $exc->getMessage()
     );
 }

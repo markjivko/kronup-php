@@ -26,9 +26,9 @@ class Team extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
+        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
         "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", null, ["r" => 0, "nl" => 0, "xl" => 256]], 
-        "channels" => ["channels", "\Kronup\Model\TeamChannel[]", null, "getChannels", "setChannels", null, ["r" => 0, "c" => 1]], 
+        "channels" => ["channels", "\Kronup\Model\Channel[]", null, "getChannels", "setChannels", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -128,7 +128,7 @@ class Team extends AbstractModel {
     /**
      * Get channels
      *
-     * @return \Kronup\Model\TeamChannel[]|null
+     * @return \Kronup\Model\Channel[]|null
      */
     public function getChannels(): ?array {
         return $this->_data["channels"];
@@ -137,7 +137,7 @@ class Team extends AbstractModel {
     /**
      * Set channels
      * 
-     * @param \Kronup\Model\TeamChannel[]|null $channels Team channels
+     * @param \Kronup\Model\Channel[]|null $channels Channels
      * @throws \InvalidArgumentException
      * @return $this
      */

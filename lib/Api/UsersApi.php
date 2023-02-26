@@ -58,6 +58,7 @@ class UsersApi extends AbstractApi {
 
         // Path template
         $rPath = "/users";
+        
         /** @var \Kronup\Model\UserList $result */
         $result = $this->exec(
             S::createRequest(
@@ -86,6 +87,7 @@ class UsersApi extends AbstractApi {
 
         // Path template
         $rPath = "/users/{userId}";
+        
         /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
@@ -118,6 +120,7 @@ class UsersApi extends AbstractApi {
 
         // Path template
         $rPath = "/users/{userId}";
+        
         /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
@@ -151,6 +154,7 @@ class UsersApi extends AbstractApi {
 
         // Path template
         $rPath = "/users/{userId}";
+        
         /** @var \Kronup\Model\UserRoles $result */
         $result = $this->exec(
             S::createRequest(

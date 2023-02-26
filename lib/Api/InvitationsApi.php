@@ -42,6 +42,7 @@ class InvitationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/invitations/{inviteId}";
+        
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
@@ -74,6 +75,7 @@ class InvitationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/invitations";
+        
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
@@ -106,6 +108,7 @@ class InvitationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/invitations/{inviteId}";
+        
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
@@ -137,6 +140,7 @@ class InvitationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/invitations";
+        
         /** @var \Kronup\Model\Invitation[] $result */
         $result = $this->exec(
             S::createRequest(
@@ -162,6 +166,7 @@ class InvitationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/invitations/{inviteId}";
+        
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
@@ -195,6 +200,7 @@ class InvitationsApi extends AbstractApi {
 
         // Path template
         $rPath = "/invitations/{inviteId}";
+        
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(

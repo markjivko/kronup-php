@@ -1,10 +1,10 @@
 ---
-title: TeamChannel
+title: Channel
 parent: Model
 layout: page
 ---
 
-# TeamChannel
+# Channel
 
 ## Model getters
 

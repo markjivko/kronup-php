@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ValueItemsApi/#itemlist
+ * @link    https://kronup.github.io/kronup-php/Api/ChannelsApi/#channelcreate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,37 +20,42 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
+// Team ID
+$arg_team_id = "team-id-***";
+
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-// Pagination: page number
-$arg_page_number = 1;
-
-// Pagination: page size
-$arg_page_size = 100;
+$arg_channel_create_request = (new \Kronup\Model\ChannelCreateRequest())
+    
+    // (optional) Channel name
+    ->setChannelName('null')
+    
+    // (optional) Channel description
+    ->setChannelDesc('null');
 
 try {
 
     /**
-     * GET /items
+     * POST /teams/{teamId}/channels
      * 
-     * @var \Kronup\Model\ItemList $response
+     * @var \Kronup\Model\Team $response
      */
     $response = $sdk
         ->api()
-        ->valueItems()
-        ->itemList($arg_x_org_id, $arg_page_number, $arg_page_size);
+        ->channels()
+        ->channelCreate($arg_team_id, $arg_x_org_id, $arg_channel_create_request);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->valueItems()->itemList(): %s\n", 
+        "API Exception when calling api()->channels()->channelCreate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->valueItems()->itemList(): %s\n", 
+        "Exception when calling api()->channels()->channelCreate(): %s\n", 
         $exc->getMessage()
     );
 }

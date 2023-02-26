@@ -1,10 +1,10 @@
 ---
-title: ItemList
+title: ValueItemList
 parent: Model
 layout: page
 ---
 
-# ItemList
+# ValueItemList
 
 ## Model getters
 
@@ -12,5 +12,5 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getPageSize()** | **int** | Page size <br>Example: `100` 
 **getPageNumber()** | **int** | Page number <br>Example: `1` 
-**getItems()** | [**\Kronup\Model\Item[]**](../Item) |  <br>Example: `null` 
+**getItems()** | [**\Kronup\Model\ValueItem[]**](../ValueItem) |  <br>Example: `null` 
 

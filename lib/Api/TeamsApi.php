@@ -49,7 +49,8 @@ class TeamsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/user/{userId}";
+        $rPath = "/teams/{teamId}/users/{userId}";
+        
         /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
@@ -82,6 +83,7 @@ class TeamsApi extends AbstractApi {
 
         // Path template
         $rPath = "/teams";
+        
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
@@ -114,6 +116,7 @@ class TeamsApi extends AbstractApi {
 
         // Path template
         $rPath = "/teams/{teamId}";
+        
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
@@ -145,6 +148,7 @@ class TeamsApi extends AbstractApi {
 
         // Path template
         $rPath = "/teams";
+        
         /** @var \Kronup\Model\Team[] $result */
         $result = $this->exec(
             S::createRequest(
@@ -177,6 +181,7 @@ class TeamsApi extends AbstractApi {
 
         // Path template
         $rPath = "/teams/{teamId}";
+        
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
@@ -209,7 +214,8 @@ class TeamsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/user/{userId}";
+        $rPath = "/teams/{teamId}/users/{userId}";
+        
         /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
@@ -243,6 +249,7 @@ class TeamsApi extends AbstractApi {
 
         // Path template
         $rPath = "/teams/{teamId}";
+        
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(

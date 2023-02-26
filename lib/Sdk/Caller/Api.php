@@ -35,6 +35,13 @@ class Api {
     protected $_accountApi = null;
 
     /**
+     * Channels API
+     *
+     * @var \Kronup\Api\ChannelsApi
+     */
+    protected $_channelsApi = null;
+
+    /**
      * Invitations API
      *
      * @var \Kronup\Api\InvitationsApi
@@ -47,13 +54,6 @@ class Api {
      * @var \Kronup\Api\OrganizationsApi
      */
     protected $_organizationsApi = null;
-
-    /**
-     * TeamChannels API
-     *
-     * @var \Kronup\Api\TeamChannelsApi
-     */
-    protected $_teamChannelsApi = null;
 
     /**
      * Teams API
@@ -99,6 +99,19 @@ class Api {
     }
     
     /**
+     * Channels API
+     * 
+     * @return \Kronup\Api\ChannelsApi
+     */
+    public function channels(): A\ChannelsApi {
+        if (null === $this->_channelsApi) {
+            $this->_channelsApi = new A\ChannelsApi($this->_sdk);
+        }
+
+        return $this->_channelsApi;
+    }
+    
+    /**
      * Invitations API
      * 
      * @return \Kronup\Api\InvitationsApi
@@ -122,19 +135,6 @@ class Api {
         }
 
         return $this->_organizationsApi;
-    }
-    
-    /**
-     * TeamChannels API
-     * 
-     * @return \Kronup\Api\TeamChannelsApi
-     */
-    public function teamChannels(): A\TeamChannelsApi {
-        if (null === $this->_teamChannelsApi) {
-            $this->_teamChannelsApi = new A\TeamChannelsApi($this->_sdk);
-        }
-
-        return $this->_teamChannelsApi;
     }
     
     /**

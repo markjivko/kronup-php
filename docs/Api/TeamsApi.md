@@ -40,7 +40,7 @@ Method | Description
 
 ### Request
 
-> **PUT** `/teams/{teamId}/user/{userId}`
+> **PUT** `/teams/{teamId}/users/{userId}`
 
 ### Type signature
 
@@ -260,7 +260,7 @@ Retrieve team model
 
 ### Request
 
-> **DELETE** `/teams/{teamId}/user/{userId}`
+> **DELETE** `/teams/{teamId}/users/{userId}`
 
 ### Type signature
 

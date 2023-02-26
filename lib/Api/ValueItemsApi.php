@@ -31,14 +31,16 @@ class ValueItemsApi extends AbstractApi {
     /**
      * Create value item
      *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\ItemCreateRequest $item_create_request 
+     * @param \Kronup\Model\ValueItemCreateRequest $value_item_create_request 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Item
+     * @return \Kronup\Model\ValueItem
      */
-    public function itemCreate($x_org_id, $item_create_request) {
+    public function valueItemCreate($team_id, $channel_id, $x_org_id, $value_item_create_request) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -48,13 +50,14 @@ class ValueItemsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/items";
-        /** @var \Kronup\Model\Item $result */
+        $rPath = "/teams/{teamId}/channels/{channelId}/items";
+        
+        /** @var \Kronup\Model\ValueItem $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $item_create_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $value_item_create_request
             ), 
-            "\Kronup\Model\Item"
+            "\Kronup\Model\ValueItem"
         );
             
         return $result;
@@ -63,21 +66,23 @@ class ValueItemsApi extends AbstractApi {
     /**
      * List value items
      *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
      * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ItemList
+     * @return \Kronup\Model\ValueItemList
      */
-    public function itemList($x_org_id, $page_number = 1, $page_size = 100) {
+    public function valueItemList($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi.itemList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi.valueItemList, must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi.itemList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi.valueItemList, must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -89,16 +94,17 @@ class ValueItemsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/items";
-        /** @var \Kronup\Model\ItemList $result */
+        $rPath = "/teams/{teamId}/channels/{channelId}/items";
+        
+        /** @var \Kronup\Model\ValueItemList $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [
                     "pageNumber" => S::toQueryValue($page_number),
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []
             ), 
-            "\Kronup\Model\ItemList"
+            "\Kronup\Model\ValueItemList"
         );
             
         return $result;

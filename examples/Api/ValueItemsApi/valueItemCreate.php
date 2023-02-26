@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ValueItemsApi/#itemcreate
+ * @link    https://kronup.github.io/kronup-php/Api/ValueItemsApi/#valueitemcreate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,39 +20,51 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
+// Team ID
+$arg_team_id = "team-id-***";
+
+// Channel ID
+$arg_channel_id = "channel-id-***";
+
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_item_create_request = (new \Kronup\Model\ItemCreateRequest())
+$arg_value_item_create_request = (new \Kronup\Model\ValueItemCreateRequest())
     
     // (optional) Value item digest
     ->setDigest('null')
     
     // (optional) Value item description
-    ->setDetails('null');
+    ->setDetails('null')
+    
+    // (optional) Value item type
+    ->setType('null')
+    
+    // (optional) Value item MoSCoW priority
+    ->setPriority('null');
 
 try {
 
     /**
-     * POST /items
+     * POST /teams/{teamId}/channels/{channelId}/items
      * 
-     * @var \Kronup\Model\Item $response
+     * @var \Kronup\Model\ValueItem $response
      */
     $response = $sdk
         ->api()
         ->valueItems()
-        ->itemCreate($arg_x_org_id, $arg_item_create_request);
+        ->valueItemCreate($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_value_item_create_request);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->valueItems()->itemCreate(): %s\n", 
+        "API Exception when calling api()->valueItems()->valueItemCreate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->valueItems()->itemCreate(): %s\n", 
+        "Exception when calling api()->valueItems()->valueItemCreate(): %s\n", 
         $exc->getMessage()
     );
 }

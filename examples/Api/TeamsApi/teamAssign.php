@@ -32,7 +32,7 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * PUT /teams/{teamId}/user/{userId}
+     * PUT /teams/{teamId}/users/{userId}
      * 
      * @var \Kronup\Model\User $response
      */

@@ -32,7 +32,7 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * DELETE /teams/{teamId}/user/{userId}
+     * DELETE /teams/{teamId}/users/{userId}
      * 
      * @var \Kronup\Model\User $response
      */

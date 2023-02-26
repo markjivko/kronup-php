@@ -40,6 +40,7 @@ class AccountApi extends AbstractApi {
 
         // Path template
         $rPath = "/account";
+        
         /** @var \Kronup\Model\Account $result */
         $result = $this->exec(
             S::createRequest(
@@ -63,6 +64,7 @@ class AccountApi extends AbstractApi {
 
         // Path template
         $rPath = "/account";
+        
         /** @var \Kronup\Model\Account $result */
         $result = $this->exec(
             S::createRequest(
@@ -88,6 +90,7 @@ class AccountApi extends AbstractApi {
 
         // Path template
         $rPath = "/account";
+        
         /** @var \Kronup\Model\Account $result */
         $result = $this->exec(
             S::createRequest(

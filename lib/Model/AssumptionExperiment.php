@@ -25,14 +25,14 @@ class AssumptionExperiment extends AbstractModel {
 
     public const _D = null;
     public const STATE_I = 'i';
-    public const STATE_X = 'x';
+    public const STATE_R = 'r';
     public const STATE_D = 'd';
     protected static $_name = "Assumption_experiment";
     protected static $_definition = [
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0]], 
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0]], 
-        "state" => ["state", "string", null, "getState", "setState", null, ["r" => 0, "e" => 1]]
+        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
+        "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]]
     ];
 
     /**
@@ -54,7 +54,7 @@ class AssumptionExperiment extends AbstractModel {
     public function getStateAllowableValues(): array {
         return [
             self::STATE_I,
-            self::STATE_X,
+            self::STATE_R,
             self::STATE_D,
         ];
     }
@@ -131,7 +131,7 @@ class AssumptionExperiment extends AbstractModel {
     /**
      * Set state
      * 
-     * @param string|null $state Experiment state   * `i` - Idle   * `x` - Executing   * `d` - Done
+     * @param string|null $state Experiment state   * `i` - Idle   * `r` - Running   * `d` - Done
      * @throws \InvalidArgumentException
      * @return $this
      */

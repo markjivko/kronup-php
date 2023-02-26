@@ -1,49 +1,49 @@
 ---
-title: Team channels
+title: Channels
 parent: API
 layout: page
 ---
 
-# Api/TeamChannelsApi
+# Api/ChannelsApi
 
-[Team channels API Reference](https://api.kronup.com/#tag/Team-channels)
+[Channels API Reference](https://api.kronup.com/#tag/Channels)
 
 ```php
 // Place your API Key 👇 here
 $sdk = new \Kronup\Sdk();
 
 // API Call
-$sdk->api()->teamChannels();
+$sdk->api()->channels();
 ```
 
 ## Methods
 
 Method | Description
 ------------- | -------------
-[**teamChannelAssign()**](#teamchannelassign) | Assign to channel
-[**teamChannelCreate()**](#teamchannelcreate) | Create channel
-[**teamChannelDelete()**](#teamchanneldelete) | Delete channel
-[**teamChannelUnassign()**](#teamchannelunassign) | Unassign from channel
-[**teamChannelUpdate()**](#teamchannelupdate) | Update channel
+[**channelAssign()**](#channelassign) | Assign to channel
+[**channelCreate()**](#channelcreate) | Create channel
+[**channelDelete()**](#channeldelete) | Delete channel
+[**channelUnassign()**](#channelunassign) | Unassign from channel
+[**channelUpdate()**](#channelupdate) | Update channel
 
 
-## `teamChannelAssign()`
+## `channelAssign()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamChannelAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamChannelsApi/teamChannelAssign.php){: .btn .btn-green .mt-4}
+> [✨ php -f **channelAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelAssign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **PUT** `/teams/{teamId}/channel/{channelId}/user/{userId}`
+> **PUT** `/teams/{teamId}/channels/{channelId}/users/{userId}`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teamChannels()->teamChannelAssign(
+(new \Kronup\Sdk())->api()->channels()->channelAssign(
     string $team_id,
     string $channel_id,
     string $user_id,
@@ -75,26 +75,26 @@ Assign a user to a channel
 ---
 
 
-## `teamChannelCreate()`
+## `channelCreate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamChannelCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamChannelsApi/teamChannelCreate.php){: .btn .btn-green .mt-4}
+> [✨ php -f **channelCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **POST** `/teams/{teamId}/channel`
+> **POST** `/teams/{teamId}/channels`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teamChannels()->teamChannelCreate(
+(new \Kronup\Sdk())->api()->channels()->channelCreate(
     string $team_id,
     string $x_org_id,
-    \Kronup\Model\TeamChannelCreateRequest $team_channel_create_request
+    \Kronup\Model\ChannelCreateRequest $channel_create_request
 ): \Kronup\Model\Team
 ```
 
@@ -104,7 +104,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
- **$team_channel_create_request** | [**\Kronup\Model\TeamChannelCreateRequest**](../../Model/TeamChannelCreateRequest) |  
+ **$channel_create_request** | [**\Kronup\Model\ChannelCreateRequest**](../../Model/ChannelCreateRequest) |  
 
 ### Return type
 
@@ -121,23 +121,23 @@ Create a new channel for a team
 ---
 
 
-## `teamChannelDelete()`
+## `channelDelete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamChannelDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamChannelsApi/teamChannelDelete.php){: .btn .btn-green .mt-4}
+> [✨ php -f **channelDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **DELETE** `/teams/{teamId}/channel/{channelId}`
+> **DELETE** `/teams/{teamId}/channels/{channelId}`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teamChannels()->teamChannelDelete(
+(new \Kronup\Sdk())->api()->channels()->channelDelete(
     string $team_id,
     string $channel_id,
     string $x_org_id
@@ -167,23 +167,23 @@ Delete a channel and unassign all users
 ---
 
 
-## `teamChannelUnassign()`
+## `channelUnassign()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamChannelUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamChannelsApi/teamChannelUnassign.php){: .btn .btn-green .mt-4}
+> [✨ php -f **channelUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUnassign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **DELETE** `/teams/{teamId}/channel/{channelId}/user/{userId}`
+> **DELETE** `/teams/{teamId}/channels/{channelId}/users/{userId}`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teamChannels()->teamChannelUnassign(
+(new \Kronup\Sdk())->api()->channels()->channelUnassign(
     string $team_id,
     string $channel_id,
     string $user_id,
@@ -215,27 +215,27 @@ Remove a user from a channel
 ---
 
 
-## `teamChannelUpdate()`
+## `channelUpdate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamChannelUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamChannelsApi/teamChannelUpdate.php){: .btn .btn-green .mt-4}
+> [✨ php -f **channelUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **POST** `/teams/{teamId}/channel/{channelId}`
+> **POST** `/teams/{teamId}/channels/{channelId}`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teamChannels()->teamChannelUpdate(
+(new \Kronup\Sdk())->api()->channels()->channelUpdate(
     string $team_id,
     string $channel_id,
     string $x_org_id,
-    \Kronup\Model\TeamChannelCreateRequest $team_channel_create_request
+    \Kronup\Model\ChannelCreateRequest $channel_create_request
 ): \Kronup\Model\Team
 ```
 
@@ -246,7 +246,7 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
- **$team_channel_create_request** | [**\Kronup\Model\TeamChannelCreateRequest**](../../Model/TeamChannelCreateRequest) |  
+ **$channel_create_request** | [**\Kronup\Model\ChannelCreateRequest**](../../Model/ChannelCreateRequest) |  
 
 ### Return type
 

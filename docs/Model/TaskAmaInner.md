@@ -11,6 +11,6 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getAuthorId()** | **string** | Author ID <br>Example: `user-id-***` 
-**getText()** | **string** | Feedback details <br>Example: `null` 
-**getReply()** | **string** | Feedback reply <br>Example: `null` 
+**getMessage()** | **string** | Feedback details <br>Example: `null` 
+**getReply()** | **string** | Feedback reply from task assignee <br>Example: `null` 
 

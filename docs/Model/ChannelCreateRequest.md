@@ -1,10 +1,10 @@
 ---
-title: TeamChannelCreateRequest
+title: ChannelCreateRequest
 parent: Model
 layout: page
 ---
 
-# TeamChannelCreateRequest
+# ChannelCreateRequest
 
 ## Model getters
 
