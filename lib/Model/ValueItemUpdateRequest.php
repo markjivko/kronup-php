@@ -144,7 +144,7 @@ class ValueItemUpdateRequest extends AbstractModel {
     /**
      * Set stage
      * 
-     * @param string|null $stage Value item stage
+     * @param string|null $stage Value item stage <ul> <li><code>p</code> - Planning</li> <li><code>v</code> - Validation</li> <li><code>x</code> - Execution</li> <li><code>c</code> - Deep Context</li> </ul>
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -164,7 +164,7 @@ class ValueItemUpdateRequest extends AbstractModel {
     /**
      * Set type
      * 
-     * @param string|null $type Value item type
+     * @param string|null $type Value item type  <ul> <li><code>f</code> - Feature</li> <li><code>b</code> - Bug fix</li> <li><code>c</code> - Chore</li> </ul>
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -184,7 +184,7 @@ class ValueItemUpdateRequest extends AbstractModel {
     /**
      * Set priority
      * 
-     * @param string|null $priority Value item MoSCoW priority
+     * @param string|null $priority Value item MoSCoW priority <ul> <li><code>m</code> - Must-have</li> <li><code>s</code> - Should-have</li> <li><code>c</code> - Could-have</li> <li><code>w</code> - Will NOT have</li> </ul>
      * @throws \InvalidArgumentException
      * @return $this
      */

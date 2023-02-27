@@ -100,7 +100,7 @@ class TaskFeedbackInner extends AbstractModel {
     /**
      * Set issue
      * 
-     * @param string|null $issue Feedback issue   * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
+     * @param string|null $issue Feedback issue <ul> <li>`v` - Value</li> <li>`c` - Complexity</li> <li>`f` - Flexibility</li> <li>`t` - Testing</li> <li>`s` - Security</li> <li>`ci` - CI/CD</li> <li>`st` - Standards</li> <li>`m` - Miscellaneous</li> </ul>
      * @throws \InvalidArgumentException
      * @return $this
      */

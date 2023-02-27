@@ -126,7 +126,7 @@ class ValueItemCreateRequest extends AbstractModel {
     /**
      * Set type
      * 
-     * @param string|null $type Value item type
+     * @param string|null $type Value item type  <ul> <li><code>f</code> - Feature</li> <li><code>b</code> - Bug fix</li> <li><code>c</code> - Chore</li> </ul>
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -146,7 +146,7 @@ class ValueItemCreateRequest extends AbstractModel {
     /**
      * Set priority
      * 
-     * @param string|null $priority Value item MoSCoW priority
+     * @param string|null $priority Value item MoSCoW priority <ul> <li><code>m</code> - Must-have</li> <li><code>s</code> - Should-have</li> <li><code>c</code> - Could-have</li> <li><code>w</code> - Will NOT have</li> </ul>
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -32,16 +32,16 @@ $arg_x_org_id = "org-id-***";
 $arg_value_item_create_request = (new \Kronup\Model\ValueItemCreateRequest())
     
     // (optional) Value item digest
-    ->setDigest('null')
+    ->setDigest('Feature name')
     
     // (optional) Value item description
-    ->setDetails('null')
+    ->setDetails('Feature description')
     
-    // (optional) Value item type
-    ->setType('null')
+    // (optional) Value item type  <ul> <li><code>f</code> - Feature</li> <li><code>b</code> - Bug fix</li> <li><co...
+    ->setType('f')
     
-    // (optional) Value item MoSCoW priority
-    ->setPriority('null');
+    // (optional) Value item MoSCoW priority <ul> <li><code>m</code> - Must-have</li> <li><code>s</code> - Should-h...
+    ->setPriority('m');
 
 try {
 
