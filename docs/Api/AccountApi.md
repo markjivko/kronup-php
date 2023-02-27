@@ -118,7 +118,7 @@ Retrieve the current account model
 
 ```php
 (new \Kronup\Sdk())->api()->account()->accountUpdate(
-    \Kronup\Model\AccountUpdateRequest $account_update_request
+    \Kronup\Model\RequestAccountUpdate $request_account_update
 ): \Kronup\Model\Account
 ```
 
@@ -126,7 +126,7 @@ Retrieve the current account model
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$account_update_request** | [**\Kronup\Model\AccountUpdateRequest**](../../Model/AccountUpdateRequest) |  
+ **$request_account_update** | [**\Kronup\Model\RequestAccountUpdate**](../../Model/RequestAccountUpdate) |  
 
 ### Return type
 

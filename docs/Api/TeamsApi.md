@@ -93,7 +93,7 @@ Assign a user to a team
 ```php
 (new \Kronup\Sdk())->api()->teams()->teamCreate(
     string $x_org_id,
-    \Kronup\Model\TeamCreateRequest $team_create_request
+    \Kronup\Model\RequestTeamCreate $request_team_create
 ): \Kronup\Model\Team
 ```
 
@@ -102,7 +102,7 @@ Assign a user to a team
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
- **$team_create_request** | [**\Kronup\Model\TeamCreateRequest**](../../Model/TeamCreateRequest) |  
+ **$request_team_create** | [**\Kronup\Model\RequestTeamCreate**](../../Model/RequestTeamCreate) |  
 
 ### Return type
 
@@ -314,7 +314,7 @@ Remove a user from a team
 (new \Kronup\Sdk())->api()->teams()->teamUpdate(
     string $team_id,
     string $x_org_id,
-    \Kronup\Model\TeamUpdateRequest $team_update_request
+    \Kronup\Model\RequestTeamUpdate $request_team_update
 ): \Kronup\Model\Team
 ```
 
@@ -324,7 +324,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
- **$team_update_request** | [**\Kronup\Model\TeamUpdateRequest**](../../Model/TeamUpdateRequest) |  
+ **$request_team_update** | [**\Kronup\Model\RequestTeamUpdate**](../../Model/RequestTeamUpdate) |  
 
 ### Return type
 

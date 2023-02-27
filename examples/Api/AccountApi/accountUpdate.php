@@ -20,7 +20,7 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-$arg_account_update_request = (new \Kronup\Model\AccountUpdateRequest())
+$arg_request_account_update = (new \Kronup\Model\RequestAccountUpdate())
     
     // (optional) New user name
     ->setUserName('John Doe');
@@ -35,7 +35,7 @@ try {
     $response = $sdk
         ->api()
         ->account()
-        ->accountUpdate($arg_account_update_request);
+        ->accountUpdate($arg_request_account_update);
 
     var_dump($response);
 

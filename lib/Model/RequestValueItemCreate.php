@@ -1,7 +1,7 @@
 <?php
 
 /**
- * valueItemUpdate_request Model
+ * RequestValueItemCreate Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,15 +17,11 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * valueItemUpdate_request Model
+ * RequestValueItemCreate Model
  */
-class ValueItemUpdateRequest extends AbstractModel {
+class RequestValueItemCreate extends AbstractModel {
 
     public const _D = null;
-    public const STAGE_P = 'p';
-    public const STAGE_V = 'v';
-    public const STAGE_X = 'x';
-    public const STAGE_C = 'c';
     public const TYPE_F = 'f';
     public const TYPE_B = 'b';
     public const TYPE_C = 'c';
@@ -33,17 +29,16 @@ class ValueItemUpdateRequest extends AbstractModel {
     public const PRIORITY_S = 's';
     public const PRIORITY_C = 'c';
     public const PRIORITY_W = 'w';
-    protected static $_name = "valueItemUpdate_request";
+    protected static $_name = "RequestValueItemCreate";
     protected static $_definition = [
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 3, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 3, "xl" => 4096]], 
-        "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
-     * ValueItemUpdateRequest
+     * RequestValueItemCreate
      *
      * @param mixed[] $data Model data
      */
@@ -53,19 +48,6 @@ class ValueItemUpdateRequest extends AbstractModel {
         }
     }
 
-    /**
-     * Get allowable values
-     *
-     * @return string[]
-     */
-    public function getStageAllowableValues(): array {
-        return [
-            self::STAGE_P,
-            self::STAGE_V,
-            self::STAGE_X,
-            self::STAGE_C,
-        ];
-    }
     /**
      * Get allowable values
      *
@@ -130,26 +112,6 @@ class ValueItemUpdateRequest extends AbstractModel {
      */
     public function setDetails($details) {
         return $this->_set("details", $details);
-    }
-
-    /**
-     * Get stage
-     *
-     * @return string|null
-     */
-    public function getStage(): ?string {
-        return $this->_data["stage"];
-    }
-
-    /**
-     * Set stage
-     * 
-     * @param string|null $stage Value item stage <ul> <li><code>p</code> - Planning</li> <li><code>v</code> - Validation</li> <li><code>x</code> - Execution</li> <li><code>c</code> - Deep Context</li> </ul>
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setStage($stage) {
-        return $this->_set("stage", $stage);
     }
 
     /**

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * teamUpdate_request Model
+ * RequestTeamCreate Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,19 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * teamUpdate_request Model
+ * RequestTeamCreate Model
  */
-class TeamUpdateRequest extends AbstractModel {
+class RequestTeamCreate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "teamUpdate_request";
+    protected static $_name = "RequestTeamCreate";
     protected static $_definition = [
-        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
+        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 1, "nl" => 3, "xl" => 64]], 
         "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", '', ["r" => 0, "xl" => 256]]
     ];
 
     /**
-     * TeamUpdateRequest
+     * RequestTeamCreate
      *
      * @param mixed[] $data Model data
      */
@@ -43,16 +43,16 @@ class TeamUpdateRequest extends AbstractModel {
     /**
      * Get teamName
      *
-     * @return string|null
+     * @return string
      */
-    public function getTeamName(): ?string {
+    public function getTeamName(): string {
         return $this->_data["teamName"];
     }
 
     /**
      * Set teamName
      * 
-     * @param string|null $team_name Team name
+     * @param string $team_name Team name
      * @throws \InvalidArgumentException
      * @return $this
      */

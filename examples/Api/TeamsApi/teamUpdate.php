@@ -26,7 +26,7 @@ $arg_team_id = "team-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_team_update_request = (new \Kronup\Model\TeamUpdateRequest())
+$arg_request_team_update = (new \Kronup\Model\RequestTeamUpdate())
     
     // (optional) Team name
     ->setTeamName('null')
@@ -44,7 +44,7 @@ try {
     $response = $sdk
         ->api()
         ->teams()
-        ->teamUpdate($arg_team_id, $arg_x_org_id, $arg_team_update_request);
+        ->teamUpdate($arg_team_id, $arg_x_org_id, $arg_request_team_update);
 
     var_dump($response);
 

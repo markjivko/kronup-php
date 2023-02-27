@@ -66,13 +66,13 @@ class TeamsApi extends AbstractApi {
      * Create team
      *
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\TeamCreateRequest $team_create_request 
+     * @param \Kronup\Model\RequestTeamCreate $request_team_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function teamCreate($x_org_id, $team_create_request) {
+    public function teamCreate($x_org_id, $request_team_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -87,7 +87,7 @@ class TeamsApi extends AbstractApi {
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $team_create_request
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $request_team_create
             ), 
             "\Kronup\Model\Team"
         );
@@ -232,13 +232,13 @@ class TeamsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\TeamUpdateRequest $team_update_request 
+     * @param \Kronup\Model\RequestTeamUpdate $request_team_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function teamUpdate($team_id, $x_org_id, $team_update_request) {
+    public function teamUpdate($team_id, $x_org_id, $request_team_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -253,7 +253,7 @@ class TeamsApi extends AbstractApi {
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $team_update_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $request_team_update
             ), 
             "\Kronup\Model\Team"
         );

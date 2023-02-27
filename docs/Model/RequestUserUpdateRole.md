@@ -1,10 +1,10 @@
 ---
-title: UserUpdateRoleRequest
+title: RequestUserUpdateRole
 parent: Model
 layout: page
 ---
 
-# UserUpdateRoleRequest
+# RequestUserUpdateRole
 
 ## Model getters
 

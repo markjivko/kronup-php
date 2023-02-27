@@ -47,7 +47,7 @@ Method | Description
     string $team_id,
     string $channel_id,
     string $x_org_id,
-    \Kronup\Model\ValueItemCreateRequest $value_item_create_request
+    \Kronup\Model\RequestValueItemCreate $request_value_item_create
 ): \Kronup\Model\ValueItem
 ```
 
@@ -58,7 +58,7 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
- **$value_item_create_request** | [**\Kronup\Model\ValueItemCreateRequest**](../../Model/ValueItemCreateRequest) |  
+ **$request_value_item_create** | [**\Kronup\Model\RequestValueItemCreate**](../../Model/RequestValueItemCreate) |  
 
 ### Return type
 
@@ -242,7 +242,7 @@ Retrieve value item model
     string $channel_id,
     string $item_id,
     string $x_org_id,
-    \Kronup\Model\ValueItemUpdateRequest $value_item_update_request
+    \Kronup\Model\RequestValueItemUpdate $request_value_item_update
 ): \Kronup\Model\ValueItem
 ```
 
@@ -254,7 +254,7 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$x_org_id** | **string**  | Organization ID 
- **$value_item_update_request** | [**\Kronup\Model\ValueItemUpdateRequest**](../../Model/ValueItemUpdateRequest) |  
+ **$request_value_item_update** | [**\Kronup\Model\RequestValueItemUpdate**](../../Model/RequestValueItemUpdate) |  
 
 ### Return type
 

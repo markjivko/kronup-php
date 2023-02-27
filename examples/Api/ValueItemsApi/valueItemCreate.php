@@ -29,7 +29,7 @@ $arg_channel_id = "channel-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_value_item_create_request = (new \Kronup\Model\ValueItemCreateRequest())
+$arg_request_value_item_create = (new \Kronup\Model\RequestValueItemCreate())
     
     // (optional) Value item digest
     ->setDigest('Feature name')
@@ -53,7 +53,7 @@ try {
     $response = $sdk
         ->api()
         ->valueItems()
-        ->valueItemCreate($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_value_item_create_request);
+        ->valueItemCreate($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_request_value_item_create);
 
     var_dump($response);
 

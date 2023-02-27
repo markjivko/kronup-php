@@ -31,13 +31,13 @@ class OrganizationsApi extends AbstractApi {
     /**
      * Create organization
      *
-     * @param \Kronup\Model\OrganizationCreateRequest $organization_create_request 
+     * @param \Kronup\Model\RequestOrganizationCreate $request_organization_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Organization
      */
-    public function organizationCreate($organization_create_request) {
+    public function organizationCreate($request_organization_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
@@ -46,7 +46,7 @@ class OrganizationsApi extends AbstractApi {
         /** @var \Kronup\Model\Organization $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $organization_create_request
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $request_organization_create
             ), 
             "\Kronup\Model\Organization"
         );
@@ -84,13 +84,13 @@ class OrganizationsApi extends AbstractApi {
      * Update organization
      *
      * @param string $org_id Organization ID
-     * @param \Kronup\Model\OrganizationCreateRequest $organization_create_request 
+     * @param \Kronup\Model\RequestOrganizationUpdate $request_organization_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Organization
      */
-    public function organizationUpdate($org_id, $organization_create_request) {
+    public function organizationUpdate($org_id, $request_organization_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
@@ -99,7 +99,7 @@ class OrganizationsApi extends AbstractApi {
         /** @var \Kronup\Model\Organization $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["orgId" => $org_id]), $rPath, [], $rHeaders, [], $organization_create_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["orgId" => $org_id]), $rPath, [], $rHeaders, [], $request_organization_update
             ), 
             "\Kronup\Model\Organization"
         );

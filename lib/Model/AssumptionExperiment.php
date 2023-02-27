@@ -131,7 +131,7 @@ class AssumptionExperiment extends AbstractModel {
     /**
      * Set state
      * 
-     * @param string|null $state Experiment state <ul> <li>`i` - Idle</li> <li>`r` - Running</li> <li>`d` - Done</li> </ul>
+     * @param string|null $state Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
      * @throws \InvalidArgumentException
      * @return $this
      */

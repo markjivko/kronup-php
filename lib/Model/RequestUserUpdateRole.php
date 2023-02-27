@@ -1,7 +1,7 @@
 <?php
 
 /**
- * userUpdateRole_request Model
+ * RequestUserUpdateRole Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,19 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * userUpdateRole_request Model
+ * RequestUserUpdateRole Model
  */
-class UserUpdateRoleRequest extends AbstractModel {
+class RequestUserUpdateRole extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "userUpdateRole_request";
+    protected static $_name = "RequestUserUpdateRole";
     protected static $_definition = [
         "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0]], 
         "roleOrg" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0]]
     ];
 
     /**
-     * UserUpdateRoleRequest
+     * RequestUserUpdateRole
      *
      * @param mixed[] $data Model data
      */

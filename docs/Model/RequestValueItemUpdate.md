@@ -1,10 +1,10 @@
 ---
-title: ValueItemCreateRequest
+title: RequestValueItemUpdate
 parent: Model
 layout: page
 ---
 
-# ValueItemCreateRequest
+# RequestValueItemUpdate
 
 ## Model getters
 

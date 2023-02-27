@@ -13,7 +13,7 @@ Method name | Return type | Description
 **getAssigneeId()** | **string** | Author ID <br>Example: `user-id-***` 
 **getDigest()** | **string** | Task title <br>Example: `null` 
 **getDetails()** | **string** | Task description <br>Example: `null` 
-**getState()** | **string** | Task state <ul> <li>`i` - Idle</li> <li>`p` - In progress</li> <li>`r` - In review</li> <li>`d` - Done</li> </ul> <br>Example: `null`  [default to 'i']
+**getState()** | **string** | Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done <br>Example: `null`  [default to 'i']
 **getKeywords()** | **string[]** | Keywords <br>Example: `null` 
 **getIteration()** | **float** | Iteration number <br>Example: `null` 
 **getDiscoveries()** | [**\Kronup\Model\TaskDiscoveriesInner[]**](../TaskDiscoveriesInner) | Discoveries <br>Example: `null` 

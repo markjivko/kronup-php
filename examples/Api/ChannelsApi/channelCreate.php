@@ -26,7 +26,7 @@ $arg_team_id = "team-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_channel_create_request = (new \Kronup\Model\ChannelCreateRequest())
+$arg_request_channel_create = (new \Kronup\Model\RequestChannelCreate())
     
     // (optional) Channel name
     ->setChannelName('null')
@@ -44,7 +44,7 @@ try {
     $response = $sdk
         ->api()
         ->channels()
-        ->channelCreate($arg_team_id, $arg_x_org_id, $arg_channel_create_request);
+        ->channelCreate($arg_team_id, $arg_x_org_id, $arg_request_channel_create);
 
     var_dump($response);
 

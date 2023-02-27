@@ -1,10 +1,10 @@
 ---
-title: AccountUpdateRequest
+title: RequestAccountUpdate
 parent: Model
 layout: page
 ---
 
-# AccountUpdateRequest
+# RequestAccountUpdate
 
 ## Model getters
 

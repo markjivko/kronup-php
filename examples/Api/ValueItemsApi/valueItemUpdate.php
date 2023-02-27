@@ -32,16 +32,13 @@ $arg_item_id = "value-item-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_value_item_update_request = (new \Kronup\Model\ValueItemUpdateRequest())
+$arg_request_value_item_update = (new \Kronup\Model\RequestValueItemUpdate())
     
     // (optional) Value item digest
     ->setDigest('Feature name')
     
     // (optional) Value item description
     ->setDetails('Feature description')
-    
-    // (optional) Value item stage <ul> <li><code>p</code> - Planning</li> <li><code>v</code> - Validation</li> <li...
-    ->setStage('p')
     
     // (optional) Value item type  <ul> <li><code>f</code> - Feature</li> <li><code>b</code> - Bug fix</li> <li><co...
     ->setType('f')
@@ -59,7 +56,7 @@ try {
     $response = $sdk
         ->api()
         ->valueItems()
-        ->valueItemUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_value_item_update_request);
+        ->valueItemUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_request_value_item_update);
 
     var_dump($response);
 

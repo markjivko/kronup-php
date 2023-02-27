@@ -58,13 +58,13 @@ class InvitationsApi extends AbstractApi {
      * Create invitation
      *
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\InvitationCreateRequest $invitation_create_request 
+     * @param \Kronup\Model\RequestInvitationCreate $request_invitation_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationCreate($x_org_id, $invitation_create_request) {
+    public function invitationCreate($x_org_id, $request_invitation_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -79,7 +79,7 @@ class InvitationsApi extends AbstractApi {
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $invitation_create_request
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $request_invitation_create
             ), 
             "\Kronup\Model\Invitation"
         );
@@ -183,13 +183,13 @@ class InvitationsApi extends AbstractApi {
      *
      * @param string $invite_id Invitation ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\InvitationUpdateRequest $invitation_update_request 
+     * @param \Kronup\Model\RequestInvitationUpdate $request_invitation_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationUpdate($invite_id, $x_org_id, $invitation_update_request) {
+    public function invitationUpdate($invite_id, $x_org_id, $request_invitation_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -204,7 +204,7 @@ class InvitationsApi extends AbstractApi {
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, [], $invitation_update_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, [], $request_invitation_update
             ), 
             "\Kronup\Model\Invitation"
         );

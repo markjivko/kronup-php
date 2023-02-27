@@ -251,7 +251,7 @@ class ValueItem extends AbstractModel {
     /**
      * Set stage
      * 
-     * @param string|null $stage Value Item Stage <ul> <li>`p` - Planning</li> <li>`v` - Validation</li> <li>`x` - Execution</li> <li>`c` - Deep Context</li> </ul>
+     * @param string|null $stage Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -271,7 +271,7 @@ class ValueItem extends AbstractModel {
     /**
      * Set type
      * 
-     * @param string|null $type Value Item Type <ul> <li>`f` - Feature</li> <li>`b` - Bug fix</li> <li>`c` - Chore</li> </ul>
+     * @param string|null $type Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -291,7 +291,7 @@ class ValueItem extends AbstractModel {
     /**
      * Set priority
      * 
-     * @param string|null $priority Value Item Priority using MoSCoW <ul> <li>`m` - Must-have</li> <li>`s` - Should-have</li> <li>`c` - Could-have</li> <li>`w` - Will NOT have</li> </ul>
+     * @param string|null $priority Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
      * @throws \InvalidArgumentException
      * @return $this
      */

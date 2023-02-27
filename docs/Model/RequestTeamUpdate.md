@@ -1,10 +1,10 @@
 ---
-title: TeamCreateRequest
+title: RequestTeamUpdate
 parent: Model
 layout: page
 ---
 
-# TeamCreateRequest
+# RequestTeamUpdate
 
 ## Model getters
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * accountUpdate_request Model
+ * RequestOrganizationCreate Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,18 +17,18 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * accountUpdate_request Model
+ * RequestOrganizationCreate Model
  */
-class AccountUpdateRequest extends AbstractModel {
+class RequestOrganizationCreate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "accountUpdate_request";
+    protected static $_name = "RequestOrganizationCreate";
     protected static $_definition = [
-        "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]]
+        "orgName" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0, "nl" => 3, "xl" => 64]]
     ];
 
     /**
-     * AccountUpdateRequest
+     * RequestOrganizationCreate
      *
      * @param mixed[] $data Model data
      */
@@ -40,22 +40,22 @@ class AccountUpdateRequest extends AbstractModel {
 
 
     /**
-     * Get userName
+     * Get orgName
      *
      * @return string|null
      */
-    public function getUserName(): ?string {
-        return $this->_data["userName"];
+    public function getOrgName(): ?string {
+        return $this->_data["orgName"];
     }
 
     /**
-     * Set userName
+     * Set orgName
      * 
-     * @param string|null $user_name New user name
+     * @param string|null $org_name Organization name
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUserName($user_name) {
-        return $this->_set("userName", $user_name);
+    public function setOrgName($org_name) {
+        return $this->_set("orgName", $org_name);
     }
 }

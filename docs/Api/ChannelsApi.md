@@ -94,7 +94,7 @@ Assign a user to a channel
 (new \Kronup\Sdk())->api()->channels()->channelCreate(
     string $team_id,
     string $x_org_id,
-    \Kronup\Model\ChannelCreateRequest $channel_create_request
+    \Kronup\Model\RequestChannelCreate $request_channel_create
 ): \Kronup\Model\Team
 ```
 
@@ -104,7 +104,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
- **$channel_create_request** | [**\Kronup\Model\ChannelCreateRequest**](../../Model/ChannelCreateRequest) |  
+ **$request_channel_create** | [**\Kronup\Model\RequestChannelCreate**](../../Model/RequestChannelCreate) |  
 
 ### Return type
 
@@ -235,7 +235,7 @@ Remove a user from a channel
     string $team_id,
     string $channel_id,
     string $x_org_id,
-    \Kronup\Model\ChannelCreateRequest $channel_create_request
+    \Kronup\Model\RequestChannelUpdate $request_channel_update
 ): \Kronup\Model\Team
 ```
 
@@ -246,7 +246,7 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
- **$channel_create_request** | [**\Kronup\Model\ChannelCreateRequest**](../../Model/ChannelCreateRequest) |  
+ **$request_channel_update** | [**\Kronup\Model\RequestChannelUpdate**](../../Model/RequestChannelUpdate) |  
 
 ### Return type
 

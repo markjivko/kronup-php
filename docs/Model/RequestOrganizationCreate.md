@@ -1,10 +1,10 @@
 ---
-title: OrganizationCreateRequest
+title: RequestOrganizationCreate
 parent: Model
 layout: page
 ---
 
-# OrganizationCreateRequest
+# RequestOrganizationCreate
 
 ## Model getters
 

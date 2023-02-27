@@ -138,7 +138,7 @@ class Task extends AbstractModel {
     /**
      * Set state
      * 
-     * @param string|null $state Task state <ul> <li>`i` - Idle</li> <li>`p` - In progress</li> <li>`r` - In review</li> <li>`d` - Done</li> </ul>
+     * @param string|null $state Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done
      * @throws \InvalidArgumentException
      * @return $this
      */

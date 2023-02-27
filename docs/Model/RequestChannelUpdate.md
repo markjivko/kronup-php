@@ -1,10 +1,10 @@
 ---
-title: ChannelCreateRequest
+title: RequestChannelUpdate
 parent: Model
 layout: page
 ---
 
-# ChannelCreateRequest
+# RequestChannelUpdate
 
 ## Model getters
 

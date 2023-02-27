@@ -1,10 +1,10 @@
 ---
-title: InvitationCreateRequest
+title: RequestInvitationCreate
 parent: Model
 layout: page
 ---
 
-# InvitationCreateRequest
+# RequestInvitationCreate
 
 ## Model getters
 

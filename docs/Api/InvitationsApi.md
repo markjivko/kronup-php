@@ -88,7 +88,7 @@ Accept an invitation to join an organization
 ```php
 (new \Kronup\Sdk())->api()->invitations()->invitationCreate(
     string $x_org_id,
-    \Kronup\Model\InvitationCreateRequest $invitation_create_request
+    \Kronup\Model\RequestInvitationCreate $request_invitation_create
 ): \Kronup\Model\Invitation
 ```
 
@@ -97,7 +97,7 @@ Accept an invitation to join an organization
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
- **$invitation_create_request** | [**\Kronup\Model\InvitationCreateRequest**](../../Model/InvitationCreateRequest) |  
+ **$request_invitation_create** | [**\Kronup\Model\RequestInvitationCreate**](../../Model/RequestInvitationCreate) |  
 
 ### Return type
 
@@ -261,7 +261,7 @@ Retrieve invitation model
 (new \Kronup\Sdk())->api()->invitations()->invitationUpdate(
     string $invite_id,
     string $x_org_id,
-    \Kronup\Model\InvitationUpdateRequest $invitation_update_request
+    \Kronup\Model\RequestInvitationUpdate $request_invitation_update
 ): \Kronup\Model\Invitation
 ```
 
@@ -271,7 +271,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$invite_id** | **string**  | Invitation ID 
  **$x_org_id** | **string**  | Organization ID 
- **$invitation_update_request** | [**\Kronup\Model\InvitationUpdateRequest**](../../Model/InvitationUpdateRequest) |  
+ **$request_invitation_update** | [**\Kronup\Model\RequestInvitationUpdate**](../../Model/RequestInvitationUpdate) |  
 
 ### Return type
 

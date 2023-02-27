@@ -1,7 +1,7 @@
 <?php
 
 /**
- * invitationUpdate_request Model
+ * RequestInvitationCreate Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,24 +17,24 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * invitationUpdate_request Model
+ * RequestInvitationCreate Model
  */
-class InvitationUpdateRequest extends AbstractModel {
+class RequestInvitationCreate extends AbstractModel {
 
     public const _D = null;
     public const INVITE_ORG_ROLE_MANAGER = 'manager';
     public const INVITE_ORG_ROLE_MEMBER = 'member';
-    protected static $_name = "invitationUpdate_request";
+    protected static $_name = "RequestInvitationCreate";
     protected static $_definition = [
-        "inviteName" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
+        "inviteName" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 1, "nl" => 3, "xl" => 64]], 
         "inviteDomain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", '', ["r" => 0, "xl" => 64]], 
         "inviteOrgRole" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", 'member', ["r" => 0, "e" => 1]], 
-        "inviteExpireDays" => ["inviteExpireDays", "int", null, "getInviteExpireDays", "setInviteExpireDays", 0, ["r" => 0, "n" => [0]]], 
+        "inviteExpireDays" => ["inviteExpireDays", "int", null, "getInviteExpireDays", "setInviteExpireDays", 0, ["r" => 0, "n" => [0], "x" => [365]]], 
         "inviteUsesMax" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", 0, ["r" => 0, "n" => [0], "x" => [10000]]]
     ];
 
     /**
-     * InvitationUpdateRequest
+     * RequestInvitationCreate
      *
      * @param mixed[] $data Model data
      */
@@ -59,16 +59,16 @@ class InvitationUpdateRequest extends AbstractModel {
     /**
      * Get inviteName
      *
-     * @return string|null
+     * @return string
      */
-    public function getInviteName(): ?string {
+    public function getInviteName(): string {
         return $this->_data["inviteName"];
     }
 
     /**
      * Set inviteName
      * 
-     * @param string|null $invite_name Invitation name
+     * @param string $invite_name Invitation name
      * @throws \InvalidArgumentException
      * @return $this
      */

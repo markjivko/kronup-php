@@ -137,13 +137,13 @@ class UsersApi extends AbstractApi {
      *
      * @param string $user_id User ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\UserUpdateRoleRequest $user_update_role_request 
+     * @param \Kronup\Model\RequestUserUpdateRole $request_user_update_role 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\UserRoles
      */
-    public function userUpdateRole($user_id, $x_org_id, $user_update_role_request) {
+    public function userUpdateRole($user_id, $x_org_id, $request_user_update_role) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -158,7 +158,7 @@ class UsersApi extends AbstractApi {
         /** @var \Kronup\Model\UserRoles $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, [], $user_update_role_request
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, [], $request_user_update_role
             ), 
             "\Kronup\Model\UserRoles"
         );

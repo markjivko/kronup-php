@@ -79,13 +79,13 @@ class AccountApi extends AbstractApi {
     /**
      * Update account
      *
-     * @param \Kronup\Model\AccountUpdateRequest $account_update_request 
+     * @param \Kronup\Model\RequestAccountUpdate $request_account_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Account
      */
-    public function accountUpdate($account_update_request) {
+    public function accountUpdate($request_account_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
@@ -94,7 +94,7 @@ class AccountApi extends AbstractApi {
         /** @var \Kronup\Model\Account $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $account_update_request
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $request_account_update
             ), 
             "\Kronup\Model\Account"
         );

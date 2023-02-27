@@ -177,7 +177,7 @@ Remove user from Organization
 (new \Kronup\Sdk())->api()->users()->userUpdateRole(
     string $user_id,
     string $x_org_id,
-    \Kronup\Model\UserUpdateRoleRequest $user_update_role_request
+    \Kronup\Model\RequestUserUpdateRole $request_user_update_role
 ): \Kronup\Model\UserRoles
 ```
 
@@ -187,7 +187,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
- **$user_update_role_request** | [**\Kronup\Model\UserUpdateRoleRequest**](../../Model/UserUpdateRoleRequest) |  
+ **$request_user_update_role** | [**\Kronup\Model\RequestUserUpdateRole**](../../Model/RequestUserUpdateRole) |  
 
 ### Return type
 

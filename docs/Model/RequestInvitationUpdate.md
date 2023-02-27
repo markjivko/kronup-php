@@ -1,10 +1,10 @@
 ---
-title: InvitationUpdateRequest
+title: RequestInvitationUpdate
 parent: Model
 layout: page
 ---
 
-# InvitationUpdateRequest
+# RequestInvitationUpdate
 
 ## Model getters
 

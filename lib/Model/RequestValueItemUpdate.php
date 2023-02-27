@@ -1,7 +1,7 @@
 <?php
 
 /**
- * valueItemCreate_request Model
+ * RequestValueItemUpdate Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,9 +17,9 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * valueItemCreate_request Model
+ * RequestValueItemUpdate Model
  */
-class ValueItemCreateRequest extends AbstractModel {
+class RequestValueItemUpdate extends AbstractModel {
 
     public const _D = null;
     public const TYPE_F = 'f';
@@ -29,7 +29,7 @@ class ValueItemCreateRequest extends AbstractModel {
     public const PRIORITY_S = 's';
     public const PRIORITY_C = 'c';
     public const PRIORITY_W = 'w';
-    protected static $_name = "valueItemCreate_request";
+    protected static $_name = "RequestValueItemUpdate";
     protected static $_definition = [
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 3, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 3, "xl" => 4096]], 
@@ -38,7 +38,7 @@ class ValueItemCreateRequest extends AbstractModel {
     ];
 
     /**
-     * ValueItemCreateRequest
+     * RequestValueItemUpdate
      *
      * @param mixed[] $data Model data
      */
