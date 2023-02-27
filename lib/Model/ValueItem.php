@@ -43,7 +43,6 @@ class ValueItem extends AbstractModel {
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
-        "changes" => ["changes", "\Kronup\Model\ValueItemChange[]", null, "getChanges", "setChanges", null, ["r" => 0, "c" => 1]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
@@ -258,26 +257,6 @@ class ValueItem extends AbstractModel {
      */
     public function setStage($stage) {
         return $this->_set("stage", $stage);
-    }
-
-    /**
-     * Get changes
-     *
-     * @return \Kronup\Model\ValueItemChange[]|null
-     */
-    public function getChanges(): ?array {
-        return $this->_data["changes"];
-    }
-
-    /**
-     * Set changes
-     * 
-     * @param \Kronup\Model\ValueItemChange[]|null $changes
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setChanges(?array $changes) {
-        return $this->_set("changes", $changes);
     }
 
     /**

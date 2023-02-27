@@ -64,6 +64,41 @@ class ValueItemsApi extends AbstractApi {
     }
     
     /**
+     * Delete value item
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value item ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\ValueItem
+     */
+    public function valueItemDelete($team_id, $channel_id, $item_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
+        
+        /** @var \Kronup\Model\ValueItem $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\ValueItem"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * List value items
      *
      * @param string $team_id Team ID
@@ -105,6 +140,77 @@ class ValueItemsApi extends AbstractApi {
                 ], $rHeaders, []
             ), 
             "\Kronup\Model\ValueItemList"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Fetch value item
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value item ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\ValueItem
+     */
+    public function valueItemRead($team_id, $channel_id, $item_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
+        
+        /** @var \Kronup\Model\ValueItem $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\ValueItem"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Update value item
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value item ID
+     * @param string $x_org_id Organization ID
+     * @param \Kronup\Model\ValueItemUpdateRequest $value_item_update_request 
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\ValueItem
+     */
+    public function valueItemUpdate($team_id, $channel_id, $item_id, $x_org_id, $value_item_update_request) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
+        
+        /** @var \Kronup\Model\ValueItem $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $value_item_update_request
+            ), 
+            "\Kronup\Model\ValueItem"
         );
             
         return $result;

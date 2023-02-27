@@ -21,7 +21,10 @@ $sdk->api()->valueItems();
 Method | Description
 ------------- | -------------
 [**valueItemCreate()**](#valueitemcreate) | Create value item
+[**valueItemDelete()**](#valueitemdelete) | Delete value item
 [**valueItemList()**](#valueitemlist) | List value items
+[**valueItemRead()**](#valueitemread) | Fetch value item
+[**valueItemUpdate()**](#valueitemupdate) | Update value item
 
 
 ## `valueItemCreate()`
@@ -72,6 +75,54 @@ Add a value item to planning
 ---
 
 
+## `valueItemDelete()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [✨ php -f **valueItemDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemDelete.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->valueItems()->valueItemDelete(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $x_org_id
+): \Kronup\Model\ValueItem
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value item ID 
+ **$x_org_id** | **string**  | Organization ID 
+
+### Return type
+
+[**\Kronup\Model\ValueItem**](../../Model/ValueItem)
+
+### Description
+
+> Delete value item
+
+Delete a value item from the flow
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
 ## `valueItemList()`
 
 ### Example
@@ -116,6 +167,104 @@ Name | Type | Description
 > List value items
 
 Get a list of value item models
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `valueItemRead()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [✨ php -f **valueItemRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemRead.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/teams/{teamId}/channels/{channelId}/items/{itemId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->valueItems()->valueItemRead(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $x_org_id
+): \Kronup\Model\ValueItem
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value item ID 
+ **$x_org_id** | **string**  | Organization ID 
+
+### Return type
+
+[**\Kronup\Model\ValueItem**](../../Model/ValueItem)
+
+### Description
+
+> Fetch value item
+
+Retrieve value item model
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `valueItemUpdate()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [✨ php -f **valueItemUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemUpdate.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->valueItems()->valueItemUpdate(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $x_org_id,
+    \Kronup\Model\ValueItemUpdateRequest $value_item_update_request
+): \Kronup\Model\ValueItem
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value item ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$value_item_update_request** | [**\Kronup\Model\ValueItemUpdateRequest**](../../Model/ValueItemUpdateRequest) |  
+
+### Return type
+
+[**\Kronup\Model\ValueItem**](../../Model/ValueItem)
+
+### Description
+
+> Update value item
+
+Update value item details
 
 [Back to top](#top){: .btn .btn-purple }
 
