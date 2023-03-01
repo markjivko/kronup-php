@@ -18,8 +18,9 @@ Method name | Return type | Description
 **getDetails()** | **string** | Value item description <br>Example: `Item detailed description ***` 
 **getAuthorId()** | **string** | Author ID <br>Example: `user-id-***` 
 **getStage()** | **string** | Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context <br>Example: `p` 
+**getCanAdvance()** | **bool** | Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed <br>Example: `null`  [default to false]
 **getType()** | **string** | Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore <br>Example: `f` 
 **getPriority()** | **string** | Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have <br>Example: `m` 
 **getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | Assumptions <br>Example: `null` 
-**getTasks()** | [**\Kronup\Model\Task[]**](../Task) | Tasks <br>Example: `null` 
+**getTasks()** | **string[]** | Tasks <br>Example: `null` 
 

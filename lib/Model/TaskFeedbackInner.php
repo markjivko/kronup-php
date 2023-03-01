@@ -32,11 +32,11 @@ class TaskFeedbackInner extends AbstractModel {
     public const ISSUE_M = 'm';
     protected static $_name = "Task_feedback_inner";
     protected static $_definition = [
+        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "issue" => ["issue", "string", null, "getIssue", "setIssue", 'v', ["r" => 0, "e" => 1]], 
-        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 512]], 
-        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 512]], 
-        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]]
+        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 1024]], 
+        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
     ];
 
     /**
@@ -66,6 +66,26 @@ class TaskFeedbackInner extends AbstractModel {
             self::ISSUE_ST,
             self::ISSUE_M,
         ];
+    }
+
+    /**
+     * Get iteration
+     *
+     * @return float|null
+     */
+    public function getIteration(): ?float {
+        return $this->_data["iteration"];
+    }
+
+    /**
+     * Set iteration
+     * 
+     * @param float|null $iteration Iteration number
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setIteration($iteration) {
+        return $this->_set("iteration", $iteration);
     }
 
     /**
@@ -146,25 +166,5 @@ class TaskFeedbackInner extends AbstractModel {
      */
     public function setReply($reply) {
         return $this->_set("reply", $reply);
-    }
-
-    /**
-     * Get iteration
-     *
-     * @return float|null
-     */
-    public function getIteration(): ?float {
-        return $this->_data["iteration"];
-    }
-
-    /**
-     * Set iteration
-     * 
-     * @param float|null $iteration Iteration number
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setIteration($iteration) {
-        return $this->_set("iteration", $iteration);
     }
 }

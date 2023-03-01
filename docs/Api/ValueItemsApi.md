@@ -20,11 +20,60 @@ $sdk->api()->valueItems();
 
 Method | Description
 ------------- | -------------
+[**valueItemAdvance()**](#valueitemadvance) | Advance value item
 [**valueItemCreate()**](#valueitemcreate) | Create value item
 [**valueItemDelete()**](#valueitemdelete) | Delete value item
 [**valueItemList()**](#valueitemlist) | List value items
 [**valueItemRead()**](#valueitemread) | Fetch value item
 [**valueItemUpdate()**](#valueitemupdate) | Update value item
+
+
+## `valueItemAdvance()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [✨ php -f **valueItemAdvance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemAdvance.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **PUT** `/teams/{teamId}/channels/{channelId}/items/{itemId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->valueItems()->valueItemAdvance(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $x_org_id
+): \Kronup\Model\ValueItem
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value item ID 
+ **$x_org_id** | **string**  | Organization ID 
+
+### Return type
+
+[**\Kronup\Model\ValueItem**](../../Model/ValueItem)
+
+### Description
+
+> Advance value item
+
+Advance a value item
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
 
 
 ## `valueItemCreate()`

@@ -26,6 +26,7 @@ class Assumption extends AbstractModel {
     public const _D = null;
     protected static $_name = "Assumption";
     protected static $_definition = [
+        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "validated" => ["validated", "bool", null, "getValidated", "setValidated", false, ["r" => 0]], 
@@ -43,6 +44,26 @@ class Assumption extends AbstractModel {
         }
     }
 
+
+    /**
+     * Get id
+     *
+     * @return string|null
+     */
+    public function getId(): ?string {
+        return $this->_data["id"];
+    }
+
+    /**
+     * Set id
+     * 
+     * @param string|null $id Value item ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setId($id) {
+        return $this->_set("id", $id);
+    }
 
     /**
      * Get authorId

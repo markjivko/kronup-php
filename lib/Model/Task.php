@@ -18,8 +18,6 @@ namespace Kronup\Model;
 
 /**
  * Task Model
- * 
- * Value Item Task
  */
 class Task extends AbstractModel {
 
@@ -30,6 +28,11 @@ class Task extends AbstractModel {
     public const STATE_D = 'd';
     protected static $_name = "Task";
     protected static $_definition = [
+        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
+        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
+        "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
+        "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
+        "itemId" => ["itemId", "string", null, "getItemId", "setItemId", null, ["r" => 0]], 
         "assigneeId" => ["assigneeId", "string", null, "getAssigneeId", "setAssigneeId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
@@ -37,8 +40,7 @@ class Task extends AbstractModel {
         "keywords" => ["keywords", "string[]", null, "getKeywords", "setKeywords", null, ["r" => 0, "c" => 1]], 
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
         "discoveries" => ["discoveries", "\Kronup\Model\TaskDiscoveriesInner[]", null, "getDiscoveries", "setDiscoveries", null, ["r" => 0, "c" => 1]], 
-        "feedback" => ["feedback", "\Kronup\Model\TaskFeedbackInner[]", null, "getFeedback", "setFeedback", null, ["r" => 0, "c" => 1]], 
-        "ama" => ["ama", "\Kronup\Model\TaskAmaInner[]", null, "getAma", "setAma", null, ["r" => 0, "c" => 1]]
+        "feedback" => ["feedback", "\Kronup\Model\TaskFeedbackInner[]", null, "getFeedback", "setFeedback", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -64,6 +66,106 @@ class Task extends AbstractModel {
             self::STATE_R,
             self::STATE_D,
         ];
+    }
+
+    /**
+     * Get id
+     *
+     * @return string|null
+     */
+    public function getId(): ?string {
+        return $this->_data["id"];
+    }
+
+    /**
+     * Set id
+     * 
+     * @param string|null $id Task ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setId($id) {
+        return $this->_set("id", $id);
+    }
+
+    /**
+     * Get orgId
+     *
+     * @return string|null
+     */
+    public function getOrgId(): ?string {
+        return $this->_data["orgId"];
+    }
+
+    /**
+     * Set orgId
+     * 
+     * @param string|null $org_id Organization ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setOrgId($org_id) {
+        return $this->_set("orgId", $org_id);
+    }
+
+    /**
+     * Get teamId
+     *
+     * @return string|null
+     */
+    public function getTeamId(): ?string {
+        return $this->_data["teamId"];
+    }
+
+    /**
+     * Set teamId
+     * 
+     * @param string|null $team_id Team ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setTeamId($team_id) {
+        return $this->_set("teamId", $team_id);
+    }
+
+    /**
+     * Get channelId
+     *
+     * @return string|null
+     */
+    public function getChannelId(): ?string {
+        return $this->_data["channelId"];
+    }
+
+    /**
+     * Set channelId
+     * 
+     * @param string|null $channel_id Channel ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setChannelId($channel_id) {
+        return $this->_set("channelId", $channel_id);
+    }
+
+    /**
+     * Get itemId
+     *
+     * @return string|null
+     */
+    public function getItemId(): ?string {
+        return $this->_data["itemId"];
+    }
+
+    /**
+     * Set itemId
+     * 
+     * @param string|null $item_id Value Item ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setItemId($item_id) {
+        return $this->_set("itemId", $item_id);
     }
 
     /**
@@ -224,25 +326,5 @@ class Task extends AbstractModel {
      */
     public function setFeedback(?array $feedback) {
         return $this->_set("feedback", $feedback);
-    }
-
-    /**
-     * Get ama
-     *
-     * @return \Kronup\Model\TaskAmaInner[]|null
-     */
-    public function getAma(): ?array {
-        return $this->_data["ama"];
-    }
-
-    /**
-     * Set ama
-     * 
-     * @param \Kronup\Model\TaskAmaInner[]|null $ama Ask me anything
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setAma(?array $ama) {
-        return $this->_set("ama", $ama);
     }
 }

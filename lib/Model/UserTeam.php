@@ -1,7 +1,7 @@
 <?php
 
 /**
- * UserChannel Model
+ * UserTeam Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,19 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * UserChannel Model
+ * UserTeam Model
  */
-class UserChannel extends AbstractModel {
+class UserTeam extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "UserChannel";
+    protected static $_name = "UserTeam";
     protected static $_definition = [
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelIds" => ["channelIds", "string[]", null, "getChannelIds", "setChannelIds", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * UserChannel
+     * UserTeam
      *
      * @param mixed[] $data Model data
      */

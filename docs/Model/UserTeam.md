@@ -1,10 +1,10 @@
 ---
-title: UserChannel
+title: UserTeam
 parent: Model
 layout: page
 ---
 
-# UserChannel
+# UserTeam
 
 ## Model getters
 

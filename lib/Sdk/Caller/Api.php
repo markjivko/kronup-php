@@ -35,6 +35,13 @@ class Api {
     protected $_accountApi = null;
 
     /**
+     * Assumptions API
+     *
+     * @var \Kronup\Api\AssumptionsApi
+     */
+    protected $_assumptionsApi = null;
+
+    /**
      * Channels API
      *
      * @var \Kronup\Api\ChannelsApi
@@ -96,6 +103,19 @@ class Api {
         }
 
         return $this->_accountApi;
+    }
+    
+    /**
+     * Assumptions API
+     * 
+     * @return \Kronup\Api\AssumptionsApi
+     */
+    public function assumptions(): A\AssumptionsApi {
+        if (null === $this->_assumptionsApi) {
+            $this->_assumptionsApi = new A\AssumptionsApi($this->_sdk);
+        }
+
+        return $this->_assumptionsApi;
     }
     
     /**

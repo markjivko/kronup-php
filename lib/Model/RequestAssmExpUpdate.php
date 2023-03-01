@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Assumption_experiment Model
+ * RequestAssmExpUpdate Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,27 +17,24 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Assumption_experiment Model
- * 
- * Experiment
+ * RequestAssmExpUpdate Model
  */
-class AssumptionExperiment extends AbstractModel {
+class RequestAssmExpUpdate extends AbstractModel {
 
     public const _D = null;
     public const STATE_I = 'i';
     public const STATE_R = 'r';
     public const STATE_D = 'd';
-    protected static $_name = "Assumption_experiment";
+    protected static $_name = "RequestAssmExpUpdate";
     protected static $_definition = [
-        "authors" => ["authors", "string[]", null, "getAuthors", "setAuthors", null, ["r" => 0, "c" => 1]], 
-        "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", false, ["r" => 0]], 
+        "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
-        "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]]
+        "state" => ["state", "string", null, "getState", "setState", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
-     * AssumptionExperiment
+     * RequestAssmExpUpdate
      *
      * @param mixed[] $data Model data
      */
@@ -58,26 +55,6 @@ class AssumptionExperiment extends AbstractModel {
             self::STATE_R,
             self::STATE_D,
         ];
-    }
-
-    /**
-     * Get authors
-     *
-     * @return string[]|null
-     */
-    public function getAuthors(): ?array {
-        return $this->_data["authors"];
-    }
-
-    /**
-     * Set authors
-     * 
-     * @param string[]|null $authors
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setAuthors(?array $authors) {
-        return $this->_set("authors", $authors);
     }
 
     /**
@@ -112,7 +89,7 @@ class AssumptionExperiment extends AbstractModel {
     /**
      * Set digest
      * 
-     * @param string|null $digest Experiment findings formulated in one sentence
+     * @param string|null $digest Experiment digest
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -132,7 +109,7 @@ class AssumptionExperiment extends AbstractModel {
     /**
      * Set details
      * 
-     * @param string|null $details Experiment details
+     * @param string|null $details Experiment findings
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -152,7 +129,7 @@ class AssumptionExperiment extends AbstractModel {
     /**
      * Set state
      * 
-     * @param string|null $state Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
+     * @param string|null $state Experiment state <ul> <li><code>i</code> - Idle</li> <li><code>r</code> - Running</li> <li><code>d</code> - Done</li> </ul>
      * @throws \InvalidArgumentException
      * @return $this
      */

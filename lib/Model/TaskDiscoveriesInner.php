@@ -26,8 +26,8 @@ class TaskDiscoveriesInner extends AbstractModel {
     public const _D = null;
     protected static $_name = "Task_discoveries_inner";
     protected static $_definition = [
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
-        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]]
+        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
     ];
 
     /**
@@ -41,26 +41,6 @@ class TaskDiscoveriesInner extends AbstractModel {
         }
     }
 
-
-    /**
-     * Get details
-     *
-     * @return string|null
-     */
-    public function getDetails(): ?string {
-        return $this->_data["details"];
-    }
-
-    /**
-     * Set details
-     * 
-     * @param string|null $details Discovery details
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setDetails($details) {
-        return $this->_set("details", $details);
-    }
 
     /**
      * Get iteration
@@ -80,5 +60,25 @@ class TaskDiscoveriesInner extends AbstractModel {
      */
     public function setIteration($iteration) {
         return $this->_set("iteration", $iteration);
+    }
+
+    /**
+     * Get details
+     *
+     * @return string|null
+     */
+    public function getDetails(): ?string {
+        return $this->_data["details"];
+    }
+
+    /**
+     * Set details
+     * 
+     * @param string|null $details Discovery details
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setDetails($details) {
+        return $this->_set("details", $details);
     }
 }

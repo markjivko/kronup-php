@@ -43,10 +43,11 @@ class ValueItem extends AbstractModel {
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
+        "canAdvance" => ["canAdvance", "bool", null, "getCanAdvance", "setCanAdvance", false, ["r" => 0]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
-        "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
+        "tasks" => ["tasks", "string[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -260,6 +261,26 @@ class ValueItem extends AbstractModel {
     }
 
     /**
+     * Get canAdvance
+     *
+     * @return bool|null
+     */
+    public function getCanAdvance(): ?bool {
+        return $this->_data["canAdvance"];
+    }
+
+    /**
+     * Set canAdvance
+     * 
+     * @param bool|null $can_advance Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setCanAdvance($can_advance) {
+        return $this->_set("canAdvance", $can_advance);
+    }
+
+    /**
      * Get type
      *
      * @return string|null
@@ -322,7 +343,7 @@ class ValueItem extends AbstractModel {
     /**
      * Get tasks
      *
-     * @return \Kronup\Model\Task[]|null
+     * @return string[]|null
      */
     public function getTasks(): ?array {
         return $this->_data["tasks"];
@@ -331,7 +352,7 @@ class ValueItem extends AbstractModel {
     /**
      * Set tasks
      * 
-     * @param \Kronup\Model\Task[]|null $tasks Tasks
+     * @param string[]|null $tasks Tasks
      * @throws \InvalidArgumentException
      * @return $this
      */
