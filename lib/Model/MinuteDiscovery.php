@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Task_discoveries_inner Model
+ * Minute_Discovery Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,21 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Task_discoveries_inner Model
- * 
- * Discovery
+ * Minute_Discovery Model
  */
-class TaskDiscoveriesInner extends AbstractModel {
+class MinuteDiscovery extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Task_discoveries_inner";
+    protected static $_name = "Minute_Discovery";
     protected static $_definition = [
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
+        "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
     ];
 
     /**
-     * TaskDiscoveriesInner
+     * MinuteDiscovery
      *
      * @param mixed[] $data Model data
      */
@@ -60,6 +59,26 @@ class TaskDiscoveriesInner extends AbstractModel {
      */
     public function setIteration($iteration) {
         return $this->_set("iteration", $iteration);
+    }
+
+    /**
+     * Get authorId
+     *
+     * @return string|null
+     */
+    public function getAuthorId(): ?string {
+        return $this->_data["authorId"];
+    }
+
+    /**
+     * Set authorId
+     * 
+     * @param string|null $author_id Author ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setAuthorId($author_id) {
+        return $this->_set("authorId", $author_id);
     }
 
     /**

@@ -63,6 +63,13 @@ class Api {
     protected $_organizationsApi = null;
 
     /**
+     * Tasks API
+     *
+     * @var \Kronup\Api\TasksApi
+     */
+    protected $_tasksApi = null;
+
+    /**
      * Teams API
      *
      * @var \Kronup\Api\TeamsApi
@@ -155,6 +162,19 @@ class Api {
         }
 
         return $this->_organizationsApi;
+    }
+    
+    /**
+     * Tasks API
+     * 
+     * @return \Kronup\Api\TasksApi
+     */
+    public function tasks(): A\TasksApi {
+        if (null === $this->_tasksApi) {
+            $this->_tasksApi = new A\TasksApi($this->_sdk);
+        }
+
+        return $this->_tasksApi;
     }
     
     /**

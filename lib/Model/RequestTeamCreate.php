@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestTeamCreate Model
+ * Request_Team_Create Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestTeamCreate Model
+ * Request_Team_Create Model
  */
 class RequestTeamCreate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "RequestTeamCreate";
+    protected static $_name = "Request_Team_Create";
     protected static $_definition = [
         "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 1, "nl" => 3, "xl" => 64]], 
         "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", '', ["r" => 0, "xl" => 256]]

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestAssmExpUpdate Model
+ * Request_Task_Update Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,24 +17,24 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestAssmExpUpdate Model
+ * Request_Task_Update Model
  */
-class RequestAssmExpUpdate extends AbstractModel {
+class RequestTaskUpdate extends AbstractModel {
 
     public const _D = null;
     public const STATE_I = 'i';
+    public const STATE_P = 'p';
     public const STATE_R = 'r';
     public const STATE_D = 'd';
-    protected static $_name = "RequestAssmExpUpdate";
+    protected static $_name = "Request_Task_Update";
     protected static $_definition = [
-        "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
-     * RequestAssmExpUpdate
+     * RequestTaskUpdate
      *
      * @param mixed[] $data Model data
      */
@@ -52,29 +52,10 @@ class RequestAssmExpUpdate extends AbstractModel {
     public function getStateAllowableValues(): array {
         return [
             self::STATE_I,
+            self::STATE_P,
             self::STATE_R,
             self::STATE_D,
         ];
-    }
-
-    /**
-     * Get confirmed
-     *
-     * @return bool|null
-     */
-    public function getConfirmed(): ?bool {
-        return $this->_data["confirmed"];
-    }
-
-    /**
-     * Set confirmed
-     * 
-     * @param bool|null $confirmed Experiment confirms assumption
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setConfirmed($confirmed) {
-        return $this->_set("confirmed", $confirmed);
     }
 
     /**
@@ -89,7 +70,7 @@ class RequestAssmExpUpdate extends AbstractModel {
     /**
      * Set digest
      * 
-     * @param string|null $digest Experiment digest
+     * @param string|null $digest Task digest
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -109,7 +90,7 @@ class RequestAssmExpUpdate extends AbstractModel {
     /**
      * Set details
      * 
-     * @param string|null $details Experiment findings
+     * @param string|null $details Task details
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -129,7 +110,7 @@ class RequestAssmExpUpdate extends AbstractModel {
     /**
      * Set state
      * 
-     * @param string|null $state Experiment state <ul> <li><code>i</code> - Idle</li> <li><code>r</code> - Running</li> <li><code>d</code> - Done</li> </ul>
+     * @param string|null $state
      * @throws \InvalidArgumentException
      * @return $this
      */

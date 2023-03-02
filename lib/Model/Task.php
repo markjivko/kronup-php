@@ -29,18 +29,13 @@ class Task extends AbstractModel {
     protected static $_name = "Task";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
-        "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
-        "itemId" => ["itemId", "string", null, "getItemId", "setItemId", null, ["r" => 0]], 
+        "minuteId" => ["minuteId", "string", null, "getMinuteId", "setMinuteId", null, ["r" => 0]], 
         "assigneeId" => ["assigneeId", "string", null, "getAssigneeId", "setAssigneeId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]], 
         "keywords" => ["keywords", "string[]", null, "getKeywords", "setKeywords", null, ["r" => 0, "c" => 1]], 
-        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
-        "discoveries" => ["discoveries", "\Kronup\Model\TaskDiscoveriesInner[]", null, "getDiscoveries", "setDiscoveries", null, ["r" => 0, "c" => 1]], 
-        "feedback" => ["feedback", "\Kronup\Model\TaskFeedbackInner[]", null, "getFeedback", "setFeedback", null, ["r" => 0, "c" => 1]]
+        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]]
     ];
 
     /**
@@ -89,83 +84,23 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get orgId
+     * Get minuteId
      *
      * @return string|null
      */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
+    public function getMinuteId(): ?string {
+        return $this->_data["minuteId"];
     }
 
     /**
-     * Set orgId
+     * Set minuteId
      * 
-     * @param string|null $org_id Organization ID
+     * @param string|null $minute_id Minute ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
-    }
-
-    /**
-     * Get teamId
-     *
-     * @return string|null
-     */
-    public function getTeamId(): ?string {
-        return $this->_data["teamId"];
-    }
-
-    /**
-     * Set teamId
-     * 
-     * @param string|null $team_id Team ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setTeamId($team_id) {
-        return $this->_set("teamId", $team_id);
-    }
-
-    /**
-     * Get channelId
-     *
-     * @return string|null
-     */
-    public function getChannelId(): ?string {
-        return $this->_data["channelId"];
-    }
-
-    /**
-     * Set channelId
-     * 
-     * @param string|null $channel_id Channel ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setChannelId($channel_id) {
-        return $this->_set("channelId", $channel_id);
-    }
-
-    /**
-     * Get itemId
-     *
-     * @return string|null
-     */
-    public function getItemId(): ?string {
-        return $this->_data["itemId"];
-    }
-
-    /**
-     * Set itemId
-     * 
-     * @param string|null $item_id Value Item ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setItemId($item_id) {
-        return $this->_set("itemId", $item_id);
+    public function setMinuteId($minute_id) {
+        return $this->_set("minuteId", $minute_id);
     }
 
     /**
@@ -286,45 +221,5 @@ class Task extends AbstractModel {
      */
     public function setIteration($iteration) {
         return $this->_set("iteration", $iteration);
-    }
-
-    /**
-     * Get discoveries
-     *
-     * @return \Kronup\Model\TaskDiscoveriesInner[]|null
-     */
-    public function getDiscoveries(): ?array {
-        return $this->_data["discoveries"];
-    }
-
-    /**
-     * Set discoveries
-     * 
-     * @param \Kronup\Model\TaskDiscoveriesInner[]|null $discoveries Discoveries
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setDiscoveries(?array $discoveries) {
-        return $this->_set("discoveries", $discoveries);
-    }
-
-    /**
-     * Get feedback
-     *
-     * @return \Kronup\Model\TaskFeedbackInner[]|null
-     */
-    public function getFeedback(): ?array {
-        return $this->_data["feedback"];
-    }
-
-    /**
-     * Set feedback
-     * 
-     * @param \Kronup\Model\TaskFeedbackInner[]|null $feedback Feedback
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setFeedback(?array $feedback) {
-        return $this->_set("feedback", $feedback);
     }
 }

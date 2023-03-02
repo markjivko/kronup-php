@@ -194,7 +194,7 @@ Delete a value item from the flow
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
-): \Kronup\Model\ValueItemList
+): \Kronup\Model\ValueItemsList
 ```
 
 ### Parameters
@@ -209,7 +209,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\ValueItemList**](../../Model/ValueItemList)
+[**\Kronup\Model\ValueItemsList**](../../Model/ValueItemsList)
 
 ### Description
 

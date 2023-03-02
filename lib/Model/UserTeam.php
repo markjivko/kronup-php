@@ -1,7 +1,7 @@
 <?php
 
 /**
- * UserTeam Model
+ * User_Team Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * UserTeam Model
+ * User_Team Model
  */
 class UserTeam extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "UserTeam";
+    protected static $_name = "User_Team";
     protected static $_definition = [
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelIds" => ["channelIds", "string[]", null, "getChannelIds", "setChannelIds", null, ["r" => 0, "c" => 1]]

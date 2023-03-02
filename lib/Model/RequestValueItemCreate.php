@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestValueItemCreate Model
+ * Request_Value_Item_Create Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,7 +17,7 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestValueItemCreate Model
+ * Request_Value_Item_Create Model
  */
 class RequestValueItemCreate extends AbstractModel {
 
@@ -29,10 +29,10 @@ class RequestValueItemCreate extends AbstractModel {
     public const PRIORITY_S = 's';
     public const PRIORITY_C = 'c';
     public const PRIORITY_W = 'w';
-    protected static $_name = "RequestValueItemCreate";
+    protected static $_name = "Request_Value_Item_Create";
     protected static $_definition = [
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 3, "xl" => 256]], 
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 3, "xl" => 4096]], 
+        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]]
     ];

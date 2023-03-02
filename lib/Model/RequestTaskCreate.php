@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestUserUpdateRole Model
+ * Request_Task_Create Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,19 +17,19 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestUserUpdateRole Model
+ * Request_Task_Create Model
  */
-class RequestUserUpdateRole extends AbstractModel {
+class RequestTaskCreate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "RequestUserUpdateRole";
+    protected static $_name = "Request_Task_Create";
     protected static $_definition = [
-        "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0]], 
-        "roleOrg" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0]]
+        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]]
     ];
 
     /**
-     * RequestUserUpdateRole
+     * RequestTaskCreate
      *
      * @param mixed[] $data Model data
      */
@@ -41,42 +41,42 @@ class RequestUserUpdateRole extends AbstractModel {
 
 
     /**
-     * Get roleSite
+     * Get digest
      *
      * @return string|null
      */
-    public function getRoleSite(): ?string {
-        return $this->_data["roleSite"];
+    public function getDigest(): ?string {
+        return $this->_data["digest"];
     }
 
     /**
-     * Set roleSite
+     * Set digest
      * 
-     * @param string|null $role_site New site role
+     * @param string|null $digest Task digest
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoleSite($role_site) {
-        return $this->_set("roleSite", $role_site);
+    public function setDigest($digest) {
+        return $this->_set("digest", $digest);
     }
 
     /**
-     * Get roleOrg
+     * Get details
      *
      * @return string|null
      */
-    public function getRoleOrg(): ?string {
-        return $this->_data["roleOrg"];
+    public function getDetails(): ?string {
+        return $this->_data["details"];
     }
 
     /**
-     * Set roleOrg
+     * Set details
      * 
-     * @param string|null $role_org New organization role
+     * @param string|null $details Task details
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoleOrg($role_org) {
-        return $this->_set("roleOrg", $role_org);
+    public function setDetails($details) {
+        return $this->_set("details", $details);
     }
 }

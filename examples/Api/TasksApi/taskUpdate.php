@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/AssumptionsApi/#assumptionexperimentupdate
+ * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#taskupdate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -29,48 +29,45 @@ $arg_channel_id = "channel-id-***";
 // Value item ID
 $arg_item_id = "value-item-id-***";
 
-// Assumption ID
-$arg_assm_id = "assm-id-***";
+// Task ID
+$arg_task_id = "task-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_assm_exp_update = (new \Kronup\Model\RequestAssmExpUpdate())
+$arg_request_task_update = (new \Kronup\Model\RequestTaskUpdate())
     
-    // (optional) Experiment confirms assumption
-    ->setConfirmed(null)
-    
-    // (optional) Experiment digest
+    // (optional) Task digest
     ->setDigest('null')
     
-    // (optional) Experiment findings
+    // (optional) Task details
     ->setDetails('null')
     
-    // (optional) Experiment state <ul> <li><code>i</code> - Idle</li> <li><code>r</code> - Running</li> <li><code>...
+    // (optional) string
     ->setState('null');
 
 try {
 
     /**
-     * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp
+     * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}
      * 
-     * @var \Kronup\Model\Assumption $response
+     * @var \Kronup\Model\Task $response
      */
     $response = $sdk
         ->api()
-        ->assumptions()
-        ->assumptionExperimentUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_request_assm_exp_update);
+        ->tasks()
+        ->taskUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_x_org_id, $arg_request_task_update);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->assumptions()->assumptionExperimentUpdate(): %s\n", 
+        "API Exception when calling api()->tasks()->taskUpdate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->assumptions()->assumptionExperimentUpdate(): %s\n", 
+        "Exception when calling api()->tasks()->taskUpdate(): %s\n", 
         $exc->getMessage()
     );
 }

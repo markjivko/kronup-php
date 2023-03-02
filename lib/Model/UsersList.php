@@ -1,7 +1,7 @@
 <?php
 
 /**
- * UserList Model
+ * Users_List Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * UserList Model
+ * Users_List Model
  */
-class UserList extends AbstractModel {
+class UsersList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "UserList";
+    protected static $_name = "Users_List";
     protected static $_definition = [
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
@@ -30,7 +30,7 @@ class UserList extends AbstractModel {
     ];
 
     /**
-     * UserList
+     * UsersList
      *
      * @param mixed[] $data Model data
      */

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestInvitationCreate Model
+ * Request_Invitation_Create Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,14 +17,14 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestInvitationCreate Model
+ * Request_Invitation_Create Model
  */
 class RequestInvitationCreate extends AbstractModel {
 
     public const _D = null;
     public const INVITE_ORG_ROLE_MANAGER = 'manager';
     public const INVITE_ORG_ROLE_MEMBER = 'member';
-    protected static $_name = "RequestInvitationCreate";
+    protected static $_name = "Request_Invitation_Create";
     protected static $_definition = [
         "inviteName" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 1, "nl" => 3, "xl" => 64]], 
         "inviteDomain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", '', ["r" => 0, "xl" => 64]], 

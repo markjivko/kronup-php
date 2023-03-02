@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Task_feedback_inner Model
+ * Minute_Feedback Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,9 +17,9 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Task_feedback_inner Model
+ * Minute_Feedback Model
  */
-class TaskFeedbackInner extends AbstractModel {
+class MinuteFeedback extends AbstractModel {
 
     public const _D = null;
     public const ISSUE_V = 'v';
@@ -30,7 +30,7 @@ class TaskFeedbackInner extends AbstractModel {
     public const ISSUE_CI = 'ci';
     public const ISSUE_ST = 'st';
     public const ISSUE_M = 'm';
-    protected static $_name = "Task_feedback_inner";
+    protected static $_name = "Minute_Feedback";
     protected static $_definition = [
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
@@ -40,7 +40,7 @@ class TaskFeedbackInner extends AbstractModel {
     ];
 
     /**
-     * TaskFeedbackInner
+     * MinuteFeedback
      *
      * @param mixed[] $data Model data
      */
@@ -160,7 +160,7 @@ class TaskFeedbackInner extends AbstractModel {
     /**
      * Set reply
      * 
-     * @param string|null $reply Feedback reply from task assignee
+     * @param string|null $reply Reply from assignee
      * @throws \InvalidArgumentException
      * @return $this
      */

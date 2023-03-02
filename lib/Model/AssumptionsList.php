@@ -1,7 +1,7 @@
 <?php
 
 /**
- * AssumptionList Model
+ * Assumptions_List Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * AssumptionList Model
+ * Assumptions_List Model
  */
-class AssumptionList extends AbstractModel {
+class AssumptionsList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "AssumptionList";
+    protected static $_name = "Assumptions_List";
     protected static $_definition = [
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
@@ -30,7 +30,7 @@ class AssumptionList extends AbstractModel {
     ];
 
     /**
-     * AssumptionList
+     * AssumptionsList
      *
      * @param mixed[] $data Model data
      */

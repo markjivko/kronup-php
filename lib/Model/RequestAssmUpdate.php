@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestAssmUpdate Model
+ * Request_Assm_Update Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestAssmUpdate Model
+ * Request_Assm_Update Model
  */
 class RequestAssmUpdate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "RequestAssmUpdate";
+    protected static $_name = "Request_Assm_Update";
     protected static $_definition = [
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]]
     ];

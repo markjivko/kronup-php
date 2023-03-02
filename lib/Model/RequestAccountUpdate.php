@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestAccountUpdate Model
+ * Request_Account_Update Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestAccountUpdate Model
+ * Request_Account_Update Model
  */
 class RequestAccountUpdate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "RequestAccountUpdate";
+    protected static $_name = "Request_Account_Update";
     protected static $_definition = [
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]]
     ];

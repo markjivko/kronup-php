@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ValueItemsApi/#valueitemlist
+ * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#taskcreate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -26,37 +26,42 @@ $arg_team_id = "team-id-***";
 // Channel ID
 $arg_channel_id = "channel-id-***";
 
+// Value Item ID
+$arg_item_id = "value-item-id-***";
+
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-// Pagination: page number
-$arg_page_number = 1;
-
-// Pagination: page size
-$arg_page_size = 100;
+$arg_request_task_create = (new \Kronup\Model\RequestTaskCreate())
+    
+    // (optional) Task digest
+    ->setDigest('null')
+    
+    // (optional) Task details
+    ->setDetails('null');
 
 try {
 
     /**
-     * GET /teams/{teamId}/channels/{channelId}/items
+     * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks
      * 
-     * @var \Kronup\Model\ValueItemsList $response
+     * @var \Kronup\Model\Task $response
      */
     $response = $sdk
         ->api()
-        ->valueItems()
-        ->valueItemList($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_page_number, $arg_page_size);
+        ->tasks()
+        ->taskCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_request_task_create);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->valueItems()->valueItemList(): %s\n", 
+        "API Exception when calling api()->tasks()->taskCreate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->valueItems()->valueItemList(): %s\n", 
+        "Exception when calling api()->tasks()->taskCreate(): %s\n", 
         $exc->getMessage()
     );
 }

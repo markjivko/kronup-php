@@ -46,7 +46,7 @@ Method | Description
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
-): \Kronup\Model\UserList
+): \Kronup\Model\UsersList
 ```
 
 ### Parameters
@@ -59,7 +59,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\UserList**](../../Model/UserList)
+[**\Kronup\Model\UsersList**](../../Model/UsersList)
 
 ### Description
 
@@ -177,7 +177,7 @@ Remove user from Organization
 (new \Kronup\Sdk())->api()->users()->userUpdateRole(
     string $user_id,
     string $x_org_id,
-    \Kronup\Model\RequestUserUpdateRole $request_user_update_role
+    \Kronup\Model\RequestUserRoleUpdate $request_user_role_update
 ): \Kronup\Model\UserRoles
 ```
 
@@ -187,7 +187,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
- **$request_user_update_role** | [**\Kronup\Model\RequestUserUpdateRole**](../../Model/RequestUserUpdateRole) |  
+ **$request_user_role_update** | [**\Kronup\Model\RequestUserRoleUpdate**](../../Model/RequestUserRoleUpdate) |  
 
 ### Return type
 

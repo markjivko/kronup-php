@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ValueItemList Model
+ * Tasks_List Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,20 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * ValueItemList Model
+ * Tasks_List Model
  */
-class ValueItemList extends AbstractModel {
+class TasksList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "ValueItemList";
+    protected static $_name = "Tasks_List";
     protected static $_definition = [
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
-        "items" => ["items", "\Kronup\Model\ValueItem[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
+        "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * ValueItemList
+     * TasksList
      *
      * @param mixed[] $data Model data
      */
@@ -82,22 +82,22 @@ class ValueItemList extends AbstractModel {
     }
 
     /**
-     * Get items
+     * Get tasks
      *
-     * @return \Kronup\Model\ValueItem[]|null
+     * @return \Kronup\Model\Task[]|null
      */
-    public function getItems(): ?array {
-        return $this->_data["items"];
+    public function getTasks(): ?array {
+        return $this->_data["tasks"];
     }
 
     /**
-     * Set items
+     * Set tasks
      * 
-     * @param \Kronup\Model\ValueItem[]|null $items
+     * @param \Kronup\Model\Task[]|null $tasks
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setItems(?array $items) {
-        return $this->_set("items", $items);
+    public function setTasks(?array $tasks) {
+        return $this->_set("tasks", $tasks);
     }
 }

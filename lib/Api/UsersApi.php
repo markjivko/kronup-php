@@ -37,7 +37,7 @@ class UsersApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\UserList
+     * @return \Kronup\Model\UsersList
      */
     public function userList($x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
@@ -59,7 +59,7 @@ class UsersApi extends AbstractApi {
         // Path template
         $rPath = "/users";
         
-        /** @var \Kronup\Model\UserList $result */
+        /** @var \Kronup\Model\UsersList $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [
@@ -67,7 +67,7 @@ class UsersApi extends AbstractApi {
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []
             ), 
-            "\Kronup\Model\UserList"
+            "\Kronup\Model\UsersList"
         );
             
         return $result;
@@ -137,13 +137,13 @@ class UsersApi extends AbstractApi {
      *
      * @param string $user_id User ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestUserUpdateRole $request_user_update_role 
+     * @param \Kronup\Model\RequestUserRoleUpdate $request_user_role_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\UserRoles
      */
-    public function userUpdateRole($user_id, $x_org_id, $request_user_update_role) {
+    public function userUpdateRole($user_id, $x_org_id, $request_user_role_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -158,7 +158,7 @@ class UsersApi extends AbstractApi {
         /** @var \Kronup\Model\UserRoles $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, [], $request_user_update_role
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, [], $request_user_role_update
             ), 
             "\Kronup\Model\UserRoles"
         );

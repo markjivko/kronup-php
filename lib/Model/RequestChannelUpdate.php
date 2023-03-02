@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestChannelUpdate Model
+ * Request_Channel_Update Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestChannelUpdate Model
+ * Request_Channel_Update Model
  */
 class RequestChannelUpdate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "RequestChannelUpdate";
+    protected static $_name = "Request_Channel_Update";
     protected static $_definition = [
         "channelName" => ["channelName", "string", null, "getChannelName", "setChannelName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
         "channelDesc" => ["channelDesc", "string", null, "getChannelDesc", "setChannelDesc", '', ["r" => 0, "xl" => 256]]

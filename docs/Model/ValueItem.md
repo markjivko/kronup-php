@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Value item ID <br>Example: `value-item-***` 
+**getId()** | **string** | Value item ID <br>Example: `value-item-id-***` 
 **getOrgId()** | **string** | Organization ID <br>Example: `Organization, Inc.` 
 **getTeamId()** | **string** | Team ID <br>Example: `team-id-***` 
 **getChannelId()** | **string** | Channel ID <br>Example: `channel-id-***` 
@@ -22,5 +22,5 @@ Method name | Return type | Description
 **getType()** | **string** | Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore <br>Example: `f` 
 **getPriority()** | **string** | Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have <br>Example: `m` 
 **getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | Assumptions <br>Example: `null` 
-**getTasks()** | **string[]** | Tasks <br>Example: `null` 
+**getTasks()** | [**\Kronup\Model\Task[]**](../Task) |  <br>Example: `null` 
 

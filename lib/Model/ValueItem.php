@@ -47,7 +47,7 @@ class ValueItem extends AbstractModel {
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
-        "tasks" => ["tasks", "string[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
+        "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -343,7 +343,7 @@ class ValueItem extends AbstractModel {
     /**
      * Get tasks
      *
-     * @return string[]|null
+     * @return \Kronup\Model\Task[]|null
      */
     public function getTasks(): ?array {
         return $this->_data["tasks"];
@@ -352,7 +352,7 @@ class ValueItem extends AbstractModel {
     /**
      * Set tasks
      * 
-     * @param string[]|null $tasks Tasks
+     * @param \Kronup\Model\Task[]|null $tasks
      * @throws \InvalidArgumentException
      * @return $this
      */

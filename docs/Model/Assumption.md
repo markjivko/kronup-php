@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Value item ID <br>Example: `value-item-***` 
+**getId()** | **string** | Value item ID <br>Example: `value-item-id-***` 
 **getAuthorId()** | **string** | Author ID <br>Example: `user-id-***` 
 **getDigest()** | **string** | Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists. <br>Example: `Electron.js supports Windows 7` 
 **getValidated()** | **bool** | Assumption was validated by experiments <br>Example: `null`  [default to false]

@@ -43,7 +43,7 @@ try {
     /**
      * GET /teams/{teamId}/channels/{channelId}/items/{itemId}/assms
      * 
-     * @var \Kronup\Model\AssumptionList $response
+     * @var \Kronup\Model\AssumptionsList $response
      */
     $response = $sdk
         ->api()

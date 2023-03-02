@@ -1,7 +1,7 @@
 <?php
 
 /**
- * RequestOrganizationCreate Model
+ * Request_Organization_Create Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * RequestOrganizationCreate Model
+ * Request_Organization_Create Model
  */
 class RequestOrganizationCreate extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "RequestOrganizationCreate";
+    protected static $_name = "Request_Organization_Create";
     protected static $_definition = [
         "orgName" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0, "nl" => 3, "xl" => 64]]
     ];

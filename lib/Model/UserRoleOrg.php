@@ -1,7 +1,7 @@
 <?php
 
 /**
- * UserRoleOrg Model
+ * User_Role_Org Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,7 +17,7 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * UserRoleOrg Model
+ * User_Role_Org Model
  */
 class UserRoleOrg extends AbstractModel {
 
@@ -25,7 +25,7 @@ class UserRoleOrg extends AbstractModel {
     public const ROLE_OWNER = 'owner';
     public const ROLE_MANAGER = 'manager';
     public const ROLE_MEMBER = 'member';
-    protected static $_name = "UserRoleOrg";
+    protected static $_name = "User_Role_Org";
     protected static $_definition = [
         "role" => ["role", "string", null, "getRole", "setRole", null, ["r" => 0, "e" => 1]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]]
