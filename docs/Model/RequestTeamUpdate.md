@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getTeamName()** | **string** | Team name <br>Example: `null` 
-**getTeamDesc()** | **string** | Team description <br>Example: `null`  [default to '']
+**getTeamName()** | **string** | Team name
+**getTeamDesc()** | **string** | Team description [default to `''`]
 

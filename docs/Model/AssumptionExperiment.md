@@ -10,9 +10,9 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getAuthors()** | **string[]** |  <br>Example: `null` 
-**getConfirmed()** | **bool** | Experiment confirms assumption <br>Example: `null`  [default to false]
-**getDigest()** | **string** | Experiment findings formulated in one sentence <br>Example: `Tested latest version successfully with a virtual machine` 
-**getDetails()** | **string** | Experiment details <br>Example: `null` 
-**getState()** | **string** | Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done <br>Example: `null`  [default to 'i']
+**getAuthors()** | **string[]** | 
+**getConfirmed()** | **bool** | Experiment confirms assumption [default to `false`]
+**getDigest()** | **string** | Experiment findings formulated in one sentence
+**getDetails()** | **string** | Experiment details
+**getState()** | **string** | Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done [default to `'i'`]
 

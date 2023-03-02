@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getPageSize()** | **int** | Page size <br>Example: `100` 
-**getPageNumber()** | **int** | Page number <br>Example: `1` 
-**getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) |  <br>Example: `null` 
+**getPageSize()** | **int** | Page size
+**getPageNumber()** | **int** | Page number
+**getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | 
 

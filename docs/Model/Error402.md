@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Unique lowercase string that identifies this 402 error <br>Example: `payment-*` 
-**getMessage()** | **string** | 402 Error message (supports i18n) <br>Example: `Payment required error` 
+**getId()** | **string** | Unique lowercase string that identifies this 402 error
+**getMessage()** | **string** | 402 Error message (supports i18n)
 

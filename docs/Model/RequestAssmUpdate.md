@@ -10,5 +10,5 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getDigest()** | **string** | Assumption digest <br>Example: `Feature name` 
+**getDigest()** | **string** | Assumption digest
 

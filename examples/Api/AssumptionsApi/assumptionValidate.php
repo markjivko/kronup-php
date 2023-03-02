@@ -46,7 +46,7 @@ $arg_request_assm_validate = (new \Kronup\Model\RequestAssmValidate())
     // (optional) Experiment findings
     ->setDetails('null')
     
-    // (optional) Experiment state <ul> <li><code>i</code> - Idle</li> <li><code>r</code> - Running</li> <li><code>...
+    // (optional) Experiment state:  * i - Idle  * r - Running  * d - Done
     ->setState('null');
 
 try {

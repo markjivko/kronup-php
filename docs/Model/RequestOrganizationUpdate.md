@@ -10,5 +10,5 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getOrgName()** | **string** | Organization name <br>Example: `Example, Inc.` 
+**getOrgName()** | **string** | Organization name
 

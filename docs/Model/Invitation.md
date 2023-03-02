@@ -10,17 +10,17 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Invitation ID <br>Example: `invitation-id-***` 
-**getOrgId()** | **string** | Organization ID <br>Example: `org-id-***` 
-**getUserId()** | **string** | User ID <br>Example: `user-id-***` 
-**getInviteName()** | **string** | Invitation name <br>Example: `General public` 
-**getInviteDomain()** | **string** | Invitation domain <br>Example: `example.com` 
-**getInviteOrgRole()** | **string** | Invitation user role <br>Example: `null` 
-**getInviteOrgName()** | **string** | Invitation organzation name <br>Example: `Organization, Inc.` 
-**getInviteUses()** | **int** | Number of uses <br>Example: `0` 
-**getInviteUsesMax()** | **int** | Maximum number of uses <br>Example: `0` 
-**getInviteViews()** | **int** | Number of views <br>Example: `0` 
-**getExpiresAt()** | **string** | Expires timestamp <br>Example: `2001-01-01T08:08:08.000+00:00` 
-**getCreatedAt()** | **string** | Created timestamp <br>Example: `2001-01-01T08:08:08.000+00:00` 
-**getUpdatedAt()** | **string** | Updated timestamp <br>Example: `2001-01-01T08:08:08.000+00:00` 
+**getId()** | **string** | Invitation ID
+**getOrgId()** | **string** | Organization ID
+**getUserId()** | **string** | User ID
+**getInviteName()** | **string** | Invitation name
+**getInviteDomain()** | **string** | Invitation domain
+**getInviteOrgRole()** | **string** | Invitation user role
+**getInviteOrgName()** | **string** | Invitation organzation name
+**getInviteUses()** | **int** | Number of uses
+**getInviteUsesMax()** | **int** | Maximum number of uses
+**getInviteViews()** | **int** | Number of views
+**getExpiresAt()** | **string** | Expires timestamp
+**getCreatedAt()** | **string** | Created timestamp
+**getUpdatedAt()** | **string** | Updated timestamp
 

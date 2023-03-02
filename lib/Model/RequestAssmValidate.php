@@ -129,7 +129,7 @@ class RequestAssmValidate extends AbstractModel {
     /**
      * Set state
      * 
-     * @param string|null $state Experiment state <ul> <li><code>i</code> - Idle</li> <li><code>r</code> - Running</li> <li><code>d</code> - Done</li> </ul>
+     * @param string|null $state Experiment state:  * i - Idle  * r - Running  * d - Done
      * @throws \InvalidArgumentException
      * @return $this
      */

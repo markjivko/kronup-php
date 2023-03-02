@@ -126,7 +126,7 @@ class RequestValueItemUpdate extends AbstractModel {
     /**
      * Set type
      * 
-     * @param string|null $type Value item type  <ul> <li><code>f</code> - Feature</li> <li><code>b</code> - Bug fix</li> <li><code>c</code> - Chore</li> </ul>
+     * @param string|null $type Value item type:  * f - Feature  * b - Bug fix  * c - Chore
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -146,7 +146,7 @@ class RequestValueItemUpdate extends AbstractModel {
     /**
      * Set priority
      * 
-     * @param string|null $priority Value item MoSCoW priority <ul> <li><code>m</code> - Must-have</li> <li><code>s</code> - Should-have</li> <li><code>c</code> - Could-have</li> <li><code>w</code> - Will NOT have</li> </ul>
+     * @param string|null $priority Value item MoSCoW priority:  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT have
      * @throws \InvalidArgumentException
      * @return $this
      */

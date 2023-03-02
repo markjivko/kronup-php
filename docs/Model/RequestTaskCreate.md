@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getDigest()** | **string** | Task digest <br>Example: `null` 
-**getDetails()** | **string** | Task details <br>Example: `null` 
+**getDigest()** | **string** | Task digest
+**getDetails()** | **string** | Task details
 

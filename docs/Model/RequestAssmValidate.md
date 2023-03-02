@@ -10,8 +10,8 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getConfirmed()** | **bool** | Experiment confirms assumption <br>Example: `null` 
-**getDigest()** | **string** | Experiment digest <br>Example: `null` 
-**getDetails()** | **string** | Experiment findings <br>Example: `null` 
-**getState()** | **string** | Experiment state <ul> <li><code>i</code> - Idle</li> <li><code>r</code> - Running</li> <li><code>d</code> - Done</li> </ul> <br>Example: `null` 
+**getConfirmed()** | **bool** | Experiment confirms assumption
+**getDigest()** | **string** | Experiment digest
+**getDetails()** | **string** | Experiment findings
+**getState()** | **string** | Experiment state:  * i - Idle  * r - Running  * d - Done
 

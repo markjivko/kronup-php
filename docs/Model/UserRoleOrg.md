@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getRole()** | **string** | User organization role <br>Example: `null` 
-**getOrgId()** | **string** | Organization ID <br>Example: `org-id-***` 
+**getRole()** | **string** | User organization role
+**getOrgId()** | **string** | Organization ID
 

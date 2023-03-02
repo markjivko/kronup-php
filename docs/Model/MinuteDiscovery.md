@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getIteration()** | **float** | Iteration number <br>Example: `null` 
-**getAuthorId()** | **string** | Author ID <br>Example: `user-id-***` 
-**getDetails()** | **string** | Discovery details <br>Example: `null` 
+**getIteration()** | **float** | Iteration number
+**getAuthorId()** | **string** | Author ID
+**getDetails()** | **string** | Discovery details
 

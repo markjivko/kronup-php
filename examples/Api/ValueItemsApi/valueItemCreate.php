@@ -37,10 +37,10 @@ $arg_request_value_item_create = (new \Kronup\Model\RequestValueItemCreate())
     // (optional) Value item description
     ->setDetails('Feature description')
     
-    // (optional) Value item type  <ul> <li><code>f</code> - Feature</li> <li><code>b</code> - Bug fix</li> <li><co...
+    // (optional) Value item type   * f - Feature  * b - Bug fix  * c - Chore
     ->setType('f')
     
-    // (optional) Value item MoSCoW priority <ul> <li><code>m</code> - Must-have</li> <li><code>s</code> - Should-h...
+    // (optional) Value item MoSCoW priority  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT ...
     ->setPriority('m');
 
 try {

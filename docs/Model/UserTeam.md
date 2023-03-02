@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getTeamId()** | **string** | Team ID <br>Example: `team-id-***` 
-**getChannelIds()** | **string[]** | Channels <br>Example: `null` 
+**getTeamId()** | **string** | Team ID
+**getChannelIds()** | **string[]** | Channels
 

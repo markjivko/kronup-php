@@ -10,11 +10,11 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Team ID <br>Example: `team-id-***` 
-**getOrgId()** | **string** | Organization ID <br>Example: `Organization, Inc.` 
-**getTeamName()** | **string** | Team name <br>Example: `User Experience` 
-**getTeamDesc()** | **string** | Team description <br>Example: `` 
-**getChannels()** | [**\Kronup\Model\Channel[]**](../Channel) | Channels <br>Example: `null` 
-**getCreatedAt()** | **string** | Created timestamp <br>Example: `2001-01-01T08:08:08.000+00:00` 
-**getUpdatedAt()** | **string** | Updated timestamp <br>Example: `2001-01-01T08:08:08.000+00:00` 
+**getId()** | **string** | Team ID
+**getOrgId()** | **string** | Organization ID
+**getTeamName()** | **string** | Team name
+**getTeamDesc()** | **string** | Team description
+**getChannels()** | [**\Kronup\Model\Channel[]**](../Channel) | Channels
+**getCreatedAt()** | **string** | Created timestamp
+**getUpdatedAt()** | **string** | Updated timestamp
 
