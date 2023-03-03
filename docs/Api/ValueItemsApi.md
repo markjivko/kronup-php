@@ -35,7 +35,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **valueItemAdvance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemAdvance.php){: .btn .btn-green .mt-4}
+> [php -f **valueItemAdvance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemAdvance.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -83,7 +83,7 @@ Advance a value item
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **valueItemCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemCreate.php){: .btn .btn-green .mt-4}
+> [php -f **valueItemCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -131,7 +131,7 @@ Add a value item to planning
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **valueItemDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemDelete.php){: .btn .btn-green .mt-4}
+> [php -f **valueItemDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -179,7 +179,7 @@ Delete a value item from the flow
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **valueItemList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemList.php){: .btn .btn-green .mt-4}
+> [php -f **valueItemList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -229,7 +229,7 @@ Get a list of value item models
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **valueItemRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemRead.php){: .btn .btn-green .mt-4}
+> [php -f **valueItemRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemRead.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -277,7 +277,7 @@ Retrieve value item model
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **valueItemUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **valueItemUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 

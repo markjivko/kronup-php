@@ -33,7 +33,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **userList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userList.php){: .btn .btn-green .mt-4}
+> [php -f **userList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -79,7 +79,7 @@ Get a list of user models
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **userRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userRead.php){: .btn .btn-green .mt-4}
+> [php -f **userRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userRead.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -121,7 +121,7 @@ Retrieve user model
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **userRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userRemove.php){: .btn .btn-green .mt-4}
+> [php -f **userRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userRemove.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -165,7 +165,7 @@ Remove user from Organization
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **userUpdateRole.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userUpdateRole.php){: .btn .btn-green .mt-4}
+> [php -f **userUpdateRole.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userUpdateRole.php){: .btn .btn-green .mt-4}
 
 ### Request
 

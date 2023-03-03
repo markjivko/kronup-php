@@ -34,7 +34,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **channelAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelAssign.php){: .btn .btn-green .mt-4}
+> [php -f **channelAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelAssign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -82,7 +82,7 @@ Assign a user to a channel
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **channelCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelCreate.php){: .btn .btn-green .mt-4}
+> [php -f **channelCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -128,7 +128,7 @@ Create a new channel for a team
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **channelDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelDelete.php){: .btn .btn-green .mt-4}
+> [php -f **channelDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -174,7 +174,7 @@ Delete a channel and unassign all users
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **channelUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUnassign.php){: .btn .btn-green .mt-4}
+> [php -f **channelUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUnassign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -222,7 +222,7 @@ Remove a user from a channel
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **channelUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **channelUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 

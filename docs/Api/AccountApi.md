@@ -32,7 +32,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **accountDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountDelete.php){: .btn .btn-green .mt-4}
+> [php -f **accountDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -70,7 +70,7 @@ Delete the current account. This action is reversible only if you sign back in w
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **accountRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountRead.php){: .btn .btn-green .mt-4}
+> [php -f **accountRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountRead.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -108,7 +108,7 @@ Retrieve the current account model
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **accountUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **accountUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 

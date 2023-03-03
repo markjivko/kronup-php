@@ -36,7 +36,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamAssign.php){: .btn .btn-green .mt-4}
+> [php -f **teamAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamAssign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -82,7 +82,7 @@ Assign a user to a team
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamCreate.php){: .btn .btn-green .mt-4}
+> [php -f **teamCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -126,7 +126,7 @@ Create a new team to this organization
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamDelete.php){: .btn .btn-green .mt-4}
+> [php -f **teamDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -170,7 +170,7 @@ Delete a team and unassign all users
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamList.php){: .btn .btn-green .mt-4}
+> [php -f **teamList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -212,7 +212,7 @@ Get a list of team models
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamRead.php){: .btn .btn-green .mt-4}
+> [php -f **teamRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamRead.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -256,7 +256,7 @@ Retrieve team model
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamUnassign.php){: .btn .btn-green .mt-4}
+> [php -f **teamUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamUnassign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -302,7 +302,7 @@ Remove a user from a team
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **teamUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **teamUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 

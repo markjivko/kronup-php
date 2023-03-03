@@ -32,7 +32,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **organizationCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationCreate.php){: .btn .btn-green .mt-4}
+> [php -f **organizationCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -74,7 +74,7 @@ Add an organization owned by the current user
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **organizationDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationDelete.php){: .btn .btn-green .mt-4}
+> [php -f **organizationDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -116,7 +116,7 @@ Remove organization
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **organizationUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **organizationUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 

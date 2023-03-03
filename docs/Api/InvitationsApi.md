@@ -35,7 +35,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **invitationAccept.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationAccept.php){: .btn .btn-green .mt-4}
+> [php -f **invitationAccept.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationAccept.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -77,7 +77,7 @@ Accept an invitation to join an organization
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **invitationCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationCreate.php){: .btn .btn-green .mt-4}
+> [php -f **invitationCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -121,7 +121,7 @@ Create a new invitation to this organization
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **invitationDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationDelete.php){: .btn .btn-green .mt-4}
+> [php -f **invitationDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -165,7 +165,7 @@ Delete invitation
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **invitationList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationList.php){: .btn .btn-green .mt-4}
+> [php -f **invitationList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -207,7 +207,7 @@ Get a list of invitation models
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **invitationRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationRead.php){: .btn .btn-green .mt-4}
+> [php -f **invitationRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationRead.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -249,7 +249,7 @@ Retrieve invitation model
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **invitationUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **invitationUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 

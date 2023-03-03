@@ -35,7 +35,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **assumptionCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionCreate.php){: .btn .btn-green .mt-4}
+> [php -f **assumptionCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -85,7 +85,7 @@ Add an assumption to value item
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **assumptionDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionDelete.php){: .btn .btn-green .mt-4}
+> [php -f **assumptionDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -135,7 +135,7 @@ Delete an assumption from a value item
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **assumptionList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionList.php){: .btn .btn-green .mt-4}
+> [php -f **assumptionList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -187,7 +187,7 @@ Get a list of assumption models
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **assumptionRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionRead.php){: .btn .btn-green .mt-4}
+> [php -f **assumptionRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionRead.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -237,7 +237,7 @@ Retrieve assumption model
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **assumptionUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **assumptionUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -289,7 +289,7 @@ Update assumption details
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **assumptionValidate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionValidate.php){: .btn .btn-green .mt-4}
+> [php -f **assumptionValidate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionValidate.php){: .btn .btn-green .mt-4}
 
 ### Request
 

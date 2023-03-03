@@ -34,7 +34,7 @@ Method | Description
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **taskCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskCreate.php){: .btn .btn-green .mt-4}
+> [php -f **taskCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -84,7 +84,7 @@ Add a task to value item
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **taskDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDelete.php){: .btn .btn-green .mt-4}
+> [php -f **taskDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -134,7 +134,7 @@ Delete a task from a value item
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **taskList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskList.php){: .btn .btn-green .mt-4}
+> [php -f **taskList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -186,7 +186,7 @@ Get a list of task models
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **taskRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskRead.php){: .btn .btn-green .mt-4}
+> [php -f **taskRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskRead.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -236,7 +236,7 @@ Retrieve task model
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [✨ php -f **taskUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **taskUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
