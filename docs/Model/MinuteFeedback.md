@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getIteration()** | **float** | Iteration number
+**getIteration()** | **float** | Iteration number [default to `1`]
 **getAuthorId()** | **string** | Author ID
 **getIssue()** | **string** | Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous [default to `'v'`]
 **getMessage()** | **string** | Feedback details

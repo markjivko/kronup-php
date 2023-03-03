@@ -24,13 +24,7 @@ class Minute extends AbstractModel {
     public const _D = null;
     protected static $_name = "Minute";
     protected static $_definition = [
-        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
-        "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
-        "itemId" => ["itemId", "string", null, "getItemId", "setItemId", null, ["r" => 0]], 
-        "taskId" => ["taskId", "string", null, "getTaskId", "setTaskId", null, ["r" => 0]], 
-        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
+        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]], 
         "discoveries" => ["discoveries", "\Kronup\Model\MinuteDiscovery[]", null, "getDiscoveries", "setDiscoveries", null, ["r" => 0, "c" => 1]], 
         "feedback" => ["feedback", "\Kronup\Model\MinuteFeedback[]", null, "getFeedback", "setFeedback", null, ["r" => 0, "c" => 1]]
     ];
@@ -46,126 +40,6 @@ class Minute extends AbstractModel {
         }
     }
 
-
-    /**
-     * Get id
-     *
-     * @return string|null
-     */
-    public function getId(): ?string {
-        return $this->_data["id"];
-    }
-
-    /**
-     * Set id
-     * 
-     * @param string|null $id Minute ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setId($id) {
-        return $this->_set("id", $id);
-    }
-
-    /**
-     * Get orgId
-     *
-     * @return string|null
-     */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
-    }
-
-    /**
-     * Set orgId
-     * 
-     * @param string|null $org_id Organization ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
-    }
-
-    /**
-     * Get teamId
-     *
-     * @return string|null
-     */
-    public function getTeamId(): ?string {
-        return $this->_data["teamId"];
-    }
-
-    /**
-     * Set teamId
-     * 
-     * @param string|null $team_id Team ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setTeamId($team_id) {
-        return $this->_set("teamId", $team_id);
-    }
-
-    /**
-     * Get channelId
-     *
-     * @return string|null
-     */
-    public function getChannelId(): ?string {
-        return $this->_data["channelId"];
-    }
-
-    /**
-     * Set channelId
-     * 
-     * @param string|null $channel_id Channel ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setChannelId($channel_id) {
-        return $this->_set("channelId", $channel_id);
-    }
-
-    /**
-     * Get itemId
-     *
-     * @return string|null
-     */
-    public function getItemId(): ?string {
-        return $this->_data["itemId"];
-    }
-
-    /**
-     * Set itemId
-     * 
-     * @param string|null $item_id Value Item ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setItemId($item_id) {
-        return $this->_set("itemId", $item_id);
-    }
-
-    /**
-     * Get taskId
-     *
-     * @return string|null
-     */
-    public function getTaskId(): ?string {
-        return $this->_data["taskId"];
-    }
-
-    /**
-     * Set taskId
-     * 
-     * @param string|null $task_id Task ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setTaskId($task_id) {
-        return $this->_set("taskId", $task_id);
-    }
 
     /**
      * Get iteration

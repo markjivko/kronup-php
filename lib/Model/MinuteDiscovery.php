@@ -24,7 +24,7 @@ class MinuteDiscovery extends AbstractModel {
     public const _D = null;
     protected static $_name = "Minute_Discovery";
     protected static $_definition = [
-        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
+        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
     ];

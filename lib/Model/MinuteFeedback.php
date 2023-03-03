@@ -32,7 +32,7 @@ class MinuteFeedback extends AbstractModel {
     public const ISSUE_M = 'm';
     protected static $_name = "Minute_Feedback";
     protected static $_definition = [
-        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", null, ["r" => 0]], 
+        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "issue" => ["issue", "string", null, "getIssue", "setIssue", 'v', ["r" => 0, "e" => 1]], 
         "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 1024]], 
