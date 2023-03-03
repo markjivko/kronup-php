@@ -2,7 +2,7 @@
 
 .site-title {
     font-family: "Righteous", sans-serif;
-    padding: 0;
+    padding: 0 !important;
     justify-content: center;
 }
 
@@ -13,4 +13,4 @@ $purple-300: #154a51;
 
 $link-color: #2b95a3;
 $btn-primary-color: $purple-100;
-$sidebar-color: #ebfdff;
+$sidebar-color: #ffffff;
