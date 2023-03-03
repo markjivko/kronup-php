@@ -6,6 +6,16 @@
     justify-content: center;
 }
 
+.site-title:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(/kronup-php/images/192.png);
+    background-size: 100%;
+    margin-right: 10px;
+}
+
 $purple-000: #36b8c9;
 $purple-100: #2b95a3;
 $purple-200: #206f79;
