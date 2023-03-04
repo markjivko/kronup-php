@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Minute_Feedback Model
+ * 
+ * Task feedback recorded in an iteration
  */
 class MinuteFeedback extends AbstractModel {
 

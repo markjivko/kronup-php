@@ -352,7 +352,7 @@ class ValueItem extends AbstractModel {
     /**
      * Set tasks
      * 
-     * @param \Kronup\Model\TaskCore[]|null $tasks
+     * @param \Kronup\Model\TaskCore[]|null $tasks List of Tasks without Minutes
      * @throws \InvalidArgumentException
      * @return $this
      */

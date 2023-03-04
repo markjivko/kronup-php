@@ -29,6 +29,43 @@ class TasksApi extends AbstractApi {
     const PKG = "Tasks";
 
     /**
+     * Assign to user
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value item ID
+     * @param string $task_id Task ID
+     * @param string $user_id User ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskAssign($team_id, $channel_id, $item_id, $task_id, $user_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/users/{userId}";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "userId" => $user_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * Create task
      *
      * @param string $team_id Team ID
@@ -93,6 +130,342 @@ class TasksApi extends AbstractApi {
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Create discovery
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $x_org_id Organization ID
+     * @param \Kronup\Model\RequestTaskDiscoveryCreate $request_task_discovery_create 
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskDiscoveryCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_discovery_create) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_discovery_create
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Remove discovery
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $discovery_id Discovery ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskDiscoveryRemove($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries/{discoveryId}";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "discoveryId" => $discovery_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Update discovery
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $discovery_id Discovery ID
+     * @param string $x_org_id Organization ID
+     * @param \Kronup\Model\RequestTaskDiscoveryUpdate $request_task_discovery_update 
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskDiscoveryUpdate($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id, $request_task_discovery_update) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries/{discoveryId}";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "discoveryId" => $discovery_id]), $rPath, [], $rHeaders, [], $request_task_discovery_update
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Create feedback
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $x_org_id Organization ID
+     * @param \Kronup\Model\RequestTaskFeedbackCreate $request_task_feedback_create 
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskFeedbackCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_feedback_create) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_feedback_create
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Remove feedback
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $feedback_id Feedback ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskFeedbackRemove($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Reply to feedback
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $feedback_id Feedback ID
+     * @param string $x_org_id Organization ID
+     * @param \Kronup\Model\RequestTaskFeedbackReply $request_task_feedback_reply 
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskFeedbackReply($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $request_task_feedback_reply) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}/reply";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $request_task_feedback_reply
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Update feedback
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $feedback_id Feedback ID
+     * @param string $x_org_id Organization ID
+     * @param \Kronup\Model\RequestTaskFeedbackUpdate $request_task_feedback_update 
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskFeedbackUpdate($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $request_task_feedback_update) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $request_task_feedback_update
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Add keyword
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $keyword_id Keyword ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskKeywordAdd($team_id, $channel_id, $item_id, $task_id, $keyword_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "keywordId" => $keyword_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\Task"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Remove keyword
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value Item ID
+     * @param string $task_id Task ID
+     * @param string $keyword_id Keyword ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Task
+     */
+    public function taskKeywordRemove($team_id, $channel_id, $item_id, $task_id, $keyword_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}";
+        
+        /** @var \Kronup\Model\Task $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "keywordId" => $keyword_id]), $rPath, [], $rHeaders, []
             ), 
             "\Kronup\Model\Task"
         );

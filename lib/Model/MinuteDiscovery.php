@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Minute_Discovery Model
+ * 
+ * Task discovery recorded in an iteration
  */
 class MinuteDiscovery extends AbstractModel {
 
