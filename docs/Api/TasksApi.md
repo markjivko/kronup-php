@@ -24,10 +24,10 @@ Method | Description
 [**taskCreate()**](#taskcreate) | Create task
 [**taskDelete()**](#taskdelete) | Delete task
 [**taskDiscoveryCreate()**](#taskdiscoverycreate) | Create discovery
-[**taskDiscoveryRemove()**](#taskdiscoveryremove) | Remove discovery
+[**taskDiscoveryDelete()**](#taskdiscoverydelete) | Delete discovery
 [**taskDiscoveryUpdate()**](#taskdiscoveryupdate) | Update discovery
 [**taskFeedbackCreate()**](#taskfeedbackcreate) | Create feedback
-[**taskFeedbackRemove()**](#taskfeedbackremove) | Remove feedback
+[**taskFeedbackDelete()**](#taskfeedbackdelete) | Delete feedback
 [**taskFeedbackReply()**](#taskfeedbackreply) | Reply to feedback
 [**taskFeedbackUpdate()**](#taskfeedbackupdate) | Update feedback
 [**taskKeywordAdd()**](#taskkeywordadd) | Add keyword
@@ -60,7 +60,7 @@ Method | Description
     string $task_id,
     string $user_id,
     string $x_org_id
-): \Kronup\Model\TaskCore
+): \Kronup\Model\Task
 ```
 
 ### Parameters
@@ -76,7 +76,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskCore**](../../Model/TaskCore)
+[**\Kronup\Model\Task**](../../Model/Task)
 
 ### Description
 
@@ -111,7 +111,7 @@ Assign task to user
     string $item_id,
     string $x_org_id,
     \Kronup\Model\RequestTaskCreate $request_task_create
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -126,7 +126,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -161,7 +161,7 @@ Add a task to value item
     string $item_id,
     string $task_id,
     string $x_org_id
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -176,7 +176,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -212,7 +212,7 @@ Delete a task from a value item
     string $task_id,
     string $x_org_id,
     \Kronup\Model\RequestTaskDiscoveryCreate $request_task_discovery_create
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -228,7 +228,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -241,14 +241,14 @@ Add a discovery to task
 ---
 
 
-## `taskDiscoveryRemove()`
+## `taskDiscoveryDelete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskDiscoveryRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDiscoveryRemove.php){: .btn .btn-green .mt-4}
+> [php -f **taskDiscoveryDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDiscoveryDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -257,14 +257,14 @@ Add a discovery to task
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskDiscoveryRemove(
+(new \Kronup\Sdk())->api()->tasks()->taskDiscoveryDelete(
     string $team_id,
     string $channel_id,
     string $item_id,
     string $task_id,
     string $discovery_id,
     string $x_org_id
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -280,13 +280,13 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
-> Remove discovery
+> Delete discovery
 
-Remove a task discovery
+Delete a task discovery
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -317,7 +317,7 @@ Remove a task discovery
     string $discovery_id,
     string $x_org_id,
     \Kronup\Model\RequestTaskDiscoveryUpdate $request_task_discovery_update
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -334,7 +334,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -370,7 +370,7 @@ Update a task discovery
     string $task_id,
     string $x_org_id,
     \Kronup\Model\RequestTaskFeedbackCreate $request_task_feedback_create
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -386,7 +386,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -399,14 +399,14 @@ Add a feedback to task
 ---
 
 
-## `taskFeedbackRemove()`
+## `taskFeedbackDelete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskFeedbackRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskFeedbackRemove.php){: .btn .btn-green .mt-4}
+> [php -f **taskFeedbackDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskFeedbackDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -415,14 +415,14 @@ Add a feedback to task
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskFeedbackRemove(
+(new \Kronup\Sdk())->api()->tasks()->taskFeedbackDelete(
     string $team_id,
     string $channel_id,
     string $item_id,
     string $task_id,
     string $feedback_id,
     string $x_org_id
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -438,13 +438,13 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
-> Remove feedback
+> Delete feedback
 
-Remove a task feedback
+Delete a feedback for a task
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -475,7 +475,7 @@ Remove a task feedback
     string $feedback_id,
     string $x_org_id,
     \Kronup\Model\RequestTaskFeedbackReply $request_task_feedback_reply
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -492,7 +492,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -529,7 +529,7 @@ Update a reply to a task feedback
     string $feedback_id,
     string $x_org_id,
     \Kronup\Model\RequestTaskFeedbackUpdate $request_task_feedback_update
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -546,7 +546,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -582,7 +582,7 @@ Update a task feedback
     string $task_id,
     string $keyword_id,
     string $x_org_id
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -598,7 +598,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -634,7 +634,7 @@ Add a keyword to task
     string $task_id,
     string $keyword_id,
     string $x_org_id
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -650,7 +650,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -737,7 +737,7 @@ Get a list of task models
     string $item_id,
     string $task_id,
     string $x_org_id
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -752,7 +752,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 
@@ -788,7 +788,7 @@ Retrieve task model
     string $task_id,
     string $x_org_id,
     \Kronup\Model\RequestTaskUpdate $request_task_update
-): \Kronup\Model\Task
+): \Kronup\Model\TaskExpanded
 ```
 
 ### Parameters
@@ -804,7 +804,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
 ### Description
 

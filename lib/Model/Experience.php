@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Keyword Model
+ * Experience Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,21 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Keyword Model
+ * Experience Model
  */
-class Keyword extends AbstractModel {
+class Experience extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Keyword";
+    protected static $_name = "Experience";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "keyword" => ["keyword", "string", null, "getKeyword", "setKeyword", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 0, "xl" => 256]]
+        "experience" => ["experience", "\Kronup\Model\Assessment[]", null, "getExperience", "setExperience", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * Keyword
+     * Experience
      *
      * @param mixed[] $data Model data
      */
@@ -83,42 +82,22 @@ class Keyword extends AbstractModel {
     }
 
     /**
-     * Get keyword
+     * Get experience
      *
-     * @return string|null
+     * @return \Kronup\Model\Assessment[]|null
      */
-    public function getKeyword(): ?string {
-        return $this->_data["keyword"];
+    public function getExperience(): ?array {
+        return $this->_data["experience"];
     }
 
     /**
-     * Set keyword
+     * Set experience
      * 
-     * @param string|null $keyword Keyword
+     * @param \Kronup\Model\Assessment[]|null $experience
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setKeyword($keyword) {
-        return $this->_set("keyword", $keyword);
-    }
-
-    /**
-     * Get digest
-     *
-     * @return string|null
-     */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
-    }
-
-    /**
-     * Set digest
-     * 
-     * @param string|null $digest Keyword digest
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setExperience(?array $experience) {
+        return $this->_set("experience", $experience);
     }
 }

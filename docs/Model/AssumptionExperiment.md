@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getAuthors()** | **string[]** | 
+**getAuthorIds()** | **string[]** | 
 **getConfirmed()** | **bool** | Experiment confirms assumption [default to `false`]
 **getDigest()** | **string** | Experiment findings formulated in one sentence
 **getDetails()** | **string** | Experiment details

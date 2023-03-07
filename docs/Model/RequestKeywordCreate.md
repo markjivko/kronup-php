@@ -1,17 +1,15 @@
 ---
-title: Keyword
+title: RequestKeywordCreate
 parent: Model
 layout: page
 ---
 
-# Keyword
+# RequestKeywordCreate
 
 ## Model getters
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Team ID
-**getOrgId()** | **string** | Organization ID
 **getKeyword()** | **string** | Keyword
 **getDigest()** | **string** | Keyword digest
 

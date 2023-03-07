@@ -40,7 +40,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TaskCore
+     * @return \Kronup\Model\Task
      */
     public function taskAssign($team_id, $channel_id, $item_id, $task_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -54,12 +54,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/users/{userId}";
         
-        /** @var \Kronup\Model\TaskCore $result */
+        /** @var \Kronup\Model\Task $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "userId" => $user_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\TaskCore"
+            "\Kronup\Model\Task"
         );
             
         return $result;
@@ -76,7 +76,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskCreate($team_id, $channel_id, $item_id, $x_org_id, $request_task_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -90,12 +90,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $request_task_create
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -112,7 +112,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskDelete($team_id, $channel_id, $item_id, $task_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -126,12 +126,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -149,7 +149,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskDiscoveryCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_discovery_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -163,19 +163,19 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_discovery_create
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
     }
     
     /**
-     * Remove discovery
+     * Delete discovery
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
@@ -186,9 +186,9 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
-    public function taskDiscoveryRemove($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id) {
+    public function taskDiscoveryDelete($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -200,12 +200,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries/{discoveryId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "discoveryId" => $discovery_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -224,7 +224,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskDiscoveryUpdate($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id, $request_task_discovery_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -238,12 +238,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries/{discoveryId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "discoveryId" => $discovery_id]), $rPath, [], $rHeaders, [], $request_task_discovery_update
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -261,7 +261,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskFeedbackCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_feedback_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -275,19 +275,19 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_feedback_create
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
     }
     
     /**
-     * Remove feedback
+     * Delete feedback
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
@@ -298,9 +298,9 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
-    public function taskFeedbackRemove($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id) {
+    public function taskFeedbackDelete($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -312,12 +312,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -336,7 +336,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskFeedbackReply($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $request_task_feedback_reply) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -350,12 +350,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}/reply";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $request_task_feedback_reply
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -374,7 +374,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskFeedbackUpdate($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $request_task_feedback_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -388,12 +388,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $request_task_feedback_update
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -411,7 +411,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskKeywordAdd($team_id, $channel_id, $item_id, $task_id, $keyword_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -425,12 +425,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "keywordId" => $keyword_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -448,7 +448,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskKeywordRemove($team_id, $channel_id, $item_id, $task_id, $keyword_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -462,12 +462,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "keywordId" => $keyword_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -532,7 +532,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskRead($team_id, $channel_id, $item_id, $task_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -546,12 +546,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;
@@ -569,7 +569,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskExpanded
      */
     public function taskUpdate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -583,12 +583,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_update
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskExpanded"
         );
             
         return $result;

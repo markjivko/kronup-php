@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#taskdelete
+ * @link    https://kronup.github.io/kronup-php/Api/ExperienceApi/#keywordcreate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,43 +20,39 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Team ID
-$arg_team_id = "team-id-***";
-
-// Channel ID
-$arg_channel_id = "channel-id-***";
-
-// Value item ID
-$arg_item_id = "value-item-id-***";
-
-// Task ID
-$arg_task_id = "task-id-***";
-
 // Organization ID
 $arg_x_org_id = "org-id-***";
+
+$arg_request_keyword_create = (new \Kronup\Model\RequestKeywordCreate())
+    
+    // (optional) Keyword
+    ->setKeyword('null')
+    
+    // (optional) Keyword digest
+    ->setDigest('null');
 
 try {
 
     /**
-     * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}
+     * POST /keywords
      * 
-     * @var \Kronup\Model\TaskExpanded $response
+     * @var \Kronup\Model\Keyword $response
      */
     $response = $sdk
         ->api()
-        ->tasks()
-        ->taskDelete($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_x_org_id);
+        ->experience()
+        ->keywordCreate($arg_x_org_id, $arg_request_keyword_create);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->tasks()->taskDelete(): %s\n", 
+        "API Exception when calling api()->experience()->keywordCreate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->tasks()->taskDelete(): %s\n", 
+        "Exception when calling api()->experience()->keywordCreate(): %s\n", 
         $exc->getMessage()
     );
 }

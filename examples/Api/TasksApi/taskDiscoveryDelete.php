@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#taskfeedbackremove
+ * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#taskdiscoverydelete
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -32,8 +32,8 @@ $arg_item_id = "value-item-id-***";
 // Task ID
 $arg_task_id = "task-id-***";
 
-// Feedback ID
-$arg_feedback_id = "feedback-id-***";
+// Discovery ID
+$arg_discovery_id = "discovery-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
@@ -41,25 +41,25 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}
+     * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries/{discoveryId}
      * 
-     * @var \Kronup\Model\Task $response
+     * @var \Kronup\Model\TaskExpanded $response
      */
     $response = $sdk
         ->api()
         ->tasks()
-        ->taskFeedbackRemove($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_feedback_id, $arg_x_org_id);
+        ->taskDiscoveryDelete($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_discovery_id, $arg_x_org_id);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->tasks()->taskFeedbackRemove(): %s\n", 
+        "API Exception when calling api()->tasks()->taskDiscoveryDelete(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->tasks()->taskFeedbackRemove(): %s\n", 
+        "Exception when calling api()->tasks()->taskDiscoveryDelete(): %s\n", 
         $exc->getMessage()
     );
 }

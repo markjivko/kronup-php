@@ -43,7 +43,7 @@ try {
     /**
      * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}
      * 
-     * @var \Kronup\Model\Task $response
+     * @var \Kronup\Model\TaskExpanded $response
      */
     $response = $sdk
         ->api()

@@ -11,7 +11,6 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Task ID
-**getMinute()** | [**\Kronup\Model\Minute**](../Minute) | 
 **getAssigneeId()** | **string** | Author ID
 **getDigest()** | **string** | Task title
 **getDetails()** | **string** | Task description

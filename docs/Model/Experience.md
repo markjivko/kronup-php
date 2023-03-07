@@ -1,10 +1,10 @@
 ---
-title: Keyword
+title: Experience
 parent: Model
 layout: page
 ---
 
-# Keyword
+# Experience
 
 ## Model getters
 
@@ -12,6 +12,5 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Team ID
 **getOrgId()** | **string** | Organization ID
-**getKeyword()** | **string** | Keyword
-**getDigest()** | **string** | Keyword digest
+**getExperience()** | [**\Kronup\Model\Assessment[]**](../Assessment) | 
 

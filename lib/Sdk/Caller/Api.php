@@ -49,6 +49,13 @@ class Api {
     protected $_channelsApi = null;
 
     /**
+     * Experience API
+     *
+     * @var \Kronup\Api\ExperienceApi
+     */
+    protected $_experienceApi = null;
+
+    /**
      * Invitations API
      *
      * @var \Kronup\Api\InvitationsApi
@@ -136,6 +143,19 @@ class Api {
         }
 
         return $this->_channelsApi;
+    }
+    
+    /**
+     * Experience API
+     * 
+     * @return \Kronup\Api\ExperienceApi
+     */
+    public function experience(): A\ExperienceApi {
+        if (null === $this->_experienceApi) {
+            $this->_experienceApi = new A\ExperienceApi($this->_sdk);
+        }
+
+        return $this->_experienceApi;
     }
     
     /**

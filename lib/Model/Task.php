@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * Task Model
  * 
- * Full Task model that includes Minutes
+ * Task model without Minutes
  */
 class Task extends AbstractModel {
 
@@ -31,7 +31,6 @@ class Task extends AbstractModel {
     protected static $_name = "Task";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "minute" => ["minute", "\Kronup\Model\Minute", null, "getMinute", "setMinute", null, ["r" => 0]], 
         "assigneeId" => ["assigneeId", "string", null, "getAssigneeId", "setAssigneeId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
@@ -82,26 +81,6 @@ class Task extends AbstractModel {
      */
     public function setId($id) {
         return $this->_set("id", $id);
-    }
-
-    /**
-     * Get minute
-     *
-     * @return \Kronup\Model\Minute|null
-     */
-    public function getMinute(): ?\Kronup\Model\Minute {
-        return $this->_data["minute"];
-    }
-
-    /**
-     * Set minute
-     * 
-     * @param \Kronup\Model\Minute|null $minute
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setMinute($minute) {
-        return $this->_set("minute", $minute);
     }
 
     /**
