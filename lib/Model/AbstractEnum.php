@@ -5,7 +5,7 @@
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   MIT
- * @package   Kronup
+ * @package   kronup
  * @author    Mark Jivko
  * @link      https://kronup.com/
  *
@@ -17,8 +17,6 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 abstract class AbstractEnum {
-
-
     /**
      * Current value
      */
@@ -47,15 +45,15 @@ abstract class AbstractEnum {
 
     /**
      * Set the enumerator value
-     * 
+     *
      * @param string|int $value
      * @return $this
      */
     public function set($value) {
         if (!in_array($value, static::getEnumValues())) {
-            throw new \InvalidArgumentException('Invalid value');
+            throw new \InvalidArgumentException("Invalid value");
         }
-        
+
         $this->_value = $value;
 
         return $this;

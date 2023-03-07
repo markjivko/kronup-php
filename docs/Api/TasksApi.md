@@ -60,7 +60,7 @@ Method | Description
     string $task_id,
     string $user_id,
     string $x_org_id
-): \Kronup\Model\Task
+): \Kronup\Model\TaskCore
 ```
 
 ### Parameters
@@ -76,7 +76,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Task**](../../Model/Task)
+[**\Kronup\Model\TaskCore**](../../Model/TaskCore)
 
 ### Description
 

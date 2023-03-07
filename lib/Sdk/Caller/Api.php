@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Kronup SDK Caller - API
+ * kronup sdk Caller - API
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0

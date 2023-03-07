@@ -26,7 +26,7 @@ class TasksList extends AbstractModel {
     protected static $_definition = [
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
-        "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
+        "tasks" => ["tasks", "\Kronup\Model\TaskCore[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -84,7 +84,7 @@ class TasksList extends AbstractModel {
     /**
      * Get tasks
      *
-     * @return \Kronup\Model\Task[]|null
+     * @return \Kronup\Model\TaskCore[]|null
      */
     public function getTasks(): ?array {
         return $this->_data["tasks"];
@@ -93,7 +93,7 @@ class TasksList extends AbstractModel {
     /**
      * Set tasks
      * 
-     * @param \Kronup\Model\Task[]|null $tasks
+     * @param \Kronup\Model\TaskCore[]|null $tasks
      * @throws \InvalidArgumentException
      * @return $this
      */

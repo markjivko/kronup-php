@@ -4,9 +4,9 @@
 
 Please do not open GitHub issues or pull requests - this makes the problem immediately visible to everyone, including malicious actors.
 
-Security issues in this open-source project can be safely reported to Kronup's [HelpDesk](https://discord.gg/DDsWYwqf8s).
+Security issues in this open-source project can be safely reported to kronup's help center.
 
-Kronup's security team will triage your report and respond according to its impact on Kronup users and systems.
+kronup's security team will triage your report and respond according to its impact on kronup users and systems.
 
 ## SSL is mandatory
 
@@ -21,7 +21,7 @@ If you receive an `ApiException` related to SSL, please make sure you have confi
 
 ## Keep your API keys private
 
-Never disclose your Kronup API keys and never use them in plain-text in your code.
+Never disclose your kronup API keys and never use them in plain-text in your code.
 
 :x: **BAD**
 ```php

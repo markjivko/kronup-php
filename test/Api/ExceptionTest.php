@@ -4,7 +4,7 @@
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   MIT
- * @package   Kronup
+ * @package   kronup
  * @author    Mark Jivko
  */
 
@@ -22,7 +22,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ExceptionTest extends TestCase {
     /**
-     * Kronup SDK
+     * kronup sdk
      *
      * @var \Kronup\Sdk
      */

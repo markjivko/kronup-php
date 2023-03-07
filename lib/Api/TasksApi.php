@@ -40,7 +40,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Task
+     * @return \Kronup\Model\TaskCore
      */
     public function taskAssign($team_id, $channel_id, $item_id, $task_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -54,12 +54,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/users/{userId}";
         
-        /** @var \Kronup\Model\Task $result */
+        /** @var \Kronup\Model\TaskCore $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "userId" => $user_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Task"
+            "\Kronup\Model\TaskCore"
         );
             
         return $result;

@@ -12,5 +12,5 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getPageSize()** | **int** | Page size
 **getPageNumber()** | **int** | Page number
-**getTasks()** | [**\Kronup\Model\Task[]**](../Task) | 
+**getTasks()** | [**\Kronup\Model\TaskCore[]**](../TaskCore) | 
 

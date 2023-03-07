@@ -7,7 +7,7 @@ declare(strict_types=1);
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   MIT
- * @package   Kronup
+ * @package   kronup
  * @author    Mark Jivko
  */
 namespace Kronup\Sdk\Psr7\Exception;

@@ -5,7 +5,7 @@
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   MIT
- * @package   Kronup
+ * @package   kronup
  * @author    Mark Jivko
  * @link      https://kronup.com/
  *
@@ -74,7 +74,7 @@ abstract class AbstractApi {
 
         // Set the API key
         if (strlen($this->_sdk->config()->getApiKey())) {
-            $request->setHeader("Authorization", 'Bearer ' .  $this->_sdk->config()->getApiKey());
+            $request->setHeader("Authorization", "Bearer " . $this->_sdk->config()->getApiKey());
         }
 
         // Accept gzip compression
@@ -105,12 +105,7 @@ abstract class AbstractApi {
 
         // Convert to a model
         return is_string($returnType) && strlen($returnType)
-            ? Serializer::deserialize(
-                $response->getBody(),
-                $returnType,
-                $response->getHeaders(),
-                $this->_sdk->config()
-            ) 
+            ? Serializer::deserialize($response->getBody(), $returnType, $response->getHeaders(), $this->_sdk->config())
             : $response;
     }
 }
