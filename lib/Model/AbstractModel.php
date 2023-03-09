@@ -111,7 +111,7 @@ abstract class AbstractModel implements ModelInterface, ArrayAccess, \JsonSerial
      * {@inheritdoc}
      */
     public function valid(): bool {
-        return 0 === count($this->listInvalidProperties());
+        return 0 === count($this->listInvalid());
     }
 
     /**
@@ -119,7 +119,7 @@ abstract class AbstractModel implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @param string $property (optional) Perform checks for this item only; default <b>null</b>
      */
-    public function listInvalidProperties($property = null): array {
+    public function listInvalid($property = null): array {
         // Invalid properties
         $ip = [];
 
@@ -239,7 +239,7 @@ abstract class AbstractModel implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return $this
      */
-    public function additionalPropertySet($property, $value) {
+    public function prop($property, $value) {
         if (isset(static::$_definition[$property])) {
             throw new InvalidArgumentException();
         }
@@ -252,7 +252,7 @@ abstract class AbstractModel implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * {@inheritdoc}
      */
-    public function listAdditionalProperties(): array {
+    public function listProps(): array {
         $data = $this->_data;
 
         return array_map(function ($key) use ($data) {
@@ -344,7 +344,7 @@ abstract class AbstractModel implements ModelInterface, ArrayAccess, \JsonSerial
         $this->_data[$name] = $value;
 
         // Validate
-        $issues = $this->listInvalidProperties($name);
+        $issues = $this->listInvalid($name);
 
         // Something went wrong
         if (count($issues)) {

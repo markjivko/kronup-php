@@ -25,7 +25,7 @@ try {
     /**
      * DELETE /account
      * 
-     * @var \Kronup\Model\Account $response
+     * @var bool $response
      */
     $response = $sdk
         ->api()

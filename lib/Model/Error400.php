@@ -43,7 +43,7 @@ class Error400 extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Unique lowercase string that identifies this 400 error
      *
      * @return string
      */
@@ -52,7 +52,7 @@ class Error400 extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Unique lowercase string that identifies this 400 error
      * 
      * @param string $id Unique lowercase string that identifies this 400 error
      * @throws \InvalidArgumentException
@@ -63,7 +63,7 @@ class Error400 extends AbstractModel {
     }
 
     /**
-     * Get message
+     * Get message - 400 Error message (supports i18n)
      *
      * @return string
      */
@@ -72,7 +72,7 @@ class Error400 extends AbstractModel {
     }
 
     /**
-     * Set message
+     * Set message - 400 Error message (supports i18n)
      * 
      * @param string $message 400 Error message (supports i18n)
      * @throws \InvalidArgumentException

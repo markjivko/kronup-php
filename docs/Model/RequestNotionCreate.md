@@ -1,15 +1,14 @@
 ---
-title: RequestKeywordCreate
+title: RequestNotionCreate
 parent: Model
 layout: page
 ---
 
-# RequestKeywordCreate
+# RequestNotionCreate
 
 ## Model getters
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getKeyword()** | **string** | Keyword
-**getDigest()** | **string** | Keyword digest
+**getValue()** | **string** | Notion
 

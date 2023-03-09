@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Assessment Model
+ * Experience_Evaluations Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,20 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Assessment Model
+ * Experience_Evaluations Model
  */
-class Assessment extends AbstractModel {
+class ExperienceEvaluations extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Assessment";
+    protected static $_name = "Experience_Evaluations";
     protected static $_definition = [
-        "k" => ["k", "string", null, "getK", "setK", null, ["r" => 0]], 
+        "n" => ["n", "string", null, "getN", "setN", null, ["r" => 0]], 
         "s" => ["s", "float[]", null, "getS", "setS", null, ["r" => 0, "c" => 1]], 
         "p" => ["p", "float[]", null, "getP", "setP", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * Assessment
+     * ExperienceEvaluations
      *
      * @param mixed[] $data Model data
      */
@@ -42,27 +42,27 @@ class Assessment extends AbstractModel {
 
 
     /**
-     * Get k
+     * Get n - Notion ID
      *
      * @return string|null
      */
-    public function getK(): ?string {
-        return $this->_data["k"];
+    public function getN(): ?string {
+        return $this->_data["n"];
     }
 
     /**
-     * Set k
+     * Set n - Notion ID
      * 
-     * @param string|null $k Keyword ID
+     * @param string|null $n Notion ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setK($k) {
-        return $this->_set("k", $k);
+    public function setN($n) {
+        return $this->_set("n", $n);
     }
 
     /**
-     * Get s
+     * Get s - Self-assessments
      *
      * @return float[]|null
      */
@@ -71,9 +71,9 @@ class Assessment extends AbstractModel {
     }
 
     /**
-     * Set s
+     * Set s - Self-assessments
      * 
-     * @param float[]|null $s Self-assessment
+     * @param float[]|null $s Self-assessments
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -82,7 +82,7 @@ class Assessment extends AbstractModel {
     }
 
     /**
-     * Get p
+     * Get p - Peer assessments
      *
      * @return float[]|null
      */
@@ -91,9 +91,9 @@ class Assessment extends AbstractModel {
     }
 
     /**
-     * Set p
+     * Set p - Peer assessments
      * 
-     * @param float[]|null $p Peer assessment
+     * @param float[]|null $p Peer assessments
      * @throws \InvalidArgumentException
      * @return $this
      */

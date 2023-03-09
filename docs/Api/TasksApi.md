@@ -30,9 +30,9 @@ Method | Description
 [**taskFeedbackDelete()**](#taskfeedbackdelete) | Delete feedback
 [**taskFeedbackReply()**](#taskfeedbackreply) | Reply to feedback
 [**taskFeedbackUpdate()**](#taskfeedbackupdate) | Update feedback
-[**taskKeywordAdd()**](#taskkeywordadd) | Add keyword
-[**taskKeywordRemove()**](#taskkeywordremove) | Remove keyword
 [**taskList()**](#tasklist) | List tasks
+[**taskNotionAdd()**](#tasknotionadd) | Add notion
+[**taskNotionRemove()**](#tasknotionremove) | Remove notion
 [**taskRead()**](#taskread) | Fetch task
 [**taskUpdate()**](#taskupdate) | Update task
 
@@ -161,7 +161,7 @@ Add a task to value item
     string $item_id,
     string $task_id,
     string $x_org_id
-): \Kronup\Model\TaskExpanded
+): bool
 ```
 
 ### Parameters
@@ -176,7 +176,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+**bool**
 
 ### Description
 
@@ -264,7 +264,7 @@ Add a discovery to task
     string $task_id,
     string $discovery_id,
     string $x_org_id
-): \Kronup\Model\TaskExpanded
+): bool
 ```
 
 ### Parameters
@@ -280,7 +280,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+**bool**
 
 ### Description
 
@@ -422,7 +422,7 @@ Add a feedback to task
     string $task_id,
     string $feedback_id,
     string $x_org_id
-): \Kronup\Model\TaskExpanded
+): bool
 ```
 
 ### Parameters
@@ -438,7 +438,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+**bool**
 
 ### Description
 
@@ -559,110 +559,6 @@ Update a task feedback
 ---
 
 
-## `taskKeywordAdd()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **taskKeywordAdd.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskKeywordAdd.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **PUT** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->tasks()->taskKeywordAdd(
-    string $team_id,
-    string $channel_id,
-    string $item_id,
-    string $task_id,
-    string $keyword_id,
-    string $x_org_id
-): \Kronup\Model\TaskExpanded
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | ------------- | -------------
- **$team_id** | **string**  | Team ID 
- **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
- **$task_id** | **string**  | Task ID 
- **$keyword_id** | **string**  | Keyword ID 
- **$x_org_id** | **string**  | Organization ID 
-
-### Return type
-
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
-
-### Description
-
-> Add keyword
-
-Add a keyword to task
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-## `taskKeywordRemove()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **taskKeywordRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskKeywordRemove.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->tasks()->taskKeywordRemove(
-    string $team_id,
-    string $channel_id,
-    string $item_id,
-    string $task_id,
-    string $keyword_id,
-    string $x_org_id
-): \Kronup\Model\TaskExpanded
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | ------------- | -------------
- **$team_id** | **string**  | Team ID 
- **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
- **$task_id** | **string**  | Task ID 
- **$keyword_id** | **string**  | Keyword ID 
- **$x_org_id** | **string**  | Organization ID 
-
-### Return type
-
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
-
-### Description
-
-> Remove keyword
-
-Remove a keyword from task
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
 ## `taskList()`
 
 ### Example
@@ -709,6 +605,110 @@ Name | Type | Description
 > List tasks
 
 Get a list of task models
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `taskNotionAdd()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **taskNotionAdd.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskNotionAdd.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **PUT** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->tasks()->taskNotionAdd(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $task_id,
+    string $notion_id,
+    string $x_org_id
+): \Kronup\Model\TaskExpanded
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value Item ID 
+ **$task_id** | **string**  | Task ID 
+ **$notion_id** | **string**  | Notion ID 
+ **$x_org_id** | **string**  | Organization ID 
+
+### Return type
+
+[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+
+### Description
+
+> Add notion
+
+Add a notion to task
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `taskNotionRemove()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **taskNotionRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskNotionRemove.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->tasks()->taskNotionRemove(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $task_id,
+    string $notion_id,
+    string $x_org_id
+): bool
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value Item ID 
+ **$task_id** | **string**  | Task ID 
+ **$notion_id** | **string**  | Notion ID 
+ **$x_org_id** | **string**  | Organization ID 
+
+### Return type
+
+**bool**
+
+### Description
+
+> Remove notion
+
+Remove a notion from task
 
 [Back to top](#top){: .btn .btn-purple }
 

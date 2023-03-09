@@ -41,7 +41,7 @@ class RequestTaskFeedbackUpdate extends AbstractModel {
 
 
     /**
-     * Get message
+     * Get message - Feedback details
      *
      * @return string|null
      */
@@ -50,7 +50,7 @@ class RequestTaskFeedbackUpdate extends AbstractModel {
     }
 
     /**
-     * Set message
+     * Set message - Feedback details
      * 
      * @param string|null $message Feedback details
      * @throws \InvalidArgumentException
@@ -61,7 +61,7 @@ class RequestTaskFeedbackUpdate extends AbstractModel {
     }
 
     /**
-     * Get issue
+     * Get issue - Feedback issue
      *
      * @return string|null
      */
@@ -70,7 +70,7 @@ class RequestTaskFeedbackUpdate extends AbstractModel {
     }
 
     /**
-     * Set issue
+     * Set issue - Feedback issue
      * 
      * @param string|null $issue Feedback issue
      * @throws \InvalidArgumentException

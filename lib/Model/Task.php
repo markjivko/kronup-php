@@ -35,7 +35,7 @@ class Task extends AbstractModel {
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]], 
-        "keywords" => ["keywords", "string[]", null, "getKeywords", "setKeywords", null, ["r" => 0, "c" => 1]]
+        "notions" => ["notions", "string[]", null, "getNotions", "setNotions", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -64,7 +64,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get id
+     * Get id - Task ID
      *
      * @return string|null
      */
@@ -73,7 +73,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Task ID
      * 
      * @param string|null $id Task ID
      * @throws \InvalidArgumentException
@@ -84,7 +84,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get assigneeId
+     * Get assigneeId - Author ID
      *
      * @return string|null
      */
@@ -93,7 +93,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Set assigneeId
+     * Set assigneeId - Author ID
      * 
      * @param string|null $assignee_id Author ID
      * @throws \InvalidArgumentException
@@ -104,7 +104,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get digest
+     * Get digest - Task title
      *
      * @return string|null
      */
@@ -113,7 +113,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Task title
      * 
      * @param string|null $digest Task title
      * @throws \InvalidArgumentException
@@ -124,7 +124,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Task description
      *
      * @return string|null
      */
@@ -133,7 +133,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Task description
      * 
      * @param string|null $details Task description
      * @throws \InvalidArgumentException
@@ -144,7 +144,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get state
+     * Get state - Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done
      *
      * @return string|null
      */
@@ -153,7 +153,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Set state
+     * Set state - Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done
      * 
      * @param string|null $state Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done
      * @throws \InvalidArgumentException
@@ -164,22 +164,22 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get keywords
+     * Get notions - Notions
      *
      * @return string[]|null
      */
-    public function getKeywords(): ?array {
-        return $this->_data["keywords"];
+    public function getNotions(): ?array {
+        return $this->_data["notions"];
     }
 
     /**
-     * Set keywords
+     * Set notions - Notions
      * 
-     * @param string[]|null $keywords Keywords
+     * @param string[]|null $notions Notions
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setKeywords(?array $keywords) {
-        return $this->_set("keywords", $keywords);
+    public function setNotions(?array $notions) {
+        return $this->_set("notions", $notions);
     }
 }

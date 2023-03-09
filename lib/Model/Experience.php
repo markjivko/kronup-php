@@ -26,7 +26,8 @@ class Experience extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "experience" => ["experience", "\Kronup\Model\Assessment[]", null, "getExperience", "setExperience", null, ["r" => 0, "c" => 1]]
+        "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
+        "evaluations" => ["evaluations", "\Kronup\Model\ExperienceEvaluations[]", null, "getEvaluations", "setEvaluations", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -42,7 +43,7 @@ class Experience extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Team ID
      *
      * @return string|null
      */
@@ -51,7 +52,7 @@ class Experience extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Team ID
      * 
      * @param string|null $id Team ID
      * @throws \InvalidArgumentException
@@ -62,7 +63,7 @@ class Experience extends AbstractModel {
     }
 
     /**
-     * Get orgId
+     * Get orgId - Organization ID
      *
      * @return string|null
      */
@@ -71,7 +72,7 @@ class Experience extends AbstractModel {
     }
 
     /**
-     * Set orgId
+     * Set orgId - Organization ID
      * 
      * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
@@ -82,22 +83,42 @@ class Experience extends AbstractModel {
     }
 
     /**
-     * Get experience
+     * Get userId - User ID
      *
-     * @return \Kronup\Model\Assessment[]|null
+     * @return string|null
      */
-    public function getExperience(): ?array {
-        return $this->_data["experience"];
+    public function getUserId(): ?string {
+        return $this->_data["userId"];
     }
 
     /**
-     * Set experience
+     * Set userId - User ID
      * 
-     * @param \Kronup\Model\Assessment[]|null $experience
+     * @param string|null $user_id User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setExperience(?array $experience) {
-        return $this->_set("experience", $experience);
+    public function setUserId($user_id) {
+        return $this->_set("userId", $user_id);
+    }
+
+    /**
+     * Get evaluations - 
+     *
+     * @return \Kronup\Model\ExperienceEvaluations[]|null
+     */
+    public function getEvaluations(): ?array {
+        return $this->_data["evaluations"];
+    }
+
+    /**
+     * Set evaluations - 
+     * 
+     * @param \Kronup\Model\ExperienceEvaluations[]|null $evaluations
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setEvaluations(?array $evaluations) {
+        return $this->_set("evaluations", $evaluations);
     }
 }

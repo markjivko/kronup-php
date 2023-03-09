@@ -40,7 +40,7 @@ class RequestAccountUpdate extends AbstractModel {
 
 
     /**
-     * Get userName
+     * Get userName - New user name
      *
      * @return string|null
      */
@@ -49,7 +49,7 @@ class RequestAccountUpdate extends AbstractModel {
     }
 
     /**
-     * Set userName
+     * Set userName - New user name
      * 
      * @param string|null $user_name New user name
      * @throws \InvalidArgumentException

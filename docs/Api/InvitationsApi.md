@@ -133,7 +133,7 @@ Create a new invitation to this organization
 (new \Kronup\Sdk())->api()->invitations()->invitationDelete(
     string $invite_id,
     string $x_org_id
-): \Kronup\Model\Invitation
+): bool
 ```
 
 ### Parameters
@@ -145,7 +145,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Invitation**](../../Model/Invitation)
+**bool**
 
 ### Description
 

@@ -59,7 +59,7 @@ class RequestTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Get digest
+     * Get digest - Task digest
      *
      * @return string|null
      */
@@ -68,7 +68,7 @@ class RequestTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Task digest
      * 
      * @param string|null $digest Task digest
      * @throws \InvalidArgumentException
@@ -79,7 +79,7 @@ class RequestTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Task details
      *
      * @return string|null
      */
@@ -88,7 +88,7 @@ class RequestTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Task details
      * 
      * @param string|null $details Task details
      * @throws \InvalidArgumentException
@@ -99,7 +99,7 @@ class RequestTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Get state
+     * Get state - 
      *
      * @return string|null
      */
@@ -108,7 +108,7 @@ class RequestTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Set state
+     * Set state - 
      * 
      * @param string|null $state
      * @throws \InvalidArgumentException

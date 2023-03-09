@@ -44,7 +44,7 @@ class MinuteDiscovery extends AbstractModel {
 
 
     /**
-     * Get iteration
+     * Get iteration - Iteration number
      *
      * @return float|null
      */
@@ -53,7 +53,7 @@ class MinuteDiscovery extends AbstractModel {
     }
 
     /**
-     * Set iteration
+     * Set iteration - Iteration number
      * 
      * @param float|null $iteration Iteration number
      * @throws \InvalidArgumentException
@@ -64,7 +64,7 @@ class MinuteDiscovery extends AbstractModel {
     }
 
     /**
-     * Get authorId
+     * Get authorId - Author ID
      *
      * @return string|null
      */
@@ -73,7 +73,7 @@ class MinuteDiscovery extends AbstractModel {
     }
 
     /**
-     * Set authorId
+     * Set authorId - Author ID
      * 
      * @param string|null $author_id Author ID
      * @throws \InvalidArgumentException
@@ -84,7 +84,7 @@ class MinuteDiscovery extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Discovery details
      *
      * @return string|null
      */
@@ -93,7 +93,7 @@ class MinuteDiscovery extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Discovery details
      * 
      * @param string|null $details Discovery details
      * @throws \InvalidArgumentException

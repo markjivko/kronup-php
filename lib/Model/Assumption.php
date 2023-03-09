@@ -46,7 +46,7 @@ class Assumption extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Value item ID
      *
      * @return string|null
      */
@@ -55,7 +55,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Value item ID
      * 
      * @param string|null $id Value item ID
      * @throws \InvalidArgumentException
@@ -66,7 +66,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Get authorId
+     * Get authorId - Author ID
      *
      * @return string|null
      */
@@ -75,7 +75,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Set authorId
+     * Set authorId - Author ID
      * 
      * @param string|null $author_id Author ID
      * @throws \InvalidArgumentException
@@ -86,7 +86,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Get digest
+     * Get digest - Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
      *
      * @return string|null
      */
@@ -95,7 +95,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
      * 
      * @param string|null $digest Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
      * @throws \InvalidArgumentException
@@ -106,7 +106,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Get validated
+     * Get validated - Assumption was validated by experiments
      *
      * @return bool|null
      */
@@ -115,7 +115,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Set validated
+     * Set validated - Assumption was validated by experiments
      * 
      * @param bool|null $validated Assumption was validated by experiments
      * @throws \InvalidArgumentException
@@ -126,7 +126,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Get experiment
+     * Get experiment - 
      *
      * @return \Kronup\Model\AssumptionExperiment|null
      */
@@ -135,7 +135,7 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Set experiment
+     * Set experiment - 
      * 
      * @param \Kronup\Model\AssumptionExperiment|null $experiment
      * @throws \InvalidArgumentException

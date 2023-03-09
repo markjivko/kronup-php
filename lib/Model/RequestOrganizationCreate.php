@@ -40,7 +40,7 @@ class RequestOrganizationCreate extends AbstractModel {
 
 
     /**
-     * Get orgName
+     * Get orgName - Organization name
      *
      * @return string|null
      */
@@ -49,7 +49,7 @@ class RequestOrganizationCreate extends AbstractModel {
     }
 
     /**
-     * Set orgName
+     * Set orgName - Organization name
      * 
      * @param string|null $org_name Organization name
      * @throws \InvalidArgumentException

@@ -63,7 +63,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get id
+     * Get id - User ID
      *
      * @return string|null
      */
@@ -72,7 +72,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - User ID
      * 
      * @param string|null $id User ID
      * @throws \InvalidArgumentException
@@ -83,7 +83,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get userEmail
+     * Get userEmail - User e-mail address
      *
      * @return string|null
      */
@@ -92,7 +92,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set userEmail
+     * Set userEmail - User e-mail address
      * 
      * @param string|null $user_email User e-mail address
      * @throws \InvalidArgumentException
@@ -103,7 +103,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get userName
+     * Get userName - User name
      *
      * @return string|null
      */
@@ -112,7 +112,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set userName
+     * Set userName - User name
      * 
      * @param string|null $user_name User name
      * @throws \InvalidArgumentException
@@ -123,7 +123,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get userIcon
+     * Get userIcon - User icon URL
      *
      * @return string|null
      */
@@ -132,7 +132,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set userIcon
+     * Set userIcon - User icon URL
      * 
      * @param string|null $user_icon User icon URL
      * @throws \InvalidArgumentException
@@ -143,7 +143,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get teams
+     * Get teams - 
      *
      * @return \Kronup\Model\UserTeam[]|null
      */
@@ -152,7 +152,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set teams
+     * Set teams - 
      * 
      * @param \Kronup\Model\UserTeam[]|null $teams
      * @throws \InvalidArgumentException
@@ -163,7 +163,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get roleSite
+     * Get roleSite - User site role
      *
      * @return string|null
      */
@@ -172,7 +172,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set roleSite
+     * Set roleSite - User site role
      * 
      * @param string|null $role_site User site role
      * @throws \InvalidArgumentException
@@ -183,7 +183,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get roleOrg
+     * Get roleOrg - 
      *
      * @return \Kronup\Model\UserRoleOrg[]|null
      */
@@ -192,7 +192,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set roleOrg
+     * Set roleOrg - 
      * 
      * @param \Kronup\Model\UserRoleOrg[]|null $role_org
      * @throws \InvalidArgumentException
@@ -203,7 +203,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get createdAt
+     * Get createdAt - Created timestamp
      *
      * @return string|null
      */
@@ -212,7 +212,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set createdAt
+     * Set createdAt - Created timestamp
      * 
      * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
@@ -223,7 +223,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt - Updated timestamp
      *
      * @return string|null
      */
@@ -232,7 +232,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt - Updated timestamp
      * 
      * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException

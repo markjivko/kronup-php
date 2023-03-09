@@ -42,7 +42,7 @@ class UsersList extends AbstractModel {
 
 
     /**
-     * Get pageSize
+     * Get pageSize - Page size
      *
      * @return int|null
      */
@@ -51,7 +51,7 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Set pageSize
+     * Set pageSize - Page size
      * 
      * @param int|null $page_size Page size
      * @throws \InvalidArgumentException
@@ -62,7 +62,7 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Get pageNumber
+     * Get pageNumber - Page number
      *
      * @return int|null
      */
@@ -71,7 +71,7 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Set pageNumber
+     * Set pageNumber - Page number
      * 
      * @param int|null $page_number Page number
      * @throws \InvalidArgumentException
@@ -82,7 +82,7 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Get users
+     * Get users - 
      *
      * @return \Kronup\Model\User[]|null
      */
@@ -91,7 +91,7 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Set users
+     * Set users - 
      * 
      * @param \Kronup\Model\User[]|null $users
      * @throws \InvalidArgumentException

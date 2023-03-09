@@ -12,5 +12,6 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Team ID
 **getOrgId()** | **string** | Organization ID
-**getExperience()** | [**\Kronup\Model\Assessment[]**](../Assessment) | 
+**getUserId()** | **string** | User ID
+**getEvaluations()** | [**\Kronup\Model\ExperienceEvaluations[]**](../ExperienceEvaluations) | 
 

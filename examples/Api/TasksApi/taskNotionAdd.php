@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#taskkeywordremove
+ * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#tasknotionadd
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -32,8 +32,8 @@ $arg_item_id = "value-item-id-***";
 // Task ID
 $arg_task_id = "task-id-***";
 
-// Keyword ID
-$arg_keyword_id = "keyword-id-***";
+// Notion ID
+$arg_notion_id = "notion-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
@@ -41,25 +41,25 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/keywords/{keywordId}
+     * PUT /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}
      * 
      * @var \Kronup\Model\TaskExpanded $response
      */
     $response = $sdk
         ->api()
         ->tasks()
-        ->taskKeywordRemove($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_keyword_id, $arg_x_org_id);
+        ->taskNotionAdd($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_notion_id, $arg_x_org_id);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->tasks()->taskKeywordRemove(): %s\n", 
+        "API Exception when calling api()->tasks()->taskNotionAdd(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->tasks()->taskKeywordRemove(): %s\n", 
+        "Exception when calling api()->tasks()->taskNotionAdd(): %s\n", 
         $exc->getMessage()
     );
 }

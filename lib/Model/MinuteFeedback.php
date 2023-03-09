@@ -71,7 +71,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get iteration
+     * Get iteration - Iteration number
      *
      * @return float|null
      */
@@ -80,7 +80,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set iteration
+     * Set iteration - Iteration number
      * 
      * @param float|null $iteration Iteration number
      * @throws \InvalidArgumentException
@@ -91,7 +91,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get authorId
+     * Get authorId - Author ID
      *
      * @return string|null
      */
@@ -100,7 +100,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set authorId
+     * Set authorId - Author ID
      * 
      * @param string|null $author_id Author ID
      * @throws \InvalidArgumentException
@@ -111,7 +111,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get issue
+     * Get issue - Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
      *
      * @return string|null
      */
@@ -120,7 +120,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set issue
+     * Set issue - Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
      * 
      * @param string|null $issue Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
      * @throws \InvalidArgumentException
@@ -131,7 +131,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get message
+     * Get message - Feedback details
      *
      * @return string|null
      */
@@ -140,7 +140,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set message
+     * Set message - Feedback details
      * 
      * @param string|null $message Feedback details
      * @throws \InvalidArgumentException
@@ -151,7 +151,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get reply
+     * Get reply - Reply from assignee
      *
      * @return string|null
      */
@@ -160,7 +160,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set reply
+     * Set reply - Reply from assignee
      * 
      * @param string|null $reply Reply from assignee
      * @throws \InvalidArgumentException

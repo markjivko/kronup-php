@@ -28,7 +28,7 @@ try {
     /**
      * DELETE /organizations/{orgId}
      * 
-     * @var \Kronup\Model\Organization $response
+     * @var bool $response
      */
     $response = $sdk
         ->api()

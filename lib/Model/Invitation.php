@@ -65,7 +65,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get id
+     * Get id - Invitation ID
      *
      * @return string|null
      */
@@ -74,7 +74,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Invitation ID
      * 
      * @param string|null $id Invitation ID
      * @throws \InvalidArgumentException
@@ -85,7 +85,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get orgId
+     * Get orgId - Organization ID
      *
      * @return string|null
      */
@@ -94,7 +94,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set orgId
+     * Set orgId - Organization ID
      * 
      * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
@@ -105,7 +105,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get userId
+     * Get userId - User ID
      *
      * @return string|null
      */
@@ -114,7 +114,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set userId
+     * Set userId - User ID
      * 
      * @param string|null $user_id User ID
      * @throws \InvalidArgumentException
@@ -125,7 +125,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get inviteName
+     * Get inviteName - Invitation name
      *
      * @return string|null
      */
@@ -134,7 +134,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set inviteName
+     * Set inviteName - Invitation name
      * 
      * @param string|null $invite_name Invitation name
      * @throws \InvalidArgumentException
@@ -145,7 +145,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get inviteDomain
+     * Get inviteDomain - Invitation domain
      *
      * @return string|null
      */
@@ -154,7 +154,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set inviteDomain
+     * Set inviteDomain - Invitation domain
      * 
      * @param string|null $invite_domain Invitation domain
      * @throws \InvalidArgumentException
@@ -165,7 +165,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get inviteOrgRole
+     * Get inviteOrgRole - Invitation user role
      *
      * @return string|null
      */
@@ -174,7 +174,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set inviteOrgRole
+     * Set inviteOrgRole - Invitation user role
      * 
      * @param string|null $invite_org_role Invitation user role
      * @throws \InvalidArgumentException
@@ -185,7 +185,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get inviteOrgName
+     * Get inviteOrgName - Invitation organzation name
      *
      * @return string|null
      */
@@ -194,7 +194,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set inviteOrgName
+     * Set inviteOrgName - Invitation organzation name
      * 
      * @param string|null $invite_org_name Invitation organzation name
      * @throws \InvalidArgumentException
@@ -205,7 +205,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get inviteUses
+     * Get inviteUses - Number of uses
      *
      * @return int|null
      */
@@ -214,7 +214,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set inviteUses
+     * Set inviteUses - Number of uses
      * 
      * @param int|null $invite_uses Number of uses
      * @throws \InvalidArgumentException
@@ -225,7 +225,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get inviteUsesMax
+     * Get inviteUsesMax - Maximum number of uses
      *
      * @return int|null
      */
@@ -234,7 +234,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set inviteUsesMax
+     * Set inviteUsesMax - Maximum number of uses
      * 
      * @param int|null $invite_uses_max Maximum number of uses
      * @throws \InvalidArgumentException
@@ -245,7 +245,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get inviteViews
+     * Get inviteViews - Number of views
      *
      * @return int|null
      */
@@ -254,7 +254,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set inviteViews
+     * Set inviteViews - Number of views
      * 
      * @param int|null $invite_views Number of views
      * @throws \InvalidArgumentException
@@ -265,7 +265,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get expiresAt
+     * Get expiresAt - Expires timestamp
      *
      * @return string|null
      */
@@ -274,7 +274,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set expiresAt
+     * Set expiresAt - Expires timestamp
      * 
      * @param string|null $expires_at Expires timestamp
      * @throws \InvalidArgumentException
@@ -285,7 +285,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get createdAt
+     * Get createdAt - Created timestamp
      *
      * @return string|null
      */
@@ -294,7 +294,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set createdAt
+     * Set createdAt - Created timestamp
      * 
      * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
@@ -305,7 +305,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt - Updated timestamp
      *
      * @return string|null
      */
@@ -314,7 +314,7 @@ class Invitation extends AbstractModel {
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt - Updated timestamp
      * 
      * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException

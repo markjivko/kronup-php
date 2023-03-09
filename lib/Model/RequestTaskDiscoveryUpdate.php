@@ -40,7 +40,7 @@ class RequestTaskDiscoveryUpdate extends AbstractModel {
 
 
     /**
-     * Get details
+     * Get details - Discovery details
      *
      * @return string|null
      */
@@ -49,7 +49,7 @@ class RequestTaskDiscoveryUpdate extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Discovery details
      * 
      * @param string|null $details Discovery details
      * @throws \InvalidArgumentException

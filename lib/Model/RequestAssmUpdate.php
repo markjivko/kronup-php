@@ -40,7 +40,7 @@ class RequestAssmUpdate extends AbstractModel {
 
 
     /**
-     * Get digest
+     * Get digest - Assumption digest
      *
      * @return string|null
      */
@@ -49,7 +49,7 @@ class RequestAssmUpdate extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Assumption digest
      * 
      * @param string|null $digest Assumption digest
      * @throws \InvalidArgumentException

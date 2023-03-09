@@ -108,7 +108,7 @@ class ValueItemsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ValueItem
+     * @return bool
      */
     public function valueItemDelete($team_id, $channel_id, $item_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -122,12 +122,12 @@ class ValueItemsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
         
-        /** @var \Kronup\Model\ValueItem $result */
+        /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\ValueItem"
+            "bool"
         );
             
         return $result;

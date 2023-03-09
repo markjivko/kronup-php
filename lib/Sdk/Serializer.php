@@ -85,7 +85,7 @@ class Serializer {
                 $values = [];
 
                 if ($data instanceof ModelInterface) {
-                    $values = $data->listAdditionalProperties() ?: [];
+                    $values = $data->listProps() ?: [];
                     $formats = $data::openAPIFormats();
 
                     foreach ($data::openAPITypes() as $property => $openAPIType) {
@@ -527,9 +527,9 @@ class Serializer {
                         $instance->$propertySetter(self::doDeserialize($propertyValue, $model_types));
                     }
 
-                    // Add any additional properties directly
+                    // Append any additional properties directly
                     foreach ($additional_properties as $property => $value) {
-                        $instance->additionalPropertySet($property, $value);
+                        $instance->prop($property, $value);
                     }
                 }
             } else {

@@ -75,7 +75,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Get digest
+     * Get digest - Value item digest
      *
      * @return string|null
      */
@@ -84,7 +84,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Value item digest
      * 
      * @param string|null $digest Value item digest
      * @throws \InvalidArgumentException
@@ -95,7 +95,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Value item description
      *
      * @return string|null
      */
@@ -104,7 +104,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Value item description
      * 
      * @param string|null $details Value item description
      * @throws \InvalidArgumentException
@@ -115,7 +115,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Get type
+     * Get type - Value item type   * f - Feature  * b - Bug fix  * c - Chore
      *
      * @return string|null
      */
@@ -124,7 +124,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Set type
+     * Set type - Value item type   * f - Feature  * b - Bug fix  * c - Chore
      * 
      * @param string|null $type Value item type   * f - Feature  * b - Bug fix  * c - Chore
      * @throws \InvalidArgumentException
@@ -135,7 +135,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Get priority
+     * Get priority - Value item MoSCoW priority  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT have
      *
      * @return string|null
      */
@@ -144,7 +144,7 @@ class RequestValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Set priority
+     * Set priority - Value item MoSCoW priority  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT have
      * 
      * @param string|null $priority Value item MoSCoW priority  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT have
      * @throws \InvalidArgumentException

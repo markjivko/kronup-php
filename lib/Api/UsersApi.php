@@ -107,7 +107,7 @@ class UsersApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\User
+     * @return bool
      */
     public function userRemove($user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -121,12 +121,12 @@ class UsersApi extends AbstractApi {
         // Path template
         $rPath = "/users/{userId}";
         
-        /** @var \Kronup\Model\User $result */
+        /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\User"
+            "bool"
         );
             
         return $result;

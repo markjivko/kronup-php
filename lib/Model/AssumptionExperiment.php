@@ -61,7 +61,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Get authorIds
+     * Get authorIds - 
      *
      * @return string[]|null
      */
@@ -70,7 +70,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Set authorIds
+     * Set authorIds - 
      * 
      * @param string[]|null $author_ids
      * @throws \InvalidArgumentException
@@ -81,7 +81,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Get confirmed
+     * Get confirmed - Experiment confirms assumption
      *
      * @return bool|null
      */
@@ -90,7 +90,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Set confirmed
+     * Set confirmed - Experiment confirms assumption
      * 
      * @param bool|null $confirmed Experiment confirms assumption
      * @throws \InvalidArgumentException
@@ -101,7 +101,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Get digest
+     * Get digest - Experiment findings formulated in one sentence
      *
      * @return string|null
      */
@@ -110,7 +110,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Experiment findings formulated in one sentence
      * 
      * @param string|null $digest Experiment findings formulated in one sentence
      * @throws \InvalidArgumentException
@@ -121,7 +121,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Experiment details
      *
      * @return string|null
      */
@@ -130,7 +130,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Experiment details
      * 
      * @param string|null $details Experiment details
      * @throws \InvalidArgumentException
@@ -141,7 +141,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Get state
+     * Get state - Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
      *
      * @return string|null
      */
@@ -150,7 +150,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Set state
+     * Set state - Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
      * 
      * @param string|null $state Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
      * @throws \InvalidArgumentException

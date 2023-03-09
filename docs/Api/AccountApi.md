@@ -41,7 +41,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->account()->accountDelete(): \Kronup\Model\Account
+(new \Kronup\Sdk())->api()->account()->accountDelete(): bool
 ```
 
 ### Parameters
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Kronup\Model\Account**](../../Model/Account)
+**bool**
 
 ### Description
 

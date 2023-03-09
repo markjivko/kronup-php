@@ -40,7 +40,7 @@ class RequestTaskFeedbackReply extends AbstractModel {
 
 
     /**
-     * Get reply
+     * Get reply - Feedback reply
      *
      * @return string|null
      */
@@ -49,7 +49,7 @@ class RequestTaskFeedbackReply extends AbstractModel {
     }
 
     /**
-     * Set reply
+     * Set reply - Feedback reply
      * 
      * @param string|null $reply Feedback reply
      * @throws \InvalidArgumentException

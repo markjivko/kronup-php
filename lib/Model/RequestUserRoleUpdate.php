@@ -41,7 +41,7 @@ class RequestUserRoleUpdate extends AbstractModel {
 
 
     /**
-     * Get roleSite
+     * Get roleSite - New site role
      *
      * @return string|null
      */
@@ -50,7 +50,7 @@ class RequestUserRoleUpdate extends AbstractModel {
     }
 
     /**
-     * Set roleSite
+     * Set roleSite - New site role
      * 
      * @param string|null $role_site New site role
      * @throws \InvalidArgumentException
@@ -61,7 +61,7 @@ class RequestUserRoleUpdate extends AbstractModel {
     }
 
     /**
-     * Get roleOrg
+     * Get roleOrg - New organization role
      *
      * @return string|null
      */
@@ -70,7 +70,7 @@ class RequestUserRoleUpdate extends AbstractModel {
     }
 
     /**
-     * Set roleOrg
+     * Set roleOrg - New organization role
      * 
      * @param string|null $role_org New organization role
      * @throws \InvalidArgumentException

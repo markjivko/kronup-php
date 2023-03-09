@@ -141,7 +141,7 @@ Create a new channel for a team
     string $team_id,
     string $channel_id,
     string $x_org_id
-): \Kronup\Model\Team
+): bool
 ```
 
 ### Parameters
@@ -154,7 +154,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Team**](../../Model/Team)
+**bool**
 
 ### Description
 
@@ -188,7 +188,7 @@ Delete a channel and unassign all users
     string $channel_id,
     string $user_id,
     string $x_org_id
-): \Kronup\Model\User
+): bool
 ```
 
 ### Parameters
@@ -202,7 +202,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\User**](../../Model/User)
+**bool**
 
 ### Description
 

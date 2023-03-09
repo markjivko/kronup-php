@@ -42,7 +42,7 @@ class ValueItemsList extends AbstractModel {
 
 
     /**
-     * Get pageSize
+     * Get pageSize - Page size
      *
      * @return int|null
      */
@@ -51,7 +51,7 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Set pageSize
+     * Set pageSize - Page size
      * 
      * @param int|null $page_size Page size
      * @throws \InvalidArgumentException
@@ -62,7 +62,7 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Get pageNumber
+     * Get pageNumber - Page number
      *
      * @return int|null
      */
@@ -71,7 +71,7 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Set pageNumber
+     * Set pageNumber - Page number
      * 
      * @param int|null $page_number Page number
      * @throws \InvalidArgumentException
@@ -82,7 +82,7 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Get items
+     * Get items - 
      *
      * @return \Kronup\Model\ValueItem[]|null
      */
@@ -91,7 +91,7 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Set items
+     * Set items - 
      * 
      * @param \Kronup\Model\ValueItem[]|null $items
      * @throws \InvalidArgumentException

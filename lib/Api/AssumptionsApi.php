@@ -75,7 +75,7 @@ class AssumptionsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Assumption
+     * @return bool
      */
     public function assumptionDelete($team_id, $channel_id, $item_id, $assm_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -89,12 +89,12 @@ class AssumptionsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}";
         
-        /** @var \Kronup\Model\Assumption $result */
+        /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Assumption"
+            "bool"
         );
             
         return $result;

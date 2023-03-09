@@ -37,7 +37,7 @@ try {
     /**
      * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}
      * 
-     * @var \Kronup\Model\ValueItem $response
+     * @var bool $response
      */
     $response = $sdk
         ->api()

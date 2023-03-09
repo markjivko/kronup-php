@@ -3,7 +3,7 @@
     "type": "library",
     "description": "The official SDK for kronup",
     "keywords": [
-        "sdk", "kronup", "kronup.com"
+        "sdk", "kronup", "kronup.com", "php-sdk", "building-in-public", "build-in-public", "saas", "api"
     ],
     "homepage": "https://kronup.com/",
     "license": "MIT",

@@ -58,7 +58,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Get confirmed
+     * Get confirmed - Experiment confirms assumption
      *
      * @return bool|null
      */
@@ -67,7 +67,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Set confirmed
+     * Set confirmed - Experiment confirms assumption
      * 
      * @param bool|null $confirmed Experiment confirms assumption
      * @throws \InvalidArgumentException
@@ -78,7 +78,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Get digest
+     * Get digest - Experiment digest
      *
      * @return string|null
      */
@@ -87,7 +87,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Experiment digest
      * 
      * @param string|null $digest Experiment digest
      * @throws \InvalidArgumentException
@@ -98,7 +98,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Experiment findings
      *
      * @return string|null
      */
@@ -107,7 +107,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Experiment findings
      * 
      * @param string|null $details Experiment findings
      * @throws \InvalidArgumentException
@@ -118,7 +118,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Get state
+     * Get state - Experiment state:  * i - Idle  * r - Running  * d - Done
      *
      * @return string|null
      */
@@ -127,7 +127,7 @@ class RequestAssmValidate extends AbstractModel {
     }
 
     /**
-     * Set state
+     * Set state - Experiment state:  * i - Idle  * r - Running  * d - Done
      * 
      * @param string|null $state Experiment state:  * i - Idle  * r - Running  * d - Done
      * @throws \InvalidArgumentException

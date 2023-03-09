@@ -103,7 +103,7 @@ class TeamsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Team
+     * @return bool
      */
     public function teamDelete($team_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -117,12 +117,12 @@ class TeamsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}";
         
-        /** @var \Kronup\Model\Team $result */
+        /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\Team"
+            "bool"
         );
             
         return $result;
@@ -202,7 +202,7 @@ class TeamsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\User
+     * @return bool
      */
     public function teamUnassign($team_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -216,12 +216,12 @@ class TeamsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/users/{userId}";
         
-        /** @var \Kronup\Model\User $result */
+        /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "userId" => $user_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\User"
+            "bool"
         );
             
         return $result;

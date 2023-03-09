@@ -42,7 +42,7 @@ class Minute extends AbstractModel {
 
 
     /**
-     * Get iteration
+     * Get iteration - Iteration number
      *
      * @return float|null
      */
@@ -51,7 +51,7 @@ class Minute extends AbstractModel {
     }
 
     /**
-     * Set iteration
+     * Set iteration - Iteration number
      * 
      * @param float|null $iteration Iteration number
      * @throws \InvalidArgumentException
@@ -62,7 +62,7 @@ class Minute extends AbstractModel {
     }
 
     /**
-     * Get discoveries
+     * Get discoveries - Discoveries
      *
      * @return \Kronup\Model\MinuteDiscovery[]|null
      */
@@ -71,7 +71,7 @@ class Minute extends AbstractModel {
     }
 
     /**
-     * Set discoveries
+     * Set discoveries - Discoveries
      * 
      * @param \Kronup\Model\MinuteDiscovery[]|null $discoveries Discoveries
      * @throws \InvalidArgumentException
@@ -82,7 +82,7 @@ class Minute extends AbstractModel {
     }
 
     /**
-     * Get feedback
+     * Get feedback - Feedback
      *
      * @return \Kronup\Model\MinuteFeedback[]|null
      */
@@ -91,7 +91,7 @@ class Minute extends AbstractModel {
     }
 
     /**
-     * Set feedback
+     * Set feedback - Feedback
      * 
      * @param \Kronup\Model\MinuteFeedback[]|null $feedback Feedback
      * @throws \InvalidArgumentException

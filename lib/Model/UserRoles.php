@@ -71,7 +71,7 @@ class UserRoles extends AbstractModel {
     }
 
     /**
-     * Get roleSite
+     * Get roleSite - User site role
      *
      * @return string|null
      */
@@ -80,7 +80,7 @@ class UserRoles extends AbstractModel {
     }
 
     /**
-     * Set roleSite
+     * Set roleSite - User site role
      * 
      * @param string|null $role_site User site role
      * @throws \InvalidArgumentException
@@ -91,7 +91,7 @@ class UserRoles extends AbstractModel {
     }
 
     /**
-     * Get roleOrg
+     * Get roleOrg - User organization role
      *
      * @return string|null
      */
@@ -100,7 +100,7 @@ class UserRoles extends AbstractModel {
     }
 
     /**
-     * Set roleOrg
+     * Set roleOrg - User organization role
      * 
      * @param string|null $role_org User organization role
      * @throws \InvalidArgumentException

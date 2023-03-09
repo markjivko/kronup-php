@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ExperienceApi/#keywordcreate
+ * @link    https://kronup.github.io/kronup-php/Api/NotionsApi/#notionsearch
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -23,36 +23,37 @@ $sdk->config()->setDebug(true);
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_keyword_create = (new \Kronup\Model\RequestKeywordCreate())
-    
-    // (optional) Keyword
-    ->setKeyword('null')
-    
-    // (optional) Keyword digest
-    ->setDigest('null');
+// Search term
+$arg_search_term = 'search_term_example';
+
+// Pagination: page number
+$arg_page_number = 1;
+
+// Pagination: page size
+$arg_page_size = 100;
 
 try {
 
     /**
-     * POST /keywords
+     * GET /notions
      * 
-     * @var \Kronup\Model\Keyword $response
+     * @var \Kronup\Model\NotionsList $response
      */
     $response = $sdk
         ->api()
-        ->experience()
-        ->keywordCreate($arg_x_org_id, $arg_request_keyword_create);
+        ->notions()
+        ->notionSearch($arg_x_org_id, $arg_search_term, $arg_page_number, $arg_page_size);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experience()->keywordCreate(): %s\n", 
+        "API Exception when calling api()->notions()->notionSearch(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experience()->keywordCreate(): %s\n", 
+        "Exception when calling api()->notions()->notionSearch(): %s\n", 
         $exc->getMessage()
     );
 }

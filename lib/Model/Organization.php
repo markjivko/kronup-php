@@ -45,7 +45,7 @@ class Organization extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Organization ID
      *
      * @return string|null
      */
@@ -54,7 +54,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Organization ID
      * 
      * @param string|null $id Organization ID
      * @throws \InvalidArgumentException
@@ -65,7 +65,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Get orgName
+     * Get orgName - Organization name
      *
      * @return string|null
      */
@@ -74,7 +74,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Set orgName
+     * Set orgName - Organization name
      * 
      * @param string|null $org_name Organization name
      * @throws \InvalidArgumentException
@@ -85,7 +85,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Get orgIcon
+     * Get orgIcon - Organization logo URL
      *
      * @return string|null
      */
@@ -94,7 +94,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Set orgIcon
+     * Set orgIcon - Organization logo URL
      * 
      * @param string|null $org_icon Organization logo URL
      * @throws \InvalidArgumentException
@@ -105,7 +105,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Get orgOwners
+     * Get orgOwners - Organization owners
      *
      * @return string[]|null
      */
@@ -114,7 +114,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Set orgOwners
+     * Set orgOwners - Organization owners
      * 
      * @param string[]|null $org_owners Organization owners
      * @throws \InvalidArgumentException
@@ -125,7 +125,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Get createdAt
+     * Get createdAt - Created timestamp
      *
      * @return string|null
      */
@@ -134,7 +134,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Set createdAt
+     * Set createdAt - Created timestamp
      * 
      * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
@@ -145,7 +145,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt - Updated timestamp
      *
      * @return string|null
      */
@@ -154,7 +154,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt - Updated timestamp
      * 
      * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException

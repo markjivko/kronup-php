@@ -56,7 +56,7 @@ class UserRoleOrg extends AbstractModel {
     }
 
     /**
-     * Get role
+     * Get role - User organization role
      *
      * @return string|null
      */
@@ -65,7 +65,7 @@ class UserRoleOrg extends AbstractModel {
     }
 
     /**
-     * Set role
+     * Set role - User organization role
      * 
      * @param string|null $role User organization role
      * @throws \InvalidArgumentException
@@ -76,7 +76,7 @@ class UserRoleOrg extends AbstractModel {
     }
 
     /**
-     * Get orgId
+     * Get orgId - Organization ID
      *
      * @return string|null
      */
@@ -85,7 +85,7 @@ class UserRoleOrg extends AbstractModel {
     }
 
     /**
-     * Set orgId
+     * Set orgId - Organization ID
      * 
      * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException

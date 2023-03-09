@@ -41,7 +41,7 @@ class RequestTeamCreate extends AbstractModel {
 
 
     /**
-     * Get teamName
+     * Get teamName - Team name
      *
      * @return string
      */
@@ -50,7 +50,7 @@ class RequestTeamCreate extends AbstractModel {
     }
 
     /**
-     * Set teamName
+     * Set teamName - Team name
      * 
      * @param string $team_name Team name
      * @throws \InvalidArgumentException
@@ -61,7 +61,7 @@ class RequestTeamCreate extends AbstractModel {
     }
 
     /**
-     * Get teamDesc
+     * Get teamDesc - Team description
      *
      * @return string|null
      */
@@ -70,7 +70,7 @@ class RequestTeamCreate extends AbstractModel {
     }
 
     /**
-     * Set teamDesc
+     * Set teamDesc - Team description
      * 
      * @param string|null $team_desc Team description
      * @throws \InvalidArgumentException

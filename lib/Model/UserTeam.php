@@ -41,7 +41,7 @@ class UserTeam extends AbstractModel {
 
 
     /**
-     * Get teamId
+     * Get teamId - Team ID
      *
      * @return string|null
      */
@@ -50,7 +50,7 @@ class UserTeam extends AbstractModel {
     }
 
     /**
-     * Set teamId
+     * Set teamId - Team ID
      * 
      * @param string|null $team_id Team ID
      * @throws \InvalidArgumentException
@@ -61,7 +61,7 @@ class UserTeam extends AbstractModel {
     }
 
     /**
-     * Get channelIds
+     * Get channelIds - Channels
      *
      * @return string[]|null
      */
@@ -70,7 +70,7 @@ class UserTeam extends AbstractModel {
     }
 
     /**
-     * Set channelIds
+     * Set channelIds - Channels
      * 
      * @param string[]|null $channel_ids Channels
      * @throws \InvalidArgumentException

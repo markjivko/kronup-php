@@ -101,7 +101,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get id
+     * Get id - Value item ID
      *
      * @return string|null
      */
@@ -110,7 +110,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Value item ID
      * 
      * @param string|null $id Value item ID
      * @throws \InvalidArgumentException
@@ -121,7 +121,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get orgId
+     * Get orgId - Organization ID
      *
      * @return string|null
      */
@@ -130,7 +130,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set orgId
+     * Set orgId - Organization ID
      * 
      * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
@@ -141,7 +141,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get teamId
+     * Get teamId - Team ID
      *
      * @return string|null
      */
@@ -150,7 +150,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set teamId
+     * Set teamId - Team ID
      * 
      * @param string|null $team_id Team ID
      * @throws \InvalidArgumentException
@@ -161,7 +161,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get channelId
+     * Get channelId - Channel ID
      *
      * @return string|null
      */
@@ -170,7 +170,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set channelId
+     * Set channelId - Channel ID
      * 
      * @param string|null $channel_id Channel ID
      * @throws \InvalidArgumentException
@@ -181,7 +181,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get digest
+     * Get digest - Value item digest
      *
      * @return string|null
      */
@@ -190,7 +190,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Value item digest
      * 
      * @param string|null $digest Value item digest
      * @throws \InvalidArgumentException
@@ -201,7 +201,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Value item description
      *
      * @return string|null
      */
@@ -210,7 +210,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Value item description
      * 
      * @param string|null $details Value item description
      * @throws \InvalidArgumentException
@@ -221,7 +221,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get authorId
+     * Get authorId - Author ID
      *
      * @return string|null
      */
@@ -230,7 +230,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set authorId
+     * Set authorId - Author ID
      * 
      * @param string|null $author_id Author ID
      * @throws \InvalidArgumentException
@@ -241,7 +241,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get stage
+     * Get stage - Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
      *
      * @return string|null
      */
@@ -250,7 +250,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set stage
+     * Set stage - Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
      * 
      * @param string|null $stage Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
      * @throws \InvalidArgumentException
@@ -261,7 +261,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get canAdvance
+     * Get canAdvance - Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed
      *
      * @return bool|null
      */
@@ -270,7 +270,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set canAdvance
+     * Set canAdvance - Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed
      * 
      * @param bool|null $can_advance Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed
      * @throws \InvalidArgumentException
@@ -281,7 +281,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get type
+     * Get type - Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
      *
      * @return string|null
      */
@@ -290,7 +290,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set type
+     * Set type - Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
      * 
      * @param string|null $type Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
      * @throws \InvalidArgumentException
@@ -301,7 +301,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get priority
+     * Get priority - Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
      *
      * @return string|null
      */
@@ -310,7 +310,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set priority
+     * Set priority - Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
      * 
      * @param string|null $priority Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
      * @throws \InvalidArgumentException
@@ -321,7 +321,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get assumptions
+     * Get assumptions - Assumptions
      *
      * @return \Kronup\Model\Assumption[]|null
      */
@@ -330,7 +330,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set assumptions
+     * Set assumptions - Assumptions
      * 
      * @param \Kronup\Model\Assumption[]|null $assumptions Assumptions
      * @throws \InvalidArgumentException
@@ -341,7 +341,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get tasks
+     * Get tasks - List of Tasks without Minutes
      *
      * @return \Kronup\Model\Task[]|null
      */
@@ -350,7 +350,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set tasks
+     * Set tasks - List of Tasks without Minutes
      * 
      * @param \Kronup\Model\Task[]|null $tasks List of Tasks without Minutes
      * @throws \InvalidArgumentException

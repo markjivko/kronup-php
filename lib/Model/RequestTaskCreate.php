@@ -41,7 +41,7 @@ class RequestTaskCreate extends AbstractModel {
 
 
     /**
-     * Get digest
+     * Get digest - Task digest
      *
      * @return string|null
      */
@@ -50,7 +50,7 @@ class RequestTaskCreate extends AbstractModel {
     }
 
     /**
-     * Set digest
+     * Set digest - Task digest
      * 
      * @param string|null $digest Task digest
      * @throws \InvalidArgumentException
@@ -61,7 +61,7 @@ class RequestTaskCreate extends AbstractModel {
     }
 
     /**
-     * Get details
+     * Get details - Task details
      *
      * @return string|null
      */
@@ -70,7 +70,7 @@ class RequestTaskCreate extends AbstractModel {
     }
 
     /**
-     * Set details
+     * Set details - Task details
      * 
      * @param string|null $details Task details
      * @throws \InvalidArgumentException

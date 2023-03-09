@@ -57,7 +57,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Get inviteName
+     * Get inviteName - Invitation name
      *
      * @return string
      */
@@ -66,7 +66,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Set inviteName
+     * Set inviteName - Invitation name
      * 
      * @param string $invite_name Invitation name
      * @throws \InvalidArgumentException
@@ -77,7 +77,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Get inviteDomain
+     * Get inviteDomain - User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
      *
      * @return string|null
      */
@@ -86,7 +86,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Set inviteDomain
+     * Set inviteDomain - User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
      * 
      * @param string|null $invite_domain User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
      * @throws \InvalidArgumentException
@@ -97,7 +97,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Get inviteOrgRole
+     * Get inviteOrgRole - User role
      *
      * @return string|null
      */
@@ -106,7 +106,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Set inviteOrgRole
+     * Set inviteOrgRole - User role
      * 
      * @param string|null $invite_org_role User role
      * @throws \InvalidArgumentException
@@ -117,7 +117,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Get inviteExpireDays
+     * Get inviteExpireDays - The invitation expires after this many days. 0 = no expiration
      *
      * @return int|null
      */
@@ -126,7 +126,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Set inviteExpireDays
+     * Set inviteExpireDays - The invitation expires after this many days. 0 = no expiration
      * 
      * @param int|null $invite_expire_days The invitation expires after this many days. 0 = no expiration
      * @throws \InvalidArgumentException
@@ -137,7 +137,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Get inviteUsesMax
+     * Get inviteUsesMax - The invitation expires after being used this many times. 0 = no expiration
      *
      * @return int|null
      */
@@ -146,7 +146,7 @@ class RequestInvitationCreate extends AbstractModel {
     }
 
     /**
-     * Set inviteUsesMax
+     * Set inviteUsesMax - The invitation expires after being used this many times. 0 = no expiration
      * 
      * @param int|null $invite_uses_max The invitation expires after being used this many times. 0 = no expiration
      * @throws \InvalidArgumentException

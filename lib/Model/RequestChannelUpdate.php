@@ -41,7 +41,7 @@ class RequestChannelUpdate extends AbstractModel {
 
 
     /**
-     * Get channelName
+     * Get channelName - Channel name
      *
      * @return string|null
      */
@@ -50,7 +50,7 @@ class RequestChannelUpdate extends AbstractModel {
     }
 
     /**
-     * Set channelName
+     * Set channelName - Channel name
      * 
      * @param string|null $channel_name Channel name
      * @throws \InvalidArgumentException
@@ -61,7 +61,7 @@ class RequestChannelUpdate extends AbstractModel {
     }
 
     /**
-     * Get channelDesc
+     * Get channelDesc - Channel description
      *
      * @return string|null
      */
@@ -70,7 +70,7 @@ class RequestChannelUpdate extends AbstractModel {
     }
 
     /**
-     * Set channelDesc
+     * Set channelDesc - Channel description
      * 
      * @param string|null $channel_desc Channel description
      * @throws \InvalidArgumentException

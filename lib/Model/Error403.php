@@ -43,7 +43,7 @@ class Error403 extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Unique lowercase string that identifies this 403 error
      *
      * @return string
      */
@@ -52,7 +52,7 @@ class Error403 extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Unique lowercase string that identifies this 403 error
      * 
      * @param string $id Unique lowercase string that identifies this 403 error
      * @throws \InvalidArgumentException
@@ -63,7 +63,7 @@ class Error403 extends AbstractModel {
     }
 
     /**
-     * Get message
+     * Get message - 403 Error message (supports i18n)
      *
      * @return string
      */
@@ -72,7 +72,7 @@ class Error403 extends AbstractModel {
     }
 
     /**
-     * Set message
+     * Set message - 403 Error message (supports i18n)
      * 
      * @param string $message 403 Error message (supports i18n)
      * @throws \InvalidArgumentException

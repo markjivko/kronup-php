@@ -31,7 +31,7 @@ try {
     /**
      * DELETE /invitations/{inviteId}
      * 
-     * @var \Kronup\Model\Invitation $response
+     * @var bool $response
      */
     $response = $sdk
         ->api()

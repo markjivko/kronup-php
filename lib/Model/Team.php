@@ -46,7 +46,7 @@ class Team extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Team ID
      *
      * @return string|null
      */
@@ -55,7 +55,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Team ID
      * 
      * @param string|null $id Team ID
      * @throws \InvalidArgumentException
@@ -66,7 +66,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Get orgId
+     * Get orgId - Organization ID
      *
      * @return string|null
      */
@@ -75,7 +75,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Set orgId
+     * Set orgId - Organization ID
      * 
      * @param string|null $org_id Organization ID
      * @throws \InvalidArgumentException
@@ -86,7 +86,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Get teamName
+     * Get teamName - Team name
      *
      * @return string|null
      */
@@ -95,7 +95,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Set teamName
+     * Set teamName - Team name
      * 
      * @param string|null $team_name Team name
      * @throws \InvalidArgumentException
@@ -106,7 +106,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Get teamDesc
+     * Get teamDesc - Team description
      *
      * @return string|null
      */
@@ -115,7 +115,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Set teamDesc
+     * Set teamDesc - Team description
      * 
      * @param string|null $team_desc Team description
      * @throws \InvalidArgumentException
@@ -126,7 +126,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Get channels
+     * Get channels - Channels
      *
      * @return \Kronup\Model\Channel[]|null
      */
@@ -135,7 +135,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Set channels
+     * Set channels - Channels
      * 
      * @param \Kronup\Model\Channel[]|null $channels Channels
      * @throws \InvalidArgumentException
@@ -146,7 +146,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Get createdAt
+     * Get createdAt - Created timestamp
      *
      * @return string|null
      */
@@ -155,7 +155,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Set createdAt
+     * Set createdAt - Created timestamp
      * 
      * @param string|null $created_at Created timestamp
      * @throws \InvalidArgumentException
@@ -166,7 +166,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Get updatedAt
+     * Get updatedAt - Updated timestamp
      *
      * @return string|null
      */
@@ -175,7 +175,7 @@ class Team extends AbstractModel {
     }
 
     /**
-     * Set updatedAt
+     * Set updatedAt - Updated timestamp
      * 
      * @param string|null $updated_at Updated timestamp
      * @throws \InvalidArgumentException

@@ -138,7 +138,7 @@ Create a new team to this organization
 (new \Kronup\Sdk())->api()->teams()->teamDelete(
     string $team_id,
     string $x_org_id
-): \Kronup\Model\Team
+): bool
 ```
 
 ### Parameters
@@ -150,7 +150,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Team**](../../Model/Team)
+**bool**
 
 ### Description
 
@@ -269,7 +269,7 @@ Retrieve team model
     string $team_id,
     string $user_id,
     string $x_org_id
-): \Kronup\Model\User
+): bool
 ```
 
 ### Parameters
@@ -282,7 +282,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\User**](../../Model/User)
+**bool**
 
 ### Description
 

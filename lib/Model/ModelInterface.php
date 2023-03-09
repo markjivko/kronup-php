@@ -76,14 +76,14 @@ interface ModelInterface {
      *
      * @return string[]
      */
-    public function listInvalidProperties(): array;
+    public function listInvalid(): array;
 
     /**
      * Get list of additional properties for the model
      *
      * @return mixed[] List of additional properties
      */
-    public function listAdditionalProperties(): array;
+    public function listProps(): array;
 
     /**
      * Set an additional property for the model
@@ -91,5 +91,5 @@ interface ModelInterface {
      * @param string $property Property name
      * @param mixed  $value    Value of the property
      */
-    public function additionalPropertySet(string $property, $value);
+    public function prop(string $property, $value);
 }

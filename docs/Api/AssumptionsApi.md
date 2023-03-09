@@ -100,7 +100,7 @@ Add an assumption to value item
     string $item_id,
     string $assm_id,
     string $x_org_id
-): \Kronup\Model\Assumption
+): bool
 ```
 
 ### Parameters
@@ -115,7 +115,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Assumption**](../../Model/Assumption)
+**bool**
 
 ### Description
 

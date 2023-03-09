@@ -45,7 +45,7 @@ class Channel extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Channel ID
      *
      * @return string|null
      */
@@ -54,7 +54,7 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Channel ID
      * 
      * @param string|null $id Channel ID
      * @throws \InvalidArgumentException
@@ -65,7 +65,7 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Get isDefault
+     * Get isDefault - 
      *
      * @return bool|null
      */
@@ -74,7 +74,7 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Set isDefault
+     * Set isDefault - 
      * 
      * @param bool|null $is_default
      * @throws \InvalidArgumentException
@@ -85,7 +85,7 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Get channelName
+     * Get channelName - Channel name
      *
      * @return string|null
      */
@@ -94,7 +94,7 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Set channelName
+     * Set channelName - Channel name
      * 
      * @param string|null $channel_name Channel name
      * @throws \InvalidArgumentException
@@ -105,7 +105,7 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Get channelDesc
+     * Get channelDesc - Channel description
      *
      * @return string|null
      */
@@ -114,7 +114,7 @@ class Channel extends AbstractModel {
     }
 
     /**
-     * Set channelDesc
+     * Set channelDesc - Channel description
      * 
      * @param string|null $channel_desc Channel description
      * @throws \InvalidArgumentException

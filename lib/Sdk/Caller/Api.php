@@ -49,18 +49,18 @@ class Api {
     protected $_channelsApi = null;
 
     /**
-     * Experience API
-     *
-     * @var \Kronup\Api\ExperienceApi
-     */
-    protected $_experienceApi = null;
-
-    /**
      * Invitations API
      *
      * @var \Kronup\Api\InvitationsApi
      */
     protected $_invitationsApi = null;
+
+    /**
+     * Notions API
+     *
+     * @var \Kronup\Api\NotionsApi
+     */
+    protected $_notionsApi = null;
 
     /**
      * Organizations API
@@ -146,19 +146,6 @@ class Api {
     }
     
     /**
-     * Experience API
-     * 
-     * @return \Kronup\Api\ExperienceApi
-     */
-    public function experience(): A\ExperienceApi {
-        if (null === $this->_experienceApi) {
-            $this->_experienceApi = new A\ExperienceApi($this->_sdk);
-        }
-
-        return $this->_experienceApi;
-    }
-    
-    /**
      * Invitations API
      * 
      * @return \Kronup\Api\InvitationsApi
@@ -169,6 +156,19 @@ class Api {
         }
 
         return $this->_invitationsApi;
+    }
+    
+    /**
+     * Notions API
+     * 
+     * @return \Kronup\Api\NotionsApi
+     */
+    public function notions(): A\NotionsApi {
+        if (null === $this->_notionsApi) {
+            $this->_notionsApi = new A\NotionsApi($this->_sdk);
+        }
+
+        return $this->_notionsApi;
     }
     
     /**

@@ -85,7 +85,7 @@ Add an organization owned by the current user
 ```php
 (new \Kronup\Sdk())->api()->organizations()->organizationDelete(
     string $org_id
-): \Kronup\Model\Organization
+): bool
 ```
 
 ### Parameters
@@ -96,7 +96,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Organization**](../../Model/Organization)
+**bool**
 
 ### Description
 

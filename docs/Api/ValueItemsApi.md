@@ -145,7 +145,7 @@ Add a value item to planning
     string $channel_id,
     string $item_id,
     string $x_org_id
-): \Kronup\Model\ValueItem
+): bool
 ```
 
 ### Parameters
@@ -159,7 +159,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\ValueItem**](../../Model/ValueItem)
+**bool**
 
 ### Description
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Keyword Model
+ * Notion Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,21 +17,20 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Keyword Model
+ * Notion Model
  */
-class Keyword extends AbstractModel {
+class Notion extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Keyword";
+    protected static $_name = "Notion";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "keyword" => ["keyword", "string", null, "getKeyword", "setKeyword", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 0, "xl" => 256]]
+        "value" => ["value", "string", null, "getValue", "setValue", null, ["r" => 0, "nl" => 1, "xl" => 64]]
     ];
 
     /**
-     * Keyword
+     * Notion
      *
      * @param mixed[] $data Model data
      */
@@ -43,7 +42,7 @@ class Keyword extends AbstractModel {
 
 
     /**
-     * Get id
+     * Get id - Notion ID
      *
      * @return string|null
      */
@@ -52,9 +51,9 @@ class Keyword extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set id - Notion ID
      * 
-     * @param string|null $id Team ID
+     * @param string|null $id Notion ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -63,7 +62,7 @@ class Keyword extends AbstractModel {
     }
 
     /**
-     * Get orgId
+     * Get orgId - Organization Id
      *
      * @return string|null
      */
@@ -72,9 +71,9 @@ class Keyword extends AbstractModel {
     }
 
     /**
-     * Set orgId
+     * Set orgId - Organization Id
      * 
-     * @param string|null $org_id Organization ID
+     * @param string|null $org_id Organization Id
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -83,42 +82,22 @@ class Keyword extends AbstractModel {
     }
 
     /**
-     * Get keyword
+     * Get value - 
      *
      * @return string|null
      */
-    public function getKeyword(): ?string {
-        return $this->_data["keyword"];
+    public function getValue(): ?string {
+        return $this->_data["value"];
     }
 
     /**
-     * Set keyword
+     * Set value - 
      * 
-     * @param string|null $keyword Keyword
+     * @param string|null $value
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setKeyword($keyword) {
-        return $this->_set("keyword", $keyword);
-    }
-
-    /**
-     * Get digest
-     *
-     * @return string|null
-     */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
-    }
-
-    /**
-     * Set digest
-     * 
-     * @param string|null $digest Keyword digest
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setValue($value) {
+        return $this->_set("value", $value);
     }
 }
