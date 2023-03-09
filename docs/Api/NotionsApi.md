@@ -64,7 +64,7 @@ Name | Type | Description
 
 > Create notion
 
-Define a notion - a skill, technology or approach required to execute a task
+Define a notion
 
 [Back to top](#top){: .btn .btn-purple }
 

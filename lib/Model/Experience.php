@@ -27,7 +27,9 @@ class Experience extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
-        "evaluations" => ["evaluations", "\Kronup\Model\ExperienceEvaluations[]", null, "getEvaluations", "setEvaluations", null, ["r" => 0, "c" => 1]]
+        "notionId" => ["notionId", "string", null, "getNotionId", "setNotionId", null, ["r" => 0]], 
+        "selfEval" => ["selfEval", "\Kronup\Model\EvaluationsSelf", null, "getSelfEval", "setSelfEval", null, ["r" => 0]], 
+        "peerEval" => ["peerEval", "\Kronup\Model\EvaluationsPeers", null, "getPeerEval", "setPeerEval", null, ["r" => 0]]
     ];
 
     /**
@@ -103,22 +105,62 @@ class Experience extends AbstractModel {
     }
 
     /**
-     * Get evaluations - 
+     * Get notionId - Notion ID
      *
-     * @return \Kronup\Model\ExperienceEvaluations[]|null
+     * @return string|null
      */
-    public function getEvaluations(): ?array {
-        return $this->_data["evaluations"];
+    public function getNotionId(): ?string {
+        return $this->_data["notionId"];
     }
 
     /**
-     * Set evaluations - 
+     * Set notionId - Notion ID
      * 
-     * @param \Kronup\Model\ExperienceEvaluations[]|null $evaluations
+     * @param string|null $notion_id Notion ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setEvaluations(?array $evaluations) {
-        return $this->_set("evaluations", $evaluations);
+    public function setNotionId($notion_id) {
+        return $this->_set("notionId", $notion_id);
+    }
+
+    /**
+     * Get selfEval - 
+     *
+     * @return \Kronup\Model\EvaluationsSelf|null
+     */
+    public function getSelfEval(): ?\Kronup\Model\EvaluationsSelf {
+        return $this->_data["selfEval"];
+    }
+
+    /**
+     * Set selfEval - 
+     * 
+     * @param \Kronup\Model\EvaluationsSelf|null $self_eval
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setSelfEval($self_eval) {
+        return $this->_set("selfEval", $self_eval);
+    }
+
+    /**
+     * Get peerEval - 
+     *
+     * @return \Kronup\Model\EvaluationsPeers|null
+     */
+    public function getPeerEval(): ?\Kronup\Model\EvaluationsPeers {
+        return $this->_data["peerEval"];
+    }
+
+    /**
+     * Set peerEval - 
+     * 
+     * @param \Kronup\Model\EvaluationsPeers|null $peer_eval
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setPeerEval($peer_eval) {
+        return $this->_set("peerEval", $peer_eval);
     }
 }

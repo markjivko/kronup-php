@@ -39,10 +39,14 @@ class ExceptionTest extends TestCase {
      * Unauthorized
      */
     public function testUnauthorized(): void {
-        $this->expectExceptionObject(new ApiException("Unauthorized", 401));
+        $this->expectExceptionObject(
+            new \InvalidArgumentException(
+                'Invalid value for "$page_number" when calling UsersApi.userList, must be bigger than or equal to 1.'
+            )
+        );
         $this->sdk
             ->api()
             ->users()
-            ->userList("org-id");
+            ->userList("org-id", 0);
     }
 }
