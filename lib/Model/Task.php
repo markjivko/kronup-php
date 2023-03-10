@@ -35,7 +35,7 @@ class Task extends AbstractModel {
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]], 
-        "notions" => ["notions", "string[]", null, "getNotions", "setNotions", null, ["r" => 0, "c" => 1]]
+        "notionIds" => ["notionIds", "string[]", null, "getNotionIds", "setNotionIds", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -164,22 +164,22 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get notions - Notions
+     * Get notionIds - Notions
      *
      * @return string[]|null
      */
-    public function getNotions(): ?array {
-        return $this->_data["notions"];
+    public function getNotionIds(): ?array {
+        return $this->_data["notionIds"];
     }
 
     /**
-     * Set notions - Notions
+     * Set notionIds - Notions
      * 
-     * @param string[]|null $notions Notions
+     * @param string[]|null $notion_ids Notions
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setNotions(?array $notions) {
-        return $this->_set("notions", $notions);
+    public function setNotionIds(?array $notion_ids) {
+        return $this->_set("notionIds", $notion_ids);
     }
 }

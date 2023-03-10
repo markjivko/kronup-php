@@ -36,7 +36,7 @@ class TaskExpanded extends AbstractModel {
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]], 
-        "notions" => ["notions", "string[]", null, "getNotions", "setNotions", null, ["r" => 0, "c" => 1]]
+        "notions" => ["notions", "\Kronup\Model\Notion[]", null, "getNotions", "setNotions", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -187,7 +187,7 @@ class TaskExpanded extends AbstractModel {
     /**
      * Get notions - Notions
      *
-     * @return string[]|null
+     * @return \Kronup\Model\Notion[]|null
      */
     public function getNotions(): ?array {
         return $this->_data["notions"];
@@ -196,7 +196,7 @@ class TaskExpanded extends AbstractModel {
     /**
      * Set notions - Notions
      * 
-     * @param string[]|null $notions Notions
+     * @param \Kronup\Model\Notion[]|null $notions Notions
      * @throws \InvalidArgumentException
      * @return $this
      */

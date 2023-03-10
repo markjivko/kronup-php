@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ExperienceApi/#evaluateself
+ * @link    https://kronup.github.io/kronup-php/Api/ExperiencesApi/#experienceevaluatepeer
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -23,6 +23,9 @@ $sdk->config()->setDebug(true);
 // Notion ID
 $arg_notion_id = "notion-id-***";
 
+// User ID
+$arg_user_id = "user-id-***";
+
 // Grade between 1 and 10
 $arg_grade = "10";
 
@@ -32,25 +35,25 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * PUT /xp/notions/{notionId}/grade/{grade}
+     * PUT /xp/notions/{notionId}/users/{userId}/grade/{grade}
      * 
      * @var \Kronup\Model\Experience $response
      */
     $response = $sdk
         ->api()
-        ->experience()
-        ->evaluateSelf($arg_notion_id, $arg_grade, $arg_x_org_id);
+        ->experiences()
+        ->experienceEvaluatePeer($arg_notion_id, $arg_user_id, $arg_grade, $arg_x_org_id);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experience()->evaluateSelf(): %s\n", 
+        "API Exception when calling api()->experiences()->experienceEvaluatePeer(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experience()->evaluateSelf(): %s\n", 
+        "Exception when calling api()->experiences()->experienceEvaluatePeer(): %s\n", 
         $exc->getMessage()
     );
 }

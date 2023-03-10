@@ -15,5 +15,5 @@ Method name | Return type | Description
 **getDigest()** | **string** | Task title
 **getDetails()** | **string** | Task description
 **getState()** | **string** | Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done [default to `'i'`]
-**getNotions()** | **string[]** | Notions
+**getNotionIds()** | **string[]** | Notions
 

@@ -27,7 +27,7 @@ class Experience extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
-        "notionId" => ["notionId", "string", null, "getNotionId", "setNotionId", null, ["r" => 0]], 
+        "notion" => ["notion", "\Kronup\Model\Notion", null, "getNotion", "setNotion", null, ["r" => 0]], 
         "selfEval" => ["selfEval", "\Kronup\Model\EvaluationsSelf", null, "getSelfEval", "setSelfEval", null, ["r" => 0]], 
         "peerEval" => ["peerEval", "\Kronup\Model\EvaluationsPeers", null, "getPeerEval", "setPeerEval", null, ["r" => 0]]
     ];
@@ -105,23 +105,23 @@ class Experience extends AbstractModel {
     }
 
     /**
-     * Get notionId - Notion ID
+     * Get notion - 
      *
-     * @return string|null
+     * @return \Kronup\Model\Notion|null
      */
-    public function getNotionId(): ?string {
-        return $this->_data["notionId"];
+    public function getNotion(): ?\Kronup\Model\Notion {
+        return $this->_data["notion"];
     }
 
     /**
-     * Set notionId - Notion ID
+     * Set notion - 
      * 
-     * @param string|null $notion_id Notion ID
+     * @param \Kronup\Model\Notion|null $notion
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setNotionId($notion_id) {
-        return $this->_set("notionId", $notion_id);
+    public function setNotion($notion) {
+        return $this->_set("notion", $notion);
     }
 
     /**

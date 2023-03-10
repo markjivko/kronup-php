@@ -4,7 +4,7 @@
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   MIT
- * @package   kronup
+ * @package   Kronup
  * @author    Mark Jivko
  */
 
@@ -22,7 +22,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ExceptionTest extends TestCase {
     /**
-     * kronup sdk
+     * Kronup SDK
      *
      * @var \Kronup\Sdk
      */
@@ -39,14 +39,10 @@ class ExceptionTest extends TestCase {
      * Unauthorized
      */
     public function testUnauthorized(): void {
-        $this->expectExceptionObject(
-            new \InvalidArgumentException(
-                'Invalid value for "$page_number" when calling UsersApi.userList, must be bigger than or equal to 1.'
-            )
-        );
+        $this->expectExceptionObject(new ApiException("Unauthorized", 401));
         $this->sdk
             ->api()
             ->users()
-            ->userList("org-id", 0);
+            ->userList("org-id");
     }
 }

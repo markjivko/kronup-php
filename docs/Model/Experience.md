@@ -13,7 +13,7 @@ Method name | Return type | Description
 **getId()** | **string** | Team ID
 **getOrgId()** | **string** | Organization ID
 **getUserId()** | **string** | User ID
-**getNotionId()** | **string** | Notion ID
+**getNotion()** | [**\Kronup\Model\Notion**](../Notion) | 
 **getSelfEval()** | [**\Kronup\Model\EvaluationsSelf**](../EvaluationsSelf) | 
 **getPeerEval()** | [**\Kronup\Model\EvaluationsPeers**](../EvaluationsPeers) | 
 
