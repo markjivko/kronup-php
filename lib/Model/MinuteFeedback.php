@@ -24,19 +24,20 @@ namespace Kronup\Model;
 class MinuteFeedback extends AbstractModel {
 
     public const _D = null;
-    public const ISSUE_V = 'v';
-    public const ISSUE_C = 'c';
-    public const ISSUE_F = 'f';
-    public const ISSUE_T = 't';
-    public const ISSUE_S = 's';
-    public const ISSUE_CI = 'ci';
-    public const ISSUE_ST = 'st';
-    public const ISSUE_M = 'm';
+    public const ISSUE_VALUE = 'value';
+    public const ISSUE_COMPLEXITY = 'complexity';
+    public const ISSUE_FLEXIBILITY = 'flexibility';
+    public const ISSUE_TESTING = 'testing';
+    public const ISSUE_SECURITY = 'security';
+    public const ISSUE_CI_CD = 'ci/cd';
+    public const ISSUE_STANDARDS = 'standards';
+    public const ISSUE_MISC = 'misc';
     protected static $_name = "Minute_Feedback";
     protected static $_definition = [
+        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
-        "issue" => ["issue", "string", null, "getIssue", "setIssue", 'v', ["r" => 0, "e" => 1]], 
+        "issue" => ["issue", "string", null, "getIssue", "setIssue", 'value', ["r" => 0, "e" => 1]], 
         "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 1024]], 
         "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
     ];
@@ -59,15 +60,35 @@ class MinuteFeedback extends AbstractModel {
      */
     public function getIssueAllowableValues(): array {
         return [
-            self::ISSUE_V,
-            self::ISSUE_C,
-            self::ISSUE_F,
-            self::ISSUE_T,
-            self::ISSUE_S,
-            self::ISSUE_CI,
-            self::ISSUE_ST,
-            self::ISSUE_M,
+            self::ISSUE_VALUE,
+            self::ISSUE_COMPLEXITY,
+            self::ISSUE_FLEXIBILITY,
+            self::ISSUE_TESTING,
+            self::ISSUE_SECURITY,
+            self::ISSUE_CI_CD,
+            self::ISSUE_STANDARDS,
+            self::ISSUE_MISC,
         ];
+    }
+
+    /**
+     * Get id - Feedback ID
+     *
+     * @return string|null
+     */
+    public function getId(): ?string {
+        return $this->_data["id"];
+    }
+
+    /**
+     * Set id - Feedback ID
+     * 
+     * @param string|null $id Feedback ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setId($id) {
+        return $this->_set("id", $id);
     }
 
     /**
@@ -111,7 +132,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get issue - Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
+     * Get issue - Feedback issue    * `value` - Value   * `complexity` - Complexity   * `flexibility` - Flexibility   * `testing` - Testing   * `security` - Security   * `ci/cd` - CI/CD   * `standards` - Standards   * `misc` - Miscellaneous
      *
      * @return string|null
      */
@@ -120,9 +141,9 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set issue - Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
+     * Set issue - Feedback issue    * `value` - Value   * `complexity` - Complexity   * `flexibility` - Flexibility   * `testing` - Testing   * `security` - Security   * `ci/cd` - CI/CD   * `standards` - Standards   * `misc` - Miscellaneous
      * 
-     * @param string|null $issue Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous
+     * @param string|null $issue Feedback issue    * `value` - Value   * `complexity` - Complexity   * `flexibility` - Flexibility   * `testing` - Testing   * `security` - Security   * `ci/cd` - CI/CD   * `standards` - Standards   * `misc` - Miscellaneous
      * @throws \InvalidArgumentException
      * @return $this
      */

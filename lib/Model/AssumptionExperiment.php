@@ -24,16 +24,16 @@ namespace Kronup\Model;
 class AssumptionExperiment extends AbstractModel {
 
     public const _D = null;
-    public const STATE_I = 'i';
-    public const STATE_R = 'r';
-    public const STATE_D = 'd';
+    public const STATE_IDLE = 'idle';
+    public const STATE_RUNNING = 'running';
+    public const STATE_DONE = 'done';
     protected static $_name = "Assumption_experiment";
     protected static $_definition = [
         "authorIds" => ["authorIds", "string[]", null, "getAuthorIds", "setAuthorIds", null, ["r" => 0, "c" => 1]], 
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", false, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
-        "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]]
+        "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]]
     ];
 
     /**
@@ -54,9 +54,9 @@ class AssumptionExperiment extends AbstractModel {
      */
     public function getStateAllowableValues(): array {
         return [
-            self::STATE_I,
-            self::STATE_R,
-            self::STATE_D,
+            self::STATE_IDLE,
+            self::STATE_RUNNING,
+            self::STATE_DONE,
         ];
     }
 
@@ -141,7 +141,7 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Get state - Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
+     * Get state - Experiment state    * `idle` - Idle   * `running` - Running   * `done` - Done
      *
      * @return string|null
      */
@@ -150,9 +150,9 @@ class AssumptionExperiment extends AbstractModel {
     }
 
     /**
-     * Set state - Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
+     * Set state - Experiment state    * `idle` - Idle   * `running` - Running   * `done` - Done
      * 
-     * @param string|null $state Experiment state    * `i` - Idle   * `r` - Running   * `d` - Done
+     * @param string|null $state Experiment state    * `idle` - Idle   * `running` - Running   * `done` - Done
      * @throws \InvalidArgumentException
      * @return $this
      */

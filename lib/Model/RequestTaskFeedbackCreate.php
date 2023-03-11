@@ -22,10 +22,18 @@ namespace Kronup\Model;
 class RequestTaskFeedbackCreate extends AbstractModel {
 
     public const _D = null;
+    public const ISSUE_VALUE = 'value';
+    public const ISSUE_COMPLEXITY = 'complexity';
+    public const ISSUE_FLEXIBILITY = 'flexibility';
+    public const ISSUE_TESTING = 'testing';
+    public const ISSUE_SECURITY = 'security';
+    public const ISSUE_CI_CD = 'ci/cd';
+    public const ISSUE_STANDARDS = 'standards';
+    public const ISSUE_MISC = 'misc';
     protected static $_name = "Request_Task_Feedback_Create";
     protected static $_definition = [
         "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 1024]], 
-        "issue" => ["issue", "string", null, "getIssue", "setIssue", null, ["r" => 0]]
+        "issue" => ["issue", "string", null, "getIssue", "setIssue", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
@@ -39,6 +47,23 @@ class RequestTaskFeedbackCreate extends AbstractModel {
         }
     }
 
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getIssueAllowableValues(): array {
+        return [
+            self::ISSUE_VALUE,
+            self::ISSUE_COMPLEXITY,
+            self::ISSUE_FLEXIBILITY,
+            self::ISSUE_TESTING,
+            self::ISSUE_SECURITY,
+            self::ISSUE_CI_CD,
+            self::ISSUE_STANDARDS,
+            self::ISSUE_MISC,
+        ];
+    }
 
     /**
      * Get message - Feedback details

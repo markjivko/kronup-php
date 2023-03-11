@@ -459,7 +459,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TaskExpanded
+     * @return \Kronup\Model\Task
      */
     public function taskNotionAdd($team_id, $channel_id, $item_id, $task_id, $notion_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -473,12 +473,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}";
         
-        /** @var \Kronup\Model\TaskExpanded $result */
+        /** @var \Kronup\Model\Task $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "notionId" => $notion_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\TaskExpanded"
+            "\Kronup\Model\Task"
         );
             
         return $result;

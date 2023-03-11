@@ -26,6 +26,7 @@ class MinuteDiscovery extends AbstractModel {
     public const _D = null;
     protected static $_name = "Minute_Discovery";
     protected static $_definition = [
+        "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
@@ -42,6 +43,26 @@ class MinuteDiscovery extends AbstractModel {
         }
     }
 
+
+    /**
+     * Get id - Discovery ID
+     *
+     * @return string|null
+     */
+    public function getId(): ?string {
+        return $this->_data["id"];
+    }
+
+    /**
+     * Set id - Discovery ID
+     * 
+     * @param string|null $id Discovery ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setId($id) {
+        return $this->_set("id", $id);
+    }
 
     /**
      * Get iteration - Iteration number

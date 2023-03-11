@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Experience_List Model
+ * Experiences_List Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Experience_List Model
+ * Experiences_List Model
  */
-class ExperienceList extends AbstractModel {
+class ExperiencesList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Experience_List";
+    protected static $_name = "Experiences_List";
     protected static $_definition = [
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", null, ["r" => 0]], 
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", null, ["r" => 0]], 
@@ -30,7 +30,7 @@ class ExperienceList extends AbstractModel {
     ];
 
     /**
-     * ExperienceList
+     * ExperiencesList
      *
      * @param mixed[] $data Model data
      */

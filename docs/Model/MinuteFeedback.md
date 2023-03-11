@@ -10,9 +10,10 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
+**getId()** | **string** | Feedback ID
 **getIteration()** | **float** | Iteration number [default to `1`]
 **getAuthorId()** | **string** | Author ID
-**getIssue()** | **string** | Feedback issue    * `v` - Value   * `c` - Complexity   * `f` - Flexibility   * `t` - Testing   * `s` - Security   * `ci` - CI/CD   * `st` - Standards   * `m` - Miscellaneous [default to `'v'`]
+**getIssue()** | **string** | Feedback issue    * `value` - Value   * `complexity` - Complexity   * `flexibility` - Flexibility   * `testing` - Testing   * `security` - Security   * `ci/cd` - CI/CD   * `standards` - Standards   * `misc` - Miscellaneous [default to `'value'`]
 **getMessage()** | **string** | Feedback details
 **getReply()** | **string** | Reply from assignee
 

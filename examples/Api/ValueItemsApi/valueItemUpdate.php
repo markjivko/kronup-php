@@ -41,10 +41,10 @@ $arg_request_value_item_update = (new \Kronup\Model\RequestValueItemUpdate())
     ->setDetails('Feature description')
     
     // (optional) Value item type:  * f - Feature  * b - Bug fix  * c - Chore
-    ->setType('f')
+    ->setType('feature')
     
     // (optional) Value item MoSCoW priority:  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT...
-    ->setPriority('m');
+    ->setPriority('must');
 
 try {
 

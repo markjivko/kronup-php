@@ -43,7 +43,7 @@ try {
     /**
      * PUT /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}
      * 
-     * @var \Kronup\Model\TaskExpanded $response
+     * @var \Kronup\Model\Task $response
      */
     $response = $sdk
         ->api()

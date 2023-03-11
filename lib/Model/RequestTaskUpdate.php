@@ -22,10 +22,10 @@ namespace Kronup\Model;
 class RequestTaskUpdate extends AbstractModel {
 
     public const _D = null;
-    public const STATE_I = 'i';
-    public const STATE_P = 'p';
-    public const STATE_R = 'r';
-    public const STATE_D = 'd';
+    public const STATE_IDLE = 'idle';
+    public const STATE_IN_PROGRESS = 'in progress';
+    public const STATE_IN_REVIEW = 'in review';
+    public const STATE_DONE = 'done';
     protected static $_name = "Request_Task_Update";
     protected static $_definition = [
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
@@ -51,10 +51,10 @@ class RequestTaskUpdate extends AbstractModel {
      */
     public function getStateAllowableValues(): array {
         return [
-            self::STATE_I,
-            self::STATE_P,
-            self::STATE_R,
-            self::STATE_D,
+            self::STATE_IDLE,
+            self::STATE_IN_PROGRESS,
+            self::STATE_IN_REVIEW,
+            self::STATE_DONE,
         ];
     }
 

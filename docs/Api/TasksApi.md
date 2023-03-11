@@ -634,7 +634,7 @@ Get a list of task models
     string $task_id,
     string $notion_id,
     string $x_org_id
-): \Kronup\Model\TaskExpanded
+): \Kronup\Model\Task
 ```
 
 ### Parameters
@@ -650,7 +650,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+[**\Kronup\Model\Task**](../../Model/Task)
 
 ### Description
 

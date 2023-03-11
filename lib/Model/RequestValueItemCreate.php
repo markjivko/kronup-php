@@ -22,13 +22,13 @@ namespace Kronup\Model;
 class RequestValueItemCreate extends AbstractModel {
 
     public const _D = null;
-    public const TYPE_F = 'f';
-    public const TYPE_B = 'b';
-    public const TYPE_C = 'c';
-    public const PRIORITY_M = 'm';
-    public const PRIORITY_S = 's';
-    public const PRIORITY_C = 'c';
-    public const PRIORITY_W = 'w';
+    public const TYPE_FEATURE = 'feature';
+    public const TYPE_BUG_FIX = 'bug fix';
+    public const TYPE_CHORE = 'chore';
+    public const PRIORITY_MUST = 'must';
+    public const PRIORITY_SHOUD = 'shoud';
+    public const PRIORITY_COULD = 'could';
+    public const PRIORITY_WILL_NOT = 'will not';
     protected static $_name = "Request_Value_Item_Create";
     protected static $_definition = [
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
@@ -55,9 +55,9 @@ class RequestValueItemCreate extends AbstractModel {
      */
     public function getTypeAllowableValues(): array {
         return [
-            self::TYPE_F,
-            self::TYPE_B,
-            self::TYPE_C,
+            self::TYPE_FEATURE,
+            self::TYPE_BUG_FIX,
+            self::TYPE_CHORE,
         ];
     }
     /**
@@ -67,10 +67,10 @@ class RequestValueItemCreate extends AbstractModel {
      */
     public function getPriorityAllowableValues(): array {
         return [
-            self::PRIORITY_M,
-            self::PRIORITY_S,
-            self::PRIORITY_C,
-            self::PRIORITY_W,
+            self::PRIORITY_MUST,
+            self::PRIORITY_SHOUD,
+            self::PRIORITY_COULD,
+            self::PRIORITY_WILL_NOT,
         ];
     }
 

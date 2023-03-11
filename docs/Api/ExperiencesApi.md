@@ -22,8 +22,8 @@ Method | Description
 ------------- | -------------
 [**experienceEvaluatePeer()**](#experienceevaluatepeer) | Evaluate peer
 [**experienceEvaluateSelf()**](#experienceevaluateself) | Self-evaluation
-[**experienceList()**](#experiencelist) | Fetch all experiences
 [**experienceRead()**](#experienceread) | Fetch notion experience
+[**experiencesList()**](#experienceslist) | Fetch all experiences
 
 
 ## `experienceEvaluatePeer()`
@@ -120,54 +120,6 @@ Evaluate yourself on a notion
 ---
 
 
-## `experienceList()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **experienceList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/experienceList.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **GET** `/xp/users/{userId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->experiences()->experienceList(
-    string $user_id,
-    string $x_org_id,
-    [ int $page_number = 1, ]
-    [ int $page_size = 100 ]
-): \Kronup\Model\ExperienceList
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | ------------- | -------------
- **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
- **$page_number** | **int**  | Pagination: page number  [default to 1]
- **$page_size** | **int**  | Pagination: page size  [default to 100]
-
-### Return type
-
-[**\Kronup\Model\ExperienceList**](../../Model/ExperienceList)
-
-### Description
-
-> Fetch all experiences
-
-Retrieve all experience models for this user
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
 ## `experienceRead()`
 
 ### Example
@@ -208,6 +160,54 @@ Name | Type | Description
 > Fetch notion experience
 
 Retrieve experience model for specified Notion
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `experiencesList()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **experiencesList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/experiencesList.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/xp/users/{userId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->experiences()->experiencesList(
+    string $user_id,
+    string $x_org_id,
+    [ int $page_number = 1, ]
+    [ int $page_size = 100 ]
+): \Kronup\Model\ExperiencesList
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | ------------- | -------------
+ **$user_id** | **string**  | User ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$page_number** | **int**  | Pagination: page number  [default to 1]
+ **$page_size** | **int**  | Pagination: page size  [default to 100]
+
+### Return type
+
+[**\Kronup\Model\ExperiencesList**](../../Model/ExperiencesList)
+
+### Description
+
+> Fetch all experiences
+
+Retrieve all experience models for this user
 
 [Back to top](#top){: .btn .btn-purple }
 

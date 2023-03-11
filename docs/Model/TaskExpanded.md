@@ -15,6 +15,6 @@ Method name | Return type | Description
 **getAssigneeId()** | **string** | Author ID
 **getDigest()** | **string** | Task title
 **getDetails()** | **string** | Task description
-**getState()** | **string** | Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done [default to `'i'`]
+**getState()** | **string** | Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done [default to `'idle'`]
 **getNotions()** | [**\Kronup\Model\Notion[]**](../Notion) | Notions
 

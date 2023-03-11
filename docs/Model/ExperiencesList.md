@@ -1,10 +1,10 @@
 ---
-title: ExperienceList
+title: ExperiencesList
 parent: Model
 layout: page
 ---
 
-# ExperienceList
+# ExperiencesList
 
 ## Model getters
 

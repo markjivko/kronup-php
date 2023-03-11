@@ -24,10 +24,10 @@ namespace Kronup\Model;
 class TaskExpanded extends AbstractModel {
 
     public const _D = null;
-    public const STATE_I = 'i';
-    public const STATE_P = 'p';
-    public const STATE_R = 'r';
-    public const STATE_D = 'd';
+    public const STATE_IDLE = 'idle';
+    public const STATE_IN_PROGRESS = 'in progress';
+    public const STATE_IN_REVIEW = 'in review';
+    public const STATE_DONE = 'done';
     protected static $_name = "TaskExpanded";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -35,7 +35,7 @@ class TaskExpanded extends AbstractModel {
         "assigneeId" => ["assigneeId", "string", null, "getAssigneeId", "setAssigneeId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
-        "state" => ["state", "string", null, "getState", "setState", 'i', ["r" => 0, "e" => 1]], 
+        "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]], 
         "notions" => ["notions", "\Kronup\Model\Notion[]", null, "getNotions", "setNotions", null, ["r" => 0, "c" => 1]]
     ];
 
@@ -57,10 +57,10 @@ class TaskExpanded extends AbstractModel {
      */
     public function getStateAllowableValues(): array {
         return [
-            self::STATE_I,
-            self::STATE_P,
-            self::STATE_R,
-            self::STATE_D,
+            self::STATE_IDLE,
+            self::STATE_IN_PROGRESS,
+            self::STATE_IN_REVIEW,
+            self::STATE_DONE,
         ];
     }
 
@@ -165,7 +165,7 @@ class TaskExpanded extends AbstractModel {
     }
 
     /**
-     * Get state - Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done
+     * Get state - Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done
      *
      * @return string|null
      */
@@ -174,9 +174,9 @@ class TaskExpanded extends AbstractModel {
     }
 
     /**
-     * Set state - Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done
+     * Set state - Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done
      * 
-     * @param string|null $state Task state    * `i` - Idle   * `p` - In progress   * `r` - In review   * `d` - Done
+     * @param string|null $state Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done
      * @throws \InvalidArgumentException
      * @return $this
      */

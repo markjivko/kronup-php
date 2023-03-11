@@ -22,17 +22,17 @@ namespace Kronup\Model;
 class ValueItem extends AbstractModel {
 
     public const _D = null;
-    public const STAGE_P = 'p';
-    public const STAGE_V = 'v';
-    public const STAGE_X = 'x';
-    public const STAGE_C = 'c';
-    public const TYPE_F = 'f';
-    public const TYPE_B = 'b';
-    public const TYPE_C = 'c';
-    public const PRIORITY_M = 'm';
-    public const PRIORITY_S = 's';
-    public const PRIORITY_C = 'c';
-    public const PRIORITY_W = 'w';
+    public const STAGE_PLANNING = 'planning';
+    public const STAGE_VALIDATION = 'validation';
+    public const STAGE_EXECUTION = 'execution';
+    public const STAGE_DEEP_CONTEXT = 'deep context';
+    public const TYPE_FEATURE = 'feature';
+    public const TYPE_BUG_FIX = 'bug fix';
+    public const TYPE_CHORE = 'chore';
+    public const PRIORITY_MUST = 'must';
+    public const PRIORITY_SHOULD = 'should';
+    public const PRIORITY_COULD = 'could';
+    public const PRIORITY_WILL_NOT = 'will not';
     protected static $_name = "ValueItem";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -68,10 +68,10 @@ class ValueItem extends AbstractModel {
      */
     public function getStageAllowableValues(): array {
         return [
-            self::STAGE_P,
-            self::STAGE_V,
-            self::STAGE_X,
-            self::STAGE_C,
+            self::STAGE_PLANNING,
+            self::STAGE_VALIDATION,
+            self::STAGE_EXECUTION,
+            self::STAGE_DEEP_CONTEXT,
         ];
     }
     /**
@@ -81,9 +81,9 @@ class ValueItem extends AbstractModel {
      */
     public function getTypeAllowableValues(): array {
         return [
-            self::TYPE_F,
-            self::TYPE_B,
-            self::TYPE_C,
+            self::TYPE_FEATURE,
+            self::TYPE_BUG_FIX,
+            self::TYPE_CHORE,
         ];
     }
     /**
@@ -93,10 +93,10 @@ class ValueItem extends AbstractModel {
      */
     public function getPriorityAllowableValues(): array {
         return [
-            self::PRIORITY_M,
-            self::PRIORITY_S,
-            self::PRIORITY_C,
-            self::PRIORITY_W,
+            self::PRIORITY_MUST,
+            self::PRIORITY_SHOULD,
+            self::PRIORITY_COULD,
+            self::PRIORITY_WILL_NOT,
         ];
     }
 
@@ -241,7 +241,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get stage - Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
+     * Get stage - Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
      *
      * @return string|null
      */
@@ -250,9 +250,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set stage - Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
+     * Set stage - Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
      * 
-     * @param string|null $stage Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
+     * @param string|null $stage Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -281,7 +281,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get type - Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
+     * Get type - Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
      *
      * @return string|null
      */
@@ -290,9 +290,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set type - Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
+     * Set type - Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
      * 
-     * @param string|null $type Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
+     * @param string|null $type Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -301,7 +301,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get priority - Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
+     * Get priority - Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
      *
      * @return string|null
      */
@@ -310,9 +310,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set priority - Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
+     * Set priority - Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
      * 
-     * @param string|null $priority Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
+     * @param string|null $priority Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
      * @throws \InvalidArgumentException
      * @return $this
      */

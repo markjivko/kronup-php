@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ExperiencesApi/#experiencelist
+ * @link    https://kronup.github.io/kronup-php/Api/ExperiencesApi/#experienceslist
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -37,23 +37,23 @@ try {
     /**
      * GET /xp/users/{userId}
      * 
-     * @var \Kronup\Model\ExperienceList $response
+     * @var \Kronup\Model\ExperiencesList $response
      */
     $response = $sdk
         ->api()
         ->experiences()
-        ->experienceList($arg_user_id, $arg_x_org_id, $arg_page_number, $arg_page_size);
+        ->experiencesList($arg_user_id, $arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experiences()->experienceList(): %s\n", 
+        "API Exception when calling api()->experiences()->experiencesList(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experiences()->experienceList(): %s\n", 
+        "Exception when calling api()->experiences()->experiencesList(): %s\n", 
         $exc->getMessage()
     );
 }

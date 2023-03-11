@@ -17,10 +17,10 @@ Method name | Return type | Description
 **getDigest()** | **string** | Value item digest
 **getDetails()** | **string** | Value item description
 **getAuthorId()** | **string** | Author ID
-**getStage()** | **string** | Value Item Stage    * `p` - Planning   * `v` - Validation   * `x` - Execution   * `c` - Deep Context
+**getStage()** | **string** | Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
 **getCanAdvance()** | **bool** | Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed [default to `false`]
-**getType()** | **string** | Value Item Type    * `f` - Feature   * `b` - Bug fix   * `c` - Chore
-**getPriority()** | **string** | Value Item Priority using MoSCoW    * `m` - Must-have   * `s` - Should-have   * `c` - Could-have   * `w` - Will NOT have
+**getType()** | **string** | Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
+**getPriority()** | **string** | Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
 **getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | Assumptions
 **getTasks()** | [**\Kronup\Model\Task[]**](../Task) | List of Tasks without Minutes
 

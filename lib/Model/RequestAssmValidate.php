@@ -22,9 +22,9 @@ namespace Kronup\Model;
 class RequestAssmValidate extends AbstractModel {
 
     public const _D = null;
-    public const STATE_I = 'i';
-    public const STATE_R = 'r';
-    public const STATE_D = 'd';
+    public const STATE_IDLE = 'idle';
+    public const STATE_RUNNING = 'running';
+    public const STATE_DONE = 'done';
     protected static $_name = "Request_Assm_Validate";
     protected static $_definition = [
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", null, ["r" => 0]], 
@@ -51,9 +51,9 @@ class RequestAssmValidate extends AbstractModel {
      */
     public function getStateAllowableValues(): array {
         return [
-            self::STATE_I,
-            self::STATE_R,
-            self::STATE_D,
+            self::STATE_IDLE,
+            self::STATE_RUNNING,
+            self::STATE_DONE,
         ];
     }
 
