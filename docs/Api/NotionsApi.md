@@ -45,7 +45,7 @@ Method | Description
 ```php
 (new \Kronup\Sdk())->api()->notions()->notionCreate(
     string $x_org_id,
-    \Kronup\Model\RequestNotionCreate $request_notion_create
+    \Kronup\Model\PayloadNotionCreate $payload_notion_create
 ): \Kronup\Model\Notion
 ```
 
@@ -54,7 +54,7 @@ Method | Description
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
- **$request_notion_create** | [**\Kronup\Model\RequestNotionCreate**](../../Model/RequestNotionCreate) |  
+ **$payload_notion_create** | [**\Kronup\Model\PayloadNotionCreate**](../../Model/PayloadNotionCreate) |  
 
 ### Return type
 
@@ -108,7 +108,7 @@ Name | Type | Description
 
 > Delete notion
 
-Delete a notion model
+Delete a notion model. This also removes the associated Experiences for all users in this Organization.
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -226,7 +226,7 @@ Get a list of notion models
 (new \Kronup\Sdk())->api()->notions()->notionUpdate(
     string $notion_id,
     string $x_org_id,
-    \Kronup\Model\RequestNotionUpdate $request_notion_update
+    \Kronup\Model\PayloadNotionUpdate $payload_notion_update
 ): \Kronup\Model\Notion
 ```
 
@@ -236,7 +236,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$x_org_id** | **string**  | Organization ID 
- **$request_notion_update** | [**\Kronup\Model\RequestNotionUpdate**](../../Model/RequestNotionUpdate) |  
+ **$payload_notion_update** | [**\Kronup\Model\PayloadNotionUpdate**](../../Model/PayloadNotionUpdate) |  
 
 ### Return type
 

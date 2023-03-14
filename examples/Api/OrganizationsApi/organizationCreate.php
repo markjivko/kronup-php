@@ -20,7 +20,7 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-$arg_request_organization_create = (new \Kronup\Model\RequestOrganizationCreate())
+$arg_payload_organization_create = (new \Kronup\Model\PayloadOrganizationCreate())
     
     // (optional) Organization name
     ->setOrgName('Example, Inc.');
@@ -35,7 +35,7 @@ try {
     $response = $sdk
         ->api()
         ->organizations()
-        ->organizationCreate($arg_request_organization_create);
+        ->organizationCreate($arg_payload_organization_create);
 
     var_dump($response);
 

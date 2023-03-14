@@ -42,7 +42,7 @@ Method | Description
 
 ```php
 (new \Kronup\Sdk())->api()->organizations()->organizationCreate(
-    \Kronup\Model\RequestOrganizationCreate $request_organization_create
+    \Kronup\Model\PayloadOrganizationCreate $payload_organization_create
 ): \Kronup\Model\Organization
 ```
 
@@ -50,7 +50,7 @@ Method | Description
 
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
- **$request_organization_create** | [**\Kronup\Model\RequestOrganizationCreate**](../../Model/RequestOrganizationCreate) |  
+ **$payload_organization_create** | [**\Kronup\Model\PayloadOrganizationCreate**](../../Model/PayloadOrganizationCreate) |  
 
 ### Return type
 
@@ -127,7 +127,7 @@ Remove organization
 ```php
 (new \Kronup\Sdk())->api()->organizations()->organizationUpdate(
     string $org_id,
-    \Kronup\Model\RequestOrganizationUpdate $request_organization_update
+    \Kronup\Model\PayloadOrganizationUpdate $payload_organization_update
 ): \Kronup\Model\Organization
 ```
 
@@ -136,7 +136,7 @@ Remove organization
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$org_id** | **string**  | Organization ID 
- **$request_organization_update** | [**\Kronup\Model\RequestOrganizationUpdate**](../../Model/RequestOrganizationUpdate) |  
+ **$payload_organization_update** | [**\Kronup\Model\PayloadOrganizationUpdate**](../../Model/PayloadOrganizationUpdate) |  
 
 ### Return type
 

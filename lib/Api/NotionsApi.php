@@ -32,13 +32,13 @@ class NotionsApi extends AbstractApi {
      * Create notion
      *
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestNotionCreate $request_notion_create 
+     * @param \Kronup\Model\PayloadNotionCreate $payload_notion_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Notion
      */
-    public function notionCreate($x_org_id, $request_notion_create) {
+    public function notionCreate($x_org_id, $payload_notion_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -53,7 +53,7 @@ class NotionsApi extends AbstractApi {
         /** @var \Kronup\Model\Notion $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $request_notion_create
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $payload_notion_create
             ), 
             "\Kronup\Model\Notion"
         );
@@ -144,6 +144,10 @@ class NotionsApi extends AbstractApi {
             throw new IAE('Invalid value for "$page_number" when calling NotionsApi.notionSearch, must be bigger than or equal to 1.');
         }
 
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling NotionsApi.notionSearch, must be smaller than or equal to 500');
+        }
+
         if (isset($page_size) && $page_size < 1) {
             throw new IAE('Invalid value for "$page_size" when calling NotionsApi.notionSearch, must be bigger than or equal to 1.');
         }
@@ -179,13 +183,13 @@ class NotionsApi extends AbstractApi {
      *
      * @param string $notion_id Notion ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestNotionUpdate $request_notion_update 
+     * @param \Kronup\Model\PayloadNotionUpdate $payload_notion_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Notion
      */
-    public function notionUpdate($notion_id, $x_org_id, $request_notion_update) {
+    public function notionUpdate($notion_id, $x_org_id, $payload_notion_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -200,7 +204,7 @@ class NotionsApi extends AbstractApi {
         /** @var \Kronup\Model\Notion $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["notionId" => $notion_id]), $rPath, [], $rHeaders, [], $request_notion_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["notionId" => $notion_id]), $rPath, [], $rHeaders, [], $payload_notion_update
             ), 
             "\Kronup\Model\Notion"
         );

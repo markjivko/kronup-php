@@ -68,13 +68,13 @@ class ChannelsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestChannelCreate $request_channel_create 
+     * @param \Kronup\Model\PayloadChannelCreate $payload_channel_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function channelCreate($team_id, $x_org_id, $request_channel_create) {
+    public function channelCreate($team_id, $x_org_id, $payload_channel_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -89,7 +89,7 @@ class ChannelsApi extends AbstractApi {
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $request_channel_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $payload_channel_create
             ), 
             "\Kronup\Model\Team"
         );
@@ -172,13 +172,13 @@ class ChannelsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestChannelUpdate $request_channel_update 
+     * @param \Kronup\Model\PayloadChannelUpdate $payload_channel_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function channelUpdate($team_id, $channel_id, $x_org_id, $request_channel_update) {
+    public function channelUpdate($team_id, $channel_id, $x_org_id, $payload_channel_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -193,7 +193,7 @@ class ChannelsApi extends AbstractApi {
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $request_channel_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $payload_channel_update
             ), 
             "\Kronup\Model\Team"
         );

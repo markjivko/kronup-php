@@ -23,7 +23,7 @@ $sdk->config()->setDebug(true);
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_team_create = (new \Kronup\Model\RequestTeamCreate())
+$arg_payload_team_create = (new \Kronup\Model\PayloadTeamCreate())
     
     // Team name
     ->setTeamName('null')
@@ -41,7 +41,7 @@ try {
     $response = $sdk
         ->api()
         ->teams()
-        ->teamCreate($arg_x_org_id, $arg_request_team_create);
+        ->teamCreate($arg_x_org_id, $arg_payload_team_create);
 
     var_dump($response);
 

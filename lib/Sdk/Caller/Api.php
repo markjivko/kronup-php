@@ -49,6 +49,13 @@ class Api {
     protected $_channelsApi = null;
 
     /**
+     * DeepContext API
+     *
+     * @var \Kronup\Api\DeepContextApi
+     */
+    protected $_deepContextApi = null;
+
+    /**
      * Experiences API
      *
      * @var \Kronup\Api\ExperiencesApi
@@ -150,6 +157,19 @@ class Api {
         }
 
         return $this->_channelsApi;
+    }
+    
+    /**
+     * DeepContext API
+     * 
+     * @return \Kronup\Api\DeepContextApi
+     */
+    public function deepContext(): A\DeepContextApi {
+        if (null === $this->_deepContextApi) {
+            $this->_deepContextApi = new A\DeepContextApi($this->_sdk);
+        }
+
+        return $this->_deepContextApi;
     }
     
     /**

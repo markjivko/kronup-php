@@ -44,6 +44,10 @@ class UsersApi extends AbstractApi {
             throw new IAE('Invalid value for "$page_number" when calling UsersApi.userList, must be bigger than or equal to 1.');
         }
 
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling UsersApi.userList, must be smaller than or equal to 500');
+        }
+
         if (isset($page_size) && $page_size < 1) {
             throw new IAE('Invalid value for "$page_size" when calling UsersApi.userList, must be bigger than or equal to 1.');
         }
@@ -137,13 +141,13 @@ class UsersApi extends AbstractApi {
      *
      * @param string $user_id User ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestUserRoleUpdate $request_user_role_update 
+     * @param \Kronup\Model\PayloadUserRoleUpdate $payload_user_role_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\UserRoles
      */
-    public function userUpdateRole($user_id, $x_org_id, $request_user_role_update) {
+    public function userUpdateRole($user_id, $x_org_id, $payload_user_role_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -158,7 +162,7 @@ class UsersApi extends AbstractApi {
         /** @var \Kronup\Model\UserRoles $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, [], $request_user_role_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["userId" => $user_id]), $rPath, [], $rHeaders, [], $payload_user_role_update
             ), 
             "\Kronup\Model\UserRoles"
         );

@@ -10,7 +10,8 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getPageSize()** | **int** | Page size
-**getPageNumber()** | **int** | Page number
+**getPageNumber()** | **int** | Page number [default to `1`]
+**getPageSize()** | **int** | Page size [default to `100`]
+**getTotal()** | **int** | Total
 **getExperiences()** | [**\Kronup\Model\Experience[]**](../Experience) | 
 

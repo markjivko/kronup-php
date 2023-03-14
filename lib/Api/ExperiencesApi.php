@@ -148,6 +148,10 @@ class ExperiencesApi extends AbstractApi {
             throw new IAE('Invalid value for "$page_number" when calling ExperiencesApi.experiencesList, must be bigger than or equal to 1.');
         }
 
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling ExperiencesApi.experiencesList, must be smaller than or equal to 500');
+        }
+
         if (isset($page_size) && $page_size < 1) {
             throw new IAE('Invalid value for "$page_size" when calling ExperiencesApi.experiencesList, must be bigger than or equal to 1.');
         }

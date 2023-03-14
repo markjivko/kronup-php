@@ -32,7 +32,7 @@ $arg_item_id = "value-item-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_value_item_update = (new \Kronup\Model\RequestValueItemUpdate())
+$arg_payload_value_item_update = (new \Kronup\Model\PayloadValueItemUpdate())
     
     // (optional) Value item digest
     ->setDigest('Feature name')
@@ -56,7 +56,7 @@ try {
     $response = $sdk
         ->api()
         ->valueItems()
-        ->valueItemUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_request_value_item_update);
+        ->valueItemUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_payload_value_item_update);
 
     var_dump($response);
 

@@ -69,13 +69,13 @@ class ValueItemsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestValueItemCreate $request_value_item_create 
+     * @param \Kronup\Model\PayloadValueItemCreate $payload_value_item_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function valueItemCreate($team_id, $channel_id, $x_org_id, $request_value_item_create) {
+    public function valueItemCreate($team_id, $channel_id, $x_org_id, $payload_value_item_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -90,7 +90,7 @@ class ValueItemsApi extends AbstractApi {
         /** @var \Kronup\Model\ValueItem $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $request_value_item_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $payload_value_item_create
             ), 
             "\Kronup\Model\ValueItem"
         );
@@ -149,6 +149,10 @@ class ValueItemsApi extends AbstractApi {
     public function valueItemList($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi.valueItemList, must be bigger than or equal to 1.');
+        }
+
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi.valueItemList, must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
@@ -222,13 +226,13 @@ class ValueItemsApi extends AbstractApi {
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestValueItemUpdate $request_value_item_update 
+     * @param \Kronup\Model\PayloadValueItemUpdate $payload_value_item_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function valueItemUpdate($team_id, $channel_id, $item_id, $x_org_id, $request_value_item_update) {
+    public function valueItemUpdate($team_id, $channel_id, $item_id, $x_org_id, $payload_value_item_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -243,7 +247,7 @@ class ValueItemsApi extends AbstractApi {
         /** @var \Kronup\Model\ValueItem $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $request_value_item_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $payload_value_item_update
             ), 
             "\Kronup\Model\ValueItem"
         );

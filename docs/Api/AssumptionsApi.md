@@ -49,7 +49,7 @@ Method | Description
     string $channel_id,
     string $item_id,
     string $x_org_id,
-    \Kronup\Model\RequestAssmCreate $request_assm_create
+    \Kronup\Model\PayloadAssmCreate $payload_assm_create
 ): \Kronup\Model\Assumption
 ```
 
@@ -61,7 +61,7 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
  **$x_org_id** | **string**  | Organization ID 
- **$request_assm_create** | [**\Kronup\Model\RequestAssmCreate**](../../Model/RequestAssmCreate) |  
+ **$payload_assm_create** | [**\Kronup\Model\PayloadAssmCreate**](../../Model/PayloadAssmCreate) |  
 
 ### Return type
 
@@ -252,7 +252,7 @@ Retrieve assumption model
     string $item_id,
     string $assm_id,
     string $x_org_id,
-    \Kronup\Model\RequestAssmUpdate $request_assm_update
+    \Kronup\Model\PayloadAssmUpdate $payload_assm_update
 ): \Kronup\Model\Assumption
 ```
 
@@ -265,7 +265,7 @@ Name | Type | Description
  **$item_id** | **string**  | Value item ID 
  **$assm_id** | **string**  | Assumption ID 
  **$x_org_id** | **string**  | Organization ID 
- **$request_assm_update** | [**\Kronup\Model\RequestAssmUpdate**](../../Model/RequestAssmUpdate) |  
+ **$payload_assm_update** | [**\Kronup\Model\PayloadAssmUpdate**](../../Model/PayloadAssmUpdate) |  
 
 ### Return type
 
@@ -304,7 +304,7 @@ Update assumption details
     string $item_id,
     string $assm_id,
     string $x_org_id,
-    \Kronup\Model\RequestAssmValidate $request_assm_validate
+    \Kronup\Model\PayloadAssmValidate $payload_assm_validate
 ): \Kronup\Model\Assumption
 ```
 
@@ -317,7 +317,7 @@ Name | Type | Description
  **$item_id** | **string**  | Value item ID 
  **$assm_id** | **string**  | Assumption ID 
  **$x_org_id** | **string**  | Organization ID 
- **$request_assm_validate** | [**\Kronup\Model\RequestAssmValidate**](../../Model/RequestAssmValidate) |  
+ **$payload_assm_validate** | [**\Kronup\Model\PayloadAssmValidate**](../../Model/PayloadAssmValidate) |  
 
 ### Return type
 

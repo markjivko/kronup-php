@@ -26,7 +26,7 @@ $arg_notion_id = "notion-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_notion_update = (new \Kronup\Model\RequestNotionUpdate())
+$arg_payload_notion_update = (new \Kronup\Model\PayloadNotionUpdate())
     
     // (optional) Notion value
     ->setValue('null');
@@ -41,7 +41,7 @@ try {
     $response = $sdk
         ->api()
         ->notions()
-        ->notionUpdate($arg_notion_id, $arg_x_org_id, $arg_request_notion_update);
+        ->notionUpdate($arg_notion_id, $arg_x_org_id, $arg_payload_notion_update);
 
     var_dump($response);
 

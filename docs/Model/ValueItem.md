@@ -22,5 +22,5 @@ Method name | Return type | Description
 **getType()** | **string** | Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
 **getPriority()** | **string** | Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
 **getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | Assumptions
-**getTasks()** | [**\Kronup\Model\Task[]**](../Task) | List of Tasks without Minutes
+**getTasks()** | [**\Kronup\Model\Task[]**](../Task) | List of Tasks
 

@@ -72,13 +72,13 @@ class TasksApi extends AbstractApi {
      * @param string $channel_id Channel ID
      * @param string $item_id Value Item ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTaskCreate $request_task_create 
+     * @param \Kronup\Model\PayloadTaskCreate $payload_task_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskCreate($team_id, $channel_id, $item_id, $x_org_id, $request_task_create) {
+    public function taskCreate($team_id, $channel_id, $item_id, $x_org_id, $payload_task_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -93,7 +93,7 @@ class TasksApi extends AbstractApi {
         /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $request_task_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $payload_task_create
             ), 
             "\Kronup\Model\TaskExpanded"
         );
@@ -145,13 +145,13 @@ class TasksApi extends AbstractApi {
      * @param string $item_id Value Item ID
      * @param string $task_id Task ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTaskDiscoveryCreate $request_task_discovery_create 
+     * @param \Kronup\Model\PayloadTaskDiscoveryCreate $payload_task_discovery_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskDiscoveryCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_discovery_create) {
+    public function taskDiscoveryCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_discovery_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -166,7 +166,7 @@ class TasksApi extends AbstractApi {
         /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_discovery_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $payload_task_discovery_create
             ), 
             "\Kronup\Model\TaskExpanded"
         );
@@ -220,13 +220,13 @@ class TasksApi extends AbstractApi {
      * @param string $task_id Task ID
      * @param string $discovery_id Discovery ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTaskDiscoveryUpdate $request_task_discovery_update 
+     * @param \Kronup\Model\PayloadTaskDiscoveryUpdate $payload_task_discovery_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskDiscoveryUpdate($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id, $request_task_discovery_update) {
+    public function taskDiscoveryUpdate($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id, $payload_task_discovery_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -241,7 +241,7 @@ class TasksApi extends AbstractApi {
         /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "discoveryId" => $discovery_id]), $rPath, [], $rHeaders, [], $request_task_discovery_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "discoveryId" => $discovery_id]), $rPath, [], $rHeaders, [], $payload_task_discovery_update
             ), 
             "\Kronup\Model\TaskExpanded"
         );
@@ -257,13 +257,13 @@ class TasksApi extends AbstractApi {
      * @param string $item_id Value Item ID
      * @param string $task_id Task ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTaskFeedbackCreate $request_task_feedback_create 
+     * @param \Kronup\Model\PayloadTaskFeedbackCreate $payload_task_feedback_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskFeedbackCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_feedback_create) {
+    public function taskFeedbackCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_feedback_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -278,7 +278,7 @@ class TasksApi extends AbstractApi {
         /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_feedback_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $payload_task_feedback_create
             ), 
             "\Kronup\Model\TaskExpanded"
         );
@@ -332,13 +332,13 @@ class TasksApi extends AbstractApi {
      * @param string $task_id Task ID
      * @param string $feedback_id Feedback ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTaskFeedbackReply $request_task_feedback_reply 
+     * @param \Kronup\Model\PayloadTaskFeedbackReply $payload_task_feedback_reply 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskFeedbackReply($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $request_task_feedback_reply) {
+    public function taskFeedbackReply($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $payload_task_feedback_reply) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -353,7 +353,7 @@ class TasksApi extends AbstractApi {
         /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $request_task_feedback_reply
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $payload_task_feedback_reply
             ), 
             "\Kronup\Model\TaskExpanded"
         );
@@ -370,13 +370,13 @@ class TasksApi extends AbstractApi {
      * @param string $task_id Task ID
      * @param string $feedback_id Feedback ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTaskFeedbackUpdate $request_task_feedback_update 
+     * @param \Kronup\Model\PayloadTaskFeedbackUpdate $payload_task_feedback_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskFeedbackUpdate($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $request_task_feedback_update) {
+    public function taskFeedbackUpdate($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $payload_task_feedback_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -391,7 +391,7 @@ class TasksApi extends AbstractApi {
         /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $request_task_feedback_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "feedbackId" => $feedback_id]), $rPath, [], $rHeaders, [], $payload_task_feedback_update
             ), 
             "\Kronup\Model\TaskExpanded"
         );
@@ -416,6 +416,10 @@ class TasksApi extends AbstractApi {
     public function taskList($team_id, $channel_id, $item_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling TasksApi.taskList, must be bigger than or equal to 1.');
+        }
+
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling TasksApi.taskList, must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
@@ -565,13 +569,13 @@ class TasksApi extends AbstractApi {
      * @param string $item_id Value item ID
      * @param string $task_id Task ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTaskUpdate $request_task_update 
+     * @param \Kronup\Model\PayloadTaskUpdate $payload_task_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskUpdate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $request_task_update) {
+    public function taskUpdate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -586,7 +590,7 @@ class TasksApi extends AbstractApi {
         /** @var \Kronup\Model\TaskExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $request_task_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $payload_task_update
             ), 
             "\Kronup\Model\TaskExpanded"
         );

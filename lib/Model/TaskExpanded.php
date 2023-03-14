@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * TaskExpanded Model
  * 
- * Full Task model that includes Minutes
+ * Task model without Minutes
  */
 class TaskExpanded extends AbstractModel {
 
@@ -31,11 +31,11 @@ class TaskExpanded extends AbstractModel {
     protected static $_name = "TaskExpanded";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "minute" => ["minute", "\Kronup\Model\Minute", null, "getMinute", "setMinute", null, ["r" => 0]], 
         "assigneeId" => ["assigneeId", "string", null, "getAssigneeId", "setAssigneeId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]], 
+        "minute" => ["minute", "\Kronup\Model\Minute", null, "getMinute", "setMinute", null, ["r" => 0]], 
         "notions" => ["notions", "\Kronup\Model\Notion[]", null, "getNotions", "setNotions", null, ["r" => 0, "c" => 1]]
     ];
 
@@ -82,26 +82,6 @@ class TaskExpanded extends AbstractModel {
      */
     public function setId($id) {
         return $this->_set("id", $id);
-    }
-
-    /**
-     * Get minute - 
-     *
-     * @return \Kronup\Model\Minute|null
-     */
-    public function getMinute(): ?\Kronup\Model\Minute {
-        return $this->_data["minute"];
-    }
-
-    /**
-     * Set minute - 
-     * 
-     * @param \Kronup\Model\Minute|null $minute
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setMinute($minute) {
-        return $this->_set("minute", $minute);
     }
 
     /**
@@ -182,6 +162,26 @@ class TaskExpanded extends AbstractModel {
      */
     public function setState($state) {
         return $this->_set("state", $state);
+    }
+
+    /**
+     * Get minute - 
+     *
+     * @return \Kronup\Model\Minute|null
+     */
+    public function getMinute(): ?\Kronup\Model\Minute {
+        return $this->_data["minute"];
+    }
+
+    /**
+     * Set minute - 
+     * 
+     * @param \Kronup\Model\Minute|null $minute
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setMinute($minute) {
+        return $this->_set("minute", $minute);
     }
 
     /**

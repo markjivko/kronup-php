@@ -35,7 +35,7 @@ $arg_task_id = "task-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_task_discovery_create = (new \Kronup\Model\RequestTaskDiscoveryCreate())
+$arg_payload_task_discovery_create = (new \Kronup\Model\PayloadTaskDiscoveryCreate())
     
     // (optional) Discovery details
     ->setDetails('null');
@@ -50,7 +50,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->taskDiscoveryCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_x_org_id, $arg_request_task_discovery_create);
+        ->taskDiscoveryCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_x_org_id, $arg_payload_task_discovery_create);
 
     var_dump($response);
 

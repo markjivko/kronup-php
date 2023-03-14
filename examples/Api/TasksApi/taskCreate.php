@@ -32,7 +32,7 @@ $arg_item_id = "value-item-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_task_create = (new \Kronup\Model\RequestTaskCreate())
+$arg_payload_task_create = (new \Kronup\Model\PayloadTaskCreate())
     
     // (optional) Task digest
     ->setDigest('null')
@@ -50,7 +50,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->taskCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_request_task_create);
+        ->taskCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_payload_task_create);
 
     var_dump($response);
 

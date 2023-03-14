@@ -32,7 +32,7 @@ $arg_item_id = "value-item-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_assm_create = (new \Kronup\Model\RequestAssmCreate())
+$arg_payload_assm_create = (new \Kronup\Model\PayloadAssmCreate())
     
     // (optional) Assumption digest
     ->setDigest('This thing is possible');
@@ -47,7 +47,7 @@ try {
     $response = $sdk
         ->api()
         ->assumptions()
-        ->assumptionCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_request_assm_create);
+        ->assumptionCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_payload_assm_create);
 
     var_dump($response);
 

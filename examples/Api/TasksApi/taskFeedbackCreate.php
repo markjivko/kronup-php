@@ -35,7 +35,7 @@ $arg_task_id = "task-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_task_feedback_create = (new \Kronup\Model\RequestTaskFeedbackCreate())
+$arg_payload_task_feedback_create = (new \Kronup\Model\PayloadTaskFeedbackCreate())
     
     // (optional) Feedback details
     ->setMessage('null')
@@ -53,7 +53,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->taskFeedbackCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_x_org_id, $arg_request_task_feedback_create);
+        ->taskFeedbackCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_x_org_id, $arg_payload_task_feedback_create);
 
     var_dump($response);
 

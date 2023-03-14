@@ -26,7 +26,7 @@ $arg_invite_id = "invitation-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_invitation_update = (new \Kronup\Model\RequestInvitationUpdate())
+$arg_payload_invitation_update = (new \Kronup\Model\PayloadInvitationUpdate())
     
     // (optional) Invitation name
     ->setInviteName('null')
@@ -53,7 +53,7 @@ try {
     $response = $sdk
         ->api()
         ->invitations()
-        ->invitationUpdate($arg_invite_id, $arg_x_org_id, $arg_request_invitation_update);
+        ->invitationUpdate($arg_invite_id, $arg_x_org_id, $arg_payload_invitation_update);
 
     var_dump($response);
 

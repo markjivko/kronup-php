@@ -35,7 +35,7 @@ $arg_assm_id = "assm-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_assm_validate = (new \Kronup\Model\RequestAssmValidate())
+$arg_payload_assm_validate = (new \Kronup\Model\PayloadAssmValidate())
     
     // (optional) Experiment confirms assumption
     ->setConfirmed(null)
@@ -59,7 +59,7 @@ try {
     $response = $sdk
         ->api()
         ->assumptions()
-        ->assumptionValidate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_request_assm_validate);
+        ->assumptionValidate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_payload_assm_validate);
 
     var_dump($response);
 

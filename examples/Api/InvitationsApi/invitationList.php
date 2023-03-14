@@ -23,17 +23,23 @@ $sdk->config()->setDebug(true);
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
+// Pagination: page number
+$arg_page_number = 1;
+
+// Pagination: page size
+$arg_page_size = 100;
+
 try {
 
     /**
      * GET /invitations
      * 
-     * @var \Kronup\Model\Invitation[] $response
+     * @var \Kronup\Model\InvitationsList $response
      */
     $response = $sdk
         ->api()
         ->invitations()
-        ->invitationList($arg_x_org_id);
+        ->invitationList($arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_dump($response);
 

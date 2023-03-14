@@ -93,7 +93,7 @@ Assign a user to a team
 ```php
 (new \Kronup\Sdk())->api()->teams()->teamCreate(
     string $x_org_id,
-    \Kronup\Model\RequestTeamCreate $request_team_create
+    \Kronup\Model\PayloadTeamCreate $payload_team_create
 ): \Kronup\Model\Team
 ```
 
@@ -102,7 +102,7 @@ Assign a user to a team
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
- **$request_team_create** | [**\Kronup\Model\RequestTeamCreate**](../../Model/RequestTeamCreate) |  
+ **$payload_team_create** | [**\Kronup\Model\PayloadTeamCreate**](../../Model/PayloadTeamCreate) |  
 
 ### Return type
 
@@ -180,8 +180,10 @@ Delete a team and unassign all users
 
 ```php
 (new \Kronup\Sdk())->api()->teams()->teamList(
-    string $x_org_id
-): \Kronup\Model\Team[]
+    string $x_org_id,
+    [ int $page_number = 1, ]
+    [ int $page_size = 100 ]
+): \Kronup\Model\TeamsList
 ```
 
 ### Parameters
@@ -189,10 +191,12 @@ Delete a team and unassign all users
 Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
+ **$page_number** | **int**  | Pagination: page number  [default to 1]
+ **$page_size** | **int**  | Pagination: page size  [default to 100]
 
 ### Return type
 
-[**\Kronup\Model\Team[]**](../../Model/Team)
+[**\Kronup\Model\TeamsList**](../../Model/TeamsList)
 
 ### Description
 
@@ -314,7 +318,7 @@ Remove a user from a team
 (new \Kronup\Sdk())->api()->teams()->teamUpdate(
     string $team_id,
     string $x_org_id,
-    \Kronup\Model\RequestTeamUpdate $request_team_update
+    \Kronup\Model\PayloadTeamUpdate $payload_team_update
 ): \Kronup\Model\Team
 ```
 
@@ -324,7 +328,7 @@ Name | Type | Description
 ------------- | ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
- **$request_team_update** | [**\Kronup\Model\RequestTeamUpdate**](../../Model/RequestTeamUpdate) |  
+ **$payload_team_update** | [**\Kronup\Model\PayloadTeamUpdate**](../../Model/PayloadTeamUpdate) |  
 
 ### Return type
 

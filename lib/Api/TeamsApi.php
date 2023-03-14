@@ -66,13 +66,13 @@ class TeamsApi extends AbstractApi {
      * Create team
      *
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTeamCreate $request_team_create 
+     * @param \Kronup\Model\PayloadTeamCreate $payload_team_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function teamCreate($x_org_id, $request_team_create) {
+    public function teamCreate($x_org_id, $payload_team_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -87,7 +87,7 @@ class TeamsApi extends AbstractApi {
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $request_team_create
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $payload_team_create
             ), 
             "\Kronup\Model\Team"
         );
@@ -132,12 +132,26 @@ class TeamsApi extends AbstractApi {
      * List teams
      *
      * @param string $x_org_id Organization ID
+     * @param int|1 $page_number Pagination: page number
+     * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Team[]
+     * @return \Kronup\Model\TeamsList
      */
-    public function teamList($x_org_id) {
+    public function teamList($x_org_id, $page_number = 1, $page_size = 100) {
+        if (isset($page_number) && $page_number < 1) {
+            throw new IAE('Invalid value for "$page_number" when calling TeamsApi.teamList, must be bigger than or equal to 1.');
+        }
+
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling TeamsApi.teamList, must be smaller than or equal to 500');
+        }
+
+        if (isset($page_size) && $page_size < 1) {
+            throw new IAE('Invalid value for "$page_size" when calling TeamsApi.teamList, must be bigger than or equal to 1.');
+        }
+
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -149,12 +163,15 @@ class TeamsApi extends AbstractApi {
         // Path template
         $rPath = "/teams";
         
-        /** @var \Kronup\Model\Team[] $result */
+        /** @var \Kronup\Model\TeamsList $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [
+                    "pageNumber" => S::toQueryValue($page_number),
+                    "pageSize" => S::toQueryValue($page_size),
+                ], $rHeaders, []
             ), 
-            "\Kronup\Model\Team[]"
+            "\Kronup\Model\TeamsList"
         );
             
         return $result;
@@ -232,13 +249,13 @@ class TeamsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestTeamUpdate $request_team_update 
+     * @param \Kronup\Model\PayloadTeamUpdate $payload_team_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Team
      */
-    public function teamUpdate($team_id, $x_org_id, $request_team_update) {
+    public function teamUpdate($team_id, $x_org_id, $payload_team_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -253,7 +270,7 @@ class TeamsApi extends AbstractApi {
         /** @var \Kronup\Model\Team $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $request_team_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $payload_team_update
             ), 
             "\Kronup\Model\Team"
         );

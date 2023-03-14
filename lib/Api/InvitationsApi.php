@@ -58,13 +58,13 @@ class InvitationsApi extends AbstractApi {
      * Create invitation
      *
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestInvitationCreate $request_invitation_create 
+     * @param \Kronup\Model\PayloadInvitationCreate $payload_invitation_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationCreate($x_org_id, $request_invitation_create) {
+    public function invitationCreate($x_org_id, $payload_invitation_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -79,7 +79,7 @@ class InvitationsApi extends AbstractApi {
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $request_invitation_create
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $payload_invitation_create
             ), 
             "\Kronup\Model\Invitation"
         );
@@ -124,12 +124,26 @@ class InvitationsApi extends AbstractApi {
      * List invitations
      *
      * @param string $x_org_id Organization ID
+     * @param int|1 $page_number Pagination: page number
+     * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Invitation[]
+     * @return \Kronup\Model\InvitationsList
      */
-    public function invitationList($x_org_id) {
+    public function invitationList($x_org_id, $page_number = 1, $page_size = 100) {
+        if (isset($page_number) && $page_number < 1) {
+            throw new IAE('Invalid value for "$page_number" when calling InvitationsApi.invitationList, must be bigger than or equal to 1.');
+        }
+
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling InvitationsApi.invitationList, must be smaller than or equal to 500');
+        }
+
+        if (isset($page_size) && $page_size < 1) {
+            throw new IAE('Invalid value for "$page_size" when calling InvitationsApi.invitationList, must be bigger than or equal to 1.');
+        }
+
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -141,12 +155,15 @@ class InvitationsApi extends AbstractApi {
         // Path template
         $rPath = "/invitations";
         
-        /** @var \Kronup\Model\Invitation[] $result */
+        /** @var \Kronup\Model\InvitationsList $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [
+                    "pageNumber" => S::toQueryValue($page_number),
+                    "pageSize" => S::toQueryValue($page_size),
+                ], $rHeaders, []
             ), 
-            "\Kronup\Model\Invitation[]"
+            "\Kronup\Model\InvitationsList"
         );
             
         return $result;
@@ -183,13 +200,13 @@ class InvitationsApi extends AbstractApi {
      *
      * @param string $invite_id Invitation ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestInvitationUpdate $request_invitation_update 
+     * @param \Kronup\Model\PayloadInvitationUpdate $payload_invitation_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationUpdate($invite_id, $x_org_id, $request_invitation_update) {
+    public function invitationUpdate($invite_id, $x_org_id, $payload_invitation_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -204,7 +221,7 @@ class InvitationsApi extends AbstractApi {
         /** @var \Kronup\Model\Invitation $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, [], $request_invitation_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["inviteId" => $invite_id]), $rPath, [], $rHeaders, [], $payload_invitation_update
             ), 
             "\Kronup\Model\Invitation"
         );

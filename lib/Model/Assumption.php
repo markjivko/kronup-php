@@ -30,7 +30,7 @@ class Assumption extends AbstractModel {
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "validated" => ["validated", "bool", null, "getValidated", "setValidated", false, ["r" => 0]], 
-        "experiment" => ["experiment", "\Kronup\Model\AssumptionExperiment", null, "getExperiment", "setExperiment", null, ["r" => 0]]
+        "experiment" => ["experiment", "\Kronup\Model\Experiment", null, "getExperiment", "setExperiment", null, ["r" => 0]]
     ];
 
     /**
@@ -128,16 +128,16 @@ class Assumption extends AbstractModel {
     /**
      * Get experiment - 
      *
-     * @return \Kronup\Model\AssumptionExperiment|null
+     * @return \Kronup\Model\Experiment|null
      */
-    public function getExperiment(): ?\Kronup\Model\AssumptionExperiment {
+    public function getExperiment(): ?\Kronup\Model\Experiment {
         return $this->_data["experiment"];
     }
 
     /**
      * Set experiment - 
      * 
-     * @param \Kronup\Model\AssumptionExperiment|null $experiment
+     * @param \Kronup\Model\Experiment|null $experiment
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -23,17 +23,23 @@ $sdk->config()->setDebug(true);
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
+// Pagination: page number
+$arg_page_number = 1;
+
+// Pagination: page size
+$arg_page_size = 100;
+
 try {
 
     /**
      * GET /teams
      * 
-     * @var \Kronup\Model\Team[] $response
+     * @var \Kronup\Model\TeamsList $response
      */
     $response = $sdk
         ->api()
         ->teams()
-        ->teamList($arg_x_org_id);
+        ->teamList($arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_dump($response);
 

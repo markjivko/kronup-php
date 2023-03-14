@@ -26,7 +26,7 @@ $arg_user_id = "user-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_user_role_update = (new \Kronup\Model\RequestUserRoleUpdate())
+$arg_payload_user_role_update = (new \Kronup\Model\PayloadUserRoleUpdate())
     
     // (optional) New site role
     ->setRoleSite('user')
@@ -44,7 +44,7 @@ try {
     $response = $sdk
         ->api()
         ->users()
-        ->userUpdateRole($arg_user_id, $arg_x_org_id, $arg_request_user_role_update);
+        ->userUpdateRole($arg_user_id, $arg_x_org_id, $arg_payload_user_role_update);
 
     var_dump($response);
 

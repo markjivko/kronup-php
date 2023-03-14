@@ -23,7 +23,7 @@ $sdk->config()->setDebug(true);
 // Organization ID
 $arg_org_id = "org-id-***";
 
-$arg_request_organization_update = (new \Kronup\Model\RequestOrganizationUpdate())
+$arg_payload_organization_update = (new \Kronup\Model\PayloadOrganizationUpdate())
     
     // (optional) Organization name
     ->setOrgName('Example, Inc.');
@@ -38,7 +38,7 @@ try {
     $response = $sdk
         ->api()
         ->organizations()
-        ->organizationUpdate($arg_org_id, $arg_request_organization_update);
+        ->organizationUpdate($arg_org_id, $arg_payload_organization_update);
 
     var_dump($response);
 

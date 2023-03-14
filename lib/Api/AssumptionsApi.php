@@ -35,13 +35,13 @@ class AssumptionsApi extends AbstractApi {
      * @param string $channel_id Channel ID
      * @param string $item_id Value Item ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestAssmCreate $request_assm_create 
+     * @param \Kronup\Model\PayloadAssmCreate $payload_assm_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function assumptionCreate($team_id, $channel_id, $item_id, $x_org_id, $request_assm_create) {
+    public function assumptionCreate($team_id, $channel_id, $item_id, $x_org_id, $payload_assm_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -56,7 +56,7 @@ class AssumptionsApi extends AbstractApi {
         /** @var \Kronup\Model\Assumption $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $request_assm_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $payload_assm_create
             ), 
             "\Kronup\Model\Assumption"
         );
@@ -117,6 +117,10 @@ class AssumptionsApi extends AbstractApi {
     public function assumptionList($team_id, $channel_id, $item_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling AssumptionsApi.assumptionList, must be bigger than or equal to 1.');
+        }
+
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling AssumptionsApi.assumptionList, must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
@@ -192,13 +196,13 @@ class AssumptionsApi extends AbstractApi {
      * @param string $item_id Value item ID
      * @param string $assm_id Assumption ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestAssmUpdate $request_assm_update 
+     * @param \Kronup\Model\PayloadAssmUpdate $payload_assm_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function assumptionUpdate($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $request_assm_update) {
+    public function assumptionUpdate($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -213,7 +217,7 @@ class AssumptionsApi extends AbstractApi {
         /** @var \Kronup\Model\Assumption $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $request_assm_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_update
             ), 
             "\Kronup\Model\Assumption"
         );
@@ -229,13 +233,13 @@ class AssumptionsApi extends AbstractApi {
      * @param string $item_id Value item ID
      * @param string $assm_id Assumption ID
      * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\RequestAssmValidate $request_assm_validate 
+     * @param \Kronup\Model\PayloadAssmValidate $payload_assm_validate 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function assumptionValidate($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $request_assm_validate) {
+    public function assumptionValidate($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_validate) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -250,7 +254,7 @@ class AssumptionsApi extends AbstractApi {
         /** @var \Kronup\Model\Assumption $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $request_assm_validate
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_validate
             ), 
             "\Kronup\Model\Assumption"
         );

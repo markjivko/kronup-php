@@ -23,7 +23,7 @@ $sdk->config()->setDebug(true);
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_request_invitation_create = (new \Kronup\Model\RequestInvitationCreate())
+$arg_payload_invitation_create = (new \Kronup\Model\PayloadInvitationCreate())
     
     // Invitation name
     ->setInviteName('null')
@@ -50,7 +50,7 @@ try {
     $response = $sdk
         ->api()
         ->invitations()
-        ->invitationCreate($arg_x_org_id, $arg_request_invitation_create);
+        ->invitationCreate($arg_x_org_id, $arg_payload_invitation_create);
 
     var_dump($response);
 
