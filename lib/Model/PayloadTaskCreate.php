@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Task_Create Model
+ * 
+ * Payload object required to create a Task
  */
 class PayloadTaskCreate extends AbstractModel {
 

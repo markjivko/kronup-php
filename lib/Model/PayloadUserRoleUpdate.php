@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_User_Role_Update Model
+ * 
+ * Payload object required to update User roles
  */
 class PayloadUserRoleUpdate extends AbstractModel {
 

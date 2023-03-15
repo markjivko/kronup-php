@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Assm_Validate Model
+ * 
+ * Payload object required to validate a Value Item assumption
  */
 class PayloadAssmValidate extends AbstractModel {
 

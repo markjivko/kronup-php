@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Channel_Update Model
+ * 
+ * Payload object required to update a Channel
  */
 class PayloadChannelUpdate extends AbstractModel {
 

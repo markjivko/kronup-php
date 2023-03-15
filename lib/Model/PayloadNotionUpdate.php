@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Notion_Update Model
+ * 
+ * Payload object required to update a Notion
  */
 class PayloadNotionUpdate extends AbstractModel {
 

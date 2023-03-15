@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Invitation_Update Model
+ * 
+ * Payload object required to update an Invitation
  */
 class PayloadInvitationUpdate extends AbstractModel {
 

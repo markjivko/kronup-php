@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Task_Feedback_Update Model
+ * 
+ * Payload object required to update feedback given to a Task
  */
 class PayloadTaskFeedbackUpdate extends AbstractModel {
 

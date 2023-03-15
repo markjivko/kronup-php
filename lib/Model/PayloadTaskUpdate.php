@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Task_Update Model
+ * 
+ * Payload object required to update a Task
  */
 class PayloadTaskUpdate extends AbstractModel {
 

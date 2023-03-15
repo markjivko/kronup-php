@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Organization_Update Model
+ * 
+ * Payload object required to update an Organization
  */
 class PayloadOrganizationUpdate extends AbstractModel {
 

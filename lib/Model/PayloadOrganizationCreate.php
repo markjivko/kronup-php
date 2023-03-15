@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Organization_Create Model
+ * 
+ * Payload object required to create an Organization
  */
 class PayloadOrganizationCreate extends AbstractModel {
 

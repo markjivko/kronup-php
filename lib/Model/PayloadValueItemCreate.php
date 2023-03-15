@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Value_Item_Create Model
+ * 
+ * Payload object required to create a Value Item
  */
 class PayloadValueItemCreate extends AbstractModel {
 

@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Invitation_Create Model
+ * 
+ * Payload object required to create an Invitation
  */
 class PayloadInvitationCreate extends AbstractModel {
 

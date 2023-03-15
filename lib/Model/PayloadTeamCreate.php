@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Team_Create Model
+ * 
+ * Payload object required to create a Team
  */
 class PayloadTeamCreate extends AbstractModel {
 

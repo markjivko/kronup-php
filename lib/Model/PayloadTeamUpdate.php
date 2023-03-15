@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Team_Update Model
+ * 
+ * Payload object required to update a Team
  */
 class PayloadTeamUpdate extends AbstractModel {
 

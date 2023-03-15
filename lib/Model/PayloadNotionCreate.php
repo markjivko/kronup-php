@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Notion_Create Model
+ * 
+ * Payload object required to create a Notion
  */
 class PayloadNotionCreate extends AbstractModel {
 

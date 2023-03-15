@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Value_Item_Update Model
+ * 
+ * Payload object required to update a Value Item
  */
 class PayloadValueItemUpdate extends AbstractModel {
 

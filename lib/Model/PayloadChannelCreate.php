@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Payload_Channel_Create Model
+ * 
+ * Payload object required to create a Channel
  */
 class PayloadChannelCreate extends AbstractModel {
 
