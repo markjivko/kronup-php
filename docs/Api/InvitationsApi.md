@@ -52,7 +52,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$invite_id** | **string**  | Invitation ID 
 
 ### Return type
@@ -95,7 +95,7 @@ Accept an invitation to join an organization
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$payload_invitation_create** | [**\Kronup\Model\PayloadInvitationCreate**](../../Model/PayloadInvitationCreate) |  
 
@@ -139,7 +139,7 @@ Create a new invitation to this organization
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$invite_id** | **string**  | Invitation ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -184,7 +184,7 @@ Delete invitation
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
@@ -228,7 +228,7 @@ Get a list of invitation models
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$invite_id** | **string**  | Invitation ID 
 
 ### Return type
@@ -272,7 +272,7 @@ Retrieve invitation model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$invite_id** | **string**  | Invitation ID 
  **$x_org_id** | **string**  | Organization ID 
  **$payload_invitation_update** | [**\Kronup\Model\PayloadInvitationUpdate**](../../Model/PayloadInvitationUpdate) |  

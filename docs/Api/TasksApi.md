@@ -66,7 +66,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -117,7 +117,7 @@ Assign task to user
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -167,7 +167,7 @@ Add a task to value item
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -218,7 +218,7 @@ Delete a task from a value item
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -270,7 +270,7 @@ Add a discovery to task
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -323,7 +323,7 @@ Delete a task discovery
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -376,7 +376,7 @@ Update a task discovery
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -428,7 +428,7 @@ Add a feedback to task
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -481,7 +481,7 @@ Delete a feedback for a task
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -535,7 +535,7 @@ Update a reply to a task feedback
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -588,7 +588,7 @@ Update a task feedback
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -640,7 +640,7 @@ Get a list of task models
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -692,7 +692,7 @@ Add a notion to task
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -743,7 +743,7 @@ Remove a notion from task
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -794,7 +794,7 @@ Retrieve task model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 

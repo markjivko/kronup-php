@@ -56,7 +56,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -106,7 +106,7 @@ Add an assumption to value item
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -157,7 +157,7 @@ Delete an assumption from a value item
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
@@ -208,7 +208,7 @@ Get a list of assumption models
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -259,7 +259,7 @@ Retrieve assumption model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -311,7 +311,7 @@ Update assumption details
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 

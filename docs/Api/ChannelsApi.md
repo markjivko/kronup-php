@@ -54,7 +54,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$user_id** | **string**  | User ID 
@@ -101,7 +101,7 @@ Assign a user to a channel
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
  **$payload_channel_create** | [**\Kronup\Model\PayloadChannelCreate**](../../Model/PayloadChannelCreate) |  
@@ -147,7 +147,7 @@ Create a new channel for a team
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
@@ -194,7 +194,7 @@ Delete a channel and unassign all users
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$user_id** | **string**  | User ID 
@@ -242,7 +242,7 @@ Remove a user from a channel
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 

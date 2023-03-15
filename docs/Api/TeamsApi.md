@@ -55,7 +55,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
@@ -100,7 +100,7 @@ Assign a user to a team
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$payload_team_create** | [**\Kronup\Model\PayloadTeamCreate**](../../Model/PayloadTeamCreate) |  
 
@@ -144,7 +144,7 @@ Create a new team to this organization
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -189,7 +189,7 @@ Delete a team and unassign all users
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
@@ -234,7 +234,7 @@ Get a list of team models
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -279,7 +279,7 @@ Retrieve team model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
@@ -325,7 +325,7 @@ Remove a user from a team
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$x_org_id** | **string**  | Organization ID 
  **$payload_team_update** | [**\Kronup\Model\PayloadTeamUpdate**](../../Model/PayloadTeamUpdate) |  

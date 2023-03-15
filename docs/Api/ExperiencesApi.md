@@ -53,7 +53,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$user_id** | **string**  | User ID 
  **$grade** | **string**  | Grade between 1 and 10 
@@ -100,7 +100,7 @@ Anonymously evaluate another user on this notion
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$grade** | **string**  | Grade between 1 and 10 
  **$x_org_id** | **string**  | Organization ID 
@@ -146,7 +146,7 @@ Evaluate yourself on a notion
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
@@ -193,7 +193,7 @@ Retrieve experience model for specified Notion
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]

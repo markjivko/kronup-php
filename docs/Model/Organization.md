@@ -13,7 +13,7 @@ Method name | Return type | Description
 **getId()** | **string** | Organization ID
 **getOrgName()** | **string** | Organization name
 **getOrgIcon()** | **string** | Organization logo URL
-**getOrgOwners()** | **string[]** | Organization owners
+**getOrgOwners()** | **string[]** | Organization owner IDs
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

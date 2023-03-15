@@ -55,7 +55,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -103,7 +103,7 @@ Advance a value item
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
@@ -151,7 +151,7 @@ Add a value item to planning
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -200,7 +200,7 @@ Delete a value item from the flow
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
@@ -249,7 +249,7 @@ Get a list of value item models
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
@@ -298,7 +298,7 @@ Retrieve value item model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 

@@ -19,5 +19,5 @@ Method name | Return type | Description
 **getRoleOrg()** | [**\Kronup\Model\UserRoleOrg[]**](../UserRoleOrg) | Organization roles
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
-**getOrgs()** | [**\Kronup\Model\Organization[]**](../Organization) | 
+**getOrgs()** | [**\Kronup\Model\Organization[]**](../Organization) | Organizations
 

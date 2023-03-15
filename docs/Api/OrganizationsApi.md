@@ -49,7 +49,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$payload_organization_create** | [**\Kronup\Model\PayloadOrganizationCreate**](../../Model/PayloadOrganizationCreate) |  
 
 ### Return type
@@ -91,7 +91,7 @@ Add an organization owned by the current user
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$org_id** | **string**  | Organization ID 
 
 ### Return type
@@ -134,7 +134,7 @@ Remove organization
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$org_id** | **string**  | Organization ID 
  **$payload_organization_update** | [**\Kronup\Model\PayloadOrganizationUpdate**](../../Model/PayloadOrganizationUpdate) |  
 

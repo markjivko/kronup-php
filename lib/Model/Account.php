@@ -244,7 +244,7 @@ class Account extends AbstractModel {
     }
 
     /**
-     * Get orgs - 
+     * Get orgs - Organizations
      *
      * @return \Kronup\Model\Organization[]|null
      */
@@ -253,9 +253,9 @@ class Account extends AbstractModel {
     }
 
     /**
-     * Set orgs - 
+     * Set orgs - Organizations
      * 
-     * @param \Kronup\Model\Organization[]|null $orgs
+     * @param \Kronup\Model\Organization[]|null $orgs Organizations
      * @throws \InvalidArgumentException
      * @return $this
      */

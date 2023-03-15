@@ -50,7 +50,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$item_id** | **string**  | Value item ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -94,7 +94,7 @@ Delete a value item from Deep Context";
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$item_id** | **string**  | Value item ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -140,7 +140,7 @@ Retrieve value item model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$search_term** | **string**  | Search term 
  **$page_number** | **int**  | Pagination: page number  [default to 1]

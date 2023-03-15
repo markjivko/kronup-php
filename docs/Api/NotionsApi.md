@@ -52,7 +52,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$payload_notion_create** | [**\Kronup\Model\PayloadNotionCreate**](../../Model/PayloadNotionCreate) |  
 
@@ -96,7 +96,7 @@ Define a notion
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -140,7 +140,7 @@ Delete a notion model. This also removes the associated Experiences for all user
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -186,7 +186,7 @@ Retrieve notion model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$search_term** | **string**  | Search term 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
@@ -233,7 +233,7 @@ Get a list of notion models
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$x_org_id** | **string**  | Organization ID 
  **$payload_notion_update** | [**\Kronup\Model\PayloadNotionUpdate**](../../Model/PayloadNotionUpdate) |  

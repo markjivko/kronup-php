@@ -52,7 +52,7 @@ Method | Description
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
@@ -96,7 +96,7 @@ Get a list of user models
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
 
 ### Return type
@@ -139,7 +139,7 @@ Retrieve user model
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
 
@@ -184,7 +184,7 @@ Remove user from Organization
 ### Parameters
 
 Name | Type | Description
-------------- | ------------- | ------------- | -------------
+------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
  **$x_org_id** | **string**  | Organization ID 
  **$payload_user_role_update** | [**\Kronup\Model\PayloadUserRoleUpdate**](../../Model/PayloadUserRoleUpdate) |  

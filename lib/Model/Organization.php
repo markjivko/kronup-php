@@ -105,7 +105,7 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Get orgOwners - Organization owners
+     * Get orgOwners - Organization owner IDs
      *
      * @return string[]|null
      */
@@ -114,9 +114,9 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Set orgOwners - Organization owners
+     * Set orgOwners - Organization owner IDs
      * 
-     * @param string[]|null $org_owners Organization owners
+     * @param string[]|null $org_owners Organization owner IDs
      * @throws \InvalidArgumentException
      * @return $this
      */
