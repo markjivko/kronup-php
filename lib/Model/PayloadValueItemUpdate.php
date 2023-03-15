@@ -115,7 +115,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Get type - Value item type:  * f - Feature  * b - Bug fix  * c - Chore
+     * Get type - Value item type
      *
      * @return string|null
      */
@@ -124,9 +124,9 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Set type - Value item type:  * f - Feature  * b - Bug fix  * c - Chore
+     * Set type - Value item type
      * 
-     * @param string|null $type Value item type:  * f - Feature  * b - Bug fix  * c - Chore
+     * @param string|null $type Value item type
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -135,7 +135,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Get priority - Value item MoSCoW priority:  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT have
+     * Get priority - Value item MoSCoW priority
      *
      * @return string|null
      */
@@ -144,9 +144,9 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Set priority - Value item MoSCoW priority:  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT have
+     * Set priority - Value item MoSCoW priority
      * 
-     * @param string|null $priority Value item MoSCoW priority:  * m - Must-have  * s - Should-have  * c - Could-have  * w - Will NOT have
+     * @param string|null $priority Value item MoSCoW priority
      * @throws \InvalidArgumentException
      * @return $this
      */

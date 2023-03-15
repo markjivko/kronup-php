@@ -46,7 +46,7 @@ $arg_payload_assm_validate = (new \Kronup\Model\PayloadAssmValidate())
     // (optional) Experiment findings
     ->setDetails('null')
     
-    // (optional) Experiment state:  * i - Idle  * r - Running  * d - Done
+    // (optional) Experiment state
     ->setState('null');
 
 try {

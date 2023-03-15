@@ -14,6 +14,6 @@ Method name | Return type | Description
 **getAssigneeId()** | **string** | Author ID
 **getDigest()** | **string** | Task title
 **getDetails()** | **string** | Task description
-**getState()** | **string** | Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done [default to `'idle'`]
+**getState()** | **string** | Task state [default to `'idle'`]
 **getNotionIds()** | **string[]** | Notions
 

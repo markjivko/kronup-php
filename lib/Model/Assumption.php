@@ -29,7 +29,6 @@ class Assumption extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
-        "validated" => ["validated", "bool", null, "getValidated", "setValidated", false, ["r" => 0]], 
         "experiment" => ["experiment", "\Kronup\Model\Experiment", null, "getExperiment", "setExperiment", null, ["r" => 0]]
     ];
 
@@ -103,26 +102,6 @@ class Assumption extends AbstractModel {
      */
     public function setDigest($digest) {
         return $this->_set("digest", $digest);
-    }
-
-    /**
-     * Get validated - Assumption was validated by experiments
-     *
-     * @return bool|null
-     */
-    public function getValidated(): ?bool {
-        return $this->_data["validated"];
-    }
-
-    /**
-     * Set validated - Assumption was validated by experiments
-     * 
-     * @param bool|null $validated Assumption was validated by experiments
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setValidated($validated) {
-        return $this->_set("validated", $validated);
     }
 
     /**

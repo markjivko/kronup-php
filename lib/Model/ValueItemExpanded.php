@@ -47,7 +47,9 @@ class ValueItemExpanded extends AbstractModel {
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
-        "tasks" => ["tasks", "\Kronup\Model\TaskExpanded[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]]
+        "tasks" => ["tasks", "\Kronup\Model\TaskExpanded[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
+        "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
 
     /**
@@ -241,7 +243,7 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Get stage - Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
+     * Get stage - Value Item Stage
      *
      * @return string|null
      */
@@ -250,9 +252,9 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Set stage - Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
+     * Set stage - Value Item Stage
      * 
-     * @param string|null $stage Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
+     * @param string|null $stage Value Item Stage
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -261,7 +263,7 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Get canAdvance - Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed
+     * Get canAdvance - Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization manager or administrator
      *
      * @return bool|null
      */
@@ -270,9 +272,9 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Set canAdvance - Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed
+     * Set canAdvance - Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization manager or administrator
      * 
-     * @param bool|null $can_advance Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed
+     * @param bool|null $can_advance Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization manager or administrator
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -281,7 +283,7 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Get type - Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
+     * Get type - Value Item Type
      *
      * @return string|null
      */
@@ -290,9 +292,9 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Set type - Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
+     * Set type - Value Item Type
      * 
-     * @param string|null $type Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
+     * @param string|null $type Value Item Type
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -301,7 +303,7 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Get priority - Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
+     * Get priority - Value Item Priority using MoSCoW
      *
      * @return string|null
      */
@@ -310,9 +312,9 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Set priority - Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
+     * Set priority - Value Item Priority using MoSCoW
      * 
-     * @param string|null $priority Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
+     * @param string|null $priority Value Item Priority using MoSCoW
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -358,5 +360,45 @@ class ValueItemExpanded extends AbstractModel {
      */
     public function setTasks(?array $tasks) {
         return $this->_set("tasks", $tasks);
+    }
+
+    /**
+     * Get createdAt - Created timestamp
+     *
+     * @return string|null
+     */
+    public function getCreatedAt(): ?string {
+        return $this->_data["createdAt"];
+    }
+
+    /**
+     * Set createdAt - Created timestamp
+     * 
+     * @param string|null $created_at Created timestamp
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setCreatedAt($created_at) {
+        return $this->_set("createdAt", $created_at);
+    }
+
+    /**
+     * Get updatedAt - Updated timestamp
+     *
+     * @return string|null
+     */
+    public function getUpdatedAt(): ?string {
+        return $this->_data["updatedAt"];
+    }
+
+    /**
+     * Set updatedAt - Updated timestamp
+     * 
+     * @param string|null $updated_at Updated timestamp
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at) {
+        return $this->_set("updatedAt", $updated_at);
     }
 }

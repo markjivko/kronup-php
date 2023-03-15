@@ -144,7 +144,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get state - Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done
+     * Get state - Task state
      *
      * @return string|null
      */
@@ -153,9 +153,9 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Set state - Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done
+     * Set state - Task state
      * 
-     * @param string|null $state Task state    * `idle` - Idle   * `in progress` - In progress   * `in review` - In review   * `done` - Done
+     * @param string|null $state Task state
      * @throws \InvalidArgumentException
      * @return $this
      */

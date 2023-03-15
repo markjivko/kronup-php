@@ -26,7 +26,7 @@ class EvaluationsPeers extends AbstractModel {
     protected static $_definition = [
         "count" => ["count", "float", null, "getCount", "setCount", null, ["r" => 0]], 
         "average" => ["average", "string", null, "getAverage", "setAverage", null, ["r" => 0]], 
-        "last10" => ["last10", "float[]", null, "getLast10", "setLast10", null, ["r" => 0, "c" => 1]]
+        "recent" => ["recent", "float[]", null, "getRecent", "setRecent", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -82,22 +82,22 @@ class EvaluationsPeers extends AbstractModel {
     }
 
     /**
-     * Get last10 - Last 10 values
+     * Get recent - Recent grades
      *
      * @return float[]|null
      */
-    public function getLast10(): ?array {
-        return $this->_data["last10"];
+    public function getRecent(): ?array {
+        return $this->_data["recent"];
     }
 
     /**
-     * Set last10 - Last 10 values
+     * Set recent - Recent grades
      * 
-     * @param float[]|null $last10 Last 10 values
+     * @param float[]|null $recent Recent grades
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setLast10(?array $last10) {
-        return $this->_set("last10", $last10);
+    public function setRecent(?array $recent) {
+        return $this->_set("recent", $recent);
     }
 }

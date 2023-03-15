@@ -118,7 +118,7 @@ class PayloadAssmValidate extends AbstractModel {
     }
 
     /**
-     * Get state - Experiment state:  * i - Idle  * r - Running  * d - Done
+     * Get state - Experiment state
      *
      * @return string|null
      */
@@ -127,9 +127,9 @@ class PayloadAssmValidate extends AbstractModel {
     }
 
     /**
-     * Set state - Experiment state:  * i - Idle  * r - Running  * d - Done
+     * Set state - Experiment state
      * 
-     * @param string|null $state Experiment state:  * i - Idle  * r - Running  * d - Done
+     * @param string|null $state Experiment state
      * @throws \InvalidArgumentException
      * @return $this
      */

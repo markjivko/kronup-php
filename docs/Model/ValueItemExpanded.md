@@ -17,10 +17,12 @@ Method name | Return type | Description
 **getDigest()** | **string** | Value item digest
 **getDetails()** | **string** | Value item description
 **getAuthorId()** | **string** | Author ID
-**getStage()** | **string** | Value Item Stage    * `planning` - Planning   * `validation` - Validation   * `execution` - Execution   * `deep context` - Deep Context
-**getCanAdvance()** | **bool** | Value Item can advance to the next stage   * In Planning: at least 1 Assumption was added   * In Validation: all Assumptions were validated   * In Execution: all Tasks were completed [default to `false`]
-**getType()** | **string** | Value Item Type    * `feature` - Feature   * `bug fix` - Bug fix   * `chore` - Chore
-**getPriority()** | **string** | Value Item Priority using MoSCoW    * `must` - Must-have   * `should` - Should-have   * `could` - Could-have   * `will not` - Will NOT have
+**getStage()** | **string** | Value Item Stage
+**getCanAdvance()** | **bool** | Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization manager or administrator [default to `false`]
+**getType()** | **string** | Value Item Type
+**getPriority()** | **string** | Value Item Priority using MoSCoW
 **getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | Assumptions
 **getTasks()** | [**\Kronup\Model\TaskExpanded[]**](../TaskExpanded) | List of expanded Tasks
+**getCreatedAt()** | **string** | Created timestamp
+**getUpdatedAt()** | **string** | Updated timestamp
 

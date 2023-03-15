@@ -132,7 +132,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get issue - Feedback issue    * `value` - Value   * `complexity` - Complexity   * `flexibility` - Flexibility   * `testing` - Testing   * `security` - Security   * `ci/cd` - CI/CD   * `standards` - Standards   * `misc` - Miscellaneous
+     * Get issue - Feedback issue
      *
      * @return string|null
      */
@@ -141,9 +141,9 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set issue - Feedback issue    * `value` - Value   * `complexity` - Complexity   * `flexibility` - Flexibility   * `testing` - Testing   * `security` - Security   * `ci/cd` - CI/CD   * `standards` - Standards   * `misc` - Miscellaneous
+     * Set issue - Feedback issue
      * 
-     * @param string|null $issue Feedback issue    * `value` - Value   * `complexity` - Complexity   * `flexibility` - Flexibility   * `testing` - Testing   * `security` - Security   * `ci/cd` - CI/CD   * `standards` - Standards   * `misc` - Miscellaneous
+     * @param string|null $issue Feedback issue
      * @throws \InvalidArgumentException
      * @return $this
      */

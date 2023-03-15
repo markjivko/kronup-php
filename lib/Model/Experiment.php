@@ -141,7 +141,7 @@ class Experiment extends AbstractModel {
     }
 
     /**
-     * Get state - Experiment state    * `idle` - Idle   * `running` - Running   * `done` - Done
+     * Get state - Experiment state
      *
      * @return string|null
      */
@@ -150,9 +150,9 @@ class Experiment extends AbstractModel {
     }
 
     /**
-     * Set state - Experiment state    * `idle` - Idle   * `running` - Running   * `done` - Done
+     * Set state - Experiment state
      * 
-     * @param string|null $state Experiment state    * `idle` - Idle   * `running` - Running   * `done` - Done
+     * @param string|null $state Experiment state
      * @throws \InvalidArgumentException
      * @return $this
      */
