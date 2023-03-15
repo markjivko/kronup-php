@@ -103,7 +103,7 @@ class InvitationsList extends AbstractModel {
     }
 
     /**
-     * Get invitations - 
+     * Get invitations - Invitations
      *
      * @return \Kronup\Model\Invitation[]|null
      */
@@ -112,9 +112,9 @@ class InvitationsList extends AbstractModel {
     }
 
     /**
-     * Set invitations - 
+     * Set invitations - Invitations
      * 
-     * @param \Kronup\Model\Invitation[]|null $invitations
+     * @param \Kronup\Model\Invitation[]|null $invitations Invitations
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -103,7 +103,7 @@ class TasksList extends AbstractModel {
     }
 
     /**
-     * Get tasks - 
+     * Get tasks - Tasks
      *
      * @return \Kronup\Model\Task[]|null
      */
@@ -112,9 +112,9 @@ class TasksList extends AbstractModel {
     }
 
     /**
-     * Set tasks - 
+     * Set tasks - Tasks
      * 
-     * @param \Kronup\Model\Task[]|null $tasks
+     * @param \Kronup\Model\Task[]|null $tasks Tasks
      * @throws \InvalidArgumentException
      * @return $this
      */

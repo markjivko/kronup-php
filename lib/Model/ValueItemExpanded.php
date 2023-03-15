@@ -343,7 +343,7 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Get tasks - List of expanded Tasks
+     * Get tasks - Expanded Tasks
      *
      * @return \Kronup\Model\TaskExpanded[]|null
      */
@@ -352,9 +352,9 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Set tasks - List of expanded Tasks
+     * Set tasks - Expanded Tasks
      * 
-     * @param \Kronup\Model\TaskExpanded[]|null $tasks List of expanded Tasks
+     * @param \Kronup\Model\TaskExpanded[]|null $tasks Expanded Tasks
      * @throws \InvalidArgumentException
      * @return $this
      */

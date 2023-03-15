@@ -103,7 +103,7 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Get items - 
+     * Get items - Value Items
      *
      * @return \Kronup\Model\ValueItem[]|null
      */
@@ -112,9 +112,9 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Set items - 
+     * Set items - Value Items
      * 
-     * @param \Kronup\Model\ValueItem[]|null $items
+     * @param \Kronup\Model\ValueItem[]|null $items Value Items
      * @throws \InvalidArgumentException
      * @return $this
      */

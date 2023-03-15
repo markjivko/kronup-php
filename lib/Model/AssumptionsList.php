@@ -103,7 +103,7 @@ class AssumptionsList extends AbstractModel {
     }
 
     /**
-     * Get assumptions - 
+     * Get assumptions - Assumptions
      *
      * @return \Kronup\Model\Assumption[]|null
      */
@@ -112,9 +112,9 @@ class AssumptionsList extends AbstractModel {
     }
 
     /**
-     * Set assumptions - 
+     * Set assumptions - Assumptions
      * 
-     * @param \Kronup\Model\Assumption[]|null $assumptions
+     * @param \Kronup\Model\Assumption[]|null $assumptions Assumptions
      * @throws \InvalidArgumentException
      * @return $this
      */

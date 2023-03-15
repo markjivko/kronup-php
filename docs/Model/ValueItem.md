@@ -22,7 +22,7 @@ Method name | Return type | Description
 **getType()** | **string** | Value Item Type
 **getPriority()** | **string** | Value Item Priority using MoSCoW
 **getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | Assumptions
-**getTasks()** | [**\Kronup\Model\Task[]**](../Task) | List of Tasks
+**getTasks()** | [**\Kronup\Model\Task[]**](../Task) | Tasks
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

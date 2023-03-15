@@ -11,5 +11,5 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getTeamId()** | **string** | Team ID
-**getChannelIds()** | **string[]** | Channels
+**getChannelIds()** | **string[]** | Channels IDs
 

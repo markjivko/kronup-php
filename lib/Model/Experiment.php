@@ -61,7 +61,7 @@ class Experiment extends AbstractModel {
     }
 
     /**
-     * Get authorIds - 
+     * Get authorIds - Author IDs
      *
      * @return string[]|null
      */
@@ -70,9 +70,9 @@ class Experiment extends AbstractModel {
     }
 
     /**
-     * Set authorIds - 
+     * Set authorIds - Author IDs
      * 
-     * @param string[]|null $author_ids
+     * @param string[]|null $author_ids Author IDs
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -164,7 +164,7 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Get notionIds - Notions
+     * Get notionIds - Notion IDs
      *
      * @return string[]|null
      */
@@ -173,9 +173,9 @@ class Task extends AbstractModel {
     }
 
     /**
-     * Set notionIds - Notions
+     * Set notionIds - Notion IDs
      * 
-     * @param string[]|null $notion_ids Notions
+     * @param string[]|null $notion_ids Notion IDs
      * @throws \InvalidArgumentException
      * @return $this
      */

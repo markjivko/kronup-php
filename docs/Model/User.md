@@ -14,9 +14,9 @@ Method name | Return type | Description
 **getUserEmail()** | **string** | User e-mail address
 **getUserName()** | **string** | User name
 **getUserIcon()** | **string** | User icon URL
-**getTeams()** | [**\Kronup\Model\UserTeam[]**](../UserTeam) | 
+**getTeams()** | [**\Kronup\Model\UserTeam[]**](../UserTeam) | User Teams
 **getRoleSite()** | **string** | User site role
-**getRoleOrg()** | [**\Kronup\Model\UserRoleOrg[]**](../UserRoleOrg) | 
+**getRoleOrg()** | [**\Kronup\Model\UserRoleOrg[]**](../UserRoleOrg) | Organization roles
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

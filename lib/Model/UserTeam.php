@@ -61,7 +61,7 @@ class UserTeam extends AbstractModel {
     }
 
     /**
-     * Get channelIds - Channels
+     * Get channelIds - Channels IDs
      *
      * @return string[]|null
      */
@@ -70,9 +70,9 @@ class UserTeam extends AbstractModel {
     }
 
     /**
-     * Set channelIds - Channels
+     * Set channelIds - Channels IDs
      * 
-     * @param string[]|null $channel_ids Channels
+     * @param string[]|null $channel_ids Channels IDs
      * @throws \InvalidArgumentException
      * @return $this
      */

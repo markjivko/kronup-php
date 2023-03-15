@@ -82,7 +82,7 @@ class Minute extends AbstractModel {
     }
 
     /**
-     * Get feedback - Feedback
+     * Get feedback - Feedback items
      *
      * @return \Kronup\Model\MinuteFeedback[]|null
      */
@@ -91,9 +91,9 @@ class Minute extends AbstractModel {
     }
 
     /**
-     * Set feedback - Feedback
+     * Set feedback - Feedback items
      * 
-     * @param \Kronup\Model\MinuteFeedback[]|null $feedback Feedback
+     * @param \Kronup\Model\MinuteFeedback[]|null $feedback Feedback items
      * @throws \InvalidArgumentException
      * @return $this
      */

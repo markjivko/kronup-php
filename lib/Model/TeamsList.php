@@ -103,7 +103,7 @@ class TeamsList extends AbstractModel {
     }
 
     /**
-     * Get teams - 
+     * Get teams - Teams
      *
      * @return \Kronup\Model\Team[]|null
      */
@@ -112,9 +112,9 @@ class TeamsList extends AbstractModel {
     }
 
     /**
-     * Set teams - 
+     * Set teams - Teams
      * 
-     * @param \Kronup\Model\Team[]|null $teams
+     * @param \Kronup\Model\Team[]|null $teams Teams
      * @throws \InvalidArgumentException
      * @return $this
      */

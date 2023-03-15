@@ -103,7 +103,7 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Get users - 
+     * Get users - Users
      *
      * @return \Kronup\Model\User[]|null
      */
@@ -112,9 +112,9 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Set users - 
+     * Set users - Users
      * 
-     * @param \Kronup\Model\User[]|null $users
+     * @param \Kronup\Model\User[]|null $users Users
      * @throws \InvalidArgumentException
      * @return $this
      */

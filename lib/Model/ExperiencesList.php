@@ -103,7 +103,7 @@ class ExperiencesList extends AbstractModel {
     }
 
     /**
-     * Get experiences - 
+     * Get experiences - Experiences
      *
      * @return \Kronup\Model\Experience[]|null
      */
@@ -112,9 +112,9 @@ class ExperiencesList extends AbstractModel {
     }
 
     /**
-     * Set experiences - 
+     * Set experiences - Experiences
      * 
-     * @param \Kronup\Model\Experience[]|null $experiences
+     * @param \Kronup\Model\Experience[]|null $experiences Experiences
      * @throws \InvalidArgumentException
      * @return $this
      */

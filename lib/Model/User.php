@@ -143,7 +143,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get teams - 
+     * Get teams - User Teams
      *
      * @return \Kronup\Model\UserTeam[]|null
      */
@@ -152,9 +152,9 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set teams - 
+     * Set teams - User Teams
      * 
-     * @param \Kronup\Model\UserTeam[]|null $teams
+     * @param \Kronup\Model\UserTeam[]|null $teams User Teams
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -183,7 +183,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get roleOrg - 
+     * Get roleOrg - Organization roles
      *
      * @return \Kronup\Model\UserRoleOrg[]|null
      */
@@ -192,9 +192,9 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set roleOrg - 
+     * Set roleOrg - Organization roles
      * 
-     * @param \Kronup\Model\UserRoleOrg[]|null $role_org
+     * @param \Kronup\Model\UserRoleOrg[]|null $role_org Organization roles
      * @throws \InvalidArgumentException
      * @return $this
      */

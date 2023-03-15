@@ -103,7 +103,7 @@ class NotionsList extends AbstractModel {
     }
 
     /**
-     * Get notions - 
+     * Get notions - Notions
      *
      * @return \Kronup\Model\Notion[]|null
      */
@@ -112,9 +112,9 @@ class NotionsList extends AbstractModel {
     }
 
     /**
-     * Set notions - 
+     * Set notions - Notions
      * 
-     * @param \Kronup\Model\Notion[]|null $notions
+     * @param \Kronup\Model\Notion[]|null $notions Notions
      * @throws \InvalidArgumentException
      * @return $this
      */
