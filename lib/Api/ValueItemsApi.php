@@ -185,7 +185,7 @@ class ValueItemsApi extends AbstractApi {
     }
     
     /**
-     * Fetch Value Item
+     * Fetch value item
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
