@@ -62,7 +62,7 @@ class DeepContextApi extends AbstractApi {
     }
     
     /**
-     * Fetch value item
+     * Fetch expanded value item
      *
      * @param string $item_id Value item ID
      * @param string $x_org_id Organization ID

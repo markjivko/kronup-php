@@ -24,7 +24,7 @@ Method | Description
 [**valueItemCreate()**](#valueitemcreate) | Create value item
 [**valueItemDelete()**](#valueitemdelete) | Delete value item
 [**valueItemList()**](#valueitemlist) | List value items
-[**valueItemRead()**](#valueitemread) | Fetch value item
+[**valueItemRead()**](#valueitemread) | Fetch Value Item
 [**valueItemUpdate()**](#valueitemupdate) | Update value item
 
 
@@ -261,9 +261,9 @@ Name | Type | Description
 
 ### Description
 
-> Fetch value item
+> Fetch Value Item
 
-Retrieve value item model
+Retrieve Value Item model
 
 [Back to top](#top){: .btn .btn-purple }
 

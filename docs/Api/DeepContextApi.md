@@ -21,7 +21,7 @@ $sdk->api()->deepContext();
 Method | Description
 ------------- | -------------
 [**deepContextDelete()**](#deepcontextdelete) | Delete value item
-[**deepContextRead()**](#deepcontextread) | Fetch value item
+[**deepContextRead()**](#deepcontextread) | Fetch expanded value item
 [**deepContextSearch()**](#deepcontextsearch) | Search value items
 
 
@@ -104,7 +104,7 @@ Name | Type | Description
 
 ### Description
 
-> Fetch value item
+> Fetch expanded value item
 
 Retrieve value item model
 
