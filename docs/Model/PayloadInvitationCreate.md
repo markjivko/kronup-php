@@ -6,6 +6,8 @@ layout: page
 
 # PayloadInvitationCreate
 
+Payload object required to create an Invitation
+
 ## Model getters
 
 Method name | Return type | Description

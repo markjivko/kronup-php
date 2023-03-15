@@ -6,6 +6,8 @@ layout: page
 
 # Error404
 
+Resource not found
+
 ## Model getters
 
 Method name | Return type | Description

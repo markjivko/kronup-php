@@ -6,6 +6,8 @@ layout: page
 
 # PayloadChannelUpdate
 
+Payload object required to update a Channel
+
 ## Model getters
 
 Method name | Return type | Description

@@ -6,6 +6,8 @@ layout: page
 
 # Error402
 
+Payment required
+
 ## Model getters
 
 Method name | Return type | Description

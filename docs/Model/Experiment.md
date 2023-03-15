@@ -6,6 +6,8 @@ layout: page
 
 # Experiment
 
+Experiment meant to validate assumption
+
 ## Model getters
 
 Method name | Return type | Description

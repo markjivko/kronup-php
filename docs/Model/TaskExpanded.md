@@ -6,6 +6,8 @@ layout: page
 
 # TaskExpanded
 
+Task model without Minutes
+
 ## Model getters
 
 Method name | Return type | Description

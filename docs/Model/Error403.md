@@ -6,6 +6,8 @@ layout: page
 
 # Error403
 
+Operation not allowed
+
 ## Model getters
 
 Method name | Return type | Description

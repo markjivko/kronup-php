@@ -6,6 +6,8 @@ layout: page
 
 # Error400
 
+Invalid argument error
+
 ## Model getters
 
 Method name | Return type | Description

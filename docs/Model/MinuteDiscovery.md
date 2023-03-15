@@ -6,6 +6,8 @@ layout: page
 
 # MinuteDiscovery
 
+Task discovery recorded in an iteration
+
 ## Model getters
 
 Method name | Return type | Description

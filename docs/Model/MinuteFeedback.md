@@ -6,6 +6,8 @@ layout: page
 
 # MinuteFeedback
 
+Task feedback recorded in an iteration
+
 ## Model getters
 
 Method name | Return type | Description

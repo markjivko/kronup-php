@@ -6,6 +6,8 @@ layout: page
 
 # Assumption
 
+Value Item Assumption
+
 ## Model getters
 
 Method name | Return type | Description

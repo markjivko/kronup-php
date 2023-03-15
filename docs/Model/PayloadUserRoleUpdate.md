@@ -6,6 +6,8 @@ layout: page
 
 # PayloadUserRoleUpdate
 
+Payload object required to update User roles
+
 ## Model getters
 
 Method name | Return type | Description

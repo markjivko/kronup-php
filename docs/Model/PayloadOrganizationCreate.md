@@ -6,6 +6,8 @@ layout: page
 
 # PayloadOrganizationCreate
 
+Payload object required to create an Organization
+
 ## Model getters
 
 Method name | Return type | Description

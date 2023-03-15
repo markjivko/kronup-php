@@ -6,6 +6,8 @@ layout: page
 
 # PayloadValueItemCreate
 
+Payload object required to create a Value Item
+
 ## Model getters
 
 Method name | Return type | Description

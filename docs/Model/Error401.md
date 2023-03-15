@@ -6,6 +6,8 @@ layout: page
 
 # Error401
 
+Unauthorized error
+
 ## Model getters
 
 Method name | Return type | Description

@@ -6,6 +6,8 @@ layout: page
 
 # PayloadAssmValidate
 
+Payload object required to validate a Value Item assumption
+
 ## Model getters
 
 Method name | Return type | Description

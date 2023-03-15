@@ -6,6 +6,8 @@ layout: page
 
 # PayloadTeamCreate
 
+Payload object required to create a Team
+
 ## Model getters
 
 Method name | Return type | Description

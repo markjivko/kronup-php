@@ -6,6 +6,8 @@ layout: page
 
 # PayloadTaskFeedbackUpdate
 
+Payload object required to update feedback given to a Task
+
 ## Model getters
 
 Method name | Return type | Description

@@ -6,6 +6,8 @@ layout: page
 
 # PayloadInvitationUpdate
 
+Payload object required to update an Invitation
+
 ## Model getters
 
 Method name | Return type | Description

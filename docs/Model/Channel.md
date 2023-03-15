@@ -6,6 +6,8 @@ layout: page
 
 # Channel
 
+Channel
+
 ## Model getters
 
 Method name | Return type | Description

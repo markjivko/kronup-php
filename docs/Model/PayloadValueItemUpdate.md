@@ -6,6 +6,8 @@ layout: page
 
 # PayloadValueItemUpdate
 
+Payload object required to update a Value Item
+
 ## Model getters
 
 Method name | Return type | Description
