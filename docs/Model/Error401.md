@@ -13,5 +13,5 @@ Unauthorized error
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Unique lowercase string that identifies this 401 error
-**getMessage()** | **string** | 401 Error message (supports i18n)
+**getMessage()** | **string** | 401 Error message
 

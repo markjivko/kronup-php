@@ -23,6 +23,7 @@ Method | Description
 [**accountDelete()**](#accountdelete) | Delete account
 [**accountRead()**](#accountread) | Fetch account
 [**accountUpdate()**](#accountupdate) | Update account
+[**notificationList()**](#notificationlist) | List notifications
 
 
 ## `accountDelete()`
@@ -137,6 +138,52 @@ Name | Type | Description
 > Update account
 
 Update the current account model.
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `notificationList()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **notificationList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/notificationList.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/account/notifications`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->account()->notificationList(
+    string $x_org_id,
+    [ int $page_number = 1, ]
+    [ int $page_size = 100 ]
+): \Kronup\Model\NotificationsList
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$x_org_id** | **string**  | Organization ID 
+ **$page_number** | **int**  | Pagination: page number  [default to 1]
+ **$page_size** | **int**  | Pagination: page size  [default to 100]
+
+### Return type
+
+[**\Kronup\Model\NotificationsList**](../../Model/NotificationsList)
+
+### Description
+
+> List notifications
+
+Get a list of notification models
 
 [Back to top](#top){: .btn .btn-purple }
 

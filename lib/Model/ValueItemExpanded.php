@@ -41,7 +41,7 @@ class ValueItemExpanded extends AbstractModel {
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
-        "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
+        "authorUserId" => ["authorUserId", "string", null, "getAuthorUserId", "setAuthorUserId", null, ["r" => 0]], 
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
         "canAdvance" => ["canAdvance", "bool", null, "getCanAdvance", "setCanAdvance", false, ["r" => 0]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
@@ -223,23 +223,23 @@ class ValueItemExpanded extends AbstractModel {
     }
 
     /**
-     * Get authorId - Author ID
+     * Get authorUserId - User ID
      *
      * @return string|null
      */
-    public function getAuthorId(): ?string {
-        return $this->_data["authorId"];
+    public function getAuthorUserId(): ?string {
+        return $this->_data["authorUserId"];
     }
 
     /**
-     * Set authorId - Author ID
+     * Set authorUserId - User ID
      * 
-     * @param string|null $author_id Author ID
+     * @param string|null $author_user_id User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setAuthorId($author_id) {
-        return $this->_set("authorId", $author_id);
+    public function setAuthorUserId($author_user_id) {
+        return $this->_set("authorUserId", $author_user_id);
     }
 
     /**

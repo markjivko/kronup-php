@@ -31,7 +31,7 @@ class TaskExpanded extends AbstractModel {
     protected static $_name = "TaskExpanded";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "assigneeId" => ["assigneeId", "string", null, "getAssigneeId", "setAssigneeId", null, ["r" => 0]], 
+        "assigneeUserId" => ["assigneeUserId", "string", null, "getAssigneeUserId", "setAssigneeUserId", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]], 
@@ -85,23 +85,23 @@ class TaskExpanded extends AbstractModel {
     }
 
     /**
-     * Get assigneeId - Author ID
+     * Get assigneeUserId - User ID
      *
      * @return string|null
      */
-    public function getAssigneeId(): ?string {
-        return $this->_data["assigneeId"];
+    public function getAssigneeUserId(): ?string {
+        return $this->_data["assigneeUserId"];
     }
 
     /**
-     * Set assigneeId - Author ID
+     * Set assigneeUserId - User ID
      * 
-     * @param string|null $assignee_id Author ID
+     * @param string|null $assignee_user_id User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setAssigneeId($assignee_id) {
-        return $this->_set("assigneeId", $assignee_id);
+    public function setAssigneeUserId($assignee_user_id) {
+        return $this->_set("assigneeUserId", $assignee_user_id);
     }
 
     /**

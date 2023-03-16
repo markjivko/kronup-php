@@ -63,7 +63,7 @@ class Error403 extends AbstractModel {
     }
 
     /**
-     * Get message - 403 Error message (supports i18n)
+     * Get message - 403 Error message
      *
      * @return string
      */
@@ -72,9 +72,9 @@ class Error403 extends AbstractModel {
     }
 
     /**
-     * Set message - 403 Error message (supports i18n)
+     * Set message - 403 Error message
      * 
-     * @param string $message 403 Error message (supports i18n)
+     * @param string $message 403 Error message
      * @throws \InvalidArgumentException
      * @return $this
      */

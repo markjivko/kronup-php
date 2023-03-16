@@ -29,7 +29,7 @@ class Experiment extends AbstractModel {
     public const STATE_DONE = 'done';
     protected static $_name = "Experiment";
     protected static $_definition = [
-        "authorIds" => ["authorIds", "string[]", null, "getAuthorIds", "setAuthorIds", null, ["r" => 0, "c" => 1]], 
+        "authorUserIds" => ["authorUserIds", "string[]", null, "getAuthorUserIds", "setAuthorUserIds", null, ["r" => 0, "c" => 1]], 
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", false, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
@@ -61,23 +61,23 @@ class Experiment extends AbstractModel {
     }
 
     /**
-     * Get authorIds - Author IDs
+     * Get authorUserIds - Author IDs
      *
      * @return string[]|null
      */
-    public function getAuthorIds(): ?array {
-        return $this->_data["authorIds"];
+    public function getAuthorUserIds(): ?array {
+        return $this->_data["authorUserIds"];
     }
 
     /**
-     * Set authorIds - Author IDs
+     * Set authorUserIds - Author IDs
      * 
-     * @param string[]|null $author_ids Author IDs
+     * @param string[]|null $author_user_ids Author IDs
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setAuthorIds(?array $author_ids) {
-        return $this->_set("authorIds", $author_ids);
+    public function setAuthorUserIds(?array $author_user_ids) {
+        return $this->_set("authorUserIds", $author_user_ids);
     }
 
     /**

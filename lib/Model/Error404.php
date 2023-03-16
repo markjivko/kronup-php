@@ -63,7 +63,7 @@ class Error404 extends AbstractModel {
     }
 
     /**
-     * Get message - 404 Error message (supports i18n)
+     * Get message - 404 Error message
      *
      * @return string
      */
@@ -72,9 +72,9 @@ class Error404 extends AbstractModel {
     }
 
     /**
-     * Set message - 404 Error message (supports i18n)
+     * Set message - 404 Error message
      * 
-     * @param string $message 404 Error message (supports i18n)
+     * @param string $message 404 Error message
      * @throws \InvalidArgumentException
      * @return $this
      */

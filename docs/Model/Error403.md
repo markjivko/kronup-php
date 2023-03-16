@@ -13,5 +13,5 @@ Operation not allowed
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Unique lowercase string that identifies this 403 error
-**getMessage()** | **string** | 403 Error message (supports i18n)
+**getMessage()** | **string** | 403 Error message
 

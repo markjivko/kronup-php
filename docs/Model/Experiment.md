@@ -12,7 +12,7 @@ Experiment meant to validate assumption
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getAuthorIds()** | **string[]** | Author IDs
+**getAuthorUserIds()** | **string[]** | Author IDs
 **getConfirmed()** | **bool** | Experiment confirms assumption [default to `false`]
 **getDigest()** | **string** | Experiment findings formulated in one sentence
 **getDetails()** | **string** | Experiment details

@@ -63,7 +63,7 @@ class Error400 extends AbstractModel {
     }
 
     /**
-     * Get message - 400 Error message (supports i18n)
+     * Get message - 400 Error message
      *
      * @return string
      */
@@ -72,9 +72,9 @@ class Error400 extends AbstractModel {
     }
 
     /**
-     * Set message - 400 Error message (supports i18n)
+     * Set message - 400 Error message
      * 
-     * @param string $message 400 Error message (supports i18n)
+     * @param string $message 400 Error message
      * @throws \InvalidArgumentException
      * @return $this
      */

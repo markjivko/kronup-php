@@ -36,7 +36,7 @@ class MinuteFeedback extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]], 
-        "authorId" => ["authorId", "string", null, "getAuthorId", "setAuthorId", null, ["r" => 0]], 
+        "authorUserId" => ["authorUserId", "string", null, "getAuthorUserId", "setAuthorUserId", null, ["r" => 0]], 
         "issue" => ["issue", "string", null, "getIssue", "setIssue", 'value', ["r" => 0, "e" => 1]], 
         "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 1024]], 
         "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
@@ -112,23 +112,23 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get authorId - Author ID
+     * Get authorUserId - User ID
      *
      * @return string|null
      */
-    public function getAuthorId(): ?string {
-        return $this->_data["authorId"];
+    public function getAuthorUserId(): ?string {
+        return $this->_data["authorUserId"];
     }
 
     /**
-     * Set authorId - Author ID
+     * Set authorUserId - User ID
      * 
-     * @param string|null $author_id Author ID
+     * @param string|null $author_user_id User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setAuthorId($author_id) {
-        return $this->_set("authorId", $author_id);
+    public function setAuthorUserId($author_user_id) {
+        return $this->_set("authorUserId", $author_user_id);
     }
 
     /**
