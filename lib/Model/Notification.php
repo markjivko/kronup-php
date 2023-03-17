@@ -25,7 +25,8 @@ class Notification extends AbstractModel {
     public const TYPE_ITEMS = 'items';
     public const TYPE_ASSUMPTIONS = 'assumptions';
     public const TYPE_TASKS = 'tasks';
-    public const TYPE_EXPERIENCE = 'experience';
+    public const TYPE_SELF_EVALUATION = 'self-evaluation';
+    public const TYPE_PEER_EVALUATION = 'peer evaluation';
     protected static $_name = "Notification";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -34,7 +35,7 @@ class Notification extends AbstractModel {
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
-        "experienceId" => ["experienceId", "string", null, "getExperienceId", "setExperienceId", null, ["r" => 0]], 
+        "notionId" => ["notionId", "string", null, "getNotionId", "setNotionId", null, ["r" => 0]], 
         "itemId" => ["itemId", "string", null, "getItemId", "setItemId", null, ["r" => 0]], 
         "assmId" => ["assmId", "string", null, "getAssmId", "setAssmId", null, ["r" => 0]], 
         "taskId" => ["taskId", "string", null, "getTaskId", "setTaskId", null, ["r" => 0]], 
@@ -64,7 +65,8 @@ class Notification extends AbstractModel {
             self::TYPE_ITEMS,
             self::TYPE_ASSUMPTIONS,
             self::TYPE_TASKS,
-            self::TYPE_EXPERIENCE,
+            self::TYPE_SELF_EVALUATION,
+            self::TYPE_PEER_EVALUATION,
         ];
     }
 
@@ -189,23 +191,23 @@ class Notification extends AbstractModel {
     }
 
     /**
-     * Get experienceId - Channel ID
+     * Get notionId - Notion ID
      *
      * @return string|null
      */
-    public function getExperienceId(): ?string {
-        return $this->_data["experienceId"];
+    public function getNotionId(): ?string {
+        return $this->_data["notionId"];
     }
 
     /**
-     * Set experienceId - Channel ID
+     * Set notionId - Notion ID
      * 
-     * @param string|null $experience_id Channel ID
+     * @param string|null $notion_id Notion ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setExperienceId($experience_id) {
-        return $this->_set("experienceId", $experience_id);
+    public function setNotionId($notion_id) {
+        return $this->_set("notionId", $notion_id);
     }
 
     /**

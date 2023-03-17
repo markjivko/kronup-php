@@ -16,7 +16,7 @@ Method name | Return type | Description
 **getType()** | **string** | Notification type
 **getTeamId()** | **string** | Team ID
 **getChannelId()** | **string** | Channel ID
-**getExperienceId()** | **string** | Channel ID
+**getNotionId()** | **string** | Notion ID
 **getItemId()** | **string** | Item ID
 **getAssmId()** | **string** | Assumption ID
 **getTaskId()** | **string** | Task ID
