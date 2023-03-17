@@ -101,6 +101,43 @@ class AssumptionsApi extends AbstractApi {
     }
     
     /**
+     * Experiment
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value item ID
+     * @param string $assm_id Assumption ID
+     * @param string $x_org_id Organization ID
+     * @param \Kronup\Model\PayloadAssmExperiment $payload_assm_experiment 
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Assumption
+     */
+    public function assumptionExperiment($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_experiment) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp";
+        
+        /** @var \Kronup\Model\Assumption $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_experiment
+            ), 
+            "\Kronup\Model\Assumption"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * List assumptions
      *
      * @param string $team_id Team ID
@@ -218,43 +255,6 @@ class AssumptionsApi extends AbstractApi {
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_update
-            ), 
-            "\Kronup\Model\Assumption"
-        );
-            
-        return $result;
-    }
-    
-    /**
-     * Validate
-     *
-     * @param string $team_id Team ID
-     * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
-     * @param string $assm_id Assumption ID
-     * @param string $x_org_id Organization ID
-     * @param \Kronup\Model\PayloadAssmValidate $payload_assm_validate 
-     * @throws \Kronup\Sdk\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * 
-     * @return \Kronup\Model\Assumption
-     */
-    public function assumptionValidate($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_validate) {
-        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
-
-        // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp";
-        
-        /** @var \Kronup\Model\Assumption $result */
-        $result = $this->exec(
-            S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_validate
             ), 
             "\Kronup\Model\Assumption"
         );

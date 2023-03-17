@@ -22,10 +22,10 @@ Method | Description
 ------------- | -------------
 [**assumptionCreate()**](#assumptioncreate) | Create assumption
 [**assumptionDelete()**](#assumptiondelete) | Delete assumption
+[**assumptionExperiment()**](#assumptionexperiment) | Experiment
 [**assumptionList()**](#assumptionlist) | List assumptions
 [**assumptionRead()**](#assumptionread) | Fetch assumption
 [**assumptionUpdate()**](#assumptionupdate) | Update assumption
-[**assumptionValidate()**](#assumptionvalidate) | Validate
 
 
 ## `assumptionCreate()`
@@ -122,6 +122,58 @@ Name | Type | Description
 > Delete assumption
 
 Delete an assumption from a value item
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `assumptionExperiment()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **assumptionExperiment.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionExperiment.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->assumptions()->assumptionExperiment(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $assm_id,
+    string $x_org_id,
+    \Kronup\Model\PayloadAssmExperiment $payload_assm_experiment
+): \Kronup\Model\Assumption
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value item ID 
+ **$assm_id** | **string**  | Assumption ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$payload_assm_experiment** | [**\Kronup\Model\PayloadAssmExperiment**](../../Model/PayloadAssmExperiment) |  
+
+### Return type
+
+[**\Kronup\Model\Assumption**](../../Model/Assumption)
+
+### Description
+
+> Experiment
+
+Update experiment details
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -276,58 +328,6 @@ Name | Type | Description
 > Update assumption
 
 Update assumption details
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-## `assumptionValidate()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **assumptionValidate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionValidate.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->assumptions()->assumptionValidate(
-    string $team_id,
-    string $channel_id,
-    string $item_id,
-    string $assm_id,
-    string $x_org_id,
-    \Kronup\Model\PayloadAssmValidate $payload_assm_validate
-): \Kronup\Model\Assumption
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | -------------
- **$team_id** | **string**  | Team ID 
- **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
- **$assm_id** | **string**  | Assumption ID 
- **$x_org_id** | **string**  | Organization ID 
- **$payload_assm_validate** | [**\Kronup\Model\PayloadAssmValidate**](../../Model/PayloadAssmValidate) |  
-
-### Return type
-
-[**\Kronup\Model\Assumption**](../../Model/Assumption)
-
-### Description
-
-> Validate
-
-Update experiment details
 
 [Back to top](#top){: .btn .btn-purple }
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Payload_Assm_Validate Model
+ * Payload_Assm_Experiment Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,17 +17,17 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Payload_Assm_Validate Model
+ * Payload_Assm_Experiment Model
  * 
- * Payload object required to validate a Value Item assumption
+ * Payload object for assumption experiment
  */
-class PayloadAssmValidate extends AbstractModel {
+class PayloadAssmExperiment extends AbstractModel {
 
     public const _D = null;
     public const STATE_IDLE = 'idle';
     public const STATE_RUNNING = 'running';
     public const STATE_DONE = 'done';
-    protected static $_name = "Payload_Assm_Validate";
+    protected static $_name = "Payload_Assm_Experiment";
     protected static $_definition = [
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", null, ["r" => 0]], 
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
@@ -36,7 +36,7 @@ class PayloadAssmValidate extends AbstractModel {
     ];
 
     /**
-     * PayloadAssmValidate
+     * PayloadAssmExperiment
      *
      * @param mixed[] $data Model data
      */
@@ -100,7 +100,7 @@ class PayloadAssmValidate extends AbstractModel {
     }
 
     /**
-     * Get details - Experiment findings
+     * Get details - Experiment detailed findings
      *
      * @return string|null
      */
@@ -109,9 +109,9 @@ class PayloadAssmValidate extends AbstractModel {
     }
 
     /**
-     * Set details - Experiment findings
+     * Set details - Experiment detailed findings
      * 
-     * @param string|null $details Experiment findings
+     * @param string|null $details Experiment detailed findings
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/AssumptionsApi/#assumptionvalidate
+ * @link    https://kronup.github.io/kronup-php/Api/AssumptionsApi/#assumptionexperiment
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -35,7 +35,7 @@ $arg_assm_id = "assm-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
-$arg_payload_assm_validate = (new \Kronup\Model\PayloadAssmValidate())
+$arg_payload_assm_experiment = (new \Kronup\Model\PayloadAssmExperiment())
     
     // (optional) Experiment confirms assumption
     ->setConfirmed(null)
@@ -43,7 +43,7 @@ $arg_payload_assm_validate = (new \Kronup\Model\PayloadAssmValidate())
     // (optional) Experiment digest
     ->setDigest('null')
     
-    // (optional) Experiment findings
+    // (optional) Experiment detailed findings
     ->setDetails('null')
     
     // (optional) Experiment state
@@ -59,18 +59,18 @@ try {
     $response = $sdk
         ->api()
         ->assumptions()
-        ->assumptionValidate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_payload_assm_validate);
+        ->assumptionExperiment($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_payload_assm_experiment);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->assumptions()->assumptionValidate(): %s\n", 
+        "API Exception when calling api()->assumptions()->assumptionExperiment(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->assumptions()->assumptionValidate(): %s\n", 
+        "Exception when calling api()->assumptions()->assumptionExperiment(): %s\n", 
         $exc->getMessage()
     );
 }

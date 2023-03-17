@@ -1,12 +1,12 @@
 ---
-title: PayloadAssmValidate
+title: PayloadAssmExperiment
 parent: Model
 layout: page
 ---
 
-# PayloadAssmValidate
+# PayloadAssmExperiment
 
-Payload object required to validate a Value Item assumption
+Payload object for assumption experiment
 
 ## Model getters
 
@@ -14,6 +14,6 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getConfirmed()** | **bool** | Experiment confirms assumption
 **getDigest()** | **string** | Experiment digest
-**getDetails()** | **string** | Experiment findings
+**getDetails()** | **string** | Experiment detailed findings
 **getState()** | **string** | Experiment state
 
