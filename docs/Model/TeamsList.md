@@ -12,6 +12,6 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getPageNumber()** | **int** | Page number [default to `1`]
 **getPageSize()** | **int** | Page size [default to `100`]
-**getTotal()** | **int** | Total
+**getTotal()** | **int** | Total number of teams
 **getTeams()** | [**\Kronup\Model\Team[]**](../Team) | Teams
 

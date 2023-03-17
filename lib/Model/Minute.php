@@ -24,7 +24,7 @@ class Minute extends AbstractModel {
     public const _D = null;
     protected static $_name = "Minute";
     protected static $_definition = [
-        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0]], 
+        "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0, "n" => [1]]], 
         "discoveries" => ["discoveries", "\Kronup\Model\MinuteDiscovery[]", null, "getDiscoveries", "setDiscoveries", null, ["r" => 0, "c" => 1]], 
         "feedback" => ["feedback", "\Kronup\Model\MinuteFeedback[]", null, "getFeedback", "setFeedback", null, ["r" => 0, "c" => 1]]
     ];

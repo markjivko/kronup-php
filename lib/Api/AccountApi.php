@@ -103,7 +103,7 @@ class AccountApi extends AbstractApi {
     }
     
     /**
-     * List notifications
+     * List events
      *
      * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
@@ -111,19 +111,19 @@ class AccountApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\NotificationsList
+     * @return \Kronup\Model\EventsList
      */
-    public function notificationList($x_org_id, $page_number = 1, $page_size = 100) {
+    public function eventList($x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling AccountApi.notificationList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling AccountApi.eventList, must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling AccountApi.notificationList, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling AccountApi.eventList, must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling AccountApi.notificationList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling AccountApi.eventList, must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -135,9 +135,9 @@ class AccountApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/account/notifications";
+        $rPath = "/account/events";
         
-        /** @var \Kronup\Model\NotificationsList $result */
+        /** @var \Kronup\Model\EventsList $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [
@@ -145,7 +145,7 @@ class AccountApi extends AbstractApi {
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []
             ), 
-            "\Kronup\Model\NotificationsList"
+            "\Kronup\Model\EventsList"
         );
             
         return $result;

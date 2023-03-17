@@ -23,7 +23,7 @@ Method | Description
 [**accountDelete()**](#accountdelete) | Delete account
 [**accountRead()**](#accountread) | Fetch account
 [**accountUpdate()**](#accountupdate) | Update account
-[**notificationList()**](#notificationlist) | List notifications
+[**eventList()**](#eventlist) | List events
 
 
 ## `accountDelete()`
@@ -144,27 +144,27 @@ Update the current account model.
 ---
 
 
-## `notificationList()`
+## `eventList()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **notificationList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/notificationList.php){: .btn .btn-green .mt-4}
+> [php -f **eventList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/eventList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **GET** `/account/notifications`
+> **GET** `/account/events`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->account()->notificationList(
+(new \Kronup\Sdk())->api()->account()->eventList(
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
-): \Kronup\Model\NotificationsList
+): \Kronup\Model\EventsList
 ```
 
 ### Parameters
@@ -177,13 +177,13 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\NotificationsList**](../../Model/NotificationsList)
+[**\Kronup\Model\EventsList**](../../Model/EventsList)
 
 ### Description
 
-> List notifications
+> List events
 
-Get a list of notification models
+Get a list of event models
 
 [Back to top](#top){: .btn .btn-purple }
 

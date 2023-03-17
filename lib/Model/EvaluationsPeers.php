@@ -24,7 +24,7 @@ class EvaluationsPeers extends AbstractModel {
     public const _D = null;
     protected static $_name = "Evaluations__peers";
     protected static $_definition = [
-        "count" => ["count", "float", null, "getCount", "setCount", null, ["r" => 0]], 
+        "count" => ["count", "float", null, "getCount", "setCount", null, ["r" => 0, "n" => [0]]], 
         "average" => ["average", "string", null, "getAverage", "setAverage", null, ["r" => 0]], 
         "recent" => ["recent", "float[]", null, "getRecent", "setRecent", null, ["r" => 0, "c" => 1]]
     ];

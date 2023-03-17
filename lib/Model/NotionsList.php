@@ -24,8 +24,8 @@ class NotionsList extends AbstractModel {
     public const _D = null;
     protected static $_name = "Notions_List";
     protected static $_definition = [
-        "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0]], 
-        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0]], 
+        "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
+        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0, "n" => [1], "x" => [500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
         "notions" => ["notions", "\Kronup\Model\Notion[]", null, "getNotions", "setNotions", null, ["r" => 0, "c" => 1]]
     ];
@@ -83,7 +83,7 @@ class NotionsList extends AbstractModel {
     }
 
     /**
-     * Get total - Total
+     * Get total - Total number of notions
      *
      * @return int|null
      */
@@ -92,9 +92,9 @@ class NotionsList extends AbstractModel {
     }
 
     /**
-     * Set total - Total
+     * Set total - Total number of notions
      * 
-     * @param int|null $total Total
+     * @param int|null $total Total number of notions
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Notification Model
+ * Event Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,9 +17,9 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Notification Model
+ * Event Model
  */
-class Notification extends AbstractModel {
+class Event extends AbstractModel {
 
     public const _D = null;
     public const TYPE_ITEMS = 'items';
@@ -27,7 +27,7 @@ class Notification extends AbstractModel {
     public const TYPE_TASKS = 'tasks';
     public const TYPE_SELF_EVALUATION = 'self-evaluation';
     public const TYPE_PEER_EVALUATION = 'peer evaluation';
-    protected static $_name = "Notification";
+    protected static $_name = "Event";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
@@ -36,6 +36,7 @@ class Notification extends AbstractModel {
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
         "notionId" => ["notionId", "string", null, "getNotionId", "setNotionId", null, ["r" => 0]], 
+        "peerUserId" => ["peerUserId", "string", null, "getPeerUserId", "setPeerUserId", null, ["r" => 0]], 
         "itemId" => ["itemId", "string", null, "getItemId", "setItemId", null, ["r" => 0]], 
         "assmId" => ["assmId", "string", null, "getAssmId", "setAssmId", null, ["r" => 0]], 
         "taskId" => ["taskId", "string", null, "getTaskId", "setTaskId", null, ["r" => 0]], 
@@ -45,7 +46,7 @@ class Notification extends AbstractModel {
     ];
 
     /**
-     * Notification
+     * Event
      *
      * @param mixed[] $data Model data
      */
@@ -71,7 +72,7 @@ class Notification extends AbstractModel {
     }
 
     /**
-     * Get id - Notification ID
+     * Get id - Event ID
      *
      * @return string|null
      */
@@ -80,9 +81,9 @@ class Notification extends AbstractModel {
     }
 
     /**
-     * Set id - Notification ID
+     * Set id - Event ID
      * 
-     * @param string|null $id Notification ID
+     * @param string|null $id Event ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -131,7 +132,7 @@ class Notification extends AbstractModel {
     }
 
     /**
-     * Get type - Notification type
+     * Get type - Event type
      *
      * @return string|null
      */
@@ -140,9 +141,9 @@ class Notification extends AbstractModel {
     }
 
     /**
-     * Set type - Notification type
+     * Set type - Event type
      * 
-     * @param string|null $type Notification type
+     * @param string|null $type Event type
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -208,6 +209,26 @@ class Notification extends AbstractModel {
      */
     public function setNotionId($notion_id) {
         return $this->_set("notionId", $notion_id);
+    }
+
+    /**
+     * Get peerUserId - Peer User ID
+     *
+     * @return string|null
+     */
+    public function getPeerUserId(): ?string {
+        return $this->_data["peerUserId"];
+    }
+
+    /**
+     * Set peerUserId - Peer User ID
+     * 
+     * @param string|null $peer_user_id Peer User ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setPeerUserId($peer_user_id) {
+        return $this->_set("peerUserId", $peer_user_id);
     }
 
     /**

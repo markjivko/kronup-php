@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/AccountApi/#notificationlist
+ * @link    https://kronup.github.io/kronup-php/Api/AccountApi/#eventlist
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -32,25 +32,25 @@ $arg_page_size = 100;
 try {
 
     /**
-     * GET /account/notifications
+     * GET /account/events
      * 
-     * @var \Kronup\Model\NotificationsList $response
+     * @var \Kronup\Model\EventsList $response
      */
     $response = $sdk
         ->api()
         ->account()
-        ->notificationList($arg_x_org_id, $arg_page_number, $arg_page_size);
+        ->eventList($arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->account()->notificationList(): %s\n", 
+        "API Exception when calling api()->account()->eventList(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->account()->notificationList(): %s\n", 
+        "Exception when calling api()->account()->eventList(): %s\n", 
         $exc->getMessage()
     );
 }

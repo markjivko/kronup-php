@@ -33,9 +33,9 @@ class Invitation extends AbstractModel {
         "inviteDomain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", null, ["r" => 0]], 
         "inviteOrgRole" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", null, ["r" => 0, "e" => 1]], 
         "inviteOrgName" => ["inviteOrgName", "string", null, "getInviteOrgName", "setInviteOrgName", null, ["r" => 0]], 
-        "inviteUses" => ["inviteUses", "int", null, "getInviteUses", "setInviteUses", null, ["r" => 0]], 
-        "inviteUsesMax" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", null, ["r" => 0]], 
-        "inviteViews" => ["inviteViews", "int", null, "getInviteViews", "setInviteViews", null, ["r" => 0]], 
+        "inviteUses" => ["inviteUses", "int", null, "getInviteUses", "setInviteUses", null, ["r" => 0, "n" => [0]]], 
+        "inviteUsesMax" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", null, ["r" => 0, "n" => [0], "x" => [10000]]], 
+        "inviteViews" => ["inviteViews", "int", null, "getInviteViews", "setInviteViews", null, ["r" => 0, "n" => [0]]], 
         "expiresAt" => ["expiresAt", "string", null, "getExpiresAt", "setExpiresAt", null, ["r" => 0]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]

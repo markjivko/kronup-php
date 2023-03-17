@@ -1,22 +1,23 @@
 ---
-title: Notification
+title: Event
 parent: Model
 layout: page
 ---
 
-# Notification
+# Event
 
 ## Model getters
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Notification ID
+**getId()** | **string** | Event ID
 **getOrgId()** | **string** | Organization ID
 **getUserId()** | **string** | User ID
-**getType()** | **string** | Notification type
+**getType()** | **string** | Event type
 **getTeamId()** | **string** | Team ID
 **getChannelId()** | **string** | Channel ID
 **getNotionId()** | **string** | Notion ID
+**getPeerUserId()** | **string** | Peer User ID
 **getItemId()** | **string** | Item ID
 **getAssmId()** | **string** | Assumption ID
 **getTaskId()** | **string** | Task ID

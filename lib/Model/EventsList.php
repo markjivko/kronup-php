@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Notifications_List Model
+ * Events_List Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,21 +17,21 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Notifications_List Model
+ * Events_List Model
  */
-class NotificationsList extends AbstractModel {
+class EventsList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Notifications_List";
+    protected static $_name = "Events_List";
     protected static $_definition = [
-        "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0]], 
-        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0]], 
+        "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
+        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0, "n" => [1], "x" => [500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "notifications" => ["notifications", "\Kronup\Model\Notification[]", null, "getNotifications", "setNotifications", null, ["r" => 0, "c" => 1]]
+        "events" => ["events", "\Kronup\Model\Event[]", null, "getEvents", "setEvents", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * NotificationsList
+     * EventsList
      *
      * @param mixed[] $data Model data
      */
@@ -83,7 +83,7 @@ class NotificationsList extends AbstractModel {
     }
 
     /**
-     * Get total - Total
+     * Get total - Total number of events
      *
      * @return int|null
      */
@@ -92,9 +92,9 @@ class NotificationsList extends AbstractModel {
     }
 
     /**
-     * Set total - Total
+     * Set total - Total number of events
      * 
-     * @param int|null $total Total
+     * @param int|null $total Total number of events
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -103,22 +103,22 @@ class NotificationsList extends AbstractModel {
     }
 
     /**
-     * Get notifications - Notifications
+     * Get events - Events
      *
-     * @return \Kronup\Model\Notification[]|null
+     * @return \Kronup\Model\Event[]|null
      */
-    public function getNotifications(): ?array {
-        return $this->_data["notifications"];
+    public function getEvents(): ?array {
+        return $this->_data["events"];
     }
 
     /**
-     * Set notifications - Notifications
+     * Set events - Events
      * 
-     * @param \Kronup\Model\Notification[]|null $notifications Notifications
+     * @param \Kronup\Model\Event[]|null $events Events
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setNotifications(?array $notifications) {
-        return $this->_set("notifications", $notifications);
+    public function setEvents(?array $events) {
+        return $this->_set("events", $events);
     }
 }

@@ -24,8 +24,8 @@ class ExperiencesList extends AbstractModel {
     public const _D = null;
     protected static $_name = "Experiences_List";
     protected static $_definition = [
-        "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0]], 
-        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0]], 
+        "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
+        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0, "n" => [1], "x" => [500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
         "experiences" => ["experiences", "\Kronup\Model\Experience[]", null, "getExperiences", "setExperiences", null, ["r" => 0, "c" => 1]]
     ];
@@ -83,7 +83,7 @@ class ExperiencesList extends AbstractModel {
     }
 
     /**
-     * Get total - Total
+     * Get total - Total number of experiences
      *
      * @return int|null
      */
@@ -92,9 +92,9 @@ class ExperiencesList extends AbstractModel {
     }
 
     /**
-     * Set total - Total
+     * Set total - Total number of experiences
      * 
-     * @param int|null $total Total
+     * @param int|null $total Total number of experiences
      * @throws \InvalidArgumentException
      * @return $this
      */
