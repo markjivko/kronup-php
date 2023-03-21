@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ExperiencesApi/#experienceevaluateself
+ * @link    https://kronup.github.io/kronup-php/Api/ServiceAccountsApi/#serviceaccountcreate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,37 +20,39 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Notion ID
-$arg_notion_id = "notion-id-***";
-
-// Grade between 1 and 5
-$arg_grade = "5";
-
 // Organization ID
 $arg_x_org_id = "org-id-***";
+
+$arg_payload_service_account_create = (new \Kronup\Model\PayloadServiceAccountCreate())
+    
+    // Service Account organization role
+    ->setRoleOrg('null')
+    
+    // Service account name
+    ->setUserName('John Doe');
 
 try {
 
     /**
-     * PUT /xp/notions/{notionId}/grade/{grade}
+     * POST /service-accounts
      * 
-     * @var \Kronup\Model\Experience $response
+     * @var \Kronup\Model\ServiceAccount $response
      */
     $response = $sdk
         ->api()
-        ->experiences()
-        ->experienceEvaluateSelf($arg_notion_id, $arg_grade, $arg_x_org_id);
+        ->serviceAccounts()
+        ->serviceAccountCreate($arg_x_org_id, $arg_payload_service_account_create);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experiences()->experienceEvaluateSelf(): %s\n", 
+        "API Exception when calling api()->serviceAccounts()->serviceAccountCreate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experiences()->experienceEvaluateSelf(): %s\n", 
+        "Exception when calling api()->serviceAccounts()->serviceAccountCreate(): %s\n", 
         $exc->getMessage()
     );
 }

@@ -56,7 +56,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$user_id** | **string**  | User ID 
- **$grade** | **string**  | Grade between 1 and 10 
+ **$grade** | **string**  | Grade between 1 and 5 
  **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
@@ -102,7 +102,7 @@ Anonymously evaluate another user on this notion
 Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
- **$grade** | **string**  | Grade between 1 and 10 
+ **$grade** | **string**  | Grade between 1 and 5 
  **$x_org_id** | **string**  | Organization ID 
 
 ### Return type

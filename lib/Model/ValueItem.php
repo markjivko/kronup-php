@@ -29,10 +29,6 @@ class ValueItem extends AbstractModel {
     public const TYPE_FEATURE = 'feature';
     public const TYPE_BUG_FIX = 'bug fix';
     public const TYPE_CHORE = 'chore';
-    public const PRIORITY_MUST = 'must';
-    public const PRIORITY_SHOULD = 'should';
-    public const PRIORITY_COULD = 'could';
-    public const PRIORITY_WILL_NOT = 'will not';
     protected static $_name = "ValueItem";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -45,7 +41,7 @@ class ValueItem extends AbstractModel {
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
         "canAdvance" => ["canAdvance", "bool", null, "getCanAdvance", "setCanAdvance", false, ["r" => 0]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
-        "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]], 
+        "priority" => ["priority", "float", null, "getPriority", "setPriority", 5, ["r" => 0, "n" => [1], "x" => [5]]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
         "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
@@ -86,19 +82,6 @@ class ValueItem extends AbstractModel {
             self::TYPE_FEATURE,
             self::TYPE_BUG_FIX,
             self::TYPE_CHORE,
-        ];
-    }
-    /**
-     * Get allowable values
-     *
-     * @return string[]
-     */
-    public function getPriorityAllowableValues(): array {
-        return [
-            self::PRIORITY_MUST,
-            self::PRIORITY_SHOULD,
-            self::PRIORITY_COULD,
-            self::PRIORITY_WILL_NOT,
         ];
     }
 
@@ -303,18 +286,18 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get priority - Value Item Priority using MoSCoW
+     * Get priority - Value Item Priority
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getPriority(): ?string {
+    public function getPriority(): ?float {
         return $this->_data["priority"];
     }
 
     /**
-     * Set priority - Value Item Priority using MoSCoW
+     * Set priority - Value Item Priority
      * 
-     * @param string|null $priority Value Item Priority using MoSCoW
+     * @param float|null $priority Value Item Priority
      * @throws \InvalidArgumentException
      * @return $this
      */

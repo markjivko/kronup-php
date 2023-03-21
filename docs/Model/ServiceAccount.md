@@ -1,10 +1,10 @@
 ---
-title: Account
+title: ServiceAccount
 parent: Model
 layout: page
 ---
 
-# Account
+# ServiceAccount
 
 ## Model getters
 
@@ -21,5 +21,5 @@ Method name | Return type | Description
 **getRoleOrg()** | [**\Kronup\Model\UserRoleOrg[]**](../UserRoleOrg) | Organization roles
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
-**getOrgs()** | [**\Kronup\Model\Organization[]**](../Organization) | Organizations
+**getServiceToken()** | **string** | Service Account API key - bearer JSON Web Token
 

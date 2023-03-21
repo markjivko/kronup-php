@@ -29,8 +29,10 @@ class Account extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "userEmail" => ["userEmail", "string", null, "getUserEmail", "setUserEmail", null, ["r" => 0]], 
-        "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0]], 
+        "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
         "userIcon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0]], 
+        "serviceAccount" => ["serviceAccount", "bool", null, "getServiceAccount", "setServiceAccount", false, ["r" => 0]], 
+        "puppetAccount" => ["puppetAccount", "bool", null, "getPuppetAccount", "setPuppetAccount", false, ["r" => 0]], 
         "teams" => ["teams", "\Kronup\Model\UserTeam[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
         "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
         "roleOrg" => ["roleOrg", "\Kronup\Model\UserRoleOrg[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
@@ -141,6 +143,46 @@ class Account extends AbstractModel {
      */
     public function setUserIcon($user_icon) {
         return $this->_set("userIcon", $user_icon);
+    }
+
+    /**
+     * Get serviceAccount - Service accounts can only perform actions through API calls
+     *
+     * @return bool|null
+     */
+    public function getServiceAccount(): ?bool {
+        return $this->_data["serviceAccount"];
+    }
+
+    /**
+     * Set serviceAccount - Service accounts can only perform actions through API calls
+     * 
+     * @param bool|null $service_account Service accounts can only perform actions through API calls
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setServiceAccount($service_account) {
+        return $this->_set("serviceAccount", $service_account);
+    }
+
+    /**
+     * Get puppetAccount - Puppet accounts replace users removed from organizations. Puppets can no longer perform any actions
+     *
+     * @return bool|null
+     */
+    public function getPuppetAccount(): ?bool {
+        return $this->_data["puppetAccount"];
+    }
+
+    /**
+     * Set puppetAccount - Puppet accounts replace users removed from organizations. Puppets can no longer perform any actions
+     * 
+     * @param bool|null $puppet_account Puppet accounts replace users removed from organizations. Puppets can no longer perform any actions
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setPuppetAccount($puppet_account) {
+        return $this->_set("puppetAccount", $puppet_account);
     }
 
     /**

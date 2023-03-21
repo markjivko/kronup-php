@@ -84,6 +84,13 @@ class Api {
     protected $_organizationsApi = null;
 
     /**
+     * ServiceAccounts API
+     *
+     * @var \Kronup\Api\ServiceAccountsApi
+     */
+    protected $_serviceAccountsApi = null;
+
+    /**
      * Tasks API
      *
      * @var \Kronup\Api\TasksApi
@@ -222,6 +229,19 @@ class Api {
         }
 
         return $this->_organizationsApi;
+    }
+    
+    /**
+     * ServiceAccounts API
+     * 
+     * @return \Kronup\Api\ServiceAccountsApi
+     */
+    public function serviceAccounts(): A\ServiceAccountsApi {
+        if (null === $this->_serviceAccountsApi) {
+            $this->_serviceAccountsApi = new A\ServiceAccountsApi($this->_sdk);
+        }
+
+        return $this->_serviceAccountsApi;
     }
     
     /**

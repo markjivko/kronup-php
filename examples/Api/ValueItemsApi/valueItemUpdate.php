@@ -43,8 +43,8 @@ $arg_payload_value_item_update = (new \Kronup\Model\PayloadValueItemUpdate())
     // (optional) Value item type
     ->setType('feature')
     
-    // (optional) Value item MoSCoW priority
-    ->setPriority('must');
+    // (optional) Value item priority
+    ->setPriority(5);
 
 try {
 

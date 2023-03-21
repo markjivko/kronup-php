@@ -27,16 +27,12 @@ class PayloadValueItemCreate extends AbstractModel {
     public const TYPE_FEATURE = 'feature';
     public const TYPE_BUG_FIX = 'bug fix';
     public const TYPE_CHORE = 'chore';
-    public const PRIORITY_MUST = 'must';
-    public const PRIORITY_SHOUD = 'shoud';
-    public const PRIORITY_COULD = 'could';
-    public const PRIORITY_WILL_NOT = 'will not';
     protected static $_name = "Payload_Value_Item_Create";
     protected static $_definition = [
         "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
-        "priority" => ["priority", "string", null, "getPriority", "setPriority", null, ["r" => 0, "e" => 1]]
+        "priority" => ["priority", "float", null, "getPriority", "setPriority", null, ["r" => 0, "n" => [1], "x" => [5]]]
     ];
 
     /**
@@ -60,19 +56,6 @@ class PayloadValueItemCreate extends AbstractModel {
             self::TYPE_FEATURE,
             self::TYPE_BUG_FIX,
             self::TYPE_CHORE,
-        ];
-    }
-    /**
-     * Get allowable values
-     *
-     * @return string[]
-     */
-    public function getPriorityAllowableValues(): array {
-        return [
-            self::PRIORITY_MUST,
-            self::PRIORITY_SHOUD,
-            self::PRIORITY_COULD,
-            self::PRIORITY_WILL_NOT,
         ];
     }
 
@@ -137,18 +120,18 @@ class PayloadValueItemCreate extends AbstractModel {
     }
 
     /**
-     * Get priority - Value item MoSCoW priority
+     * Get priority - Value item priority
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getPriority(): ?string {
+    public function getPriority(): ?float {
         return $this->_data["priority"];
     }
 
     /**
-     * Set priority - Value item MoSCoW priority
+     * Set priority - Value item priority
      * 
-     * @param string|null $priority Value item MoSCoW priority
+     * @param float|null $priority Value item priority
      * @throws \InvalidArgumentException
      * @return $this
      */

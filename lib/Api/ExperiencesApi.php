@@ -33,7 +33,7 @@ class ExperiencesApi extends AbstractApi {
      *
      * @param string $notion_id Notion ID
      * @param string $user_id User ID
-     * @param string $grade Grade between 1 and 10
+     * @param string $grade Grade between 1 and 5
      * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -67,7 +67,7 @@ class ExperiencesApi extends AbstractApi {
      * Self-evaluation
      *
      * @param string $notion_id Notion ID
-     * @param string $grade Grade between 1 and 10
+     * @param string $grade Grade between 1 and 5
      * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException

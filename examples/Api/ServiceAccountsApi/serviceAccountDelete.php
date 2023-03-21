@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ExperiencesApi/#experienceevaluateself
+ * @link    https://kronup.github.io/kronup-php/Api/ServiceAccountsApi/#serviceaccountdelete
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,11 +20,8 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Notion ID
-$arg_notion_id = "notion-id-***";
-
-// Grade between 1 and 5
-$arg_grade = "5";
+// Service account ID
+$arg_account_id = "service-account-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
@@ -32,25 +29,25 @@ $arg_x_org_id = "org-id-***";
 try {
 
     /**
-     * PUT /xp/notions/{notionId}/grade/{grade}
+     * DELETE /service-accounts/{accountId}
      * 
-     * @var \Kronup\Model\Experience $response
+     * @var bool $response
      */
     $response = $sdk
         ->api()
-        ->experiences()
-        ->experienceEvaluateSelf($arg_notion_id, $arg_grade, $arg_x_org_id);
+        ->serviceAccounts()
+        ->serviceAccountDelete($arg_account_id, $arg_x_org_id);
 
     var_dump($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experiences()->experienceEvaluateSelf(): %s\n", 
+        "API Exception when calling api()->serviceAccounts()->serviceAccountDelete(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experiences()->experienceEvaluateSelf(): %s\n", 
+        "Exception when calling api()->serviceAccounts()->serviceAccountDelete(): %s\n", 
         $exc->getMessage()
     );
 }

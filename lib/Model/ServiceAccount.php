@@ -1,7 +1,7 @@
 <?php
 
 /**
- * User Model
+ * ServiceAccount Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,15 +17,15 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * User Model
+ * ServiceAccount Model
  */
-class User extends AbstractModel {
+class ServiceAccount extends AbstractModel {
 
     public const _D = null;
     public const ROLE_SITE_ADMIN = 'admin';
     public const ROLE_SITE_MODERATOR = 'moderator';
     public const ROLE_SITE_USER = 'user';
-    protected static $_name = "User";
+    protected static $_name = "ServiceAccount";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "userEmail" => ["userEmail", "string", null, "getUserEmail", "setUserEmail", null, ["r" => 0]], 
@@ -37,11 +37,12 @@ class User extends AbstractModel {
         "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
         "roleOrg" => ["roleOrg", "\Kronup\Model\UserRoleOrg[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
+        "serviceToken" => ["serviceToken", "string", null, "getServiceToken", "setServiceToken", null, ["r" => 0]]
     ];
 
     /**
-     * User
+     * ServiceAccount
      *
      * @param mixed[] $data Model data
      */
@@ -282,5 +283,25 @@ class User extends AbstractModel {
      */
     public function setUpdatedAt($updated_at) {
         return $this->_set("updatedAt", $updated_at);
+    }
+
+    /**
+     * Get serviceToken - Service Account API key - bearer JSON Web Token
+     *
+     * @return string|null
+     */
+    public function getServiceToken(): ?string {
+        return $this->_data["serviceToken"];
+    }
+
+    /**
+     * Set serviceToken - Service Account API key - bearer JSON Web Token
+     * 
+     * @param string|null $service_token Service Account API key - bearer JSON Web Token
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setServiceToken($service_token) {
+        return $this->_set("serviceToken", $service_token);
     }
 }
