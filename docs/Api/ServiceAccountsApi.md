@@ -24,7 +24,7 @@ Method | Description
 [**serviceAccountDelete()**](#serviceaccountdelete) | Delete service account
 [**serviceAccountList()**](#serviceaccountlist) | List service acounts
 [**serviceAccountRead()**](#serviceaccountread) | Fetch service account
-[**serviceAccountRegenerate()**](#serviceaccountregenerate) | Regenerate service account
+[**serviceAccountRegenerate()**](#serviceaccountregenerate) | Regenerate
 [**serviceAccountUpdate()**](#serviceaccountupdate) | Update service account
 
 
@@ -91,7 +91,7 @@ Create a new service account for this Organization
 (new \Kronup\Sdk())->api()->serviceAccounts()->serviceAccountDelete(
     string $account_id,
     string $x_org_id
-): bool
+): \Kronup\Model\User
 ```
 
 ### Parameters
@@ -103,13 +103,13 @@ Name | Type | Description
 
 ### Return type
 
-**bool**
+[**\Kronup\Model\User**](../../Model/User)
 
 ### Description
 
 > Delete service account
 
-Remove service account
+Delete this service account. This action cannot be reversed.
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -155,7 +155,7 @@ Name | Type | Description
 
 > List service acounts
 
-Get a list of service account models
+Get a list of all service account models, including those that were closed
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -241,9 +241,9 @@ Name | Type | Description
 
 ### Description
 
-> Regenerate service account
+> Regenerate
 
-Regenerate service account JSON web token
+Re-open service account if previously closed and regenerate service account JSON Web Token
 
 [Back to top](#top){: .btn .btn-purple }
 

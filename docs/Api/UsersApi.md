@@ -133,7 +133,7 @@ Retrieve user model
 (new \Kronup\Sdk())->api()->users()->userRemove(
     string $user_id,
     string $x_org_id
-): bool
+): \Kronup\Model\User
 ```
 
 ### Parameters
@@ -145,7 +145,7 @@ Name | Type | Description
 
 ### Return type
 
-**bool**
+[**\Kronup\Model\User**](../../Model/User)
 
 ### Description
 

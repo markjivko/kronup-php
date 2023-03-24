@@ -69,7 +69,7 @@ class ServiceAccountsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return bool
+     * @return \Kronup\Model\User
      */
     public function serviceAccountDelete($account_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -83,12 +83,12 @@ class ServiceAccountsApi extends AbstractApi {
         // Path template
         $rPath = "/service-accounts/{accountId}";
         
-        /** @var bool $result */
+        /** @var \Kronup\Model\User $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["accountId" => $account_id]), $rPath, [], $rHeaders, []
             ), 
-            "bool"
+            "\Kronup\Model\User"
         );
             
         return $result;
@@ -177,7 +177,7 @@ class ServiceAccountsApi extends AbstractApi {
     }
     
     /**
-     * Regenerate service account
+     * Regenerate
      *
      * @param string $account_id Service account ID
      * @param string $x_org_id Organization ID

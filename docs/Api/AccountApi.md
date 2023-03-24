@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 
 > Delete account
 
-Delete the current account. This action is reversible only if you sign back in within 14 days. API calls and service accounts cannot restore deleted accounts.
+Delete the current account. This action is reversible only if you sign back in within 14 days.
 
 [Back to top](#top){: .btn .btn-purple }
 
