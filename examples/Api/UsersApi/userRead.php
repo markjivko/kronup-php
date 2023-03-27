@@ -35,7 +35,7 @@ try {
         ->users()
         ->userRead($arg_user_id);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

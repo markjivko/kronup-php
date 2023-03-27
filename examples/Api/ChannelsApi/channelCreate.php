@@ -46,7 +46,7 @@ try {
         ->channels()
         ->channelCreate($arg_team_id, $arg_x_org_id, $arg_payload_channel_create);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

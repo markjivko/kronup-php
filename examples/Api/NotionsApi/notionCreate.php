@@ -40,7 +40,7 @@ try {
         ->notions()
         ->notionCreate($arg_x_org_id, $arg_payload_notion_create);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

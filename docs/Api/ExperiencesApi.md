@@ -67,7 +67,7 @@ Name | Type | Description
 
 > Evaluate peer
 
-Anonymously evaluate another user on this notion
+Anonymously evaluate another user on this notion. Only the last evaluation is kept in a 24 hours interval.
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -113,7 +113,7 @@ Name | Type | Description
 
 > Self-evaluation
 
-Evaluate yourself on a notion
+Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours interval.
 
 [Back to top](#top){: .btn .btn-purple }
 

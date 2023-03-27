@@ -44,7 +44,7 @@ try {
         ->notions()
         ->notionSearch($arg_x_org_id, $arg_search_term, $arg_page_number, $arg_page_size);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

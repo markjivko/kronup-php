@@ -46,7 +46,7 @@ try {
         ->teams()
         ->teamUpdate($arg_team_id, $arg_x_org_id, $arg_payload_team_update);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

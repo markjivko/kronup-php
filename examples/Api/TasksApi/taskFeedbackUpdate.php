@@ -58,7 +58,7 @@ try {
         ->tasks()
         ->taskFeedbackUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_feedback_id, $arg_x_org_id, $arg_payload_task_feedback_update);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

@@ -44,7 +44,7 @@ try {
         ->channels()
         ->channelUnassign($arg_team_id, $arg_channel_id, $arg_user_id, $arg_x_org_id);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

@@ -24,9 +24,9 @@ class EvaluationsSelf extends AbstractModel {
     public const _D = null;
     protected static $_name = "Evaluations__self";
     protected static $_definition = [
-        "count" => ["count", "float", null, "getCount", "setCount", null, ["r" => 0, "n" => [0]]], 
-        "average" => ["average", "string", null, "getAverage", "setAverage", null, ["r" => 0]], 
-        "recent" => ["recent", "float[]", null, "getRecent", "setRecent", null, ["r" => 0, "c" => 1]]
+        "count" => ["count", "int", null, "getCount", "setCount", null, ["r" => 0, "n" => [0]]], 
+        "average" => ["average", "float", 'float', "getAverage", "setAverage", null, ["r" => 0]], 
+        "recent" => ["recent", "int[]", null, "getRecent", "setRecent", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -44,16 +44,16 @@ class EvaluationsSelf extends AbstractModel {
     /**
      * Get count - Total number of evaluations
      *
-     * @return float|null
+     * @return int|null
      */
-    public function getCount(): ?float {
+    public function getCount(): ?int {
         return $this->_data["count"];
     }
 
     /**
      * Set count - Total number of evaluations
      * 
-     * @param float|null $count Total number of evaluations
+     * @param int|null $count Total number of evaluations
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -64,16 +64,16 @@ class EvaluationsSelf extends AbstractModel {
     /**
      * Get average - Average value
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getAverage(): ?string {
+    public function getAverage(): ?float {
         return $this->_data["average"];
     }
 
     /**
      * Set average - Average value
      * 
-     * @param string|null $average Average value
+     * @param float|null $average Average value
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -84,7 +84,7 @@ class EvaluationsSelf extends AbstractModel {
     /**
      * Get recent - Recent grades
      *
-     * @return float[]|null
+     * @return int[]|null
      */
     public function getRecent(): ?array {
         return $this->_data["recent"];
@@ -93,7 +93,7 @@ class EvaluationsSelf extends AbstractModel {
     /**
      * Set recent - Recent grades
      * 
-     * @param float[]|null $recent Recent grades
+     * @param int[]|null $recent Recent grades
      * @throws \InvalidArgumentException
      * @return $this
      */

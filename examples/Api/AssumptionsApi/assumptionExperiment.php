@@ -61,7 +61,7 @@ try {
         ->assumptions()
         ->assumptionExperiment($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_payload_assm_experiment);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

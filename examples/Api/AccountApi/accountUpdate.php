@@ -37,7 +37,7 @@ try {
         ->account()
         ->accountUpdate($arg_payload_account_update);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

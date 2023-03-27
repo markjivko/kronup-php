@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getCount()** | **float** | Total number of evaluations
-**getAverage()** | **string** | Average value
-**getRecent()** | **float[]** | Recent grades
+**getCount()** | **int** | Total number of evaluations
+**getAverage()** | **float** | Average value
+**getRecent()** | **int[]** | Recent grades
 

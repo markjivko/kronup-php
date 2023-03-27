@@ -44,7 +44,7 @@ try {
         ->experiences()
         ->experienceEvaluatePeer($arg_notion_id, $arg_user_id, $arg_grade, $arg_x_org_id);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

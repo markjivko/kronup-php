@@ -35,7 +35,7 @@ try {
         ->invitations()
         ->invitationAccept($arg_invite_id);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(

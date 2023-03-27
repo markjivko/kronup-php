@@ -46,7 +46,7 @@ try {
         ->serviceAccounts()
         ->serviceAccountUpdate($arg_account_id, $arg_x_org_id, $arg_payload_service_account_update);
 
-    var_dump($response);
+    var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
