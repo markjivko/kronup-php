@@ -44,7 +44,7 @@ $arg_payload_value_item_update = (new \Kronup\Model\PayloadValueItemUpdate())
     ->setType('feature')
     
     // (optional) Value item priority
-    ->setPriority(5);
+    ->setPriority(10);
 
 try {
 

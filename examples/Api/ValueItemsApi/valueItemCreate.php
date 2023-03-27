@@ -41,7 +41,7 @@ $arg_payload_value_item_create = (new \Kronup\Model\PayloadValueItemCreate())
     ->setType('feature')
     
     // (optional) Value item priority
-    ->setPriority(5);
+    ->setPriority(10);
 
 try {
 

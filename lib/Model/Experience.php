@@ -29,7 +29,9 @@ class Experience extends AbstractModel {
         "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
         "notion" => ["notion", "\Kronup\Model\Notion", null, "getNotion", "setNotion", null, ["r" => 0]], 
         "selfEval" => ["selfEval", "\Kronup\Model\EvaluationsSelf", null, "getSelfEval", "setSelfEval", null, ["r" => 0]], 
-        "peerEval" => ["peerEval", "\Kronup\Model\EvaluationsPeers", null, "getPeerEval", "setPeerEval", null, ["r" => 0]]
+        "peerEval" => ["peerEval", "\Kronup\Model\EvaluationsPeers", null, "getPeerEval", "setPeerEval", null, ["r" => 0]], 
+        "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
 
     /**
@@ -162,5 +164,45 @@ class Experience extends AbstractModel {
      */
     public function setPeerEval($peer_eval) {
         return $this->_set("peerEval", $peer_eval);
+    }
+
+    /**
+     * Get createdAt - Created timestamp
+     *
+     * @return string|null
+     */
+    public function getCreatedAt(): ?string {
+        return $this->_data["createdAt"];
+    }
+
+    /**
+     * Set createdAt - Created timestamp
+     * 
+     * @param string|null $created_at Created timestamp
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setCreatedAt($created_at) {
+        return $this->_set("createdAt", $created_at);
+    }
+
+    /**
+     * Get updatedAt - Updated timestamp
+     *
+     * @return string|null
+     */
+    public function getUpdatedAt(): ?string {
+        return $this->_data["updatedAt"];
+    }
+
+    /**
+     * Set updatedAt - Updated timestamp
+     * 
+     * @param string|null $updated_at Updated timestamp
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setUpdatedAt($updated_at) {
+        return $this->_set("updatedAt", $updated_at);
     }
 }

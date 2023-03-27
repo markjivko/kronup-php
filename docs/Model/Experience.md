@@ -16,4 +16,6 @@ Method name | Return type | Description
 **getNotion()** | [**\Kronup\Model\Notion**](../Notion) | 
 **getSelfEval()** | [**\Kronup\Model\EvaluationsSelf**](../EvaluationsSelf) | 
 **getPeerEval()** | [**\Kronup\Model\EvaluationsPeers**](../EvaluationsPeers) | 
+**getCreatedAt()** | **string** | Created timestamp
+**getUpdatedAt()** | **string** | Updated timestamp
 

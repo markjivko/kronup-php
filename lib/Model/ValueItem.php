@@ -41,7 +41,7 @@ class ValueItem extends AbstractModel {
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
         "canAdvance" => ["canAdvance", "bool", null, "getCanAdvance", "setCanAdvance", false, ["r" => 0]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
-        "priority" => ["priority", "float", null, "getPriority", "setPriority", 5, ["r" => 0, "n" => [1], "x" => [5]]], 
+        "priority" => ["priority", "float", null, "getPriority", "setPriority", 10, ["r" => 0, "n" => [1], "x" => [10]]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
         "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 

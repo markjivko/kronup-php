@@ -243,7 +243,7 @@ Name | Type | Description
 
 > Regenerate
 
-Re-open service account if previously closed and regenerate service account JSON Web Token
+Regenerate service account JSON Web Token and re-open service account if previously closed
 
 [Back to top](#top){: .btn .btn-purple }
 
