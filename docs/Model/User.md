@@ -11,7 +11,7 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | User ID
-**getUserEmail()** | **string** | User e-mail address
+**getProvider()** | **string** | Account provider
 **getUserName()** | **string** | User name
 **getUserIcon()** | **string** | User icon URL
 **getServiceAccount()** | **bool** | Service accounts can only perform actions through API calls [default to `false`]

@@ -28,7 +28,7 @@ class Account extends AbstractModel {
     protected static $_name = "Account";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "userEmail" => ["userEmail", "string", null, "getUserEmail", "setUserEmail", null, ["r" => 0]], 
+        "provider" => ["provider", "string", null, "getProvider", "setProvider", null, ["r" => 0]], 
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
         "userIcon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0]], 
         "serviceAccount" => ["serviceAccount", "bool", null, "getServiceAccount", "setServiceAccount", false, ["r" => 0]], 
@@ -86,23 +86,23 @@ class Account extends AbstractModel {
     }
 
     /**
-     * Get userEmail - User e-mail address
+     * Get provider - Account provider
      *
      * @return string|null
      */
-    public function getUserEmail(): ?string {
-        return $this->_data["userEmail"];
+    public function getProvider(): ?string {
+        return $this->_data["provider"];
     }
 
     /**
-     * Set userEmail - User e-mail address
+     * Set provider - Account provider
      * 
-     * @param string|null $user_email User e-mail address
+     * @param string|null $provider Account provider
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUserEmail($user_email) {
-        return $this->_set("userEmail", $user_email);
+    public function setProvider($provider) {
+        return $this->_set("provider", $provider);
     }
 
     /**
