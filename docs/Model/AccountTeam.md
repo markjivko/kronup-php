@@ -1,15 +1,16 @@
 ---
-title: UserRoleOrg
+title: AccountTeam
 parent: Model
 layout: page
 ---
 
-# UserRoleOrg
+# AccountTeam
 
 ## Model getters
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getRole()** | **string** | User organization role
 **getOrgId()** | **string** | Organization ID
+**getTeamId()** | **string** | Team ID
+**getChannelIds()** | **string[]** | Channels IDs
 

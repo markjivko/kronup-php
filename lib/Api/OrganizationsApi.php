@@ -81,6 +81,33 @@ class OrganizationsApi extends AbstractApi {
     }
     
     /**
+     * Update logo
+     *
+     * @param string $org_id Organization ID
+     * @param \SplFileObject|null $logo Logo - must be a PNG file, exactly 256x256 pixels, smaller than 200KB
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Organization
+     */
+    public function organizationLogo($org_id, $logo = null) {
+        $rHeaders = $this->_headerSelector->selectHeadersForMultipart(["application/json"]);
+
+        // Path template
+        $rPath = "/organizations/{orgId}/logo";
+        
+        /** @var \Kronup\Model\Organization $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["orgId" => $org_id]), $rPath, [], $rHeaders, ["logo" => S::fileToFormValue($logo),]
+            ), 
+            "\Kronup\Model\Organization"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * Update organization
      *
      * @param string $org_id Organization ID

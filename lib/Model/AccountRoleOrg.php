@@ -1,7 +1,7 @@
 <?php
 
 /**
- * User_Role_Org Model
+ * Account_Role_Org Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,22 +17,22 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * User_Role_Org Model
+ * Account_Role_Org Model
  */
-class UserRoleOrg extends AbstractModel {
+class AccountRoleOrg extends AbstractModel {
 
     public const _D = null;
     public const ROLE_OWNER = 'owner';
     public const ROLE_MANAGER = 'manager';
     public const ROLE_MEMBER = 'member';
-    protected static $_name = "User_Role_Org";
+    protected static $_name = "Account_Role_Org";
     protected static $_definition = [
-        "role" => ["role", "string", null, "getRole", "setRole", null, ["r" => 0, "e" => 1]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]]
+        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
+        "role" => ["role", "string", null, "getRole", "setRole", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
-     * UserRoleOrg
+     * AccountRoleOrg
      *
      * @param mixed[] $data Model data
      */
@@ -56,26 +56,6 @@ class UserRoleOrg extends AbstractModel {
     }
 
     /**
-     * Get role - User organization role
-     *
-     * @return string|null
-     */
-    public function getRole(): ?string {
-        return $this->_data["role"];
-    }
-
-    /**
-     * Set role - User organization role
-     * 
-     * @param string|null $role User organization role
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setRole($role) {
-        return $this->_set("role", $role);
-    }
-
-    /**
      * Get orgId - Organization ID
      *
      * @return string|null
@@ -93,5 +73,25 @@ class UserRoleOrg extends AbstractModel {
      */
     public function setOrgId($org_id) {
         return $this->_set("orgId", $org_id);
+    }
+
+    /**
+     * Get role - User organization role
+     *
+     * @return string|null
+     */
+    public function getRole(): ?string {
+        return $this->_data["role"];
+    }
+
+    /**
+     * Set role - User organization role
+     * 
+     * @param string|null $role User organization role
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setRole($role) {
+        return $this->_set("role", $role);
     }
 }

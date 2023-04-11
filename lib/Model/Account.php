@@ -33,12 +33,14 @@ class Account extends AbstractModel {
         "userIcon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0]], 
         "serviceAccount" => ["serviceAccount", "bool", null, "getServiceAccount", "setServiceAccount", false, ["r" => 0]], 
         "puppetAccount" => ["puppetAccount", "bool", null, "getPuppetAccount", "setPuppetAccount", false, ["r" => 0]], 
-        "teams" => ["teams", "\Kronup\Model\UserTeam[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
+        "teams" => ["teams", "\Kronup\Model\AccountTeam[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
         "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
-        "roleOrg" => ["roleOrg", "\Kronup\Model\UserRoleOrg[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
+        "roleOrg" => ["roleOrg", "\Kronup\Model\AccountRoleOrg[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
+        "closedTime" => ["closedTime", "float", null, "getClosedTime", "setClosedTime", 0, ["r" => 0, "n" => [0]]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
-        "orgs" => ["orgs", "\Kronup\Model\Organization[]", null, "getOrgs", "setOrgs", null, ["r" => 0, "c" => 1]]
+        "orgs" => ["orgs", "\Kronup\Model\Organization[]", null, "getOrgs", "setOrgs", null, ["r" => 0, "c" => 1]], 
+        "apiCalls" => ["apiCalls", "array<string,float>", null, "getApiCalls", "setApiCalls", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -186,18 +188,18 @@ class Account extends AbstractModel {
     }
 
     /**
-     * Get teams - User Teams
+     * Get teams - Account Teams
      *
-     * @return \Kronup\Model\UserTeam[]|null
+     * @return \Kronup\Model\AccountTeam[]|null
      */
     public function getTeams(): ?array {
         return $this->_data["teams"];
     }
 
     /**
-     * Set teams - User Teams
+     * Set teams - Account Teams
      * 
-     * @param \Kronup\Model\UserTeam[]|null $teams User Teams
+     * @param \Kronup\Model\AccountTeam[]|null $teams Account Teams
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -228,7 +230,7 @@ class Account extends AbstractModel {
     /**
      * Get roleOrg - Organization roles
      *
-     * @return \Kronup\Model\UserRoleOrg[]|null
+     * @return \Kronup\Model\AccountRoleOrg[]|null
      */
     public function getRoleOrg(): ?array {
         return $this->_data["roleOrg"];
@@ -237,12 +239,32 @@ class Account extends AbstractModel {
     /**
      * Set roleOrg - Organization roles
      * 
-     * @param \Kronup\Model\UserRoleOrg[]|null $role_org Organization roles
+     * @param \Kronup\Model\AccountRoleOrg[]|null $role_org Organization roles
      * @throws \InvalidArgumentException
      * @return $this
      */
     public function setRoleOrg(?array $role_org) {
         return $this->_set("roleOrg", $role_org);
+    }
+
+    /**
+     * Get closedTime - Account closed UNIX timestamp; 0 means the account is active
+     *
+     * @return float|null
+     */
+    public function getClosedTime(): ?float {
+        return $this->_data["closedTime"];
+    }
+
+    /**
+     * Set closedTime - Account closed UNIX timestamp; 0 means the account is active
+     * 
+     * @param float|null $closed_time Account closed UNIX timestamp; 0 means the account is active
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setClosedTime($closed_time) {
+        return $this->_set("closedTime", $closed_time);
     }
 
     /**
@@ -303,5 +325,25 @@ class Account extends AbstractModel {
      */
     public function setOrgs(?array $orgs) {
         return $this->_set("orgs", $orgs);
+    }
+
+    /**
+     * Get apiCalls - List of daily API Calls from this account
+     *
+     * @return array<string,float>|null
+     */
+    public function getApiCalls(): ?array {
+        return $this->_data["apiCalls"];
+    }
+
+    /**
+     * Set apiCalls - List of daily API Calls from this account
+     * 
+     * @param array<string,float>|null $api_calls List of daily API Calls from this account
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setApiCalls(?array $api_calls) {
+        return $this->_set("apiCalls", $api_calls);
     }
 }

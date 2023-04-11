@@ -81,13 +81,20 @@ class UsersApi extends AbstractApi {
      * Fetch user
      *
      * @param string $user_id User ID
+     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\User
      */
-    public function userRead($user_id) {
+    public function userRead($user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
 
         // Path template
         $rPath = "/users/{userId}";

@@ -22,6 +22,7 @@ Method | Description
 ------------- | -------------
 [**organizationCreate()**](#organizationcreate) | Create organization
 [**organizationDelete()**](#organizationdelete) | Delete organization
+[**organizationLogo()**](#organizationlogo) | Update logo
 [**organizationUpdate()**](#organizationupdate) | Update organization
 
 
@@ -103,6 +104,50 @@ Name | Type | Description
 > Delete organization
 
 Remove organization
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `organizationLogo()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **organizationLogo.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationLogo.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **POST** `/organizations/{orgId}/logo`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->organizations()->organizationLogo(
+    string $org_id,
+    [ \SplFileObject $logo ]
+): \Kronup\Model\Organization
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$org_id** | **string**  | Organization ID 
+ **$logo** | **\SplFileObject** **\SplFileObject**  | Logo - must be a PNG file, exactly 256x256 pixels, smaller than 200KB 
+
+### Return type
+
+[**\Kronup\Model\Organization**](../../Model/Organization)
+
+### Description
+
+> Update logo
+
+Update organization logo
 
 [Back to top](#top){: .btn .btn-purple }
 

@@ -25,6 +25,9 @@ class User extends AbstractModel {
     public const ROLE_SITE_ADMIN = 'admin';
     public const ROLE_SITE_MODERATOR = 'moderator';
     public const ROLE_SITE_USER = 'user';
+    public const ROLE_ORG_OWNER = 'owner';
+    public const ROLE_ORG_MANAGER = 'manager';
+    public const ROLE_ORG_MEMBER = 'member';
     protected static $_name = "User";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -35,7 +38,8 @@ class User extends AbstractModel {
         "puppetAccount" => ["puppetAccount", "bool", null, "getPuppetAccount", "setPuppetAccount", false, ["r" => 0]], 
         "teams" => ["teams", "\Kronup\Model\UserTeam[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
         "roleSite" => ["roleSite", "string", null, "getRoleSite", "setRoleSite", null, ["r" => 0, "e" => 1]], 
-        "roleOrg" => ["roleOrg", "\Kronup\Model\UserRoleOrg[]", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "c" => 1]], 
+        "roleOrg" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 0, "e" => 1]], 
+        "closedTime" => ["closedTime", "float", null, "getClosedTime", "setClosedTime", 0, ["r" => 0, "n" => [0]]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -61,6 +65,18 @@ class User extends AbstractModel {
             self::ROLE_SITE_ADMIN,
             self::ROLE_SITE_MODERATOR,
             self::ROLE_SITE_USER,
+        ];
+    }
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getRoleOrgAllowableValues(): array {
+        return [
+            self::ROLE_ORG_OWNER,
+            self::ROLE_ORG_MANAGER,
+            self::ROLE_ORG_MEMBER,
         ];
     }
 
@@ -225,23 +241,43 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get roleOrg - Organization roles
+     * Get roleOrg - User organization role
      *
-     * @return \Kronup\Model\UserRoleOrg[]|null
+     * @return string|null
      */
-    public function getRoleOrg(): ?array {
+    public function getRoleOrg(): ?string {
         return $this->_data["roleOrg"];
     }
 
     /**
-     * Set roleOrg - Organization roles
+     * Set roleOrg - User organization role
      * 
-     * @param \Kronup\Model\UserRoleOrg[]|null $role_org Organization roles
+     * @param string|null $role_org User organization role
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setRoleOrg(?array $role_org) {
+    public function setRoleOrg($role_org) {
         return $this->_set("roleOrg", $role_org);
+    }
+
+    /**
+     * Get closedTime - Account closed UNIX timestamp; 0 means the account is active
+     *
+     * @return float|null
+     */
+    public function getClosedTime(): ?float {
+        return $this->_data["closedTime"];
+    }
+
+    /**
+     * Set closedTime - Account closed UNIX timestamp; 0 means the account is active
+     * 
+     * @param float|null $closed_time Account closed UNIX timestamp; 0 means the account is active
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setClosedTime($closed_time) {
+        return $this->_set("closedTime", $closed_time);
     }
 
     /**

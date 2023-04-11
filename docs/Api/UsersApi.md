@@ -89,7 +89,8 @@ Get a list of user models
 
 ```php
 (new \Kronup\Sdk())->api()->users()->userRead(
-    string $user_id
+    string $user_id,
+    string $x_org_id
 ): \Kronup\Model\User
 ```
 
@@ -98,6 +99,7 @@ Get a list of user models
 Name | Type | Description
 ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
+ **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 

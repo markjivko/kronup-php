@@ -18,7 +18,8 @@ Method name | Return type | Description
 **getPuppetAccount()** | **bool** | Puppet accounts replace users removed from organizations. Puppets can no longer perform any actions [default to `false`]
 **getTeams()** | [**\Kronup\Model\UserTeam[]**](../UserTeam) | User Teams
 **getRoleSite()** | **string** | User site role
-**getRoleOrg()** | [**\Kronup\Model\UserRoleOrg[]**](../UserRoleOrg) | Organization roles
+**getRoleOrg()** | **string** | User organization role
+**getClosedTime()** | **float** | Account closed UNIX timestamp; 0 means the account is active [default to `0`]
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

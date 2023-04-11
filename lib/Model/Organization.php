@@ -26,7 +26,7 @@ class Organization extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgName" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0]], 
-        "orgIcon" => ["orgIcon", "string", null, "getOrgIcon", "setOrgIcon", null, ["r" => 0]], 
+        "orgIconId" => ["orgIconId", "string", null, "getOrgIconId", "setOrgIconId", null, ["r" => 0]], 
         "orgOwners" => ["orgOwners", "string[]", null, "getOrgOwners", "setOrgOwners", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
@@ -85,23 +85,23 @@ class Organization extends AbstractModel {
     }
 
     /**
-     * Get orgIcon - Organization logo URL
+     * Get orgIconId - Organization logo ID
      *
      * @return string|null
      */
-    public function getOrgIcon(): ?string {
-        return $this->_data["orgIcon"];
+    public function getOrgIconId(): ?string {
+        return $this->_data["orgIconId"];
     }
 
     /**
-     * Set orgIcon - Organization logo URL
+     * Set orgIconId - Organization logo ID
      * 
-     * @param string|null $org_icon Organization logo URL
+     * @param string|null $org_icon_id Organization logo ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrgIcon($org_icon) {
-        return $this->_set("orgIcon", $org_icon);
+    public function setOrgIconId($org_icon_id) {
+        return $this->_set("orgIconId", $org_icon_id);
     }
 
     /**

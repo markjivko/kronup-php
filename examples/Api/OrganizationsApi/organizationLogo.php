@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/UsersApi/#userread
+ * @link    https://kronup.github.io/kronup-php/Api/OrganizationsApi/#organizationlogo
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,34 +20,34 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// User ID
-$arg_user_id = "user-id-***";
-
 // Organization ID
-$arg_x_org_id = "org-id-***";
+$arg_org_id = "org-id-***";
+
+// Logo - must be a PNG file, exactly 256x256 pixels, smaller than 200KB
+$arg_logo = "/path/to/file.txt";
 
 try {
 
     /**
-     * GET /users/{userId}
+     * POST /organizations/{orgId}/logo
      * 
-     * @var \Kronup\Model\User $response
+     * @var \Kronup\Model\Organization $response
      */
     $response = $sdk
         ->api()
-        ->users()
-        ->userRead($arg_user_id, $arg_x_org_id);
+        ->organizations()
+        ->organizationLogo($arg_org_id, $arg_logo);
 
     var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->users()->userRead(): %s\n", 
+        "API Exception when calling api()->organizations()->organizationLogo(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->users()->userRead(): %s\n", 
+        "Exception when calling api()->organizations()->organizationLogo(): %s\n", 
         $exc->getMessage()
     );
 }

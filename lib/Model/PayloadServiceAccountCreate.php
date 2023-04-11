@@ -29,7 +29,7 @@ class PayloadServiceAccountCreate extends AbstractModel {
     protected static $_name = "Payload_Service_Account_Create";
     protected static $_definition = [
         "roleOrg" => ["roleOrg", "string", null, "getRoleOrg", "setRoleOrg", null, ["r" => 1, "e" => 1]], 
-        "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 1]]
+        "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 1, "nl" => 3, "xl" => 64]]
     ];
 
     /**
