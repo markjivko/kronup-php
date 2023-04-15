@@ -29,13 +29,39 @@ class AccountApi extends AbstractApi {
     const PKG = "Account";
 
     /**
-     * Delete account
+     * Update avatar
+     *
+     * @param \SplFileObject|null $avatar Avatar - must be a PNG file, exactly 256x256 pixels, smaller than 200KB
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\Account
+     */
+    public function accountAvatar($avatar = null) {
+        $rHeaders = $this->_headerSelector->selectHeadersForMultipart(["application/json"]);
+
+        // Path template
+        $rPath = "/account/avatar";
+        
+        /** @var \Kronup\Model\Account $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, ["avatar" => S::fileToFormValue($avatar),]
+            ), 
+            "\Kronup\Model\Account"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * Close account
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function accountDelete() {
+    public function accountClose() {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template

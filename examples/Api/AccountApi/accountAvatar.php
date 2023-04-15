@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/AccountApi/#accountdelete
+ * @link    https://kronup.github.io/kronup-php/Api/AccountApi/#accountavatar
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,28 +20,31 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
+// Avatar - must be a PNG file, exactly 256x256 pixels, smaller than 200KB
+$arg_avatar = "/path/to/file.txt";
+
 try {
 
     /**
-     * DELETE /account
+     * POST /account/avatar
      * 
-     * @var bool $response
+     * @var \Kronup\Model\Account $response
      */
     $response = $sdk
         ->api()
         ->account()
-        ->accountDelete();
+        ->accountAvatar($arg_avatar);
 
     var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->account()->accountDelete(): %s\n", 
+        "API Exception when calling api()->account()->accountAvatar(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->account()->accountDelete(): %s\n", 
+        "Exception when calling api()->account()->accountAvatar(): %s\n", 
         $exc->getMessage()
     );
 }

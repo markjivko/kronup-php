@@ -20,20 +20,63 @@ $sdk->api()->account();
 
 Method | Description
 ------------- | -------------
-[**accountDelete()**](#accountdelete) | Delete account
+[**accountAvatar()**](#accountavatar) | Update avatar
+[**accountClose()**](#accountclose) | Close account
 [**accountRead()**](#accountread) | Fetch account
 [**accountUpdate()**](#accountupdate) | Update account
 [**eventList()**](#eventlist) | List events
 
 
-## `accountDelete()`
+## `accountAvatar()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **accountDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountDelete.php){: .btn .btn-green .mt-4}
+> [php -f **accountAvatar.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountAvatar.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **POST** `/account/avatar`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->account()->accountAvatar(
+    [ \SplFileObject $avatar ]
+): \Kronup\Model\Account
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$avatar** | **\SplFileObject** **\SplFileObject**  | Avatar - must be a PNG file, exactly 256x256 pixels, smaller than 200KB 
+
+### Return type
+
+[**\Kronup\Model\Account**](../../Model/Account)
+
+### Description
+
+> Update avatar
+
+Update account avatar
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `accountClose()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **accountClose.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountClose.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -42,7 +85,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->account()->accountDelete(): bool
+(new \Kronup\Sdk())->api()->account()->accountClose(): bool
 ```
 
 ### Parameters
@@ -55,9 +98,9 @@ This endpoint does not need any parameter.
 
 ### Description
 
-> Delete account
+> Close account
 
-Delete the current account. This action is reversible only if you sign back in within 14 days.
+Close the current account. This action is reversible only if you sign back in within 14 days. You must first abandon or delete all the organizations you own to perform this action.
 
 [Back to top](#top){: .btn .btn-purple }
 

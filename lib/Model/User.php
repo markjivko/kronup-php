@@ -33,7 +33,7 @@ class User extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "provider" => ["provider", "string", null, "getProvider", "setProvider", null, ["r" => 0]], 
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
-        "userIcon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0]], 
+        "userIcon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0, "nl" => 0, "xl" => 1024]], 
         "serviceAccount" => ["serviceAccount", "bool", null, "getServiceAccount", "setServiceAccount", false, ["r" => 0]], 
         "puppetAccount" => ["puppetAccount", "bool", null, "getPuppetAccount", "setPuppetAccount", false, ["r" => 0]], 
         "teams" => ["teams", "\Kronup\Model\UserTeam[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
@@ -141,7 +141,7 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get userIcon - User icon URL
+     * Get userIcon - User icon - either a full URL or a resource ID
      *
      * @return string|null
      */
@@ -150,9 +150,9 @@ class User extends AbstractModel {
     }
 
     /**
-     * Set userIcon - User icon URL
+     * Set userIcon - User icon - either a full URL or a resource ID
      * 
-     * @param string|null $user_icon User icon URL
+     * @param string|null $user_icon User icon - either a full URL or a resource ID
      * @throws \InvalidArgumentException
      * @return $this
      */
