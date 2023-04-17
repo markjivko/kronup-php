@@ -22,6 +22,14 @@ namespace Kronup\Model;
 class User extends AbstractModel {
 
     public const _D = null;
+    public const USER_COLOR_CLEAR = 'clear';
+    public const USER_COLOR_RED = 'red';
+    public const USER_COLOR_ORANGE = 'orange';
+    public const USER_COLOR_YELLOW = 'yellow';
+    public const USER_COLOR_GREEN = 'green';
+    public const USER_COLOR_BLUE = 'blue';
+    public const USER_COLOR_PINK = 'pink';
+    public const USER_COLOR_VIOLET = 'violet';
     public const ROLE_SITE_ADMIN = 'admin';
     public const ROLE_SITE_MODERATOR = 'moderator';
     public const ROLE_SITE_USER = 'user';
@@ -33,7 +41,8 @@ class User extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "provider" => ["provider", "string", null, "getProvider", "setProvider", null, ["r" => 0]], 
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
-        "userIcon" => ["userIcon", "string", null, "getUserIcon", "setUserIcon", null, ["r" => 0, "nl" => 0, "xl" => 1024]], 
+        "userAvatarId" => ["userAvatarId", "string", null, "getUserAvatarId", "setUserAvatarId", null, ["r" => 0]], 
+        "userColor" => ["userColor", "string", null, "getUserColor", "setUserColor", null, ["r" => 0, "e" => 1]], 
         "serviceAccount" => ["serviceAccount", "bool", null, "getServiceAccount", "setServiceAccount", false, ["r" => 0]], 
         "puppetAccount" => ["puppetAccount", "bool", null, "getPuppetAccount", "setPuppetAccount", false, ["r" => 0]], 
         "teams" => ["teams", "\Kronup\Model\UserTeam[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]], 
@@ -55,6 +64,23 @@ class User extends AbstractModel {
         }
     }
 
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getUserColorAllowableValues(): array {
+        return [
+            self::USER_COLOR_CLEAR,
+            self::USER_COLOR_RED,
+            self::USER_COLOR_ORANGE,
+            self::USER_COLOR_YELLOW,
+            self::USER_COLOR_GREEN,
+            self::USER_COLOR_BLUE,
+            self::USER_COLOR_PINK,
+            self::USER_COLOR_VIOLET,
+        ];
+    }
     /**
      * Get allowable values
      *
@@ -141,23 +167,43 @@ class User extends AbstractModel {
     }
 
     /**
-     * Get userIcon - User icon - either a full URL or a resource ID
+     * Get userAvatarId - User avatar ID
      *
      * @return string|null
      */
-    public function getUserIcon(): ?string {
-        return $this->_data["userIcon"];
+    public function getUserAvatarId(): ?string {
+        return $this->_data["userAvatarId"];
     }
 
     /**
-     * Set userIcon - User icon - either a full URL or a resource ID
+     * Set userAvatarId - User avatar ID
      * 
-     * @param string|null $user_icon User icon - either a full URL or a resource ID
+     * @param string|null $user_avatar_id User avatar ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUserIcon($user_icon) {
-        return $this->_set("userIcon", $user_icon);
+    public function setUserAvatarId($user_avatar_id) {
+        return $this->_set("userAvatarId", $user_avatar_id);
+    }
+
+    /**
+     * Get userColor - User profile color
+     *
+     * @return string|null
+     */
+    public function getUserColor(): ?string {
+        return $this->_data["userColor"];
+    }
+
+    /**
+     * Set userColor - User profile color
+     * 
+     * @param string|null $user_color User profile color
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setUserColor($user_color) {
+        return $this->_set("userColor", $user_color);
     }
 
     /**

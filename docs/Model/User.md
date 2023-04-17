@@ -13,7 +13,8 @@ Method name | Return type | Description
 **getId()** | **string** | User ID
 **getProvider()** | **string** | Account provider
 **getUserName()** | **string** | User name
-**getUserIcon()** | **string** | User icon - either a full URL or a resource ID
+**getUserAvatarId()** | **string** | User avatar ID
+**getUserColor()** | **string** | User profile color
 **getServiceAccount()** | **bool** | Service accounts can only perform actions through API calls [default to `false`]
 **getPuppetAccount()** | **bool** | Puppet accounts replace users removed from organizations. Puppets can no longer perform any actions [default to `false`]
 **getTeams()** | [**\Kronup\Model\UserTeam[]**](../UserTeam) | User Teams
