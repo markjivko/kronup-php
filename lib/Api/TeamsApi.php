@@ -132,6 +132,7 @@ class TeamsApi extends AbstractApi {
      * List teams
      *
      * @param string $x_org_id Organization ID
+     * @param string|null $user_id User ID - optionally restrict teams and channels to this user
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -139,7 +140,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamsList
      */
-    public function teamList($x_org_id, $page_number = 1, $page_size = 100) {
+    public function teamList($x_org_id, $user_id = null, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling TeamsApi.teamList, must be bigger than or equal to 1.');
         }
@@ -167,6 +168,7 @@ class TeamsApi extends AbstractApi {
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [
+                    "userId" => isset($user_id) ? S::toQueryValue($user_id) : null,
                     "pageNumber" => S::toQueryValue($page_number),
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []

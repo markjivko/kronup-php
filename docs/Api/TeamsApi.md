@@ -181,6 +181,7 @@ Delete a team and unassign all users
 ```php
 (new \Kronup\Sdk())->api()->teams()->teamList(
     string $x_org_id,
+    [ string $user_id, ]
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\TeamsList
@@ -191,6 +192,7 @@ Delete a team and unassign all users
 Name | Type | Description
 ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
+ **$user_id** | **string**  | User ID - optionally restrict teams and channels to this user 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 

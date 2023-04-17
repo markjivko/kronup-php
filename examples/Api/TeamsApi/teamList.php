@@ -23,6 +23,9 @@ $sdk->config()->setDebug(true);
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
+// User ID - optionally restrict teams and channels to this user
+$arg_user_id = "user-id-***";
+
 // Pagination: page number
 $arg_page_number = 1;
 
@@ -39,7 +42,7 @@ try {
     $response = $sdk
         ->api()
         ->teams()
-        ->teamList($arg_x_org_id, $arg_page_number, $arg_page_size);
+        ->teamList($arg_x_org_id, $arg_user_id, $arg_page_number, $arg_page_size);
 
     var_export($response);
 
