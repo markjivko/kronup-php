@@ -24,5 +24,6 @@ Method name | Return type | Description
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 **getOrgs()** | [**\Kronup\Model\Organization[]**](../Organization) | Organizations
+**getOrgsTeams()** | [**\Kronup\Model\OrganizationTeams[]**](../OrganizationTeams) | Organization Teams
 **getApiCalls()** | **array<string,float>** | List of daily API Calls from this account
 

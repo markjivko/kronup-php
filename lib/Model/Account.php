@@ -49,6 +49,7 @@ class Account extends AbstractModel {
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
         "orgs" => ["orgs", "\Kronup\Model\Organization[]", null, "getOrgs", "setOrgs", null, ["r" => 0, "c" => 1]], 
+        "orgsTeams" => ["orgsTeams", "\Kronup\Model\OrganizationTeams[]", null, "getOrgsTeams", "setOrgsTeams", null, ["r" => 0, "c" => 1]], 
         "apiCalls" => ["apiCalls", "array<string,float>", null, "getApiCalls", "setApiCalls", null, ["r" => 0, "c" => 1]]
     ];
 
@@ -371,6 +372,26 @@ class Account extends AbstractModel {
      */
     public function setOrgs(?array $orgs) {
         return $this->_set("orgs", $orgs);
+    }
+
+    /**
+     * Get orgsTeams - Organization Teams
+     *
+     * @return \Kronup\Model\OrganizationTeams[]|null
+     */
+    public function getOrgsTeams(): ?array {
+        return $this->_data["orgsTeams"];
+    }
+
+    /**
+     * Set orgsTeams - Organization Teams
+     * 
+     * @param \Kronup\Model\OrganizationTeams[]|null $orgs_teams Organization Teams
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setOrgsTeams(?array $orgs_teams) {
+        return $this->_set("orgsTeams", $orgs_teams);
     }
 
     /**
