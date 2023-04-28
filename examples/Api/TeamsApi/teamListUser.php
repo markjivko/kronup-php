@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TeamsApi/#teamread
+ * @link    https://kronup.github.io/kronup-php/Api/TeamsApi/#teamlistuser
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,34 +20,40 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Team ID
-$arg_team_id = "team-id-***";
+// User ID
+$arg_user_id = "user-id-***";
 
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
+// Pagination: page number
+$arg_page_number = 1;
+
+// Pagination: page size
+$arg_page_size = 100;
+
 try {
 
     /**
-     * GET /teams/{teamId}
+     * GET /teams/users/{userId}
      * 
-     * @var \Kronup\Model\TeamExtended $response
+     * @var \Kronup\Model\TeamsExtendedList $response
      */
     $response = $sdk
         ->api()
         ->teams()
-        ->teamRead($arg_team_id, $arg_x_org_id);
+        ->teamListUser($arg_user_id, $arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->teams()->teamRead(): %s\n", 
+        "API Exception when calling api()->teams()->teamListUser(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->teams()->teamRead(): %s\n", 
+        "Exception when calling api()->teams()->teamListUser(): %s\n", 
         $exc->getMessage()
     );
 }

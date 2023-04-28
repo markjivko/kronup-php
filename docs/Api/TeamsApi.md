@@ -23,7 +23,8 @@ Method | Description
 [**teamAssign()**](#teamassign) | Assign to team
 [**teamCreate()**](#teamcreate) | Create team
 [**teamDelete()**](#teamdelete) | Delete team
-[**teamList()**](#teamlist) | List teams
+[**teamListAll()**](#teamlistall) | List all teams
+[**teamListUser()**](#teamlistuser) | List user teams
 [**teamRead()**](#teamread) | Fetch team
 [**teamUnassign()**](#teamunassign) | Unassign from team
 [**teamUpdate()**](#teamupdate) | Update team
@@ -94,7 +95,7 @@ Assign a user to a team
 (new \Kronup\Sdk())->api()->teams()->teamCreate(
     string $x_org_id,
     \Kronup\Model\PayloadTeamCreate $payload_team_create
-): \Kronup\Model\Team
+): \Kronup\Model\TeamExtended
 ```
 
 ### Parameters
@@ -106,7 +107,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Team**](../../Model/Team)
+[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
 
 ### Description
 
@@ -163,14 +164,14 @@ Delete a team and unassign all users
 ---
 
 
-## `teamList()`
+## `teamListAll()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamList.php){: .btn .btn-green .mt-4}
+> [php -f **teamListAll.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamListAll.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -179,9 +180,8 @@ Delete a team and unassign all users
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamList(
+(new \Kronup\Sdk())->api()->teams()->teamListAll(
     string $x_org_id,
-    [ string $user_id, ]
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\TeamsList
@@ -192,7 +192,6 @@ Delete a team and unassign all users
 Name | Type | Description
 ------------- | ------------- | -------------
  **$x_org_id** | **string**  | Organization ID 
- **$user_id** | **string**  | User ID - optionally restrict teams and channels to this user 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -202,9 +201,57 @@ Name | Type | Description
 
 ### Description
 
-> List teams
+> List all teams
 
-Get a list of team models
+Get a list of all organization team models
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `teamListUser()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **teamListUser.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamListUser.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/teams/users/{userId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->teams()->teamListUser(
+    string $user_id,
+    string $x_org_id,
+    [ int $page_number = 1, ]
+    [ int $page_size = 100 ]
+): \Kronup\Model\TeamsExtendedList
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$user_id** | **string**  | User ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$page_number** | **int**  | Pagination: page number  [default to 1]
+ **$page_size** | **int**  | Pagination: page size  [default to 100]
+
+### Return type
+
+[**\Kronup\Model\TeamsExtendedList**](../../Model/TeamsExtendedList)
+
+### Description
+
+> List user teams
+
+Get a list of extended team models for this user
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -230,7 +277,7 @@ Get a list of team models
 (new \Kronup\Sdk())->api()->teams()->teamRead(
     string $team_id,
     string $x_org_id
-): \Kronup\Model\Team
+): \Kronup\Model\TeamExtended
 ```
 
 ### Parameters
@@ -242,7 +289,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Team**](../../Model/Team)
+[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
 
 ### Description
 
@@ -321,7 +368,7 @@ Remove a user from a team
     string $team_id,
     string $x_org_id,
     \Kronup\Model\PayloadTeamUpdate $payload_team_update
-): \Kronup\Model\Team
+): \Kronup\Model\TeamExtended
 ```
 
 ### Parameters
@@ -334,7 +381,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Team**](../../Model/Team)
+[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
 
 ### Description
 

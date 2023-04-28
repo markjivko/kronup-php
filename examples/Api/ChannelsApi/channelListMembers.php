@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TeamsApi/#teamlist
+ * @link    https://kronup.github.io/kronup-php/Api/ChannelsApi/#channellistmembers
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,11 +20,14 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
+// Team ID
+$arg_team_id = "team-id-***";
+
+// Channel ID
+$arg_channel_id = "channel-id-***";
+
 // Organization ID
 $arg_x_org_id = "org-id-***";
-
-// User ID - optionally restrict teams and channels to this user
-$arg_user_id = "user-id-***";
 
 // Pagination: page number
 $arg_page_number = 1;
@@ -35,25 +38,25 @@ $arg_page_size = 100;
 try {
 
     /**
-     * GET /teams
+     * GET /teams/{teamId}/channels/{channelId}
      * 
-     * @var \Kronup\Model\TeamsList $response
+     * @var \Kronup\Model\ChannelMembersList $response
      */
     $response = $sdk
         ->api()
-        ->teams()
-        ->teamList($arg_x_org_id, $arg_user_id, $arg_page_number, $arg_page_size);
+        ->channels()
+        ->channelListMembers($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_export($response);
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->teams()->teamList(): %s\n", 
+        "API Exception when calling api()->channels()->channelListMembers(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->teams()->teamList(): %s\n", 
+        "Exception when calling api()->channels()->channelListMembers(): %s\n", 
         $exc->getMessage()
     );
 }

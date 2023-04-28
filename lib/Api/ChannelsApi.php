@@ -72,7 +72,7 @@ class ChannelsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Team
+     * @return \Kronup\Model\TeamExtended
      */
     public function channelCreate($team_id, $x_org_id, $payload_channel_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -86,12 +86,12 @@ class ChannelsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels";
         
-        /** @var \Kronup\Model\Team $result */
+        /** @var \Kronup\Model\TeamExtended $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $payload_channel_create
             ), 
-            "\Kronup\Model\Team"
+            "\Kronup\Model\TeamExtended"
         );
             
         return $result;
@@ -126,6 +126,57 @@ class ChannelsApi extends AbstractApi {
                 $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, []
             ), 
             "bool"
+        );
+            
+        return $result;
+    }
+    
+    /**
+     * List members
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $x_org_id Organization ID
+     * @param int|1 $page_number Pagination: page number
+     * @param int|100 $page_size Pagination: page size
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\ChannelMembersList
+     */
+    public function channelListMembers($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
+        if (isset($page_number) && $page_number < 1) {
+            throw new IAE('Invalid value for "$page_number" when calling ChannelsApi.channelListMembers, must be bigger than or equal to 1.');
+        }
+
+        if (isset($page_size) && $page_size > 500) {
+            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi.channelListMembers, must be smaller than or equal to 500');
+        }
+
+        if (isset($page_size) && $page_size < 1) {
+            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi.channelListMembers, must be bigger than or equal to 1.');
+        }
+
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}";
+        
+        /** @var \Kronup\Model\ChannelMembersList $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [
+                    "pageNumber" => S::toQueryValue($page_number),
+                    "pageSize" => S::toQueryValue($page_size),
+                ], $rHeaders, []
+            ), 
+            "\Kronup\Model\ChannelMembersList"
         );
             
         return $result;
@@ -176,7 +227,7 @@ class ChannelsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\Team
+     * @return \Kronup\Model\TeamExtended
      */
     public function channelUpdate($team_id, $channel_id, $x_org_id, $payload_channel_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -190,12 +241,12 @@ class ChannelsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}";
         
-        /** @var \Kronup\Model\Team $result */
+        /** @var \Kronup\Model\TeamExtended $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $payload_channel_update
             ), 
-            "\Kronup\Model\Team"
+            "\Kronup\Model\TeamExtended"
         );
             
         return $result;

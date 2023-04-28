@@ -23,6 +23,7 @@ Method | Description
 [**channelAssign()**](#channelassign) | Assign to channel
 [**channelCreate()**](#channelcreate) | Create channel
 [**channelDelete()**](#channeldelete) | Delete channel
+[**channelListMembers()**](#channellistmembers) | List members
 [**channelUnassign()**](#channelunassign) | Unassign from channel
 [**channelUpdate()**](#channelupdate) | Update channel
 
@@ -95,7 +96,7 @@ Assign a user to a channel
     string $team_id,
     string $x_org_id,
     \Kronup\Model\PayloadChannelCreate $payload_channel_create
-): \Kronup\Model\Team
+): \Kronup\Model\TeamExtended
 ```
 
 ### Parameters
@@ -108,7 +109,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Team**](../../Model/Team)
+[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
 
 ### Description
 
@@ -161,6 +162,56 @@ Name | Type | Description
 > Delete channel
 
 Delete a channel and unassign all users
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+## `channelListMembers()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **channelListMembers.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelListMembers.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/teams/{teamId}/channels/{channelId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->channels()->channelListMembers(
+    string $team_id,
+    string $channel_id,
+    string $x_org_id,
+    [ int $page_number = 1, ]
+    [ int $page_size = 100 ]
+): \Kronup\Model\ChannelMembersList
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$page_number** | **int**  | Pagination: page number  [default to 1]
+ **$page_size** | **int**  | Pagination: page size  [default to 100]
+
+### Return type
+
+[**\Kronup\Model\ChannelMembersList**](../../Model/ChannelMembersList)
+
+### Description
+
+> List members
+
+List all channel members
 
 [Back to top](#top){: .btn .btn-purple }
 
@@ -236,7 +287,7 @@ Remove a user from a channel
     string $channel_id,
     string $x_org_id,
     \Kronup\Model\PayloadChannelUpdate $payload_channel_update
-): \Kronup\Model\Team
+): \Kronup\Model\TeamExtended
 ```
 
 ### Parameters
@@ -250,7 +301,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\Team**](../../Model/Team)
+[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
 
 ### Description
 

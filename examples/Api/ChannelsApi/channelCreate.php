@@ -39,7 +39,7 @@ try {
     /**
      * POST /teams/{teamId}/channels
      * 
-     * @var \Kronup\Model\Team $response
+     * @var \Kronup\Model\TeamExtended $response
      */
     $response = $sdk
         ->api()

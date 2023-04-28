@@ -1,10 +1,10 @@
 ---
-title: Team
+title: TeamExtended
 parent: Model
 layout: page
 ---
 
-# Team
+# TeamExtended
 
 ## Model getters
 
@@ -16,4 +16,5 @@ Method name | Return type | Description
 **getTeamDesc()** | **string** | Team description
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
+**getChannels()** | [**\Kronup\Model\Channel[]**](../Channel) | Channels
 

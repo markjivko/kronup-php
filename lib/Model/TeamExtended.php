@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Team Model
+ * TeamExtended Model
  *
  * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
@@ -17,23 +17,24 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Team Model
+ * TeamExtended Model
  */
-class Team extends AbstractModel {
+class TeamExtended extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Team";
+    protected static $_name = "TeamExtended";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
         "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", null, ["r" => 0, "nl" => 0, "xl" => 256]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
+        "channels" => ["channels", "\Kronup\Model\Channel[]", null, "getChannels", "setChannels", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * Team
+     * TeamExtended
      *
      * @param mixed[] $data Model data
      */
@@ -162,5 +163,25 @@ class Team extends AbstractModel {
      */
     public function setUpdatedAt($updated_at) {
         return $this->_set("updatedAt", $updated_at);
+    }
+
+    /**
+     * Get channels - Channels
+     *
+     * @return \Kronup\Model\Channel[]|null
+     */
+    public function getChannels(): ?array {
+        return $this->_data["channels"];
+    }
+
+    /**
+     * Set channels - Channels
+     * 
+     * @param \Kronup\Model\Channel[]|null $channels Channels
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setChannels(?array $channels) {
+        return $this->_set("channels", $channels);
     }
 }
