@@ -20,31 +20,32 @@ $sdk->api()->tasks();
 
 Method | Description
 ------------- | -------------
-[**taskAssign()**](#taskassign) | Assign to user
-[**taskCreate()**](#taskcreate) | Create task
-[**taskDelete()**](#taskdelete) | Delete task
-[**taskDiscoveryCreate()**](#taskdiscoverycreate) | Create discovery
-[**taskDiscoveryDelete()**](#taskdiscoverydelete) | Delete discovery
-[**taskDiscoveryUpdate()**](#taskdiscoveryupdate) | Update discovery
-[**taskFeedbackCreate()**](#taskfeedbackcreate) | Create feedback
-[**taskFeedbackDelete()**](#taskfeedbackdelete) | Delete feedback
-[**taskFeedbackReply()**](#taskfeedbackreply) | Reply to feedback
-[**taskFeedbackUpdate()**](#taskfeedbackupdate) | Update feedback
-[**taskList()**](#tasklist) | List tasks
-[**taskNotionAdd()**](#tasknotionadd) | Add notion
-[**taskNotionRemove()**](#tasknotionremove) | Remove notion
-[**taskRead()**](#taskread) | Fetch task
-[**taskUpdate()**](#taskupdate) | Update task
+[**assign()**](#assign) | Assign to user
+[**create()**](#create) | Create task
+[**delete()**](#delete) | Delete task
+[**discoveryCreate()**](#discoverycreate) | Create discovery
+[**discoveryDelete()**](#discoverydelete) | Delete discovery
+[**discoveryUpdate()**](#discoveryupdate) | Update discovery
+[**feedbackCreate()**](#feedbackcreate) | Create feedback
+[**feedbackDelete()**](#feedbackdelete) | Delete feedback
+[**feedbackReply()**](#feedbackreply) | Reply to feedback
+[**feedbackUpdate()**](#feedbackupdate) | Update feedback
+[**list()**](#list) | List tasks
+[**notionAdd()**](#notionadd) | Add notion
+[**notionRemove()**](#notionremove) | Remove notion
+[**read()**](#read) | Fetch task
+[**update()**](#update) | Update task
 
 
-## `taskAssign()`
+
+## `assign()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskAssign.php){: .btn .btn-green .mt-4}
+> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/assign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -53,7 +54,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskAssign(
+(new \Kronup\Sdk())->api()->tasks()->assign(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -89,14 +90,15 @@ Assign task to user
 ---
 
 
-## `taskCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -105,7 +107,7 @@ Assign task to user
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskCreate(
+(new \Kronup\Sdk())->api()->tasks()->create(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -139,14 +141,15 @@ Add a task to value item
 ---
 
 
-## `taskDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -155,7 +158,7 @@ Add a task to value item
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskDelete(
+(new \Kronup\Sdk())->api()->tasks()->delete(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -189,14 +192,15 @@ Delete a task from a value item
 ---
 
 
-## `taskDiscoveryCreate()`
+
+## `discoveryCreate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskDiscoveryCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDiscoveryCreate.php){: .btn .btn-green .mt-4}
+> [php -f **discoveryCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -205,7 +209,7 @@ Delete a task from a value item
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskDiscoveryCreate(
+(new \Kronup\Sdk())->api()->tasks()->discoveryCreate(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -241,14 +245,15 @@ Add a discovery to task
 ---
 
 
-## `taskDiscoveryDelete()`
+
+## `discoveryDelete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskDiscoveryDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDiscoveryDelete.php){: .btn .btn-green .mt-4}
+> [php -f **discoveryDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -257,7 +262,7 @@ Add a discovery to task
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskDiscoveryDelete(
+(new \Kronup\Sdk())->api()->tasks()->discoveryDelete(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -293,14 +298,15 @@ Delete a task discovery
 ---
 
 
-## `taskDiscoveryUpdate()`
+
+## `discoveryUpdate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskDiscoveryUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskDiscoveryUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **discoveryUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -309,7 +315,7 @@ Delete a task discovery
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskDiscoveryUpdate(
+(new \Kronup\Sdk())->api()->tasks()->discoveryUpdate(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -347,14 +353,15 @@ Update a task discovery
 ---
 
 
-## `taskFeedbackCreate()`
+
+## `feedbackCreate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskFeedbackCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskFeedbackCreate.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackCreate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -363,7 +370,7 @@ Update a task discovery
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskFeedbackCreate(
+(new \Kronup\Sdk())->api()->tasks()->feedbackCreate(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -399,14 +406,15 @@ Add a feedback to task
 ---
 
 
-## `taskFeedbackDelete()`
+
+## `feedbackDelete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskFeedbackDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskFeedbackDelete.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackDelete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -415,7 +423,7 @@ Add a feedback to task
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskFeedbackDelete(
+(new \Kronup\Sdk())->api()->tasks()->feedbackDelete(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -451,14 +459,15 @@ Delete a feedback for a task
 ---
 
 
-## `taskFeedbackReply()`
+
+## `feedbackReply()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskFeedbackReply.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskFeedbackReply.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackReply.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackReply.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -467,7 +476,7 @@ Delete a feedback for a task
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskFeedbackReply(
+(new \Kronup\Sdk())->api()->tasks()->feedbackReply(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -505,14 +514,15 @@ Update a reply to a task feedback
 ---
 
 
-## `taskFeedbackUpdate()`
+
+## `feedbackUpdate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskFeedbackUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskFeedbackUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackUpdate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -521,7 +531,7 @@ Update a reply to a task feedback
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskFeedbackUpdate(
+(new \Kronup\Sdk())->api()->tasks()->feedbackUpdate(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -559,14 +569,15 @@ Update a task feedback
 ---
 
 
-## `taskList()`
+
+## `list()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskList.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/list.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -575,7 +586,7 @@ Update a task feedback
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskList(
+(new \Kronup\Sdk())->api()->tasks()->list(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -611,14 +622,15 @@ Get a list of task models
 ---
 
 
-## `taskNotionAdd()`
+
+## `notionAdd()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskNotionAdd.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskNotionAdd.php){: .btn .btn-green .mt-4}
+> [php -f **notionAdd.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/notionAdd.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -627,7 +639,7 @@ Get a list of task models
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskNotionAdd(
+(new \Kronup\Sdk())->api()->tasks()->notionAdd(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -663,14 +675,15 @@ Add a notion to task
 ---
 
 
-## `taskNotionRemove()`
+
+## `notionRemove()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskNotionRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskNotionRemove.php){: .btn .btn-green .mt-4}
+> [php -f **notionRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/notionRemove.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -679,7 +692,7 @@ Add a notion to task
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskNotionRemove(
+(new \Kronup\Sdk())->api()->tasks()->notionRemove(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -715,14 +728,15 @@ Remove a notion from task
 ---
 
 
-## `taskRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -731,7 +745,7 @@ Remove a notion from task
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskRead(
+(new \Kronup\Sdk())->api()->tasks()->read(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -765,14 +779,15 @@ Retrieve task model
 ---
 
 
-## `taskUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **taskUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/taskUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -781,7 +796,7 @@ Retrieve task model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->tasks()->taskUpdate(
+(new \Kronup\Sdk())->api()->tasks()->update(
     string $team_id,
     string $channel_id,
     string $item_id,

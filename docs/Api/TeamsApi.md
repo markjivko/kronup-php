@@ -20,24 +20,25 @@ $sdk->api()->teams();
 
 Method | Description
 ------------- | -------------
-[**teamAssign()**](#teamassign) | Assign to team
-[**teamCreate()**](#teamcreate) | Create team
-[**teamDelete()**](#teamdelete) | Delete team
-[**teamListAll()**](#teamlistall) | List all teams
-[**teamListUser()**](#teamlistuser) | List user teams
-[**teamRead()**](#teamread) | Fetch team
-[**teamUnassign()**](#teamunassign) | Unassign from team
-[**teamUpdate()**](#teamupdate) | Update team
+[**assign()**](#assign) | Assign to team
+[**create()**](#create) | Create team
+[**delete()**](#delete) | Delete team
+[**listAll()**](#listall) | List all teams
+[**listUser()**](#listuser) | List user teams
+[**read()**](#read) | Fetch team
+[**unassign()**](#unassign) | Unassign from team
+[**update()**](#update) | Update team
 
 
-## `teamAssign()`
+
+## `assign()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamAssign.php){: .btn .btn-green .mt-4}
+> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/assign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -46,7 +47,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamAssign(
+(new \Kronup\Sdk())->api()->teams()->assign(
     string $team_id,
     string $user_id,
     string $x_org_id
@@ -76,14 +77,15 @@ Assign a user to a team
 ---
 
 
-## `teamCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -92,7 +94,7 @@ Assign a user to a team
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamCreate(
+(new \Kronup\Sdk())->api()->teams()->create(
     string $x_org_id,
     \Kronup\Model\PayloadTeamCreate $payload_team_create
 ): \Kronup\Model\TeamExtended
@@ -120,14 +122,15 @@ Create a new team to this organization
 ---
 
 
-## `teamDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -136,7 +139,7 @@ Create a new team to this organization
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamDelete(
+(new \Kronup\Sdk())->api()->teams()->delete(
     string $team_id,
     string $x_org_id
 ): bool
@@ -164,14 +167,15 @@ Delete a team and unassign all users
 ---
 
 
-## `teamListAll()`
+
+## `listAll()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamListAll.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamListAll.php){: .btn .btn-green .mt-4}
+> [php -f **listAll.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listAll.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -180,7 +184,7 @@ Delete a team and unassign all users
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamListAll(
+(new \Kronup\Sdk())->api()->teams()->listAll(
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
@@ -210,14 +214,15 @@ Get a list of all organization team models
 ---
 
 
-## `teamListUser()`
+
+## `listUser()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamListUser.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamListUser.php){: .btn .btn-green .mt-4}
+> [php -f **listUser.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listUser.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -226,7 +231,7 @@ Get a list of all organization team models
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamListUser(
+(new \Kronup\Sdk())->api()->teams()->listUser(
     string $user_id,
     string $x_org_id,
     [ int $page_number = 1, ]
@@ -251,21 +256,22 @@ Name | Type | Description
 
 > List user teams
 
-Get a list of extended team models for this user
+Get a list of all teams this user is a part of
 
 [Back to top](#top){: .btn .btn-purple }
 
 ---
 
 
-## `teamRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -274,7 +280,7 @@ Get a list of extended team models for this user
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamRead(
+(new \Kronup\Sdk())->api()->teams()->read(
     string $team_id,
     string $x_org_id
 ): \Kronup\Model\TeamExtended
@@ -302,14 +308,15 @@ Retrieve team model
 ---
 
 
-## `teamUnassign()`
+
+## `unassign()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamUnassign.php){: .btn .btn-green .mt-4}
+> [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/unassign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -318,7 +325,7 @@ Retrieve team model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamUnassign(
+(new \Kronup\Sdk())->api()->teams()->unassign(
     string $team_id,
     string $user_id,
     string $x_org_id
@@ -348,14 +355,15 @@ Remove a user from a team
 ---
 
 
-## `teamUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **teamUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/teamUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -364,7 +372,7 @@ Remove a user from a team
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->teams()->teamUpdate(
+(new \Kronup\Sdk())->api()->teams()->update(
     string $team_id,
     string $x_org_id,
     \Kronup\Model\PayloadTeamUpdate $payload_team_update

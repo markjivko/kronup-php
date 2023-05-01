@@ -42,7 +42,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Task
      */
-    public function taskAssign($team_id, $channel_id, $item_id, $task_id, $user_id, $x_org_id) {
+    public function assign($team_id, $channel_id, $item_id, $task_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -78,7 +78,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskCreate($team_id, $channel_id, $item_id, $x_org_id, $payload_task_create) {
+    public function create($team_id, $channel_id, $item_id, $x_org_id, $payload_task_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -114,7 +114,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function taskDelete($team_id, $channel_id, $item_id, $task_id, $x_org_id) {
+    public function delete($team_id, $channel_id, $item_id, $task_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -151,7 +151,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskDiscoveryCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_discovery_create) {
+    public function discoveryCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_discovery_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -188,7 +188,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function taskDiscoveryDelete($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id) {
+    public function discoveryDelete($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -226,7 +226,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskDiscoveryUpdate($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id, $payload_task_discovery_update) {
+    public function discoveryUpdate($team_id, $channel_id, $item_id, $task_id, $discovery_id, $x_org_id, $payload_task_discovery_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -263,7 +263,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskFeedbackCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_feedback_create) {
+    public function feedbackCreate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_feedback_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -300,7 +300,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function taskFeedbackDelete($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id) {
+    public function feedbackDelete($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -338,7 +338,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskFeedbackReply($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $payload_task_feedback_reply) {
+    public function feedbackReply($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $payload_task_feedback_reply) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -376,7 +376,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskFeedbackUpdate($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $payload_task_feedback_update) {
+    public function feedbackUpdate($team_id, $channel_id, $item_id, $task_id, $feedback_id, $x_org_id, $payload_task_feedback_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -413,17 +413,17 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TasksList
      */
-    public function taskList($team_id, $channel_id, $item_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($team_id, $channel_id, $item_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling TasksApi.taskList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling TasksApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling TasksApi.taskList, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling TasksApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling TasksApi.taskList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling TasksApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -465,7 +465,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Task
      */
-    public function taskNotionAdd($team_id, $channel_id, $item_id, $task_id, $notion_id, $x_org_id) {
+    public function notionAdd($team_id, $channel_id, $item_id, $task_id, $notion_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -502,7 +502,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function taskNotionRemove($team_id, $channel_id, $item_id, $task_id, $notion_id, $x_org_id) {
+    public function notionRemove($team_id, $channel_id, $item_id, $task_id, $notion_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -538,7 +538,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskRead($team_id, $channel_id, $item_id, $task_id, $x_org_id) {
+    public function read($team_id, $channel_id, $item_id, $task_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -575,7 +575,7 @@ class TasksApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TaskExpanded
      */
-    public function taskUpdate($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_update) {
+    public function update($team_id, $channel_id, $item_id, $task_id, $x_org_id, $payload_task_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

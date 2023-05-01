@@ -20,20 +20,21 @@ $sdk->api()->experiences();
 
 Method | Description
 ------------- | -------------
-[**experienceEvaluatePeer()**](#experienceevaluatepeer) | Evaluate peer
-[**experienceEvaluateSelf()**](#experienceevaluateself) | Self-evaluation
-[**experienceRead()**](#experienceread) | Fetch notion experience
-[**experiencesList()**](#experienceslist) | Fetch all experiences
+[**evaluatePeer()**](#evaluatepeer) | Evaluate peer
+[**evaluateSelf()**](#evaluateself) | Self-evaluation
+[**list()**](#list) | Fetch all experiences
+[**read()**](#read) | Fetch notion experience
 
 
-## `experienceEvaluatePeer()`
+
+## `evaluatePeer()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **experienceEvaluatePeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/experienceEvaluatePeer.php){: .btn .btn-green .mt-4}
+> [php -f **evaluatePeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluatePeer.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -42,7 +43,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->experiences()->experienceEvaluatePeer(
+(new \Kronup\Sdk())->api()->experiences()->evaluatePeer(
     string $notion_id,
     string $user_id,
     string $grade,
@@ -74,14 +75,15 @@ Anonymously evaluate another user on this notion. Only the last evaluation is ke
 ---
 
 
-## `experienceEvaluateSelf()`
+
+## `evaluateSelf()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **experienceEvaluateSelf.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/experienceEvaluateSelf.php){: .btn .btn-green .mt-4}
+> [php -f **evaluateSelf.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluateSelf.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -90,7 +92,7 @@ Anonymously evaluate another user on this notion. Only the last evaluation is ke
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->experiences()->experienceEvaluateSelf(
+(new \Kronup\Sdk())->api()->experiences()->evaluateSelf(
     string $notion_id,
     string $grade,
     string $x_org_id
@@ -120,60 +122,15 @@ Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours in
 ---
 
 
-## `experienceRead()`
+
+## `list()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **experienceRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/experienceRead.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **GET** `/xp/notions/{notionId}/users/{userId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->experiences()->experienceRead(
-    string $notion_id,
-    string $user_id,
-    string $x_org_id
-): \Kronup\Model\Experience
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | -------------
- **$notion_id** | **string**  | Notion ID 
- **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
-
-### Return type
-
-[**\Kronup\Model\Experience**](../../Model/Experience)
-
-### Description
-
-> Fetch notion experience
-
-Retrieve experience model for specified Notion
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-## `experiencesList()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **experiencesList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/experiencesList.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/list.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -182,7 +139,7 @@ Retrieve experience model for specified Notion
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->experiences()->experiencesList(
+(new \Kronup\Sdk())->api()->experiences()->list(
     string $user_id,
     string $x_org_id,
     [ int $page_number = 1, ]
@@ -208,6 +165,53 @@ Name | Type | Description
 > Fetch all experiences
 
 Retrieve all experience models for this user
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+
+## `read()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/read.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/xp/notions/{notionId}/users/{userId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->experiences()->read(
+    string $notion_id,
+    string $user_id,
+    string $x_org_id
+): \Kronup\Model\Experience
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$notion_id** | **string**  | Notion ID 
+ **$user_id** | **string**  | User ID 
+ **$x_org_id** | **string**  | Organization ID 
+
+### Return type
+
+[**\Kronup\Model\Experience**](../../Model/Experience)
+
+### Description
+
+> Fetch notion experience
+
+Retrieve experience model for specified Notion
 
 [Back to top](#top){: .btn .btn-purple }
 

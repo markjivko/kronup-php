@@ -20,20 +20,21 @@ $sdk->api()->users();
 
 Method | Description
 ------------- | -------------
-[**userList()**](#userlist) | List users
-[**userRead()**](#userread) | Fetch user
-[**userRemove()**](#userremove) | Remove user
-[**userUpdateRole()**](#userupdaterole) | Update roles
+[**list()**](#list) | List users
+[**read()**](#read) | Fetch user
+[**remove()**](#remove) | Remove user
+[**updateRole()**](#updaterole) | Update roles
 
 
-## `userList()`
+
+## `list()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **userList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userList.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/list.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -42,7 +43,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->users()->userList(
+(new \Kronup\Sdk())->api()->users()->list(
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
@@ -72,14 +73,15 @@ Get a list of user models
 ---
 
 
-## `userRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **userRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -88,7 +90,7 @@ Get a list of user models
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->users()->userRead(
+(new \Kronup\Sdk())->api()->users()->read(
     string $user_id,
     string $x_org_id
 ): \Kronup\Model\User
@@ -116,14 +118,15 @@ Retrieve user model
 ---
 
 
-## `userRemove()`
+
+## `remove()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **userRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userRemove.php){: .btn .btn-green .mt-4}
+> [php -f **remove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/remove.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -132,7 +135,7 @@ Retrieve user model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->users()->userRemove(
+(new \Kronup\Sdk())->api()->users()->remove(
     string $user_id,
     string $x_org_id
 ): \Kronup\Model\User
@@ -160,14 +163,15 @@ Remove user from Organization
 ---
 
 
-## `userUpdateRole()`
+
+## `updateRole()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **userUpdateRole.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/userUpdateRole.php){: .btn .btn-green .mt-4}
+> [php -f **updateRole.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/updateRole.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -176,7 +180,7 @@ Remove user from Organization
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->users()->userUpdateRole(
+(new \Kronup\Sdk())->api()->users()->updateRole(
     string $user_id,
     string $x_org_id,
     \Kronup\Model\PayloadUserRoleUpdate $payload_user_role_update

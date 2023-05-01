@@ -20,21 +20,22 @@ $sdk->api()->notions();
 
 Method | Description
 ------------- | -------------
-[**notionCreate()**](#notioncreate) | Create notion
-[**notionDelete()**](#notiondelete) | Delete notion
-[**notionRead()**](#notionread) | Fetch notion
-[**notionSearch()**](#notionsearch) | Search notions
-[**notionUpdate()**](#notionupdate) | Update notion
+[**create()**](#create) | Create notion
+[**delete()**](#delete) | Delete notion
+[**read()**](#read) | Fetch notion
+[**search()**](#search) | Search notions
+[**update()**](#update) | Update notion
 
 
-## `notionCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **notionCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/notionCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -43,7 +44,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->notions()->notionCreate(
+(new \Kronup\Sdk())->api()->notions()->create(
     string $x_org_id,
     \Kronup\Model\PayloadNotionCreate $payload_notion_create
 ): \Kronup\Model\Notion
@@ -71,14 +72,15 @@ Define a notion
 ---
 
 
-## `notionDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **notionDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/notionDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -87,7 +89,7 @@ Define a notion
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->notions()->notionDelete(
+(new \Kronup\Sdk())->api()->notions()->delete(
     string $notion_id,
     string $x_org_id
 ): bool
@@ -115,14 +117,15 @@ Delete a notion model. This also removes the associated Experiences for all user
 ---
 
 
-## `notionRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **notionRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/notionRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -131,7 +134,7 @@ Delete a notion model. This also removes the associated Experiences for all user
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->notions()->notionRead(
+(new \Kronup\Sdk())->api()->notions()->read(
     string $notion_id,
     string $x_org_id
 ): \Kronup\Model\Notion
@@ -159,14 +162,15 @@ Retrieve notion model
 ---
 
 
-## `notionSearch()`
+
+## `search()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **notionSearch.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/notionSearch.php){: .btn .btn-green .mt-4}
+> [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/search.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -175,7 +179,7 @@ Retrieve notion model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->notions()->notionSearch(
+(new \Kronup\Sdk())->api()->notions()->search(
     string $x_org_id,
     [ string $search_term, ]
     [ int $page_number = 1, ]
@@ -207,14 +211,15 @@ Get a list of notion models
 ---
 
 
-## `notionUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **notionUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/notionUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -223,7 +228,7 @@ Get a list of notion models
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->notions()->notionUpdate(
+(new \Kronup\Sdk())->api()->notions()->update(
     string $notion_id,
     string $x_org_id,
     \Kronup\Model\PayloadNotionUpdate $payload_notion_update

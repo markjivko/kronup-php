@@ -20,22 +20,23 @@ $sdk->api()->serviceAccounts();
 
 Method | Description
 ------------- | -------------
-[**serviceAccountCreate()**](#serviceaccountcreate) | Create service account
-[**serviceAccountDelete()**](#serviceaccountdelete) | Delete service account
-[**serviceAccountList()**](#serviceaccountlist) | List service acounts
-[**serviceAccountRead()**](#serviceaccountread) | Fetch service account
-[**serviceAccountRegenerate()**](#serviceaccountregenerate) | Regenerate
-[**serviceAccountUpdate()**](#serviceaccountupdate) | Update service account
+[**create()**](#create) | Create service account
+[**delete()**](#delete) | Delete service account
+[**list()**](#list) | List service acounts
+[**read()**](#read) | Fetch service account
+[**regenerate()**](#regenerate) | Regenerate
+[**update()**](#update) | Update service account
 
 
-## `serviceAccountCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **serviceAccountCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/serviceAccountCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -44,7 +45,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->serviceAccounts()->serviceAccountCreate(
+(new \Kronup\Sdk())->api()->serviceAccounts()->create(
     string $x_org_id,
     \Kronup\Model\PayloadServiceAccountCreate $payload_service_account_create
 ): \Kronup\Model\ServiceAccount
@@ -72,14 +73,15 @@ Create a new service account for this Organization
 ---
 
 
-## `serviceAccountDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **serviceAccountDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/serviceAccountDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -88,7 +90,7 @@ Create a new service account for this Organization
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->serviceAccounts()->serviceAccountDelete(
+(new \Kronup\Sdk())->api()->serviceAccounts()->delete(
     string $account_id,
     string $x_org_id
 ): \Kronup\Model\User
@@ -116,14 +118,15 @@ Delete this service account. This action cannot be reversed.
 ---
 
 
-## `serviceAccountList()`
+
+## `list()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **serviceAccountList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/serviceAccountList.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/list.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -132,7 +135,7 @@ Delete this service account. This action cannot be reversed.
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->serviceAccounts()->serviceAccountList(
+(new \Kronup\Sdk())->api()->serviceAccounts()->list(
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
@@ -162,14 +165,15 @@ Get a list of all service account models, including those that were closed
 ---
 
 
-## `serviceAccountRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **serviceAccountRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/serviceAccountRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -178,7 +182,7 @@ Get a list of all service account models, including those that were closed
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->serviceAccounts()->serviceAccountRead(
+(new \Kronup\Sdk())->api()->serviceAccounts()->read(
     string $account_id,
     string $x_org_id
 ): \Kronup\Model\ServiceAccount
@@ -206,14 +210,15 @@ Retrieve service account model
 ---
 
 
-## `serviceAccountRegenerate()`
+
+## `regenerate()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **serviceAccountRegenerate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/serviceAccountRegenerate.php){: .btn .btn-green .mt-4}
+> [php -f **regenerate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/regenerate.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -222,7 +227,7 @@ Retrieve service account model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->serviceAccounts()->serviceAccountRegenerate(
+(new \Kronup\Sdk())->api()->serviceAccounts()->regenerate(
     string $account_id,
     string $x_org_id
 ): \Kronup\Model\ServiceAccount
@@ -250,14 +255,15 @@ Regenerate service account JSON Web Token and re-open service account if previou
 ---
 
 
-## `serviceAccountUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **serviceAccountUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/serviceAccountUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -266,7 +272,7 @@ Regenerate service account JSON Web Token and re-open service account if previou
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->serviceAccounts()->serviceAccountUpdate(
+(new \Kronup\Sdk())->api()->serviceAccounts()->update(
     string $account_id,
     string $x_org_id,
     \Kronup\Model\PayloadServiceAccountUpdate $payload_service_account_update

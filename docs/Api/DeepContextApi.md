@@ -20,19 +20,20 @@ $sdk->api()->deepContext();
 
 Method | Description
 ------------- | -------------
-[**deepContextDelete()**](#deepcontextdelete) | Delete value item
-[**deepContextRead()**](#deepcontextread) | Fetch expanded value item
-[**deepContextSearch()**](#deepcontextsearch) | Search value items
+[**delete()**](#delete) | Delete value item
+[**read()**](#read) | Fetch expanded value item
+[**search()**](#search) | Search value items
 
 
-## `deepContextDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **deepContextDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/deepContextDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -41,7 +42,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->deepContext()->deepContextDelete(
+(new \Kronup\Sdk())->api()->deepContext()->delete(
     string $item_id,
     string $x_org_id
 ): bool
@@ -69,14 +70,15 @@ Delete a value item from Deep Context";
 ---
 
 
-## `deepContextRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **deepContextRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/deepContextRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -85,7 +87,7 @@ Delete a value item from Deep Context";
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->deepContext()->deepContextRead(
+(new \Kronup\Sdk())->api()->deepContext()->read(
     string $item_id,
     string $x_org_id
 ): \Kronup\Model\ValueItemExpanded
@@ -113,14 +115,15 @@ Retrieve value item model
 ---
 
 
-## `deepContextSearch()`
+
+## `search()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **deepContextSearch.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/deepContextSearch.php){: .btn .btn-green .mt-4}
+> [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/search.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -129,7 +132,7 @@ Retrieve value item model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->deepContext()->deepContextSearch(
+(new \Kronup\Sdk())->api()->deepContext()->search(
     string $x_org_id,
     [ string $search_term, ]
     [ int $page_number = 1, ]

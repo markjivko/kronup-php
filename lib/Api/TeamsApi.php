@@ -39,7 +39,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\User
      */
-    public function teamAssign($team_id, $user_id, $x_org_id) {
+    public function assign($team_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -72,7 +72,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function teamCreate($x_org_id, $payload_team_create) {
+    public function create($x_org_id, $payload_team_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -105,7 +105,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function teamDelete($team_id, $x_org_id) {
+    public function delete($team_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -139,17 +139,17 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamsList
      */
-    public function teamListAll($x_org_id, $page_number = 1, $page_size = 100) {
+    public function listAll($x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling TeamsApi.teamListAll, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling TeamsApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling TeamsApi.teamListAll, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling TeamsApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling TeamsApi.teamListAll, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling TeamsApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -189,17 +189,17 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamsExtendedList
      */
-    public function teamListUser($user_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function listUser($user_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling TeamsApi.teamListUser, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling TeamsApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling TeamsApi.teamListUser, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling TeamsApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling TeamsApi.teamListUser, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling TeamsApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -237,7 +237,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function teamRead($team_id, $x_org_id) {
+    public function read($team_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -271,7 +271,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function teamUnassign($team_id, $user_id, $x_org_id) {
+    public function unassign($team_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -305,7 +305,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function teamUpdate($team_id, $x_org_id, $payload_team_update) {
+    public function update($team_id, $x_org_id, $payload_team_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

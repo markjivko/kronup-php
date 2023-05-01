@@ -37,7 +37,7 @@ class InvitationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationAccept($invite_id) {
+    public function accept($invite_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
@@ -64,7 +64,7 @@ class InvitationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationCreate($x_org_id, $payload_invitation_create) {
+    public function create($x_org_id, $payload_invitation_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -97,7 +97,7 @@ class InvitationsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function invitationDelete($invite_id, $x_org_id) {
+    public function delete($invite_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -131,17 +131,17 @@ class InvitationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\InvitationsList
      */
-    public function invitationList($x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling InvitationsApi.invitationList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling InvitationsApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling InvitationsApi.invitationList, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling InvitationsApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling InvitationsApi.invitationList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling InvitationsApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -178,7 +178,7 @@ class InvitationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationRead($invite_id) {
+    public function read($invite_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
@@ -206,7 +206,7 @@ class InvitationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Invitation
      */
-    public function invitationUpdate($invite_id, $x_org_id, $payload_invitation_update) {
+    public function update($invite_id, $x_org_id, $payload_invitation_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

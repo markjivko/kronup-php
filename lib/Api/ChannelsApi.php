@@ -40,7 +40,7 @@ class ChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\User
      */
-    public function channelAssign($team_id, $channel_id, $user_id, $x_org_id) {
+    public function assign($team_id, $channel_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -74,7 +74,7 @@ class ChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function channelCreate($team_id, $x_org_id, $payload_channel_create) {
+    public function create($team_id, $x_org_id, $payload_channel_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -108,7 +108,7 @@ class ChannelsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function channelDelete($team_id, $channel_id, $x_org_id) {
+    public function delete($team_id, $channel_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -144,17 +144,17 @@ class ChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ChannelMembersList
      */
-    public function channelListMembers($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function listMembers($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling ChannelsApi.channelListMembers, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling ChannelsApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi.channelListMembers, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi.channelListMembers, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -166,7 +166,7 @@ class ChannelsApi extends AbstractApi {
         );
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/users";
         
         /** @var \Kronup\Model\ChannelMembersList $result */
         $result = $this->exec(
@@ -194,7 +194,7 @@ class ChannelsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function channelUnassign($team_id, $channel_id, $user_id, $x_org_id) {
+    public function unassign($team_id, $channel_id, $user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -229,7 +229,7 @@ class ChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function channelUpdate($team_id, $channel_id, $x_org_id, $payload_channel_update) {
+    public function update($team_id, $channel_id, $x_org_id, $payload_channel_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

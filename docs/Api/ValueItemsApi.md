@@ -20,22 +20,23 @@ $sdk->api()->valueItems();
 
 Method | Description
 ------------- | -------------
-[**valueItemAdvance()**](#valueitemadvance) | Advance value item
-[**valueItemCreate()**](#valueitemcreate) | Create value item
-[**valueItemDelete()**](#valueitemdelete) | Delete value item
-[**valueItemList()**](#valueitemlist) | List value items
-[**valueItemRead()**](#valueitemread) | Fetch value item
-[**valueItemUpdate()**](#valueitemupdate) | Update value item
+[**advance()**](#advance) | Advance value item
+[**create()**](#create) | Create value item
+[**delete()**](#delete) | Delete value item
+[**list()**](#list) | List value items
+[**read()**](#read) | Fetch value item
+[**update()**](#update) | Update value item
 
 
-## `valueItemAdvance()`
+
+## `advance()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **valueItemAdvance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemAdvance.php){: .btn .btn-green .mt-4}
+> [php -f **advance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/advance.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -44,7 +45,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->valueItemAdvance(
+(new \Kronup\Sdk())->api()->valueItems()->advance(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -76,14 +77,15 @@ Advance a value item
 ---
 
 
-## `valueItemCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **valueItemCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -92,7 +94,7 @@ Advance a value item
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->valueItemCreate(
+(new \Kronup\Sdk())->api()->valueItems()->create(
     string $team_id,
     string $channel_id,
     string $x_org_id,
@@ -124,14 +126,15 @@ Add a value item to planning
 ---
 
 
-## `valueItemDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **valueItemDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -140,7 +143,7 @@ Add a value item to planning
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->valueItemDelete(
+(new \Kronup\Sdk())->api()->valueItems()->delete(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -172,14 +175,15 @@ Delete a value item from the flow
 ---
 
 
-## `valueItemList()`
+
+## `list()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **valueItemList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemList.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/list.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -188,7 +192,7 @@ Delete a value item from the flow
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->valueItemList(
+(new \Kronup\Sdk())->api()->valueItems()->list(
     string $team_id,
     string $channel_id,
     string $x_org_id,
@@ -222,14 +226,15 @@ Get a list of value item models
 ---
 
 
-## `valueItemRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **valueItemRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -238,7 +243,7 @@ Get a list of value item models
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->valueItemRead(
+(new \Kronup\Sdk())->api()->valueItems()->read(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -270,14 +275,15 @@ Retrieve value item model
 ---
 
 
-## `valueItemUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **valueItemUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/valueItemUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -286,7 +292,7 @@ Retrieve value item model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->valueItems()->valueItemUpdate(
+(new \Kronup\Sdk())->api()->valueItems()->update(
     string $team_id,
     string $channel_id,
     string $item_id,

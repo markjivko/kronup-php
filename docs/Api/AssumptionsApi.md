@@ -20,22 +20,23 @@ $sdk->api()->assumptions();
 
 Method | Description
 ------------- | -------------
-[**assumptionCreate()**](#assumptioncreate) | Create assumption
-[**assumptionDelete()**](#assumptiondelete) | Delete assumption
-[**assumptionExperiment()**](#assumptionexperiment) | Experiment
-[**assumptionList()**](#assumptionlist) | List assumptions
-[**assumptionRead()**](#assumptionread) | Fetch assumption
-[**assumptionUpdate()**](#assumptionupdate) | Update assumption
+[**create()**](#create) | Create assumption
+[**delete()**](#delete) | Delete assumption
+[**experiment()**](#experiment) | Experiment
+[**list()**](#list) | List assumptions
+[**read()**](#read) | Fetch assumption
+[**update()**](#update) | Update assumption
 
 
-## `assumptionCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assumptionCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -44,7 +45,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->assumptions()->assumptionCreate(
+(new \Kronup\Sdk())->api()->assumptions()->create(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -78,14 +79,15 @@ Add an assumption to value item
 ---
 
 
-## `assumptionDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assumptionDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -94,7 +96,7 @@ Add an assumption to value item
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->assumptions()->assumptionDelete(
+(new \Kronup\Sdk())->api()->assumptions()->delete(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -128,14 +130,15 @@ Delete an assumption from a value item
 ---
 
 
-## `assumptionExperiment()`
+
+## `experiment()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assumptionExperiment.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionExperiment.php){: .btn .btn-green .mt-4}
+> [php -f **experiment.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/experiment.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -144,7 +147,7 @@ Delete an assumption from a value item
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->assumptions()->assumptionExperiment(
+(new \Kronup\Sdk())->api()->assumptions()->experiment(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -180,14 +183,15 @@ Update experiment details
 ---
 
 
-## `assumptionList()`
+
+## `list()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assumptionList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionList.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/list.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -196,7 +200,7 @@ Update experiment details
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->assumptions()->assumptionList(
+(new \Kronup\Sdk())->api()->assumptions()->list(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -232,14 +236,15 @@ Get a list of assumption models
 ---
 
 
-## `assumptionRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assumptionRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -248,7 +253,7 @@ Get a list of assumption models
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->assumptions()->assumptionRead(
+(new \Kronup\Sdk())->api()->assumptions()->read(
     string $team_id,
     string $channel_id,
     string $item_id,
@@ -282,14 +287,15 @@ Retrieve assumption model
 ---
 
 
-## `assumptionUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assumptionUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/assumptionUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -298,7 +304,7 @@ Retrieve assumption model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->assumptions()->assumptionUpdate(
+(new \Kronup\Sdk())->api()->assumptions()->update(
     string $team_id,
     string $channel_id,
     string $item_id,

@@ -40,7 +40,7 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function valueItemAdvance($team_id, $channel_id, $item_id, $x_org_id) {
+    public function advance($team_id, $channel_id, $item_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -75,7 +75,7 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function valueItemCreate($team_id, $channel_id, $x_org_id, $payload_value_item_create) {
+    public function create($team_id, $channel_id, $x_org_id, $payload_value_item_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -110,7 +110,7 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function valueItemDelete($team_id, $channel_id, $item_id, $x_org_id) {
+    public function delete($team_id, $channel_id, $item_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -146,17 +146,17 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItemsList
      */
-    public function valueItemList($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi.valueItemList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi.valueItemList, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi.valueItemList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -196,7 +196,7 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function valueItemRead($team_id, $channel_id, $item_id, $x_org_id) {
+    public function read($team_id, $channel_id, $item_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -232,7 +232,7 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function valueItemUpdate($team_id, $channel_id, $item_id, $x_org_id, $payload_value_item_update) {
+    public function update($team_id, $channel_id, $item_id, $x_org_id, $payload_value_item_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

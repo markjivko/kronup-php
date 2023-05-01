@@ -43,6 +43,6 @@ class ExceptionTest extends TestCase {
         $this->sdk
             ->api()
             ->users()
-            ->userList("org-id");
+            ->list("org-id");
     }
 }

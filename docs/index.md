@@ -86,17 +86,17 @@ try {
     /**
      * @var \Kronup\Model\Account $account
      */
-    $account = $this->sdk->api()->account()->accountRead();
+    $account = $this->sdk->api()->account()->read();
 
     // Say hello
     echo sprintf('Hello, %s!', $account->getUserName());
 
 } catch (\Kronup\Sdk\ApiException $apiExc) {
-    echo "API Exception when calling account()->accountRead(): ",
+    echo "API Exception when calling account()->read(): ",
         var_export($apiExc->getResponseBody(), true),
         PHP_EOL;
 } catch (\Exception $exc) {
-    echo "Exception when calling account()->accountRead(): " . $exc->getMessage() . PHP_EOL;
+    echo "Exception when calling account()->read(): " . $exc->getMessage() . PHP_EOL;
 }
 ```
 

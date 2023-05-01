@@ -37,7 +37,7 @@ class OrganizationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Organization
      */
-    public function organizationCreate($payload_organization_create) {
+    public function create($payload_organization_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
@@ -63,7 +63,7 @@ class OrganizationsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function organizationDelete($org_id) {
+    public function delete($org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
@@ -90,7 +90,7 @@ class OrganizationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Organization
      */
-    public function organizationLogo($org_id, $logo = null) {
+    public function logo($org_id, $logo = null) {
         $rHeaders = $this->_headerSelector->selectHeadersForMultipart(["application/json"]);
 
         // Path template
@@ -117,7 +117,7 @@ class OrganizationsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Organization
      */
-    public function organizationUpdate($org_id, $payload_organization_update) {
+    public function update($org_id, $payload_organization_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template

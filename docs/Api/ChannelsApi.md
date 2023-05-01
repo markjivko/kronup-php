@@ -20,22 +20,23 @@ $sdk->api()->channels();
 
 Method | Description
 ------------- | -------------
-[**channelAssign()**](#channelassign) | Assign to channel
-[**channelCreate()**](#channelcreate) | Create channel
-[**channelDelete()**](#channeldelete) | Delete channel
-[**channelListMembers()**](#channellistmembers) | List members
-[**channelUnassign()**](#channelunassign) | Unassign from channel
-[**channelUpdate()**](#channelupdate) | Update channel
+[**assign()**](#assign) | Assign to channel
+[**create()**](#create) | Create channel
+[**delete()**](#delete) | Delete channel
+[**listMembers()**](#listmembers) | List members
+[**unassign()**](#unassign) | Unassign from channel
+[**update()**](#update) | Update channel
 
 
-## `channelAssign()`
+
+## `assign()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **channelAssign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelAssign.php){: .btn .btn-green .mt-4}
+> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/assign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -44,7 +45,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->channels()->channelAssign(
+(new \Kronup\Sdk())->api()->channels()->assign(
     string $team_id,
     string $channel_id,
     string $user_id,
@@ -76,14 +77,15 @@ Assign a user to a channel
 ---
 
 
-## `channelCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **channelCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -92,7 +94,7 @@ Assign a user to a channel
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->channels()->channelCreate(
+(new \Kronup\Sdk())->api()->channels()->create(
     string $team_id,
     string $x_org_id,
     \Kronup\Model\PayloadChannelCreate $payload_channel_create
@@ -122,14 +124,15 @@ Create a new channel for a team
 ---
 
 
-## `channelDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **channelDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -138,7 +141,7 @@ Create a new channel for a team
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->channels()->channelDelete(
+(new \Kronup\Sdk())->api()->channels()->delete(
     string $team_id,
     string $channel_id,
     string $x_org_id
@@ -168,23 +171,24 @@ Delete a channel and unassign all users
 ---
 
 
-## `channelListMembers()`
+
+## `listMembers()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **channelListMembers.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelListMembers.php){: .btn .btn-green .mt-4}
+> [php -f **listMembers.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listMembers.php){: .btn .btn-green .mt-4}
 
 ### Request
 
-> **GET** `/teams/{teamId}/channels/{channelId}`
+> **GET** `/teams/{teamId}/channels/{channelId}/users`
 
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->channels()->channelListMembers(
+(new \Kronup\Sdk())->api()->channels()->listMembers(
     string $team_id,
     string $channel_id,
     string $x_org_id,
@@ -218,14 +222,15 @@ List all channel members
 ---
 
 
-## `channelUnassign()`
+
+## `unassign()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **channelUnassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUnassign.php){: .btn .btn-green .mt-4}
+> [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/unassign.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -234,7 +239,7 @@ List all channel members
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->channels()->channelUnassign(
+(new \Kronup\Sdk())->api()->channels()->unassign(
     string $team_id,
     string $channel_id,
     string $user_id,
@@ -266,14 +271,15 @@ Remove a user from a channel
 ---
 
 
-## `channelUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **channelUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/channelUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -282,7 +288,7 @@ Remove a user from a channel
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->channels()->channelUpdate(
+(new \Kronup\Sdk())->api()->channels()->update(
     string $team_id,
     string $channel_id,
     string $x_org_id,

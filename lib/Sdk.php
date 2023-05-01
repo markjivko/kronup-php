@@ -43,7 +43,7 @@ class Sdk {
      * @var string $apiKey kronup API Key
      * @throws \RuntimeException
      */
-    public function __construct(string $apiKey) {
+    public function __construct(string $apiKey = null) {
         // PHP check
         if (version_compare(PHP_VERSION, "7.4.0") <= 0) {
             throw new RuntimeException("kronup SDK: PHP v7.4+ is required");

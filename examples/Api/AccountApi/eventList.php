@@ -30,7 +30,6 @@ $arg_page_number = 1;
 $arg_page_size = 100;
 
 try {
-
     /**
      * GET /account/events
      * 
@@ -42,7 +41,6 @@ try {
         ->eventList($arg_x_org_id, $arg_page_number, $arg_page_size);
 
     var_export($response);
-
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
         "API Exception when calling api()->account()->eventList(): %s\n", 

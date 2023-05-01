@@ -13,7 +13,6 @@ Method name | Return type | Description
 **getId()** | **string** | Team ID
 **getOrgId()** | **string** | Organization ID
 **getTeamName()** | **string** | Team name
-**getTeamDesc()** | **string** | Team description
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

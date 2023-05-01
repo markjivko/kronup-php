@@ -20,22 +20,23 @@ $sdk->api()->invitations();
 
 Method | Description
 ------------- | -------------
-[**invitationAccept()**](#invitationaccept) | Accept invitation
-[**invitationCreate()**](#invitationcreate) | Create invitation
-[**invitationDelete()**](#invitationdelete) | Delete invitation
-[**invitationList()**](#invitationlist) | List invitations
-[**invitationRead()**](#invitationread) | Fetch invitation
-[**invitationUpdate()**](#invitationupdate) | Update invitation
+[**accept()**](#accept) | Accept invitation
+[**create()**](#create) | Create invitation
+[**delete()**](#delete) | Delete invitation
+[**list()**](#list) | List invitations
+[**read()**](#read) | Fetch invitation
+[**update()**](#update) | Update invitation
 
 
-## `invitationAccept()`
+
+## `accept()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **invitationAccept.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationAccept.php){: .btn .btn-green .mt-4}
+> [php -f **accept.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/accept.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -44,7 +45,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->invitations()->invitationAccept(
+(new \Kronup\Sdk())->api()->invitations()->accept(
     string $invite_id
 ): \Kronup\Model\Invitation
 ```
@@ -70,14 +71,15 @@ Accept an invitation to join an organization
 ---
 
 
-## `invitationCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **invitationCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -86,7 +88,7 @@ Accept an invitation to join an organization
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->invitations()->invitationCreate(
+(new \Kronup\Sdk())->api()->invitations()->create(
     string $x_org_id,
     \Kronup\Model\PayloadInvitationCreate $payload_invitation_create
 ): \Kronup\Model\Invitation
@@ -114,14 +116,15 @@ Create a new invitation to this organization
 ---
 
 
-## `invitationDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **invitationDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -130,7 +133,7 @@ Create a new invitation to this organization
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->invitations()->invitationDelete(
+(new \Kronup\Sdk())->api()->invitations()->delete(
     string $invite_id,
     string $x_org_id
 ): bool
@@ -158,14 +161,15 @@ Delete invitation
 ---
 
 
-## `invitationList()`
+
+## `list()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **invitationList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationList.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/list.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -174,7 +178,7 @@ Delete invitation
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->invitations()->invitationList(
+(new \Kronup\Sdk())->api()->invitations()->list(
     string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
@@ -204,14 +208,15 @@ Get a list of invitation models
 ---
 
 
-## `invitationRead()`
+
+## `read()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **invitationRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationRead.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/read.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -220,7 +225,7 @@ Get a list of invitation models
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->invitations()->invitationRead(
+(new \Kronup\Sdk())->api()->invitations()->read(
     string $invite_id
 ): \Kronup\Model\Invitation
 ```
@@ -246,14 +251,15 @@ Retrieve invitation model
 ---
 
 
-## `invitationUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **invitationUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/invitationUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -262,7 +268,7 @@ Retrieve invitation model
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->invitations()->invitationUpdate(
+(new \Kronup\Sdk())->api()->invitations()->update(
     string $invite_id,
     string $x_org_id,
     \Kronup\Model\PayloadInvitationUpdate $payload_invitation_update

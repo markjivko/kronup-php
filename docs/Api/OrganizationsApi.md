@@ -20,20 +20,21 @@ $sdk->api()->organizations();
 
 Method | Description
 ------------- | -------------
-[**organizationCreate()**](#organizationcreate) | Create organization
-[**organizationDelete()**](#organizationdelete) | Delete organization
-[**organizationLogo()**](#organizationlogo) | Update logo
-[**organizationUpdate()**](#organizationupdate) | Update organization
+[**create()**](#create) | Create organization
+[**delete()**](#delete) | Delete organization
+[**logo()**](#logo) | Update logo
+[**update()**](#update) | Update organization
 
 
-## `organizationCreate()`
+
+## `create()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **organizationCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationCreate.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/create.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -42,7 +43,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->organizations()->organizationCreate(
+(new \Kronup\Sdk())->api()->organizations()->create(
     \Kronup\Model\PayloadOrganizationCreate $payload_organization_create
 ): \Kronup\Model\Organization
 ```
@@ -68,14 +69,15 @@ Add an organization owned by the current user
 ---
 
 
-## `organizationDelete()`
+
+## `delete()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **organizationDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationDelete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/delete.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -84,7 +86,7 @@ Add an organization owned by the current user
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->organizations()->organizationDelete(
+(new \Kronup\Sdk())->api()->organizations()->delete(
     string $org_id
 ): bool
 ```
@@ -110,14 +112,15 @@ Remove organization
 ---
 
 
-## `organizationLogo()`
+
+## `logo()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **organizationLogo.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationLogo.php){: .btn .btn-green .mt-4}
+> [php -f **logo.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/logo.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -126,7 +129,7 @@ Remove organization
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->organizations()->organizationLogo(
+(new \Kronup\Sdk())->api()->organizations()->logo(
     string $org_id,
     [ \SplFileObject $logo ]
 ): \Kronup\Model\Organization
@@ -154,14 +157,15 @@ Update organization logo
 ---
 
 
-## `organizationUpdate()`
+
+## `update()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **organizationUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/organizationUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/update.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -170,7 +174,7 @@ Update organization logo
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->organizations()->organizationUpdate(
+(new \Kronup\Sdk())->api()->organizations()->update(
     string $org_id,
     \Kronup\Model\PayloadOrganizationUpdate $payload_organization_update
 ): \Kronup\Model\Organization

@@ -41,7 +41,7 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function assumptionCreate($team_id, $channel_id, $item_id, $x_org_id, $payload_assm_create) {
+    public function create($team_id, $channel_id, $item_id, $x_org_id, $payload_assm_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -77,7 +77,7 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function assumptionDelete($team_id, $channel_id, $item_id, $assm_id, $x_org_id) {
+    public function delete($team_id, $channel_id, $item_id, $assm_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -114,7 +114,7 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function assumptionExperiment($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_experiment) {
+    public function experiment($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_experiment) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -151,17 +151,17 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\AssumptionsList
      */
-    public function assumptionList($team_id, $channel_id, $item_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($team_id, $channel_id, $item_id, $x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling AssumptionsApi.assumptionList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling AssumptionsApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling AssumptionsApi.assumptionList, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling AssumptionsApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling AssumptionsApi.assumptionList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling AssumptionsApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -202,7 +202,7 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function assumptionRead($team_id, $channel_id, $item_id, $assm_id, $x_org_id) {
+    public function read($team_id, $channel_id, $item_id, $assm_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -239,7 +239,7 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function assumptionUpdate($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_update) {
+    public function update($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

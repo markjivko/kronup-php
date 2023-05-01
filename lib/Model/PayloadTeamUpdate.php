@@ -26,8 +26,7 @@ class PayloadTeamUpdate extends AbstractModel {
     public const _D = null;
     protected static $_name = "Payload_Team_Update";
     protected static $_definition = [
-        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
-        "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", '', ["r" => 0, "xl" => 256]]
+        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 3, "xl" => 64]]
     ];
 
     /**
@@ -60,25 +59,5 @@ class PayloadTeamUpdate extends AbstractModel {
      */
     public function setTeamName($team_name) {
         return $this->_set("teamName", $team_name);
-    }
-
-    /**
-     * Get teamDesc - Team description
-     *
-     * @return string|null
-     */
-    public function getTeamDesc(): ?string {
-        return $this->_data["teamDesc"];
-    }
-
-    /**
-     * Set teamDesc - Team description
-     * 
-     * @param string|null $team_desc Team description
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setTeamDesc($team_desc) {
-        return $this->_set("teamDesc", $team_desc);
     }
 }

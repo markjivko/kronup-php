@@ -38,7 +38,7 @@ class NotionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Notion
      */
-    public function notionCreate($x_org_id, $payload_notion_create) {
+    public function create($x_org_id, $payload_notion_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [
@@ -71,7 +71,7 @@ class NotionsApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function notionDelete($notion_id, $x_org_id) {
+    public function delete($notion_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -104,7 +104,7 @@ class NotionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Notion
      */
-    public function notionRead($notion_id, $x_org_id) {
+    public function read($notion_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -139,17 +139,17 @@ class NotionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\NotionsList
      */
-    public function notionSearch($x_org_id, $search_term = null, $page_number = 1, $page_size = 100) {
+    public function search($x_org_id, $search_term = null, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling NotionsApi.notionSearch, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling NotionsApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling NotionsApi.notionSearch, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling NotionsApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling NotionsApi.notionSearch, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling NotionsApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -189,7 +189,7 @@ class NotionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Notion
      */
-    public function notionUpdate($notion_id, $x_org_id, $payload_notion_update) {
+    public function update($notion_id, $x_org_id, $payload_notion_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

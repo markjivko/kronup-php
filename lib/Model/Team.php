@@ -27,7 +27,6 @@ class Team extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
-        "teamDesc" => ["teamDesc", "string", null, "getTeamDesc", "setTeamDesc", null, ["r" => 0, "nl" => 0, "xl" => 256]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -102,26 +101,6 @@ class Team extends AbstractModel {
      */
     public function setTeamName($team_name) {
         return $this->_set("teamName", $team_name);
-    }
-
-    /**
-     * Get teamDesc - Team description
-     *
-     * @return string|null
-     */
-    public function getTeamDesc(): ?string {
-        return $this->_data["teamDesc"];
-    }
-
-    /**
-     * Set teamDesc - Team description
-     * 
-     * @param string|null $team_desc Team description
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setTeamDesc($team_desc) {
-        return $this->_set("teamDesc", $team_desc);
     }
 
     /**

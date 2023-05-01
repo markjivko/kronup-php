@@ -38,7 +38,7 @@ class DeepContextApi extends AbstractApi {
      * 
      * @return bool
      */
-    public function deepContextDelete($item_id, $x_org_id) {
+    public function delete($item_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -71,7 +71,7 @@ class DeepContextApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItemExpanded
      */
-    public function deepContextRead($item_id, $x_org_id) {
+    public function read($item_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -106,17 +106,17 @@ class DeepContextApi extends AbstractApi {
      * 
      * @return \Kronup\Model\DeepContextList
      */
-    public function deepContextSearch($x_org_id, $search_term = null, $page_number = 1, $page_size = 100) {
+    public function search($x_org_id, $search_term = null, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling DeepContextApi.deepContextSearch, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling DeepContextApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling DeepContextApi.deepContextSearch, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling DeepContextApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling DeepContextApi.deepContextSearch, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling DeepContextApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);

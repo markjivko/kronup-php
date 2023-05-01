@@ -39,17 +39,17 @@ class UsersApi extends AbstractApi {
      * 
      * @return \Kronup\Model\UsersList
      */
-    public function userList($x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($x_org_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling UsersApi.userList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling UsersApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling UsersApi.userList, must be smaller than or equal to 500');
+            throw new IAE('Invalid value for "$page_size" when calling UsersApi., must be smaller than or equal to 500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling UsersApi.userList, must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling UsersApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -87,7 +87,7 @@ class UsersApi extends AbstractApi {
      * 
      * @return \Kronup\Model\User
      */
-    public function userRead($user_id, $x_org_id) {
+    public function read($user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -120,7 +120,7 @@ class UsersApi extends AbstractApi {
      * 
      * @return \Kronup\Model\User
      */
-    public function userRemove($user_id, $x_org_id) {
+    public function remove($user_id, $x_org_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
         $rHeaders = array_merge(
             [
@@ -154,7 +154,7 @@ class UsersApi extends AbstractApi {
      * 
      * @return \Kronup\Model\UserRoles
      */
-    public function userUpdateRole($user_id, $x_org_id, $payload_user_role_update) {
+    public function updateRole($user_id, $x_org_id, $payload_user_role_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
         $rHeaders = array_merge(
             [

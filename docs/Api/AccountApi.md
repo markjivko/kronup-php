@@ -20,21 +20,22 @@ $sdk->api()->account();
 
 Method | Description
 ------------- | -------------
-[**accountAvatar()**](#accountavatar) | Update avatar
-[**accountClose()**](#accountclose) | Close account
-[**accountRead()**](#accountread) | Fetch account
-[**accountUpdate()**](#accountupdate) | Update account
+[**avatar()**](#avatar) | Update avatar
+[**close()**](#close) | Close account
 [**eventList()**](#eventlist) | List events
+[**read()**](#read) | Fetch account
+[**update()**](#update) | Update account
 
 
-## `accountAvatar()`
+
+## `avatar()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **accountAvatar.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountAvatar.php){: .btn .btn-green .mt-4}
+> [php -f **avatar.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/avatar.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -43,7 +44,7 @@ Method | Description
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->account()->accountAvatar(
+(new \Kronup\Sdk())->api()->account()->avatar(
     [ \SplFileObject $avatar ]
 ): \Kronup\Model\Account
 ```
@@ -69,14 +70,15 @@ Update account avatar
 ---
 
 
-## `accountClose()`
+
+## `close()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **accountClose.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountClose.php){: .btn .btn-green .mt-4}
+> [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/close.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -85,7 +87,7 @@ Update account avatar
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->account()->accountClose(): bool
+(new \Kronup\Sdk())->api()->account()->close(): bool
 ```
 
 ### Parameters
@@ -106,85 +108,6 @@ Close the current account. This action is reversible only if you sign back in wi
 
 ---
 
-
-## `accountRead()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **accountRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountRead.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **GET** `/account`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->account()->accountRead(): \Kronup\Model\Account
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\Kronup\Model\Account**](../../Model/Account)
-
-### Description
-
-> Fetch account
-
-Retrieve the current account model
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-## `accountUpdate()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **accountUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/accountUpdate.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **POST** `/account`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->account()->accountUpdate(
-    \Kronup\Model\PayloadAccountUpdate $payload_account_update
-): \Kronup\Model\Account
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | -------------
- **$payload_account_update** | [**\Kronup\Model\PayloadAccountUpdate**](../../Model/PayloadAccountUpdate) |  
-
-### Return type
-
-[**\Kronup\Model\Account**](../../Model/Account)
-
-### Description
-
-> Update account
-
-Update the current account model.
-
-[Back to top](#top){: .btn .btn-purple }
-
----
 
 
 ## `eventList()`
@@ -227,6 +150,88 @@ Name | Type | Description
 > List events
 
 Get a list of event models
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+
+## `read()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/read.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/account`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->account()->read(): \Kronup\Model\Account
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Kronup\Model\Account**](../../Model/Account)
+
+### Description
+
+> Fetch account
+
+Retrieve the current account model
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+
+## `update()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/update.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **POST** `/account`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->account()->update(
+    \Kronup\Model\PayloadAccountUpdate $payload_account_update
+): \Kronup\Model\Account
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$payload_account_update** | [**\Kronup\Model\PayloadAccountUpdate**](../../Model/PayloadAccountUpdate) |  
+
+### Return type
+
+[**\Kronup\Model\Account**](../../Model/Account)
+
+### Description
+
+> Update account
+
+Update the current account model.
 
 [Back to top](#top){: .btn .btn-purple }
 
