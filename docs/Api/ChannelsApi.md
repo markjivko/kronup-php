@@ -24,6 +24,7 @@ Method | Description
 [**create()**](#create) | Create channel
 [**delete()**](#delete) | Delete channel
 [**listMembers()**](#listmembers) | List members
+[**listProspects()**](#listprospects) | Find prospects
 [**unassign()**](#unassign) | Unassign from channel
 [**update()**](#update) | Update channel
 
@@ -216,6 +217,55 @@ Name | Type | Description
 > List members
 
 List all channel members
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+
+## `listProspects()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **listProspects.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listProspects.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/teams/{teamId}/channels/{channelId}/prospects`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->channels()->listProspects(
+    string $team_id,
+    string $channel_id,
+    string $x_org_id,
+    [ string $user_name ]
+): \Kronup\Model\ChannelProspectsList
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$x_org_id** | **string**  | Organization ID 
+ **$user_name** | **string**  | Wildcard for prospect user name 
+
+### Return type
+
+[**\Kronup\Model\ChannelProspectsList**](../../Model/ChannelProspectsList)
+
+### Description
+
+> Find prospects
+
+List 10 channel prospects
 
 [Back to top](#top){: .btn .btn-purple }
 

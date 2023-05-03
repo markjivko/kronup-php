@@ -183,6 +183,43 @@ class ChannelsApi extends AbstractApi {
     }
     
     /**
+     * Find prospects
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $x_org_id Organization ID
+     * @param string|null $user_name Wildcard for prospect user name
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\ChannelProspectsList
+     */
+    public function listProspects($team_id, $channel_id, $x_org_id, $user_name = null) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/prospects";
+        
+        /** @var \Kronup\Model\ChannelProspectsList $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [
+                    "userName" => isset($user_name) ? S::toQueryValue($user_name) : null,
+                ], $rHeaders, []
+            ), 
+            "\Kronup\Model\ChannelProspectsList"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * Unassign from channel
      *
      * @param string $team_id Team ID
