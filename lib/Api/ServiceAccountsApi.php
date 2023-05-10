@@ -29,6 +29,39 @@ class ServiceAccountsApi extends AbstractApi {
     const PKG = "Service accounts";
 
     /**
+     * Close service account
+     *
+     * @param string $account_id Service account ID
+     * @param string $x_org_id Organization ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\ServiceAccount
+     */
+    public function close($account_id, $x_org_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+        $rHeaders = array_merge(
+            [
+                "x-org-id" => S::toHeaderValue($x_org_id),
+            ], 
+            $rHeaders
+        );
+
+        // Path template
+        $rPath = "/service-accounts/{accountId}";
+        
+        /** @var \Kronup\Model\ServiceAccount $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["accountId" => $account_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\ServiceAccount"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * Create service account
      *
      * @param string $x_org_id Organization ID
@@ -56,39 +89,6 @@ class ServiceAccountsApi extends AbstractApi {
                 $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $payload_service_account_create
             ), 
             "\Kronup\Model\ServiceAccount"
-        );
-            
-        return $result;
-    }
-    
-    /**
-     * Delete service account
-     *
-     * @param string $account_id Service account ID
-     * @param string $x_org_id Organization ID
-     * @throws \Kronup\Sdk\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * 
-     * @return \Kronup\Model\User
-     */
-    public function delete($account_id, $x_org_id) {
-        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
-
-        // Path template
-        $rPath = "/service-accounts/{accountId}";
-        
-        /** @var \Kronup\Model\User $result */
-        $result = $this->exec(
-            S::createRequest(
-                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["accountId" => $account_id]), $rPath, [], $rHeaders, []
-            ), 
-            "\Kronup\Model\User"
         );
             
         return $result;

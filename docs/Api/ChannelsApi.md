@@ -314,7 +314,7 @@ Name | Type | Description
 
 > Unassign from channel
 
-Remove a user from a channel
+Remove a user from a channel; removing the user from the default channel is the same as removing the user from the team
 
 [Back to top](#top){: .btn .btn-purple }
 

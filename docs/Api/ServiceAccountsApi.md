@@ -20,12 +20,57 @@ $sdk->api()->serviceAccounts();
 
 Method | Description
 ------------- | -------------
+[**close()**](#close) | Close service account
 [**create()**](#create) | Create service account
-[**delete()**](#delete) | Delete service account
 [**list()**](#list) | List service acounts
 [**read()**](#read) | Fetch service account
 [**regenerate()**](#regenerate) | Regenerate
 [**update()**](#update) | Update service account
+
+
+
+## `close()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/close.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **DELETE** `/service-accounts/{accountId}`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->serviceAccounts()->close(
+    string $account_id,
+    string $x_org_id
+): \Kronup\Model\ServiceAccount
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$account_id** | **string**  | Service account ID 
+ **$x_org_id** | **string**  | Organization ID 
+
+### Return type
+
+[**\Kronup\Model\ServiceAccount**](../../Model/ServiceAccount)
+
+### Description
+
+> Close service account
+
+Close this service account. This action is always reversible. You can re-open it anytime with "regenerate".
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
 
 
 
@@ -67,51 +112,6 @@ Name | Type | Description
 > Create service account
 
 Create a new service account for this Organization
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-
-## `delete()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/delete.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **DELETE** `/service-accounts/{accountId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->serviceAccounts()->delete(
-    string $account_id,
-    string $x_org_id
-): \Kronup\Model\User
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | -------------
- **$account_id** | **string**  | Service account ID 
- **$x_org_id** | **string**  | Organization ID 
-
-### Return type
-
-[**\Kronup\Model\User**](../../Model/User)
-
-### Description
-
-> Delete service account
-
-Delete this service account. This action cannot be reversed.
 
 [Back to top](#top){: .btn .btn-purple }
 

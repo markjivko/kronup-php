@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ServiceAccountsApi/#delete
+ * @link    https://kronup.github.io/kronup-php/Api/ServiceAccountsApi/#close
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -30,22 +30,22 @@ try {
     /**
      * DELETE /service-accounts/{accountId}
      * 
-     * @var \Kronup\Model\User $response
+     * @var \Kronup\Model\ServiceAccount $response
      */
     $response = $sdk
         ->api()
         ->serviceAccounts()
-        ->delete($arg_account_id, $arg_x_org_id);
+        ->close($arg_account_id, $arg_x_org_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->serviceAccounts()->delete(): %s\n", 
+        "API Exception when calling api()->serviceAccounts()->close(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->serviceAccounts()->delete(): %s\n", 
+        "Exception when calling api()->serviceAccounts()->close(): %s\n", 
         $exc->getMessage()
     );
 }
