@@ -25,19 +25,19 @@ $arg_x_org_id = "org-id-***";
 
 $arg_payload_invitation_create = (new \Kronup\Model\PayloadInvitationCreate())
     
+    // Team ID
+    ->setTeamId('team-id-***')
+    
     // Invitation name
     ->setInviteName('null')
-    
-    // (optional) User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
-    ->setInviteDomain('null')
     
     // (optional) User role
     ->setInviteOrgRole('member')
     
-    // (optional) The invitation expires after this many days. 0 = no expiration
+    // (optional) The invitation expires after this many days
     ->setInviteExpireDays(5)
     
-    // (optional) The invitation expires after being used this many times. 0 = no expiration
+    // (optional) The invitation expires after being used this many times. 0 = no limit
     ->setInviteUsesMax(10);
 
 try {

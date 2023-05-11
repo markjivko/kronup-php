@@ -28,9 +28,9 @@ class Invitation extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
+        "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
         "inviteName" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 0]], 
-        "inviteDomain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", null, ["r" => 0]], 
         "inviteOrgRole" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", null, ["r" => 0, "e" => 1]], 
         "inviteOrgName" => ["inviteOrgName", "string", null, "getInviteOrgName", "setInviteOrgName", null, ["r" => 0]], 
         "inviteUses" => ["inviteUses", "int", null, "getInviteUses", "setInviteUses", null, ["r" => 0, "n" => [0]]], 
@@ -105,6 +105,26 @@ class Invitation extends AbstractModel {
     }
 
     /**
+     * Get teamId - Team ID
+     *
+     * @return string|null
+     */
+    public function getTeamId(): ?string {
+        return $this->_data["teamId"];
+    }
+
+    /**
+     * Set teamId - Team ID
+     * 
+     * @param string|null $team_id Team ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setTeamId($team_id) {
+        return $this->_set("teamId", $team_id);
+    }
+
+    /**
      * Get userId - User ID
      *
      * @return string|null
@@ -142,26 +162,6 @@ class Invitation extends AbstractModel {
      */
     public function setInviteName($invite_name) {
         return $this->_set("inviteName", $invite_name);
-    }
-
-    /**
-     * Get inviteDomain - Invitation domain
-     *
-     * @return string|null
-     */
-    public function getInviteDomain(): ?string {
-        return $this->_data["inviteDomain"];
-    }
-
-    /**
-     * Set inviteDomain - Invitation domain
-     * 
-     * @param string|null $invite_domain Invitation domain
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setInviteDomain($invite_domain) {
-        return $this->_set("inviteDomain", $invite_domain);
     }
 
     /**

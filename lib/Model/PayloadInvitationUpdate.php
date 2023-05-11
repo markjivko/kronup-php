@@ -28,11 +28,11 @@ class PayloadInvitationUpdate extends AbstractModel {
     public const INVITE_ORG_ROLE_MEMBER = 'member';
     protected static $_name = "Payload_Invitation_Update";
     protected static $_definition = [
+        "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "inviteName" => ["inviteName", "string", null, "getInviteName", "setInviteName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
-        "inviteDomain" => ["inviteDomain", "string", null, "getInviteDomain", "setInviteDomain", '', ["r" => 0, "xl" => 64]], 
         "inviteOrgRole" => ["inviteOrgRole", "string", null, "getInviteOrgRole", "setInviteOrgRole", 'member', ["r" => 0, "e" => 1]], 
-        "inviteExpireDays" => ["inviteExpireDays", "int", null, "getInviteExpireDays", "setInviteExpireDays", 0, ["r" => 0, "n" => [0]]], 
-        "inviteUsesMax" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", 0, ["r" => 0, "n" => [0], "x" => [10000]]]
+        "inviteExpireDays" => ["inviteExpireDays", "int", null, "getInviteExpireDays", "setInviteExpireDays", 1, ["r" => 0, "n" => [1], "x" => [30]]], 
+        "inviteUsesMax" => ["inviteUsesMax", "int", null, "getInviteUsesMax", "setInviteUsesMax", 0, ["r" => 0, "n" => [0], "x" => [1000]]]
     ];
 
     /**
@@ -59,6 +59,26 @@ class PayloadInvitationUpdate extends AbstractModel {
     }
 
     /**
+     * Get teamId - Team ID
+     *
+     * @return string|null
+     */
+    public function getTeamId(): ?string {
+        return $this->_data["teamId"];
+    }
+
+    /**
+     * Set teamId - Team ID
+     * 
+     * @param string|null $team_id Team ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setTeamId($team_id) {
+        return $this->_set("teamId", $team_id);
+    }
+
+    /**
      * Get inviteName - Invitation name
      *
      * @return string|null
@@ -76,26 +96,6 @@ class PayloadInvitationUpdate extends AbstractModel {
      */
     public function setInviteName($invite_name) {
         return $this->_set("inviteName", $invite_name);
-    }
-
-    /**
-     * Get inviteDomain - User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
-     *
-     * @return string|null
-     */
-    public function getInviteDomain(): ?string {
-        return $this->_data["inviteDomain"];
-    }
-
-    /**
-     * Set inviteDomain - User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
-     * 
-     * @param string|null $invite_domain User email domain name. If specified, restrict access to e-mail addresses belonging to this domain.
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setInviteDomain($invite_domain) {
-        return $this->_set("inviteDomain", $invite_domain);
     }
 
     /**
@@ -119,7 +119,7 @@ class PayloadInvitationUpdate extends AbstractModel {
     }
 
     /**
-     * Get inviteExpireDays - The invitation expires after this many days. 0 = no expiration
+     * Get inviteExpireDays - The invitation expires after this many days
      *
      * @return int|null
      */
@@ -128,9 +128,9 @@ class PayloadInvitationUpdate extends AbstractModel {
     }
 
     /**
-     * Set inviteExpireDays - The invitation expires after this many days. 0 = no expiration
+     * Set inviteExpireDays - The invitation expires after this many days
      * 
-     * @param int|null $invite_expire_days The invitation expires after this many days. 0 = no expiration
+     * @param int|null $invite_expire_days The invitation expires after this many days
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -139,7 +139,7 @@ class PayloadInvitationUpdate extends AbstractModel {
     }
 
     /**
-     * Get inviteUsesMax - The invitation expires after being used this many times. 0 = no expiration
+     * Get inviteUsesMax - The invitation expires after being used this many times. 0 = no limit
      *
      * @return int|null
      */
@@ -148,9 +148,9 @@ class PayloadInvitationUpdate extends AbstractModel {
     }
 
     /**
-     * Set inviteUsesMax - The invitation expires after being used this many times. 0 = no expiration
+     * Set inviteUsesMax - The invitation expires after being used this many times. 0 = no limit
      * 
-     * @param int|null $invite_uses_max The invitation expires after being used this many times. 0 = no expiration
+     * @param int|null $invite_uses_max The invitation expires after being used this many times. 0 = no limit
      * @throws \InvalidArgumentException
      * @return $this
      */

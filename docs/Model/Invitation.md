@@ -12,9 +12,9 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Invitation ID
 **getOrgId()** | **string** | Organization ID
+**getTeamId()** | **string** | Team ID
 **getUserId()** | **string** | User ID
 **getInviteName()** | **string** | Invitation name
-**getInviteDomain()** | **string** | Invitation domain
 **getInviteOrgRole()** | **string** | Invitation user role
 **getInviteOrgName()** | **string** | Invitation organzation name
 **getInviteUses()** | **int** | Number of uses
