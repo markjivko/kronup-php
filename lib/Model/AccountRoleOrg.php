@@ -23,7 +23,7 @@ class AccountRoleOrg extends AbstractModel {
 
     public const _D = null;
     public const ROLE_OWNER = 'owner';
-    public const ROLE_MANAGER = 'manager';
+    public const ROLE_ADMIN = 'admin';
     public const ROLE_MEMBER = 'member';
     protected static $_name = "Account_Role_Org";
     protected static $_definition = [
@@ -50,7 +50,7 @@ class AccountRoleOrg extends AbstractModel {
     public function getRoleAllowableValues(): array {
         return [
             self::ROLE_OWNER,
-            self::ROLE_MANAGER,
+            self::ROLE_ADMIN,
             self::ROLE_MEMBER,
         ];
     }

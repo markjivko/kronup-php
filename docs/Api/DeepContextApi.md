@@ -63,7 +63,7 @@ Name | Type | Description
 
 > Delete value item
 
-Delete a value item from Deep Context";
+Delete a value item from Deep Context
 
 [Back to top](#top){: .btn .btn-purple }
 

@@ -22,7 +22,7 @@ namespace Kronup\Model;
 class Invitation extends AbstractModel {
 
     public const _D = null;
-    public const INVITE_ORG_ROLE_MANAGER = 'manager';
+    public const INVITE_ORG_ROLE_ADMIN = 'admin';
     public const INVITE_ORG_ROLE_MEMBER = 'member';
     protected static $_name = "Invitation";
     protected static $_definition = [
@@ -59,7 +59,7 @@ class Invitation extends AbstractModel {
      */
     public function getInviteOrgRoleAllowableValues(): array {
         return [
-            self::INVITE_ORG_ROLE_MANAGER,
+            self::INVITE_ORG_ROLE_ADMIN,
             self::INVITE_ORG_ROLE_MEMBER,
         ];
     }

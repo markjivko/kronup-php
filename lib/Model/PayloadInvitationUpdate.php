@@ -24,7 +24,7 @@ namespace Kronup\Model;
 class PayloadInvitationUpdate extends AbstractModel {
 
     public const _D = null;
-    public const INVITE_ORG_ROLE_MANAGER = 'manager';
+    public const INVITE_ORG_ROLE_ADMIN = 'admin';
     public const INVITE_ORG_ROLE_MEMBER = 'member';
     protected static $_name = "Payload_Invitation_Update";
     protected static $_definition = [
@@ -53,7 +53,7 @@ class PayloadInvitationUpdate extends AbstractModel {
      */
     public function getInviteOrgRoleAllowableValues(): array {
         return [
-            self::INVITE_ORG_ROLE_MANAGER,
+            self::INVITE_ORG_ROLE_ADMIN,
             self::INVITE_ORG_ROLE_MEMBER,
         ];
     }

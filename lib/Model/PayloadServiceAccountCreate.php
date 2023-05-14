@@ -24,7 +24,7 @@ namespace Kronup\Model;
 class PayloadServiceAccountCreate extends AbstractModel {
 
     public const _D = null;
-    public const ROLE_ORG_MANAGER = 'manager';
+    public const ROLE_ORG_ADMIN = 'admin';
     public const ROLE_ORG_MEMBER = 'member';
     protected static $_name = "Payload_Service_Account_Create";
     protected static $_definition = [
@@ -50,7 +50,7 @@ class PayloadServiceAccountCreate extends AbstractModel {
      */
     public function getRoleOrgAllowableValues(): array {
         return [
-            self::ROLE_ORG_MANAGER,
+            self::ROLE_ORG_ADMIN,
             self::ROLE_ORG_MEMBER,
         ];
     }
