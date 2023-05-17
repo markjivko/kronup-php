@@ -26,7 +26,7 @@ class PayloadTaskCreate extends AbstractModel {
     public const _D = null;
     protected static $_name = "Payload_Task_Create";
     protected static $_definition = [
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]]
     ];
 
@@ -43,23 +43,23 @@ class PayloadTaskCreate extends AbstractModel {
 
 
     /**
-     * Get digest - Task digest
+     * Get heading - Task heading
      *
      * @return string|null
      */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
+    public function getHeading(): ?string {
+        return $this->_data["heading"];
     }
 
     /**
-     * Set digest - Task digest
+     * Set heading - Task heading
      * 
-     * @param string|null $digest Task digest
+     * @param string|null $heading Task heading
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setHeading($heading) {
+        return $this->_set("heading", $heading);
     }
 
     /**

@@ -13,7 +13,7 @@ Payload object for assumption experiment
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getConfirmed()** | **bool** | Experiment confirms assumption
-**getDigest()** | **string** | Experiment digest
+**getHeading()** | **string** | Experiment heading
 **getDetails()** | **string** | Experiment detailed findings
 **getState()** | **string** | Experiment state
 

@@ -31,8 +31,8 @@ $arg_x_org_id = "org-id-***";
 
 $arg_payload_value_item_create = (new \Kronup\Model\PayloadValueItemCreate())
     
-    // (optional) Value item digest
-    ->setDigest('Feature name')
+    // (optional) Value item heading
+    ->setHeading('Feature name')
     
     // (optional) Value item description
     ->setDetails('Feature description')

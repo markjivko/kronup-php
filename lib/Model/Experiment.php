@@ -31,7 +31,7 @@ class Experiment extends AbstractModel {
     protected static $_definition = [
         "authorUserIds" => ["authorUserIds", "string[]", null, "getAuthorUserIds", "setAuthorUserIds", null, ["r" => 0, "c" => 1]], 
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", false, ["r" => 0]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]]
     ];
@@ -101,23 +101,23 @@ class Experiment extends AbstractModel {
     }
 
     /**
-     * Get digest - Experiment findings formulated in one sentence
+     * Get heading - Experiment findings formulated in one sentence
      *
      * @return string|null
      */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
+    public function getHeading(): ?string {
+        return $this->_data["heading"];
     }
 
     /**
-     * Set digest - Experiment findings formulated in one sentence
+     * Set heading - Experiment findings formulated in one sentence
      * 
-     * @param string|null $digest Experiment findings formulated in one sentence
+     * @param string|null $heading Experiment findings formulated in one sentence
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setHeading($heading) {
+        return $this->_set("heading", $heading);
     }
 
     /**

@@ -35,7 +35,7 @@ class ValueItem extends AbstractModel {
         "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "authorUserId" => ["authorUserId", "string", null, "getAuthorUserId", "setAuthorUserId", null, ["r" => 0]], 
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
@@ -166,23 +166,23 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get digest - Value item digest
+     * Get heading - Value item heading
      *
      * @return string|null
      */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
+    public function getHeading(): ?string {
+        return $this->_data["heading"];
     }
 
     /**
-     * Set digest - Value item digest
+     * Set heading - Value item heading
      * 
-     * @param string|null $digest Value item digest
+     * @param string|null $heading Value item heading
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setHeading($heading) {
+        return $this->_set("heading", $heading);
     }
 
     /**

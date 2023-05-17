@@ -12,7 +12,7 @@ Payload object required to update a Task
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getDigest()** | **string** | Task digest
+**getHeading()** | **string** | Task heading
 **getDetails()** | **string** | Task details
 **getState()** | **string** | 
 

@@ -34,8 +34,8 @@ $arg_x_org_id = "org-id-***";
 
 $arg_payload_assm_create = (new \Kronup\Model\PayloadAssmCreate())
     
-    // (optional) Assumption digest
-    ->setDigest('This thing is possible');
+    // (optional) Assumption heading
+    ->setHeading('This thing is possible');
 
 try {
     /**

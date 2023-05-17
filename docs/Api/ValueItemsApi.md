@@ -196,6 +196,7 @@ Delete a value item from the flow
     string $team_id,
     string $channel_id,
     string $x_org_id,
+    [ string $stage, ]
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\ValueItemsList
@@ -208,6 +209,7 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$x_org_id** | **string**  | Organization ID 
+ **$stage** | **string**  | Value item stage 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 

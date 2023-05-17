@@ -12,5 +12,5 @@ Payload object required to update a Value Item assumption
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getDigest()** | **string** | Assumption digest
+**getHeading()** | **string** | Assumption heading
 

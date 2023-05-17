@@ -26,7 +26,7 @@ class PayloadAssmUpdate extends AbstractModel {
     public const _D = null;
     protected static $_name = "Payload_Assm_Update";
     protected static $_definition = [
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]]
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]]
     ];
 
     /**
@@ -42,22 +42,22 @@ class PayloadAssmUpdate extends AbstractModel {
 
 
     /**
-     * Get digest - Assumption digest
+     * Get heading - Assumption heading
      *
      * @return string|null
      */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
+    public function getHeading(): ?string {
+        return $this->_data["heading"];
     }
 
     /**
-     * Set digest - Assumption digest
+     * Set heading - Assumption heading
      * 
-     * @param string|null $digest Assumption digest
+     * @param string|null $heading Assumption heading
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setHeading($heading) {
+        return $this->_set("heading", $heading);
     }
 }

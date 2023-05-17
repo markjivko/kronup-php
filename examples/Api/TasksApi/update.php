@@ -37,8 +37,8 @@ $arg_x_org_id = "org-id-***";
 
 $arg_payload_task_update = (new \Kronup\Model\PayloadTaskUpdate())
     
-    // (optional) Task digest
-    ->setDigest('null')
+    // (optional) Task heading
+    ->setHeading('null')
     
     // (optional) Task details
     ->setDetails('null')

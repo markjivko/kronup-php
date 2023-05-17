@@ -29,6 +29,9 @@ $arg_channel_id = "channel-id-***";
 // Organization ID
 $arg_x_org_id = "org-id-***";
 
+// Value item stage
+$arg_stage = "planning";
+
 // Pagination: page number
 $arg_page_number = 1;
 
@@ -44,7 +47,7 @@ try {
     $response = $sdk
         ->api()
         ->valueItems()
-        ->list($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_page_number, $arg_page_size);
+        ->list($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_stage, $arg_page_number, $arg_page_size);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

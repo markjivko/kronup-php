@@ -32,7 +32,7 @@ class TaskExpanded extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "assigneeUserId" => ["assigneeUserId", "string", null, "getAssigneeUserId", "setAssigneeUserId", null, ["r" => 0]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]], 
         "minute" => ["minute", "\Kronup\Model\Minute", null, "getMinute", "setMinute", null, ["r" => 0]], 
@@ -105,23 +105,23 @@ class TaskExpanded extends AbstractModel {
     }
 
     /**
-     * Get digest - Task title
+     * Get heading - Task title
      *
      * @return string|null
      */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
+    public function getHeading(): ?string {
+        return $this->_data["heading"];
     }
 
     /**
-     * Set digest - Task title
+     * Set heading - Task title
      * 
-     * @param string|null $digest Task title
+     * @param string|null $heading Task title
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setHeading($heading) {
+        return $this->_set("heading", $heading);
     }
 
     /**

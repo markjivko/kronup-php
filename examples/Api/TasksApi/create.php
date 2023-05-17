@@ -34,8 +34,8 @@ $arg_x_org_id = "org-id-***";
 
 $arg_payload_task_create = (new \Kronup\Model\PayloadTaskCreate())
     
-    // (optional) Task digest
-    ->setDigest('null')
+    // (optional) Task heading
+    ->setHeading('null')
     
     // (optional) Task details
     ->setDetails('null');

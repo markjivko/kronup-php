@@ -139,6 +139,7 @@ class ValueItemsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $x_org_id Organization ID
+     * @param string|null $stage Value item stage
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -146,7 +147,7 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItemsList
      */
-    public function list($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($team_id, $channel_id, $x_org_id, $stage = null, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi., must be bigger than or equal to 1.');
         }
@@ -174,6 +175,7 @@ class ValueItemsApi extends AbstractApi {
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [
+                    "stage" => isset($stage) ? S::toQueryValue($stage) : null,
                     "pageNumber" => S::toQueryValue($page_number),
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []

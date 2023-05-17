@@ -12,6 +12,6 @@ Payload object required to create a Task
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getDigest()** | **string** | Task digest
+**getHeading()** | **string** | Task heading
 **getDetails()** | **string** | Task details
 

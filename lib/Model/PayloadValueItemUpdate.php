@@ -29,7 +29,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     public const TYPE_CHORE = 'chore';
     protected static $_name = "Payload_Value_Item_Update";
     protected static $_definition = [
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "float", null, "getPriority", "setPriority", null, ["r" => 0, "n" => [1], "x" => [10]]]
@@ -60,23 +60,23 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Get digest - Value item digest
+     * Get heading - Value item heading
      *
      * @return string|null
      */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
+    public function getHeading(): ?string {
+        return $this->_data["heading"];
     }
 
     /**
-     * Set digest - Value item digest
+     * Set heading - Value item heading
      * 
-     * @param string|null $digest Value item digest
+     * @param string|null $heading Value item heading
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setHeading($heading) {
+        return $this->_set("heading", $heading);
     }
 
     /**

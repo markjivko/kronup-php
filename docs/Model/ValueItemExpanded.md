@@ -14,7 +14,7 @@ Method name | Return type | Description
 **getOrgId()** | **string** | Organization ID
 **getTeamId()** | **string** | Team ID
 **getChannelId()** | **string** | Channel ID
-**getDigest()** | **string** | Value item digest
+**getHeading()** | **string** | Value item heading
 **getDetails()** | **string** | Value item description
 **getAuthorUserId()** | **string** | User ID
 **getStage()** | **string** | Value Item Stage

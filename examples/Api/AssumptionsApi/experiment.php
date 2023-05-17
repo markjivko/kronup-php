@@ -40,8 +40,8 @@ $arg_payload_assm_experiment = (new \Kronup\Model\PayloadAssmExperiment())
     // (optional) Experiment confirms assumption
     ->setConfirmed(null)
     
-    // (optional) Experiment digest
-    ->setDigest('null')
+    // (optional) Experiment heading
+    ->setHeading('null')
     
     // (optional) Experiment detailed findings
     ->setDetails('null')

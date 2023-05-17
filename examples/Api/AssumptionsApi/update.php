@@ -37,8 +37,8 @@ $arg_x_org_id = "org-id-***";
 
 $arg_payload_assm_update = (new \Kronup\Model\PayloadAssmUpdate())
     
-    // (optional) Assumption digest
-    ->setDigest('Feature name');
+    // (optional) Assumption heading
+    ->setHeading('Feature name');
 
 try {
     /**

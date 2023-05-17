@@ -12,7 +12,7 @@ Payload object required to create a Value Item
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getDigest()** | **string** | Value item digest
+**getHeading()** | **string** | Value item heading
 **getDetails()** | **string** | Value item description
 **getType()** | **string** | Value item type
 **getPriority()** | **float** | Value item priority

@@ -28,7 +28,7 @@ class Assumption extends AbstractModel {
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "authorUserId" => ["authorUserId", "string", null, "getAuthorUserId", "setAuthorUserId", null, ["r" => 0]], 
-        "digest" => ["digest", "string", null, "getDigest", "setDigest", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
         "experiment" => ["experiment", "\Kronup\Model\Experiment", null, "getExperiment", "setExperiment", null, ["r" => 0]]
     ];
 
@@ -85,23 +85,23 @@ class Assumption extends AbstractModel {
     }
 
     /**
-     * Get digest - Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
+     * Get heading - Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
      *
      * @return string|null
      */
-    public function getDigest(): ?string {
-        return $this->_data["digest"];
+    public function getHeading(): ?string {
+        return $this->_data["heading"];
     }
 
     /**
-     * Set digest - Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
+     * Set heading - Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
      * 
-     * @param string|null $digest Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
+     * @param string|null $heading Assumptions are formulated as simple statements that can be proven true or false; avoid questions and opinions.  > ❌ What are the features? >  > ❌ Does this feature exist? >  > ❌ I don't like this feature. >  > ✅ This feature exists.
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setDigest($digest) {
-        return $this->_set("digest", $digest);
+    public function setHeading($heading) {
+        return $this->_set("heading", $heading);
     }
 
     /**
