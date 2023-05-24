@@ -38,8 +38,8 @@ class MinuteFeedback extends AbstractModel {
         "iteration" => ["iteration", "float", null, "getIteration", "setIteration", 1, ["r" => 0, "n" => [1]]], 
         "authorUserId" => ["authorUserId", "string", null, "getAuthorUserId", "setAuthorUserId", null, ["r" => 0]], 
         "issue" => ["issue", "string", null, "getIssue", "setIssue", 'value', ["r" => 0, "e" => 1]], 
-        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 1024]], 
-        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
+        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 512]], 
+        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 512]]
     ];
 
     /**

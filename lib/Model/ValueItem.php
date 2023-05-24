@@ -28,7 +28,7 @@ class ValueItem extends AbstractModel {
     public const STAGE_DEEP_CONTEXT = 'deep context';
     public const TYPE_FEATURE = 'feature';
     public const TYPE_BUG_FIX = 'bug fix';
-    public const TYPE_CHORE = 'chore';
+    public const TYPE_ROUTINE = 'routine';
     protected static $_name = "ValueItem";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -36,7 +36,7 @@ class ValueItem extends AbstractModel {
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
         "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
         "authorUserId" => ["authorUserId", "string", null, "getAuthorUserId", "setAuthorUserId", null, ["r" => 0]], 
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
         "canAdvance" => ["canAdvance", "bool", null, "getCanAdvance", "setCanAdvance", false, ["r" => 0]], 
@@ -81,7 +81,7 @@ class ValueItem extends AbstractModel {
         return [
             self::TYPE_FEATURE,
             self::TYPE_BUG_FIX,
-            self::TYPE_CHORE,
+            self::TYPE_ROUTINE,
         ];
     }
 

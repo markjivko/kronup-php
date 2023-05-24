@@ -26,11 +26,11 @@ class PayloadValueItemCreate extends AbstractModel {
     public const _D = null;
     public const TYPE_FEATURE = 'feature';
     public const TYPE_BUG_FIX = 'bug fix';
-    public const TYPE_CHORE = 'chore';
+    public const TYPE_ROUTINE = 'routine';
     protected static $_name = "Payload_Value_Item_Create";
     protected static $_definition = [
         "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "float", null, "getPriority", "setPriority", null, ["r" => 0, "n" => [1], "x" => [10]]]
     ];
@@ -55,7 +55,7 @@ class PayloadValueItemCreate extends AbstractModel {
         return [
             self::TYPE_FEATURE,
             self::TYPE_BUG_FIX,
-            self::TYPE_CHORE,
+            self::TYPE_ROUTINE,
         ];
     }
 

@@ -33,7 +33,7 @@ class Task extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "assigneeUserId" => ["assigneeUserId", "string", null, "getAssigneeUserId", "setAssigneeUserId", null, ["r" => 0]], 
         "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 4096]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
         "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]], 
         "notionIds" => ["notionIds", "string[]", null, "getNotionIds", "setNotionIds", null, ["r" => 0, "c" => 1]]
     ];

@@ -26,7 +26,7 @@ class PayloadTaskDiscoveryCreate extends AbstractModel {
     public const _D = null;
     protected static $_name = "Payload_Task_Discovery_Create";
     protected static $_definition = [
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 512]]
     ];
 
     /**

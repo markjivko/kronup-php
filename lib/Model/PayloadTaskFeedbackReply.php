@@ -26,7 +26,7 @@ class PayloadTaskFeedbackReply extends AbstractModel {
     public const _D = null;
     protected static $_name = "Payload_Task_Feedback_Reply";
     protected static $_definition = [
-        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 1024]]
+        "reply" => ["reply", "string", null, "getReply", "setReply", null, ["r" => 0, "nl" => 1, "xl" => 512]]
     ];
 
     /**

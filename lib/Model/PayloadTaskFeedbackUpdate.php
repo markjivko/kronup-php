@@ -34,7 +34,7 @@ class PayloadTaskFeedbackUpdate extends AbstractModel {
     public const ISSUE_MISC = 'misc';
     protected static $_name = "Payload_Task_Feedback_Update";
     protected static $_definition = [
-        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 1024]], 
+        "message" => ["message", "string", null, "getMessage", "setMessage", null, ["r" => 0, "nl" => 1, "xl" => 512]], 
         "issue" => ["issue", "string", null, "getIssue", "setIssue", null, ["r" => 0, "e" => 1]]
     ];
 
