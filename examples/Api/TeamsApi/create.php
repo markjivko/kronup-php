@@ -20,9 +20,6 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_team_create = (new \Kronup\Model\PayloadTeamCreate())
     
     // Team name
@@ -37,7 +34,7 @@ try {
     $response = $sdk
         ->api()
         ->teams()
-        ->create($arg_x_org_id, $arg_payload_team_create);
+        ->create($arg_payload_team_create);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

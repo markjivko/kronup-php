@@ -20,9 +20,6 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 // Pagination: page number
 $arg_page_number = 1;
 
@@ -38,7 +35,7 @@ try {
     $response = $sdk
         ->api()
         ->invitations()
-        ->list($arg_x_org_id, $arg_page_number, $arg_page_size);
+        ->list($arg_page_number, $arg_page_size);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

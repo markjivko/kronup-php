@@ -81,7 +81,6 @@ class AccountApi extends AbstractApi {
     /**
      * List events
      *
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -89,7 +88,7 @@ class AccountApi extends AbstractApi {
      * 
      * @return \Kronup\Model\EventsList
      */
-    public function eventList($x_org_id, $page_number = 1, $page_size = 100) {
+    public function eventList($page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling AccountApi., must be bigger than or equal to 1.');
         }
@@ -103,12 +102,6 @@ class AccountApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/account/events";

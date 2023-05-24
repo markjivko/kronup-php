@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Team ID
 $arg_team_id = "team-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * GET /teams/{teamId}
@@ -35,7 +32,7 @@ try {
     $response = $sdk
         ->api()
         ->teams()
-        ->read($arg_team_id, $arg_x_org_id);
+        ->read($arg_team_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

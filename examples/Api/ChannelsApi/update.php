@@ -26,9 +26,6 @@ $arg_team_id = "team-id-***";
 // Channel ID
 $arg_channel_id = "channel-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_channel_update = (new \Kronup\Model\PayloadChannelUpdate())
     
     // (optional) Channel name
@@ -46,7 +43,7 @@ try {
     $response = $sdk
         ->api()
         ->channels()
-        ->update($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_payload_channel_update);
+        ->update($arg_team_id, $arg_channel_id, $arg_payload_channel_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

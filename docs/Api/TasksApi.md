@@ -59,8 +59,7 @@ Method | Description
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): \Kronup\Model\Task
 ```
 
@@ -73,7 +72,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value item ID 
  **$task_id** | **string**  | Task ID 
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -111,7 +109,6 @@ Assign task to user
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTaskCreate $payload_task_create
 ): \Kronup\Model\TaskExpanded
 ```
@@ -123,7 +120,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_task_create** | [**\Kronup\Model\PayloadTaskCreate**](../../Model/PayloadTaskCreate) |  
 
 ### Return type
@@ -162,8 +158,7 @@ Add a task to value item
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $task_id,
-    string $x_org_id
+    string $task_id
 ): bool
 ```
 
@@ -175,7 +170,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$task_id** | **string**  | Task ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -214,7 +208,6 @@ Delete a task from a value item
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTaskDiscoveryCreate $payload_task_discovery_create
 ): \Kronup\Model\TaskExpanded
 ```
@@ -227,7 +220,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_task_discovery_create** | [**\Kronup\Model\PayloadTaskDiscoveryCreate**](../../Model/PayloadTaskDiscoveryCreate) |  
 
 ### Return type
@@ -267,8 +259,7 @@ Add a discovery to task
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $discovery_id,
-    string $x_org_id
+    string $discovery_id
 ): bool
 ```
 
@@ -281,7 +272,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
  **$discovery_id** | **string**  | Discovery ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -321,7 +311,6 @@ Delete a task discovery
     string $item_id,
     string $task_id,
     string $discovery_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTaskDiscoveryUpdate $payload_task_discovery_update
 ): \Kronup\Model\TaskExpanded
 ```
@@ -335,7 +324,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
  **$discovery_id** | **string**  | Discovery ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_task_discovery_update** | [**\Kronup\Model\PayloadTaskDiscoveryUpdate**](../../Model/PayloadTaskDiscoveryUpdate) |  
 
 ### Return type
@@ -375,7 +363,6 @@ Update a task discovery
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTaskFeedbackCreate $payload_task_feedback_create
 ): \Kronup\Model\TaskExpanded
 ```
@@ -388,7 +375,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_task_feedback_create** | [**\Kronup\Model\PayloadTaskFeedbackCreate**](../../Model/PayloadTaskFeedbackCreate) |  
 
 ### Return type
@@ -428,8 +414,7 @@ Add a feedback to task
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $feedback_id,
-    string $x_org_id
+    string $feedback_id
 ): bool
 ```
 
@@ -442,7 +427,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
  **$feedback_id** | **string**  | Feedback ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -482,7 +466,6 @@ Delete a feedback for a task
     string $item_id,
     string $task_id,
     string $feedback_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTaskFeedbackReply $payload_task_feedback_reply
 ): \Kronup\Model\TaskExpanded
 ```
@@ -496,7 +479,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
  **$feedback_id** | **string**  | Feedback ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_task_feedback_reply** | [**\Kronup\Model\PayloadTaskFeedbackReply**](../../Model/PayloadTaskFeedbackReply) |  
 
 ### Return type
@@ -537,7 +519,6 @@ Update a reply to a task feedback
     string $item_id,
     string $task_id,
     string $feedback_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTaskFeedbackUpdate $payload_task_feedback_update
 ): \Kronup\Model\TaskExpanded
 ```
@@ -551,7 +532,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
  **$feedback_id** | **string**  | Feedback ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_task_feedback_update** | [**\Kronup\Model\PayloadTaskFeedbackUpdate**](../../Model/PayloadTaskFeedbackUpdate) |  
 
 ### Return type
@@ -590,7 +570,6 @@ Update a task feedback
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\TasksList
@@ -603,7 +582,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -644,8 +622,7 @@ Get a list of task models
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $notion_id,
-    string $x_org_id
+    string $notion_id
 ): \Kronup\Model\Task
 ```
 
@@ -658,7 +635,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
  **$notion_id** | **string**  | Notion ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -697,8 +673,7 @@ Add a notion to task
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $notion_id,
-    string $x_org_id
+    string $notion_id
 ): bool
 ```
 
@@ -711,7 +686,6 @@ Name | Type | Description
  **$item_id** | **string**  | Value Item ID 
  **$task_id** | **string**  | Task ID 
  **$notion_id** | **string**  | Notion ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -749,8 +723,7 @@ Remove a notion from task
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $task_id,
-    string $x_org_id
+    string $task_id
 ): \Kronup\Model\TaskExpanded
 ```
 
@@ -762,7 +735,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$task_id** | **string**  | Task ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -801,7 +773,6 @@ Retrieve task model
     string $channel_id,
     string $item_id,
     string $task_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTaskUpdate $payload_task_update
 ): \Kronup\Model\TaskExpanded
 ```
@@ -814,7 +785,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$task_id** | **string**  | Task ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_task_update** | [**\Kronup\Model\PayloadTaskUpdate**](../../Model/PayloadTaskUpdate) |  
 
 ### Return type

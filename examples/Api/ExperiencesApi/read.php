@@ -26,9 +26,6 @@ $arg_notion_id = "notion-id-***";
 // User ID
 $arg_user_id = "user-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * GET /xp/notions/{notionId}/users/{userId}
@@ -38,7 +35,7 @@ try {
     $response = $sdk
         ->api()
         ->experiences()
-        ->read($arg_notion_id, $arg_user_id, $arg_x_org_id);
+        ->read($arg_notion_id, $arg_user_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

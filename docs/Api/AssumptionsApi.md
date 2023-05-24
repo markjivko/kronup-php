@@ -49,7 +49,6 @@ Method | Description
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $x_org_id,
     \Kronup\Model\PayloadAssmCreate $payload_assm_create
 ): \Kronup\Model\Assumption
 ```
@@ -61,7 +60,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_assm_create** | [**\Kronup\Model\PayloadAssmCreate**](../../Model/PayloadAssmCreate) |  
 
 ### Return type
@@ -100,8 +98,7 @@ Add an assumption to value item
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $assm_id,
-    string $x_org_id
+    string $assm_id
 ): bool
 ```
 
@@ -113,7 +110,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$assm_id** | **string**  | Assumption ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -152,7 +148,6 @@ Delete an assumption from a value item
     string $channel_id,
     string $item_id,
     string $assm_id,
-    string $x_org_id,
     \Kronup\Model\PayloadAssmExperiment $payload_assm_experiment
 ): \Kronup\Model\Assumption
 ```
@@ -165,7 +160,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$assm_id** | **string**  | Assumption ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_assm_experiment** | [**\Kronup\Model\PayloadAssmExperiment**](../../Model/PayloadAssmExperiment) |  
 
 ### Return type
@@ -204,7 +198,6 @@ Update experiment details
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\AssumptionsList
@@ -217,7 +210,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value Item ID 
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -257,8 +249,7 @@ Get a list of assumption models
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $assm_id,
-    string $x_org_id
+    string $assm_id
 ): \Kronup\Model\Assumption
 ```
 
@@ -270,7 +261,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$assm_id** | **string**  | Assumption ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -309,7 +299,6 @@ Retrieve assumption model
     string $channel_id,
     string $item_id,
     string $assm_id,
-    string $x_org_id,
     \Kronup\Model\PayloadAssmUpdate $payload_assm_update
 ): \Kronup\Model\Assumption
 ```
@@ -322,7 +311,6 @@ Name | Type | Description
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
  **$assm_id** | **string**  | Assumption ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_assm_update** | [**\Kronup\Model\PayloadAssmUpdate**](../../Model/PayloadAssmUpdate) |  
 
 ### Return type

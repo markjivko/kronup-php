@@ -32,9 +32,6 @@ $arg_item_id = "value-item-id-***";
 // Assumption ID
 $arg_assm_id = "assm-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_assm_update = (new \Kronup\Model\PayloadAssmUpdate())
     
     // (optional) Assumption heading
@@ -49,7 +46,7 @@ try {
     $response = $sdk
         ->api()
         ->assumptions()
-        ->update($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_payload_assm_update);
+        ->update($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_payload_assm_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

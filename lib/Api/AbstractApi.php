@@ -58,6 +58,9 @@ abstract class AbstractApi {
      * @return \Kronup\Model\ModelInterface|\Kronup\Sdk\Psr7\Http\ResponseInterface
      */
     protected function exec(Request $request, ?string $returnType = null) {
+        // Set the organization ID
+        $request->setHeader("x-org-id", $this->_sdk->config()->getOrgId());
+
         // Prepare user agent info
         $userAgentExtra = [$request->getPackage()];
 

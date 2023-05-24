@@ -29,9 +29,6 @@ $arg_user_id = "user-id-***";
 // Grade between 1 and 5
 $arg_grade = "5";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * PUT /xp/notions/{notionId}/users/{userId}/grade/{grade}
@@ -41,7 +38,7 @@ try {
     $response = $sdk
         ->api()
         ->experiences()
-        ->evaluatePeer($arg_notion_id, $arg_user_id, $arg_grade, $arg_x_org_id);
+        ->evaluatePeer($arg_notion_id, $arg_user_id, $arg_grade);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

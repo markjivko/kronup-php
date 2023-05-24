@@ -34,20 +34,13 @@ class ChannelsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\User
      */
-    public function assign($team_id, $channel_id, $user_id, $x_org_id) {
+    public function assign($team_id, $channel_id, $user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/users/{userId}";
@@ -67,21 +60,14 @@ class ChannelsApi extends AbstractApi {
      * Create channel
      *
      * @param string $team_id Team ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadChannelCreate $payload_channel_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function create($team_id, $x_org_id, $payload_channel_create) {
+    public function create($team_id, $payload_channel_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels";
@@ -102,20 +88,13 @@ class ChannelsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($team_id, $channel_id, $x_org_id) {
+    public function delete($team_id, $channel_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}";
@@ -136,7 +115,6 @@ class ChannelsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -144,7 +122,7 @@ class ChannelsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ChannelMembersList
      */
-    public function listMembers($team_id, $channel_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function listMembers($team_id, $channel_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling ChannelsApi., must be bigger than or equal to 1.');
         }
@@ -158,12 +136,6 @@ class ChannelsApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/users";
@@ -187,21 +159,14 @@ class ChannelsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $x_org_id Organization ID
      * @param string|null $user_name Wildcard for prospect user name
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ChannelProspectsList
      */
-    public function listProspects($team_id, $channel_id, $x_org_id, $user_name = null) {
+    public function listProspects($team_id, $channel_id, $user_name = null) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/prospects";
@@ -225,20 +190,13 @@ class ChannelsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function unassign($team_id, $channel_id, $user_id, $x_org_id) {
+    public function unassign($team_id, $channel_id, $user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/users/{userId}";
@@ -259,21 +217,14 @@ class ChannelsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadChannelUpdate $payload_channel_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function update($team_id, $channel_id, $x_org_id, $payload_channel_update) {
+    public function update($team_id, $channel_id, $payload_channel_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}";

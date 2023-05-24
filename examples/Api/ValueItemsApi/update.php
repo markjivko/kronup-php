@@ -29,9 +29,6 @@ $arg_channel_id = "channel-id-***";
 // Value item ID
 $arg_item_id = "value-item-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_value_item_update = (new \Kronup\Model\PayloadValueItemUpdate())
     
     // (optional) Value item heading
@@ -55,7 +52,7 @@ try {
     $response = $sdk
         ->api()
         ->valueItems()
-        ->update($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_payload_value_item_update);
+        ->update($arg_team_id, $arg_channel_id, $arg_item_id, $arg_payload_value_item_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

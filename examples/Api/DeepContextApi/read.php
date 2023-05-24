@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Value item ID
 $arg_item_id = "value-item-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * GET /deep-context/{itemId}
@@ -35,7 +32,7 @@ try {
     $response = $sdk
         ->api()
         ->deepContext()
-        ->read($arg_item_id, $arg_x_org_id);
+        ->read($arg_item_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

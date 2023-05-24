@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Service account ID
 $arg_account_id = "service-account-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * DELETE /service-accounts/{accountId}
@@ -35,7 +32,7 @@ try {
     $response = $sdk
         ->api()
         ->serviceAccounts()
-        ->close($arg_account_id, $arg_x_org_id);
+        ->close($arg_account_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

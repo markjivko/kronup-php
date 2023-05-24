@@ -49,8 +49,7 @@ Method | Description
 (new \Kronup\Sdk())->api()->channels()->assign(
     string $team_id,
     string $channel_id,
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): \Kronup\Model\User
 ```
 
@@ -61,7 +60,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -97,7 +95,6 @@ Assign a user to a channel
 ```php
 (new \Kronup\Sdk())->api()->channels()->create(
     string $team_id,
-    string $x_org_id,
     \Kronup\Model\PayloadChannelCreate $payload_channel_create
 ): \Kronup\Model\TeamExtended
 ```
@@ -107,7 +104,6 @@ Assign a user to a channel
 Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_channel_create** | [**\Kronup\Model\PayloadChannelCreate**](../../Model/PayloadChannelCreate) |  
 
 ### Return type
@@ -144,8 +140,7 @@ Create a new channel for a team
 ```php
 (new \Kronup\Sdk())->api()->channels()->delete(
     string $team_id,
-    string $channel_id,
-    string $x_org_id
+    string $channel_id
 ): bool
 ```
 
@@ -155,7 +150,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -192,7 +186,6 @@ Delete a channel and unassign all users
 (new \Kronup\Sdk())->api()->channels()->listMembers(
     string $team_id,
     string $channel_id,
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\ChannelMembersList
@@ -204,7 +197,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -243,7 +235,6 @@ List all channel members
 (new \Kronup\Sdk())->api()->channels()->listProspects(
     string $team_id,
     string $channel_id,
-    string $x_org_id,
     [ string $user_name ]
 ): \Kronup\Model\ChannelProspectsList
 ```
@@ -254,7 +245,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$x_org_id** | **string**  | Organization ID 
  **$user_name** | **string**  | Wildcard for prospect user name 
 
 ### Return type
@@ -292,8 +282,7 @@ List 10 channel prospects
 (new \Kronup\Sdk())->api()->channels()->unassign(
     string $team_id,
     string $channel_id,
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): bool
 ```
 
@@ -304,7 +293,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -341,7 +329,6 @@ Remove a user from a channel; removing the user from the default channel is the 
 (new \Kronup\Sdk())->api()->channels()->update(
     string $team_id,
     string $channel_id,
-    string $x_org_id,
     \Kronup\Model\PayloadChannelUpdate $payload_channel_update
 ): \Kronup\Model\TeamExtended
 ```
@@ -352,7 +339,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_channel_update** | [**\Kronup\Model\PayloadChannelUpdate**](../../Model/PayloadChannelUpdate) |  
 
 ### Return type

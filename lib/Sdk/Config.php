@@ -87,6 +87,13 @@ class Config {
     protected $_tempFolderPath;
 
     /**
+     * Organization ID - extracted from Service Account JWT
+     * 
+     * @var string
+     */
+    protected $_orgId = "";
+
+    /**
      * Constructor
      *
      * @param string $apiKey API Key
@@ -105,6 +112,17 @@ class Config {
      */
     public function setApiKey(string $key) {
         $this->_apiKey = "$key";
+
+        // Prepare the JWT parts
+        $jwtParts = explode(".", $this->_apiKey);
+
+        // Find the organization ID
+        if (3 === count($jwtParts)) {    
+            $body = @json_decode(base64_decode($jwtParts[1]), true);
+            if (isset($body["org_id"])) {
+                $this->_orgId = $body["org_id"];
+            }
+        }
 
         return $this;
     }
@@ -146,6 +164,27 @@ class Config {
      */
     public function getUserAgent(): string {
         return $this->_userAgent;
+    }
+
+    /**
+     * Get the current Organization ID
+     *
+     * @return string Organization ID
+     */
+    public function getOrgId(): string {
+        return $this->_orgId;
+    }
+
+    /**
+     * Set the organization ID (for testing purposes)
+     *
+     * @param string $orgId Organization ID
+     * @return $this
+     */
+    public function setOrgId($orgId) {
+        $this->_orgId = trim("$orgId");
+
+        return $this;
     }
 
     /**

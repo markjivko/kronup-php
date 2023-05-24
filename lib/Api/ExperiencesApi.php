@@ -34,20 +34,13 @@ class ExperiencesApi extends AbstractApi {
      * @param string $notion_id Notion ID
      * @param string $user_id User ID
      * @param string $grade Grade between 1 and 5
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Experience
      */
-    public function evaluatePeer($notion_id, $user_id, $grade, $x_org_id) {
+    public function evaluatePeer($notion_id, $user_id, $grade) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/xp/notions/{notionId}/users/{userId}/grade/{grade}";
@@ -68,20 +61,13 @@ class ExperiencesApi extends AbstractApi {
      *
      * @param string $notion_id Notion ID
      * @param string $grade Grade between 1 and 5
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Experience
      */
-    public function evaluateSelf($notion_id, $grade, $x_org_id) {
+    public function evaluateSelf($notion_id, $grade) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/xp/notions/{notionId}/grade/{grade}";
@@ -101,7 +87,6 @@ class ExperiencesApi extends AbstractApi {
      * Fetch all experiences
      *
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -109,7 +94,7 @@ class ExperiencesApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ExperiencesList
      */
-    public function list($user_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($user_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling ExperiencesApi., must be bigger than or equal to 1.');
         }
@@ -123,12 +108,6 @@ class ExperiencesApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/xp/users/{userId}";
@@ -152,20 +131,13 @@ class ExperiencesApi extends AbstractApi {
      *
      * @param string $notion_id Notion ID
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Experience
      */
-    public function read($notion_id, $user_id, $x_org_id) {
+    public function read($notion_id, $user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/xp/notions/{notionId}/users/{userId}";

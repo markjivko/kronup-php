@@ -48,8 +48,7 @@ Method | Description
 (new \Kronup\Sdk())->api()->valueItems()->advance(
     string $team_id,
     string $channel_id,
-    string $item_id,
-    string $x_org_id
+    string $item_id
 ): \Kronup\Model\ValueItem
 ```
 
@@ -60,7 +59,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -97,7 +95,6 @@ Advance a value item
 (new \Kronup\Sdk())->api()->valueItems()->create(
     string $team_id,
     string $channel_id,
-    string $x_org_id,
     \Kronup\Model\PayloadValueItemCreate $payload_value_item_create
 ): \Kronup\Model\ValueItem
 ```
@@ -108,7 +105,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_value_item_create** | [**\Kronup\Model\PayloadValueItemCreate**](../../Model/PayloadValueItemCreate) |  
 
 ### Return type
@@ -146,8 +142,7 @@ Add a value item to planning
 (new \Kronup\Sdk())->api()->valueItems()->delete(
     string $team_id,
     string $channel_id,
-    string $item_id,
-    string $x_org_id
+    string $item_id
 ): bool
 ```
 
@@ -158,7 +153,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -195,7 +189,6 @@ Delete a value item from the flow
 (new \Kronup\Sdk())->api()->valueItems()->list(
     string $team_id,
     string $channel_id,
-    string $x_org_id,
     [ string $stage, ]
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
@@ -208,7 +201,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$x_org_id** | **string**  | Organization ID 
  **$stage** | **string**  | Value item stage 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
@@ -248,8 +240,7 @@ Get a list of value item models
 (new \Kronup\Sdk())->api()->valueItems()->read(
     string $team_id,
     string $channel_id,
-    string $item_id,
-    string $x_org_id
+    string $item_id
 ): \Kronup\Model\ValueItem
 ```
 
@@ -260,7 +251,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -298,7 +288,6 @@ Retrieve value item model
     string $team_id,
     string $channel_id,
     string $item_id,
-    string $x_org_id,
     \Kronup\Model\PayloadValueItemUpdate $payload_value_item_update
 ): \Kronup\Model\ValueItem
 ```
@@ -310,7 +299,6 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$item_id** | **string**  | Value item ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_value_item_update** | [**\Kronup\Model\PayloadValueItemUpdate**](../../Model/PayloadValueItemUpdate) |  
 
 ### Return type

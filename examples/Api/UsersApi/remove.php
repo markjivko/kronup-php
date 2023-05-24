@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // User ID
 $arg_user_id = "user-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * DELETE /users/{userId}
@@ -35,7 +32,7 @@ try {
     $response = $sdk
         ->api()
         ->users()
-        ->remove($arg_user_id, $arg_x_org_id);
+        ->remove($arg_user_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

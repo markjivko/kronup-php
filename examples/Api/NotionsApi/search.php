@@ -20,9 +20,6 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 // Search term
 $arg_search_term = 'search_term_example';
 
@@ -41,7 +38,7 @@ try {
     $response = $sdk
         ->api()
         ->notions()
-        ->search($arg_x_org_id, $arg_search_term, $arg_page_number, $arg_page_size);
+        ->search($arg_search_term, $arg_page_number, $arg_page_size);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

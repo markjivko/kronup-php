@@ -35,9 +35,6 @@ $arg_task_id = "task-id-***";
 // Feedback ID
 $arg_feedback_id = "feedback-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}
@@ -47,7 +44,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->feedbackDelete($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_feedback_id, $arg_x_org_id);
+        ->feedbackDelete($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_feedback_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

@@ -31,7 +31,6 @@ class UsersApi extends AbstractApi {
     /**
      * List users
      *
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -39,7 +38,7 @@ class UsersApi extends AbstractApi {
      * 
      * @return \Kronup\Model\UsersList
      */
-    public function list($x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling UsersApi., must be bigger than or equal to 1.');
         }
@@ -53,12 +52,6 @@ class UsersApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/users";
@@ -81,20 +74,13 @@ class UsersApi extends AbstractApi {
      * Fetch user
      *
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\User
      */
-    public function read($user_id, $x_org_id) {
+    public function read($user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/users/{userId}";
@@ -114,20 +100,13 @@ class UsersApi extends AbstractApi {
      * Remove user
      *
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\User
      */
-    public function remove($user_id, $x_org_id) {
+    public function remove($user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/users/{userId}";
@@ -147,21 +126,14 @@ class UsersApi extends AbstractApi {
      * Update roles
      *
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadUserRoleUpdate $payload_user_role_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\UserRoles
      */
-    public function updateRole($user_id, $x_org_id, $payload_user_role_update) {
+    public function updateRole($user_id, $payload_user_role_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/users/{userId}";

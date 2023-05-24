@@ -29,9 +29,6 @@ $arg_channel_id = "channel-id-***";
 // User ID
 $arg_user_id = "user-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * DELETE /teams/{teamId}/channels/{channelId}/users/{userId}
@@ -41,7 +38,7 @@ try {
     $response = $sdk
         ->api()
         ->channels()
-        ->unassign($arg_team_id, $arg_channel_id, $arg_user_id, $arg_x_org_id);
+        ->unassign($arg_team_id, $arg_channel_id, $arg_user_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

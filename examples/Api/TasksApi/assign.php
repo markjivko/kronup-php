@@ -35,9 +35,6 @@ $arg_task_id = "task-id-***";
 // User ID
 $arg_user_id = "user-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * PUT /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/users/{userId}
@@ -47,7 +44,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->assign($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_user_id, $arg_x_org_id);
+        ->assign($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_user_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

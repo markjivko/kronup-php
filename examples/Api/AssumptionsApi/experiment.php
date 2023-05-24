@@ -32,9 +32,6 @@ $arg_item_id = "value-item-id-***";
 // Assumption ID
 $arg_assm_id = "assm-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_assm_experiment = (new \Kronup\Model\PayloadAssmExperiment())
     
     // (optional) Experiment confirms assumption
@@ -58,7 +55,7 @@ try {
     $response = $sdk
         ->api()
         ->assumptions()
-        ->experiment($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_x_org_id, $arg_payload_assm_experiment);
+        ->experiment($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_payload_assm_experiment);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

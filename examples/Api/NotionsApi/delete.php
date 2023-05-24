@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Notion ID
 $arg_notion_id = "notion-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * DELETE /notions/{notionId}
@@ -35,7 +32,7 @@ try {
     $response = $sdk
         ->api()
         ->notions()
-        ->delete($arg_notion_id, $arg_x_org_id);
+        ->delete($arg_notion_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

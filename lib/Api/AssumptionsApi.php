@@ -34,21 +34,14 @@ class AssumptionsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $item_id Value Item ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadAssmCreate $payload_assm_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function create($team_id, $channel_id, $item_id, $x_org_id, $payload_assm_create) {
+    public function create($team_id, $channel_id, $item_id, $payload_assm_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms";
@@ -71,20 +64,13 @@ class AssumptionsApi extends AbstractApi {
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
      * @param string $assm_id Assumption ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($team_id, $channel_id, $item_id, $assm_id, $x_org_id) {
+    public function delete($team_id, $channel_id, $item_id, $assm_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}";
@@ -107,21 +93,14 @@ class AssumptionsApi extends AbstractApi {
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
      * @param string $assm_id Assumption ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadAssmExperiment $payload_assm_experiment 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function experiment($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_experiment) {
+    public function experiment($team_id, $channel_id, $item_id, $assm_id, $payload_assm_experiment) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp";
@@ -143,7 +122,6 @@ class AssumptionsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $item_id Value Item ID
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -151,7 +129,7 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\AssumptionsList
      */
-    public function list($team_id, $channel_id, $item_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($team_id, $channel_id, $item_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling AssumptionsApi., must be bigger than or equal to 1.');
         }
@@ -165,12 +143,6 @@ class AssumptionsApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms";
@@ -196,20 +168,13 @@ class AssumptionsApi extends AbstractApi {
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
      * @param string $assm_id Assumption ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function read($team_id, $channel_id, $item_id, $assm_id, $x_org_id) {
+    public function read($team_id, $channel_id, $item_id, $assm_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}";
@@ -232,21 +197,14 @@ class AssumptionsApi extends AbstractApi {
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
      * @param string $assm_id Assumption ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadAssmUpdate $payload_assm_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function update($team_id, $channel_id, $item_id, $assm_id, $x_org_id, $payload_assm_update) {
+    public function update($team_id, $channel_id, $item_id, $assm_id, $payload_assm_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}";

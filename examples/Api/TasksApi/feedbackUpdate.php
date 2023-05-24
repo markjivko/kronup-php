@@ -35,9 +35,6 @@ $arg_task_id = "task-id-***";
 // Feedback ID
 $arg_feedback_id = "feedback-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_task_feedback_update = (new \Kronup\Model\PayloadTaskFeedbackUpdate())
     
     // (optional) Feedback details
@@ -55,7 +52,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->feedbackUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_feedback_id, $arg_x_org_id, $arg_payload_task_feedback_update);
+        ->feedbackUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_feedback_id, $arg_payload_task_feedback_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

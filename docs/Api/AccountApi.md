@@ -127,7 +127,6 @@ Close the current account. This action is reversible only if you sign back in wi
 
 ```php
 (new \Kronup\Sdk())->api()->account()->eventList(
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\EventsList
@@ -137,7 +136,6 @@ Close the current account. This action is reversible only if you sign back in wi
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 

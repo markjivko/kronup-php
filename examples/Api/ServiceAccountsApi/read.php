@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Service Account ID
 $arg_account_id = "service-account-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * GET /service-accounts/{accountId}
@@ -35,7 +32,7 @@ try {
     $response = $sdk
         ->api()
         ->serviceAccounts()
-        ->read($arg_account_id, $arg_x_org_id);
+        ->read($arg_account_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // User ID
 $arg_user_id = "user-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_user_role_update = (new \Kronup\Model\PayloadUserRoleUpdate())
     
     // (optional) New site role
@@ -43,7 +40,7 @@ try {
     $response = $sdk
         ->api()
         ->users()
-        ->updateRole($arg_user_id, $arg_x_org_id, $arg_payload_user_role_update);
+        ->updateRole($arg_user_id, $arg_payload_user_role_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

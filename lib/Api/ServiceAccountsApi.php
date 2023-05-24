@@ -32,20 +32,13 @@ class ServiceAccountsApi extends AbstractApi {
      * Close service account
      *
      * @param string $account_id Service account ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ServiceAccount
      */
-    public function close($account_id, $x_org_id) {
+    public function close($account_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/service-accounts/{accountId}";
@@ -64,21 +57,14 @@ class ServiceAccountsApi extends AbstractApi {
     /**
      * Create service account
      *
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadServiceAccountCreate $payload_service_account_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ServiceAccount
      */
-    public function create($x_org_id, $payload_service_account_create) {
+    public function create($payload_service_account_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/service-accounts";
@@ -97,7 +83,6 @@ class ServiceAccountsApi extends AbstractApi {
     /**
      * List service acounts
      *
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -105,7 +90,7 @@ class ServiceAccountsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ServiceAccountsList
      */
-    public function list($x_org_id, $page_number = 1, $page_size = 100) {
+    public function list($page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling ServiceAccountsApi., must be bigger than or equal to 1.');
         }
@@ -119,12 +104,6 @@ class ServiceAccountsApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/service-accounts";
@@ -147,20 +126,13 @@ class ServiceAccountsApi extends AbstractApi {
      * Fetch service account
      *
      * @param string $account_id Service Account ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ServiceAccount
      */
-    public function read($account_id, $x_org_id) {
+    public function read($account_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/service-accounts/{accountId}";
@@ -180,20 +152,13 @@ class ServiceAccountsApi extends AbstractApi {
      * Regenerate
      *
      * @param string $account_id Service account ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ServiceAccount
      */
-    public function regenerate($account_id, $x_org_id) {
+    public function regenerate($account_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/service-accounts/{accountId}";
@@ -213,21 +178,14 @@ class ServiceAccountsApi extends AbstractApi {
      * Update service account
      *
      * @param string $account_id Service account ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadServiceAccountUpdate $payload_service_account_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ServiceAccount
      */
-    public function update($account_id, $x_org_id, $payload_service_account_update) {
+    public function update($account_id, $payload_service_account_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/service-accounts/{accountId}";

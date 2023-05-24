@@ -33,20 +33,13 @@ class TeamsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\User
      */
-    public function assign($team_id, $user_id, $x_org_id) {
+    public function assign($team_id, $user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/users/{userId}";
@@ -65,21 +58,14 @@ class TeamsApi extends AbstractApi {
     /**
      * Create team
      *
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadTeamCreate $payload_team_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function create($x_org_id, $payload_team_create) {
+    public function create($payload_team_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams";
@@ -99,20 +85,13 @@ class TeamsApi extends AbstractApi {
      * Delete team
      *
      * @param string $team_id Team ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($team_id, $x_org_id) {
+    public function delete($team_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}";
@@ -131,7 +110,6 @@ class TeamsApi extends AbstractApi {
     /**
      * List all teams
      *
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -139,7 +117,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamsList
      */
-    public function listAll($x_org_id, $page_number = 1, $page_size = 100) {
+    public function listAll($page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling TeamsApi., must be bigger than or equal to 1.');
         }
@@ -153,12 +131,6 @@ class TeamsApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams";
@@ -181,7 +153,6 @@ class TeamsApi extends AbstractApi {
      * List user teams
      *
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -189,7 +160,7 @@ class TeamsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\TeamsExtendedList
      */
-    public function listUser($user_id, $x_org_id, $page_number = 1, $page_size = 100) {
+    public function listUser($user_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling TeamsApi., must be bigger than or equal to 1.');
         }
@@ -203,12 +174,6 @@ class TeamsApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/users/{userId}";
@@ -231,20 +196,13 @@ class TeamsApi extends AbstractApi {
      * Fetch team
      *
      * @param string $team_id Team ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function read($team_id, $x_org_id) {
+    public function read($team_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}";
@@ -265,20 +223,13 @@ class TeamsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $user_id User ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function unassign($team_id, $user_id, $x_org_id) {
+    public function unassign($team_id, $user_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/users/{userId}";
@@ -298,21 +249,14 @@ class TeamsApi extends AbstractApi {
      * Update team
      *
      * @param string $team_id Team ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadTeamUpdate $payload_team_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\TeamExtended
      */
-    public function update($team_id, $x_org_id, $payload_team_update) {
+    public function update($team_id, $payload_team_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}";

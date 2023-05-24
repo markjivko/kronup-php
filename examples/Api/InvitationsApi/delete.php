@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Invitation ID
 $arg_invite_id = "invitation-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * DELETE /invitations/{inviteId}
@@ -35,7 +32,7 @@ try {
     $response = $sdk
         ->api()
         ->invitations()
-        ->delete($arg_invite_id, $arg_x_org_id);
+        ->delete($arg_invite_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

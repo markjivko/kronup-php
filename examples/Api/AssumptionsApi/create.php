@@ -29,9 +29,6 @@ $arg_channel_id = "channel-id-***";
 // Value Item ID
 $arg_item_id = "value-item-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_assm_create = (new \Kronup\Model\PayloadAssmCreate())
     
     // (optional) Assumption heading
@@ -46,7 +43,7 @@ try {
     $response = $sdk
         ->api()
         ->assumptions()
-        ->create($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_payload_assm_create);
+        ->create($arg_team_id, $arg_channel_id, $arg_item_id, $arg_payload_assm_create);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

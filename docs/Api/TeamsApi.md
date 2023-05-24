@@ -49,8 +49,7 @@ Method | Description
 ```php
 (new \Kronup\Sdk())->api()->teams()->assign(
     string $team_id,
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): \Kronup\Model\User
 ```
 
@@ -60,7 +59,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -95,7 +93,6 @@ Assign a user to a team
 
 ```php
 (new \Kronup\Sdk())->api()->teams()->create(
-    string $x_org_id,
     \Kronup\Model\PayloadTeamCreate $payload_team_create
 ): \Kronup\Model\TeamExtended
 ```
@@ -104,7 +101,6 @@ Assign a user to a team
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$payload_team_create** | [**\Kronup\Model\PayloadTeamCreate**](../../Model/PayloadTeamCreate) |  
 
 ### Return type
@@ -140,8 +136,7 @@ Create a new team to this organization
 
 ```php
 (new \Kronup\Sdk())->api()->teams()->delete(
-    string $team_id,
-    string $x_org_id
+    string $team_id
 ): bool
 ```
 
@@ -150,7 +145,6 @@ Create a new team to this organization
 Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -185,7 +179,6 @@ Delete a team and unassign all users
 
 ```php
 (new \Kronup\Sdk())->api()->teams()->listAll(
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\TeamsList
@@ -195,7 +188,6 @@ Delete a team and unassign all users
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -233,7 +225,6 @@ Get a list of all organization team models
 ```php
 (new \Kronup\Sdk())->api()->teams()->listUser(
     string $user_id,
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\TeamsExtendedList
@@ -244,7 +235,6 @@ Get a list of all organization team models
 Name | Type | Description
 ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -281,8 +271,7 @@ Get a list of all teams this user is a part of
 
 ```php
 (new \Kronup\Sdk())->api()->teams()->read(
-    string $team_id,
-    string $x_org_id
+    string $team_id
 ): \Kronup\Model\TeamExtended
 ```
 
@@ -291,7 +280,6 @@ Get a list of all teams this user is a part of
 Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -327,8 +315,7 @@ Retrieve team model
 ```php
 (new \Kronup\Sdk())->api()->teams()->unassign(
     string $team_id,
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): bool
 ```
 
@@ -338,7 +325,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -374,7 +360,6 @@ Remove a user from a team
 ```php
 (new \Kronup\Sdk())->api()->teams()->update(
     string $team_id,
-    string $x_org_id,
     \Kronup\Model\PayloadTeamUpdate $payload_team_update
 ): \Kronup\Model\TeamExtended
 ```
@@ -384,7 +369,6 @@ Remove a user from a team
 Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_team_update** | [**\Kronup\Model\PayloadTeamUpdate**](../../Model/PayloadTeamUpdate) |  
 
 ### Return type

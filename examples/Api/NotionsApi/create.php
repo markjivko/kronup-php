@@ -20,9 +20,6 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_notion_create = (new \Kronup\Model\PayloadNotionCreate())
     
     // (optional) Notion
@@ -37,7 +34,7 @@ try {
     $response = $sdk
         ->api()
         ->notions()
-        ->create($arg_x_org_id, $arg_payload_notion_create);
+        ->create($arg_payload_notion_create);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

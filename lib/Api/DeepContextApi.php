@@ -32,20 +32,13 @@ class DeepContextApi extends AbstractApi {
      * Delete value item
      *
      * @param string $item_id Value item ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($item_id, $x_org_id) {
+    public function delete($item_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/deep-context/{itemId}";
@@ -65,20 +58,13 @@ class DeepContextApi extends AbstractApi {
      * Fetch expanded value item
      *
      * @param string $item_id Value item ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ValueItemExpanded
      */
-    public function read($item_id, $x_org_id) {
+    public function read($item_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/deep-context/{itemId}";
@@ -97,7 +83,6 @@ class DeepContextApi extends AbstractApi {
     /**
      * Search value items
      *
-     * @param string $x_org_id Organization ID
      * @param string|null $search_term Search term
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
@@ -106,7 +91,7 @@ class DeepContextApi extends AbstractApi {
      * 
      * @return \Kronup\Model\DeepContextList
      */
-    public function search($x_org_id, $search_term = null, $page_number = 1, $page_size = 100) {
+    public function search($search_term = null, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling DeepContextApi., must be bigger than or equal to 1.');
         }
@@ -120,12 +105,6 @@ class DeepContextApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/deep-context";

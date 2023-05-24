@@ -46,8 +46,7 @@ Method | Description
 (new \Kronup\Sdk())->api()->experiences()->evaluatePeer(
     string $notion_id,
     string $user_id,
-    string $grade,
-    string $x_org_id
+    string $grade
 ): \Kronup\Model\Experience
 ```
 
@@ -58,7 +57,6 @@ Name | Type | Description
  **$notion_id** | **string**  | Notion ID 
  **$user_id** | **string**  | User ID 
  **$grade** | **string**  | Grade between 1 and 5 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -94,8 +92,7 @@ Anonymously evaluate another user on this notion. Only the last evaluation is ke
 ```php
 (new \Kronup\Sdk())->api()->experiences()->evaluateSelf(
     string $notion_id,
-    string $grade,
-    string $x_org_id
+    string $grade
 ): \Kronup\Model\Experience
 ```
 
@@ -105,7 +102,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$grade** | **string**  | Grade between 1 and 5 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -141,7 +137,6 @@ Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours in
 ```php
 (new \Kronup\Sdk())->api()->experiences()->list(
     string $user_id,
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\ExperiencesList
@@ -152,7 +147,6 @@ Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours in
 Name | Type | Description
 ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -190,8 +184,7 @@ Retrieve all experience models for this user
 ```php
 (new \Kronup\Sdk())->api()->experiences()->read(
     string $notion_id,
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): \Kronup\Model\Experience
 ```
 
@@ -201,7 +194,6 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 

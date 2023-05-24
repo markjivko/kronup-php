@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Team ID
 $arg_team_id = "team-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_channel_create = (new \Kronup\Model\PayloadChannelCreate())
     
     // (optional) Channel name
@@ -43,7 +40,7 @@ try {
     $response = $sdk
         ->api()
         ->channels()
-        ->create($arg_team_id, $arg_x_org_id, $arg_payload_channel_create);
+        ->create($arg_team_id, $arg_payload_channel_create);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

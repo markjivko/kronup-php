@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Invitation ID
 $arg_invite_id = "invitation-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_invitation_update = (new \Kronup\Model\PayloadInvitationUpdate())
     
     // (optional) Team ID
@@ -52,7 +49,7 @@ try {
     $response = $sdk
         ->api()
         ->invitations()
-        ->update($arg_invite_id, $arg_x_org_id, $arg_payload_invitation_update);
+        ->update($arg_invite_id, $arg_payload_invitation_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

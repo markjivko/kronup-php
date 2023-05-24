@@ -43,8 +43,7 @@ Method | Description
 
 ```php
 (new \Kronup\Sdk())->api()->deepContext()->delete(
-    string $item_id,
-    string $x_org_id
+    string $item_id
 ): bool
 ```
 
@@ -53,7 +52,6 @@ Method | Description
 Name | Type | Description
 ------------- | ------------- | -------------
  **$item_id** | **string**  | Value item ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -88,8 +86,7 @@ Delete a value item from Deep Context
 
 ```php
 (new \Kronup\Sdk())->api()->deepContext()->read(
-    string $item_id,
-    string $x_org_id
+    string $item_id
 ): \Kronup\Model\ValueItemExpanded
 ```
 
@@ -98,7 +95,6 @@ Delete a value item from Deep Context
 Name | Type | Description
 ------------- | ------------- | -------------
  **$item_id** | **string**  | Value item ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -133,7 +129,6 @@ Retrieve value item model
 
 ```php
 (new \Kronup\Sdk())->api()->deepContext()->search(
-    string $x_org_id,
     [ string $search_term, ]
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
@@ -144,7 +139,6 @@ Retrieve value item model
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$search_term** | **string**  | Search term 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]

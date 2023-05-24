@@ -45,7 +45,6 @@ Method | Description
 
 ```php
 (new \Kronup\Sdk())->api()->notions()->create(
-    string $x_org_id,
     \Kronup\Model\PayloadNotionCreate $payload_notion_create
 ): \Kronup\Model\Notion
 ```
@@ -54,7 +53,6 @@ Method | Description
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$payload_notion_create** | [**\Kronup\Model\PayloadNotionCreate**](../../Model/PayloadNotionCreate) |  
 
 ### Return type
@@ -90,8 +88,7 @@ Define a notion
 
 ```php
 (new \Kronup\Sdk())->api()->notions()->delete(
-    string $notion_id,
-    string $x_org_id
+    string $notion_id
 ): bool
 ```
 
@@ -100,7 +97,6 @@ Define a notion
 Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -135,8 +131,7 @@ Delete a notion model. This also removes the associated Experiences for all user
 
 ```php
 (new \Kronup\Sdk())->api()->notions()->read(
-    string $notion_id,
-    string $x_org_id
+    string $notion_id
 ): \Kronup\Model\Notion
 ```
 
@@ -145,7 +140,6 @@ Delete a notion model. This also removes the associated Experiences for all user
 Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -180,7 +174,6 @@ Retrieve notion model
 
 ```php
 (new \Kronup\Sdk())->api()->notions()->search(
-    string $x_org_id,
     [ string $search_term, ]
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
@@ -191,7 +184,6 @@ Retrieve notion model
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$search_term** | **string**  | Search term 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
@@ -230,7 +222,6 @@ Get a list of notion models
 ```php
 (new \Kronup\Sdk())->api()->notions()->update(
     string $notion_id,
-    string $x_org_id,
     \Kronup\Model\PayloadNotionUpdate $payload_notion_update
 ): \Kronup\Model\Notion
 ```
@@ -240,7 +231,6 @@ Get a list of notion models
 Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_notion_update** | [**\Kronup\Model\PayloadNotionUpdate**](../../Model/PayloadNotionUpdate) |  
 
 ### Return type

@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Service account ID
 $arg_account_id = "service-account-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_service_account_update = (new \Kronup\Model\PayloadServiceAccountUpdate())
     
     // (optional) Service Account organization role
@@ -43,7 +40,7 @@ try {
     $response = $sdk
         ->api()
         ->serviceAccounts()
-        ->update($arg_account_id, $arg_x_org_id, $arg_payload_service_account_update);
+        ->update($arg_account_id, $arg_payload_service_account_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

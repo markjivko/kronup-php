@@ -89,7 +89,6 @@ Accept an invitation to join an organization
 
 ```php
 (new \Kronup\Sdk())->api()->invitations()->create(
-    string $x_org_id,
     \Kronup\Model\PayloadInvitationCreate $payload_invitation_create
 ): \Kronup\Model\Invitation
 ```
@@ -98,7 +97,6 @@ Accept an invitation to join an organization
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$payload_invitation_create** | [**\Kronup\Model\PayloadInvitationCreate**](../../Model/PayloadInvitationCreate) |  
 
 ### Return type
@@ -134,8 +132,7 @@ Create a new invitation to this organization
 
 ```php
 (new \Kronup\Sdk())->api()->invitations()->delete(
-    string $invite_id,
-    string $x_org_id
+    string $invite_id
 ): bool
 ```
 
@@ -144,7 +141,6 @@ Create a new invitation to this organization
 Name | Type | Description
 ------------- | ------------- | -------------
  **$invite_id** | **string**  | Invitation ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -179,7 +175,6 @@ Delete invitation
 
 ```php
 (new \Kronup\Sdk())->api()->invitations()->list(
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\InvitationsList
@@ -189,7 +184,6 @@ Delete invitation
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -270,7 +264,6 @@ Retrieve invitation model
 ```php
 (new \Kronup\Sdk())->api()->invitations()->update(
     string $invite_id,
-    string $x_org_id,
     \Kronup\Model\PayloadInvitationUpdate $payload_invitation_update
 ): \Kronup\Model\Invitation
 ```
@@ -280,7 +273,6 @@ Retrieve invitation model
 Name | Type | Description
 ------------- | ------------- | -------------
  **$invite_id** | **string**  | Invitation ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_invitation_update** | [**\Kronup\Model\PayloadInvitationUpdate**](../../Model/PayloadInvitationUpdate) |  
 
 ### Return type

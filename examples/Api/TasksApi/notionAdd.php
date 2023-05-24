@@ -35,9 +35,6 @@ $arg_task_id = "task-id-***";
 // Notion ID
 $arg_notion_id = "notion-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * PUT /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}
@@ -47,7 +44,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->notionAdd($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_notion_id, $arg_x_org_id);
+        ->notionAdd($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_notion_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

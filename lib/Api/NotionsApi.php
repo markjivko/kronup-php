@@ -31,21 +31,14 @@ class NotionsApi extends AbstractApi {
     /**
      * Create notion
      *
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadNotionCreate $payload_notion_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Notion
      */
-    public function create($x_org_id, $payload_notion_create) {
+    public function create($payload_notion_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/notions";
@@ -65,20 +58,13 @@ class NotionsApi extends AbstractApi {
      * Delete notion
      *
      * @param string $notion_id Notion ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($notion_id, $x_org_id) {
+    public function delete($notion_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/notions/{notionId}";
@@ -98,20 +84,13 @@ class NotionsApi extends AbstractApi {
      * Fetch notion
      *
      * @param string $notion_id Notion ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Notion
      */
-    public function read($notion_id, $x_org_id) {
+    public function read($notion_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/notions/{notionId}";
@@ -130,7 +109,6 @@ class NotionsApi extends AbstractApi {
     /**
      * Search notions
      *
-     * @param string $x_org_id Organization ID
      * @param string|null $search_term Search term
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
@@ -139,7 +117,7 @@ class NotionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\NotionsList
      */
-    public function search($x_org_id, $search_term = null, $page_number = 1, $page_size = 100) {
+    public function search($search_term = null, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling NotionsApi., must be bigger than or equal to 1.');
         }
@@ -153,12 +131,6 @@ class NotionsApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/notions";
@@ -182,21 +154,14 @@ class NotionsApi extends AbstractApi {
      * Update notion
      *
      * @param string $notion_id Notion ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadNotionUpdate $payload_notion_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Notion
      */
-    public function update($notion_id, $x_org_id, $payload_notion_update) {
+    public function update($notion_id, $payload_notion_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/notions/{notionId}";

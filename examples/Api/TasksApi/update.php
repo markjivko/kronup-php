@@ -32,9 +32,6 @@ $arg_item_id = "value-item-id-***";
 // Task ID
 $arg_task_id = "task-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_task_update = (new \Kronup\Model\PayloadTaskUpdate())
     
     // (optional) Task heading
@@ -55,7 +52,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->update($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_x_org_id, $arg_payload_task_update);
+        ->update($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_payload_task_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

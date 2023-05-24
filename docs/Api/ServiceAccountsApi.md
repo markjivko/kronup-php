@@ -46,8 +46,7 @@ Method | Description
 
 ```php
 (new \Kronup\Sdk())->api()->serviceAccounts()->close(
-    string $account_id,
-    string $x_org_id
+    string $account_id
 ): \Kronup\Model\ServiceAccount
 ```
 
@@ -56,7 +55,6 @@ Method | Description
 Name | Type | Description
 ------------- | ------------- | -------------
  **$account_id** | **string**  | Service account ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -91,7 +89,6 @@ Close this service account. This action is always reversible. You can re-open it
 
 ```php
 (new \Kronup\Sdk())->api()->serviceAccounts()->create(
-    string $x_org_id,
     \Kronup\Model\PayloadServiceAccountCreate $payload_service_account_create
 ): \Kronup\Model\ServiceAccount
 ```
@@ -100,7 +97,6 @@ Close this service account. This action is always reversible. You can re-open it
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$payload_service_account_create** | [**\Kronup\Model\PayloadServiceAccountCreate**](../../Model/PayloadServiceAccountCreate) |  
 
 ### Return type
@@ -136,7 +132,6 @@ Create a new service account for this Organization
 
 ```php
 (new \Kronup\Sdk())->api()->serviceAccounts()->list(
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\ServiceAccountsList
@@ -146,7 +141,6 @@ Create a new service account for this Organization
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -183,8 +177,7 @@ Get a list of all service account models, including those that were closed
 
 ```php
 (new \Kronup\Sdk())->api()->serviceAccounts()->read(
-    string $account_id,
-    string $x_org_id
+    string $account_id
 ): \Kronup\Model\ServiceAccount
 ```
 
@@ -193,7 +186,6 @@ Get a list of all service account models, including those that were closed
 Name | Type | Description
 ------------- | ------------- | -------------
  **$account_id** | **string**  | Service Account ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -228,8 +220,7 @@ Retrieve service account model
 
 ```php
 (new \Kronup\Sdk())->api()->serviceAccounts()->regenerate(
-    string $account_id,
-    string $x_org_id
+    string $account_id
 ): \Kronup\Model\ServiceAccount
 ```
 
@@ -238,7 +229,6 @@ Retrieve service account model
 Name | Type | Description
 ------------- | ------------- | -------------
  **$account_id** | **string**  | Service account ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -274,7 +264,6 @@ Regenerate service account JSON Web Token and re-open service account if previou
 ```php
 (new \Kronup\Sdk())->api()->serviceAccounts()->update(
     string $account_id,
-    string $x_org_id,
     \Kronup\Model\PayloadServiceAccountUpdate $payload_service_account_update
 ): \Kronup\Model\ServiceAccount
 ```
@@ -284,7 +273,6 @@ Regenerate service account JSON Web Token and re-open service account if previou
 Name | Type | Description
 ------------- | ------------- | -------------
  **$account_id** | **string**  | Service account ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_service_account_update** | [**\Kronup\Model\PayloadServiceAccountUpdate**](../../Model/PayloadServiceAccountUpdate) |  
 
 ### Return type

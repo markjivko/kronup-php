@@ -26,9 +26,6 @@ $arg_team_id = "team-id-***";
 // Channel ID
 $arg_channel_id = "channel-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 // Wildcard for prospect user name
 $arg_user_name = "John Doe";
 
@@ -41,7 +38,7 @@ try {
     $response = $sdk
         ->api()
         ->channels()
-        ->listProspects($arg_team_id, $arg_channel_id, $arg_x_org_id, $arg_user_name);
+        ->listProspects($arg_team_id, $arg_channel_id, $arg_user_name);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

@@ -34,20 +34,13 @@ class ValueItemsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function advance($team_id, $channel_id, $item_id, $x_org_id) {
+    public function advance($team_id, $channel_id, $item_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
@@ -68,21 +61,14 @@ class ValueItemsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadValueItemCreate $payload_value_item_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function create($team_id, $channel_id, $x_org_id, $payload_value_item_create) {
+    public function create($team_id, $channel_id, $payload_value_item_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items";
@@ -104,20 +90,13 @@ class ValueItemsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($team_id, $channel_id, $item_id, $x_org_id) {
+    public function delete($team_id, $channel_id, $item_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
@@ -138,7 +117,6 @@ class ValueItemsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $x_org_id Organization ID
      * @param string|null $stage Value item stage
      * @param int|1 $page_number Pagination: page number
      * @param int|100 $page_size Pagination: page size
@@ -147,7 +125,7 @@ class ValueItemsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\ValueItemsList
      */
-    public function list($team_id, $channel_id, $x_org_id, $stage = null, $page_number = 1, $page_size = 100) {
+    public function list($team_id, $channel_id, $stage = null, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi., must be bigger than or equal to 1.');
         }
@@ -161,12 +139,6 @@ class ValueItemsApi extends AbstractApi {
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items";
@@ -192,20 +164,13 @@ class ValueItemsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
-     * @param string $x_org_id Organization ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function read($team_id, $channel_id, $item_id, $x_org_id) {
+    public function read($team_id, $channel_id, $item_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
@@ -227,21 +192,14 @@ class ValueItemsApi extends AbstractApi {
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
      * @param string $item_id Value item ID
-     * @param string $x_org_id Organization ID
      * @param \Kronup\Model\PayloadValueItemUpdate $payload_value_item_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ValueItem
      */
-    public function update($team_id, $channel_id, $item_id, $x_org_id, $payload_value_item_update) {
+    public function update($team_id, $channel_id, $item_id, $payload_value_item_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
-        $rHeaders = array_merge(
-            [
-                "x-org-id" => S::toHeaderValue($x_org_id),
-            ], 
-            $rHeaders
-        );
 
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";

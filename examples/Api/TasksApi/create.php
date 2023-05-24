@@ -29,9 +29,6 @@ $arg_channel_id = "channel-id-***";
 // Value Item ID
 $arg_item_id = "value-item-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_task_create = (new \Kronup\Model\PayloadTaskCreate())
     
     // (optional) Task heading
@@ -49,7 +46,7 @@ try {
     $response = $sdk
         ->api()
         ->tasks()
-        ->create($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id, $arg_payload_task_create);
+        ->create($arg_team_id, $arg_channel_id, $arg_item_id, $arg_payload_task_create);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

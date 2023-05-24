@@ -44,7 +44,6 @@ Method | Description
 
 ```php
 (new \Kronup\Sdk())->api()->users()->list(
-    string $x_org_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
 ): \Kronup\Model\UsersList
@@ -54,7 +53,6 @@ Method | Description
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$x_org_id** | **string**  | Organization ID 
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
 
@@ -91,8 +89,7 @@ Get a list of user models
 
 ```php
 (new \Kronup\Sdk())->api()->users()->read(
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): \Kronup\Model\User
 ```
 
@@ -101,7 +98,6 @@ Get a list of user models
 Name | Type | Description
 ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -136,8 +132,7 @@ Retrieve user model
 
 ```php
 (new \Kronup\Sdk())->api()->users()->remove(
-    string $user_id,
-    string $x_org_id
+    string $user_id
 ): \Kronup\Model\User
 ```
 
@@ -146,7 +141,6 @@ Retrieve user model
 Name | Type | Description
 ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
 
 ### Return type
 
@@ -182,7 +176,6 @@ Remove user from Organization
 ```php
 (new \Kronup\Sdk())->api()->users()->updateRole(
     string $user_id,
-    string $x_org_id,
     \Kronup\Model\PayloadUserRoleUpdate $payload_user_role_update
 ): \Kronup\Model\UserRoles
 ```
@@ -192,7 +185,6 @@ Remove user from Organization
 Name | Type | Description
 ------------- | ------------- | -------------
  **$user_id** | **string**  | User ID 
- **$x_org_id** | **string**  | Organization ID 
  **$payload_user_role_update** | [**\Kronup\Model\PayloadUserRoleUpdate**](../../Model/PayloadUserRoleUpdate) |  
 
 ### Return type

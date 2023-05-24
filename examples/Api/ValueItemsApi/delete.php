@@ -29,9 +29,6 @@ $arg_channel_id = "channel-id-***";
 // Value item ID
 $arg_item_id = "value-item-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 try {
     /**
      * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}
@@ -41,7 +38,7 @@ try {
     $response = $sdk
         ->api()
         ->valueItems()
-        ->delete($arg_team_id, $arg_channel_id, $arg_item_id, $arg_x_org_id);
+        ->delete($arg_team_id, $arg_channel_id, $arg_item_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

@@ -23,9 +23,6 @@ $sdk->config()->setDebug(true);
 // Notion ID
 $arg_notion_id = "notion-id-***";
 
-// Organization ID
-$arg_x_org_id = "org-id-***";
-
 $arg_payload_notion_update = (new \Kronup\Model\PayloadNotionUpdate())
     
     // (optional) Notion value
@@ -40,7 +37,7 @@ try {
     $response = $sdk
         ->api()
         ->notions()
-        ->update($arg_notion_id, $arg_x_org_id, $arg_payload_notion_update);
+        ->update($arg_notion_id, $arg_payload_notion_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
