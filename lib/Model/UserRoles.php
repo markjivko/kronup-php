@@ -22,7 +22,7 @@ namespace Kronup\Model;
 class UserRoles extends AbstractModel {
 
     public const _D = null;
-    public const ROLE_SITE_ADMIN = 'admin';
+    public const ROLE_SITE_FOUNDER = 'founder';
     public const ROLE_SITE_MODERATOR = 'moderator';
     public const ROLE_SITE_USER = 'user';
     public const ROLE_ORG_OWNER = 'owner';
@@ -52,7 +52,7 @@ class UserRoles extends AbstractModel {
      */
     public function getRoleSiteAllowableValues(): array {
         return [
-            self::ROLE_SITE_ADMIN,
+            self::ROLE_SITE_FOUNDER,
             self::ROLE_SITE_MODERATOR,
             self::ROLE_SITE_USER,
         ];

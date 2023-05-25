@@ -30,7 +30,7 @@ class ServiceAccount extends AbstractModel {
     public const USER_COLOR_BLUE = 'blue';
     public const USER_COLOR_PINK = 'pink';
     public const USER_COLOR_VIOLET = 'violet';
-    public const ROLE_SITE_ADMIN = 'admin';
+    public const ROLE_SITE_FOUNDER = 'founder';
     public const ROLE_SITE_MODERATOR = 'moderator';
     public const ROLE_SITE_USER = 'user';
     public const ROLE_ORG_OWNER = 'owner';
@@ -90,7 +90,7 @@ class ServiceAccount extends AbstractModel {
      */
     public function getRoleSiteAllowableValues(): array {
         return [
-            self::ROLE_SITE_ADMIN,
+            self::ROLE_SITE_FOUNDER,
             self::ROLE_SITE_MODERATOR,
             self::ROLE_SITE_USER,
         ];
