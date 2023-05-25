@@ -25,7 +25,6 @@ class Notion extends AbstractModel {
     protected static $_name = "Notion";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "value" => ["value", "string", null, "getValue", "setValue", null, ["r" => 0, "nl" => 1, "xl" => 64]]
     ];
 
@@ -59,26 +58,6 @@ class Notion extends AbstractModel {
      */
     public function setId($id) {
         return $this->_set("id", $id);
-    }
-
-    /**
-     * Get orgId - Organization Id
-     *
-     * @return string|null
-     */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
-    }
-
-    /**
-     * Set orgId - Organization Id
-     * 
-     * @param string|null $org_id Organization Id
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
     }
 
     /**

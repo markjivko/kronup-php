@@ -11,6 +11,5 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Notion ID
-**getOrgId()** | **string** | Organization Id
 **getValue()** | **string** | 
 

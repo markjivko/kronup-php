@@ -11,7 +11,6 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Team ID
-**getOrgId()** | **string** | Organization ID
 **getUserId()** | **string** | User ID
 **getNotion()** | [**\Kronup\Model\Notion**](../Notion) | 
 **getSelfEval()** | [**\Kronup\Model\EvaluationsSelf**](../EvaluationsSelf) | 
