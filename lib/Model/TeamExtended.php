@@ -25,7 +25,6 @@ class TeamExtended extends AbstractModel {
     protected static $_name = "TeamExtended";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
@@ -62,26 +61,6 @@ class TeamExtended extends AbstractModel {
      */
     public function setId($id) {
         return $this->_set("id", $id);
-    }
-
-    /**
-     * Get orgId - Organization ID
-     *
-     * @return string|null
-     */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
-    }
-
-    /**
-     * Set orgId - Organization ID
-     * 
-     * @param string|null $org_id Organization ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
     }
 
     /**

@@ -11,7 +11,6 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Value item ID
-**getOrgId()** | **string** | Organization ID
 **getTeamId()** | **string** | Team ID
 **getChannelId()** | **string** | Channel ID
 **getHeading()** | **string** | Value item heading

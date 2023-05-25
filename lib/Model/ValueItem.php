@@ -32,7 +32,6 @@ class ValueItem extends AbstractModel {
     protected static $_name = "ValueItem";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
         "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
@@ -103,26 +102,6 @@ class ValueItem extends AbstractModel {
      */
     public function setId($id) {
         return $this->_set("id", $id);
-    }
-
-    /**
-     * Get orgId - Organization ID
-     *
-     * @return string|null
-     */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
-    }
-
-    /**
-     * Set orgId - Organization ID
-     * 
-     * @param string|null $org_id Organization ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
     }
 
     /**
