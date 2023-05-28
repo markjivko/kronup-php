@@ -19,8 +19,8 @@ Method name | Return type | Description
 **getCanAdvance()** | **bool** | Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization owner or administrator [default to `false`]
 **getType()** | **string** | Value Item Type
 **getPriority()** | **float** | Value Item Priority [default to `1`]
-**getAssumptions()** | [**\Kronup\Model\AssumptionLite[]**](../AssumptionLite) | Assumptions - Lite version
-**getTasks()** | [**\Kronup\Model\TaskLite[]**](../TaskLite) | Tasks - Lite version
+**getAssumptions()** | [**\Kronup\Model\AssumptionLite[]**](../AssumptionLite) | Assumptions - Lite
+**getTasks()** | [**\Kronup\Model\TaskLite[]**](../TaskLite) | Tasks - Lite
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

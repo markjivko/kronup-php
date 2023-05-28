@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2022-2023 kronup.com
+ * Copyright (c) 2022-2023 kronup.io
  * 
  * @link    https://php.kronup.io/Api/NotionsApi/#update
  * @license MIT
