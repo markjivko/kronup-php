@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TeamsApi/#delete
+ * @link    https://php.kronup.io/Api/TeamsApi/#delete
  * @license MIT
  * @author  Mark Jivko
  * 

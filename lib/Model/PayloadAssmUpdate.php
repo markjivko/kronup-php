@@ -26,7 +26,7 @@ class PayloadAssmUpdate extends AbstractModel {
     public const _D = null;
     protected static $_name = "Payload_Assm_Update";
     protected static $_definition = [
-        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]]
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 110]]
     ];
 
     /**

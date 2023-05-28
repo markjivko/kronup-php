@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/InvitationsApi/#list
+ * @link    https://php.kronup.io/Api/InvitationsApi/#list
  * @license MIT
  * @author  Mark Jivko
  * 

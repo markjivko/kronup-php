@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/TasksApi/#notionadd
+ * @link    https://php.kronup.io/Api/TasksApi/#notionadd
  * @license MIT
  * @author  Mark Jivko
  * 

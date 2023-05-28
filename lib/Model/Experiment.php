@@ -31,7 +31,7 @@ class Experiment extends AbstractModel {
     protected static $_definition = [
         "authorUserIds" => ["authorUserIds", "string[]", null, "getAuthorUserIds", "setAuthorUserIds", null, ["r" => 0, "c" => 1]], 
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", false, ["r" => 0]], 
-        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 256]], 
+        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 110]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
         "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]]
     ];

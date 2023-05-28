@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ServiceAccountsApi/#create
+ * @link    https://php.kronup.io/Api/ServiceAccountsApi/#create
  * @license MIT
  * @author  Mark Jivko
  * 

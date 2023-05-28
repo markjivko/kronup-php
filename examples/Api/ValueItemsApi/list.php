@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ValueItemsApi/#list
+ * @link    https://php.kronup.io/Api/ValueItemsApi/#list
  * @license MIT
  * @author  Mark Jivko
  * 

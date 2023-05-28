@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://kronup.github.io/kronup-php/Api/ValueItemsApi/#create
+ * @link    https://php.kronup.io/Api/ValueItemsApi/#create
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -38,7 +38,7 @@ $arg_payload_value_item_create = (new \Kronup\Model\PayloadValueItemCreate())
     ->setType('feature')
     
     // (optional) Value item priority
-    ->setPriority(10);
+    ->setPriority(1);
 
 try {
     /**
