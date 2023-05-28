@@ -27,7 +27,7 @@ class ValueItemsList extends AbstractModel {
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0, "n" => [1], "x" => [500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "items" => ["items", "\Kronup\Model\ValueItem[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
+        "items" => ["items", "\Kronup\Model\ValueItemLite[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -103,18 +103,18 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Get items - Value Items
+     * Get items - Value Items - Lite version
      *
-     * @return \Kronup\Model\ValueItem[]|null
+     * @return \Kronup\Model\ValueItemLite[]|null
      */
     public function getItems(): ?array {
         return $this->_data["items"];
     }
 
     /**
-     * Set items - Value Items
+     * Set items - Value Items - Lite version
      * 
-     * @param \Kronup\Model\ValueItem[]|null $items Value Items
+     * @param \Kronup\Model\ValueItemLite[]|null $items Value Items - Lite version
      * @throws \InvalidArgumentException
      * @return $this
      */
