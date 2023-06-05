@@ -14,7 +14,6 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getAuthorUserIds()** | **string[]** | Author IDs
 **getConfirmed()** | **bool** | Experiment confirms assumption [default to `false`]
-**getHeading()** | **string** | Experiment findings formulated in one sentence
 **getDetails()** | **string** | Experiment details
 **getState()** | **string** | Experiment state [default to `'idle'`]
 

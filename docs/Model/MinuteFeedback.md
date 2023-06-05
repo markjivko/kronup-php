@@ -16,6 +16,6 @@ Method name | Return type | Description
 **getIteration()** | **float** | Iteration number [default to `1`]
 **getAuthorUserId()** | **string** | User ID
 **getIssue()** | **string** | Feedback issue [default to `'value'`]
-**getMessage()** | **string** | Feedback details
+**getMessage()** | **string** | Feedback for assignee
 **getReply()** | **string** | Reply from assignee
 

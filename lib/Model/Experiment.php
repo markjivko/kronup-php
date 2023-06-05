@@ -31,8 +31,7 @@ class Experiment extends AbstractModel {
     protected static $_definition = [
         "authorUserIds" => ["authorUserIds", "string[]", null, "getAuthorUserIds", "setAuthorUserIds", null, ["r" => 0, "c" => 1]], 
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", false, ["r" => 0]], 
-        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 110]], 
-        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
+        "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 0, "xl" => 2048]], 
         "state" => ["state", "string", null, "getState", "setState", 'idle', ["r" => 0, "e" => 1]]
     ];
 
@@ -98,26 +97,6 @@ class Experiment extends AbstractModel {
      */
     public function setConfirmed($confirmed) {
         return $this->_set("confirmed", $confirmed);
-    }
-
-    /**
-     * Get heading - Experiment findings formulated in one sentence
-     *
-     * @return string|null
-     */
-    public function getHeading(): ?string {
-        return $this->_data["heading"];
-    }
-
-    /**
-     * Set heading - Experiment findings formulated in one sentence
-     * 
-     * @param string|null $heading Experiment findings formulated in one sentence
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setHeading($heading) {
-        return $this->_set("heading", $heading);
     }
 
     /**

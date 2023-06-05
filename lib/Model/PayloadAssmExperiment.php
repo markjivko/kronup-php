@@ -30,7 +30,6 @@ class PayloadAssmExperiment extends AbstractModel {
     protected static $_name = "Payload_Assm_Experiment";
     protected static $_definition = [
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", null, ["r" => 0]], 
-        "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 110]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
         "state" => ["state", "string", null, "getState", "setState", null, ["r" => 0, "e" => 1]]
     ];
@@ -77,26 +76,6 @@ class PayloadAssmExperiment extends AbstractModel {
      */
     public function setConfirmed($confirmed) {
         return $this->_set("confirmed", $confirmed);
-    }
-
-    /**
-     * Get heading - Experiment heading
-     *
-     * @return string|null
-     */
-    public function getHeading(): ?string {
-        return $this->_data["heading"];
-    }
-
-    /**
-     * Set heading - Experiment heading
-     * 
-     * @param string|null $heading Experiment heading
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setHeading($heading) {
-        return $this->_set("heading", $heading);
     }
 
     /**

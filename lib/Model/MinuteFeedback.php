@@ -152,7 +152,7 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Get message - Feedback details
+     * Get message - Feedback for assignee
      *
      * @return string|null
      */
@@ -161,9 +161,9 @@ class MinuteFeedback extends AbstractModel {
     }
 
     /**
-     * Set message - Feedback details
+     * Set message - Feedback for assignee
      * 
-     * @param string|null $message Feedback details
+     * @param string|null $message Feedback for assignee
      * @throws \InvalidArgumentException
      * @return $this
      */
