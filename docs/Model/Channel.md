@@ -1,5 +1,5 @@
 ---
-title: Channel
+title: 
 parent: Model
 layout: page
 ---

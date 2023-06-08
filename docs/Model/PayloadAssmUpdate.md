@@ -1,5 +1,5 @@
 ---
-title: PayloadAssmUpdate
+title: Payload Assm Update
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to update a Value Item assumption
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getHeading()** | **string** | Assumption heading
+**setHeading()** | **string** | Assumption heading
 

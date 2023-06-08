@@ -1,5 +1,5 @@
 ---
-title: PayloadUserRoleUpdate
+title: Payload User Role Update
 parent: Model
 layout: page
 ---
@@ -8,10 +8,10 @@ layout: page
 
 Payload object required to update User roles
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getRoleSite()** | **string** | New site role
-**getRoleOrg()** | **string** | New organization role
+**setRoleSite()** | **string** | New site role
+**setRoleOrg()** | **string** | New organization role
 

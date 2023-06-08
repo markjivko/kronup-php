@@ -1,5 +1,5 @@
 ---
-title: PayloadTaskCreate
+title: Payload Task Create
 parent: Model
 layout: page
 ---
@@ -8,10 +8,10 @@ layout: page
 
 Payload object required to create a Task
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getHeading()** | **string** | Task heading
-**getDetails()** | **string** | Task details
+**setHeading()** | **string** | Task heading
+**setDetails()** | **string** | Task details
 

@@ -1,5 +1,5 @@
 ---
-title: OrganizationTeams
+title: Organization Teams
 parent: Model
 layout: page
 ---

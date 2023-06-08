@@ -1,5 +1,5 @@
 ---
-title: PayloadAccountUpdate
+title: Payload Account Update
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to update an Account
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getUserName()** | **string** | New user name
+**setUserName()** | **string** | New user name
 

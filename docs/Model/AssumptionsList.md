@@ -1,5 +1,5 @@
 ---
-title: AssumptionsList
+title: Assumptions List
 parent: Model
 layout: page
 ---

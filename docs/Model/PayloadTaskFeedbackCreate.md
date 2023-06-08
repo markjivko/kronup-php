@@ -1,5 +1,5 @@
 ---
-title: PayloadTaskFeedbackCreate
+title: Payload Task Feedback Create
 parent: Model
 layout: page
 ---
@@ -8,10 +8,10 @@ layout: page
 
 Payload object required to add feedback to a Task
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getMessage()** | **string** | Feedback details
-**getIssue()** | **string** | Feedback issue ( `value`, `complexity`, `flexibility`, `testing`, `security`, `ci/cd`, `standards`, `misc`, )
+**setMessage()** | **string** | Feedback details
+**setIssue()** | **string** | Feedback issue ( `value` `complexity` `flexibility` `testing` `security` `ci/cd` `standards` `misc` )
 

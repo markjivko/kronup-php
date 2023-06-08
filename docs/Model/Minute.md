@@ -1,5 +1,5 @@
 ---
-title: Minute
+title: Task Minute
 parent: Model
 layout: page
 ---

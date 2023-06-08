@@ -1,5 +1,5 @@
 ---
-title: PayloadNotionCreate
+title: Payload Notion Create
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to create a Notion
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getValue()** | **string** | Notion
+**setValue()** | **string** | Notion
 

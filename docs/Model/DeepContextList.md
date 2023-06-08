@@ -1,5 +1,5 @@
 ---
-title: DeepContextList
+title: Deep Context List
 parent: Model
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: EvaluationsSelf
+title: Evaluations: self
 parent: Model
 layout: page
 ---

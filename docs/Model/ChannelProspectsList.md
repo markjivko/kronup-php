@@ -1,5 +1,5 @@
 ---
-title: ChannelProspectsList
+title: Channel Prospects List
 parent: Model
 layout: page
 ---

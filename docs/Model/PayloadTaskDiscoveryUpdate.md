@@ -1,5 +1,5 @@
 ---
-title: PayloadTaskDiscoveryUpdate
+title: Payload Task Discovery Update
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to update a Task discovery
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getDetails()** | **string** | Discovery details
+**setDetails()** | **string** | Discovery details
 

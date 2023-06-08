@@ -1,5 +1,5 @@
 ---
-title: PayloadTaskFeedbackReply
+title: Payload Task Feedback Reply
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to reply to feedback given to a Task
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getReply()** | **string** | Feedback reply
+**setReply()** | **string** | Feedback reply
 

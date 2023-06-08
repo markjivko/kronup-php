@@ -1,5 +1,5 @@
 ---
-title: TeamExtended
+title: Team
 parent: Model
 layout: page
 ---

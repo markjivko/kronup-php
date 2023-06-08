@@ -1,5 +1,5 @@
 ---
-title: PayloadAssmExperiment
+title: Payload Assm Experiment
 parent: Model
 layout: page
 ---
@@ -8,11 +8,11 @@ layout: page
 
 Payload object for assumption experiment
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getConfirmed()** | **bool** | Experiment confirms assumption
-**getDetails()** | **string** | Experiment detailed findings
-**getState()** | **string** | Experiment state ( `idle`, `running`, `done`, )
+**setConfirmed()** | **bool** | Experiment confirms assumption
+**setDetails()** | **string** | Experiment detailed findings
+**setState()** | **string** | Experiment state ( `idle` `running` `done` )
 

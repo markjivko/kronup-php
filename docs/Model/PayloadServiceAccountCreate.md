@@ -1,5 +1,5 @@
 ---
-title: PayloadServiceAccountCreate
+title: Payload Service Account Create
 parent: Model
 layout: page
 ---
@@ -8,10 +8,10 @@ layout: page
 
 Payload object required to create a Service Account
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getRoleOrg()** | **string** | Service Account organization role ( `admin`, `member`, )
-**getUserName()** | **string** | Service account name
+**setRoleOrg()** | **string** | Service Account organization role ( `admin` `member` )
+**setUserName()** | **string** | Service account name
 

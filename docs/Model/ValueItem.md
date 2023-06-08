@@ -1,5 +1,5 @@
 ---
-title: ValueItem
+title: Value item
 parent: Model
 layout: page
 ---
@@ -16,9 +16,9 @@ Method name | Return type | Description
 **getHeading()** | **string** | Value item heading
 **getDetails()** | **string** | Value item description
 **getAuthorUserId()** | **string** | User ID
-**getStage()** | **string** | Value Item Stage ( `planning`, `validation`, `execution`, `deep context`, )
+**getStage()** | **string** | Value Item Stage ( `planning` `validation` `execution` `deep context` )
 **getCanAdvance()** | **bool** | Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization owner or administrator   [default to `false`]
-**getType()** | **string** | Value Item Type ( `feature`, `bug fix`, `routine`, )
+**getType()** | **string** | Value Item Type ( `feature` `bug fix` `routine` )
 **getPriority()** | **float** | Value Item Priority   [default to `1`]
 **getAssumptions()** | [**\Kronup\Model\Assumption[]**](../Assumption) | Assumptions
 **getTasks()** | [**\Kronup\Model\Task[]**](../Task) | Tasks

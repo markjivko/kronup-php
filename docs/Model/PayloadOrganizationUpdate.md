@@ -1,5 +1,5 @@
 ---
-title: PayloadOrganizationUpdate
+title: Payload Organization Update
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to update an Organization
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getOrgName()** | **string** | Organization name
+**setOrgName()** | **string** | Organization name
 

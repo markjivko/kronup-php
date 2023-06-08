@@ -1,5 +1,5 @@
 ---
-title: PayloadTeamUpdate
+title: Payload Team Update
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to update a Team
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getTeamName()** | **string** | Team name
+**setTeamName()** | **string** | Team name
 

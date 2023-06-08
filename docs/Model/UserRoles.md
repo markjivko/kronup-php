@@ -1,5 +1,5 @@
 ---
-title: UserRoles
+title: User Roles
 parent: Model
 layout: page
 ---
@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getRoleSite()** | **string** | User site role ( `founder`, `moderator`, `user`, )
-**getRoleOrg()** | **string** | User organization role ( `owner`, `admin`, `member`, )
+**getRoleSite()** | **string** | User site role ( `founder` `moderator` `user` )
+**getRoleOrg()** | **string** | User organization role ( `owner` `admin` `member` )
 

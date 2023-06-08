@@ -1,5 +1,5 @@
 ---
-title: ValueItemsList
+title: Value Items List
 parent: Model
 layout: page
 ---

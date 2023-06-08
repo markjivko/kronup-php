@@ -1,5 +1,5 @@
 ---
-title: PayloadNotionUpdate
+title: Payload Notion Update
 parent: Model
 layout: page
 ---
@@ -8,9 +8,9 @@ layout: page
 
 Payload object required to update a Notion
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getValue()** | **string** | Notion value
+**setValue()** | **string** | Notion value
 

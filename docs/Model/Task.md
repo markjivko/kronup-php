@@ -15,6 +15,6 @@ Method name | Return type | Description
 **getId()** | **string** | Task ID
 **getAssigneeUserId()** | **string** | User ID
 **getHeading()** | **string** | Task title
-**getState()** | **string** | Task state ( `idle`, `in progress`, `in review`, `done`, )  [default to `'idle'`]
+**getState()** | **string** | Task state ( `idle` `in progress` `in review` `done` )  [default to `'idle'`]
 **getNotionIds()** | **string[]** | Notion IDs
 

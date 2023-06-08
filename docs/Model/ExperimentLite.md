@@ -1,5 +1,5 @@
 ---
-title: ExperimentLite
+title: Experiment Lite
 parent: Model
 layout: page
 ---
@@ -14,5 +14,5 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getAuthorUserIds()** | **string[]** | Author IDs
 **getConfirmed()** | **bool** | Experiment confirms assumption   [default to `false`]
-**getState()** | **string** | Experiment state ( `idle`, `running`, `done`, )  [default to `'idle'`]
+**getState()** | **string** | Experiment state ( `idle` `running` `done` )  [default to `'idle'`]
 

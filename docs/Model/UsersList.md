@@ -1,5 +1,5 @@
 ---
-title: UsersList
+title: Users List
 parent: Model
 layout: page
 ---

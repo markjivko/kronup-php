@@ -1,5 +1,5 @@
 ---
-title: PayloadChannelCreate
+title: Payload Channel Create
 parent: Model
 layout: page
 ---
@@ -8,10 +8,10 @@ layout: page
 
 Payload object required to create a Channel
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getChannelName()** | **string** | Channel name
-**getChannelDesc()** | **string** | Channel description   [default to `''`]
+**setChannelName()** | **string** | Channel name
+**setChannelDesc()** | **string** | Channel description   [default to `''`]
 

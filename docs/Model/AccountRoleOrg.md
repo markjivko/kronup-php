@@ -1,5 +1,5 @@
 ---
-title: AccountRoleOrg
+title: Account Role Org
 parent: Model
 layout: page
 ---
@@ -11,5 +11,5 @@ layout: page
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getOrgId()** | **string** | Organization ID
-**getRole()** | **string** | User organization role ( `owner`, `admin`, `member`, )
+**getRole()** | **string** | User organization role ( `owner` `admin` `member` )
 

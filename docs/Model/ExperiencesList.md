@@ -1,5 +1,5 @@
 ---
-title: ExperiencesList
+title: Experiences List
 parent: Model
 layout: page
 ---

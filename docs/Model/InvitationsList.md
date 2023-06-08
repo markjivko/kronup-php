@@ -1,5 +1,5 @@
 ---
-title: InvitationsList
+title: Invitations List
 parent: Model
 layout: page
 ---

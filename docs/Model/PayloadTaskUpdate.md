@@ -1,5 +1,5 @@
 ---
-title: PayloadTaskUpdate
+title: Payload Task Update
 parent: Model
 layout: page
 ---
@@ -8,12 +8,12 @@ layout: page
 
 Payload object required to update a Task
 
-## Model getters
+## Payload setters
 
-Method name | Return type | Description
+Method name | Argument type | Description
 ------------ | ------------- | -------------
-**getHeading()** | **string** | Task heading
-**getDetails()** | **string** | Task details
-**getState()** | **string** | Task state ( `idle`, `in progress`, `in review`, `done`, )
-**getNotionIds()** | **string[]** | Notion IDs
+**setHeading()** | **string** | Task heading
+**setDetails()** | **string** | Task details
+**setState()** | **string** | Task state ( `idle` `in progress` `in review` `done` )
+**setNotionIds()** | **string[]** | Notion IDs
 
