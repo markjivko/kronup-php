@@ -10,7 +10,7 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getIteration()** | **float** | Iteration number [default to `1`]
+**getIteration()** | **float** | Iteration number   [default to `1`]
 **getDiscoveries()** | [**\Kronup\Model\MinuteDiscovery[]**](../MinuteDiscovery) | Discoveries
 **getFeedback()** | [**\Kronup\Model\MinuteFeedback[]**](../MinuteFeedback) | Feedback items
 

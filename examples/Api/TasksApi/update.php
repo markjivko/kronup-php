@@ -40,7 +40,7 @@ $arg_payload_task_update = (new \Kronup\Model\PayloadTaskUpdate())
     // (optional) Task details
     ->setDetails('null')
     
-    // (optional) string
+    // (optional) Task state
     ->setState('null')
     
     // (optional) Notion IDs

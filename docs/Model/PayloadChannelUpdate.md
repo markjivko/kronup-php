@@ -13,5 +13,5 @@ Payload object required to update a Channel
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getChannelName()** | **string** | Channel name
-**getChannelDesc()** | **string** | Channel description [default to `''`]
+**getChannelDesc()** | **string** | Channel description   [default to `''`]
 

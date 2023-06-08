@@ -13,7 +13,7 @@ Method name | Return type | Description
 **getId()** | **string** | Event ID
 **getOrgId()** | **string** | Organization ID
 **getUserId()** | **string** | User ID
-**getType()** | **string** | Event type
+**getType()** | **string** | Event type ( `items`, `assumptions`, `tasks`, `self-evaluation`, `peer evaluation`, )
 **getTeamId()** | **string** | Team ID
 **getChannelId()** | **string** | Channel ID
 **getNotionId()** | **string** | Notion ID

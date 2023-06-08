@@ -15,7 +15,7 @@ Method name | Return type | Description
 **getTeamId()** | **string** | Team ID
 **getUserId()** | **string** | User ID
 **getInviteName()** | **string** | Invitation name
-**getInviteOrgRole()** | **string** | Invitation user role
+**getInviteOrgRole()** | **string** | Invitation user role ( `admin`, `member`, )
 **getInviteOrgName()** | **string** | Invitation organzation name
 **getInviteUses()** | **int** | Number of uses
 **getInviteUsesMax()** | **int** | Maximum number of uses

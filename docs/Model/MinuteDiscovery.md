@@ -13,7 +13,7 @@ Task discovery recorded in an iteration
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getId()** | **string** | Discovery ID
-**getIteration()** | **float** | Iteration number [default to `1`]
+**getIteration()** | **float** | Iteration number   [default to `1`]
 **getAuthorUserId()** | **string** | User ID
 **getDetails()** | **string** | Discovery details
 

@@ -102,7 +102,7 @@ class PayloadTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Get state - 
+     * Get state - Task state
      *
      * @return string|null
      */
@@ -111,9 +111,9 @@ class PayloadTaskUpdate extends AbstractModel {
     }
 
     /**
-     * Set state - 
+     * Set state - Task state
      * 
-     * @param string|null $state
+     * @param string|null $state Task state
      * @throws \InvalidArgumentException
      * @return $this
      */

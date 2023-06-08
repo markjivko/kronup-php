@@ -10,6 +10,6 @@ layout: page
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getRoleSite()** | **string** | User site role
-**getRoleOrg()** | **string** | User organization role
+**getRoleSite()** | **string** | User site role ( `founder`, `moderator`, `user`, )
+**getRoleOrg()** | **string** | User organization role ( `owner`, `admin`, `member`, )
 

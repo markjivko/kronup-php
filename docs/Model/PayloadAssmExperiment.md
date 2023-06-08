@@ -14,5 +14,5 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getConfirmed()** | **bool** | Experiment confirms assumption
 **getDetails()** | **string** | Experiment detailed findings
-**getState()** | **string** | Experiment state
+**getState()** | **string** | Experiment state ( `idle`, `running`, `done`, )
 

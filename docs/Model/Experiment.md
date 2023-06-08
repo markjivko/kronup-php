@@ -13,7 +13,7 @@ Experiment meant to validate assumption
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getAuthorUserIds()** | **string[]** | Author IDs
-**getConfirmed()** | **bool** | Experiment confirms assumption [default to `false`]
+**getConfirmed()** | **bool** | Experiment confirms assumption   [default to `false`]
 **getDetails()** | **string** | Experiment details
-**getState()** | **string** | Experiment state [default to `'idle'`]
+**getState()** | **string** | Experiment state ( `idle`, `running`, `done`, )  [default to `'idle'`]
 

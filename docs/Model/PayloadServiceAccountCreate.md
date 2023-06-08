@@ -12,6 +12,6 @@ Payload object required to create a Service Account
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getRoleOrg()** | **string** | Service Account organization role
+**getRoleOrg()** | **string** | Service Account organization role ( `admin`, `member`, )
 **getUserName()** | **string** | Service account name
 
