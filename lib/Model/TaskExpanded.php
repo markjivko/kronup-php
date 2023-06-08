@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * TaskExpanded Model
  * 
- * Task model without Minutes
+ * Task model
  */
 class TaskExpanded extends AbstractModel {
 

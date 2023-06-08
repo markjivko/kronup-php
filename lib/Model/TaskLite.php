@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * TaskLite Model
  * 
- * Task model without Minutes
+ * Task model
  */
 class TaskLite extends AbstractModel {
 

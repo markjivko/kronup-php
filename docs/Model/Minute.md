@@ -1,14 +1,16 @@
 ---
-title: Task Minute
+title: Minute
 parent: Model
 layout: page
 ---
 
-# Task Minute
+# Minute
 
 ```php
 new \Kronup\Model\Minute();
 ```
+
+Details associated with a Task
 
 ## Model getters
 

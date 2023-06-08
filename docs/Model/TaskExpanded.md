@@ -10,7 +10,7 @@ layout: page
 new \Kronup\Model\TaskExpanded();
 ```
 
-Task model without Minutes
+Task model
 
 ## Model getters
 

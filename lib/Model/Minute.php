@@ -18,6 +18,8 @@ namespace Kronup\Model;
 
 /**
  * Minute Model
+ * 
+ * Details associated with a Task
  */
 class Minute extends AbstractModel {
 
