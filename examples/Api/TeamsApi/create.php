@@ -29,7 +29,7 @@ try {
     /**
      * POST /teams
      * 
-     * @var \Kronup\Model\TeamExtended $response
+     * @var \Kronup\Model\TeamExpanded $response
      */
     $response = $sdk
         ->api()

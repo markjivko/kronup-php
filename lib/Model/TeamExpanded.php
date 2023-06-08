@@ -1,7 +1,7 @@
 <?php
 
 /**
- * TeamExtended Model
+ * TeamExpanded Model
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
@@ -17,12 +17,12 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * TeamExtended Model
+ * TeamExpanded Model
  */
-class TeamExtended extends AbstractModel {
+class TeamExpanded extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "TeamExtended";
+    protected static $_name = "TeamExpanded";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
@@ -32,7 +32,7 @@ class TeamExtended extends AbstractModel {
     ];
 
     /**
-     * TeamExtended
+     * TeamExpanded
      *
      * @param mixed[] $data Model data
      */

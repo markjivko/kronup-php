@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Teams_Extended_List Model
+ * Teams_Expanded_List Model
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
@@ -17,21 +17,21 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Teams_Extended_List Model
+ * Teams_Expanded_List Model
  */
-class TeamsExtendedList extends AbstractModel {
+class TeamsExpandedList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Teams_Extended_List";
+    protected static $_name = "Teams_Expanded_List";
     protected static $_definition = [
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0, "n" => [1], "x" => [500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "teams" => ["teams", "\Kronup\Model\TeamExtended[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]]
+        "teams" => ["teams", "\Kronup\Model\TeamExpanded[]", null, "getTeams", "setTeams", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * TeamsExtendedList
+     * TeamsExpandedList
      *
      * @param mixed[] $data Model data
      */
@@ -105,7 +105,7 @@ class TeamsExtendedList extends AbstractModel {
     /**
      * Get teams - Teams
      *
-     * @return \Kronup\Model\TeamExtended[]|null
+     * @return \Kronup\Model\TeamExpanded[]|null
      */
     public function getTeams(): ?array {
         return $this->_data["teams"];
@@ -114,7 +114,7 @@ class TeamsExtendedList extends AbstractModel {
     /**
      * Set teams - Teams
      * 
-     * @param \Kronup\Model\TeamExtended[]|null $teams Teams
+     * @param \Kronup\Model\TeamExpanded[]|null $teams Teams
      * @throws \InvalidArgumentException
      * @return $this
      */

@@ -33,7 +33,7 @@ try {
     /**
      * GET /teams/users/{userId}
      * 
-     * @var \Kronup\Model\TeamsExtendedList $response
+     * @var \Kronup\Model\TeamsExpandedList $response
      */
     $response = $sdk
         ->api()

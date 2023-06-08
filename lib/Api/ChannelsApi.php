@@ -64,7 +64,7 @@ class ChannelsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TeamExtended
+     * @return \Kronup\Model\TeamExpanded
      */
     public function create($team_id, $payload_channel_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -72,12 +72,12 @@ class ChannelsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels";
         
-        /** @var \Kronup\Model\TeamExtended $result */
+        /** @var \Kronup\Model\TeamExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $payload_channel_create
             ), 
-            "\Kronup\Model\TeamExtended"
+            "\Kronup\Model\TeamExpanded"
         );
             
         return $result;
@@ -221,7 +221,7 @@ class ChannelsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TeamExtended
+     * @return \Kronup\Model\TeamExpanded
      */
     public function update($team_id, $channel_id, $payload_channel_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -229,12 +229,12 @@ class ChannelsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}";
         
-        /** @var \Kronup\Model\TeamExtended $result */
+        /** @var \Kronup\Model\TeamExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $payload_channel_update
             ), 
-            "\Kronup\Model\TeamExtended"
+            "\Kronup\Model\TeamExpanded"
         );
             
         return $result;

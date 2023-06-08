@@ -94,7 +94,7 @@ Assign a user to a team
 ```php
 (new \Kronup\Sdk())->api()->teams()->create(
     \Kronup\Model\PayloadTeamCreate $payload_team_create
-): \Kronup\Model\TeamExtended
+): \Kronup\Model\TeamExpanded
 ```
 
 ### Parameters
@@ -105,7 +105,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
+[**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
 ### Description
 
@@ -227,7 +227,7 @@ Get a list of all organization team models
     string $user_id,
     [ int $page_number = 1, ]
     [ int $page_size = 100 ]
-): \Kronup\Model\TeamsExtendedList
+): \Kronup\Model\TeamsExpandedList
 ```
 
 ### Parameters
@@ -240,7 +240,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TeamsExtendedList**](../../Model/TeamsExtendedList)
+[**\Kronup\Model\TeamsExpandedList**](../../Model/TeamsExpandedList)
 
 ### Description
 
@@ -272,7 +272,7 @@ Get a list of all teams this user is a part of
 ```php
 (new \Kronup\Sdk())->api()->teams()->read(
     string $team_id
-): \Kronup\Model\TeamExtended
+): \Kronup\Model\TeamExpanded
 ```
 
 ### Parameters
@@ -283,7 +283,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
+[**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
 ### Description
 
@@ -361,7 +361,7 @@ Remove a user from a team
 (new \Kronup\Sdk())->api()->teams()->update(
     string $team_id,
     \Kronup\Model\PayloadTeamUpdate $payload_team_update
-): \Kronup\Model\TeamExtended
+): \Kronup\Model\TeamExpanded
 ```
 
 ### Parameters
@@ -373,7 +373,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
+[**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
 ### Description
 

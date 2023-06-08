@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Experiment_Lite Model
+ * Experiment___Lite Model
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
@@ -17,7 +17,7 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Experiment_Lite Model
+ * Experiment___Lite Model
  * 
  * Experiment meant to validate assumption
  */
@@ -27,7 +27,7 @@ class ExperimentLite extends AbstractModel {
     public const STATE_IDLE = 'idle';
     public const STATE_RUNNING = 'running';
     public const STATE_DONE = 'done';
-    protected static $_name = "Experiment_Lite";
+    protected static $_name = "Experiment___Lite";
     protected static $_definition = [
         "authorUserIds" => ["authorUserIds", "string[]", null, "getAuthorUserIds", "setAuthorUserIds", null, ["r" => 0, "c" => 1]], 
         "confirmed" => ["confirmed", "bool", null, "getConfirmed", "setConfirmed", false, ["r" => 0]], 

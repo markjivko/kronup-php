@@ -62,7 +62,7 @@ class TeamsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TeamExtended
+     * @return \Kronup\Model\TeamExpanded
      */
     public function create($payload_team_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -70,12 +70,12 @@ class TeamsApi extends AbstractApi {
         // Path template
         $rPath = "/teams";
         
-        /** @var \Kronup\Model\TeamExtended $result */
+        /** @var \Kronup\Model\TeamExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", $rPath, $rPath, [], $rHeaders, [], $payload_team_create
             ), 
-            "\Kronup\Model\TeamExtended"
+            "\Kronup\Model\TeamExpanded"
         );
             
         return $result;
@@ -158,7 +158,7 @@ class TeamsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TeamsExtendedList
+     * @return \Kronup\Model\TeamsExpandedList
      */
     public function listUser($user_id, $page_number = 1, $page_size = 100) {
         if (isset($page_number) && $page_number < 1) {
@@ -178,7 +178,7 @@ class TeamsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/users/{userId}";
         
-        /** @var \Kronup\Model\TeamsExtendedList $result */
+        /** @var \Kronup\Model\TeamsExpandedList $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["userId" => $user_id]), $rPath, [
@@ -186,7 +186,7 @@ class TeamsApi extends AbstractApi {
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []
             ), 
-            "\Kronup\Model\TeamsExtendedList"
+            "\Kronup\Model\TeamsExpandedList"
         );
             
         return $result;
@@ -199,7 +199,7 @@ class TeamsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TeamExtended
+     * @return \Kronup\Model\TeamExpanded
      */
     public function read($team_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -207,12 +207,12 @@ class TeamsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}";
         
-        /** @var \Kronup\Model\TeamExtended $result */
+        /** @var \Kronup\Model\TeamExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\TeamExtended"
+            "\Kronup\Model\TeamExpanded"
         );
             
         return $result;
@@ -253,7 +253,7 @@ class TeamsApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TeamExtended
+     * @return \Kronup\Model\TeamExpanded
      */
     public function update($team_id, $payload_team_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -261,12 +261,12 @@ class TeamsApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}";
         
-        /** @var \Kronup\Model\TeamExtended $result */
+        /** @var \Kronup\Model\TeamExpanded $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id]), $rPath, [], $rHeaders, [], $payload_team_update
             ), 
-            "\Kronup\Model\TeamExtended"
+            "\Kronup\Model\TeamExpanded"
         );
             
         return $result;

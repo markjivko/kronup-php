@@ -96,7 +96,7 @@ Assign a user to a channel
 (new \Kronup\Sdk())->api()->channels()->create(
     string $team_id,
     \Kronup\Model\PayloadChannelCreate $payload_channel_create
-): \Kronup\Model\TeamExtended
+): \Kronup\Model\TeamExpanded
 ```
 
 ### Parameters
@@ -108,7 +108,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
+[**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
 ### Description
 
@@ -330,7 +330,7 @@ Remove a user from a channel; removing the user from the default channel is the 
     string $team_id,
     string $channel_id,
     \Kronup\Model\PayloadChannelUpdate $payload_channel_update
-): \Kronup\Model\TeamExtended
+): \Kronup\Model\TeamExpanded
 ```
 
 ### Parameters
@@ -343,7 +343,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TeamExtended**](../../Model/TeamExtended)
+[**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
 ### Description
 

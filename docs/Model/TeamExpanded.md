@@ -1,13 +1,13 @@
 ---
-title: Team
+title: Team - Expanded
 parent: Model
 layout: page
 ---
 
-# Team
+# Team - Expanded
 
 ```php
-new \Kronup\Model\TeamExtended();
+new \Kronup\Model\TeamExpanded();
 ```
 
 ## Model getters

@@ -1,10 +1,10 @@
 ---
-title: Experiment Lite
+title: Experiment - Lite
 parent: Model
 layout: page
 ---
 
-# Experiment Lite
+# Experiment - Lite
 
 ```php
 new \Kronup\Model\ExperimentLite();
