@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Error402
+# 
+
+```php
+new \Kronup\Model\Error402();
+```
 
 Payment required
 

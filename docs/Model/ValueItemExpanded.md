@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# ValueItemExpanded
+# Value Item - Expanded
+
+```php
+new \Kronup\Model\ValueItemExpanded();
+```
 
 ## Model getters
 

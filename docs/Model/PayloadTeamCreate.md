@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadTeamCreate
+# Payload Team Create
+
+```php
+new \Kronup\Model\PayloadTeamCreate();
+```
 
 Payload object required to create a Team
 

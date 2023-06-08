@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# ExperimentLite
+# Experiment Lite
+
+```php
+new \Kronup\Model\ExperimentLite();
+```
 
 Experiment meant to validate assumption
 

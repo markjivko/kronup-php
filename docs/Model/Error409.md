@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Error409
+# 
+
+```php
+new \Kronup\Model\Error409();
+```
 
 Conflict
 

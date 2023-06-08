@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadTaskFeedbackUpdate
+# Payload Task Feedback Update
+
+```php
+new \Kronup\Model\PayloadTaskFeedbackUpdate();
+```
 
 Payload object required to update feedback given to a Task
 

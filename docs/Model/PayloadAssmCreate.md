@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadAssmCreate
+# Payload Assm Create
+
+```php
+new \Kronup\Model\PayloadAssmCreate();
+```
 
 Payload object required to create a Value Item assumption
 

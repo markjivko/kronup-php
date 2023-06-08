@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadServiceAccountUpdate
+# Payload Service Account Update
+
+```php
+new \Kronup\Model\PayloadServiceAccountUpdate();
+```
 
 Payload object required to update a Service Account
 

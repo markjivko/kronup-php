@@ -6,6 +6,10 @@ layout: page
 
 # Event
 
+```php
+new \Kronup\Model\Event();
+```
+
 ## Model getters
 
 Method name | Return type | Description

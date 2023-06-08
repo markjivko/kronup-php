@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# AccountRoleOrg
+# Account Role Org
+
+```php
+new \Kronup\Model\AccountRoleOrg();
+```
 
 ## Model getters
 

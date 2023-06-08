@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# ChannelMembersList
+# Channel Members List
+
+```php
+new \Kronup\Model\ChannelMembersList();
+```
 
 ## Model getters
 

@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Minute
+# Task Minute
+
+```php
+new \Kronup\Model\Minute();
+```
 
 ## Model getters
 

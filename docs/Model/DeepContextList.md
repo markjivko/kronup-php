@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# DeepContextList
+# Deep Context List
+
+```php
+new \Kronup\Model\DeepContextList();
+```
 
 ## Model getters
 

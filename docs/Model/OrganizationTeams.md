@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# OrganizationTeams
+# Organization Teams
+
+```php
+new \Kronup\Model\OrganizationTeams();
+```
 
 ## Model getters
 

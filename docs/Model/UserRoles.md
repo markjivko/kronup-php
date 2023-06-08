@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# UserRoles
+# User Roles
+
+```php
+new \Kronup\Model\UserRoles();
+```
 
 ## Model getters
 

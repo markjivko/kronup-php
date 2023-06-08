@@ -6,6 +6,10 @@ layout: page
 
 # Experience
 
+```php
+new \Kronup\Model\Experience();
+```
+
 ## Model getters
 
 Method name | Return type | Description

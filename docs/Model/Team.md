@@ -6,6 +6,10 @@ layout: page
 
 # Team
 
+```php
+new \Kronup\Model\Team();
+```
+
 ## Model getters
 
 Method name | Return type | Description

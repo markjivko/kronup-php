@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# UsersList
+# Users List
+
+```php
+new \Kronup\Model\UsersList();
+```
 
 ## Model getters
 

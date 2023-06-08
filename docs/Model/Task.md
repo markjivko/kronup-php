@@ -6,6 +6,10 @@ layout: page
 
 # Task
 
+```php
+new \Kronup\Model\Task();
+```
+
 Task model without Minutes
 
 ## Model getters

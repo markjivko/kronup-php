@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadNotionUpdate
+# Payload Notion Update
+
+```php
+new \Kronup\Model\PayloadNotionUpdate();
+```
 
 Payload object required to update a Notion
 

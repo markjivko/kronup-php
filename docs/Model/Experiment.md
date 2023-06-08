@@ -6,6 +6,10 @@ layout: page
 
 # Experiment
 
+```php
+new \Kronup\Model\Experiment();
+```
+
 Experiment meant to validate assumption
 
 ## Model getters

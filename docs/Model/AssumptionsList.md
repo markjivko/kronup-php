@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# AssumptionsList
+# Assumptions List
+
+```php
+new \Kronup\Model\AssumptionsList();
+```
 
 ## Model getters
 

@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadChannelCreate
+# Payload Channel Create
+
+```php
+new \Kronup\Model\PayloadChannelCreate();
+```
 
 Payload object required to create a Channel
 

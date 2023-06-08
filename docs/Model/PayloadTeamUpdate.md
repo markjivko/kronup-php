@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadTeamUpdate
+# Payload Team Update
+
+```php
+new \Kronup\Model\PayloadTeamUpdate();
+```
 
 Payload object required to update a Team
 

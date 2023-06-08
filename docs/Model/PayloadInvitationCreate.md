@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadInvitationCreate
+# Payload Invitation Create
+
+```php
+new \Kronup\Model\PayloadInvitationCreate();
+```
 
 Payload object required to create an Invitation
 

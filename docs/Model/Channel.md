@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Channel
+# 
+
+```php
+new \Kronup\Model\Channel();
+```
 
 Channel
 

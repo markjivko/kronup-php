@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# NotionsList
+# Notions List
+
+```php
+new \Kronup\Model\NotionsList();
+```
 
 ## Model getters
 

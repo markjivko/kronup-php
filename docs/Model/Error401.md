@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Error401
+# 
+
+```php
+new \Kronup\Model\Error401();
+```
 
 Unauthorized error
 

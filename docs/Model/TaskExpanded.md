@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# TaskExpanded
+# Task - Expanded
+
+```php
+new \Kronup\Model\TaskExpanded();
+```
 
 Task model without Minutes
 

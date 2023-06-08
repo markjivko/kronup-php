@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Assumption
+# 
+
+```php
+new \Kronup\Model\Assumption();
+```
 
 Value Item Assumption
 

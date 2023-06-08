@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# TaskLite
+# Task - Lite
+
+```php
+new \Kronup\Model\TaskLite();
+```
 
 Task model without Minutes
 

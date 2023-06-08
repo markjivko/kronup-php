@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadAssmExperiment
+# Payload Assm Experiment
+
+```php
+new \Kronup\Model\PayloadAssmExperiment();
+```
 
 Payload object for assumption experiment
 

@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Error429
+# 
+
+```php
+new \Kronup\Model\Error429();
+```
 
 Too many requests
 

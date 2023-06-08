@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# EventsList
+# Events List
+
+```php
+new \Kronup\Model\EventsList();
+```
 
 ## Model getters
 

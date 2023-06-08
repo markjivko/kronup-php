@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadChannelUpdate
+# Payload Channel Update
+
+```php
+new \Kronup\Model\PayloadChannelUpdate();
+```
 
 Payload object required to update a Channel
 

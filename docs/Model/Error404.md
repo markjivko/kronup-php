@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Error404
+# 
+
+```php
+new \Kronup\Model\Error404();
+```
 
 Resource not found
 

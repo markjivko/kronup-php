@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadValueItemUpdate
+# Payload Value Item Update
+
+```php
+new \Kronup\Model\PayloadValueItemUpdate();
+```
 
 Payload object required to update a Value Item
 

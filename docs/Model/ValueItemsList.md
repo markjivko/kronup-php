@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# ValueItemsList
+# Value Items List
+
+```php
+new \Kronup\Model\ValueItemsList();
+```
 
 ## Model getters
 

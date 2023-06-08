@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadValueItemCreate
+# Payload Value Item Create
+
+```php
+new \Kronup\Model\PayloadValueItemCreate();
+```
 
 Payload object required to create a Value Item
 

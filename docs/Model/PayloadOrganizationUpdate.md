@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadOrganizationUpdate
+# Payload Organization Update
+
+```php
+new \Kronup\Model\PayloadOrganizationUpdate();
+```
 
 Payload object required to update an Organization
 

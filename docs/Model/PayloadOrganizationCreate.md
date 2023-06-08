@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadOrganizationCreate
+# Payload Organization Create
+
+```php
+new \Kronup\Model\PayloadOrganizationCreate();
+```
 
 Payload object required to create an Organization
 

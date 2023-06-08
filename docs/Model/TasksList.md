@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# TasksList
+# Tasks List
+
+```php
+new \Kronup\Model\TasksList();
+```
 
 ## Model getters
 

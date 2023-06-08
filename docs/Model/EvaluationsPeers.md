@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# EvaluationsPeers
+# Evaluations: peers
+
+```php
+new \Kronup\Model\EvaluationsPeers();
+```
 
 ## Model getters
 

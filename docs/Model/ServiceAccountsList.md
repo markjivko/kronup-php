@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# ServiceAccountsList
+# Service Accounts List
+
+```php
+new \Kronup\Model\ServiceAccountsList();
+```
 
 ## Model getters
 

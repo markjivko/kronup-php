@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadServiceAccountCreate
+# Payload Service Account Create
+
+```php
+new \Kronup\Model\PayloadServiceAccountCreate();
+```
 
 Payload object required to create a Service Account
 

@@ -6,6 +6,10 @@ layout: page
 
 # User
 
+```php
+new \Kronup\Model\User();
+```
+
 ## Model getters
 
 Method name | Return type | Description

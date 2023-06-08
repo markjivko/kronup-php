@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# MinuteFeedback
+# Minute Feedback
+
+```php
+new \Kronup\Model\MinuteFeedback();
+```
 
 Task feedback recorded in an iteration
 

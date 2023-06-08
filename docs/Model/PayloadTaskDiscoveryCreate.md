@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadTaskDiscoveryCreate
+# Payload Task Discovery Create
+
+```php
+new \Kronup\Model\PayloadTaskDiscoveryCreate();
+```
 
 Payload object required to create a Task discovery
 

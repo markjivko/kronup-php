@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# EvaluationsSelf
+# Evaluations: self
+
+```php
+new \Kronup\Model\EvaluationsSelf();
+```
 
 ## Model getters
 

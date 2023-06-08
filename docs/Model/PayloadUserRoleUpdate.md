@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadUserRoleUpdate
+# Payload User Role Update
+
+```php
+new \Kronup\Model\PayloadUserRoleUpdate();
+```
 
 Payload object required to update User roles
 

@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Error403
+# 
+
+```php
+new \Kronup\Model\Error403();
+```
 
 Operation not allowed
 

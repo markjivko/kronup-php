@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# MinuteDiscovery
+# Minute Discovery
+
+```php
+new \Kronup\Model\MinuteDiscovery();
+```
 
 Task discovery recorded in an iteration
 

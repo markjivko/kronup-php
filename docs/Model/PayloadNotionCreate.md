@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# PayloadNotionCreate
+# Payload Notion Create
+
+```php
+new \Kronup\Model\PayloadNotionCreate();
+```
 
 Payload object required to create a Notion
 

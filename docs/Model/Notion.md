@@ -6,6 +6,10 @@ layout: page
 
 # Notion
 
+```php
+new \Kronup\Model\Notion();
+```
+
 ## Model getters
 
 Method name | Return type | Description

@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# Error400
+# 
+
+```php
+new \Kronup\Model\Error400();
+```
 
 Invalid argument error
 

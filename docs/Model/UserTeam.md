@@ -4,7 +4,11 @@ parent: Model
 layout: page
 ---
 
-# UserTeam
+# User Team
+
+```php
+new \Kronup\Model\UserTeam();
+```
 
 ## Model getters
 

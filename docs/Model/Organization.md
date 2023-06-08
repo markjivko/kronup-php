@@ -6,6 +6,10 @@ layout: page
 
 # Organization
 
+```php
+new \Kronup\Model\Organization();
+```
+
 ## Model getters
 
 Method name | Return type | Description

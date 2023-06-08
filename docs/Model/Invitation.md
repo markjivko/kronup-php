@@ -6,6 +6,10 @@ layout: page
 
 # Invitation
 
+```php
+new \Kronup\Model\Invitation();
+```
+
 ## Model getters
 
 Method name | Return type | Description
