@@ -31,8 +31,6 @@ Method | Description
 [**feedbackReply()**](#feedbackreply) | Reply to feedback
 [**feedbackUpdate()**](#feedbackupdate) | Update feedback
 [**list()**](#list) | List tasks
-[**notionAdd()**](#notionadd) | Add notion
-[**notionRemove()**](#notionremove) | Remove notion
 [**read()**](#read) | Fetch task
 [**update()**](#update) | Update task
 
@@ -594,108 +592,6 @@ Name | Type | Description
 > List tasks
 
 Get a list of task models
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-
-## `notionAdd()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **notionAdd.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/notionAdd.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **PUT** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->tasks()->notionAdd(
-    string $team_id,
-    string $channel_id,
-    string $item_id,
-    string $task_id,
-    string $notion_id
-): \Kronup\Model\Task
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | -------------
- **$team_id** | **string**  | Team ID 
- **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
- **$task_id** | **string**  | Task ID 
- **$notion_id** | **string**  | Notion ID 
-
-### Return type
-
-[**\Kronup\Model\Task**](../../Model/Task)
-
-### Description
-
-> Add notion
-
-Add a notion to task
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-
-## `notionRemove()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **notionRemove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/notionRemove.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->tasks()->notionRemove(
-    string $team_id,
-    string $channel_id,
-    string $item_id,
-    string $task_id,
-    string $notion_id
-): bool
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | -------------
- **$team_id** | **string**  | Team ID 
- **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
- **$task_id** | **string**  | Task ID 
- **$notion_id** | **string**  | Notion ID 
-
-### Return type
-
-**bool**
-
-### Description
-
-> Remove notion
-
-Remove a notion from task
 
 [Back to top](#top){: .btn .btn-purple }
 

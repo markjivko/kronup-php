@@ -375,66 +375,6 @@ class TasksApi extends AbstractApi {
     }
     
     /**
-     * Add notion
-     *
-     * @param string $team_id Team ID
-     * @param string $channel_id Channel ID
-     * @param string $item_id Value Item ID
-     * @param string $task_id Task ID
-     * @param string $notion_id Notion ID
-     * @throws \Kronup\Sdk\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * 
-     * @return \Kronup\Model\Task
-     */
-    public function notionAdd($team_id, $channel_id, $item_id, $task_id, $notion_id) {
-        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-
-        // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}";
-        
-        /** @var \Kronup\Model\Task $result */
-        $result = $this->exec(
-            S::createRequest(
-                $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "notionId" => $notion_id]), $rPath, [], $rHeaders, []
-            ), 
-            "\Kronup\Model\Task"
-        );
-            
-        return $result;
-    }
-    
-    /**
-     * Remove notion
-     *
-     * @param string $team_id Team ID
-     * @param string $channel_id Channel ID
-     * @param string $item_id Value Item ID
-     * @param string $task_id Task ID
-     * @param string $notion_id Notion ID
-     * @throws \Kronup\Sdk\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * 
-     * @return bool
-     */
-    public function notionRemove($team_id, $channel_id, $item_id, $task_id, $notion_id) {
-        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-
-        // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/notions/{notionId}";
-        
-        /** @var bool $result */
-        $result = $this->exec(
-            S::createRequest(
-                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id, "notionId" => $notion_id]), $rPath, [], $rHeaders, []
-            ), 
-            "bool"
-        );
-            
-        return $result;
-    }
-    
-    /**
      * Fetch task
      *
      * @param string $team_id Team ID

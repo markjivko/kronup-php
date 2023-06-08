@@ -32,7 +32,8 @@ class PayloadTaskUpdate extends AbstractModel {
     protected static $_definition = [
         "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 200]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
-        "state" => ["state", "string", null, "getState", "setState", null, ["r" => 0, "e" => 1]]
+        "state" => ["state", "string", null, "getState", "setState", null, ["r" => 0, "e" => 1]], 
+        "notionIds" => ["notionIds", "string[]", null, "getNotionIds", "setNotionIds", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -118,5 +119,25 @@ class PayloadTaskUpdate extends AbstractModel {
      */
     public function setState($state) {
         return $this->_set("state", $state);
+    }
+
+    /**
+     * Get notionIds - Notion IDs
+     *
+     * @return string[]|null
+     */
+    public function getNotionIds(): ?array {
+        return $this->_data["notionIds"];
+    }
+
+    /**
+     * Set notionIds - Notion IDs
+     * 
+     * @param string[]|null $notion_ids Notion IDs
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setNotionIds(?array $notion_ids) {
+        return $this->_set("notionIds", $notion_ids);
     }
 }
