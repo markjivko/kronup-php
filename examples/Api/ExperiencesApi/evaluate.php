@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.io
  * 
- * @link    https://php.kronup.io/Api/ExperiencesApi/#evaluateself
+ * @link    https://php.kronup.io/Api/ExperiencesApi/#evaluate
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -35,17 +35,17 @@ try {
     $response = $sdk
         ->api()
         ->experiences()
-        ->evaluateSelf($arg_notion_id, $arg_grade);
+        ->evaluate($arg_notion_id, $arg_grade);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experiences()->evaluateSelf(): %s\n", 
+        "API Exception when calling api()->experiences()->evaluate(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experiences()->evaluateSelf(): %s\n", 
+        "Exception when calling api()->experiences()->evaluate(): %s\n", 
         $exc->getMessage()
     );
 }

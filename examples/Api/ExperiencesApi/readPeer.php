@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.io
  * 
- * @link    https://php.kronup.io/Api/ExperiencesApi/#list
+ * @link    https://php.kronup.io/Api/ExperiencesApi/#readpeer
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,32 +20,32 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Pagination: page number
-$arg_page_number = 1;
+// Notion ID
+$arg_notion_id = "notion-id-***";
 
-// Pagination: page size
-$arg_page_size = 100;
+// User ID
+$arg_user_id = "user-id-***";
 
 try {
     /**
-     * GET /xp
+     * GET /xp/notions/{notionId}/users/{userId}
      * 
-     * @var \Kronup\Model\ExperiencesList $response
+     * @var \Kronup\Model\Experience $response
      */
     $response = $sdk
         ->api()
         ->experiences()
-        ->list($arg_page_number, $arg_page_size);
+        ->readPeer($arg_notion_id, $arg_user_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experiences()->list(): %s\n", 
+        "API Exception when calling api()->experiences()->readPeer(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experiences()->list(): %s\n", 
+        "Exception when calling api()->experiences()->readPeer(): %s\n", 
         $exc->getMessage()
     );
 }

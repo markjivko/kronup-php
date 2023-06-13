@@ -23,22 +23,22 @@ $sdk->config()->setDebug(true);
 // Notion ID
 $arg_notion_id = "notion-id-***";
 
-// User ID
-$arg_user_id = "user-id-***";
-
 // Grade between 1 and 10
 $arg_grade = "5";
 
+// User ID
+$arg_user_id = "user-id-***";
+
 try {
     /**
-     * PUT /xp/notions/{notionId}/users/{userId}/grade/{grade}
+     * PUT /xp/notions/{notionId}/grade/{grade}/users/{userId}
      * 
      * @var \Kronup\Model\Experience $response
      */
     $response = $sdk
         ->api()
         ->experiences()
-        ->evaluatePeer($arg_notion_id, $arg_user_id, $arg_grade);
+        ->evaluatePeer($arg_notion_id, $arg_grade, $arg_user_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

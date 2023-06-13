@@ -23,19 +23,16 @@ $sdk->config()->setDebug(true);
 // Notion ID
 $arg_notion_id = "notion-id-***";
 
-// User ID
-$arg_user_id = "user-id-***";
-
 try {
     /**
-     * GET /xp/notions/{notionId}/users/{userId}
+     * GET /xp/notions/{notionId}
      * 
      * @var \Kronup\Model\Experience $response
      */
     $response = $sdk
         ->api()
         ->experiences()
-        ->read($arg_notion_id, $arg_user_id);
+        ->read($arg_notion_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
