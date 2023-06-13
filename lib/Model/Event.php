@@ -27,11 +27,13 @@ class Event extends AbstractModel {
     public const TYPE_TASKS = 'tasks';
     public const TYPE_SELF_EVALUATION = 'self-evaluation';
     public const TYPE_PEER_EVALUATION = 'peer evaluation';
+    public const STAGE_PLANNING = 'planning';
+    public const STAGE_VALIDATION = 'validation';
+    public const STAGE_EXECUTION = 'execution';
+    public const STAGE_DEEP_CONTEXT = 'deep context';
     protected static $_name = "Event";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
-        "orgId" => ["orgId", "string", null, "getOrgId", "setOrgId", null, ["r" => 0]], 
-        "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
@@ -41,8 +43,7 @@ class Event extends AbstractModel {
         "assmId" => ["assmId", "string", null, "getAssmId", "setAssmId", null, ["r" => 0]], 
         "taskId" => ["taskId", "string", null, "getTaskId", "setTaskId", null, ["r" => 0]], 
         "diff" => ["diff", "string[]", null, "getDiff", "setDiff", null, ["r" => 0, "c" => 1]], 
-        "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]]
     ];
 
     /**
@@ -70,6 +71,19 @@ class Event extends AbstractModel {
             self::TYPE_PEER_EVALUATION,
         ];
     }
+    /**
+     * Get allowable values
+     *
+     * @return string[]
+     */
+    public function getStageAllowableValues(): array {
+        return [
+            self::STAGE_PLANNING,
+            self::STAGE_VALIDATION,
+            self::STAGE_EXECUTION,
+            self::STAGE_DEEP_CONTEXT,
+        ];
+    }
 
     /**
      * Get id - Event ID
@@ -89,46 +103,6 @@ class Event extends AbstractModel {
      */
     public function setId($id) {
         return $this->_set("id", $id);
-    }
-
-    /**
-     * Get orgId - Organization ID
-     *
-     * @return string|null
-     */
-    public function getOrgId(): ?string {
-        return $this->_data["orgId"];
-    }
-
-    /**
-     * Set orgId - Organization ID
-     * 
-     * @param string|null $org_id Organization ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setOrgId($org_id) {
-        return $this->_set("orgId", $org_id);
-    }
-
-    /**
-     * Get userId - User ID
-     *
-     * @return string|null
-     */
-    public function getUserId(): ?string {
-        return $this->_data["userId"];
-    }
-
-    /**
-     * Set userId - User ID
-     * 
-     * @param string|null $user_id User ID
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setUserId($user_id) {
-        return $this->_set("userId", $user_id);
     }
 
     /**
@@ -212,7 +186,7 @@ class Event extends AbstractModel {
     }
 
     /**
-     * Get peerUserId - Peer User ID
+     * Get peerUserId - Peers User ID
      *
      * @return string|null
      */
@@ -221,9 +195,9 @@ class Event extends AbstractModel {
     }
 
     /**
-     * Set peerUserId - Peer User ID
+     * Set peerUserId - Peers User ID
      * 
-     * @param string|null $peer_user_id Peer User ID
+     * @param string|null $peer_user_id Peers User ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -312,42 +286,22 @@ class Event extends AbstractModel {
     }
 
     /**
-     * Get createdAt - Created timestamp
+     * Get stage - Value Item Stage
      *
      * @return string|null
      */
-    public function getCreatedAt(): ?string {
-        return $this->_data["createdAt"];
+    public function getStage(): ?string {
+        return $this->_data["stage"];
     }
 
     /**
-     * Set createdAt - Created timestamp
+     * Set stage - Value Item Stage
      * 
-     * @param string|null $created_at Created timestamp
+     * @param string|null $stage Value Item Stage
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setCreatedAt($created_at) {
-        return $this->_set("createdAt", $created_at);
-    }
-
-    /**
-     * Get updatedAt - Updated timestamp
-     *
-     * @return string|null
-     */
-    public function getUpdatedAt(): ?string {
-        return $this->_data["updatedAt"];
-    }
-
-    /**
-     * Set updatedAt - Updated timestamp
-     * 
-     * @param string|null $updated_at Updated timestamp
-     * @throws \InvalidArgumentException
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at) {
-        return $this->_set("updatedAt", $updated_at);
+    public function setStage($stage) {
+        return $this->_set("stage", $stage);
     }
 }

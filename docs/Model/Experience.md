@@ -19,6 +19,7 @@ Method name | Return type | Description
 **getNotion()** | [**\Kronup\Model\Notion**](../Notion) | 
 **getSelfEval()** | [**\Kronup\Model\EvaluationsSelf**](../EvaluationsSelf) | 
 **getPeerEval()** | [**\Kronup\Model\EvaluationsPeers**](../EvaluationsPeers) | 
+**getExpiresAt()** | **string** | Expires timestamp
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

@@ -15,7 +15,7 @@ new \Kronup\Model\TasksList();
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getPageNumber()** | **int** | Page number   [default to `1`]
-**getPageSize()** | **int** | Page size   [default to `100`]
+**getPageSize()** | **int** | Page size   [default to `500`]
 **getTotal()** | **int** | Total number of tasks
 **getTasks()** | [**\Kronup\Model\Task[]**](../Task) | Tasks
 

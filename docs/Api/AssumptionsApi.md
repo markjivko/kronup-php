@@ -24,7 +24,6 @@ Method | Description
 [**delete()**](#delete) | Delete assumption
 [**experiment()**](#experiment) | Experiment
 [**list()**](#list) | List assumptions
-[**read()**](#read) | Fetch assumption
 [**update()**](#update) | Update assumption
 
 
@@ -222,55 +221,6 @@ Name | Type | Description
 > List assumptions
 
 Get a list of assumption models
-
-[Back to top](#top){: .btn .btn-purple }
-
----
-
-
-
-## `read()`
-
-### Example
-
-{: .new-title }
-> #️⃣ Execute command in terminal 
-> 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/read.php){: .btn .btn-green .mt-4}
-
-### Request
-
-> **GET** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}`
-
-### Type signature
-
-```php
-(new \Kronup\Sdk())->api()->assumptions()->read(
-    string $team_id,
-    string $channel_id,
-    string $item_id,
-    string $assm_id
-): \Kronup\Model\Assumption
-```
-
-### Parameters
-
-Name | Type | Description
-------------- | ------------- | -------------
- **$team_id** | **string**  | Team ID 
- **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
- **$assm_id** | **string**  | Assumption ID 
-
-### Return type
-
-[**\Kronup\Model\Assumption**](../../Model/Assumption)
-
-### Description
-
-> Fetch assumption
-
-Retrieve assumption model
 
 [Back to top](#top){: .btn .btn-purple }
 

@@ -22,7 +22,7 @@ Method | Description
 ------------- | -------------
 [**avatar()**](#avatar) | Update avatar
 [**close()**](#close) | Close account
-[**eventList()**](#eventlist) | List events
+[**eventsList()**](#eventslist) | Fetch events
 [**read()**](#read) | Fetch account
 [**update()**](#update) | Update account
 
@@ -110,14 +110,14 @@ Close the current account. This action is reversible only if you sign back in wi
 
 
 
-## `eventList()`
+## `eventsList()`
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **eventList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/eventList.php){: .btn .btn-green .mt-4}
+> [php -f **eventsList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/eventsList.php){: .btn .btn-green .mt-4}
 
 ### Request
 
@@ -126,9 +126,10 @@ Close the current account. This action is reversible only if you sign back in wi
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->account()->eventList(
+(new \Kronup\Sdk())->api()->account()->eventsList(
     [ int $page_number = 1, ]
-    [ int $page_size = 100 ]
+    [ int $page_size = 100, ]
+    [ int $aggregate = 1 ]
 ): \Kronup\Model\EventsList
 ```
 
@@ -138,6 +139,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$page_number** | **int**  | Pagination: page number  [default to 1]
  **$page_size** | **int**  | Pagination: page size  [default to 100]
+ **$aggregate** | **int**  | Aggregate notion events  [default to 1]
 
 ### Return type
 
@@ -145,7 +147,7 @@ Name | Type | Description
 
 ### Description
 
-> List events
+> Fetch events
 
 Get a list of event models
 

@@ -25,7 +25,7 @@ class UsersList extends AbstractModel {
     protected static $_name = "Users_List";
     protected static $_definition = [
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
-        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 100, ["r" => 0, "n" => [1], "x" => [500]]], 
+        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 500, ["r" => 0, "n" => [1], "x" => [1500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
         "users" => ["users", "\Kronup\Model\User[]", null, "getUsers", "setUsers", null, ["r" => 0, "c" => 1]]
     ];

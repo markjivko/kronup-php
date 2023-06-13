@@ -162,35 +162,6 @@ class AssumptionsApi extends AbstractApi {
     }
     
     /**
-     * Fetch assumption
-     *
-     * @param string $team_id Team ID
-     * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
-     * @param string $assm_id Assumption ID
-     * @throws \Kronup\Sdk\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * 
-     * @return \Kronup\Model\Assumption
-     */
-    public function read($team_id, $channel_id, $item_id, $assm_id) {
-        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
-
-        // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}";
-        
-        /** @var \Kronup\Model\Assumption $result */
-        $result = $this->exec(
-            S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, []
-            ), 
-            "\Kronup\Model\Assumption"
-        );
-            
-        return $result;
-    }
-    
-    /**
      * Update assumption
      *
      * @param string $team_id Team ID

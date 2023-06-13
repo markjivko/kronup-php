@@ -15,7 +15,7 @@ new \Kronup\Model\ValueItemsList();
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getPageNumber()** | **int** | Page number   [default to `1`]
-**getPageSize()** | **int** | Page size   [default to `100`]
+**getPageSize()** | **int** | Page size   [default to `500`]
 **getTotal()** | **int** | Total number of value items
 **getItems()** | [**\Kronup\Model\ValueItemLite[]**](../ValueItemLite) | Value Items - Lite version
 

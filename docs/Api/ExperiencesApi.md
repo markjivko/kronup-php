@@ -20,8 +20,8 @@ $sdk->api()->experiences();
 
 Method | Description
 ------------- | -------------
-[**evaluatePeer()**](#evaluatepeer) | Evaluate peer
-[**evaluateSelf()**](#evaluateself) | Self-evaluation
+[**evaluatePeer()**](#evaluatepeer) | Evaluate peers
+[**evaluateSelf()**](#evaluateself) | Evaluate myself
 [**list()**](#list) | Fetch all experiences
 [**read()**](#read) | Fetch notion experience
 
@@ -56,7 +56,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
  **$user_id** | **string**  | User ID 
- **$grade** | **string**  | Grade between 1 and 5 
+ **$grade** | **string**  | Grade between 1 and 10 
 
 ### Return type
 
@@ -64,7 +64,7 @@ Name | Type | Description
 
 ### Description
 
-> Evaluate peer
+> Evaluate peers
 
 Anonymously evaluate another user on this notion. Only the last evaluation is kept in a 24 hours interval.
 
@@ -101,7 +101,7 @@ Anonymously evaluate another user on this notion. Only the last evaluation is ke
 Name | Type | Description
 ------------- | ------------- | -------------
  **$notion_id** | **string**  | Notion ID 
- **$grade** | **string**  | Grade between 1 and 5 
+ **$grade** | **string**  | Grade between 1 and 10 
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description
 
 ### Description
 
-> Self-evaluation
+> Evaluate myself
 
 Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours interval.
 

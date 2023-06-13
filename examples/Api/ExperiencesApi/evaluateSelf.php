@@ -23,7 +23,7 @@ $sdk->config()->setDebug(true);
 // Notion ID
 $arg_notion_id = "notion-id-***";
 
-// Grade between 1 and 5
+// Grade between 1 and 10
 $arg_grade = "5";
 
 try {

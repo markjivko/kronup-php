@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.io
  * 
- * @link    https://php.kronup.io/Api/AccountApi/#eventlist
+ * @link    https://php.kronup.io/Api/AccountApi/#eventslist
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -26,6 +26,9 @@ $arg_page_number = 1;
 // Pagination: page size
 $arg_page_size = 100;
 
+// Aggregate notion events
+$arg_aggregate = 1;
+
 try {
     /**
      * GET /account/events
@@ -35,17 +38,17 @@ try {
     $response = $sdk
         ->api()
         ->account()
-        ->eventList($arg_page_number, $arg_page_size);
+        ->eventsList($arg_page_number, $arg_page_size, $arg_aggregate);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->account()->eventList(): %s\n", 
+        "API Exception when calling api()->account()->eventsList(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->account()->eventList(): %s\n", 
+        "Exception when calling api()->account()->eventsList(): %s\n", 
         $exc->getMessage()
     );
 }

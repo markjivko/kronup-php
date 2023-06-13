@@ -29,11 +29,11 @@ class ExperiencesApi extends AbstractApi {
     const PKG = "Experiences";
 
     /**
-     * Evaluate peer
+     * Evaluate peers
      *
      * @param string $notion_id Notion ID
      * @param string $user_id User ID
-     * @param string $grade Grade between 1 and 5
+     * @param string $grade Grade between 1 and 10
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
@@ -57,10 +57,10 @@ class ExperiencesApi extends AbstractApi {
     }
     
     /**
-     * Self-evaluation
+     * Evaluate myself
      *
      * @param string $notion_id Notion ID
-     * @param string $grade Grade between 1 and 5
+     * @param string $grade Grade between 1 and 10
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 

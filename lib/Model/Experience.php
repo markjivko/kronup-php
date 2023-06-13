@@ -29,6 +29,7 @@ class Experience extends AbstractModel {
         "notion" => ["notion", "\Kronup\Model\Notion", null, "getNotion", "setNotion", null, ["r" => 0]], 
         "selfEval" => ["selfEval", "\Kronup\Model\EvaluationsSelf", null, "getSelfEval", "setSelfEval", null, ["r" => 0]], 
         "peerEval" => ["peerEval", "\Kronup\Model\EvaluationsPeers", null, "getPeerEval", "setPeerEval", null, ["r" => 0]], 
+        "expiresAt" => ["expiresAt", "string", null, "getExpiresAt", "setExpiresAt", null, ["r" => 0]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -143,6 +144,26 @@ class Experience extends AbstractModel {
      */
     public function setPeerEval($peer_eval) {
         return $this->_set("peerEval", $peer_eval);
+    }
+
+    /**
+     * Get expiresAt - Expires timestamp
+     *
+     * @return string|null
+     */
+    public function getExpiresAt(): ?string {
+        return $this->_data["expiresAt"];
+    }
+
+    /**
+     * Set expiresAt - Expires timestamp
+     * 
+     * @param string|null $expires_at Expires timestamp
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setExpiresAt($expires_at) {
+        return $this->_set("expiresAt", $expires_at);
     }
 
     /**

@@ -26,7 +26,7 @@ $arg_notion_id = "notion-id-***";
 // User ID
 $arg_user_id = "user-id-***";
 
-// Grade between 1 and 5
+// Grade between 1 and 10
 $arg_grade = "5";
 
 try {
