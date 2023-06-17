@@ -375,6 +375,35 @@ class TasksApi extends AbstractApi {
     }
     
     /**
+     * List candidates
+     *
+     * @param string $team_id Team ID
+     * @param string $channel_id Channel ID
+     * @param string $item_id Value item ID
+     * @param string $task_id Task ID
+     * @throws \Kronup\Sdk\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * 
+     * @return \Kronup\Model\TaskCandidatesList
+     */
+    public function listCandidates($team_id, $channel_id, $item_id, $task_id) {
+        $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
+
+        // Path template
+        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/candidates";
+        
+        /** @var \Kronup\Model\TaskCandidatesList $result */
+        $result = $this->exec(
+            S::createRequest(
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, []
+            ), 
+            "\Kronup\Model\TaskCandidatesList"
+        );
+            
+        return $result;
+    }
+    
+    /**
      * Fetch task
      *
      * @param string $team_id Team ID
@@ -414,7 +443,7 @@ class TasksApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\TaskExpanded
+     * @return \Kronup\Model\Task
      */
     public function update($team_id, $channel_id, $item_id, $task_id, $payload_task_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
@@ -422,12 +451,12 @@ class TasksApi extends AbstractApi {
         // Path template
         $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}";
         
-        /** @var \Kronup\Model\TaskExpanded $result */
+        /** @var \Kronup\Model\Task $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "taskId" => $task_id]), $rPath, [], $rHeaders, [], $payload_task_update
             ), 
-            "\Kronup\Model\TaskExpanded"
+            "\Kronup\Model\Task"
         );
             
         return $result;

@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Value item ID
-$arg_item_id = "value-item-id-***";
+$arg_item_id = "0123456789abcdef01234567";
 
 try {
     /**

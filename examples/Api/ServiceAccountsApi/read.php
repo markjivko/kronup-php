@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Service Account ID
-$arg_account_id = "service-account-id-***";
+$arg_account_id = "0123456789abcdef01234567";
 
 try {
     /**

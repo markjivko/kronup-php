@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Service account ID
-$arg_account_id = "service-account-id-***";
+$arg_account_id = "0123456789abcdef01234567";
 
 $arg_payload_service_account_update = (new \Kronup\Model\PayloadServiceAccountUpdate())
     

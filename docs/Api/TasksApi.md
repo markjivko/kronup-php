@@ -31,6 +31,7 @@ Method | Description
 [**feedbackReply()**](#feedbackreply) | Reply to feedback
 [**feedbackUpdate()**](#feedbackupdate) | Update feedback
 [**list()**](#list) | List tasks
+[**listCandidates()**](#listcandidates) | List candidates
 [**read()**](#read) | Fetch task
 [**update()**](#update) | Update task
 
@@ -599,6 +600,55 @@ Get a list of task models
 
 
 
+## `listCandidates()`
+
+### Example
+
+{: .new-title }
+> #️⃣ Execute command in terminal 
+> 
+> [php -f **listCandidates.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/listCandidates.php){: .btn .btn-green .mt-4}
+
+### Request
+
+> **GET** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/candidates`
+
+### Type signature
+
+```php
+(new \Kronup\Sdk())->api()->tasks()->listCandidates(
+    string $team_id,
+    string $channel_id,
+    string $item_id,
+    string $task_id
+): \Kronup\Model\TaskCandidatesList
+```
+
+### Parameters
+
+Name | Type | Description
+------------- | ------------- | -------------
+ **$team_id** | **string**  | Team ID 
+ **$channel_id** | **string**  | Channel ID 
+ **$item_id** | **string**  | Value item ID 
+ **$task_id** | **string**  | Task ID 
+
+### Return type
+
+[**\Kronup\Model\TaskCandidatesList**](../../Model/TaskCandidatesList)
+
+### Description
+
+> List candidates
+
+List potential assignees for this task
+
+[Back to top](#top){: .btn .btn-purple }
+
+---
+
+
+
 ## `read()`
 
 ### Example
@@ -670,7 +720,7 @@ Retrieve task model
     string $item_id,
     string $task_id,
     \Kronup\Model\PayloadTaskUpdate $payload_task_update
-): \Kronup\Model\TaskExpanded
+): \Kronup\Model\Task
 ```
 
 ### Parameters
@@ -685,7 +735,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+[**\Kronup\Model\Task**](../../Model/Task)
 
 ### Description
 

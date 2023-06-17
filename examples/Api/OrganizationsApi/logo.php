@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Organization ID
-$arg_org_id = "org-id-***";
+$arg_org_id = "0123456789abcdef01234567";
 
 // Logo - must be a PNG file, exactly 256x256 pixels, smaller than 200KB
 $arg_logo = "/path/to/file.txt";

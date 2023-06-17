@@ -21,16 +21,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "team-id-***";
+$arg_team_id = "0123456789abcdef01234567";
 
 // Channel ID
-$arg_channel_id = "channel-id-***";
+$arg_channel_id = "0123456789abcdef01234567";
 
 // Value item ID
-$arg_item_id = "value-item-id-***";
+$arg_item_id = "0123456789abcdef01234567";
 
 // Assumption ID
-$arg_assm_id = "assm-id-***";
+$arg_assm_id = "0123456789abcdef01234567";
 
 $arg_payload_assm_update = (new \Kronup\Model\PayloadAssmUpdate())
     

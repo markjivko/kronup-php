@@ -21,19 +21,19 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "team-id-***";
+$arg_team_id = "0123456789abcdef01234567";
 
 // Channel ID
-$arg_channel_id = "channel-id-***";
+$arg_channel_id = "0123456789abcdef01234567";
 
 // Value Item ID
-$arg_item_id = "value-item-id-***";
+$arg_item_id = "0123456789abcdef01234567";
 
 // Task ID
-$arg_task_id = "task-id-***";
+$arg_task_id = "0123456789abcdef01234567";
 
 // Discovery ID
-$arg_discovery_id = "discovery-id-***";
+$arg_discovery_id = "0123456789abcdef01234567";
 
 try {
     /**

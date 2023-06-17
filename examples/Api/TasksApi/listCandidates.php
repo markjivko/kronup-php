@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.io
  * 
- * @link    https://php.kronup.io/Api/ExperiencesApi/#evaluate
+ * @link    https://php.kronup.io/Api/TasksApi/#listcandidates
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -20,32 +20,38 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Notion ID
-$arg_notion_id = "0123456789abcdef01234567";
+// Team ID
+$arg_team_id = "0123456789abcdef01234567";
 
-// Grade between 1 and 10
-$arg_grade = "5";
+// Channel ID
+$arg_channel_id = "0123456789abcdef01234567";
+
+// Value item ID
+$arg_item_id = "0123456789abcdef01234567";
+
+// Task ID
+$arg_task_id = "0123456789abcdef01234567";
 
 try {
     /**
-     * PUT /xp/notions/{notionId}/grade/{grade}
+     * GET /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/candidates
      * 
-     * @var \Kronup\Model\Experience $response
+     * @var \Kronup\Model\TaskCandidatesList $response
      */
     $response = $sdk
         ->api()
-        ->experiences()
-        ->evaluate($arg_notion_id, $arg_grade);
+        ->tasks()
+        ->listCandidates($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->experiences()->evaluate(): %s\n", 
+        "API Exception when calling api()->tasks()->listCandidates(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->experiences()->evaluate(): %s\n", 
+        "Exception when calling api()->tasks()->listCandidates(): %s\n", 
         $exc->getMessage()
     );
 }

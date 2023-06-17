@@ -21,16 +21,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "team-id-***";
+$arg_team_id = "0123456789abcdef01234567";
 
 // Channel ID
-$arg_channel_id = "channel-id-***";
+$arg_channel_id = "0123456789abcdef01234567";
 
 // Value item ID
-$arg_item_id = "value-item-id-***";
+$arg_item_id = "0123456789abcdef01234567";
 
 // Task ID
-$arg_task_id = "task-id-***";
+$arg_task_id = "0123456789abcdef01234567";
 
 $arg_payload_task_update = (new \Kronup\Model\PayloadTaskUpdate())
     
@@ -50,7 +50,7 @@ try {
     /**
      * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}
      * 
-     * @var \Kronup\Model\TaskExpanded $response
+     * @var \Kronup\Model\Task $response
      */
     $response = $sdk
         ->api()
