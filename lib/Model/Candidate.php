@@ -127,7 +127,7 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Get ydPrecision - Perecentage of notions assessed for this task (0 to 100)
+     * Get ydPrecision - Percentage of notions assessed for this task (0 to 100)
      *
      * @return float|null
      */
@@ -136,9 +136,9 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Set ydPrecision - Perecentage of notions assessed for this task (0 to 100)
+     * Set ydPrecision - Percentage of notions assessed for this task (0 to 100)
      * 
-     * @param float|null $yd_precision Perecentage of notions assessed for this task (0 to 100)
+     * @param float|null $yd_precision Percentage of notions assessed for this task (0 to 100)
      * @throws \InvalidArgumentException
      * @return $this
      */

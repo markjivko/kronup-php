@@ -20,6 +20,6 @@ Method name | Return type | Description
 **getUserName()** | **string** | User name
 **getUserItems()** | **int** | Number of value items where this user is executing tasks
 **getYdStress()** | **float** | Forecast stress level based on notion assessments (0 to 100)
-**getYdPrecision()** | **float** | Perecentage of notions assessed for this task (0 to 100)
+**getYdPrecision()** | **float** | Percentage of notions assessed for this task (0 to 100)
 **getYdScore()** | **float** | Yerkes-Dodson score; 40+ is good, 90+ is great
 
