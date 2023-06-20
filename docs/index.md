@@ -43,7 +43,9 @@ Tree branches are populated as needed just-in-time so the memory footprint is ti
 
 ## API Key
 
-The Kronup API uses a standard [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) authentication scheme. You can manage your API keys from 👉 [Organization > Service Accounts](https://go.kronup.com/organization/#/tab:service-accounts).
+The Kronup API uses a standard [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) authentication scheme. 
+
+You can manage your API keys from 👉 [Organization > Service Accounts](https://go.kronup.com/organization/#/tab:service-accounts).
 
 ## Installation & Usage
 
