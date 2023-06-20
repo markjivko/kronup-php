@@ -29,6 +29,7 @@ The SDK is built like a tree with its root in ```new \Kronup\Sdk()```.
 Tree branches are populated as needed just-in-time so the memory footprint is tiny.
 
 ## Table of Contents
+- [API Key](#api-key)
 - [Installation & Usage](#installation--usage)
   - [Requirements](#requirements)
 - [Getting Started](#getting-started)
@@ -39,6 +40,10 @@ Tree branches are populated as needed just-in-time so the memory footprint is ti
     - [Enable debugging](#enable-debugging)
     - [Change output location](#change-output-location)
     - [Disable sanitizer](#disable-sanitizer)
+
+## API Key
+
+The Kronup API uses a standard [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) authentication scheme. You can manage your API keys from 👉 [Organization > Service Accounts](https://go.kronup.com/organization/#/tab:service-accounts).
 
 ## Installation & Usage
 
@@ -64,12 +69,6 @@ This SDK requires `PHP 7.4` or later with the following extensions:
  * `ext-json`
 
 Supported PHP [Versions](https://www.php.net/supported-versions.php): `7.4`, `8.0`, `8.1`, `8.2`.
-
-## Your API Key
-
-The Kronup API uses a standard [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) authentication scheme.
-
-👉 Fetch your API keys from [Organization > Service Accounts](https://go.kronup.com/organization/#/tab:service-accounts).
 
 ## Getting Started
 
