@@ -1,6 +1,6 @@
 # Contributor Code of Conduct
 
-Our [company values](https://kronup.io) guide us in our day-to-day interactions and decision-making. 
+Our [company values](https://kronup.com) guide us in our day-to-day interactions and decision-making. 
 Our open source projects are no exception. Trust, respect, collaboration and transparency are core values 
 we believe should live and breathe within our projects. 
 Our community welcomes participants from around the world with different experiences, unique perspectives, 

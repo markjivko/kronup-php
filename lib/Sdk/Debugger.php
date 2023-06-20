@@ -1,11 +1,11 @@
 <?php
 
 /**
- * kronup sdk Debugger
+ * Kronup sdk Debugger
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   MIT
- * @package   kronup
+ * @package   Kronup
  * @author    Mark Jivko
  */
 namespace Kronup\Sdk;

@@ -28,7 +28,7 @@ class Candidate extends AbstractModel {
     protected static $_definition = [
         "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
-        "userItems" => ["userItems", "float", null, "getUserItems", "setUserItems", null, ["r" => 0, "n" => [0]]], 
+        "userItems" => ["userItems", "int", null, "getUserItems", "setUserItems", null, ["r" => 0, "n" => [0]]], 
         "ydStress" => ["ydStress", "float", null, "getYdStress", "setYdStress", null, ["r" => 0, "n" => [0], "x" => [100]]], 
         "ydPrecision" => ["ydPrecision", "float", null, "getYdPrecision", "setYdPrecision", null, ["r" => 0, "n" => [0], "x" => [100]]], 
         "ydScore" => ["ydScore", "float", null, "getYdScore", "setYdScore", null, ["r" => 0, "n" => [0], "x" => [100]]]
@@ -89,16 +89,16 @@ class Candidate extends AbstractModel {
     /**
      * Get userItems - Number of value items where this user is executing tasks
      *
-     * @return float|null
+     * @return int|null
      */
-    public function getUserItems(): ?float {
+    public function getUserItems(): ?int {
         return $this->_data["userItems"];
     }
 
     /**
      * Set userItems - Number of value items where this user is executing tasks
      * 
-     * @param float|null $user_items Number of value items where this user is executing tasks
+     * @param int|null $user_items Number of value items where this user is executing tasks
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -107,7 +107,7 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Get ydStress - Task difficulty based on notion assessments
+     * Get ydStress - Forecast stress level based on notion assessments (0 to 100)
      *
      * @return float|null
      */
@@ -116,9 +116,9 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Set ydStress - Task difficulty based on notion assessments
+     * Set ydStress - Forecast stress level based on notion assessments (0 to 100)
      * 
-     * @param float|null $yd_stress Task difficulty based on notion assessments
+     * @param float|null $yd_stress Forecast stress level based on notion assessments (0 to 100)
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -127,7 +127,7 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Get ydPrecision - Perecentage of notions assessed for this task
+     * Get ydPrecision - Perecentage of notions assessed for this task (0 to 100)
      *
      * @return float|null
      */
@@ -136,9 +136,9 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Set ydPrecision - Perecentage of notions assessed for this task
+     * Set ydPrecision - Perecentage of notions assessed for this task (0 to 100)
      * 
-     * @param float|null $yd_precision Perecentage of notions assessed for this task
+     * @param float|null $yd_precision Perecentage of notions assessed for this task (0 to 100)
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -147,7 +147,7 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Get ydScore - Yerkes-Dodson score
+     * Get ydScore - Yerkes-Dodson score; 40+ is good, 90+ is great
      *
      * @return float|null
      */
@@ -156,9 +156,9 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Set ydScore - Yerkes-Dodson score
+     * Set ydScore - Yerkes-Dodson score; 40+ is good, 90+ is great
      * 
-     * @param float|null $yd_score Yerkes-Dodson score
+     * @param float|null $yd_score Yerkes-Dodson score; 40+ is good, 90+ is great
      * @throws \InvalidArgumentException
      * @return $this
      */

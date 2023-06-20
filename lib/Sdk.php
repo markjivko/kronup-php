@@ -1,7 +1,7 @@
 <?php
 
 /**
- * kronup sdk
+ * Kronup SDK
  *
  * @version   1.0.0
  * @api       0.0.1
@@ -38,15 +38,15 @@ class Sdk {
     protected $_api = null;
 
     /**
-     * kronup sdk
+     * Kronup SDK
      *
-     * @var string $apiKey kronup API Key
+     * @var string $apiKey Kronup API Key
      * @throws \RuntimeException
      */
     public function __construct(string $apiKey = null) {
         // PHP check
         if (version_compare(PHP_VERSION, "7.4.0") <= 0) {
-            throw new RuntimeException("kronup SDK: PHP v7.4+ is required");
+            throw new RuntimeException("Kronup SDK: PHP v7.4+ is required");
         }
 
         // Extensions check
@@ -57,7 +57,7 @@ class Sdk {
         ];
         foreach ($extensions as $extName => $extFunction) {
             if (!function_exists($extFunction)) {
-                throw new RuntimeException("kronup SDK: PHP extension '$extName' is required");
+                throw new RuntimeException("Kronup SDK: PHP extension '$extName' is required");
             }
         }
 

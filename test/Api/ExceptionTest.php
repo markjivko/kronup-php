@@ -22,7 +22,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ExceptionTest extends TestCase {
     /**
-     * kronup SDK
+     * Kronup SDK
      *
      * @var \Kronup\Sdk
      */

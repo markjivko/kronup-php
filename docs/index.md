@@ -10,10 +10,10 @@ nav_order: 1
     </a>
 </p>
 
-# kronup SDK for PHP
+# Kronup SDK for PHP
 {: .fs-9 }
 
-Build any kronup application in PHP with ease.
+Build any Kronup application in PHP with ease.
 {: .fs-6 .fw-300 }
 
 [Install with Composer](https://packagist.org/packages/kronup/kronup-php){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -21,7 +21,7 @@ Build any kronup application in PHP with ease.
 
 ---
 
-kronup SDK uses a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) so that you can jump right into 
+Kronup SDK uses a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) so that you can jump right into 
 building your application without having to go back to the documentation.
 
 The SDK is built like a tree with its root in ```new \Kronup\Sdk()```. 
@@ -42,10 +42,10 @@ Tree branches are populated as needed just-in-time so the memory footprint is ti
 
 ## Installation & Usage
 
-To install the kronup SDK, simply clone this repository and load it with a [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloader.
+To install the Kronup SDK, simply clone this repository and load it with a [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloader.
 If you're having doubts, you can use the provided `autoload.php` file.
 
-You can also install the latest version of `kronup PHP SDK` with **composer** by issuing the following command:
+You can also install the latest version of `Kronup PHP SDK` with **composer** by issuing the following command:
 
 ```
 composer require kronup/kronup-php
@@ -64,6 +64,12 @@ This SDK requires `PHP 7.4` or later with the following extensions:
  * `ext-json`
 
 Supported PHP [Versions](https://www.php.net/supported-versions.php): `7.4`, `8.0`, `8.1`, `8.2`.
+
+## Your API Key
+
+The Kronup API uses a standard [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) authentication scheme.
+
+👉 Fetch your API keys from [Organization > Service Accounts](https://go.kronup.com/organization/#/tab:service-accounts).
 
 ## Getting Started
 
@@ -132,7 +138,7 @@ $sdk->config();
 You can fetch the following:
 
   * [Debugging](#debugging) tools
-  * `getApiKey()`: Your [kronup API key](https://go.kronup.com)
+  * `getApiKey()`: Your Kronup API key
   * `getTempFolderPath()`: Path for storing downloaded files
   * `getUserAgent()`: Request header for API calls
   * `getHost()`: API server domain

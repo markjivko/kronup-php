@@ -5,7 +5,7 @@ layout: page
 nav_order: 2
 ---
 
-You can access any of the kronup API endpoints with the following syntax:
+You can access any of the Kronup API endpoints with the following syntax:
 
 ```php
 // Place your API Key 👇 here

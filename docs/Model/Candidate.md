@@ -1,10 +1,10 @@
 ---
-title: 
+title: Candidate
 parent: Model
 layout: page
 ---
 
-# 
+# Candidate
 
 ```php
 new \Kronup\Model\Candidate();
@@ -18,8 +18,8 @@ Method name | Return type | Description
 ------------ | ------------- | -------------
 **getUserId()** | **string** | User ID
 **getUserName()** | **string** | User name
-**getUserItems()** | **float** | Number of value items where this user is executing tasks
-**getYdStress()** | **float** | Task difficulty based on notion assessments
-**getYdPrecision()** | **float** | Perecentage of notions assessed for this task
-**getYdScore()** | **float** | Yerkes-Dodson score
+**getUserItems()** | **int** | Number of value items where this user is executing tasks
+**getYdStress()** | **float** | Forecast stress level based on notion assessments (0 to 100)
+**getYdPrecision()** | **float** | Perecentage of notions assessed for this task (0 to 100)
+**getYdScore()** | **float** | Yerkes-Dodson score; 40+ is good, 90+ is great
 
