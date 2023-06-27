@@ -208,7 +208,7 @@ Delete a task from a value item
     string $item_id,
     string $task_id,
     \Kronup\Model\PayloadTaskDiscoveryCreate $payload_task_discovery_create
-): \Kronup\Model\TaskExpanded
+): \Kronup\Model\MinuteDiscovery
 ```
 
 ### Parameters
@@ -223,7 +223,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+[**\Kronup\Model\MinuteDiscovery**](../../Model/MinuteDiscovery)
 
 ### Description
 
@@ -311,7 +311,7 @@ Delete a task discovery
     string $task_id,
     string $discovery_id,
     \Kronup\Model\PayloadTaskDiscoveryUpdate $payload_task_discovery_update
-): \Kronup\Model\TaskExpanded
+): \Kronup\Model\MinuteDiscovery
 ```
 
 ### Parameters
@@ -327,7 +327,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+[**\Kronup\Model\MinuteDiscovery**](../../Model/MinuteDiscovery)
 
 ### Description
 
@@ -363,7 +363,7 @@ Update a task discovery
     string $item_id,
     string $task_id,
     \Kronup\Model\PayloadTaskFeedbackCreate $payload_task_feedback_create
-): \Kronup\Model\TaskExpanded
+): \Kronup\Model\MinuteFeedback
 ```
 
 ### Parameters
@@ -378,7 +378,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+[**\Kronup\Model\MinuteFeedback**](../../Model/MinuteFeedback)
 
 ### Description
 
@@ -466,7 +466,7 @@ Delete a feedback for a task
     string $task_id,
     string $feedback_id,
     \Kronup\Model\PayloadTaskFeedbackReply $payload_task_feedback_reply
-): \Kronup\Model\TaskExpanded
+): \Kronup\Model\MinuteFeedback
 ```
 
 ### Parameters
@@ -482,7 +482,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+[**\Kronup\Model\MinuteFeedback**](../../Model/MinuteFeedback)
 
 ### Description
 
@@ -519,7 +519,7 @@ Update a reply to a task feedback
     string $task_id,
     string $feedback_id,
     \Kronup\Model\PayloadTaskFeedbackUpdate $payload_task_feedback_update
-): \Kronup\Model\TaskExpanded
+): \Kronup\Model\MinuteFeedback
 ```
 
 ### Parameters
@@ -535,7 +535,7 @@ Name | Type | Description
 
 ### Return type
 
-[**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
+[**\Kronup\Model\MinuteFeedback**](../../Model/MinuteFeedback)
 
 ### Description
 

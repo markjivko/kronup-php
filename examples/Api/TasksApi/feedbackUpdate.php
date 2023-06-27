@@ -47,7 +47,7 @@ try {
     /**
      * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}
      * 
-     * @var \Kronup\Model\TaskExpanded $response
+     * @var \Kronup\Model\MinuteFeedback $response
      */
     $response = $sdk
         ->api()

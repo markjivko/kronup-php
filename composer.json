@@ -5,17 +5,12 @@
     "keywords": [
         "sdk", "kronup", "kronup.io", "php-sdk", "building-in-public", "build-in-public", "saas", "api"
     ],
-    "homepage": "https://kronup.io/",
+    "homepage": "https://php.kronup.io/",
     "license": "MIT",
     "authors": [
         {
-            "name": "kronup.com",
-            "homepage": "https://kronup.com",
-            "role": "Team"
-        },
-        {
-            "name": "kronup.io",
-            "homepage": "https://kronup.io",
+            "name": "Kronup",
+            "homepage": "https://php.kronup.io",
             "role": "Team"
         },
         {   
