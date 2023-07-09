@@ -18,6 +18,8 @@ Method name | Return type | Description
 **getOrgName()** | **string** | Organization name
 **getOrgIconId()** | **string** | Organization logo ID
 **getOrgOwners()** | **string[]** | Organization owner IDs
+**getOrgUsersMax()** | **int** | Maximum number of users in this organization   [default to `2`]
+**getOrgUsersCount()** | **int** | Current number of users in this organization   [default to `1`]
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

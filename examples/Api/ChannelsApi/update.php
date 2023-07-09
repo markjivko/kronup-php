@@ -21,10 +21,10 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "0123456789abcdef01234567";
+$arg_team_id = "000000000000000000000000";
 
 // Channel ID
-$arg_channel_id = "0123456789abcdef01234567";
+$arg_channel_id = "000000000000000000000000";
 
 $arg_payload_channel_update = (new \Kronup\Model\PayloadChannelUpdate())
     

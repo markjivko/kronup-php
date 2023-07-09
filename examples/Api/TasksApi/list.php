@@ -21,13 +21,13 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "0123456789abcdef01234567";
+$arg_team_id = "000000000000000000000000";
 
 // Channel ID
-$arg_channel_id = "0123456789abcdef01234567";
+$arg_channel_id = "000000000000000000000000";
 
 // Value Item ID
-$arg_item_id = "0123456789abcdef01234567";
+$arg_item_id = "000000000000000000000000";
 
 // Pagination: page number
 $arg_page_number = 1;

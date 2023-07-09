@@ -27,7 +27,8 @@ class EventsList extends AbstractModel {
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 1500, ["r" => 0, "n" => [1], "x" => [1500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "events" => ["events", "\Kronup\Model\Event[]", null, "getEvents", "setEvents", null, ["r" => 0, "c" => 1]]
+        "events" => ["events", "\Kronup\Model\Event[]", null, "getEvents", "setEvents", null, ["r" => 0, "c" => 1]], 
+        "readOnly" => ["readOnly", "bool", null, "getReadOnly", "setReadOnly", false, ["r" => 0]]
     ];
 
     /**
@@ -120,5 +121,25 @@ class EventsList extends AbstractModel {
      */
     public function setEvents(?array $events) {
         return $this->_set("events", $events);
+    }
+
+    /**
+     * Get readOnly - The organization is currently in read-only mode
+     *
+     * @return bool|null
+     */
+    public function getReadOnly(): ?bool {
+        return $this->_data["readOnly"];
+    }
+
+    /**
+     * Set readOnly - The organization is currently in read-only mode
+     * 
+     * @param bool|null $read_only The organization is currently in read-only mode
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setReadOnly($read_only) {
+        return $this->_set("readOnly", $read_only);
     }
 }

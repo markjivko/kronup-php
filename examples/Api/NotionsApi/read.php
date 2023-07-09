@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Notion ID
-$arg_notion_id = "0123456789abcdef01234567";
+$arg_notion_id = "000000000000000000000000";
 
 try {
     /**

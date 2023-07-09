@@ -42,6 +42,13 @@ class Api {
     protected $_assumptionsApi = null;
 
     /**
+     * Billing API
+     *
+     * @var \Kronup\Api\BillingApi
+     */
+    protected $_billingApi = null;
+
+    /**
      * Channels API
      *
      * @var \Kronup\Api\ChannelsApi
@@ -151,6 +158,19 @@ class Api {
         }
 
         return $this->_assumptionsApi;
+    }
+    
+    /**
+     * Billing API
+     * 
+     * @return \Kronup\Api\BillingApi
+     */
+    public function billing(): A\BillingApi {
+        if (null === $this->_billingApi) {
+            $this->_billingApi = new A\BillingApi($this->_sdk);
+        }
+
+        return $this->_billingApi;
     }
     
     /**

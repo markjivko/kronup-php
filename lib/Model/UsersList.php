@@ -27,7 +27,8 @@ class UsersList extends AbstractModel {
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 500, ["r" => 0, "n" => [1], "x" => [1500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "users" => ["users", "\Kronup\Model\User[]", null, "getUsers", "setUsers", null, ["r" => 0, "c" => 1]]
+        "users" => ["users", "\Kronup\Model\User[]", null, "getUsers", "setUsers", null, ["r" => 0, "c" => 1]], 
+        "usersMax" => ["usersMax", "int", null, "getUsersMax", "setUsersMax", null, ["r" => 0]]
     ];
 
     /**
@@ -120,5 +121,25 @@ class UsersList extends AbstractModel {
      */
     public function setUsers(?array $users) {
         return $this->_set("users", $users);
+    }
+
+    /**
+     * Get usersMax - Maximum number of users for this organization
+     *
+     * @return int|null
+     */
+    public function getUsersMax(): ?int {
+        return $this->_data["usersMax"];
+    }
+
+    /**
+     * Set usersMax - Maximum number of users for this organization
+     * 
+     * @param int|null $users_max Maximum number of users for this organization
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setUsersMax($users_max) {
+        return $this->_set("usersMax", $users_max);
     }
 }

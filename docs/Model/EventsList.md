@@ -18,4 +18,5 @@ Method name | Return type | Description
 **getPageSize()** | **int** | Page size   [default to `1500`]
 **getTotal()** | **int** | Total number of events
 **getEvents()** | [**\Kronup\Model\Event[]**](../Event) | Events
+**getReadOnly()** | **bool** | The organization is currently in read-only mode   [default to `false`]
 

@@ -28,6 +28,8 @@ class Organization extends AbstractModel {
         "orgName" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0]], 
         "orgIconId" => ["orgIconId", "string", null, "getOrgIconId", "setOrgIconId", null, ["r" => 0]], 
         "orgOwners" => ["orgOwners", "string[]", null, "getOrgOwners", "setOrgOwners", null, ["r" => 0, "c" => 1]], 
+        "orgUsersMax" => ["orgUsersMax", "int", null, "getOrgUsersMax", "setOrgUsersMax", 2, ["r" => 0, "n" => [1], "x" => [500]]], 
+        "orgUsersCount" => ["orgUsersCount", "int", null, "getOrgUsersCount", "setOrgUsersCount", 1, ["r" => 0, "n" => [0]]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -122,6 +124,46 @@ class Organization extends AbstractModel {
      */
     public function setOrgOwners(?array $org_owners) {
         return $this->_set("orgOwners", $org_owners);
+    }
+
+    /**
+     * Get orgUsersMax - Maximum number of users in this organization
+     *
+     * @return int|null
+     */
+    public function getOrgUsersMax(): ?int {
+        return $this->_data["orgUsersMax"];
+    }
+
+    /**
+     * Set orgUsersMax - Maximum number of users in this organization
+     * 
+     * @param int|null $org_users_max Maximum number of users in this organization
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setOrgUsersMax($org_users_max) {
+        return $this->_set("orgUsersMax", $org_users_max);
+    }
+
+    /**
+     * Get orgUsersCount - Current number of users in this organization
+     *
+     * @return int|null
+     */
+    public function getOrgUsersCount(): ?int {
+        return $this->_data["orgUsersCount"];
+    }
+
+    /**
+     * Set orgUsersCount - Current number of users in this organization
+     * 
+     * @param int|null $org_users_count Current number of users in this organization
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setOrgUsersCount($org_users_count) {
+        return $this->_set("orgUsersCount", $org_users_count);
     }
 
     /**

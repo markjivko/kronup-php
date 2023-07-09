@@ -18,4 +18,5 @@ Method name | Return type | Description
 **getPageSize()** | **int** | Page size   [default to `500`]
 **getTotal()** | **int** | Total number of users
 **getUsers()** | [**\Kronup\Model\User[]**](../User) | Users
+**getUsersMax()** | **int** | Maximum number of users for this organization
 
