@@ -1,5 +1,5 @@
 ---
-title: Billing
+title: "Billing"
 parent: API
 layout: page
 ---

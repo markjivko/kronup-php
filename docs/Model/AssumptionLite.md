@@ -1,5 +1,5 @@
 ---
-title: Assumption - Lite
+title: "Assumption - Lite"
 parent: Model
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: Users
+title: "Users"
 parent: API
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: Value items
+title: "Value items"
 parent: API
 layout: page
 ---

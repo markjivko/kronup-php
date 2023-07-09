@@ -1,5 +1,5 @@
 ---
-title: Assumptions
+title: "Assumptions"
 parent: API
 layout: page
 ---

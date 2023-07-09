@@ -1,5 +1,5 @@
 ---
-title: Minute
+title: "Minute"
 parent: Model
 layout: page
 ---

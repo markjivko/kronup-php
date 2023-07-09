@@ -1,5 +1,5 @@
 ---
-title: Organization
+title: "Organization"
 parent: Model
 layout: page
 ---

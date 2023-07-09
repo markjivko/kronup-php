@@ -1,5 +1,5 @@
 ---
-title: Value Item - Expanded
+title: "Value Item - Expanded"
 parent: Model
 layout: page
 ---

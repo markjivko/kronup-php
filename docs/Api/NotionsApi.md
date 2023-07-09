@@ -1,5 +1,5 @@
 ---
-title: Notions
+title: "Notions"
 parent: API
 layout: page
 ---

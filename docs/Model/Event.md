@@ -1,5 +1,5 @@
 ---
-title: Event
+title: "Event"
 parent: Model
 layout: page
 ---

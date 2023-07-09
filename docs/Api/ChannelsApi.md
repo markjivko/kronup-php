@@ -1,5 +1,5 @@
 ---
-title: Channels
+title: "Channels"
 parent: API
 layout: page
 ---

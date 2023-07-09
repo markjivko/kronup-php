@@ -1,5 +1,5 @@
 ---
-title: Teams Expanded List
+title: "Teams Expanded List"
 parent: Model
 layout: page
 ---

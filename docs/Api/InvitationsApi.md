@@ -1,5 +1,5 @@
 ---
-title: Invitations
+title: "Invitations"
 parent: API
 layout: page
 ---

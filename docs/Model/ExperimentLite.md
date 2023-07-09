@@ -1,5 +1,5 @@
 ---
-title: Experiment - Lite
+title: "Experiment - Lite"
 parent: Model
 layout: page
 ---

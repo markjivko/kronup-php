@@ -1,5 +1,5 @@
 ---
-title: Payload Channel Update
+title: "Payload Channel Update"
 parent: Model
 layout: page
 ---

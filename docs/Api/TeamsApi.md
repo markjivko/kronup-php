@@ -1,5 +1,5 @@
 ---
-title: Teams
+title: "Teams"
 parent: API
 layout: page
 ---

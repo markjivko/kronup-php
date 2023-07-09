@@ -1,5 +1,5 @@
 ---
-title: Payload Channel Create
+title: "Payload Channel Create"
 parent: Model
 layout: page
 ---

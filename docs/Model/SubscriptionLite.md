@@ -1,5 +1,5 @@
 ---
-title: Subscription - Lite
+title: "Subscription - Lite"
 parent: Model
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: Task Candidates List
+title: "Task Candidates List"
 parent: Model
 layout: page
 ---

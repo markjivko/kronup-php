@@ -1,5 +1,5 @@
 ---
-title: Task
+title: "Task"
 parent: Model
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: Evaluations: peers
+title: "Evaluations: peers"
 parent: Model
 layout: page
 ---

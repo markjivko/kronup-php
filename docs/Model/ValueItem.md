@@ -1,5 +1,5 @@
 ---
-title: Value item
+title: "Value item"
 parent: Model
 layout: page
 ---

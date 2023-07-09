@@ -1,5 +1,5 @@
 ---
-title: Minute Discovery
+title: "Minute Discovery"
 parent: Model
 layout: page
 ---

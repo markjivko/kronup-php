@@ -1,5 +1,5 @@
 ---
-title: Account
+title: "Account"
 parent: Model
 layout: page
 ---

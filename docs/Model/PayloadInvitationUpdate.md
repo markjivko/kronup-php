@@ -1,5 +1,5 @@
 ---
-title: Payload Invitation Update
+title: "Payload Invitation Update"
 parent: Model
 layout: page
 ---

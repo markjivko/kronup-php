@@ -1,5 +1,5 @@
 ---
-title: Payload Task Discovery Create
+title: "Payload Task Discovery Create"
 parent: Model
 layout: page
 ---

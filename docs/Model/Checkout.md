@@ -1,5 +1,5 @@
 ---
-title: Checkout
+title: "Checkout"
 parent: Model
 layout: page
 ---

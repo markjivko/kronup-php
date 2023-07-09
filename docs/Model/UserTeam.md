@@ -1,5 +1,5 @@
 ---
-title: User Team
+title: "User Team"
 parent: Model
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: Payload Team Create
+title: "Payload Team Create"
 parent: Model
 layout: page
 ---

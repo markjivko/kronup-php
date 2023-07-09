@@ -1,5 +1,5 @@
 ---
-title: Notions List
+title: "Notions List"
 parent: Model
 layout: page
 ---

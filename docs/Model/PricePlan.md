@@ -1,5 +1,5 @@
 ---
-title: Price Plan
+title: "Price Plan"
 parent: Model
 layout: page
 ---

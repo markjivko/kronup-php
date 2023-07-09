@@ -1,5 +1,5 @@
 ---
-title: Organizations
+title: "Organizations"
 parent: API
 layout: page
 ---

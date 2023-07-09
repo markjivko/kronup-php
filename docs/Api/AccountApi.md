@@ -1,5 +1,5 @@
 ---
-title: Account
+title: "Account"
 parent: API
 layout: page
 ---

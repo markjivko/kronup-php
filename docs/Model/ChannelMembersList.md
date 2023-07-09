@@ -1,5 +1,5 @@
 ---
-title: Channel Members List
+title: "Channel Members List"
 parent: Model
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: Account Team
+title: "Account Team"
 parent: Model
 layout: page
 ---

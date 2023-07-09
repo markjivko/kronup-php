@@ -1,5 +1,5 @@
 ---
-title: Candidate
+title: "Candidate"
 parent: Model
 layout: page
 ---

@@ -1,5 +1,5 @@
 ---
-title: User
+title: "User"
 parent: Model
 layout: page
 ---
