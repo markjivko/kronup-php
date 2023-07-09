@@ -6,7 +6,19 @@ layout: page
 
 # Api/InvitationsApi
 
-[Invitations API Reference](https://api.kronup.com/#tag/Invitations)
+Method | Description
+------------- | -------------
+🔹 [**accept()**](#accept) | Accept invitation
+🔹 [**create()**](#create) | Create invitation
+🔹 [**delete()**](#delete) | Delete invitation
+🔹 [**list()**](#list) | List invitations
+🔹 [**read()**](#read) | Fetch invitation
+🔹 [**update()**](#update) | Update invitation
+
+
+📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,19 +27,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->invitations();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**accept()**](#accept) | Accept invitation
-[**create()**](#create) | Create invitation
-[**delete()**](#delete) | Delete invitation
-[**list()**](#list) | List invitations
-[**read()**](#read) | Fetch invitation
-[**update()**](#update) | Update invitation
-
-
 
 ## `accept()`
 
@@ -71,6 +70,17 @@ Accept an invitation to join an organization
 ---
 
 
+📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->invitations();
+```
 
 ## `create()`
 
@@ -114,6 +124,17 @@ Create a new invitation to this organization
 ---
 
 
+📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->invitations();
+```
 
 ## `delete()`
 
@@ -157,6 +178,17 @@ Delete invitation
 ---
 
 
+📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->invitations();
+```
 
 ## `list()`
 
@@ -202,6 +234,17 @@ Get a list of invitation models
 ---
 
 
+📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->invitations();
+```
 
 ## `read()`
 
@@ -245,6 +288,17 @@ Retrieve invitation model
 ---
 
 
+📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->invitations();
+```
 
 ## `update()`
 

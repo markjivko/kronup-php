@@ -6,7 +6,19 @@ layout: page
 
 # Api/ExperiencesApi
 
-[Experiences API Reference](https://api.kronup.com/#tag/Experiences)
+Method | Description
+------------- | -------------
+🔹 [**evaluate()**](#evaluate) | Evaluate myself
+🔹 [**evaluatePeer()**](#evaluatepeer) | Evaluate peers
+🔹 [**list()**](#list) | Fetch my experiences
+🔹 [**listPeer()**](#listpeer) | Fetch peer experiences
+🔹 [**read()**](#read) | Fetch my notion experience
+🔹 [**readPeer()**](#readpeer) | Fetch peer notion experience
+
+
+📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,19 +27,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->experiences();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**evaluate()**](#evaluate) | Evaluate myself
-[**evaluatePeer()**](#evaluatepeer) | Evaluate peers
-[**list()**](#list) | Fetch my experiences
-[**listPeer()**](#listpeer) | Fetch peer experiences
-[**read()**](#read) | Fetch my notion experience
-[**readPeer()**](#readpeer) | Fetch peer notion experience
-
-
 
 ## `evaluate()`
 
@@ -73,6 +72,17 @@ Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours in
 ---
 
 
+📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->experiences();
+```
 
 ## `evaluatePeer()`
 
@@ -120,6 +130,17 @@ Anonymously evaluate another peer on this notion. Only the last evaluation is ke
 ---
 
 
+📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->experiences();
+```
 
 ## `list()`
 
@@ -165,6 +186,17 @@ Retrieve all my experience models
 ---
 
 
+📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->experiences();
+```
 
 ## `listPeer()`
 
@@ -212,6 +244,17 @@ Retrieve all experience models for this user
 ---
 
 
+📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->experiences();
+```
 
 ## `read()`
 
@@ -255,6 +298,17 @@ Retrieve my experience model for specified Notion
 ---
 
 
+📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->experiences();
+```
 
 ## `readPeer()`
 

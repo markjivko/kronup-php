@@ -6,7 +6,19 @@ layout: page
 
 # Api/ValueItemsApi
 
-[Value items API Reference](https://api.kronup.com/#tag/Value-items)
+Method | Description
+------------- | -------------
+🔹 [**advance()**](#advance) | Advance value item
+🔹 [**create()**](#create) | Create value item
+🔹 [**delete()**](#delete) | Delete value item
+🔹 [**list()**](#list) | List value items
+🔹 [**read()**](#read) | Fetch value item
+🔹 [**update()**](#update) | Update value item
+
+
+📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,19 +27,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->valueItems();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**advance()**](#advance) | Advance value item
-[**create()**](#create) | Create value item
-[**delete()**](#delete) | Delete value item
-[**list()**](#list) | List value items
-[**read()**](#read) | Fetch value item
-[**update()**](#update) | Update value item
-
-
 
 ## `advance()`
 
@@ -75,6 +74,17 @@ Advance a value item
 ---
 
 
+📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->valueItems();
+```
 
 ## `create()`
 
@@ -122,6 +132,17 @@ Add a value item to planning
 ---
 
 
+📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->valueItems();
+```
 
 ## `delete()`
 
@@ -169,6 +190,17 @@ Delete a value item from the flow
 ---
 
 
+📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->valueItems();
+```
 
 ## `list()`
 
@@ -220,6 +252,17 @@ Get a list of value item models
 ---
 
 
+📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->valueItems();
+```
 
 ## `read()`
 
@@ -267,6 +310,17 @@ Retrieve value item model
 ---
 
 
+📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->valueItems();
+```
 
 ## `update()`
 

@@ -6,7 +6,16 @@ layout: page
 
 # Api/DeepContextApi
 
-[Deep Context API Reference](https://api.kronup.com/#tag/Deep-Context)
+Method | Description
+------------- | -------------
+🔹 [**delete()**](#delete) | Delete value item
+🔹 [**read()**](#read) | Fetch expanded value item
+🔹 [**search()**](#search) | Search value items
+
+
+📚 [Deep Context API Reference](https://api.kronup.com/#tag/Deep-Context)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,16 +24,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->deepContext();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**delete()**](#delete) | Delete value item
-[**read()**](#read) | Fetch expanded value item
-[**search()**](#search) | Search value items
-
-
 
 ## `delete()`
 
@@ -68,6 +67,17 @@ Delete a value item from Deep Context
 ---
 
 
+📚 [Deep Context API Reference](https://api.kronup.com/#tag/Deep-Context)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->deepContext();
+```
 
 ## `read()`
 
@@ -111,6 +121,17 @@ Retrieve value item model
 ---
 
 
+📚 [Deep Context API Reference](https://api.kronup.com/#tag/Deep-Context)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->deepContext();
+```
 
 ## `search()`
 

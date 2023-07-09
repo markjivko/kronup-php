@@ -6,7 +6,27 @@ layout: page
 
 # Api/TasksApi
 
-[Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+Method | Description
+------------- | -------------
+🔹 [**assign()**](#assign) | Assign to user
+🔹 [**create()**](#create) | Create task
+🔹 [**delete()**](#delete) | Delete task
+🔹 [**discoveryCreate()**](#discoverycreate) | Create discovery
+🔹 [**discoveryDelete()**](#discoverydelete) | Delete discovery
+🔹 [**discoveryUpdate()**](#discoveryupdate) | Update discovery
+🔹 [**feedbackCreate()**](#feedbackcreate) | Create feedback
+🔹 [**feedbackDelete()**](#feedbackdelete) | Delete feedback
+🔹 [**feedbackReply()**](#feedbackreply) | Reply to feedback
+🔹 [**feedbackUpdate()**](#feedbackupdate) | Update feedback
+🔹 [**list()**](#list) | List tasks
+🔹 [**listCandidates()**](#listcandidates) | List candidates
+🔹 [**read()**](#read) | Fetch task
+🔹 [**update()**](#update) | Update task
+
+
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,27 +35,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->tasks();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**assign()**](#assign) | Assign to user
-[**create()**](#create) | Create task
-[**delete()**](#delete) | Delete task
-[**discoveryCreate()**](#discoverycreate) | Create discovery
-[**discoveryDelete()**](#discoverydelete) | Delete discovery
-[**discoveryUpdate()**](#discoveryupdate) | Update discovery
-[**feedbackCreate()**](#feedbackcreate) | Create feedback
-[**feedbackDelete()**](#feedbackdelete) | Delete feedback
-[**feedbackReply()**](#feedbackreply) | Reply to feedback
-[**feedbackUpdate()**](#feedbackupdate) | Update feedback
-[**list()**](#list) | List tasks
-[**listCandidates()**](#listcandidates) | List candidates
-[**read()**](#read) | Fetch task
-[**update()**](#update) | Update task
-
-
 
 ## `assign()`
 
@@ -87,6 +86,17 @@ Assign task to user
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `create()`
 
@@ -136,6 +146,17 @@ Add a task to value item
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `delete()`
 
@@ -185,6 +206,17 @@ Delete a task from a value item
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `discoveryCreate()`
 
@@ -236,6 +268,17 @@ Add a discovery to task
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `discoveryDelete()`
 
@@ -287,6 +330,17 @@ Delete a task discovery
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `discoveryUpdate()`
 
@@ -340,6 +394,17 @@ Update a task discovery
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `feedbackCreate()`
 
@@ -391,6 +456,17 @@ Add a feedback to task
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `feedbackDelete()`
 
@@ -442,6 +518,17 @@ Delete a feedback for a task
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `feedbackReply()`
 
@@ -495,6 +582,17 @@ Update a reply to a task feedback
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `feedbackUpdate()`
 
@@ -548,6 +646,17 @@ Update a task feedback
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `list()`
 
@@ -599,6 +708,17 @@ Get a list of task models
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `listCandidates()`
 
@@ -648,6 +768,17 @@ List potential assignees for this task
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `read()`
 
@@ -697,6 +828,17 @@ Retrieve task model
 ---
 
 
+📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->tasks();
+```
 
 ## `update()`
 

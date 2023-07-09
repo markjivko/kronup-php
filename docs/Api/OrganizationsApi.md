@@ -6,7 +6,17 @@ layout: page
 
 # Api/OrganizationsApi
 
-[Organizations API Reference](https://api.kronup.com/#tag/Organizations)
+Method | Description
+------------- | -------------
+🔹 [**create()**](#create) | Create organization
+🔹 [**delete()**](#delete) | Delete organization
+🔹 [**logo()**](#logo) | Update logo
+🔹 [**update()**](#update) | Update organization
+
+
+📚 [Organizations API Reference](https://api.kronup.com/#tag/Organizations)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,17 +25,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->organizations();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**create()**](#create) | Create organization
-[**delete()**](#delete) | Delete organization
-[**logo()**](#logo) | Update logo
-[**update()**](#update) | Update organization
-
-
 
 ## `create()`
 
@@ -69,6 +68,17 @@ Add an organization owned by the current user
 ---
 
 
+📚 [Organizations API Reference](https://api.kronup.com/#tag/Organizations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->organizations();
+```
 
 ## `delete()`
 
@@ -112,6 +122,17 @@ Remove organization
 ---
 
 
+📚 [Organizations API Reference](https://api.kronup.com/#tag/Organizations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->organizations();
+```
 
 ## `logo()`
 
@@ -157,6 +178,17 @@ Update organization logo
 ---
 
 
+📚 [Organizations API Reference](https://api.kronup.com/#tag/Organizations)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->organizations();
+```
 
 ## `update()`
 

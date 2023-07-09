@@ -6,7 +6,21 @@ layout: page
 
 # Api/TeamsApi
 
-[Teams API Reference](https://api.kronup.com/#tag/Teams)
+Method | Description
+------------- | -------------
+🔹 [**assign()**](#assign) | Assign to team
+🔹 [**create()**](#create) | Create team
+🔹 [**delete()**](#delete) | Delete team
+🔹 [**listAll()**](#listall) | List all teams
+🔹 [**listUser()**](#listuser) | List user teams
+🔹 [**read()**](#read) | Fetch team
+🔹 [**unassign()**](#unassign) | Unassign from team
+🔹 [**update()**](#update) | Update team
+
+
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,21 +29,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->teams();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**assign()**](#assign) | Assign to team
-[**create()**](#create) | Create team
-[**delete()**](#delete) | Delete team
-[**listAll()**](#listall) | List all teams
-[**listUser()**](#listuser) | List user teams
-[**read()**](#read) | Fetch team
-[**unassign()**](#unassign) | Unassign from team
-[**update()**](#update) | Update team
-
-
 
 ## `assign()`
 
@@ -75,6 +74,17 @@ Assign a user to a team
 ---
 
 
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->teams();
+```
 
 ## `create()`
 
@@ -118,6 +128,17 @@ Create a new team to this organization
 ---
 
 
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->teams();
+```
 
 ## `delete()`
 
@@ -161,6 +182,17 @@ Delete a team and unassign all users
 ---
 
 
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->teams();
+```
 
 ## `listAll()`
 
@@ -206,6 +238,17 @@ Get a list of all organization team models
 ---
 
 
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->teams();
+```
 
 ## `listUser()`
 
@@ -253,6 +296,17 @@ Get a list of all teams this user is a part of
 ---
 
 
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->teams();
+```
 
 ## `read()`
 
@@ -296,6 +350,17 @@ Retrieve team model
 ---
 
 
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->teams();
+```
 
 ## `unassign()`
 
@@ -341,6 +406,17 @@ Remove a user from a team
 ---
 
 
+📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->teams();
+```
 
 ## `update()`
 

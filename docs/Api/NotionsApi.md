@@ -6,7 +6,18 @@ layout: page
 
 # Api/NotionsApi
 
-[Notions API Reference](https://api.kronup.com/#tag/Notions)
+Method | Description
+------------- | -------------
+🔹 [**create()**](#create) | Create notion
+🔹 [**delete()**](#delete) | Delete notion
+🔹 [**read()**](#read) | Fetch notion
+🔹 [**search()**](#search) | Search notions
+🔹 [**update()**](#update) | Update notion
+
+
+📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,18 +26,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->notions();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**create()**](#create) | Create notion
-[**delete()**](#delete) | Delete notion
-[**read()**](#read) | Fetch notion
-[**search()**](#search) | Search notions
-[**update()**](#update) | Update notion
-
-
 
 ## `create()`
 
@@ -70,6 +69,17 @@ Define a notion
 ---
 
 
+📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->notions();
+```
 
 ## `delete()`
 
@@ -113,6 +123,17 @@ Delete a notion model. This also removes the associated Experiences for all user
 ---
 
 
+📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->notions();
+```
 
 ## `read()`
 
@@ -156,6 +177,17 @@ Retrieve notion model
 ---
 
 
+📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->notions();
+```
 
 ## `search()`
 
@@ -203,6 +235,17 @@ Get a list of notion models
 ---
 
 
+📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->notions();
+```
 
 ## `update()`
 

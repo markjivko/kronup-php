@@ -6,7 +6,19 @@ layout: page
 
 # Api/BillingApi
 
-[Billing API Reference](https://api.kronup.com/#tag/Billing)
+Method | Description
+------------- | -------------
+🔹 [**invoiceList()**](#invoicelist) | List Invoices
+🔹 [**planCheckout()**](#plancheckout) | Prepare Checkout
+🔹 [**planList()**](#planlist) | List Price Plans
+🔹 [**subscriptionCancel()**](#subscriptioncancel) | Cancel Subscription
+🔹 [**subscriptionRead()**](#subscriptionread) | Fetch Subscription
+🔹 [**subscriptionUpdate()**](#subscriptionupdate) | Update Subscription
+
+
+📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,19 +27,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->billing();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**invoiceList()**](#invoicelist) | List Invoices
-[**planCheckout()**](#plancheckout) | Prepare Checkout
-[**planList()**](#planlist) | List Price Plans
-[**subscriptionCancel()**](#subscriptioncancel) | Cancel Subscription
-[**subscriptionRead()**](#subscriptionread) | Fetch Subscription
-[**subscriptionUpdate()**](#subscriptionupdate) | Update Subscription
-
-
 
 ## `invoiceList()`
 
@@ -73,6 +72,17 @@ Get a list of Invoices
 ---
 
 
+📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->billing();
+```
 
 ## `planCheckout()`
 
@@ -118,6 +128,17 @@ Prepare the checkout URL for this Price Plan. The link expires in 23 hours. This
 ---
 
 
+📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->billing();
+```
 
 ## `planList()`
 
@@ -157,6 +178,17 @@ Get a list of Price Plans
 ---
 
 
+📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->billing();
+```
 
 ## `subscriptionCancel()`
 
@@ -196,6 +228,17 @@ Cancel the Subscription for the current Organization
 ---
 
 
+📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->billing();
+```
 
 ## `subscriptionRead()`
 
@@ -235,6 +278,17 @@ Get the Subscription model for the current organization
 ---
 
 
+📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->billing();
+```
 
 ## `subscriptionUpdate()`
 

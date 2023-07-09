@@ -6,7 +6,20 @@ layout: page
 
 # Api/ChannelsApi
 
-[Channels API Reference](https://api.kronup.com/#tag/Channels)
+Method | Description
+------------- | -------------
+🔹 [**assign()**](#assign) | Assign to channel
+🔹 [**create()**](#create) | Create channel
+🔹 [**delete()**](#delete) | Delete channel
+🔹 [**listMembers()**](#listmembers) | List members
+🔹 [**listProspects()**](#listprospects) | Find prospects
+🔹 [**unassign()**](#unassign) | Unassign from channel
+🔹 [**update()**](#update) | Update channel
+
+
+📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,20 +28,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->channels();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**assign()**](#assign) | Assign to channel
-[**create()**](#create) | Create channel
-[**delete()**](#delete) | Delete channel
-[**listMembers()**](#listmembers) | List members
-[**listProspects()**](#listprospects) | Find prospects
-[**unassign()**](#unassign) | Unassign from channel
-[**update()**](#update) | Update channel
-
-
 
 ## `assign()`
 
@@ -76,6 +75,17 @@ Assign a user to a channel
 ---
 
 
+📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->channels();
+```
 
 ## `create()`
 
@@ -121,6 +131,17 @@ Create a new channel for a team
 ---
 
 
+📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->channels();
+```
 
 ## `delete()`
 
@@ -166,6 +187,17 @@ Delete a channel and unassign all users
 ---
 
 
+📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->channels();
+```
 
 ## `listMembers()`
 
@@ -215,6 +247,17 @@ List all channel members
 ---
 
 
+📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->channels();
+```
 
 ## `listProspects()`
 
@@ -262,6 +305,17 @@ List 10 channel prospects
 ---
 
 
+📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->channels();
+```
 
 ## `unassign()`
 
@@ -309,6 +363,17 @@ Remove a user from a channel; removing the user from the default channel is the 
 ---
 
 
+📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->channels();
+```
 
 ## `update()`
 

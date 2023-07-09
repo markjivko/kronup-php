@@ -6,7 +6,18 @@ layout: page
 
 # Api/AccountApi
 
-[Account API Reference](https://api.kronup.com/#tag/Account)
+Method | Description
+------------- | -------------
+🔹 [**avatar()**](#avatar) | Update avatar
+🔹 [**close()**](#close) | Close account
+🔹 [**eventsList()**](#eventslist) | Fetch events
+🔹 [**read()**](#read) | Fetch account
+🔹 [**update()**](#update) | Update account
+
+
+📚 [Account API Reference](https://api.kronup.com/#tag/Account)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,18 +26,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->account();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**avatar()**](#avatar) | Update avatar
-[**close()**](#close) | Close account
-[**eventsList()**](#eventslist) | Fetch events
-[**read()**](#read) | Fetch account
-[**update()**](#update) | Update account
-
-
 
 ## `avatar()`
 
@@ -70,6 +69,17 @@ Update account avatar
 ---
 
 
+📚 [Account API Reference](https://api.kronup.com/#tag/Account)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->account();
+```
 
 ## `close()`
 
@@ -109,6 +119,17 @@ Close the current account. This action is reversible only if you sign back in wi
 ---
 
 
+📚 [Account API Reference](https://api.kronup.com/#tag/Account)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->account();
+```
 
 ## `eventsList()`
 
@@ -156,6 +177,17 @@ Get a list of event models
 ---
 
 
+📚 [Account API Reference](https://api.kronup.com/#tag/Account)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->account();
+```
 
 ## `read()`
 
@@ -195,6 +227,17 @@ Retrieve the current account model
 ---
 
 
+📚 [Account API Reference](https://api.kronup.com/#tag/Account)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->account();
+```
 
 ## `update()`
 

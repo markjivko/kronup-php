@@ -6,7 +6,17 @@ layout: page
 
 # Api/UsersApi
 
-[Users API Reference](https://api.kronup.com/#tag/Users)
+Method | Description
+------------- | -------------
+🔹 [**list()**](#list) | List users
+🔹 [**read()**](#read) | Fetch user
+🔹 [**remove()**](#remove) | Remove user
+🔹 [**updateRole()**](#updaterole) | Update roles
+
+
+📚 [Users API Reference](https://api.kronup.com/#tag/Users)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,17 +25,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->users();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**list()**](#list) | List users
-[**read()**](#read) | Fetch user
-[**remove()**](#remove) | Remove user
-[**updateRole()**](#updaterole) | Update roles
-
-
 
 ## `list()`
 
@@ -71,6 +70,17 @@ Get a list of user models
 ---
 
 
+📚 [Users API Reference](https://api.kronup.com/#tag/Users)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->users();
+```
 
 ## `read()`
 
@@ -114,6 +124,17 @@ Retrieve user model
 ---
 
 
+📚 [Users API Reference](https://api.kronup.com/#tag/Users)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->users();
+```
 
 ## `remove()`
 
@@ -157,6 +178,17 @@ Remove user from Organization
 ---
 
 
+📚 [Users API Reference](https://api.kronup.com/#tag/Users)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->users();
+```
 
 ## `updateRole()`
 

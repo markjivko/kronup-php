@@ -6,7 +6,18 @@ layout: page
 
 # Api/AssumptionsApi
 
-[Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
+Method | Description
+------------- | -------------
+🔹 [**create()**](#create) | Create assumption
+🔹 [**delete()**](#delete) | Delete assumption
+🔹 [**experiment()**](#experiment) | Experiment
+🔹 [**list()**](#list) | List assumptions
+🔹 [**update()**](#update) | Update assumption
+
+
+📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,18 +26,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->assumptions();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**create()**](#create) | Create assumption
-[**delete()**](#delete) | Delete assumption
-[**experiment()**](#experiment) | Experiment
-[**list()**](#list) | List assumptions
-[**update()**](#update) | Update assumption
-
-
 
 ## `create()`
 
@@ -76,6 +75,17 @@ Add an assumption to value item
 ---
 
 
+📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->assumptions();
+```
 
 ## `delete()`
 
@@ -125,6 +135,17 @@ Delete an assumption from a value item
 ---
 
 
+📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->assumptions();
+```
 
 ## `experiment()`
 
@@ -176,6 +197,17 @@ Update experiment details
 ---
 
 
+📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->assumptions();
+```
 
 ## `list()`
 
@@ -227,6 +259,17 @@ Get a list of assumption models
 ---
 
 
+📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->assumptions();
+```
 
 ## `update()`
 

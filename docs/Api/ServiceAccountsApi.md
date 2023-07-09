@@ -6,7 +6,19 @@ layout: page
 
 # Api/ServiceAccountsApi
 
-[Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
+Method | Description
+------------- | -------------
+🔹 [**close()**](#close) | Close service account
+🔹 [**create()**](#create) | Create service account
+🔹 [**list()**](#list) | List service acounts
+🔹 [**read()**](#read) | Fetch service account
+🔹 [**regenerate()**](#regenerate) | Regenerate
+🔹 [**update()**](#update) | Update service account
+
+
+📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
+
+## Getting started
 
 ```php
 // Place your API Key 👇 here
@@ -15,19 +27,6 @@ $sdk = new \Kronup\Sdk();
 // API Call
 $sdk->api()->serviceAccounts();
 ```
-
-## Methods
-
-Method | Description
-------------- | -------------
-[**close()**](#close) | Close service account
-[**create()**](#create) | Create service account
-[**list()**](#list) | List service acounts
-[**read()**](#read) | Fetch service account
-[**regenerate()**](#regenerate) | Regenerate
-[**update()**](#update) | Update service account
-
-
 
 ## `close()`
 
@@ -71,6 +70,17 @@ Close this service account. This action is always reversible. You can re-open it
 ---
 
 
+📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->serviceAccounts();
+```
 
 ## `create()`
 
@@ -114,6 +124,17 @@ Create a new service account for this Organization
 ---
 
 
+📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->serviceAccounts();
+```
 
 ## `list()`
 
@@ -159,6 +180,17 @@ Get a list of all service account models, including those that were closed
 ---
 
 
+📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->serviceAccounts();
+```
 
 ## `read()`
 
@@ -202,6 +234,17 @@ Retrieve service account model
 ---
 
 
+📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->serviceAccounts();
+```
 
 ## `regenerate()`
 
@@ -245,6 +288,17 @@ Regenerate service account JSON Web Token and re-open service account if previou
 ---
 
 
+📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
+
+## Getting started
+
+```php
+// Place your API Key 👇 here
+$sdk = new \Kronup\Sdk();
+
+// API Call
+$sdk->api()->serviceAccounts();
+```
 
 ## `update()`
 
