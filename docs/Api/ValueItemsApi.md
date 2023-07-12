@@ -31,11 +31,7 @@ $sdk->api()->valueItems();
 
 ## `advance()`
 
-
-
-> Advance value item
-
-Advance a value item
+> Value items Advance a value item
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -75,11 +71,7 @@ Name | Type | Description
 
 ## `create()`
 
-
-
-> Create value item
-
-Add a value item to planning
+> Value items Add a value item to planning
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -119,11 +111,7 @@ Name | Type | Description
 
 ## `delete()`
 
-
-
-> Delete value item
-
-Delete a value item from the flow
+> Value items Delete a value item from the flow
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -163,11 +151,7 @@ Name | Type | Description
 
 ## `list()`
 
-
-
-> List value items
-
-Get a list of value item models
+> Value items Get a list of value item models
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -211,11 +195,7 @@ Name | Type | Description
 
 ## `read()`
 
-
-
-> Fetch value item
-
-Retrieve value item model
+> Value items Retrieve value item model
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -255,11 +235,7 @@ Name | Type | Description
 
 ## `update()`
 
-
-
-> Update value item
-
-Update value item details
+> Value items Update value item details
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

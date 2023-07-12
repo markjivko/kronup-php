@@ -30,11 +30,7 @@ $sdk->api()->notions();
 
 ## `create()`
 
-
-
-> Create notion
-
-Define a notion
+> Notions Define a notion
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -70,11 +66,7 @@ Name | Type | Description
 
 ## `delete()`
 
-
-
-> Delete notion
-
-Delete a notion model. This also removes the associated Experiences for all users in this Organization.
+> Notions Delete a notion model. This also removes the associated Experiences for all users in this Organization.
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -110,11 +102,7 @@ Name | Type | Description
 
 ## `read()`
 
-
-
-> Fetch notion
-
-Retrieve notion model
+> Notions Retrieve notion model
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -150,11 +138,7 @@ Name | Type | Description
 
 ## `search()`
 
-
-
-> Search notions
-
-Get a list of notion models
+> Notions Get a list of notion models
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -194,11 +178,7 @@ Name | Type | Description
 
 ## `update()`
 
-
-
-> Update notion
-
-Update notion
+> Notions Update notion
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

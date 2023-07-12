@@ -30,11 +30,7 @@ $sdk->api()->assumptions();
 
 ## `create()`
 
-
-
-> Create assumption
-
-Add an assumption to value item
+> Assumptions Add an assumption to value item
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -76,11 +72,7 @@ Name | Type | Description
 
 ## `delete()`
 
-
-
-> Delete assumption
-
-Delete an assumption from a value item
+> Assumptions Delete an assumption from a value item
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -122,11 +114,7 @@ Name | Type | Description
 
 ## `experiment()`
 
-
-
-> Experiment
-
-Update experiment details
+> Assumptions Update experiment details
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -170,11 +158,7 @@ Name | Type | Description
 
 ## `list()`
 
-
-
-> List assumptions
-
-Get a list of assumption models
+> Assumptions Get a list of assumption models
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -218,11 +202,7 @@ Name | Type | Description
 
 ## `update()`
 
-
-
-> Update assumption
-
-Update assumption details
+> Assumptions Update assumption details
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

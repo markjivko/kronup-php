@@ -31,11 +31,7 @@ $sdk->api()->billing();
 
 ## `invoiceList()`
 
-
-
-> List Invoices
-
-Get a list of Invoices
+> Billing Get a list of Invoices
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -73,11 +69,7 @@ Name | Type | Description
 
 ## `planCheckout()`
 
-
-
-> Prepare Checkout
-
-Prepare the checkout URL for this Price Plan. The link expires in 23 hours. This method fails if a Subscription is associated with this Organization.
+> Billing Prepare the checkout URL for this Price Plan. The link expires in 23 hours. This method fails if a Subscription is associated with this Organization.
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -115,11 +107,7 @@ Name | Type | Description
 
 ## `planList()`
 
-
-
-> List Price Plans
-
-Get a list of Price Plans
+> Billing Get a list of Price Plans
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -151,11 +139,7 @@ This endpoint does not need any parameter.
 
 ## `subscriptionCancel()`
 
-
-
-> Cancel Subscription
-
-Cancel the Subscription for the current Organization
+> Billing Cancel the Subscription for the current Organization
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -187,11 +171,7 @@ This endpoint does not need any parameter.
 
 ## `subscriptionRead()`
 
-
-
-> Fetch Subscription
-
-Get the Subscription model for the current organization
+> Billing Get the Subscription model for the current organization
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -223,11 +203,7 @@ This endpoint does not need any parameter.
 
 ## `subscriptionUpdate()`
 
-
-
-> Update Subscription
-
-Update the Subscription Price Plan for the current Organization
+> Billing Update the Subscription Price Plan for the current Organization
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

@@ -32,11 +32,7 @@ $sdk->api()->channels();
 
 ## `assign()`
 
-
-
-> Assign to channel
-
-Assign a user to a channel
+> Channels Assign a user to a channel
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -76,11 +72,7 @@ Name | Type | Description
 
 ## `create()`
 
-
-
-> Create channel
-
-Create a new channel for a team
+> Channels Create a new channel for a team
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -118,11 +110,7 @@ Name | Type | Description
 
 ## `delete()`
 
-
-
-> Delete channel
-
-Delete a channel and unassign all users
+> Channels Delete a channel and unassign all users
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -160,11 +148,7 @@ Name | Type | Description
 
 ## `listMembers()`
 
-
-
-> List members
-
-List all channel members
+> Channels List all channel members
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -206,11 +190,7 @@ Name | Type | Description
 
 ## `listProspects()`
 
-
-
-> Find prospects
-
-List 10 channel prospects
+> Channels List 10 channel prospects
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -250,11 +230,7 @@ Name | Type | Description
 
 ## `unassign()`
 
-
-
-> Unassign from channel
-
-Remove a user from a channel; removing the user from the default channel is the same as removing the user from the team
+> Channels Remove a user from a channel; removing the user from the default channel is the same as removing the user from the team
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -294,11 +270,7 @@ Name | Type | Description
 
 ## `update()`
 
-
-
-> Update channel
-
-Update channel details for a team
+> Channels Update channel details for a team
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
