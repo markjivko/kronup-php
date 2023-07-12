@@ -29,10 +29,13 @@ $sdk->api()->deepContext();
 ## `delete()`
 
 
-### Example
+
+> Delete value item
+
+Delete a value item from Deep Context
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/delete.php){: .btn .mt-4}
 
@@ -58,12 +61,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete value item
-
-Delete a value item from Deep Context
-
 [🔺 Back to top](#top)
 
 ---
@@ -72,10 +69,13 @@ Delete a value item from Deep Context
 ## `read()`
 
 
-### Example
+
+> Fetch expanded value item
+
+Retrieve value item model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/read.php){: .btn .mt-4}
 
@@ -101,12 +101,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ValueItemExpanded**](../../Model/ValueItemExpanded)
 
-### Description
-
-> Fetch expanded value item
-
-Retrieve value item model
-
 [🔺 Back to top](#top)
 
 ---
@@ -115,10 +109,13 @@ Retrieve value item model
 ## `search()`
 
 
-### Example
+
+> Search value items
+
+Get a list of value item models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/search.php){: .btn .mt-4}
 
@@ -147,12 +144,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\DeepContextList**](../../Model/DeepContextList)
-
-### Description
-
-> Search value items
-
-Get a list of value item models
 
 [🔺 Back to top](#top)
 

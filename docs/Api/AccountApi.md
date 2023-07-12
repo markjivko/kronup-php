@@ -31,10 +31,13 @@ $sdk->api()->account();
 ## `avatar()`
 
 
-### Example
+
+> Update avatar
+
+Update account avatar
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **avatar.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/avatar.php){: .btn .mt-4}
 
@@ -60,12 +63,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Account**](../../Model/Account)
 
-### Description
-
-> Update avatar
-
-Update account avatar
-
 [🔺 Back to top](#top)
 
 ---
@@ -74,10 +71,13 @@ Update account avatar
 ## `close()`
 
 
-### Example
+
+> Close account
+
+Close the current account. This action is reversible only if you sign back in within 14 days. You must first abandon or delete all the organizations you own to perform this action.
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/close.php){: .btn .mt-4}
 
@@ -99,12 +99,6 @@ This endpoint does not need any parameter.
 
 **bool**
 
-### Description
-
-> Close account
-
-Close the current account. This action is reversible only if you sign back in within 14 days. You must first abandon or delete all the organizations you own to perform this action.
-
 [🔺 Back to top](#top)
 
 ---
@@ -113,10 +107,13 @@ Close the current account. This action is reversible only if you sign back in wi
 ## `eventsList()`
 
 
-### Example
+
+> Fetch events
+
+Get a list of event models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **eventsList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/eventsList.php){: .btn .mt-4}
 
@@ -146,12 +143,6 @@ Name | Type | Description
 
 [**\Kronup\Model\EventsList**](../../Model/EventsList)
 
-### Description
-
-> Fetch events
-
-Get a list of event models
-
 [🔺 Back to top](#top)
 
 ---
@@ -160,10 +151,13 @@ Get a list of event models
 ## `read()`
 
 
-### Example
+
+> Fetch account
+
+Retrieve the current account model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/read.php){: .btn .mt-4}
 
@@ -185,12 +179,6 @@ This endpoint does not need any parameter.
 
 [**\Kronup\Model\Account**](../../Model/Account)
 
-### Description
-
-> Fetch account
-
-Retrieve the current account model
-
 [🔺 Back to top](#top)
 
 ---
@@ -199,10 +187,13 @@ Retrieve the current account model
 ## `update()`
 
 
-### Example
+
+> Update account
+
+Update the current account model.
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/update.php){: .btn .mt-4}
 
@@ -227,12 +218,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Account**](../../Model/Account)
-
-### Description
-
-> Update account
-
-Update the current account model.
 
 [🔺 Back to top](#top)
 

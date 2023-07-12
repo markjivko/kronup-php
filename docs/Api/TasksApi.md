@@ -40,10 +40,13 @@ $sdk->api()->tasks();
 ## `assign()`
 
 
-### Example
+
+> Assign to user
+
+Assign task to user
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/assign.php){: .btn .mt-4}
 
@@ -77,12 +80,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Task**](../../Model/Task)
 
-### Description
-
-> Assign to user
-
-Assign task to user
-
 [🔺 Back to top](#top)
 
 ---
@@ -91,10 +88,13 @@ Assign task to user
 ## `create()`
 
 
-### Example
+
+> Create task
+
+Add a task to value item
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/create.php){: .btn .mt-4}
 
@@ -126,12 +126,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
-### Description
-
-> Create task
-
-Add a task to value item
-
 [🔺 Back to top](#top)
 
 ---
@@ -140,10 +134,13 @@ Add a task to value item
 ## `delete()`
 
 
-### Example
+
+> Delete task
+
+Delete a task from a value item
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/delete.php){: .btn .mt-4}
 
@@ -175,12 +172,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete task
-
-Delete a task from a value item
-
 [🔺 Back to top](#top)
 
 ---
@@ -189,10 +180,13 @@ Delete a task from a value item
 ## `discoveryCreate()`
 
 
-### Example
+
+> Create discovery
+
+Add a discovery to task
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **discoveryCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryCreate.php){: .btn .mt-4}
 
@@ -226,12 +220,6 @@ Name | Type | Description
 
 [**\Kronup\Model\MinuteDiscovery**](../../Model/MinuteDiscovery)
 
-### Description
-
-> Create discovery
-
-Add a discovery to task
-
 [🔺 Back to top](#top)
 
 ---
@@ -240,10 +228,13 @@ Add a discovery to task
 ## `discoveryDelete()`
 
 
-### Example
+
+> Delete discovery
+
+Delete a task discovery
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **discoveryDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryDelete.php){: .btn .mt-4}
 
@@ -277,12 +268,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete discovery
-
-Delete a task discovery
-
 [🔺 Back to top](#top)
 
 ---
@@ -291,10 +276,13 @@ Delete a task discovery
 ## `discoveryUpdate()`
 
 
-### Example
+
+> Update discovery
+
+Update a task discovery
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **discoveryUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryUpdate.php){: .btn .mt-4}
 
@@ -330,12 +318,6 @@ Name | Type | Description
 
 [**\Kronup\Model\MinuteDiscovery**](../../Model/MinuteDiscovery)
 
-### Description
-
-> Update discovery
-
-Update a task discovery
-
 [🔺 Back to top](#top)
 
 ---
@@ -344,10 +326,13 @@ Update a task discovery
 ## `feedbackCreate()`
 
 
-### Example
+
+> Create feedback
+
+Add a feedback to task
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **feedbackCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackCreate.php){: .btn .mt-4}
 
@@ -381,12 +366,6 @@ Name | Type | Description
 
 [**\Kronup\Model\MinuteFeedback**](../../Model/MinuteFeedback)
 
-### Description
-
-> Create feedback
-
-Add a feedback to task
-
 [🔺 Back to top](#top)
 
 ---
@@ -395,10 +374,13 @@ Add a feedback to task
 ## `feedbackDelete()`
 
 
-### Example
+
+> Delete feedback
+
+Delete a feedback for a task
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **feedbackDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackDelete.php){: .btn .mt-4}
 
@@ -432,12 +414,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete feedback
-
-Delete a feedback for a task
-
 [🔺 Back to top](#top)
 
 ---
@@ -446,10 +422,13 @@ Delete a feedback for a task
 ## `feedbackReply()`
 
 
-### Example
+
+> Reply to feedback
+
+Update a reply to a task feedback
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **feedbackReply.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackReply.php){: .btn .mt-4}
 
@@ -485,12 +464,6 @@ Name | Type | Description
 
 [**\Kronup\Model\MinuteFeedback**](../../Model/MinuteFeedback)
 
-### Description
-
-> Reply to feedback
-
-Update a reply to a task feedback
-
 [🔺 Back to top](#top)
 
 ---
@@ -499,10 +472,13 @@ Update a reply to a task feedback
 ## `feedbackUpdate()`
 
 
-### Example
+
+> Update feedback
+
+Update a task feedback
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **feedbackUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackUpdate.php){: .btn .mt-4}
 
@@ -538,12 +514,6 @@ Name | Type | Description
 
 [**\Kronup\Model\MinuteFeedback**](../../Model/MinuteFeedback)
 
-### Description
-
-> Update feedback
-
-Update a task feedback
-
 [🔺 Back to top](#top)
 
 ---
@@ -552,10 +522,13 @@ Update a task feedback
 ## `list()`
 
 
-### Example
+
+> List tasks
+
+Get a list of task models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/list.php){: .btn .mt-4}
 
@@ -589,12 +562,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TasksList**](../../Model/TasksList)
 
-### Description
-
-> List tasks
-
-Get a list of task models
-
 [🔺 Back to top](#top)
 
 ---
@@ -603,10 +570,13 @@ Get a list of task models
 ## `listCandidates()`
 
 
-### Example
+
+> List candidates
+
+List potential assignees for this task
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **listCandidates.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/listCandidates.php){: .btn .mt-4}
 
@@ -638,12 +608,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TaskCandidatesList**](../../Model/TaskCandidatesList)
 
-### Description
-
-> List candidates
-
-List potential assignees for this task
-
 [🔺 Back to top](#top)
 
 ---
@@ -652,10 +616,13 @@ List potential assignees for this task
 ## `read()`
 
 
-### Example
+
+> Fetch task
+
+Retrieve task model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/read.php){: .btn .mt-4}
 
@@ -687,12 +654,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TaskExpanded**](../../Model/TaskExpanded)
 
-### Description
-
-> Fetch task
-
-Retrieve task model
-
 [🔺 Back to top](#top)
 
 ---
@@ -701,10 +662,13 @@ Retrieve task model
 ## `update()`
 
 
-### Example
+
+> Update task
+
+Update task details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/update.php){: .btn .mt-4}
 
@@ -737,12 +701,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Task**](../../Model/Task)
-
-### Description
-
-> Update task
-
-Update task details
 
 [🔺 Back to top](#top)
 

@@ -33,10 +33,13 @@ $sdk->api()->channels();
 ## `assign()`
 
 
-### Example
+
+> Assign to channel
+
+Assign a user to a channel
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/assign.php){: .btn .mt-4}
 
@@ -66,12 +69,6 @@ Name | Type | Description
 
 [**\Kronup\Model\User**](../../Model/User)
 
-### Description
-
-> Assign to channel
-
-Assign a user to a channel
-
 [🔺 Back to top](#top)
 
 ---
@@ -80,10 +77,13 @@ Assign a user to a channel
 ## `create()`
 
 
-### Example
+
+> Create channel
+
+Create a new channel for a team
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/create.php){: .btn .mt-4}
 
@@ -111,12 +111,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
-### Description
-
-> Create channel
-
-Create a new channel for a team
-
 [🔺 Back to top](#top)
 
 ---
@@ -125,10 +119,13 @@ Create a new channel for a team
 ## `delete()`
 
 
-### Example
+
+> Delete channel
+
+Delete a channel and unassign all users
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/delete.php){: .btn .mt-4}
 
@@ -156,12 +153,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete channel
-
-Delete a channel and unassign all users
-
 [🔺 Back to top](#top)
 
 ---
@@ -170,10 +161,13 @@ Delete a channel and unassign all users
 ## `listMembers()`
 
 
-### Example
+
+> List members
+
+List all channel members
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **listMembers.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listMembers.php){: .btn .mt-4}
 
@@ -205,12 +199,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ChannelMembersList**](../../Model/ChannelMembersList)
 
-### Description
-
-> List members
-
-List all channel members
-
 [🔺 Back to top](#top)
 
 ---
@@ -219,10 +207,13 @@ List all channel members
 ## `listProspects()`
 
 
-### Example
+
+> Find prospects
+
+List 10 channel prospects
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **listProspects.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listProspects.php){: .btn .mt-4}
 
@@ -252,12 +243,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ChannelProspectsList**](../../Model/ChannelProspectsList)
 
-### Description
-
-> Find prospects
-
-List 10 channel prospects
-
 [🔺 Back to top](#top)
 
 ---
@@ -266,10 +251,13 @@ List 10 channel prospects
 ## `unassign()`
 
 
-### Example
+
+> Unassign from channel
+
+Remove a user from a channel; removing the user from the default channel is the same as removing the user from the team
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/unassign.php){: .btn .mt-4}
 
@@ -299,12 +287,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Unassign from channel
-
-Remove a user from a channel; removing the user from the default channel is the same as removing the user from the team
-
 [🔺 Back to top](#top)
 
 ---
@@ -313,10 +295,13 @@ Remove a user from a channel; removing the user from the default channel is the 
 ## `update()`
 
 
-### Example
+
+> Update channel
+
+Update channel details for a team
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/update.php){: .btn .mt-4}
 
@@ -345,12 +330,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
-
-### Description
-
-> Update channel
-
-Update channel details for a team
 
 [🔺 Back to top](#top)
 

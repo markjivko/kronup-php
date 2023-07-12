@@ -32,10 +32,13 @@ $sdk->api()->invitations();
 ## `accept()`
 
 
-### Example
+
+> Accept invitation
+
+Accept an invitation to join an organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **accept.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/accept.php){: .btn .mt-4}
 
@@ -61,12 +64,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Invitation**](../../Model/Invitation)
 
-### Description
-
-> Accept invitation
-
-Accept an invitation to join an organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -75,10 +72,13 @@ Accept an invitation to join an organization
 ## `create()`
 
 
-### Example
+
+> Create invitation
+
+Create a new invitation to this organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/create.php){: .btn .mt-4}
 
@@ -104,12 +104,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Invitation**](../../Model/Invitation)
 
-### Description
-
-> Create invitation
-
-Create a new invitation to this organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -118,10 +112,13 @@ Create a new invitation to this organization
 ## `delete()`
 
 
-### Example
+
+> Delete invitation
+
+Delete invitation
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/delete.php){: .btn .mt-4}
 
@@ -147,12 +144,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete invitation
-
-Delete invitation
-
 [🔺 Back to top](#top)
 
 ---
@@ -161,10 +152,13 @@ Delete invitation
 ## `list()`
 
 
-### Example
+
+> List invitations
+
+Get a list of invitation models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/list.php){: .btn .mt-4}
 
@@ -192,12 +186,6 @@ Name | Type | Description
 
 [**\Kronup\Model\InvitationsList**](../../Model/InvitationsList)
 
-### Description
-
-> List invitations
-
-Get a list of invitation models
-
 [🔺 Back to top](#top)
 
 ---
@@ -206,10 +194,13 @@ Get a list of invitation models
 ## `read()`
 
 
-### Example
+
+> Fetch invitation
+
+Retrieve invitation model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/read.php){: .btn .mt-4}
 
@@ -235,12 +226,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Invitation**](../../Model/Invitation)
 
-### Description
-
-> Fetch invitation
-
-Retrieve invitation model
-
 [🔺 Back to top](#top)
 
 ---
@@ -249,10 +234,13 @@ Retrieve invitation model
 ## `update()`
 
 
-### Example
+
+> Update invitation
+
+Update invitation details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/update.php){: .btn .mt-4}
 
@@ -279,12 +267,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Invitation**](../../Model/Invitation)
-
-### Description
-
-> Update invitation
-
-Update invitation details
 
 [🔺 Back to top](#top)
 

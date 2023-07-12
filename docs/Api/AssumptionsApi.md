@@ -31,10 +31,13 @@ $sdk->api()->assumptions();
 ## `create()`
 
 
-### Example
+
+> Create assumption
+
+Add an assumption to value item
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/create.php){: .btn .mt-4}
 
@@ -66,12 +69,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Assumption**](../../Model/Assumption)
 
-### Description
-
-> Create assumption
-
-Add an assumption to value item
-
 [🔺 Back to top](#top)
 
 ---
@@ -80,10 +77,13 @@ Add an assumption to value item
 ## `delete()`
 
 
-### Example
+
+> Delete assumption
+
+Delete an assumption from a value item
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/delete.php){: .btn .mt-4}
 
@@ -115,12 +115,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete assumption
-
-Delete an assumption from a value item
-
 [🔺 Back to top](#top)
 
 ---
@@ -129,10 +123,13 @@ Delete an assumption from a value item
 ## `experiment()`
 
 
-### Example
+
+> Experiment
+
+Update experiment details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **experiment.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/experiment.php){: .btn .mt-4}
 
@@ -166,12 +163,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Assumption**](../../Model/Assumption)
 
-### Description
-
-> Experiment
-
-Update experiment details
-
 [🔺 Back to top](#top)
 
 ---
@@ -180,10 +171,13 @@ Update experiment details
 ## `list()`
 
 
-### Example
+
+> List assumptions
+
+Get a list of assumption models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/list.php){: .btn .mt-4}
 
@@ -217,12 +211,6 @@ Name | Type | Description
 
 [**\Kronup\Model\AssumptionsList**](../../Model/AssumptionsList)
 
-### Description
-
-> List assumptions
-
-Get a list of assumption models
-
 [🔺 Back to top](#top)
 
 ---
@@ -231,10 +219,13 @@ Get a list of assumption models
 ## `update()`
 
 
-### Example
+
+> Update assumption
+
+Update assumption details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/update.php){: .btn .mt-4}
 
@@ -267,12 +258,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Assumption**](../../Model/Assumption)
-
-### Description
-
-> Update assumption
-
-Update assumption details
 
 [🔺 Back to top](#top)
 

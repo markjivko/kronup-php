@@ -32,10 +32,13 @@ $sdk->api()->valueItems();
 ## `advance()`
 
 
-### Example
+
+> Advance value item
+
+Advance a value item
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **advance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/advance.php){: .btn .mt-4}
 
@@ -65,12 +68,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ValueItem**](../../Model/ValueItem)
 
-### Description
-
-> Advance value item
-
-Advance a value item
-
 [🔺 Back to top](#top)
 
 ---
@@ -79,10 +76,13 @@ Advance a value item
 ## `create()`
 
 
-### Example
+
+> Create value item
+
+Add a value item to planning
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/create.php){: .btn .mt-4}
 
@@ -112,12 +112,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ValueItem**](../../Model/ValueItem)
 
-### Description
-
-> Create value item
-
-Add a value item to planning
-
 [🔺 Back to top](#top)
 
 ---
@@ -126,10 +120,13 @@ Add a value item to planning
 ## `delete()`
 
 
-### Example
+
+> Delete value item
+
+Delete a value item from the flow
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/delete.php){: .btn .mt-4}
 
@@ -159,12 +156,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete value item
-
-Delete a value item from the flow
-
 [🔺 Back to top](#top)
 
 ---
@@ -173,10 +164,13 @@ Delete a value item from the flow
 ## `list()`
 
 
-### Example
+
+> List value items
+
+Get a list of value item models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/list.php){: .btn .mt-4}
 
@@ -210,12 +204,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ValueItemsList**](../../Model/ValueItemsList)
 
-### Description
-
-> List value items
-
-Get a list of value item models
-
 [🔺 Back to top](#top)
 
 ---
@@ -224,10 +212,13 @@ Get a list of value item models
 ## `read()`
 
 
-### Example
+
+> Fetch value item
+
+Retrieve value item model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/read.php){: .btn .mt-4}
 
@@ -257,12 +248,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ValueItem**](../../Model/ValueItem)
 
-### Description
-
-> Fetch value item
-
-Retrieve value item model
-
 [🔺 Back to top](#top)
 
 ---
@@ -271,10 +256,13 @@ Retrieve value item model
 ## `update()`
 
 
-### Example
+
+> Update value item
+
+Update value item details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/update.php){: .btn .mt-4}
 
@@ -305,12 +293,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\ValueItem**](../../Model/ValueItem)
-
-### Description
-
-> Update value item
-
-Update value item details
 
 [🔺 Back to top](#top)
 

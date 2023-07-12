@@ -32,10 +32,13 @@ $sdk->api()->serviceAccounts();
 ## `close()`
 
 
-### Example
+
+> Close service account
+
+Close this service account. This action is always reversible. You can re-open it anytime with "regenerate".
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/close.php){: .btn .mt-4}
 
@@ -61,12 +64,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ServiceAccount**](../../Model/ServiceAccount)
 
-### Description
-
-> Close service account
-
-Close this service account. This action is always reversible. You can re-open it anytime with "regenerate".
-
 [🔺 Back to top](#top)
 
 ---
@@ -75,10 +72,13 @@ Close this service account. This action is always reversible. You can re-open it
 ## `create()`
 
 
-### Example
+
+> Create service account
+
+Create a new service account for this Organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/create.php){: .btn .mt-4}
 
@@ -104,12 +104,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ServiceAccount**](../../Model/ServiceAccount)
 
-### Description
-
-> Create service account
-
-Create a new service account for this Organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -118,10 +112,13 @@ Create a new service account for this Organization
 ## `list()`
 
 
-### Example
+
+> List service acounts
+
+Get a list of all service account models, including those that were closed
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/list.php){: .btn .mt-4}
 
@@ -149,12 +146,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ServiceAccountsList**](../../Model/ServiceAccountsList)
 
-### Description
-
-> List service acounts
-
-Get a list of all service account models, including those that were closed
-
 [🔺 Back to top](#top)
 
 ---
@@ -163,10 +154,13 @@ Get a list of all service account models, including those that were closed
 ## `read()`
 
 
-### Example
+
+> Fetch service account
+
+Retrieve service account model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/read.php){: .btn .mt-4}
 
@@ -192,12 +186,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ServiceAccount**](../../Model/ServiceAccount)
 
-### Description
-
-> Fetch service account
-
-Retrieve service account model
-
 [🔺 Back to top](#top)
 
 ---
@@ -206,10 +194,13 @@ Retrieve service account model
 ## `regenerate()`
 
 
-### Example
+
+> Regenerate
+
+Regenerate service account JSON Web Token and re-open service account if previously closed
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **regenerate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/regenerate.php){: .btn .mt-4}
 
@@ -235,12 +226,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ServiceAccount**](../../Model/ServiceAccount)
 
-### Description
-
-> Regenerate
-
-Regenerate service account JSON Web Token and re-open service account if previously closed
-
 [🔺 Back to top](#top)
 
 ---
@@ -249,10 +234,13 @@ Regenerate service account JSON Web Token and re-open service account if previou
 ## `update()`
 
 
-### Example
+
+> Update service account
+
+Update service account details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/update.php){: .btn .mt-4}
 
@@ -279,12 +267,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\ServiceAccount**](../../Model/ServiceAccount)
-
-### Description
-
-> Update service account
-
-Update service account details
 
 [🔺 Back to top](#top)
 

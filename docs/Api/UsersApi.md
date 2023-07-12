@@ -30,10 +30,13 @@ $sdk->api()->users();
 ## `list()`
 
 
-### Example
+
+> List users
+
+Get a list of user models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/list.php){: .btn .mt-4}
 
@@ -61,12 +64,6 @@ Name | Type | Description
 
 [**\Kronup\Model\UsersList**](../../Model/UsersList)
 
-### Description
-
-> List users
-
-Get a list of user models
-
 [🔺 Back to top](#top)
 
 ---
@@ -75,10 +72,13 @@ Get a list of user models
 ## `read()`
 
 
-### Example
+
+> Fetch user
+
+Retrieve user model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/read.php){: .btn .mt-4}
 
@@ -104,12 +104,6 @@ Name | Type | Description
 
 [**\Kronup\Model\User**](../../Model/User)
 
-### Description
-
-> Fetch user
-
-Retrieve user model
-
 [🔺 Back to top](#top)
 
 ---
@@ -118,10 +112,13 @@ Retrieve user model
 ## `remove()`
 
 
-### Example
+
+> Remove user
+
+Remove user from Organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **remove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/remove.php){: .btn .mt-4}
 
@@ -147,12 +144,6 @@ Name | Type | Description
 
 [**\Kronup\Model\User**](../../Model/User)
 
-### Description
-
-> Remove user
-
-Remove user from Organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -161,10 +152,13 @@ Remove user from Organization
 ## `updateRole()`
 
 
-### Example
+
+> Update roles
+
+Update the user model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **updateRole.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/updateRole.php){: .btn .mt-4}
 
@@ -191,12 +185,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\UserRoles**](../../Model/UserRoles)
-
-### Description
-
-> Update roles
-
-Update the user model
 
 [🔺 Back to top](#top)
 

@@ -34,10 +34,13 @@ $sdk->api()->teams();
 ## `assign()`
 
 
-### Example
+
+> Assign to team
+
+Assign a user to a team
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/assign.php){: .btn .mt-4}
 
@@ -65,12 +68,6 @@ Name | Type | Description
 
 [**\Kronup\Model\User**](../../Model/User)
 
-### Description
-
-> Assign to team
-
-Assign a user to a team
-
 [🔺 Back to top](#top)
 
 ---
@@ -79,10 +76,13 @@ Assign a user to a team
 ## `create()`
 
 
-### Example
+
+> Create team
+
+Create a new team to this organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/create.php){: .btn .mt-4}
 
@@ -108,12 +108,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
-### Description
-
-> Create team
-
-Create a new team to this organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -122,10 +116,13 @@ Create a new team to this organization
 ## `delete()`
 
 
-### Example
+
+> Delete team
+
+Delete a team and unassign all users
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/delete.php){: .btn .mt-4}
 
@@ -151,12 +148,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete team
-
-Delete a team and unassign all users
-
 [🔺 Back to top](#top)
 
 ---
@@ -165,10 +156,13 @@ Delete a team and unassign all users
 ## `listAll()`
 
 
-### Example
+
+> List all teams
+
+Get a list of all organization team models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **listAll.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listAll.php){: .btn .mt-4}
 
@@ -196,12 +190,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TeamsList**](../../Model/TeamsList)
 
-### Description
-
-> List all teams
-
-Get a list of all organization team models
-
 [🔺 Back to top](#top)
 
 ---
@@ -210,10 +198,13 @@ Get a list of all organization team models
 ## `listUser()`
 
 
-### Example
+
+> List user teams
+
+Get a list of all teams this user is a part of
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **listUser.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listUser.php){: .btn .mt-4}
 
@@ -243,12 +234,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TeamsExpandedList**](../../Model/TeamsExpandedList)
 
-### Description
-
-> List user teams
-
-Get a list of all teams this user is a part of
-
 [🔺 Back to top](#top)
 
 ---
@@ -257,10 +242,13 @@ Get a list of all teams this user is a part of
 ## `read()`
 
 
-### Example
+
+> Fetch team
+
+Retrieve team model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/read.php){: .btn .mt-4}
 
@@ -286,12 +274,6 @@ Name | Type | Description
 
 [**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
 
-### Description
-
-> Fetch team
-
-Retrieve team model
-
 [🔺 Back to top](#top)
 
 ---
@@ -300,10 +282,13 @@ Retrieve team model
 ## `unassign()`
 
 
-### Example
+
+> Unassign from team
+
+Remove a user from a team
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/unassign.php){: .btn .mt-4}
 
@@ -331,12 +316,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Unassign from team
-
-Remove a user from a team
-
 [🔺 Back to top](#top)
 
 ---
@@ -345,10 +324,13 @@ Remove a user from a team
 ## `update()`
 
 
-### Example
+
+> Update team
+
+Update team details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/update.php){: .btn .mt-4}
 
@@ -375,12 +357,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\TeamExpanded**](../../Model/TeamExpanded)
-
-### Description
-
-> Update team
-
-Update team details
 
 [🔺 Back to top](#top)
 

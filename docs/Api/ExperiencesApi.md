@@ -32,10 +32,13 @@ $sdk->api()->experiences();
 ## `evaluate()`
 
 
-### Example
+
+> Evaluate myself
+
+Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours interval.
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **evaluate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluate.php){: .btn .mt-4}
 
@@ -63,12 +66,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Experience**](../../Model/Experience)
 
-### Description
-
-> Evaluate myself
-
-Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours interval.
-
 [🔺 Back to top](#top)
 
 ---
@@ -77,10 +74,13 @@ Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours in
 ## `evaluatePeer()`
 
 
-### Example
+
+> Evaluate peers
+
+Anonymously evaluate another peer on this notion. Only the last evaluation is kept in a 24 hours interval.
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **evaluatePeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluatePeer.php){: .btn .mt-4}
 
@@ -110,12 +110,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Experience**](../../Model/Experience)
 
-### Description
-
-> Evaluate peers
-
-Anonymously evaluate another peer on this notion. Only the last evaluation is kept in a 24 hours interval.
-
 [🔺 Back to top](#top)
 
 ---
@@ -124,10 +118,13 @@ Anonymously evaluate another peer on this notion. Only the last evaluation is ke
 ## `list()`
 
 
-### Example
+
+> Fetch my experiences
+
+Retrieve all my experience models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/list.php){: .btn .mt-4}
 
@@ -155,12 +152,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ExperiencesList**](../../Model/ExperiencesList)
 
-### Description
-
-> Fetch my experiences
-
-Retrieve all my experience models
-
 [🔺 Back to top](#top)
 
 ---
@@ -169,10 +160,13 @@ Retrieve all my experience models
 ## `listPeer()`
 
 
-### Example
+
+> Fetch peer experiences
+
+Retrieve all experience models for this user
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **listPeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/listPeer.php){: .btn .mt-4}
 
@@ -202,12 +196,6 @@ Name | Type | Description
 
 [**\Kronup\Model\ExperiencesList**](../../Model/ExperiencesList)
 
-### Description
-
-> Fetch peer experiences
-
-Retrieve all experience models for this user
-
 [🔺 Back to top](#top)
 
 ---
@@ -216,10 +204,13 @@ Retrieve all experience models for this user
 ## `read()`
 
 
-### Example
+
+> Fetch my notion experience
+
+Retrieve my experience model for specified Notion
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/read.php){: .btn .mt-4}
 
@@ -245,12 +236,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Experience**](../../Model/Experience)
 
-### Description
-
-> Fetch my notion experience
-
-Retrieve my experience model for specified Notion
-
 [🔺 Back to top](#top)
 
 ---
@@ -259,10 +244,13 @@ Retrieve my experience model for specified Notion
 ## `readPeer()`
 
 
-### Example
+
+> Fetch peer notion experience
+
+Retrieve peer experience model for specified Notion
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **readPeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/readPeer.php){: .btn .mt-4}
 
@@ -289,12 +277,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Experience**](../../Model/Experience)
-
-### Description
-
-> Fetch peer notion experience
-
-Retrieve peer experience model for specified Notion
 
 [🔺 Back to top](#top)
 

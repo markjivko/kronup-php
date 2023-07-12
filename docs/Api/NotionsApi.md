@@ -31,10 +31,13 @@ $sdk->api()->notions();
 ## `create()`
 
 
-### Example
+
+> Create notion
+
+Define a notion
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/create.php){: .btn .mt-4}
 
@@ -60,12 +63,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Notion**](../../Model/Notion)
 
-### Description
-
-> Create notion
-
-Define a notion
-
 [🔺 Back to top](#top)
 
 ---
@@ -74,10 +71,13 @@ Define a notion
 ## `delete()`
 
 
-### Example
+
+> Delete notion
+
+Delete a notion model. This also removes the associated Experiences for all users in this Organization.
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/delete.php){: .btn .mt-4}
 
@@ -103,12 +103,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete notion
-
-Delete a notion model. This also removes the associated Experiences for all users in this Organization.
-
 [🔺 Back to top](#top)
 
 ---
@@ -117,10 +111,13 @@ Delete a notion model. This also removes the associated Experiences for all user
 ## `read()`
 
 
-### Example
+
+> Fetch notion
+
+Retrieve notion model
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/read.php){: .btn .mt-4}
 
@@ -146,12 +143,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Notion**](../../Model/Notion)
 
-### Description
-
-> Fetch notion
-
-Retrieve notion model
-
 [🔺 Back to top](#top)
 
 ---
@@ -160,10 +151,13 @@ Retrieve notion model
 ## `search()`
 
 
-### Example
+
+> Search notions
+
+Get a list of notion models
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/search.php){: .btn .mt-4}
 
@@ -193,12 +187,6 @@ Name | Type | Description
 
 [**\Kronup\Model\NotionsList**](../../Model/NotionsList)
 
-### Description
-
-> Search notions
-
-Get a list of notion models
-
 [🔺 Back to top](#top)
 
 ---
@@ -207,10 +195,13 @@ Get a list of notion models
 ## `update()`
 
 
-### Example
+
+> Update notion
+
+Update notion
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/update.php){: .btn .mt-4}
 
@@ -237,12 +228,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Notion**](../../Model/Notion)
-
-### Description
-
-> Update notion
-
-Update notion
 
 [🔺 Back to top](#top)
 

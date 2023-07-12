@@ -30,10 +30,13 @@ $sdk->api()->organizations();
 ## `create()`
 
 
-### Example
+
+> Create organization
+
+Add an organization owned by the current user
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/create.php){: .btn .mt-4}
 
@@ -59,12 +62,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Organization**](../../Model/Organization)
 
-### Description
-
-> Create organization
-
-Add an organization owned by the current user
-
 [🔺 Back to top](#top)
 
 ---
@@ -73,10 +70,13 @@ Add an organization owned by the current user
 ## `delete()`
 
 
-### Example
+
+> Delete organization
+
+Remove organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/delete.php){: .btn .mt-4}
 
@@ -102,12 +102,6 @@ Name | Type | Description
 
 **bool**
 
-### Description
-
-> Delete organization
-
-Remove organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -116,10 +110,13 @@ Remove organization
 ## `logo()`
 
 
-### Example
+
+> Update logo
+
+Update organization logo
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **logo.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/logo.php){: .btn .mt-4}
 
@@ -147,12 +144,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Organization**](../../Model/Organization)
 
-### Description
-
-> Update logo
-
-Update organization logo
-
 [🔺 Back to top](#top)
 
 ---
@@ -161,10 +152,13 @@ Update organization logo
 ## `update()`
 
 
-### Example
+
+> Update organization
+
+Update organization details
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/update.php){: .btn .mt-4}
 
@@ -191,12 +185,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Organization**](../../Model/Organization)
-
-### Description
-
-> Update organization
-
-Update organization details
 
 [🔺 Back to top](#top)
 

@@ -32,10 +32,13 @@ $sdk->api()->billing();
 ## `invoiceList()`
 
 
-### Example
+
+> List Invoices
+
+Get a list of Invoices
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **invoiceList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/invoiceList.php){: .btn .mt-4}
 
@@ -63,12 +66,6 @@ Name | Type | Description
 
 [**\Kronup\Model\InvoiceList**](../../Model/InvoiceList)
 
-### Description
-
-> List Invoices
-
-Get a list of Invoices
-
 [🔺 Back to top](#top)
 
 ---
@@ -77,10 +74,13 @@ Get a list of Invoices
 ## `planCheckout()`
 
 
-### Example
+
+> Prepare Checkout
+
+Prepare the checkout URL for this Price Plan. The link expires in 23 hours. This method fails if a Subscription is associated with this Organization.
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **planCheckout.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/planCheckout.php){: .btn .mt-4}
 
@@ -108,12 +108,6 @@ Name | Type | Description
 
 [**\Kronup\Model\Checkout**](../../Model/Checkout)
 
-### Description
-
-> Prepare Checkout
-
-Prepare the checkout URL for this Price Plan. The link expires in 23 hours. This method fails if a Subscription is associated with this Organization.
-
 [🔺 Back to top](#top)
 
 ---
@@ -122,10 +116,13 @@ Prepare the checkout URL for this Price Plan. The link expires in 23 hours. This
 ## `planList()`
 
 
-### Example
+
+> List Price Plans
+
+Get a list of Price Plans
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **planList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/planList.php){: .btn .mt-4}
 
@@ -147,12 +144,6 @@ This endpoint does not need any parameter.
 
 [**\Kronup\Model\PricePlanList**](../../Model/PricePlanList)
 
-### Description
-
-> List Price Plans
-
-Get a list of Price Plans
-
 [🔺 Back to top](#top)
 
 ---
@@ -161,10 +152,13 @@ Get a list of Price Plans
 ## `subscriptionCancel()`
 
 
-### Example
+
+> Cancel Subscription
+
+Cancel the Subscription for the current Organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **subscriptionCancel.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionCancel.php){: .btn .mt-4}
 
@@ -186,12 +180,6 @@ This endpoint does not need any parameter.
 
 [**\Kronup\Model\Subscription**](../../Model/Subscription)
 
-### Description
-
-> Cancel Subscription
-
-Cancel the Subscription for the current Organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -200,10 +188,13 @@ Cancel the Subscription for the current Organization
 ## `subscriptionRead()`
 
 
-### Example
+
+> Fetch Subscription
+
+Get the Subscription model for the current organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **subscriptionRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionRead.php){: .btn .mt-4}
 
@@ -225,12 +216,6 @@ This endpoint does not need any parameter.
 
 [**\Kronup\Model\BillingSubscriptionRead200Response**](../../Model/BillingSubscriptionRead200Response)
 
-### Description
-
-> Fetch Subscription
-
-Get the Subscription model for the current organization
-
 [🔺 Back to top](#top)
 
 ---
@@ -239,10 +224,13 @@ Get the Subscription model for the current organization
 ## `subscriptionUpdate()`
 
 
-### Example
+
+> Update Subscription
+
+Update the Subscription Price Plan for the current Organization
 
 {: .new-title }
-> #️⃣ Execute command in terminal 
+> #️⃣ Execute example in terminal 
 > 
 > [php -f **subscriptionUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionUpdate.php){: .btn .mt-4}
 
@@ -267,12 +255,6 @@ Name | Type | Description
 ### Return type
 
 [**\Kronup\Model\Subscription**](../../Model/Subscription)
-
-### Description
-
-> Update Subscription
-
-Update the Subscription Price Plan for the current Organization
 
 [🔺 Back to top](#top)
 
