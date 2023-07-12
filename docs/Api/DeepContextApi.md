@@ -25,14 +25,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->deepContext();
 ```
 
+
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -62,31 +64,20 @@ Name | Type | Description
 
 Delete a value item from Deep Context
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Deep Context API Reference](https://api.kronup.com/#tag/Deep-Context)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->deepContext();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -116,31 +107,20 @@ Name | Type | Description
 
 Retrieve value item model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Deep Context API Reference](https://api.kronup.com/#tag/Deep-Context)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->deepContext();
-```
-
 ## `search()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/search.php){: .btn .btn-green .mt-4}
+> [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/DeepContextApi/search.php){: .btn .mt-4}
 
 ### Request
 
@@ -174,6 +154,6 @@ Name | Type | Description
 
 Get a list of value item models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

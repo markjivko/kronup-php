@@ -27,14 +27,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->notions();
 ```
 
+
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -64,31 +66,20 @@ Name | Type | Description
 
 Define a notion
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->notions();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -118,31 +109,20 @@ Name | Type | Description
 
 Delete a notion model. This also removes the associated Experiences for all users in this Organization.
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->notions();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -172,31 +152,20 @@ Name | Type | Description
 
 Retrieve notion model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->notions();
-```
-
 ## `search()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/search.php){: .btn .btn-green .mt-4}
+> [php -f **search.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/search.php){: .btn .mt-4}
 
 ### Request
 
@@ -230,31 +199,20 @@ Name | Type | Description
 
 Get a list of notion models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Notions API Reference](https://api.kronup.com/#tag/Notions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->notions();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/NotionsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -286,6 +244,6 @@ Name | Type | Description
 
 Update notion
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

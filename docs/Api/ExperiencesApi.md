@@ -28,14 +28,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->experiences();
 ```
 
+
 ## `evaluate()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **evaluate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluate.php){: .btn .btn-green .mt-4}
+> [php -f **evaluate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluate.php){: .btn .mt-4}
 
 ### Request
 
@@ -67,31 +69,20 @@ Name | Type | Description
 
 Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours interval.
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->experiences();
-```
-
 ## `evaluatePeer()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **evaluatePeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluatePeer.php){: .btn .btn-green .mt-4}
+> [php -f **evaluatePeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/evaluatePeer.php){: .btn .mt-4}
 
 ### Request
 
@@ -125,31 +116,20 @@ Name | Type | Description
 
 Anonymously evaluate another peer on this notion. Only the last evaluation is kept in a 24 hours interval.
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->experiences();
-```
-
 ## `list()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/list.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/list.php){: .btn .mt-4}
 
 ### Request
 
@@ -181,31 +161,20 @@ Name | Type | Description
 
 Retrieve all my experience models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->experiences();
-```
-
 ## `listPeer()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **listPeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/listPeer.php){: .btn .btn-green .mt-4}
+> [php -f **listPeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/listPeer.php){: .btn .mt-4}
 
 ### Request
 
@@ -239,31 +208,20 @@ Name | Type | Description
 
 Retrieve all experience models for this user
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->experiences();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -293,31 +251,20 @@ Name | Type | Description
 
 Retrieve my experience model for specified Notion
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Experiences API Reference](https://api.kronup.com/#tag/Experiences)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->experiences();
-```
-
 ## `readPeer()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **readPeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/readPeer.php){: .btn .btn-green .mt-4}
+> [php -f **readPeer.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ExperiencesApi/readPeer.php){: .btn .mt-4}
 
 ### Request
 
@@ -349,6 +296,6 @@ Name | Type | Description
 
 Retrieve peer experience model for specified Notion
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

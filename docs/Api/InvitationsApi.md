@@ -28,14 +28,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->invitations();
 ```
 
+
 ## `accept()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **accept.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/accept.php){: .btn .btn-green .mt-4}
+> [php -f **accept.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/accept.php){: .btn .mt-4}
 
 ### Request
 
@@ -65,31 +67,20 @@ Name | Type | Description
 
 Accept an invitation to join an organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->invitations();
-```
-
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -119,31 +110,20 @@ Name | Type | Description
 
 Create a new invitation to this organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->invitations();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -173,31 +153,20 @@ Name | Type | Description
 
 Delete invitation
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->invitations();
-```
-
 ## `list()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/list.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/list.php){: .btn .mt-4}
 
 ### Request
 
@@ -229,31 +198,20 @@ Name | Type | Description
 
 Get a list of invitation models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->invitations();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -283,31 +241,20 @@ Name | Type | Description
 
 Retrieve invitation model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Invitations API Reference](https://api.kronup.com/#tag/Invitations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->invitations();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/InvitationsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -339,6 +286,6 @@ Name | Type | Description
 
 Update invitation details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

@@ -26,14 +26,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->users();
 ```
 
+
 ## `list()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/list.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/list.php){: .btn .mt-4}
 
 ### Request
 
@@ -65,31 +67,20 @@ Name | Type | Description
 
 Get a list of user models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Users API Reference](https://api.kronup.com/#tag/Users)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->users();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -119,31 +110,20 @@ Name | Type | Description
 
 Retrieve user model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Users API Reference](https://api.kronup.com/#tag/Users)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->users();
-```
-
 ## `remove()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **remove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/remove.php){: .btn .btn-green .mt-4}
+> [php -f **remove.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/remove.php){: .btn .mt-4}
 
 ### Request
 
@@ -173,31 +153,20 @@ Name | Type | Description
 
 Remove user from Organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Users API Reference](https://api.kronup.com/#tag/Users)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->users();
-```
-
 ## `updateRole()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **updateRole.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/updateRole.php){: .btn .btn-green .mt-4}
+> [php -f **updateRole.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/UsersApi/updateRole.php){: .btn .mt-4}
 
 ### Request
 
@@ -229,6 +198,6 @@ Name | Type | Description
 
 Update the user model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

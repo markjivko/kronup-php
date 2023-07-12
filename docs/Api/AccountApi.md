@@ -27,14 +27,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->account();
 ```
 
+
 ## `avatar()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **avatar.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/avatar.php){: .btn .btn-green .mt-4}
+> [php -f **avatar.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/avatar.php){: .btn .mt-4}
 
 ### Request
 
@@ -64,31 +66,20 @@ Name | Type | Description
 
 Update account avatar
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Account API Reference](https://api.kronup.com/#tag/Account)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->account();
-```
-
 ## `close()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/close.php){: .btn .btn-green .mt-4}
+> [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/close.php){: .btn .mt-4}
 
 ### Request
 
@@ -114,31 +105,20 @@ This endpoint does not need any parameter.
 
 Close the current account. This action is reversible only if you sign back in within 14 days. You must first abandon or delete all the organizations you own to perform this action.
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Account API Reference](https://api.kronup.com/#tag/Account)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->account();
-```
-
 ## `eventsList()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **eventsList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/eventsList.php){: .btn .btn-green .mt-4}
+> [php -f **eventsList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/eventsList.php){: .btn .mt-4}
 
 ### Request
 
@@ -172,31 +152,20 @@ Name | Type | Description
 
 Get a list of event models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Account API Reference](https://api.kronup.com/#tag/Account)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->account();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -222,31 +191,20 @@ This endpoint does not need any parameter.
 
 Retrieve the current account model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Account API Reference](https://api.kronup.com/#tag/Account)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->account();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AccountApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -276,6 +234,6 @@ Name | Type | Description
 
 Update the current account model.
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

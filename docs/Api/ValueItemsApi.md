@@ -28,14 +28,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->valueItems();
 ```
 
+
 ## `advance()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **advance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/advance.php){: .btn .btn-green .mt-4}
+> [php -f **advance.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/advance.php){: .btn .mt-4}
 
 ### Request
 
@@ -69,31 +71,20 @@ Name | Type | Description
 
 Advance a value item
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->valueItems();
-```
-
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -127,31 +118,20 @@ Name | Type | Description
 
 Add a value item to planning
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->valueItems();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -185,31 +165,20 @@ Name | Type | Description
 
 Delete a value item from the flow
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->valueItems();
-```
-
 ## `list()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/list.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/list.php){: .btn .mt-4}
 
 ### Request
 
@@ -247,31 +216,20 @@ Name | Type | Description
 
 Get a list of value item models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->valueItems();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -305,31 +263,20 @@ Name | Type | Description
 
 Retrieve value item model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Value items API Reference](https://api.kronup.com/#tag/Value-items)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->valueItems();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ValueItemsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -365,6 +312,6 @@ Name | Type | Description
 
 Update value item details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

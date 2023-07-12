@@ -29,14 +29,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->channels();
 ```
 
+
 ## `assign()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/assign.php){: .btn .btn-green .mt-4}
+> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/assign.php){: .btn .mt-4}
 
 ### Request
 
@@ -70,31 +72,20 @@ Name | Type | Description
 
 Assign a user to a channel
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->channels();
-```
-
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -126,31 +117,20 @@ Name | Type | Description
 
 Create a new channel for a team
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->channels();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -182,31 +162,20 @@ Name | Type | Description
 
 Delete a channel and unassign all users
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->channels();
-```
-
 ## `listMembers()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **listMembers.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listMembers.php){: .btn .btn-green .mt-4}
+> [php -f **listMembers.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listMembers.php){: .btn .mt-4}
 
 ### Request
 
@@ -242,31 +211,20 @@ Name | Type | Description
 
 List all channel members
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->channels();
-```
-
 ## `listProspects()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **listProspects.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listProspects.php){: .btn .btn-green .mt-4}
+> [php -f **listProspects.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/listProspects.php){: .btn .mt-4}
 
 ### Request
 
@@ -300,31 +258,20 @@ Name | Type | Description
 
 List 10 channel prospects
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->channels();
-```
-
 ## `unassign()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/unassign.php){: .btn .btn-green .mt-4}
+> [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/unassign.php){: .btn .mt-4}
 
 ### Request
 
@@ -358,31 +305,20 @@ Name | Type | Description
 
 Remove a user from a channel; removing the user from the default channel is the same as removing the user from the team
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Channels API Reference](https://api.kronup.com/#tag/Channels)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->channels();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ChannelsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -416,6 +352,6 @@ Name | Type | Description
 
 Update channel details for a team
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

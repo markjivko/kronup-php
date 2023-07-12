@@ -36,14 +36,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->tasks();
 ```
 
+
 ## `assign()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/assign.php){: .btn .btn-green .mt-4}
+> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/assign.php){: .btn .mt-4}
 
 ### Request
 
@@ -81,31 +83,20 @@ Name | Type | Description
 
 Assign task to user
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -141,31 +132,20 @@ Name | Type | Description
 
 Add a task to value item
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -201,31 +181,20 @@ Name | Type | Description
 
 Delete a task from a value item
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `discoveryCreate()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **discoveryCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryCreate.php){: .btn .btn-green .mt-4}
+> [php -f **discoveryCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryCreate.php){: .btn .mt-4}
 
 ### Request
 
@@ -263,31 +232,20 @@ Name | Type | Description
 
 Add a discovery to task
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `discoveryDelete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **discoveryDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryDelete.php){: .btn .btn-green .mt-4}
+> [php -f **discoveryDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryDelete.php){: .btn .mt-4}
 
 ### Request
 
@@ -325,31 +283,20 @@ Name | Type | Description
 
 Delete a task discovery
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `discoveryUpdate()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **discoveryUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **discoveryUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/discoveryUpdate.php){: .btn .mt-4}
 
 ### Request
 
@@ -389,31 +336,20 @@ Name | Type | Description
 
 Update a task discovery
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `feedbackCreate()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **feedbackCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackCreate.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackCreate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackCreate.php){: .btn .mt-4}
 
 ### Request
 
@@ -451,31 +387,20 @@ Name | Type | Description
 
 Add a feedback to task
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `feedbackDelete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **feedbackDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackDelete.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackDelete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackDelete.php){: .btn .mt-4}
 
 ### Request
 
@@ -513,31 +438,20 @@ Name | Type | Description
 
 Delete a feedback for a task
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `feedbackReply()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **feedbackReply.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackReply.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackReply.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackReply.php){: .btn .mt-4}
 
 ### Request
 
@@ -577,31 +491,20 @@ Name | Type | Description
 
 Update a reply to a task feedback
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `feedbackUpdate()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **feedbackUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **feedbackUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/feedbackUpdate.php){: .btn .mt-4}
 
 ### Request
 
@@ -641,31 +544,20 @@ Name | Type | Description
 
 Update a task feedback
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `list()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/list.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/list.php){: .btn .mt-4}
 
 ### Request
 
@@ -703,31 +595,20 @@ Name | Type | Description
 
 Get a list of task models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `listCandidates()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **listCandidates.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/listCandidates.php){: .btn .btn-green .mt-4}
+> [php -f **listCandidates.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/listCandidates.php){: .btn .mt-4}
 
 ### Request
 
@@ -763,31 +644,20 @@ Name | Type | Description
 
 List potential assignees for this task
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -823,31 +693,20 @@ Name | Type | Description
 
 Retrieve task model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Tasks API Reference](https://api.kronup.com/#tag/Tasks)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->tasks();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TasksApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -885,6 +744,6 @@ Name | Type | Description
 
 Update task details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

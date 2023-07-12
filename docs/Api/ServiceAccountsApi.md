@@ -28,14 +28,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->serviceAccounts();
 ```
 
+
 ## `close()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/close.php){: .btn .btn-green .mt-4}
+> [php -f **close.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/close.php){: .btn .mt-4}
 
 ### Request
 
@@ -65,31 +67,20 @@ Name | Type | Description
 
 Close this service account. This action is always reversible. You can re-open it anytime with "regenerate".
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->serviceAccounts();
-```
-
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -119,31 +110,20 @@ Name | Type | Description
 
 Create a new service account for this Organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->serviceAccounts();
-```
-
 ## `list()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/list.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/list.php){: .btn .mt-4}
 
 ### Request
 
@@ -175,31 +155,20 @@ Name | Type | Description
 
 Get a list of all service account models, including those that were closed
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->serviceAccounts();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -229,31 +198,20 @@ Name | Type | Description
 
 Retrieve service account model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->serviceAccounts();
-```
-
 ## `regenerate()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **regenerate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/regenerate.php){: .btn .btn-green .mt-4}
+> [php -f **regenerate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/regenerate.php){: .btn .mt-4}
 
 ### Request
 
@@ -283,31 +241,20 @@ Name | Type | Description
 
 Regenerate service account JSON Web Token and re-open service account if previously closed
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Service accounts API Reference](https://api.kronup.com/#tag/Service-accounts)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->serviceAccounts();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/ServiceAccountsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -339,6 +286,6 @@ Name | Type | Description
 
 Update service account details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

@@ -28,14 +28,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->billing();
 ```
 
+
 ## `invoiceList()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **invoiceList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/invoiceList.php){: .btn .btn-green .mt-4}
+> [php -f **invoiceList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/invoiceList.php){: .btn .mt-4}
 
 ### Request
 
@@ -67,31 +69,20 @@ Name | Type | Description
 
 Get a list of Invoices
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->billing();
-```
-
 ## `planCheckout()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **planCheckout.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/planCheckout.php){: .btn .btn-green .mt-4}
+> [php -f **planCheckout.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/planCheckout.php){: .btn .mt-4}
 
 ### Request
 
@@ -123,31 +114,20 @@ Name | Type | Description
 
 Prepare the checkout URL for this Price Plan. The link expires in 23 hours. This method fails if a Subscription is associated with this Organization.
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->billing();
-```
-
 ## `planList()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **planList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/planList.php){: .btn .btn-green .mt-4}
+> [php -f **planList.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/planList.php){: .btn .mt-4}
 
 ### Request
 
@@ -173,31 +153,20 @@ This endpoint does not need any parameter.
 
 Get a list of Price Plans
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->billing();
-```
-
 ## `subscriptionCancel()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **subscriptionCancel.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionCancel.php){: .btn .btn-green .mt-4}
+> [php -f **subscriptionCancel.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionCancel.php){: .btn .mt-4}
 
 ### Request
 
@@ -223,31 +192,20 @@ This endpoint does not need any parameter.
 
 Cancel the Subscription for the current Organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->billing();
-```
-
 ## `subscriptionRead()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **subscriptionRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionRead.php){: .btn .btn-green .mt-4}
+> [php -f **subscriptionRead.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionRead.php){: .btn .mt-4}
 
 ### Request
 
@@ -273,31 +231,20 @@ This endpoint does not need any parameter.
 
 Get the Subscription model for the current organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Billing API Reference](https://api.kronup.com/#tag/Billing)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->billing();
-```
-
 ## `subscriptionUpdate()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **subscriptionUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionUpdate.php){: .btn .btn-green .mt-4}
+> [php -f **subscriptionUpdate.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/BillingApi/subscriptionUpdate.php){: .btn .mt-4}
 
 ### Request
 
@@ -327,6 +274,6 @@ Name | Type | Description
 
 Update the Subscription Price Plan for the current Organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

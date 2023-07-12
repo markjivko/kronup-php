@@ -27,14 +27,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->assumptions();
 ```
 
+
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -70,31 +72,20 @@ Name | Type | Description
 
 Add an assumption to value item
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->assumptions();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -130,31 +121,20 @@ Name | Type | Description
 
 Delete an assumption from a value item
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->assumptions();
-```
-
 ## `experiment()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **experiment.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/experiment.php){: .btn .btn-green .mt-4}
+> [php -f **experiment.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/experiment.php){: .btn .mt-4}
 
 ### Request
 
@@ -192,31 +172,20 @@ Name | Type | Description
 
 Update experiment details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->assumptions();
-```
-
 ## `list()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/list.php){: .btn .btn-green .mt-4}
+> [php -f **list.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/list.php){: .btn .mt-4}
 
 ### Request
 
@@ -254,31 +223,20 @@ Name | Type | Description
 
 Get a list of assumption models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Assumptions API Reference](https://api.kronup.com/#tag/Assumptions)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->assumptions();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/AssumptionsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -316,6 +274,6 @@ Name | Type | Description
 
 Update assumption details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

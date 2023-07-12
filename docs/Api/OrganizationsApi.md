@@ -26,14 +26,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->organizations();
 ```
 
+
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -63,31 +65,20 @@ Name | Type | Description
 
 Add an organization owned by the current user
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Organizations API Reference](https://api.kronup.com/#tag/Organizations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->organizations();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -117,31 +108,20 @@ Name | Type | Description
 
 Remove organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Organizations API Reference](https://api.kronup.com/#tag/Organizations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->organizations();
-```
-
 ## `logo()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **logo.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/logo.php){: .btn .btn-green .mt-4}
+> [php -f **logo.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/logo.php){: .btn .mt-4}
 
 ### Request
 
@@ -173,31 +153,20 @@ Name | Type | Description
 
 Update organization logo
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Organizations API Reference](https://api.kronup.com/#tag/Organizations)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->organizations();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/OrganizationsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -229,6 +198,6 @@ Name | Type | Description
 
 Update organization details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---

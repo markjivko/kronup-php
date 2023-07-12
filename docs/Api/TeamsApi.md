@@ -30,14 +30,16 @@ $sdk = new \Kronup\Sdk();
 $sdk->api()->teams();
 ```
 
+
 ## `assign()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/assign.php){: .btn .btn-green .mt-4}
+> [php -f **assign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/assign.php){: .btn .mt-4}
 
 ### Request
 
@@ -69,31 +71,20 @@ Name | Type | Description
 
 Assign a user to a team
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->teams();
-```
-
 ## `create()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/create.php){: .btn .btn-green .mt-4}
+> [php -f **create.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/create.php){: .btn .mt-4}
 
 ### Request
 
@@ -123,31 +114,20 @@ Name | Type | Description
 
 Create a new team to this organization
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->teams();
-```
-
 ## `delete()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/delete.php){: .btn .btn-green .mt-4}
+> [php -f **delete.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/delete.php){: .btn .mt-4}
 
 ### Request
 
@@ -177,31 +157,20 @@ Name | Type | Description
 
 Delete a team and unassign all users
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->teams();
-```
-
 ## `listAll()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **listAll.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listAll.php){: .btn .btn-green .mt-4}
+> [php -f **listAll.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listAll.php){: .btn .mt-4}
 
 ### Request
 
@@ -233,31 +202,20 @@ Name | Type | Description
 
 Get a list of all organization team models
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->teams();
-```
-
 ## `listUser()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **listUser.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listUser.php){: .btn .btn-green .mt-4}
+> [php -f **listUser.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/listUser.php){: .btn .mt-4}
 
 ### Request
 
@@ -291,31 +249,20 @@ Name | Type | Description
 
 Get a list of all teams this user is a part of
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->teams();
-```
-
 ## `read()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/read.php){: .btn .btn-green .mt-4}
+> [php -f **read.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/read.php){: .btn .mt-4}
 
 ### Request
 
@@ -345,31 +292,20 @@ Name | Type | Description
 
 Retrieve team model
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->teams();
-```
-
 ## `unassign()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/unassign.php){: .btn .btn-green .mt-4}
+> [php -f **unassign.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/unassign.php){: .btn .mt-4}
 
 ### Request
 
@@ -401,31 +337,20 @@ Name | Type | Description
 
 Remove a user from a team
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
 
 
-📚 [Teams API Reference](https://api.kronup.com/#tag/Teams)
-
-## Getting started
-
-```php
-// Place your API Key 👇 here
-$sdk = new \Kronup\Sdk();
-
-// API Call
-$sdk->api()->teams();
-```
-
 ## `update()`
+
 
 ### Example
 
 {: .new-title }
 > #️⃣ Execute command in terminal 
 > 
-> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/update.php){: .btn .btn-green .mt-4}
+> [php -f **update.php**](https://github.com/kronup/kronup-php/blob/main/examples/Api/TeamsApi/update.php){: .btn .mt-4}
 
 ### Request
 
@@ -457,6 +382,6 @@ Name | Type | Description
 
 Update team details
 
-[Back to top](#top){: .btn .btn-purple }
+[🔺 Back to top](#top)
 
 ---
