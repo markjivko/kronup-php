@@ -29,7 +29,8 @@ $sdk->api()->users();
 
 ## `list()`
 
-> Users Get a list of user models
+> Get a list of user models
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -67,7 +68,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Users Retrieve user model
+> Retrieve user model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -103,7 +105,8 @@ Name | Type | Description
 
 ## `remove()`
 
-> Users Remove user from Organization
+> Remove user from Organization
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -139,7 +142,8 @@ Name | Type | Description
 
 ## `updateRole()`
 
-> Users Update the user model
+> Update the user model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

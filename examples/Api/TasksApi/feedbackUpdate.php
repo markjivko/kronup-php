@@ -21,19 +21,19 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "000000000000000000000000";
+$arg_team_id = "fff";
 
 // Channel ID
-$arg_channel_id = "000000000000000000000000";
+$arg_channel_id = "fff";
 
 // Value Item ID
-$arg_item_id = "000000000000000000000000";
+$arg_item_id = "fff";
 
 // Task ID
-$arg_task_id = "000000000000000000000000";
+$arg_task_id = "fff";
 
 // Feedback ID
-$arg_feedback_id = "000000000000000000000000";
+$arg_feedback_id = "fff";
 
 $arg_payload_task_feedback_update = (new \Kronup\Model\PayloadTaskFeedbackUpdate())
     

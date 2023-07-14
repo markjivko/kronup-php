@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Organization ID
-$arg_org_id = "000000000000000000000000";
+$arg_org_id = "fff";
 
 $arg_payload_organization_update = (new \Kronup\Model\PayloadOrganizationUpdate())
     

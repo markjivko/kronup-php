@@ -31,7 +31,8 @@ $sdk->api()->experiences();
 
 ## `evaluate()`
 
-> Experiences Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours interval.
+> Evaluate yourself on a notion. Only the last evaluation is kept in a 24 hours interval.
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -69,7 +70,8 @@ Name | Type | Description
 
 ## `evaluatePeer()`
 
-> Experiences Anonymously evaluate another peer on this notion. Only the last evaluation is kept in a 24 hours interval.
+> Anonymously evaluate another peer on this notion. Only the last evaluation is kept in a 24 hours interval.
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -109,7 +111,8 @@ Name | Type | Description
 
 ## `list()`
 
-> Experiences Retrieve all my experience models
+> Retrieve all my experience models
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -147,7 +150,8 @@ Name | Type | Description
 
 ## `listPeer()`
 
-> Experiences Retrieve all experience models for this user
+> Retrieve all experience models for this user
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -187,7 +191,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Experiences Retrieve my experience model for specified Notion
+> Retrieve my experience model for specified Notion
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -223,7 +228,8 @@ Name | Type | Description
 
 ## `readPeer()`
 
-> Experiences Retrieve peer experience model for specified Notion
+> Retrieve peer experience model for specified Notion
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

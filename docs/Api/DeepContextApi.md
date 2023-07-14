@@ -28,7 +28,8 @@ $sdk->api()->deepContext();
 
 ## `delete()`
 
-> Deep Context Delete a value item from Deep Context
+> Delete a value item from Deep Context
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -64,7 +65,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Deep Context Retrieve value item model
+> Retrieve value item model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -100,7 +102,8 @@ Name | Type | Description
 
 ## `search()`
 
-> Deep Context Get a list of value item models
+> Get a list of value item models
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

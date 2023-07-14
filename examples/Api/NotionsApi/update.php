@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Notion ID
-$arg_notion_id = "000000000000000000000000";
+$arg_notion_id = "fff";
 
 $arg_payload_notion_update = (new \Kronup\Model\PayloadNotionUpdate())
     

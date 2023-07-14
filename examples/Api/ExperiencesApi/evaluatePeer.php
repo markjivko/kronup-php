@@ -21,13 +21,13 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Notion ID
-$arg_notion_id = "000000000000000000000000";
+$arg_notion_id = "fff";
 
 // Grade between 1 and 10
 $arg_grade = "5";
 
 // User ID
-$arg_user_id = "000000000000000000000000";
+$arg_user_id = "fff";
 
 try {
     /**

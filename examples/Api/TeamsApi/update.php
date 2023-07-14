@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "000000000000000000000000";
+$arg_team_id = "fff";
 
 $arg_payload_team_update = (new \Kronup\Model\PayloadTeamUpdate())
     

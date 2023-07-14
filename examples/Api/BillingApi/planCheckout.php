@@ -21,10 +21,10 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Price Plan ID
-$arg_price_plan_id = "000000000000000000000000";
+$arg_price_plan_id = "fff";
 
 // Use dark mode
-$arg_dark_mode = 0;
+$arg_dark_mode = 1;
 
 try {
     /**

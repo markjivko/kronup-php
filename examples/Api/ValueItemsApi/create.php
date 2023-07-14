@@ -21,10 +21,10 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "000000000000000000000000";
+$arg_team_id = "fff";
 
 // Channel ID
-$arg_channel_id = "000000000000000000000000";
+$arg_channel_id = "fff";
 
 $arg_payload_value_item_create = (new \Kronup\Model\PayloadValueItemCreate())
     

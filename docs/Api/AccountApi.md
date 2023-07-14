@@ -30,7 +30,8 @@ $sdk->api()->account();
 
 ## `avatar()`
 
-> Account Update account avatar
+> Update account avatar
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -66,7 +67,8 @@ Name | Type | Description
 
 ## `close()`
 
-> Account Close the current account. This action is reversible only if you sign back in within 14 days. You must first abandon or delete all the organizations you own to perform this action.
+> Close the current account. This action is reversible only if you sign back in within 14 days. You must first abandon or delete all the organizations you own to perform this action.
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -98,7 +100,8 @@ This endpoint does not need any parameter.
 
 ## `eventsList()`
 
-> Account Get a list of event models
+> Get a list of event models
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -138,7 +141,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Account Retrieve the current account model
+> Retrieve the current account model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -170,7 +174,8 @@ This endpoint does not need any parameter.
 
 ## `update()`
 
-> Account Update the current account model.
+> Update the current account model.
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

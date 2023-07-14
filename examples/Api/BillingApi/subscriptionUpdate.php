@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Price Plan ID
-$arg_price_plan_id = "000000000000000000000000";
+$arg_price_plan_id = "fff";
 
 try {
     /**

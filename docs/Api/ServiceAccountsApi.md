@@ -31,7 +31,8 @@ $sdk->api()->serviceAccounts();
 
 ## `close()`
 
-> Service accounts Close this service account. This action is always reversible. You can re-open it anytime with "regenerate".
+> Close this service account. This action is always reversible. You can re-open it anytime with "regenerate".
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -67,7 +68,8 @@ Name | Type | Description
 
 ## `create()`
 
-> Service accounts Create a new service account for this Organization
+> Create a new service account for this Organization
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -103,7 +105,8 @@ Name | Type | Description
 
 ## `list()`
 
-> Service accounts Get a list of all service account models, including those that were closed
+> Get a list of all service account models, including those that were closed
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -141,7 +144,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Service accounts Retrieve service account model
+> Retrieve service account model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -177,7 +181,8 @@ Name | Type | Description
 
 ## `regenerate()`
 
-> Service accounts Regenerate service account JSON Web Token and re-open service account if previously closed
+> Regenerate service account JSON Web Token and re-open service account if previously closed
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -213,7 +218,8 @@ Name | Type | Description
 
 ## `update()`
 
-> Service accounts Update service account details
+> Update service account details
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

@@ -21,7 +21,7 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // User ID
-$arg_user_id = "000000000000000000000000";
+$arg_user_id = "fff";
 
 $arg_payload_user_role_update = (new \Kronup\Model\PayloadUserRoleUpdate())
     

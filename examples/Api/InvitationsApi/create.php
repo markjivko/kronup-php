@@ -23,7 +23,7 @@ $sdk->config()->setDebug(true);
 $arg_payload_invitation_create = (new \Kronup\Model\PayloadInvitationCreate())
     
     // Team ID
-    ->setTeamId('000000000000000000000000')
+    ->setTeamId('fff')
     
     // Invitation name
     ->setInviteName('null')

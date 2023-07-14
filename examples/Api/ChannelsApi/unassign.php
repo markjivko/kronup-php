@@ -21,13 +21,13 @@ $sdk = new \Kronup\Sdk();
 $sdk->config()->setDebug(true);
 
 // Team ID
-$arg_team_id = "000000000000000000000000";
+$arg_team_id = "fff";
 
 // Channel ID
-$arg_channel_id = "000000000000000000000000";
+$arg_channel_id = "fff";
 
 // User ID
-$arg_user_id = "000000000000000000000000";
+$arg_user_id = "fff";
 
 try {
     /**

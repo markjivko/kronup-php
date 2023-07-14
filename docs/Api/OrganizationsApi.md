@@ -29,7 +29,8 @@ $sdk->api()->organizations();
 
 ## `create()`
 
-> Organizations Add an organization owned by the current user
+> Add an organization owned by the current user
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -65,7 +66,8 @@ Name | Type | Description
 
 ## `delete()`
 
-> Organizations Remove organization
+> Remove organization
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -101,7 +103,8 @@ Name | Type | Description
 
 ## `logo()`
 
-> Organizations Update organization logo
+> Update organization logo
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -139,7 +142,8 @@ Name | Type | Description
 
 ## `update()`
 
-> Organizations Update organization details
+> Update organization details
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

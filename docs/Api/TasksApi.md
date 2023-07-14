@@ -39,7 +39,8 @@ $sdk->api()->tasks();
 
 ## `assign()`
 
-> Tasks Assign task to user
+> Assign task to user
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -83,7 +84,8 @@ Name | Type | Description
 
 ## `create()`
 
-> Tasks Add a task to value item
+> Add a task to value item
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -125,7 +127,8 @@ Name | Type | Description
 
 ## `delete()`
 
-> Tasks Delete a task from a value item
+> Delete a task from a value item
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -167,7 +170,8 @@ Name | Type | Description
 
 ## `discoveryCreate()`
 
-> Tasks Add a discovery to task
+> Add a discovery to task
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -211,7 +215,8 @@ Name | Type | Description
 
 ## `discoveryDelete()`
 
-> Tasks Delete a task discovery
+> Delete a task discovery
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -255,7 +260,8 @@ Name | Type | Description
 
 ## `discoveryUpdate()`
 
-> Tasks Update a task discovery
+> Update a task discovery
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -301,7 +307,8 @@ Name | Type | Description
 
 ## `feedbackCreate()`
 
-> Tasks Add a feedback to task
+> Add a feedback to task
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -345,7 +352,8 @@ Name | Type | Description
 
 ## `feedbackDelete()`
 
-> Tasks Delete a feedback for a task
+> Delete a feedback for a task
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -389,7 +397,8 @@ Name | Type | Description
 
 ## `feedbackReply()`
 
-> Tasks Update a reply to a task feedback
+> Update a reply to a task feedback
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -435,7 +444,8 @@ Name | Type | Description
 
 ## `feedbackUpdate()`
 
-> Tasks Update a task feedback
+> Update a task feedback
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -481,7 +491,8 @@ Name | Type | Description
 
 ## `list()`
 
-> Tasks Get a list of task models
+> Get a list of task models
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -525,7 +536,8 @@ Name | Type | Description
 
 ## `listCandidates()`
 
-> Tasks List potential assignees for this task
+> List potential assignees for this task
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -567,7 +579,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Tasks Retrieve task model
+> Retrieve task model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -609,7 +622,8 @@ Name | Type | Description
 
 ## `update()`
 
-> Tasks Update task details
+> Update task details
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

@@ -33,7 +33,8 @@ $sdk->api()->teams();
 
 ## `assign()`
 
-> Teams Assign a user to a team
+> Assign a user to a team
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -71,7 +72,8 @@ Name | Type | Description
 
 ## `create()`
 
-> Teams Create a new team to this organization
+> Create a new team to this organization
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -107,7 +109,8 @@ Name | Type | Description
 
 ## `delete()`
 
-> Teams Delete a team and unassign all users
+> Delete a team and unassign all users
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -143,7 +146,8 @@ Name | Type | Description
 
 ## `listAll()`
 
-> Teams Get a list of all organization team models
+> Get a list of all organization team models
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -181,7 +185,8 @@ Name | Type | Description
 
 ## `listUser()`
 
-> Teams Get a list of all teams this user is a part of
+> Get a list of all teams this user is a part of
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -221,7 +226,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Teams Retrieve team model
+> Retrieve team model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -257,7 +263,8 @@ Name | Type | Description
 
 ## `unassign()`
 
-> Teams Remove a user from a team
+> Remove a user from a team
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -295,7 +302,8 @@ Name | Type | Description
 
 ## `update()`
 
-> Teams Update team details
+> Update team details
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 

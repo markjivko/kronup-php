@@ -31,7 +31,8 @@ $sdk->api()->invitations();
 
 ## `accept()`
 
-> Invitations Accept an invitation to join an organization
+> Accept an invitation to join an organization
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -67,7 +68,8 @@ Name | Type | Description
 
 ## `create()`
 
-> Invitations Create a new invitation to this organization
+> Create a new invitation to this organization
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -103,7 +105,8 @@ Name | Type | Description
 
 ## `delete()`
 
-> Invitations Delete invitation
+> Delete invitation
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -139,7 +142,8 @@ Name | Type | Description
 
 ## `list()`
 
-> Invitations Get a list of invitation models
+> Get a list of invitation models
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -177,7 +181,8 @@ Name | Type | Description
 
 ## `read()`
 
-> Invitations Retrieve invitation model
+> Retrieve invitation model
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
@@ -213,7 +218,8 @@ Name | Type | Description
 
 ## `update()`
 
-> Invitations Update invitation details
+> Update invitation details
+
 
 {: .new-title }
 > #️⃣ Execute example in terminal 
