@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Kronup sdk Debugger
+ * Kronup SDK Debugger
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   MIT
@@ -139,7 +139,7 @@ class Debugger {
      */
     protected function _sanitize(&$data, $source) {
         /**
-         * Sanitize string
+         * Sanitize string. Keep the "bearer" prefix
          *
          * @param string $key
          * @param string $string Input
@@ -148,12 +148,20 @@ class Debugger {
         $cleanUp = function ($key, $string) {
             $suffix = preg_replace('%^.*?((?:_\w+)?)$%', '$1', $string);
             $string = preg_replace('%^(.*?)_\w+$%', '$1', $string);
+
+            // Keep prefixes
+            $prefix = "";
+            if (preg_match("%^(?:bearer\s+)%i", $string, $matches)) {
+                $prefix = $matches[0];
+                $string = substr($string, strlen($prefix));
+            }
+
             $result =
                 strlen($string) >= 10
-                    ? preg_replace('%^(\w{1}).*(\w{3})$%', '$1***$2', $string) . $suffix
+                    ? preg_replace('%^(\w{3}).*(\w{3})$%', '$1***$2', $string) . $suffix
                     : str_repeat("*", 6);
 
-            return $result;
+            return $prefix . $result;
         };
 
         // Go throught the data

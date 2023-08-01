@@ -24,7 +24,7 @@ try {
     /**
      * GET /billing/subscription
      * 
-     * @var \Kronup\Model\BillingSubscriptionRead200Response $response
+     * @var \Kronup\Model\SubscriptionNullable $response
      */
     $response = $sdk
         ->api()

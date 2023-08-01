@@ -22,20 +22,13 @@ namespace Kronup\Model;
 class Subscription extends AbstractModel {
 
     public const _D = null;
-    public const STATUS_ACTIVE = 'active';
     public const STATUS_ON_TRIAL = 'on_trial';
+    public const STATUS_ACTIVE = 'active';
     public const STATUS_PAST_DUE = 'past_due';
     public const STATUS_CANCELLED = 'cancelled';
     public const STATUS_UNPAID = 'unpaid';
     public const STATUS_PAUSED = 'paused';
     public const STATUS_EXPIRED = 'expired';
-    public const CARD_BRAND_VISA = 'visa';
-    public const CARD_BRAND_MASTERCARD = 'mastercard';
-    public const CARD_BRAND_AMERICAN_EXPRESS = 'american_express';
-    public const CARD_BRAND_DISCOVER = 'discover';
-    public const CARD_BRAND_JCB = 'jcb';
-    public const CARD_BRAND_DINERS_CLUB = 'diners_club';
-    public const CARD_BRAND_NULL = 'null';
     protected static $_name = "Subscription";
     protected static $_definition = [
         "subscriptionId" => ["subscriptionId", "float", null, "getSubscriptionId", "setSubscriptionId", null, ["r" => 0, "n" => [1]]], 
@@ -46,7 +39,7 @@ class Subscription extends AbstractModel {
         "productId" => ["productId", "float", null, "getProductId", "setProductId", null, ["r" => 0, "n" => [1]]], 
         "variantId" => ["variantId", "float", null, "getVariantId", "setVariantId", null, ["r" => 0, "n" => [1]]], 
         "customerId" => ["customerId", "float", null, "getCustomerId", "setCustomerId", null, ["r" => 0, "n" => [1]]], 
-        "cardBrand" => ["cardBrand", "string", null, "getCardBrand", "setCardBrand", null, ["r" => 0, "e" => 1]], 
+        "cardBrand" => ["cardBrand", "string", null, "getCardBrand", "setCardBrand", null, ["r" => 0]], 
         "cardLast4" => ["cardLast4", "string", null, "getCardLast4", "setCardLast4", null, ["r" => 0]], 
         "pricePlan" => ["pricePlan", "\Kronup\Model\PricePlan", null, "getPricePlan", "setPricePlan", null, ["r" => 0]], 
         "usersCount" => ["usersCount", "float", null, "getUsersCount", "setUsersCount", null, ["r" => 0, "n" => [1]]], 
@@ -75,29 +68,13 @@ class Subscription extends AbstractModel {
      */
     public function getStatusAllowableValues(): array {
         return [
-            self::STATUS_ACTIVE,
             self::STATUS_ON_TRIAL,
+            self::STATUS_ACTIVE,
             self::STATUS_PAST_DUE,
             self::STATUS_CANCELLED,
             self::STATUS_UNPAID,
             self::STATUS_PAUSED,
             self::STATUS_EXPIRED,
-        ];
-    }
-    /**
-     * Get allowable values
-     *
-     * @return string[]
-     */
-    public function getCardBrandAllowableValues(): array {
-        return [
-            self::CARD_BRAND_VISA,
-            self::CARD_BRAND_MASTERCARD,
-            self::CARD_BRAND_AMERICAN_EXPRESS,
-            self::CARD_BRAND_DISCOVER,
-            self::CARD_BRAND_JCB,
-            self::CARD_BRAND_DINERS_CLUB,
-            self::CARD_BRAND_NULL,
         ];
     }
 

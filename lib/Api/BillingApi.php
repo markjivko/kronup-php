@@ -152,7 +152,7 @@ class BillingApi extends AbstractApi {
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\BillingSubscriptionRead200Response
+     * @return \Kronup\Model\SubscriptionNullable
      */
     public function subscriptionRead() {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
@@ -160,12 +160,12 @@ class BillingApi extends AbstractApi {
         // Path template
         $rPath = "/billing/subscription";
         
-        /** @var \Kronup\Model\BillingSubscriptionRead200Response $result */
+        /** @var \Kronup\Model\SubscriptionNullable $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", $rPath, $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\BillingSubscriptionRead200Response"
+            "\Kronup\Model\SubscriptionNullable"
         );
             
         return $result;

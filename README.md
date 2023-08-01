@@ -9,9 +9,9 @@
 
 ### Welcome!
 
-This is the official Kronup SDK for PHP version `1.0.0` based on API version `0.0.1`.
+This is the official kronup SDK for PHP version `1.0.0` based on API version `0.0.1`.
 
-Start building your Kronup application in your favorite programming language today!
+Start building your kronup application in your favorite programming language today!
 
 ### Getting started
 

@@ -1,13 +1,13 @@
 ---
-title: ""
+title: "Subscription Nullable"
 parent: Model
 layout: page
 ---
 
-# 
+# Subscription Nullable
 
 ```php
-new \Kronup\Model\BillingSubscriptionRead200Response();
+new \Kronup\Model\SubscriptionNullable();
 ```
 
 ## Model getters
@@ -15,14 +15,14 @@ new \Kronup\Model\BillingSubscriptionRead200Response();
 Method name | Return type | Description
 ------------ | ------------- | -------------
 **getSubscriptionId()** | **float** | Subscription ID
-**getStatus()** | **string** | ( `active` `on_trial` `past_due` `cancelled` `unpaid` `paused` `expired` )
+**getStatus()** | **string** | ( `on_trial` `active` `past_due` `cancelled` `unpaid` `paused` `expired` )
 **getUrl()** | **string** | Update payment method URL
 **getOrderId()** | **float** | Order ID
 **getOrderItemId()** | **float** | Order Item ID
 **getProductId()** | **float** | Product ID
 **getVariantId()** | **float** | Variant ID
 **getCustomerId()** | **float** | Customer ID
-**getCardBrand()** | **string** | Card brand ( `visa` `mastercard` `american_express` `discover` `jcb` `diners_club` `null` )
+**getCardBrand()** | **string** | Card brand
 **getCardLast4()** | **string** | Card last 4 digits
 **getPricePlan()** | [**\Kronup\Model\PricePlan**](../PricePlan) | 
 **getUsersCount()** | **float** | Total number of Organization members

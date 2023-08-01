@@ -27,17 +27,13 @@ class Invoice extends AbstractModel {
     public const STATUS_VOID = 'void';
     public const STATUS_UNCOLLECTIBLE = 'uncollectible';
     public const STATUS_DRAFT = 'draft';
-    public const CARD_BRAND_VISA = 'visa';
-    public const CARD_BRAND_MASTERCARD = 'mastercard';
-    public const CARD_BRAND_AMERICAN_EXPRESS = 'american_express';
-    public const CARD_BRAND_DISCOVER = 'discover';
-    public const CARD_BRAND_JCB = 'jcb';
-    public const CARD_BRAND_DINERS_CLUB = 'diners_club';
-    public const CARD_BRAND_NULL = 'null';
     protected static $_name = "Invoice";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "subscriptionId" => ["subscriptionId", "float", null, "getSubscriptionId", "setSubscriptionId", null, ["r" => 0, "n" => [1]]], 
+        "productId" => ["productId", "float", null, "getProductId", "setProductId", null, ["r" => 0, "n" => [1]]], 
+        "variantId" => ["variantId", "float", null, "getVariantId", "setVariantId", null, ["r" => 0, "n" => [1]]], 
+        "customerId" => ["customerId", "float", null, "getCustomerId", "setCustomerId", null, ["r" => 0, "n" => [1]]], 
         "pricePlan" => ["pricePlan", "\Kronup\Model\PricePlanLite", null, "getPricePlan", "setPricePlan", null, ["r" => 0]], 
         "status" => ["status", "string", null, "getStatus", "setStatus", null, ["r" => 0, "e" => 1]], 
         "url" => ["url", "string", null, "getUrl", "setUrl", null, ["r" => 0]], 
@@ -45,7 +41,7 @@ class Invoice extends AbstractModel {
         "subtotal" => ["subtotal", "float", null, "getSubtotal", "setSubtotal", null, ["r" => 0]], 
         "tax" => ["tax", "float", null, "getTax", "setTax", null, ["r" => 0]], 
         "total" => ["total", "float", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "cardBrand" => ["cardBrand", "string", null, "getCardBrand", "setCardBrand", null, ["r" => 0, "e" => 1]], 
+        "cardBrand" => ["cardBrand", "string", null, "getCardBrand", "setCardBrand", null, ["r" => 0]], 
         "cardLast4" => ["cardLast4", "string", null, "getCardLast4", "setCardLast4", null, ["r" => 0]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
@@ -74,22 +70,6 @@ class Invoice extends AbstractModel {
             self::STATUS_VOID,
             self::STATUS_UNCOLLECTIBLE,
             self::STATUS_DRAFT,
-        ];
-    }
-    /**
-     * Get allowable values
-     *
-     * @return string[]
-     */
-    public function getCardBrandAllowableValues(): array {
-        return [
-            self::CARD_BRAND_VISA,
-            self::CARD_BRAND_MASTERCARD,
-            self::CARD_BRAND_AMERICAN_EXPRESS,
-            self::CARD_BRAND_DISCOVER,
-            self::CARD_BRAND_JCB,
-            self::CARD_BRAND_DINERS_CLUB,
-            self::CARD_BRAND_NULL,
         ];
     }
 
@@ -131,6 +111,66 @@ class Invoice extends AbstractModel {
      */
     public function setSubscriptionId($subscription_id) {
         return $this->_set("subscriptionId", $subscription_id);
+    }
+
+    /**
+     * Get productId - Product ID
+     *
+     * @return float|null
+     */
+    public function getProductId(): ?float {
+        return $this->_data["productId"];
+    }
+
+    /**
+     * Set productId - Product ID
+     * 
+     * @param float|null $product_id Product ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setProductId($product_id) {
+        return $this->_set("productId", $product_id);
+    }
+
+    /**
+     * Get variantId - Variant ID
+     *
+     * @return float|null
+     */
+    public function getVariantId(): ?float {
+        return $this->_data["variantId"];
+    }
+
+    /**
+     * Set variantId - Variant ID
+     * 
+     * @param float|null $variant_id Variant ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setVariantId($variant_id) {
+        return $this->_set("variantId", $variant_id);
+    }
+
+    /**
+     * Get customerId - Customer ID
+     *
+     * @return float|null
+     */
+    public function getCustomerId(): ?float {
+        return $this->_data["customerId"];
+    }
+
+    /**
+     * Set customerId - Customer ID
+     * 
+     * @param float|null $customer_id Customer ID
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setCustomerId($customer_id) {
+        return $this->_set("customerId", $customer_id);
     }
 
     /**

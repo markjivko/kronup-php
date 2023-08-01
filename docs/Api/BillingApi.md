@@ -190,7 +190,7 @@ This endpoint does not need any parameter.
 ### Type signature
 
 ```php
-(new \Kronup\Sdk())->api()->billing()->subscriptionRead(): \Kronup\Model\BillingSubscriptionRead200Response
+(new \Kronup\Sdk())->api()->billing()->subscriptionRead(): \Kronup\Model\SubscriptionNullable
 ```
 
 ### Parameters
@@ -199,7 +199,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Kronup\Model\BillingSubscriptionRead200Response**](../../Model/BillingSubscriptionRead200Response)
+[**\Kronup\Model\SubscriptionNullable**](../../Model/SubscriptionNullable)
 
 [🔺 Back to top](#top)
 
