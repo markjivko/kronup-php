@@ -28,7 +28,7 @@ class Organization extends AbstractModel {
         "orgName" => ["orgName", "string", null, "getOrgName", "setOrgName", null, ["r" => 0]], 
         "orgIconId" => ["orgIconId", "string", null, "getOrgIconId", "setOrgIconId", null, ["r" => 0]], 
         "orgOwners" => ["orgOwners", "string[]", null, "getOrgOwners", "setOrgOwners", null, ["r" => 0, "c" => 1]], 
-        "orgUsersMax" => ["orgUsersMax", "int", null, "getOrgUsersMax", "setOrgUsersMax", 2, ["r" => 0, "n" => [1], "x" => [500]]], 
+        "orgUsersMax" => ["orgUsersMax", "int", null, "getOrgUsersMax", "setOrgUsersMax", 2, ["r" => 0, "n" => [0], "x" => [500]]], 
         "orgUsersCount" => ["orgUsersCount", "int", null, "getOrgUsersCount", "setOrgUsersCount", 1, ["r" => 0, "n" => [0]]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]

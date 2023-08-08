@@ -301,7 +301,7 @@ class Config {
         return [
             self::INFO_OS  => php_uname(),
             self::INFO_PHP => PHP_VERSION,
-            self::INFO_API => "0.0.1",
+            self::INFO_API => "0.0.2",
             self::INFO_SDK => "1.0.0",
         ];
     }

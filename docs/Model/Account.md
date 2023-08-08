@@ -17,6 +17,7 @@ Method name | Return type | Description
 **getId()** | **string** | User ID
 **getProvider()** | **string** | Account provider
 **getUserName()** | **string** | User name
+**getUserEmail()** | **string** | User email
 **getUserAvatarId()** | **string** | User avatar ID
 **getUserColor()** | **string** | User profile color ( `clear` `red` `orange` `yellow` `green` `blue` `pink` `violet` )
 **getServiceAccount()** | **bool** | Service accounts can only perform actions through API calls   [default to `false`]

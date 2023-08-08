@@ -41,6 +41,7 @@ class ServiceAccount extends AbstractModel {
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "provider" => ["provider", "string", null, "getProvider", "setProvider", null, ["r" => 0]], 
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
+        "userEmail" => ["userEmail", "string", null, "getUserEmail", "setUserEmail", null, ["r" => 0]], 
         "userAvatarId" => ["userAvatarId", "string", null, "getUserAvatarId", "setUserAvatarId", null, ["r" => 0]], 
         "userColor" => ["userColor", "string", null, "getUserColor", "setUserColor", null, ["r" => 0, "e" => 1]], 
         "serviceAccount" => ["serviceAccount", "bool", null, "getServiceAccount", "setServiceAccount", false, ["r" => 0]], 
@@ -166,6 +167,26 @@ class ServiceAccount extends AbstractModel {
      */
     public function setUserName($user_name) {
         return $this->_set("userName", $user_name);
+    }
+
+    /**
+     * Get userEmail - User email
+     *
+     * @return string|null
+     */
+    public function getUserEmail(): ?string {
+        return $this->_data["userEmail"];
+    }
+
+    /**
+     * Set userEmail - User email
+     * 
+     * @param string|null $user_email User email
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setUserEmail($user_email) {
+        return $this->_set("userEmail", $user_email);
     }
 
     /**

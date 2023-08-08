@@ -115,20 +115,20 @@ class ChannelsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param int|1 $page_number Pagination: page number
-     * @param int|100 $page_size Pagination: page size
+     * @param int|1 $page_number 
+     * @param int|500 $page_size 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\ChannelMembersList
      */
-    public function listMembers($team_id, $channel_id, $page_number = 1, $page_size = 100) {
+    public function listMembers($team_id, $channel_id, $page_number = 1, $page_size = 500) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling ChannelsApi., must be bigger than or equal to 1.');
         }
 
-        if (isset($page_size) && $page_size > 500) {
-            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi., must be smaller than or equal to 500');
+        if (isset($page_size) && $page_size > 1500) {
+            throw new IAE('Invalid value for "$page_size" when calling ChannelsApi., must be smaller than or equal to 1500');
         }
 
         if (isset($page_size) && $page_size < 1) {

@@ -23,10 +23,8 @@ $sdk->config()->setDebug(true);
 // Search term
 $arg_search_term = 'search_term_example';
 
-// Pagination: page number
 $arg_page_number = 1;
 
-// Pagination: page size
 $arg_page_size = 100;
 
 try {

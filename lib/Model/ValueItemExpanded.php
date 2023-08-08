@@ -44,7 +44,9 @@ class ValueItemExpanded extends AbstractModel {
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
         "tasks" => ["tasks", "\Kronup\Model\TaskExpanded[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
+        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
+        "channelName" => ["channelName", "string", null, "getChannelName", "setChannelName", null, ["r" => 0, "nl" => 1, "xl" => 64]]
     ];
 
     /**
@@ -362,5 +364,45 @@ class ValueItemExpanded extends AbstractModel {
      */
     public function setUpdatedAt($updated_at) {
         return $this->_set("updatedAt", $updated_at);
+    }
+
+    /**
+     * Get teamName - Team name
+     *
+     * @return string|null
+     */
+    public function getTeamName(): ?string {
+        return $this->_data["teamName"];
+    }
+
+    /**
+     * Set teamName - Team name
+     * 
+     * @param string|null $team_name Team name
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setTeamName($team_name) {
+        return $this->_set("teamName", $team_name);
+    }
+
+    /**
+     * Get channelName - Channel name
+     *
+     * @return string|null
+     */
+    public function getChannelName(): ?string {
+        return $this->_data["channelName"];
+    }
+
+    /**
+     * Set channelName - Channel name
+     * 
+     * @param string|null $channel_name Channel name
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setChannelName($channel_name) {
+        return $this->_set("channelName", $channel_name);
     }
 }

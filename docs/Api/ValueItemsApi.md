@@ -174,7 +174,7 @@ Name | Type | Description
     string $channel_id,
     [ string $stage, ]
     [ int $page_number = 1, ]
-    [ int $page_size = 100 ]
+    [ int $page_size = 500 ]
 ): \Kronup\Model\ValueItemsList
 ```
 
@@ -185,8 +185,8 @@ Name | Type | Description
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
  **$stage** | **string**  | Value item stage 
- **$page_number** | **int**  | Pagination: page number  [default to 1]
- **$page_size** | **int**  | Pagination: page size  [default to 100]
+ **$page_number** | **int**  |   [default to 1]
+ **$page_size** | **int**  |   [default to 500]
 
 ### Return type
 

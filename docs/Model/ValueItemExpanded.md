@@ -28,4 +28,6 @@ Method name | Return type | Description
 **getTasks()** | [**\Kronup\Model\TaskExpanded[]**](../TaskExpanded) | Expanded Tasks
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
+**getTeamName()** | **string** | Team name
+**getChannelName()** | **string** | Channel name
 

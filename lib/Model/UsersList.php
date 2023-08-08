@@ -44,7 +44,7 @@ class UsersList extends AbstractModel {
 
 
     /**
-     * Get pageNumber - Page number
+     * Get pageNumber - Pagination: page number
      *
      * @return int|null
      */
@@ -53,9 +53,9 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Set pageNumber - Page number
+     * Set pageNumber - Pagination: page number
      * 
-     * @param int|null $page_number Page number
+     * @param int|null $page_number Pagination: page number
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -64,7 +64,7 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Get pageSize - Page size
+     * Get pageSize - Pagination: page size
      *
      * @return int|null
      */
@@ -73,9 +73,9 @@ class UsersList extends AbstractModel {
     }
 
     /**
-     * Set pageSize - Page size
+     * Set pageSize - Pagination: page size
      * 
-     * @param int|null $page_size Page size
+     * @param int|null $page_size Pagination: page size
      * @throws \InvalidArgumentException
      * @return $this
      */

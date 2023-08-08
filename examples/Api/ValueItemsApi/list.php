@@ -29,10 +29,8 @@ $arg_channel_id = "fff";
 // Value item stage
 $arg_stage = "planning";
 
-// Pagination: page number
 $arg_page_number = 1;
 
-// Pagination: page size
 $arg_page_size = 100;
 
 try {

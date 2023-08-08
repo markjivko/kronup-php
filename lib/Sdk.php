@@ -4,7 +4,7 @@
  * Kronup SDK
  *
  * @version   1.0.0
- * @api       0.0.1
+ * @api       0.0.2
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
  * @package   Kronup
@@ -16,7 +16,7 @@
  */
 
 namespace Kronup;
-define("KRONUP-SDK", "1.0.0/0.0.1");
+define("KRONUP-SDK", "1.0.0/0.0.2");
 
 use Kronup\Sdk\Caller;
 use Kronup\Sdk\Config;

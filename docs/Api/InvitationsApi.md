@@ -159,7 +159,7 @@ Name | Type | Description
 ```php
 (new \Kronup\Sdk())->api()->invitations()->list(
     [ int $page_number = 1, ]
-    [ int $page_size = 100 ]
+    [ int $page_size = 500 ]
 ): \Kronup\Model\InvitationsList
 ```
 
@@ -167,8 +167,8 @@ Name | Type | Description
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$page_number** | **int**  | Pagination: page number  [default to 1]
- **$page_size** | **int**  | Pagination: page size  [default to 100]
+ **$page_number** | **int**  |   [default to 1]
+ **$page_size** | **int**  |   [default to 500]
 
 ### Return type
 

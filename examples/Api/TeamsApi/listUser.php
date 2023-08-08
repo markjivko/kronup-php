@@ -23,10 +23,8 @@ $sdk->config()->setDebug(true);
 // User ID
 $arg_user_id = "fff";
 
-// Pagination: page number
 $arg_page_number = 1;
 
-// Pagination: page size
 $arg_page_size = 100;
 
 try {

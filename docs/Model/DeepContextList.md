@@ -14,8 +14,8 @@ new \Kronup\Model\DeepContextList();
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getPageNumber()** | **int** | Page number   [default to `1`]
-**getPageSize()** | **int** | Page size   [default to `500`]
+**getPageNumber()** | **int** | Pagination: page number   [default to `1`]
+**getPageSize()** | **int** | Pagination: page size   [default to `500`]
 **getTotal()** | **int** | Total number of value items
 **getItems()** | [**\Kronup\Model\ValueItem[]**](../ValueItem) | Value Items
 

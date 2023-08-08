@@ -26,10 +26,8 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Pagination: page number
 $arg_page_number = 1;
 
-// Pagination: page size
 $arg_page_size = 100;
 
 try {

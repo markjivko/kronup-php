@@ -117,7 +117,7 @@ This endpoint does not need any parameter.
 ```php
 (new \Kronup\Sdk())->api()->account()->eventsList(
     [ int $page_number = 1, ]
-    [ int $page_size = 100, ]
+    [ int $page_size = 500, ]
     [ int $aggregate = 1 ]
 ): \Kronup\Model\EventsList
 ```
@@ -126,8 +126,8 @@ This endpoint does not need any parameter.
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$page_number** | **int**  | Pagination: page number  [default to 1]
- **$page_size** | **int**  | Pagination: page size  [default to 100]
+ **$page_number** | **int**  |   [default to 1]
+ **$page_size** | **int**  |   [default to 500]
  **$aggregate** | **int**  | Aggregate notion events  [default to 1]
 
 ### Return type

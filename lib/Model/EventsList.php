@@ -25,7 +25,7 @@ class EventsList extends AbstractModel {
     protected static $_name = "Events_List";
     protected static $_definition = [
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
-        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 1500, ["r" => 0, "n" => [1], "x" => [1500]]], 
+        "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 500, ["r" => 0, "n" => [1], "x" => [1500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
         "events" => ["events", "\Kronup\Model\Event[]", null, "getEvents", "setEvents", null, ["r" => 0, "c" => 1]], 
         "readOnly" => ["readOnly", "bool", null, "getReadOnly", "setReadOnly", false, ["r" => 0]]
@@ -44,7 +44,7 @@ class EventsList extends AbstractModel {
 
 
     /**
-     * Get pageNumber - Page number
+     * Get pageNumber - Pagination: page number
      *
      * @return int|null
      */
@@ -53,9 +53,9 @@ class EventsList extends AbstractModel {
     }
 
     /**
-     * Set pageNumber - Page number
+     * Set pageNumber - Pagination: page number
      * 
-     * @param int|null $page_number Page number
+     * @param int|null $page_number Pagination: page number
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -64,7 +64,7 @@ class EventsList extends AbstractModel {
     }
 
     /**
-     * Get pageSize - Page size
+     * Get pageSize - Pagination: page size
      *
      * @return int|null
      */
@@ -73,9 +73,9 @@ class EventsList extends AbstractModel {
     }
 
     /**
-     * Set pageSize - Page size
+     * Set pageSize - Pagination: page size
      * 
-     * @param int|null $page_size Page size
+     * @param int|null $page_size Pagination: page size
      * @throws \InvalidArgumentException
      * @return $this
      */

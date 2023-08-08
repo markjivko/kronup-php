@@ -20,10 +20,8 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Pagination: page number
 $arg_page_number = 1;
 
-// Pagination: page size
 $arg_page_size = 100;
 
 try {
