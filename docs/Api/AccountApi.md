@@ -67,7 +67,7 @@ Name | Type | Description
 
 ## `close()`
 
-> Close the current account. This action is reversible only if you sign back in within 14 days. You must first abandon or delete all the organizations you own to perform this action.
+> Close the current Service Account. Only an organization owner or administrator can re-activate this Service Account.
 
 
 {: .new-title }
