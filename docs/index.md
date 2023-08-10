@@ -13,7 +13,7 @@ nav_order: 1
 # Kronup SDK for PHP
 {: .fs-9 }
 
-Build any kronup application in PHP with ease.
+Build any Kronup application in PHP with ease.
 {: .fs-6 .fw-300 }
 
 [Install with Composer](https://packagist.org/packages/kronup/kronup-php){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -43,11 +43,11 @@ Tree branches are populated as needed just-in-time so the memory footprint is ti
 
 ## API Key
 
-The kronup API uses a standard [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) authorization scheme. 
+The Kronup API uses a standard [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) authorization scheme. 
 
 ## Installation & Usage
 
-To install the kronup SDK, simply clone this repository and load it with a [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloader.
+To install the Kronup SDK, simply clone this repository and load it with a [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloader.
 If you're having doubts, you can use the provided `autoload.php` file.
 
 You can also install the latest version of `Kronup PHP SDK` with **composer** by issuing the following command:

@@ -1,5 +1,5 @@
-title: "kronup / php"
-description: "The official PHP SDK for kronup"
+title: "Kronup / PHP"
+description: "The official PHP SDK for Kronup"
 theme: just-the-docs
 url: https://php.kronup.io
 
@@ -42,9 +42,6 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
 nav_external_links:
-  - title: Home
-    url: https://kronup.io
-
   - title: API Reference
     url: https://api.kronup.com
 
