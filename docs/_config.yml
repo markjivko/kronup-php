@@ -52,7 +52,7 @@ nav_external_links:
     url: https://github.com/kronup/kronup-php
 
 # Back to top link
-back_to_top: true
+back_to_top: false
 back_to_top_text: "Back to top"
 
 footer_content: ""
