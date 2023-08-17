@@ -24,7 +24,7 @@ Method name | Return type | Description
 **getType()** | **string** | Value Item Type ( `feature` `bug fix` `routine` )
 **getPriority()** | **float** | Value Item Priority   [default to `1`]
 **getAssumptions()** | [**\Kronup\Model\AssumptionLite[]**](../AssumptionLite) | Assumptions - Lite
-**getTasks()** | [**\Kronup\Model\TaskLite[]**](../TaskLite) | Tasks - Lite
+**getTasks()** | [**\Kronup\Model\Task[]**](../Task) | Tasks
 **getCreatedAt()** | **string** | Created timestamp
 **getUpdatedAt()** | **string** | Updated timestamp
 

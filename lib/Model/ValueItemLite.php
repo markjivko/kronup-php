@@ -41,7 +41,7 @@ class ValueItemLite extends AbstractModel {
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "float", null, "getPriority", "setPriority", 1, ["r" => 0, "n" => [1], "x" => [10]]], 
         "assumptions" => ["assumptions", "\Kronup\Model\AssumptionLite[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
-        "tasks" => ["tasks", "\Kronup\Model\TaskLite[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
+        "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
         "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
     ];
@@ -284,18 +284,18 @@ class ValueItemLite extends AbstractModel {
     }
 
     /**
-     * Get tasks - Tasks - Lite
+     * Get tasks - Tasks
      *
-     * @return \Kronup\Model\TaskLite[]|null
+     * @return \Kronup\Model\Task[]|null
      */
     public function getTasks(): ?array {
         return $this->_data["tasks"];
     }
 
     /**
-     * Set tasks - Tasks - Lite
+     * Set tasks - Tasks
      * 
-     * @param \Kronup\Model\TaskLite[]|null $tasks Tasks - Lite
+     * @param \Kronup\Model\Task[]|null $tasks Tasks
      * @throws \InvalidArgumentException
      * @return $this
      */
