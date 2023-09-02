@@ -10,13 +10,13 @@ layout: page
 new \Kronup\Model\AssumptionLite();
 ```
 
-Value Item Assumption
+Feature Assumption
 
 ## Model getters
 
 Method name | Return type | Description
 ------------ | ------------- | -------------
-**getId()** | **string** | Value item ID
+**getId()** | **string** | Feature ID
 **getAuthorUserId()** | **string** | User ID
 **getExperiment()** | [**\Kronup\Model\ExperimentLite**](../ExperimentLite) | 
 

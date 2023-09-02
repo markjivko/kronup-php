@@ -30,7 +30,7 @@ $sdk->api()->assumptions();
 
 ## `create()`
 
-> Add an assumption to value item
+> Add an assumption to feature
 
 
 {: .new-title }
@@ -40,7 +40,7 @@ $sdk->api()->assumptions();
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/assms`
 
 ### Type signature
 
@@ -48,7 +48,7 @@ $sdk->api()->assumptions();
 (new \Kronup\Sdk())->api()->assumptions()->create(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     \Kronup\Model\PayloadAssmCreate $payload_assm_create
 ): \Kronup\Model\Assumption
 ```
@@ -59,7 +59,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$payload_assm_create** | [**\Kronup\Model\PayloadAssmCreate**](../../Model/PayloadAssmCreate) |  
 
 ### Return type
@@ -73,7 +73,7 @@ Name | Type | Description
 
 ## `delete()`
 
-> Delete an assumption from a value item
+> Delete an assumption from a feature
 
 
 {: .new-title }
@@ -83,7 +83,7 @@ Name | Type | Description
 
 ### Request
 
-> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}`
+> **DELETE** `/teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}`
 
 ### Type signature
 
@@ -91,7 +91,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->assumptions()->delete(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $assm_id
 ): bool
 ```
@@ -102,7 +102,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$assm_id** | **string**  | Assumption ID 
 
 ### Return type
@@ -126,7 +126,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}/exp`
 
 ### Type signature
 
@@ -134,7 +134,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->assumptions()->experiment(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $assm_id,
     \Kronup\Model\PayloadAssmExperiment $payload_assm_experiment
 ): \Kronup\Model\Assumption
@@ -146,7 +146,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$assm_id** | **string**  | Assumption ID 
  **$payload_assm_experiment** | [**\Kronup\Model\PayloadAssmExperiment**](../../Model/PayloadAssmExperiment) |  
 
@@ -171,7 +171,7 @@ Name | Type | Description
 
 ### Request
 
-> **GET** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms`
+> **GET** `/teams/{teamId}/channels/{channelId}/features/{featureId}/assms`
 
 ### Type signature
 
@@ -179,7 +179,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->assumptions()->list(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     [ int $page_number = 1, ]
     [ int $page_size = 500 ]
 ): \Kronup\Model\AssumptionsList
@@ -191,7 +191,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$page_number** | **int**  |   [default to 1]
  **$page_size** | **int**  |   [default to 500]
 
@@ -216,7 +216,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}`
 
 ### Type signature
 
@@ -224,7 +224,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->assumptions()->update(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $assm_id,
     \Kronup\Model\PayloadAssmUpdate $payload_assm_update
 ): \Kronup\Model\Assumption
@@ -236,7 +236,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$assm_id** | **string**  | Assumption ID 
  **$payload_assm_update** | [**\Kronup\Model\PayloadAssmUpdate**](../../Model/PayloadAssmUpdate) |  
 

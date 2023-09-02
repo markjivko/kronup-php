@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ValueItem Model
+ * FeatureExpanded Model
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
@@ -17,9 +17,9 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * ValueItem Model
+ * FeatureExpanded Model
  */
-class ValueItem extends AbstractModel {
+class FeatureExpanded extends AbstractModel {
 
     public const _D = null;
     public const STAGE_PLANNING = 'planning';
@@ -29,7 +29,7 @@ class ValueItem extends AbstractModel {
     public const TYPE_FEATURE = 'feature';
     public const TYPE_BUG_FIX = 'bug fix';
     public const TYPE_ROUTINE = 'routine';
-    protected static $_name = "ValueItem";
+    protected static $_name = "FeatureExpanded";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
         "teamId" => ["teamId", "string", null, "getTeamId", "setTeamId", null, ["r" => 0]], 
@@ -42,13 +42,15 @@ class ValueItem extends AbstractModel {
         "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "float", null, "getPriority", "setPriority", 1, ["r" => 0, "n" => [1], "x" => [10]]], 
         "assumptions" => ["assumptions", "\Kronup\Model\Assumption[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
-        "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
+        "tasks" => ["tasks", "\Kronup\Model\TaskExpanded[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
         "createdAt" => ["createdAt", "string", null, "getCreatedAt", "setCreatedAt", null, ["r" => 0]], 
-        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]]
+        "updatedAt" => ["updatedAt", "string", null, "getUpdatedAt", "setUpdatedAt", null, ["r" => 0]], 
+        "teamName" => ["teamName", "string", null, "getTeamName", "setTeamName", null, ["r" => 0, "nl" => 1, "xl" => 64]], 
+        "channelName" => ["channelName", "string", null, "getChannelName", "setChannelName", null, ["r" => 0, "nl" => 1, "xl" => 64]]
     ];
 
     /**
-     * ValueItem
+     * FeatureExpanded
      *
      * @param mixed[] $data Model data
      */
@@ -85,7 +87,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get id - Value item ID
+     * Get id - Feature ID
      *
      * @return string|null
      */
@@ -94,9 +96,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set id - Value item ID
+     * Set id - Feature ID
      * 
-     * @param string|null $id Value item ID
+     * @param string|null $id Feature ID
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -145,7 +147,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get heading - Value item heading
+     * Get heading - Feature heading
      *
      * @return string|null
      */
@@ -154,9 +156,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set heading - Value item heading
+     * Set heading - Feature heading
      * 
-     * @param string|null $heading Value item heading
+     * @param string|null $heading Feature heading
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -165,7 +167,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get details - Value item description
+     * Get details - Feature description
      *
      * @return string|null
      */
@@ -174,9 +176,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set details - Value item description
+     * Set details - Feature description
      * 
-     * @param string|null $details Value item description
+     * @param string|null $details Feature description
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -205,7 +207,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get stage - Value Item Stage
+     * Get stage - Feature Stage
      *
      * @return string|null
      */
@@ -214,9 +216,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set stage - Value Item Stage
+     * Set stage - Feature Stage
      * 
-     * @param string|null $stage Value Item Stage
+     * @param string|null $stage Feature Stage
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -225,7 +227,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get canAdvance - Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization owner or administrator
+     * Get canAdvance - Conditions for Features to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Features become read-only; they can only be deleted by an Organization owner or administrator
      *
      * @return bool|null
      */
@@ -234,9 +236,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set canAdvance - Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization owner or administrator
+     * Set canAdvance - Conditions for Features to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Features become read-only; they can only be deleted by an Organization owner or administrator
      * 
-     * @param bool|null $can_advance Conditions for Value Items to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Value Items become read-only; they can only be deleted by an Organization owner or administrator
+     * @param bool|null $can_advance Conditions for Features to advance to the next stage:    * `planning` - at least 1 Assumption was added   * `validation` - all Assumption experiments were marked as `done`   * `execution` - all Tasks were marked as `done`   * `deep context` - Features become read-only; they can only be deleted by an Organization owner or administrator
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -245,7 +247,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get type - Value Item Type
+     * Get type - Feature Type
      *
      * @return string|null
      */
@@ -254,9 +256,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set type - Value Item Type
+     * Set type - Feature Type
      * 
-     * @param string|null $type Value Item Type
+     * @param string|null $type Feature Type
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -265,7 +267,7 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get priority - Value Item Priority
+     * Get priority - Feature Priority
      *
      * @return float|null
      */
@@ -274,9 +276,9 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Set priority - Value Item Priority
+     * Set priority - Feature Priority
      * 
-     * @param float|null $priority Value Item Priority
+     * @param float|null $priority Feature Priority
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -305,18 +307,18 @@ class ValueItem extends AbstractModel {
     }
 
     /**
-     * Get tasks - Tasks
+     * Get tasks - Expanded Tasks
      *
-     * @return \Kronup\Model\Task[]|null
+     * @return \Kronup\Model\TaskExpanded[]|null
      */
     public function getTasks(): ?array {
         return $this->_data["tasks"];
     }
 
     /**
-     * Set tasks - Tasks
+     * Set tasks - Expanded Tasks
      * 
-     * @param \Kronup\Model\Task[]|null $tasks Tasks
+     * @param \Kronup\Model\TaskExpanded[]|null $tasks Expanded Tasks
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -362,5 +364,45 @@ class ValueItem extends AbstractModel {
      */
     public function setUpdatedAt($updated_at) {
         return $this->_set("updatedAt", $updated_at);
+    }
+
+    /**
+     * Get teamName - Team name
+     *
+     * @return string|null
+     */
+    public function getTeamName(): ?string {
+        return $this->_data["teamName"];
+    }
+
+    /**
+     * Set teamName - Team name
+     * 
+     * @param string|null $team_name Team name
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setTeamName($team_name) {
+        return $this->_set("teamName", $team_name);
+    }
+
+    /**
+     * Get channelName - Channel name
+     *
+     * @return string|null
+     */
+    public function getChannelName(): ?string {
+        return $this->_data["channelName"];
+    }
+
+    /**
+     * Set channelName - Channel name
+     * 
+     * @param string|null $channel_name Channel name
+     * @throws \InvalidArgumentException
+     * @return $this
+     */
+    public function setChannelName($channel_name) {
+        return $this->_set("channelName", $channel_name);
     }
 }

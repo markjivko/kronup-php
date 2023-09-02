@@ -22,7 +22,7 @@ namespace Kronup\Model;
 class Event extends AbstractModel {
 
     public const _D = null;
-    public const TYPE_ITEMS = 'items';
+    public const TYPE_FEATURES = 'features';
     public const TYPE_ASSUMPTIONS = 'assumptions';
     public const TYPE_TASKS = 'tasks';
     public const TYPE_SELF_EVALUATION = 'self-evaluation';
@@ -39,7 +39,7 @@ class Event extends AbstractModel {
         "channelId" => ["channelId", "string", null, "getChannelId", "setChannelId", null, ["r" => 0]], 
         "notionId" => ["notionId", "string", null, "getNotionId", "setNotionId", null, ["r" => 0]], 
         "peerUserId" => ["peerUserId", "string", null, "getPeerUserId", "setPeerUserId", null, ["r" => 0]], 
-        "itemId" => ["itemId", "string", null, "getItemId", "setItemId", null, ["r" => 0]], 
+        "featureId" => ["featureId", "string", null, "getFeatureId", "setFeatureId", null, ["r" => 0]], 
         "assmId" => ["assmId", "string", null, "getAssmId", "setAssmId", null, ["r" => 0]], 
         "taskId" => ["taskId", "string", null, "getTaskId", "setTaskId", null, ["r" => 0]], 
         "diff" => ["diff", "string[]", null, "getDiff", "setDiff", null, ["r" => 0, "c" => 1]], 
@@ -64,7 +64,7 @@ class Event extends AbstractModel {
      */
     public function getTypeAllowableValues(): array {
         return [
-            self::TYPE_ITEMS,
+            self::TYPE_FEATURES,
             self::TYPE_ASSUMPTIONS,
             self::TYPE_TASKS,
             self::TYPE_SELF_EVALUATION,
@@ -206,23 +206,23 @@ class Event extends AbstractModel {
     }
 
     /**
-     * Get itemId - Item ID
+     * Get featureId - Feature ID
      *
      * @return string|null
      */
-    public function getItemId(): ?string {
-        return $this->_data["itemId"];
+    public function getFeatureId(): ?string {
+        return $this->_data["featureId"];
     }
 
     /**
-     * Set itemId - Item ID
+     * Set featureId - Feature ID
      * 
-     * @param string|null $item_id Item ID
+     * @param string|null $feature_id Feature ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setItemId($item_id) {
-        return $this->_set("itemId", $item_id);
+    public function setFeatureId($feature_id) {
+        return $this->_set("featureId", $feature_id);
     }
 
     /**
@@ -286,7 +286,7 @@ class Event extends AbstractModel {
     }
 
     /**
-     * Get stage - Value Item Stage
+     * Get stage - Feature Stage
      *
      * @return string|null
      */
@@ -295,9 +295,9 @@ class Event extends AbstractModel {
     }
 
     /**
-     * Set stage - Value Item Stage
+     * Set stage - Feature Stage
      * 
-     * @param string|null $stage Value Item Stage
+     * @param string|null $stage Feature Stage
      * @throws \InvalidArgumentException
      * @return $this
      */

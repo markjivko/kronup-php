@@ -33,23 +33,23 @@ class AssumptionsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value Item ID
+     * @param string $feature_id Feature ID
      * @param \Kronup\Model\PayloadAssmCreate $payload_assm_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function create($team_id, $channel_id, $item_id, $payload_assm_create) {
+    public function create($team_id, $channel_id, $feature_id, $payload_assm_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}/assms";
         
         /** @var \Kronup\Model\Assumption $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $payload_assm_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id]), $rPath, [], $rHeaders, [], $payload_assm_create
             ), 
             "\Kronup\Model\Assumption"
         );
@@ -62,23 +62,23 @@ class AssumptionsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @param string $assm_id Assumption ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($team_id, $channel_id, $item_id, $assm_id) {
+    public function delete($team_id, $channel_id, $feature_id, $assm_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}";
         
         /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, []
             ), 
             "bool"
         );
@@ -91,7 +91,7 @@ class AssumptionsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @param string $assm_id Assumption ID
      * @param \Kronup\Model\PayloadAssmExperiment $payload_assm_experiment 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -99,16 +99,16 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function experiment($team_id, $channel_id, $item_id, $assm_id, $payload_assm_experiment) {
+    public function experiment($team_id, $channel_id, $feature_id, $assm_id, $payload_assm_experiment) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}/exp";
         
         /** @var \Kronup\Model\Assumption $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_experiment
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_experiment
             ), 
             "\Kronup\Model\Assumption"
         );
@@ -121,7 +121,7 @@ class AssumptionsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value Item ID
+     * @param string $feature_id Feature ID
      * @param int|1 $page_number 
      * @param int|500 $page_size 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -129,7 +129,7 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\AssumptionsList
      */
-    public function list($team_id, $channel_id, $item_id, $page_number = 1, $page_size = 500) {
+    public function list($team_id, $channel_id, $feature_id, $page_number = 1, $page_size = 500) {
         if (isset($page_number) && $page_number < 1) {
             throw new IAE('Invalid value for "$page_number" when calling AssumptionsApi., must be bigger than or equal to 1.');
         }
@@ -145,12 +145,12 @@ class AssumptionsApi extends AbstractApi {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}/assms";
         
         /** @var \Kronup\Model\AssumptionsList $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id]), $rPath, [
                     "pageNumber" => S::toQueryValue($page_number),
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []
@@ -166,7 +166,7 @@ class AssumptionsApi extends AbstractApi {
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @param string $assm_id Assumption ID
      * @param \Kronup\Model\PayloadAssmUpdate $payload_assm_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
@@ -174,16 +174,16 @@ class AssumptionsApi extends AbstractApi {
      * 
      * @return \Kronup\Model\Assumption
      */
-    public function update($team_id, $channel_id, $item_id, $assm_id, $payload_assm_update) {
+    public function update($team_id, $channel_id, $feature_id, $assm_id, $payload_assm_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}";
         
         /** @var \Kronup\Model\Assumption $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id, "assmId" => $assm_id]), $rPath, [], $rHeaders, [], $payload_assm_update
             ), 
             "\Kronup\Model\Assumption"
         );

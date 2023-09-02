@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.io
  * 
- * @link    https://php.kronup.io/Api/ValueItemsApi/#advance
+ * @link    https://php.kronup.io/Api/FeaturesApi/#list
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -26,29 +26,33 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value item ID
-$arg_item_id = "fff";
+// Feature stage
+$arg_stage = "planning";
+
+$arg_page_number = 1;
+
+$arg_page_size = 100;
 
 try {
     /**
-     * PUT /teams/{teamId}/channels/{channelId}/items/{itemId}
+     * GET /teams/{teamId}/channels/{channelId}/features
      * 
-     * @var \Kronup\Model\ValueItem $response
+     * @var \Kronup\Model\FeaturesList $response
      */
     $response = $sdk
         ->api()
-        ->valueItems()
-        ->advance($arg_team_id, $arg_channel_id, $arg_item_id);
+        ->features()
+        ->list($arg_team_id, $arg_channel_id, $arg_stage, $arg_page_number, $arg_page_size);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->valueItems()->advance(): %s\n", 
+        "API Exception when calling api()->features()->list(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->valueItems()->advance(): %s\n", 
+        "Exception when calling api()->features()->list(): %s\n", 
         $exc->getMessage()
     );
 }

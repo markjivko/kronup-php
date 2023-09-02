@@ -35,7 +35,7 @@ class Subscription extends AbstractModel {
         "status" => ["status", "string", null, "getStatus", "setStatus", null, ["r" => 0, "e" => 1]], 
         "url" => ["url", "string", null, "getUrl", "setUrl", null, ["r" => 0]], 
         "orderId" => ["orderId", "float", null, "getOrderId", "setOrderId", null, ["r" => 0, "n" => [1]]], 
-        "orderItemId" => ["orderItemId", "float", null, "getOrderItemId", "setOrderItemId", null, ["r" => 0, "n" => [1]]], 
+        "orderFeatureId" => ["orderFeatureId", "float", null, "getOrderFeatureId", "setOrderFeatureId", null, ["r" => 0, "n" => [1]]], 
         "productId" => ["productId", "float", null, "getProductId", "setProductId", null, ["r" => 0, "n" => [1]]], 
         "variantId" => ["variantId", "float", null, "getVariantId", "setVariantId", null, ["r" => 0, "n" => [1]]], 
         "customerId" => ["customerId", "float", null, "getCustomerId", "setCustomerId", null, ["r" => 0, "n" => [1]]], 
@@ -159,23 +159,23 @@ class Subscription extends AbstractModel {
     }
 
     /**
-     * Get orderItemId - Order Item ID
+     * Get orderFeatureId - Order Feature ID
      *
      * @return float|null
      */
-    public function getOrderItemId(): ?float {
-        return $this->_data["orderItemId"];
+    public function getOrderFeatureId(): ?float {
+        return $this->_data["orderFeatureId"];
     }
 
     /**
-     * Set orderItemId - Order Item ID
+     * Set orderFeatureId - Order Feature ID
      * 
-     * @param float|null $order_item_id Order Item ID
+     * @param float|null $order_feature_id Order Feature ID
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setOrderItemId($order_item_id) {
-        return $this->_set("orderItemId", $order_item_id);
+    public function setOrderFeatureId($order_feature_id) {
+        return $this->_set("orderFeatureId", $order_feature_id);
     }
 
     /**

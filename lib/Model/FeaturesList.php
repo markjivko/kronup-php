@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Value_Items_List Model
+ * Features_List Model
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
@@ -17,21 +17,21 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Value_Items_List Model
+ * Features_List Model
  */
-class ValueItemsList extends AbstractModel {
+class FeaturesList extends AbstractModel {
 
     public const _D = null;
-    protected static $_name = "Value_Items_List";
+    protected static $_name = "Features_List";
     protected static $_definition = [
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 500, ["r" => 0, "n" => [1], "x" => [1500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "items" => ["items", "\Kronup\Model\ValueItemLite[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
+        "features" => ["features", "\Kronup\Model\FeatureLite[]", null, "getFeatures", "setFeatures", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
-     * ValueItemsList
+     * FeaturesList
      *
      * @param mixed[] $data Model data
      */
@@ -83,7 +83,7 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Get total - Total number of value items
+     * Get total - Total number of features
      *
      * @return int|null
      */
@@ -92,9 +92,9 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Set total - Total number of value items
+     * Set total - Total number of features
      * 
-     * @param int|null $total Total number of value items
+     * @param int|null $total Total number of features
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -103,22 +103,22 @@ class ValueItemsList extends AbstractModel {
     }
 
     /**
-     * Get items - Value Items - Lite version
+     * Get features - Features - Lite version
      *
-     * @return \Kronup\Model\ValueItemLite[]|null
+     * @return \Kronup\Model\FeatureLite[]|null
      */
-    public function getItems(): ?array {
-        return $this->_data["items"];
+    public function getFeatures(): ?array {
+        return $this->_data["features"];
     }
 
     /**
-     * Set items - Value Items - Lite version
+     * Set features - Features - Lite version
      * 
-     * @param \Kronup\Model\ValueItemLite[]|null $items Value Items - Lite version
+     * @param \Kronup\Model\FeatureLite[]|null $features Features - Lite version
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setItems(?array $items) {
-        return $this->_set("items", $items);
+    public function setFeatures(?array $features) {
+        return $this->_set("features", $features);
     }
 }

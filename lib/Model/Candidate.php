@@ -28,7 +28,7 @@ class Candidate extends AbstractModel {
     protected static $_definition = [
         "userId" => ["userId", "string", null, "getUserId", "setUserId", null, ["r" => 0]], 
         "userName" => ["userName", "string", null, "getUserName", "setUserName", null, ["r" => 0, "nl" => 3, "xl" => 64]], 
-        "userItems" => ["userItems", "int", null, "getUserItems", "setUserItems", null, ["r" => 0, "n" => [0]]], 
+        "userFeatures" => ["userFeatures", "int", null, "getUserFeatures", "setUserFeatures", null, ["r" => 0, "n" => [0]]], 
         "ydStress" => ["ydStress", "float", null, "getYdStress", "setYdStress", null, ["r" => 0, "n" => [0], "x" => [100]]], 
         "ydPrecision" => ["ydPrecision", "float", null, "getYdPrecision", "setYdPrecision", null, ["r" => 0, "n" => [0], "x" => [100]]], 
         "ydScore" => ["ydScore", "float", null, "getYdScore", "setYdScore", null, ["r" => 0, "n" => [0], "x" => [100]]]
@@ -87,23 +87,23 @@ class Candidate extends AbstractModel {
     }
 
     /**
-     * Get userItems - Number of value items where this user is executing tasks
+     * Get userFeatures - Number of features where this user is executing tasks
      *
      * @return int|null
      */
-    public function getUserItems(): ?int {
-        return $this->_data["userItems"];
+    public function getUserFeatures(): ?int {
+        return $this->_data["userFeatures"];
     }
 
     /**
-     * Set userItems - Number of value items where this user is executing tasks
+     * Set userFeatures - Number of features where this user is executing tasks
      * 
-     * @param int|null $user_items Number of value items where this user is executing tasks
+     * @param int|null $user_features Number of features where this user is executing tasks
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setUserItems($user_items) {
-        return $this->_set("userItems", $user_items);
+    public function setUserFeatures($user_features) {
+        return $this->_set("userFeatures", $user_features);
     }
 
     /**

@@ -20,19 +20,19 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Value item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 try {
     /**
-     * GET /deep-context/{itemId}
+     * GET /deep-context/{featureId}
      * 
-     * @var \Kronup\Model\ValueItemExpanded $response
+     * @var \Kronup\Model\FeatureExpanded $response
      */
     $response = $sdk
         ->api()
         ->deepContext()
-        ->read($arg_item_id);
+        ->read($arg_feature_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

@@ -26,22 +26,22 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 // Assumption ID
 $arg_assm_id = "fff";
 
 try {
     /**
-     * DELETE /teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}
+     * DELETE /teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}
      * 
      * @var bool $response
      */
     $response = $sdk
         ->api()
         ->assumptions()
-        ->delete($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id);
+        ->delete($arg_team_id, $arg_channel_id, $arg_feature_id, $arg_assm_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

@@ -26,8 +26,8 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 // Task ID
 $arg_task_id = "fff";
@@ -37,14 +37,14 @@ $arg_user_id = "fff";
 
 try {
     /**
-     * PUT /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/users/{userId}
+     * PUT /teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/users/{userId}
      * 
      * @var \Kronup\Model\Task $response
      */
     $response = $sdk
         ->api()
         ->tasks()
-        ->assign($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_user_id);
+        ->assign($arg_team_id, $arg_channel_id, $arg_feature_id, $arg_task_id, $arg_user_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

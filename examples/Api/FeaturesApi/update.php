@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.io
  * 
- * @link    https://php.kronup.io/Api/ValueItemsApi/#update
+ * @link    https://php.kronup.io/Api/FeaturesApi/#update
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -26,43 +26,43 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
-$arg_payload_value_item_update = (new \Kronup\Model\PayloadValueItemUpdate())
+$arg_payload_feature_update = (new \Kronup\Model\PayloadFeatureUpdate())
     
-    // (optional) Value item heading
+    // (optional) Feature heading
     ->setHeading('Feature name')
     
-    // (optional) Value item description
+    // (optional) Feature description
     ->setDetails('Feature description')
     
-    // (optional) Value item type
+    // (optional) Feature type
     ->setType('feature')
     
-    // (optional) Value item priority
+    // (optional) Feature priority
     ->setPriority(1);
 
 try {
     /**
-     * POST /teams/{teamId}/channels/{channelId}/items/{itemId}
+     * POST /teams/{teamId}/channels/{channelId}/features/{featureId}
      * 
-     * @var \Kronup\Model\ValueItem $response
+     * @var \Kronup\Model\Feature $response
      */
     $response = $sdk
         ->api()
-        ->valueItems()
-        ->update($arg_team_id, $arg_channel_id, $arg_item_id, $arg_payload_value_item_update);
+        ->features()
+        ->update($arg_team_id, $arg_channel_id, $arg_feature_id, $arg_payload_feature_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->valueItems()->update(): %s\n", 
+        "API Exception when calling api()->features()->update(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->valueItems()->update(): %s\n", 
+        "Exception when calling api()->features()->update(): %s\n", 
         $exc->getMessage()
     );
 }

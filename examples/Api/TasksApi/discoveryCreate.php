@@ -26,8 +26,8 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value Item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 // Task ID
 $arg_task_id = "fff";
@@ -39,14 +39,14 @@ $arg_payload_task_discovery_create = (new \Kronup\Model\PayloadTaskDiscoveryCrea
 
 try {
     /**
-     * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries
+     * POST /teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/discoveries
      * 
      * @var \Kronup\Model\MinuteDiscovery $response
      */
     $response = $sdk
         ->api()
         ->tasks()
-        ->discoveryCreate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_payload_task_discovery_create);
+        ->discoveryCreate($arg_team_id, $arg_channel_id, $arg_feature_id, $arg_task_id, $arg_payload_task_discovery_create);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

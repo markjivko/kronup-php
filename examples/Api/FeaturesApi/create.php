@@ -2,7 +2,7 @@
 /**
  * Copyright (c) 2022-2023 kronup.io
  * 
- * @link    https://php.kronup.io/Api/ValueItemsApi/#create
+ * @link    https://php.kronup.io/Api/FeaturesApi/#create
  * @license MIT
  * @author  Mark Jivko
  * 
@@ -26,40 +26,40 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-$arg_payload_value_item_create = (new \Kronup\Model\PayloadValueItemCreate())
+$arg_payload_feature_create = (new \Kronup\Model\PayloadFeatureCreate())
     
-    // (optional) Value item heading
+    // (optional) Feature heading
     ->setHeading('Feature name')
     
-    // (optional) Value item description
+    // (optional) Feature description
     ->setDetails('Feature description')
     
-    // (optional) Value item type
+    // (optional) Feature type
     ->setType('feature')
     
-    // (optional) Value item priority
+    // (optional) Feature priority
     ->setPriority(1);
 
 try {
     /**
-     * POST /teams/{teamId}/channels/{channelId}/items
+     * POST /teams/{teamId}/channels/{channelId}/features
      * 
-     * @var \Kronup\Model\ValueItem $response
+     * @var \Kronup\Model\Feature $response
      */
     $response = $sdk
         ->api()
-        ->valueItems()
-        ->create($arg_team_id, $arg_channel_id, $arg_payload_value_item_create);
+        ->features()
+        ->create($arg_team_id, $arg_channel_id, $arg_payload_feature_create);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {
     echo sprintf(
-        "API Exception when calling api()->valueItems()->create(): %s\n", 
+        "API Exception when calling api()->features()->create(): %s\n", 
         var_export($apiExc->getResponseObject(), true)
     );
 } catch (\Exception $exc) {
     echo sprintf(
-        "Exception when calling api()->valueItems()->create(): %s\n", 
+        "Exception when calling api()->features()->create(): %s\n", 
         $exc->getMessage()
     );
 }

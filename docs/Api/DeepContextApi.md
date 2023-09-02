@@ -8,9 +8,9 @@ layout: page
 
 Method | Description
 ------------- | -------------
-🔹 [**delete()**](#delete) | Delete value item
-🔹 [**read()**](#read) | Fetch expanded value item
-🔹 [**search()**](#search) | Search value items
+🔹 [**delete()**](#delete) | Delete feature
+🔹 [**read()**](#read) | Fetch expanded feature
+🔹 [**search()**](#search) | Search features
 
 
 📚 [Deep Context API Reference](https://api.kronup.com/#tag/Deep-Context)
@@ -28,7 +28,7 @@ $sdk->api()->deepContext();
 
 ## `delete()`
 
-> Delete a value item from Deep Context
+> Delete a feature from Deep Context
 
 
 {: .new-title }
@@ -38,13 +38,13 @@ $sdk->api()->deepContext();
 
 ### Request
 
-> **DELETE** `/deep-context/{itemId}`
+> **DELETE** `/deep-context/{featureId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->deepContext()->delete(
-    string $item_id
+    string $feature_id
 ): bool
 ```
 
@@ -52,7 +52,7 @@ $sdk->api()->deepContext();
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description
 
 ## `read()`
 
-> Retrieve value item model
+> Retrieve feature model
 
 
 {: .new-title }
@@ -75,25 +75,25 @@ Name | Type | Description
 
 ### Request
 
-> **GET** `/deep-context/{itemId}`
+> **GET** `/deep-context/{featureId}`
 
 ### Type signature
 
 ```php
 (new \Kronup\Sdk())->api()->deepContext()->read(
-    string $item_id
-): \Kronup\Model\ValueItemExpanded
+    string $feature_id
+): \Kronup\Model\FeatureExpanded
 ```
 
 ### Parameters
 
 Name | Type | Description
 ------------- | ------------- | -------------
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
 
 ### Return type
 
-[**\Kronup\Model\ValueItemExpanded**](../../Model/ValueItemExpanded)
+[**\Kronup\Model\FeatureExpanded**](../../Model/FeatureExpanded)
 
 [🔺 Back to top](#top)
 
@@ -102,7 +102,7 @@ Name | Type | Description
 
 ## `search()`
 
-> Get a list of value item models
+> Get a list of feature models
 
 
 {: .new-title }

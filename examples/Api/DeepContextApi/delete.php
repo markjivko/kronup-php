@@ -20,19 +20,19 @@ $sdk = new \Kronup\Sdk();
 // 🐛 Enable debugging
 $sdk->config()->setDebug(true);
 
-// Value item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 try {
     /**
-     * DELETE /deep-context/{itemId}
+     * DELETE /deep-context/{featureId}
      * 
      * @var bool $response
      */
     $response = $sdk
         ->api()
         ->deepContext()
-        ->delete($arg_item_id);
+        ->delete($arg_feature_id);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

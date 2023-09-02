@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * AssumptionLite Model
  * 
- * Value Item Assumption
+ * Feature Assumption
  */
 class AssumptionLite extends AbstractModel {
 
@@ -44,7 +44,7 @@ class AssumptionLite extends AbstractModel {
 
 
     /**
-     * Get id - Value item ID
+     * Get id - Feature ID
      *
      * @return string|null
      */
@@ -53,9 +53,9 @@ class AssumptionLite extends AbstractModel {
     }
 
     /**
-     * Set id - Value item ID
+     * Set id - Feature ID
      * 
-     * @param string|null $id Value item ID
+     * @param string|null $id Feature ID
      * @throws \InvalidArgumentException
      * @return $this
      */

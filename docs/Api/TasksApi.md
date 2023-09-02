@@ -49,7 +49,7 @@ $sdk->api()->tasks();
 
 ### Request
 
-> **PUT** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/users/{userId}`
+> **PUT** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/users/{userId}`
 
 ### Type signature
 
@@ -57,7 +57,7 @@ $sdk->api()->tasks();
 (new \Kronup\Sdk())->api()->tasks()->assign(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     string $user_id
 ): \Kronup\Model\Task
@@ -69,7 +69,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$user_id** | **string**  | User ID 
 
@@ -84,7 +84,7 @@ Name | Type | Description
 
 ## `create()`
 
-> Add a task to value item
+> Add a task to feature
 
 
 {: .new-title }
@@ -94,7 +94,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks`
 
 ### Type signature
 
@@ -102,7 +102,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->create(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     \Kronup\Model\PayloadTaskCreate $payload_task_create
 ): \Kronup\Model\TaskExpanded
 ```
@@ -113,7 +113,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$payload_task_create** | [**\Kronup\Model\PayloadTaskCreate**](../../Model/PayloadTaskCreate) |  
 
 ### Return type
@@ -127,7 +127,7 @@ Name | Type | Description
 
 ## `delete()`
 
-> Delete a task from a value item
+> Delete a task from a feature
 
 
 {: .new-title }
@@ -137,7 +137,7 @@ Name | Type | Description
 
 ### Request
 
-> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}`
+> **DELETE** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}`
 
 ### Type signature
 
@@ -145,7 +145,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->delete(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id
 ): bool
 ```
@@ -156,7 +156,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
 
 ### Return type
@@ -180,7 +180,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/discoveries`
 
 ### Type signature
 
@@ -188,7 +188,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->discoveryCreate(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     \Kronup\Model\PayloadTaskDiscoveryCreate $payload_task_discovery_create
 ): \Kronup\Model\MinuteDiscovery
@@ -200,7 +200,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$payload_task_discovery_create** | [**\Kronup\Model\PayloadTaskDiscoveryCreate**](../../Model/PayloadTaskDiscoveryCreate) |  
 
@@ -225,7 +225,7 @@ Name | Type | Description
 
 ### Request
 
-> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries/{discoveryId}`
+> **DELETE** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/discoveries/{discoveryId}`
 
 ### Type signature
 
@@ -233,7 +233,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->discoveryDelete(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     string $discovery_id
 ): bool
@@ -245,7 +245,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$discovery_id** | **string**  | Discovery ID 
 
@@ -270,7 +270,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/discoveries/{discoveryId}`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/discoveries/{discoveryId}`
 
 ### Type signature
 
@@ -278,7 +278,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->discoveryUpdate(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     string $discovery_id,
     \Kronup\Model\PayloadTaskDiscoveryUpdate $payload_task_discovery_update
@@ -291,7 +291,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$discovery_id** | **string**  | Discovery ID 
  **$payload_task_discovery_update** | [**\Kronup\Model\PayloadTaskDiscoveryUpdate**](../../Model/PayloadTaskDiscoveryUpdate) |  
@@ -317,7 +317,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/feedback`
 
 ### Type signature
 
@@ -325,7 +325,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->feedbackCreate(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     \Kronup\Model\PayloadTaskFeedbackCreate $payload_task_feedback_create
 ): \Kronup\Model\MinuteFeedback
@@ -337,7 +337,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$payload_task_feedback_create** | [**\Kronup\Model\PayloadTaskFeedbackCreate**](../../Model/PayloadTaskFeedbackCreate) |  
 
@@ -362,7 +362,7 @@ Name | Type | Description
 
 ### Request
 
-> **DELETE** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}`
+> **DELETE** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/feedback/{feedbackId}`
 
 ### Type signature
 
@@ -370,7 +370,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->feedbackDelete(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     string $feedback_id
 ): bool
@@ -382,7 +382,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$feedback_id** | **string**  | Feedback ID 
 
@@ -407,7 +407,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}/reply`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/feedback/{feedbackId}/reply`
 
 ### Type signature
 
@@ -415,7 +415,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->feedbackReply(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     string $feedback_id,
     \Kronup\Model\PayloadTaskFeedbackReply $payload_task_feedback_reply
@@ -428,7 +428,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$feedback_id** | **string**  | Feedback ID 
  **$payload_task_feedback_reply** | [**\Kronup\Model\PayloadTaskFeedbackReply**](../../Model/PayloadTaskFeedbackReply) |  
@@ -454,7 +454,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/feedback/{feedbackId}`
 
 ### Type signature
 
@@ -462,7 +462,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->feedbackUpdate(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     string $feedback_id,
     \Kronup\Model\PayloadTaskFeedbackUpdate $payload_task_feedback_update
@@ -475,7 +475,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$feedback_id** | **string**  | Feedback ID 
  **$payload_task_feedback_update** | [**\Kronup\Model\PayloadTaskFeedbackUpdate**](../../Model/PayloadTaskFeedbackUpdate) |  
@@ -501,7 +501,7 @@ Name | Type | Description
 
 ### Request
 
-> **GET** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks`
+> **GET** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks`
 
 ### Type signature
 
@@ -509,7 +509,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->list(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     [ int $page_number = 1, ]
     [ int $page_size = 500 ]
 ): \Kronup\Model\TasksList
@@ -521,7 +521,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value Item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$page_number** | **int**  |   [default to 1]
  **$page_size** | **int**  |   [default to 500]
 
@@ -546,7 +546,7 @@ Name | Type | Description
 
 ### Request
 
-> **GET** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/candidates`
+> **GET** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/candidates`
 
 ### Type signature
 
@@ -554,7 +554,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->listCandidates(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id
 ): \Kronup\Model\TaskCandidatesList
 ```
@@ -565,7 +565,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
 
 ### Return type
@@ -589,7 +589,7 @@ Name | Type | Description
 
 ### Request
 
-> **GET** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}`
+> **GET** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}`
 
 ### Type signature
 
@@ -597,7 +597,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->read(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id
 ): \Kronup\Model\TaskExpanded
 ```
@@ -608,7 +608,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
 
 ### Return type
@@ -632,7 +632,7 @@ Name | Type | Description
 
 ### Request
 
-> **POST** `/teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}`
+> **POST** `/teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}`
 
 ### Type signature
 
@@ -640,7 +640,7 @@ Name | Type | Description
 (new \Kronup\Sdk())->api()->tasks()->update(
     string $team_id,
     string $channel_id,
-    string $item_id,
+    string $feature_id,
     string $task_id,
     \Kronup\Model\PayloadTaskUpdate $payload_task_update
 ): \Kronup\Model\Task
@@ -652,7 +652,7 @@ Name | Type | Description
 ------------- | ------------- | -------------
  **$team_id** | **string**  | Team ID 
  **$channel_id** | **string**  | Channel ID 
- **$item_id** | **string**  | Value item ID 
+ **$feature_id** | **string**  | Feature ID 
  **$task_id** | **string**  | Task ID 
  **$payload_task_update** | [**\Kronup\Model\PayloadTaskUpdate**](../../Model/PayloadTaskUpdate) |  
 

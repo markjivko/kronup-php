@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Payload_Value_Item_Update Model
+ * Payload_Feature_Create Model
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
@@ -17,17 +17,17 @@ namespace Kronup\Model;
 !defined("KRONUP-SDK") && exit();
 
 /**
- * Payload_Value_Item_Update Model
+ * Payload_Feature_Create Model
  * 
- * Payload object required to update a Value Item
+ * Payload object required to create a Feature
  */
-class PayloadValueItemUpdate extends AbstractModel {
+class PayloadFeatureCreate extends AbstractModel {
 
     public const _D = null;
     public const TYPE_FEATURE = 'feature';
     public const TYPE_BUG_FIX = 'bug fix';
     public const TYPE_ROUTINE = 'routine';
-    protected static $_name = "Payload_Value_Item_Update";
+    protected static $_name = "Payload_Feature_Create";
     protected static $_definition = [
         "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 200]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
@@ -36,7 +36,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     ];
 
     /**
-     * PayloadValueItemUpdate
+     * PayloadFeatureCreate
      *
      * @param mixed[] $data Model data
      */
@@ -60,7 +60,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Get heading - Value item heading
+     * Get heading - Feature heading
      *
      * @return string|null
      */
@@ -69,9 +69,9 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Set heading - Value item heading
+     * Set heading - Feature heading
      * 
-     * @param string|null $heading Value item heading
+     * @param string|null $heading Feature heading
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -80,7 +80,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Get details - Value item description
+     * Get details - Feature description
      *
      * @return string|null
      */
@@ -89,9 +89,9 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Set details - Value item description
+     * Set details - Feature description
      * 
-     * @param string|null $details Value item description
+     * @param string|null $details Feature description
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -100,7 +100,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Get type - Value item type
+     * Get type - Feature type
      *
      * @return string|null
      */
@@ -109,9 +109,9 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Set type - Value item type
+     * Set type - Feature type
      * 
-     * @param string|null $type Value item type
+     * @param string|null $type Feature type
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -120,7 +120,7 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Get priority - Value item priority
+     * Get priority - Feature priority
      *
      * @return float|null
      */
@@ -129,9 +129,9 @@ class PayloadValueItemUpdate extends AbstractModel {
     }
 
     /**
-     * Set priority - Value item priority
+     * Set priority - Feature priority
      * 
-     * @param float|null $priority Value item priority
+     * @param float|null $priority Feature priority
      * @throws \InvalidArgumentException
      * @return $this
      */

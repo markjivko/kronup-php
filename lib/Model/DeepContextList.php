@@ -27,7 +27,7 @@ class DeepContextList extends AbstractModel {
         "pageNumber" => ["pageNumber", "int", null, "getPageNumber", "setPageNumber", 1, ["r" => 0, "n" => [1]]], 
         "pageSize" => ["pageSize", "int", null, "getPageSize", "setPageSize", 500, ["r" => 0, "n" => [1], "x" => [1500]]], 
         "total" => ["total", "int", null, "getTotal", "setTotal", null, ["r" => 0]], 
-        "items" => ["items", "\Kronup\Model\ValueItem[]", null, "getItems", "setItems", null, ["r" => 0, "c" => 1]]
+        "features" => ["features", "\Kronup\Model\Feature[]", null, "getFeatures", "setFeatures", null, ["r" => 0, "c" => 1]]
     ];
 
     /**
@@ -83,7 +83,7 @@ class DeepContextList extends AbstractModel {
     }
 
     /**
-     * Get total - Total number of value items
+     * Get total - Total number of features
      *
      * @return int|null
      */
@@ -92,9 +92,9 @@ class DeepContextList extends AbstractModel {
     }
 
     /**
-     * Set total - Total number of value items
+     * Set total - Total number of features
      * 
-     * @param int|null $total Total number of value items
+     * @param int|null $total Total number of features
      * @throws \InvalidArgumentException
      * @return $this
      */
@@ -103,22 +103,22 @@ class DeepContextList extends AbstractModel {
     }
 
     /**
-     * Get items - Value Items
+     * Get features - Features
      *
-     * @return \Kronup\Model\ValueItem[]|null
+     * @return \Kronup\Model\Feature[]|null
      */
-    public function getItems(): ?array {
-        return $this->_data["items"];
+    public function getFeatures(): ?array {
+        return $this->_data["features"];
     }
 
     /**
-     * Set items - Value Items
+     * Set features - Features
      * 
-     * @param \Kronup\Model\ValueItem[]|null $items Value Items
+     * @param \Kronup\Model\Feature[]|null $features Features
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setItems(?array $items) {
-        return $this->_set("items", $items);
+    public function setFeatures(?array $features) {
+        return $this->_set("features", $features);
     }
 }

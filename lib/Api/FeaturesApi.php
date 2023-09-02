@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Implementation of ValueItems API
+ * Implementation of Features API
  *
  * @copyright (c) 2022-2023 kronup.io
  * @license   Apache 2.0
@@ -19,92 +19,92 @@ use InvalidArgumentException as IAE;
 use Kronup\Sdk\Serializer as S;
 
 /**
- * API for ValueItems
+ * API for Features
  */
-class ValueItemsApi extends AbstractApi {
+class FeaturesApi extends AbstractApi {
     
     /**
      * API package
      */
-    const PKG = "Value items";
+    const PKG = "Features";
 
     /**
-     * Advance value item
+     * Advance feature
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ValueItem
+     * @return \Kronup\Model\Feature
      */
-    public function advance($team_id, $channel_id, $item_id) {
+    public function advance($team_id, $channel_id, $feature_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}";
         
-        /** @var \Kronup\Model\ValueItem $result */
+        /** @var \Kronup\Model\Feature $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "PUT", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\ValueItem"
+            "\Kronup\Model\Feature"
         );
             
         return $result;
     }
     
     /**
-     * Create value item
+     * Create feature
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param \Kronup\Model\PayloadValueItemCreate $payload_value_item_create 
+     * @param \Kronup\Model\PayloadFeatureCreate $payload_feature_create 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ValueItem
+     * @return \Kronup\Model\Feature
      */
-    public function create($team_id, $channel_id, $payload_value_item_create) {
+    public function create($team_id, $channel_id, $payload_feature_create) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features";
         
-        /** @var \Kronup\Model\ValueItem $result */
+        /** @var \Kronup\Model\Feature $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $payload_value_item_create
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [], $rHeaders, [], $payload_feature_create
             ), 
-            "\Kronup\Model\ValueItem"
+            "\Kronup\Model\Feature"
         );
             
         return $result;
     }
     
     /**
-     * Delete value item
+     * Delete feature
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($team_id, $channel_id, $item_id) {
+    public function delete($team_id, $channel_id, $feature_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}";
         
         /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id]), $rPath, [], $rHeaders, []
             ), 
             "bool"
         );
@@ -113,37 +113,37 @@ class ValueItemsApi extends AbstractApi {
     }
     
     /**
-     * List value items
+     * List features
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string|null $stage Value item stage
+     * @param string|null $stage Feature stage
      * @param int|1 $page_number 
      * @param int|500 $page_size 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ValueItemsList
+     * @return \Kronup\Model\FeaturesList
      */
     public function list($team_id, $channel_id, $stage = null, $page_number = 1, $page_size = 500) {
         if (isset($page_number) && $page_number < 1) {
-            throw new IAE('Invalid value for "$page_number" when calling ValueItemsApi., must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_number" when calling FeaturesApi., must be bigger than or equal to 1.');
         }
 
         if (isset($page_size) && $page_size > 1500) {
-            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi., must be smaller than or equal to 1500');
+            throw new IAE('Invalid value for "$page_size" when calling FeaturesApi., must be smaller than or equal to 1500');
         }
 
         if (isset($page_size) && $page_size < 1) {
-            throw new IAE('Invalid value for "$page_size" when calling ValueItemsApi., must be bigger than or equal to 1.');
+            throw new IAE('Invalid value for "$page_size" when calling FeaturesApi., must be bigger than or equal to 1.');
         }
 
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features";
         
-        /** @var \Kronup\Model\ValueItemsList $result */
+        /** @var \Kronup\Model\FeaturesList $result */
         $result = $this->exec(
             S::createRequest(
                 $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id]), $rPath, [
@@ -152,64 +152,64 @@ class ValueItemsApi extends AbstractApi {
                     "pageSize" => S::toQueryValue($page_size),
                 ], $rHeaders, []
             ), 
-            "\Kronup\Model\ValueItemsList"
+            "\Kronup\Model\FeaturesList"
         );
             
         return $result;
     }
     
     /**
-     * Fetch value item
+     * Fetch feature
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ValueItem
+     * @return \Kronup\Model\Feature
      */
-    public function read($team_id, $channel_id, $item_id) {
+    public function read($team_id, $channel_id, $feature_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}";
         
-        /** @var \Kronup\Model\ValueItem $result */
+        /** @var \Kronup\Model\Feature $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\ValueItem"
+            "\Kronup\Model\Feature"
         );
             
         return $result;
     }
     
     /**
-     * Update value item
+     * Update feature
      *
      * @param string $team_id Team ID
      * @param string $channel_id Channel ID
-     * @param string $item_id Value item ID
-     * @param \Kronup\Model\PayloadValueItemUpdate $payload_value_item_update 
+     * @param string $feature_id Feature ID
+     * @param \Kronup\Model\PayloadFeatureUpdate $payload_feature_update 
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ValueItem
+     * @return \Kronup\Model\Feature
      */
-    public function update($team_id, $channel_id, $item_id, $payload_value_item_update) {
+    public function update($team_id, $channel_id, $feature_id, $payload_feature_update) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], ["application/json"]);
 
         // Path template
-        $rPath = "/teams/{teamId}/channels/{channelId}/items/{itemId}";
+        $rPath = "/teams/{teamId}/channels/{channelId}/features/{featureId}";
         
-        /** @var \Kronup\Model\ValueItem $result */
+        /** @var \Kronup\Model\Feature $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "itemId" => $item_id]), $rPath, [], $rHeaders, [], $payload_value_item_update
+                $this->_sdk->config(), self::PKG, "POST", S::parse($rPath, ["teamId" => $team_id, "channelId" => $channel_id, "featureId" => $feature_id]), $rPath, [], $rHeaders, [], $payload_feature_update
             ), 
-            "\Kronup\Model\ValueItem"
+            "\Kronup\Model\Feature"
         );
             
         return $result;

@@ -26,8 +26,8 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value Item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 $arg_page_number = 1;
 
@@ -35,14 +35,14 @@ $arg_page_size = 100;
 
 try {
     /**
-     * GET /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks
+     * GET /teams/{teamId}/channels/{channelId}/features/{featureId}/tasks
      * 
      * @var \Kronup\Model\TasksList $response
      */
     $response = $sdk
         ->api()
         ->tasks()
-        ->list($arg_team_id, $arg_channel_id, $arg_item_id, $arg_page_number, $arg_page_size);
+        ->list($arg_team_id, $arg_channel_id, $arg_feature_id, $arg_page_number, $arg_page_size);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

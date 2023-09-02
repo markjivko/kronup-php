@@ -26,8 +26,8 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 // Assumption ID
 $arg_assm_id = "fff";
@@ -45,14 +45,14 @@ $arg_payload_assm_experiment = (new \Kronup\Model\PayloadAssmExperiment())
 
 try {
     /**
-     * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/assms/{assmId}/exp
+     * POST /teams/{teamId}/channels/{channelId}/features/{featureId}/assms/{assmId}/exp
      * 
      * @var \Kronup\Model\Assumption $response
      */
     $response = $sdk
         ->api()
         ->assumptions()
-        ->experiment($arg_team_id, $arg_channel_id, $arg_item_id, $arg_assm_id, $arg_payload_assm_experiment);
+        ->experiment($arg_team_id, $arg_channel_id, $arg_feature_id, $arg_assm_id, $arg_payload_assm_experiment);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

@@ -29,24 +29,24 @@ class DeepContextApi extends AbstractApi {
     const PKG = "Deep Context";
 
     /**
-     * Delete value item
+     * Delete feature
      *
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
      * @return bool
      */
-    public function delete($item_id) {
+    public function delete($feature_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/deep-context/{itemId}";
+        $rPath = "/deep-context/{featureId}";
         
         /** @var bool $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["itemId" => $item_id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "DELETE", S::parse($rPath, ["featureId" => $feature_id]), $rPath, [], $rHeaders, []
             ), 
             "bool"
         );
@@ -55,33 +55,33 @@ class DeepContextApi extends AbstractApi {
     }
     
     /**
-     * Fetch expanded value item
+     * Fetch expanded feature
      *
-     * @param string $item_id Value item ID
+     * @param string $feature_id Feature ID
      * @throws \Kronup\Sdk\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * 
-     * @return \Kronup\Model\ValueItemExpanded
+     * @return \Kronup\Model\FeatureExpanded
      */
-    public function read($item_id) {
+    public function read($feature_id) {
         $rHeaders = $this->_headerSelector->selectHeaders(["application/json"], []);
 
         // Path template
-        $rPath = "/deep-context/{itemId}";
+        $rPath = "/deep-context/{featureId}";
         
-        /** @var \Kronup\Model\ValueItemExpanded $result */
+        /** @var \Kronup\Model\FeatureExpanded $result */
         $result = $this->exec(
             S::createRequest(
-                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["itemId" => $item_id]), $rPath, [], $rHeaders, []
+                $this->_sdk->config(), self::PKG, "GET", S::parse($rPath, ["featureId" => $feature_id]), $rPath, [], $rHeaders, []
             ), 
-            "\Kronup\Model\ValueItemExpanded"
+            "\Kronup\Model\FeatureExpanded"
         );
             
         return $result;
     }
     
     /**
-     * Search value items
+     * Search features
      *
      * @param string|null $search_term Search term
      * @param int|1 $page_number 

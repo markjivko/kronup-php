@@ -26,8 +26,8 @@ $arg_team_id = "fff";
 // Channel ID
 $arg_channel_id = "fff";
 
-// Value Item ID
-$arg_item_id = "fff";
+// Feature ID
+$arg_feature_id = "fff";
 
 // Task ID
 $arg_task_id = "fff";
@@ -45,14 +45,14 @@ $arg_payload_task_feedback_update = (new \Kronup\Model\PayloadTaskFeedbackUpdate
 
 try {
     /**
-     * POST /teams/{teamId}/channels/{channelId}/items/{itemId}/tasks/{taskId}/feedback/{feedbackId}
+     * POST /teams/{teamId}/channels/{channelId}/features/{featureId}/tasks/{taskId}/feedback/{feedbackId}
      * 
      * @var \Kronup\Model\MinuteFeedback $response
      */
     $response = $sdk
         ->api()
         ->tasks()
-        ->feedbackUpdate($arg_team_id, $arg_channel_id, $arg_item_id, $arg_task_id, $arg_feedback_id, $arg_payload_task_feedback_update);
+        ->feedbackUpdate($arg_team_id, $arg_channel_id, $arg_feature_id, $arg_task_id, $arg_feedback_id, $arg_payload_task_feedback_update);
 
     var_export($response);
 } catch (\Kronup\Sdk\ApiException $apiExc) {

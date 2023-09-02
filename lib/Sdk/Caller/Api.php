@@ -70,6 +70,13 @@ class Api {
     protected $_experiencesApi = null;
 
     /**
+     * Features API
+     *
+     * @var \Kronup\Api\FeaturesApi
+     */
+    protected $_featuresApi = null;
+
+    /**
      * Invitations API
      *
      * @var \Kronup\Api\InvitationsApi
@@ -117,13 +124,6 @@ class Api {
      * @var \Kronup\Api\UsersApi
      */
     protected $_usersApi = null;
-
-    /**
-     * ValueItems API
-     *
-     * @var \Kronup\Api\ValueItemsApi
-     */
-    protected $_valueItemsApi = null;
 
     /**
      * SDK 
@@ -210,6 +210,19 @@ class Api {
         }
 
         return $this->_experiencesApi;
+    }
+    
+    /**
+     * Features API
+     * 
+     * @return \Kronup\Api\FeaturesApi
+     */
+    public function features(): A\FeaturesApi {
+        if (null === $this->_featuresApi) {
+            $this->_featuresApi = new A\FeaturesApi($this->_sdk);
+        }
+
+        return $this->_featuresApi;
     }
     
     /**
@@ -301,18 +314,5 @@ class Api {
         }
 
         return $this->_usersApi;
-    }
-    
-    /**
-     * ValueItems API
-     * 
-     * @return \Kronup\Api\ValueItemsApi
-     */
-    public function valueItems(): A\ValueItemsApi {
-        if (null === $this->_valueItemsApi) {
-            $this->_valueItemsApi = new A\ValueItemsApi($this->_sdk);
-        }
-
-        return $this->_valueItemsApi;
     }
 }

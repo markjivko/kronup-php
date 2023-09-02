@@ -19,7 +19,7 @@ namespace Kronup\Model;
 /**
  * Payload_Assm_Create Model
  * 
- * Payload object required to create a Value Item assumption
+ * Payload object required to create a Feature assumption
  */
 class PayloadAssmCreate extends AbstractModel {
 

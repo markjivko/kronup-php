@@ -10,7 +10,7 @@ layout: page
 new \Kronup\Model\PayloadAssmCreate();
 ```
 
-Payload object required to create a Value Item assumption
+Payload object required to create a Feature assumption
 
 ## Payload setters
 
