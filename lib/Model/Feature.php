@@ -26,9 +26,9 @@ class Feature extends AbstractModel {
     public const STAGE_VALIDATION = 'validation';
     public const STAGE_EXECUTION = 'execution';
     public const STAGE_DEEP_CONTEXT = 'deep context';
-    public const TYPE_FEATURE = 'feature';
-    public const TYPE_BUG_FIX = 'bug fix';
-    public const TYPE_ROUTINE = 'routine';
+    public const TYPE_FIRMITAS = 'firmitas';
+    public const TYPE_UTILITAS = 'utilitas';
+    public const TYPE_VENUSTAS = 'venustas';
     protected static $_name = "Feature";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -78,9 +78,9 @@ class Feature extends AbstractModel {
      */
     public function getTypeAllowableValues(): array {
         return [
-            self::TYPE_FEATURE,
-            self::TYPE_BUG_FIX,
-            self::TYPE_ROUTINE,
+            self::TYPE_FIRMITAS,
+            self::TYPE_UTILITAS,
+            self::TYPE_VENUSTAS,
         ];
     }
 
