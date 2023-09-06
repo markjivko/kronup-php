@@ -24,14 +24,14 @@ namespace Kronup\Model;
 class PayloadFeatureUpdate extends AbstractModel {
 
     public const _D = null;
-    public const TYPE_FEATURE = 'feature';
-    public const TYPE_BUG_FIX = 'bug fix';
-    public const TYPE_ROUTINE = 'routine';
+    public const FOCUS_FIRMITAS = 'firmitas';
+    public const FOCUS_UTILITAS = 'utilitas';
+    public const FOCUS_VENUSTAS = 'venustas';
     protected static $_name = "Payload_Feature_Update";
     protected static $_definition = [
         "heading" => ["heading", "string", null, "getHeading", "setHeading", null, ["r" => 0, "nl" => 1, "xl" => 200]], 
         "details" => ["details", "string", null, "getDetails", "setDetails", null, ["r" => 0, "nl" => 1, "xl" => 2048]], 
-        "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
+        "focus" => ["focus", "string", null, "getFocus", "setFocus", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "float", null, "getPriority", "setPriority", null, ["r" => 0, "n" => [1], "x" => [10]]]
     ];
 
@@ -51,11 +51,11 @@ class PayloadFeatureUpdate extends AbstractModel {
      *
      * @return string[]
      */
-    public function getTypeAllowableValues(): array {
+    public function getFocusAllowableValues(): array {
         return [
-            self::TYPE_FEATURE,
-            self::TYPE_BUG_FIX,
-            self::TYPE_ROUTINE,
+            self::FOCUS_FIRMITAS,
+            self::FOCUS_UTILITAS,
+            self::FOCUS_VENUSTAS,
         ];
     }
 
@@ -100,23 +100,23 @@ class PayloadFeatureUpdate extends AbstractModel {
     }
 
     /**
-     * Get type - Feature type
+     * Get focus - Feature Focus
      *
      * @return string|null
      */
-    public function getType(): ?string {
-        return $this->_data["type"];
+    public function getFocus(): ?string {
+        return $this->_data["focus"];
     }
 
     /**
-     * Set type - Feature type
+     * Set focus - Feature Focus
      * 
-     * @param string|null $type Feature type
+     * @param string|null $focus Feature Focus
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setType($type) {
-        return $this->_set("type", $type);
+    public function setFocus($focus) {
+        return $this->_set("focus", $focus);
     }
 
     /**

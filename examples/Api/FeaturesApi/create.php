@@ -34,8 +34,8 @@ $arg_payload_feature_create = (new \Kronup\Model\PayloadFeatureCreate())
     // (optional) Feature description
     ->setDetails('Feature description')
     
-    // (optional) Feature type
-    ->setType('feature')
+    // (optional) Feature Focus
+    ->setFocus('firmitas')
     
     // (optional) Feature priority
     ->setPriority(1);

@@ -26,9 +26,9 @@ class FeatureLite extends AbstractModel {
     public const STAGE_VALIDATION = 'validation';
     public const STAGE_EXECUTION = 'execution';
     public const STAGE_DEEP_CONTEXT = 'deep context';
-    public const TYPE_FIRMITAS = 'firmitas';
-    public const TYPE_UTILITAS = 'utilitas';
-    public const TYPE_VENUSTAS = 'venustas';
+    public const FOCUS_FIRMITAS = 'firmitas';
+    public const FOCUS_UTILITAS = 'utilitas';
+    public const FOCUS_VENUSTAS = 'venustas';
     protected static $_name = "FeatureLite";
     protected static $_definition = [
         "id" => ["id", "string", null, "getId", "setId", null, ["r" => 0]], 
@@ -38,7 +38,7 @@ class FeatureLite extends AbstractModel {
         "authorUserId" => ["authorUserId", "string", null, "getAuthorUserId", "setAuthorUserId", null, ["r" => 0]], 
         "stage" => ["stage", "string", null, "getStage", "setStage", null, ["r" => 0, "e" => 1]], 
         "canAdvance" => ["canAdvance", "bool", null, "getCanAdvance", "setCanAdvance", false, ["r" => 0]], 
-        "type" => ["type", "string", null, "getType", "setType", null, ["r" => 0, "e" => 1]], 
+        "focus" => ["focus", "string", null, "getFocus", "setFocus", null, ["r" => 0, "e" => 1]], 
         "priority" => ["priority", "float", null, "getPriority", "setPriority", 1, ["r" => 0, "n" => [1], "x" => [10]]], 
         "assumptions" => ["assumptions", "\Kronup\Model\AssumptionLite[]", null, "getAssumptions", "setAssumptions", null, ["r" => 0, "c" => 1]], 
         "tasks" => ["tasks", "\Kronup\Model\Task[]", null, "getTasks", "setTasks", null, ["r" => 0, "c" => 1]], 
@@ -75,11 +75,11 @@ class FeatureLite extends AbstractModel {
      *
      * @return string[]
      */
-    public function getTypeAllowableValues(): array {
+    public function getFocusAllowableValues(): array {
         return [
-            self::TYPE_FIRMITAS,
-            self::TYPE_UTILITAS,
-            self::TYPE_VENUSTAS,
+            self::FOCUS_FIRMITAS,
+            self::FOCUS_UTILITAS,
+            self::FOCUS_VENUSTAS,
         ];
     }
 
@@ -224,23 +224,23 @@ class FeatureLite extends AbstractModel {
     }
 
     /**
-     * Get type - Feature Type
+     * Get focus - Feature Focus
      *
      * @return string|null
      */
-    public function getType(): ?string {
-        return $this->_data["type"];
+    public function getFocus(): ?string {
+        return $this->_data["focus"];
     }
 
     /**
-     * Set type - Feature Type
+     * Set focus - Feature Focus
      * 
-     * @param string|null $type Feature Type
+     * @param string|null $focus Feature Focus
      * @throws \InvalidArgumentException
      * @return $this
      */
-    public function setType($type) {
-        return $this->_set("type", $type);
+    public function setFocus($focus) {
+        return $this->_set("focus", $focus);
     }
 
     /**

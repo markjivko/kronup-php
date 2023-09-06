@@ -18,6 +18,6 @@ Method name | Argument type | Description
 ------------ | ------------- | -------------
 **setHeading()** | **string** | Feature heading
 **setDetails()** | **string** | Feature description
-**setType()** | **string** | Feature type ( `feature` `bug fix` `routine` )
+**setFocus()** | **string** | Feature Focus ( `firmitas` `utilitas` `venustas` )
 **setPriority()** | **float** | Feature priority
 
