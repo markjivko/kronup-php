@@ -2,7 +2,7 @@
 /**
  * Exception Test
  *
- * @copyright (c) 2022-2023 kronup.io
+ * @copyright (c) 2022-2023 kronup.com
  * @license   MIT
  * @package   Kronup
  * @author    Mark Jivko

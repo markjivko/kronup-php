@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://php.kronup.io/" rel="nofollow" target="_blank">
+    <a href="https://php.kronup.com/" rel="nofollow" target="_blank">
         <img src="https://repository-images.githubusercontent.com/601200609/affe88f7-3dff-4199-ac5a-7fe5b5d8ff78"/>
     </a><br/><br/>
     <a href="https://packagist.org/packages/kronup/kronup-php" rel="nofollow"><img src="https://img.shields.io/packagist/dt/kronup/kronup-php.svg?style=flat&colorB=yellow" alt="Total Downloads" style="max-width: 100%;"></a>
@@ -15,7 +15,7 @@ Start building your Kronup application in your favorite programming language tod
 
 ### Getting started
 
-First, check out the [**📒 SDK documentation**](https://php.kronup.io/).
+First, check out the [**📒 SDK documentation**](https://php.kronup.com/).
 
 Then simply clone this repository and load it with a [PSR-4 autoloader](https://www.php-fig.org/psr/psr-4/) or install it with [composer](https://getcomposer.org/):
 

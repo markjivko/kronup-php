@@ -1,8 +1,8 @@
 <?php
 /**
- * Copyright (c) 2022-2023 kronup.io
+ * Copyright (c) 2022-2023 kronup.com
  * 
- * @link    https://php.kronup.io/Api/TeamsApi/#listuser
+ * @link    https://php.kronup.com/Api/TeamsApi/#listuser
  * @license MIT
  * @author  Mark Jivko
  * 

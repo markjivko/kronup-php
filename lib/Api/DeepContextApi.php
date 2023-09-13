@@ -3,7 +3,7 @@
 /**
  * Implementation of DeepContext API
  *
- * @copyright (c) 2022-2023 kronup.io
+ * @copyright (c) 2022-2023 kronup.com
  * @license   Apache 2.0
  * @package   Kronup
  * @author    Mark Jivko
