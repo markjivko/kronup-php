@@ -1,5 +1,6 @@
 ---
-title: "Minute Discovery"
+title: "Models - MinuteDiscovery"
+description: "Task discovery recorded in an iteration"
 parent: Model
 layout: page
 ---

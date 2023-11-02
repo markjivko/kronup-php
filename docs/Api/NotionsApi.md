@@ -1,10 +1,11 @@
 ---
-title: "Notions"
+title: "API - Notions"
+description: "API methods for Notions"
 parent: API
 layout: page
 ---
 
-# Api/NotionsApi
+# Api / Notions
 
 Method | Description
 ------------- | -------------

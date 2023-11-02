@@ -1,5 +1,6 @@
 ---
-title: "Payload Task Discovery Create"
+title: "Models - PayloadTaskDiscoveryCreate"
+description: "Payload object required to create a Task discovery"
 parent: Model
 layout: page
 ---

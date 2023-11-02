@@ -1,5 +1,6 @@
 ---
-title: "Payload Assm Experiment"
+title: "Models - PayloadAssmExperiment"
+description: "Payload object for assumption experiment"
 parent: Model
 layout: page
 ---

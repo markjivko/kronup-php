@@ -1,5 +1,6 @@
 ---
-title: "Payload Organization Create"
+title: "Models - PayloadOrganizationCreate"
+description: "Payload object required to create an Organization"
 parent: Model
 layout: page
 ---

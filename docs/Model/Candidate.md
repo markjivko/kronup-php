@@ -1,5 +1,6 @@
 ---
-title: "Candidate"
+title: "Models - Candidate"
+description: "Task Candidate"
 parent: Model
 layout: page
 ---

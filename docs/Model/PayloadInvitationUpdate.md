@@ -1,5 +1,6 @@
 ---
-title: "Payload Invitation Update"
+title: "Models - PayloadInvitationUpdate"
+description: "Payload object required to update an Invitation"
 parent: Model
 layout: page
 ---

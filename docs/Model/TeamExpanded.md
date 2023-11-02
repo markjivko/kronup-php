@@ -1,5 +1,6 @@
 ---
-title: "Team - Expanded"
+title: "Models - TeamExpanded"
+description: ""
 parent: Model
 layout: page
 ---

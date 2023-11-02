@@ -1,5 +1,6 @@
 ---
-title: "Feature - Lite"
+title: "Models - FeatureLite"
+description: ""
 parent: Model
 layout: page
 ---

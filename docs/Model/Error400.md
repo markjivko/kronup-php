@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "Models - Error400"
+description: "Invalid argument error"
 parent: Model
 layout: page
 ---

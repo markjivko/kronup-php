@@ -1,10 +1,11 @@
 ---
-title: "Tasks"
+title: "API - Tasks"
+description: "API methods for Tasks"
 parent: API
 layout: page
 ---
 
-# Api/TasksApi
+# Api / Tasks
 
 Method | Description
 ------------- | -------------

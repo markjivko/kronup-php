@@ -1,5 +1,6 @@
 ---
-title: "Payload Assm Create"
+title: "Models - PayloadAssmCreate"
+description: "Payload object required to create a Feature assumption"
 parent: Model
 layout: page
 ---

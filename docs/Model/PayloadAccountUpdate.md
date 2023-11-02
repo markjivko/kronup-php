@@ -1,5 +1,6 @@
 ---
-title: "Payload Account Update"
+title: "Models - PayloadAccountUpdate"
+description: "Payload object required to update an Account"
 parent: Model
 layout: page
 ---

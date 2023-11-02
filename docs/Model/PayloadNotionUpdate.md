@@ -1,5 +1,6 @@
 ---
-title: "Payload Notion Update"
+title: "Models - PayloadNotionUpdate"
+description: "Payload object required to update a Notion"
 parent: Model
 layout: page
 ---

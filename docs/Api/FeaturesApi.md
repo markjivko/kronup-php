@@ -1,10 +1,11 @@
 ---
-title: "Features"
+title: "API - Features"
+description: "API methods for Features"
 parent: API
 layout: page
 ---
 
-# Api/FeaturesApi
+# Api / Features
 
 Method | Description
 ------------- | -------------

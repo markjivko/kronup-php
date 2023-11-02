@@ -1,10 +1,11 @@
 ---
-title: "Experiences"
+title: "API - Experiences"
+description: "API methods for Experiences"
 parent: API
 layout: page
 ---
 
-# Api/ExperiencesApi
+# Api / Experiences
 
 Method | Description
 ------------- | -------------

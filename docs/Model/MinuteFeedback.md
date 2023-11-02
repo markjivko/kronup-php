@@ -1,5 +1,6 @@
 ---
-title: "Minute Feedback"
+title: "Models - MinuteFeedback"
+description: "Task feedback recorded in an iteration"
 parent: Model
 layout: page
 ---

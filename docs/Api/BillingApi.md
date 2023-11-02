@@ -1,10 +1,11 @@
 ---
-title: "Billing"
+title: "API - Billing"
+description: "API methods for Billing"
 parent: API
 layout: page
 ---
 
-# Api/BillingApi
+# Api / Billing
 
 Method | Description
 ------------- | -------------

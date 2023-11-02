@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "Models - Channel"
+description: "Channel"
 parent: Model
 layout: page
 ---

@@ -1,5 +1,6 @@
 ---
-title: Model
+title: Models
+description: "Kronup SDK Models"
 has_children: true
 layout: page
 nav_exclude: true

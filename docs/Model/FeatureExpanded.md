@@ -1,5 +1,6 @@
 ---
-title: "Feature - Expanded"
+title: "Models - FeatureExpanded"
+description: ""
 parent: Model
 layout: page
 ---

@@ -1,5 +1,6 @@
 ---
 title: Overview
+description: "Overview of the Kronup SDK for PHP"
 layout: home
 nav_order: 1
 ---

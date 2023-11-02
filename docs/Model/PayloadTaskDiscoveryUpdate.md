@@ -1,5 +1,6 @@
 ---
-title: "Payload Task Discovery Update"
+title: "Models - PayloadTaskDiscoveryUpdate"
+description: "Payload object required to update a Task discovery"
 parent: Model
 layout: page
 ---

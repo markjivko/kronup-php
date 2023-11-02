@@ -1,5 +1,6 @@
 ---
-title: "Payload Channel Update"
+title: "Models - PayloadChannelUpdate"
+description: "Payload object required to update a Channel"
 parent: Model
 layout: page
 ---

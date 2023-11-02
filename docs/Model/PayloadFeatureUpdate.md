@@ -1,5 +1,6 @@
 ---
-title: "Payload Feature Update"
+title: "Models - PayloadFeatureUpdate"
+description: "Payload object required to update a Feature"
 parent: Model
 layout: page
 ---

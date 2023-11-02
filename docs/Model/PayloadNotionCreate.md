@@ -1,5 +1,6 @@
 ---
-title: "Payload Notion Create"
+title: "Models - PayloadNotionCreate"
+description: "Payload object required to create a Notion"
 parent: Model
 layout: page
 ---

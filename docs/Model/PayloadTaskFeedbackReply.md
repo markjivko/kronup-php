@@ -1,5 +1,6 @@
 ---
-title: "Payload Task Feedback Reply"
+title: "Models - PayloadTaskFeedbackReply"
+description: "Payload object required to reply to feedback given to a Task"
 parent: Model
 layout: page
 ---

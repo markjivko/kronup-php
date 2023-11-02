@@ -1,10 +1,11 @@
 ---
-title: "Assumptions"
+title: "API - Assumptions"
+description: "API methods for Assumptions"
 parent: API
 layout: page
 ---
 
-# Api/AssumptionsApi
+# Api / Assumptions
 
 Method | Description
 ------------- | -------------

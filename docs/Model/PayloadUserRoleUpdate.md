@@ -1,5 +1,6 @@
 ---
-title: "Payload User Role Update"
+title: "Models - PayloadUserRoleUpdate"
+description: "Payload object required to update User roles"
 parent: Model
 layout: page
 ---

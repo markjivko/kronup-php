@@ -1,5 +1,6 @@
 ---
-title: "Payload Task Update"
+title: "Models - PayloadTaskUpdate"
+description: "Payload object required to update a Task"
 parent: Model
 layout: page
 ---

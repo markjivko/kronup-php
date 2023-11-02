@@ -1,5 +1,6 @@
 ---
-title: "Payload Feature Create"
+title: "Models - PayloadFeatureCreate"
+description: "Payload object required to create a Feature"
 parent: Model
 layout: page
 ---

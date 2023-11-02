@@ -1,10 +1,11 @@
 ---
-title: "Channels"
+title: "API - Channels"
+description: "API methods for Channels"
 parent: API
 layout: page
 ---
 
-# Api/ChannelsApi
+# Api / Channels
 
 Method | Description
 ------------- | -------------

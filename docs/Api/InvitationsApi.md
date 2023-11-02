@@ -1,10 +1,11 @@
 ---
-title: "Invitations"
+title: "API - Invitations"
+description: "API methods for Invitations"
 parent: API
 layout: page
 ---
 
-# Api/InvitationsApi
+# Api / Invitations
 
 Method | Description
 ------------- | -------------

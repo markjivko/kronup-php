@@ -1,5 +1,6 @@
 ---
-title: "Experiment"
+title: "Models - Experiment"
+description: "Experiment meant to validate assumption"
 parent: Model
 layout: page
 ---

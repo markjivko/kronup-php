@@ -1,5 +1,6 @@
 ---
-title: "Task"
+title: "Models - Task"
+description: "Task model"
 parent: Model
 layout: page
 ---

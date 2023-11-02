@@ -1,5 +1,6 @@
 ---
-title: "Payload Assm Update"
+title: "Models - PayloadAssmUpdate"
+description: "Payload object required to update a Feature assumption"
 parent: Model
 layout: page
 ---

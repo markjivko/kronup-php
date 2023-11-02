@@ -1,5 +1,6 @@
 ---
-title: "Assumption - Lite"
+title: "Models - AssumptionLite"
+description: "Feature Assumption"
 parent: Model
 layout: page
 ---

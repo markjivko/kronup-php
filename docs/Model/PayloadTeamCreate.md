@@ -1,5 +1,6 @@
 ---
-title: "Payload Team Create"
+title: "Models - PayloadTeamCreate"
+description: "Payload object required to create a Team"
 parent: Model
 layout: page
 ---

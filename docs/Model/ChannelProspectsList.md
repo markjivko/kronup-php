@@ -1,5 +1,6 @@
 ---
-title: "Channel Prospects List"
+title: "Models - ChannelProspectsList"
+description: ""
 parent: Model
 layout: page
 ---

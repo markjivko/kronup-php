@@ -1,10 +1,11 @@
 ---
-title: "Users"
+title: "API - Users"
+description: "API methods for Users"
 parent: API
 layout: page
 ---
 
-# Api/UsersApi
+# Api / Users
 
 Method | Description
 ------------- | -------------

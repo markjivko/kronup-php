@@ -1,5 +1,6 @@
 ---
-title: "Payload Invitation Create"
+title: "Models - PayloadInvitationCreate"
+description: "Payload object required to create an Invitation"
 parent: Model
 layout: page
 ---

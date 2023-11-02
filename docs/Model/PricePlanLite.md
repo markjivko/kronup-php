@@ -1,5 +1,6 @@
 ---
-title: "Price Plan - Lite"
+title: "Models - PricePlanLite"
+description: "Store price plan details at the moment the invoice was issued"
 parent: Model
 layout: page
 ---

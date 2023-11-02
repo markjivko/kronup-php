@@ -1,5 +1,6 @@
 ---
-title: ""
+title: "Models - Error404"
+description: "Resource not found"
 parent: Model
 layout: page
 ---

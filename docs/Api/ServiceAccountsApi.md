@@ -1,10 +1,11 @@
 ---
-title: "Service accounts"
+title: "API - Service accounts"
+description: "API methods for Service accounts"
 parent: API
 layout: page
 ---
 
-# Api/ServiceAccountsApi
+# Api / Service accounts
 
 Method | Description
 ------------- | -------------

@@ -1,5 +1,6 @@
 ---
-title: "Payload Organization Update"
+title: "Models - PayloadOrganizationUpdate"
+description: "Payload object required to update an Organization"
 parent: Model
 layout: page
 ---

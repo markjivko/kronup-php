@@ -1,10 +1,11 @@
 ---
-title: "Account"
+title: "API - Account"
+description: "API methods for Account"
 parent: API
 layout: page
 ---
 
-# Api/AccountApi
+# Api / Account
 
 Method | Description
 ------------- | -------------

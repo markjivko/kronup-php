@@ -1,5 +1,6 @@
 ---
-title: "Payload Channel Create"
+title: "Models - PayloadChannelCreate"
+description: "Payload object required to create a Channel"
 parent: Model
 layout: page
 ---

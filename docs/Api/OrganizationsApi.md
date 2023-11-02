@@ -1,10 +1,11 @@
 ---
-title: "Organizations"
+title: "API - Organizations"
+description: "API methods for Organizations"
 parent: API
 layout: page
 ---
 
-# Api/OrganizationsApi
+# Api / Organizations
 
 Method | Description
 ------------- | -------------

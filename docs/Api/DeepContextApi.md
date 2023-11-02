@@ -1,10 +1,11 @@
 ---
-title: "Deep Context"
+title: "API - Deep Context"
+description: "API methods for Deep Context"
 parent: API
 layout: page
 ---
 
-# Api/DeepContextApi
+# Api / Deep Context
 
 Method | Description
 ------------- | -------------

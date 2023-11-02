@@ -1,5 +1,6 @@
 ---
-title: "Invoice List"
+title: "Models - InvoiceList"
+description: ""
 parent: Model
 layout: page
 ---

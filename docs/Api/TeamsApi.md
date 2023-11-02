@@ -1,10 +1,11 @@
 ---
-title: "Teams"
+title: "API - Teams"
+description: "API methods for Teams"
 parent: API
 layout: page
 ---
 
-# Api/TeamsApi
+# Api / Teams
 
 Method | Description
 ------------- | -------------

@@ -1,5 +1,6 @@
 ---
-title: "Price Plan List"
+title: "Models - PricePlanList"
+description: ""
 parent: Model
 layout: page
 ---

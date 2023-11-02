@@ -1,5 +1,6 @@
 ---
-title: "Minute"
+title: "Models - Minute"
+description: "Details associated with a Task"
 parent: Model
 layout: page
 ---
